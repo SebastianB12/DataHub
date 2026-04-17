@@ -247,7 +247,7 @@ CREATE TABLE data_sources (
   name        TEXT NOT NULL,              -- 'Federal Reserve Economic Data'
   schedule    TEXT NOT NULL,              -- 'interval:15m', 'cron:monday:08:00'
   enabled     BOOLEAN DEFAULT true,
-  config      JSONB DEFAULT '{}',         -- API keys, endpoints, Mappings
+  config      JSONB DEFAULT '{}',         -- Endpoints, Indicator-Mappings (KEINE API-Keys — die gehören in Environment Variables)
   last_run_at TIMESTAMPTZ,
   last_status TEXT                        -- 'success', 'failed'
 );
@@ -297,13 +297,13 @@ Die wichtigste Seite. Komponenten:
 
 ### 7.3 Indikator-Übersicht (`/indicators/[slug]`)
 
-- Tabelle: alle 20 Länder für diesen Indikator
+- Tabelle: alle Länder für diesen Indikator (MVP: 4, später erweiterbar)
 - Sortierbar nach Wert, Veränderung, Land
 - Mini-Sparklines pro Land
 
 ### 7.4 Länderprofil (`/countries/[code]`)
 
-- Alle 18 Indikatoren für dieses Land auf einer Seite
+- Alle 19 Indikatoren für dieses Land auf einer Seite
 - Gruppiert nach Kategorie
 - Mini-Charts pro Indikator
 
