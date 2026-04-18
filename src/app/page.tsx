@@ -1,65 +1,98 @@
-import Image from "next/image";
+import { supabase } from "@/lib/supabase";
+import Link from "next/link";
 
-export default function Home() {
+export const revalidate = 1800; // ISR: 30 min
+
+async function getLatestValues() {
+  const indicators = ["gdp", "inflation-cpi", "interest-rate", "unemployment"];
+
+  const { data } = await supabase
+    .from("data_points")
+    .select("indicator, country, date, value")
+    .eq("country", "US")
+    .in("indicator", indicators)
+    .order("date", { ascending: false });
+
+  // Get latest value per indicator
+  const latest: Record<string, { value: number; date: string }> = {};
+  for (const row of data || []) {
+    if (!latest[row.indicator]) {
+      latest[row.indicator] = { value: row.value, date: row.date };
+    }
+  }
+  return latest;
+}
+
+export default async function Dashboard() {
+  const latest = await getLatestValues();
+
+  const cards = [
+    { label: "US GDP", slug: "gdp", value: latest.gdp?.value, unit: "$B", date: latest.gdp?.date },
+    { label: "US Inflation", slug: "inflation-cpi", value: latest["inflation-cpi"]?.value, unit: "%", date: latest["inflation-cpi"]?.date },
+    { label: "Fed Funds Rate", slug: "interest-rate", value: latest["interest-rate"]?.value, unit: "%", date: latest["interest-rate"]?.date },
+    { label: "US Unemployment", slug: "unemployment", value: latest.unemployment?.value, unit: "%", date: latest.unemployment?.date },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <p className="text-sm text-muted-foreground mt-1">
+          Key macroeconomic indicators at a glance
+        </p>
+      </div>
+
+      {/* Key Metrics Cards */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {cards.map((card) => (
+          <Link
+            key={card.slug}
+            href={`/indicators/${card.slug}/us`}
+            className="rounded-lg border bg-card p-4 hover:bg-muted/30 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="text-xs text-muted-foreground uppercase tracking-wide">
+              {card.label}
+            </div>
+            <div className="text-2xl font-bold mt-2">
+              {card.value != null
+                ? card.unit === "$B"
+                  ? `$${card.value.toLocaleString("en-US", { maximumFractionDigits: 1 })}B`
+                  : `${card.value.toFixed(2)}${card.unit}`
+                : "\u2014"}
+            </div>
+            <div className="text-xs text-muted-foreground mt-1">{card.date}</div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Quick Links */}
+      <div className="rounded-lg border bg-card p-4">
+        <h2 className="text-sm font-medium mb-3">Explore Indicators</h2>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+          {[
+            { label: "GDP", slug: "gdp" },
+            { label: "Inflation", slug: "inflation-cpi" },
+            { label: "Core CPI", slug: "core-cpi" },
+            { label: "Unemployment", slug: "unemployment" },
+            { label: "Interest Rate", slug: "interest-rate" },
+            { label: "Trade Balance", slug: "trade-balance" },
+            { label: "PPI", slug: "ppi" },
+            { label: "M2 Money Supply", slug: "money-supply-m2" },
+            { label: "Gov. Debt", slug: "government-debt" },
+            { label: "Exports", slug: "exports" },
+            { label: "Imports", slug: "imports" },
+            { label: "Population", slug: "population" },
+          ].map((item) => (
+            <Link
+              key={item.slug}
+              href={`/indicators/${item.slug}/us`}
+              className="rounded-md bg-muted px-3 py-2 text-xs text-center hover:bg-muted/70 transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 }
