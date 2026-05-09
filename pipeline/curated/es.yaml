@@ -1,0 +1,86 @@
+# Spanien — kuratierte Indikatoren
+country: ES
+
+corporate-tax-rate:
+  value: 25
+  date: "2026-12-31"
+  unit: "%"
+  note: "Standard CIT rate."
+
+personal-income-tax-rate:
+  value: 47
+  date: "2026-12-31"
+  unit: "%"
+  note: "IRPF top marginal."
+
+sales-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+  note: "IVA Standard Rate."
+
+social-security-rate:
+  value: 36.25
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 29.90
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 6.35
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 1184
+  date: "2026-01-31"
+  unit: "EUR/Month"
+  note: "SMI (Salario Mínimo Interprofesional) 2026, 14 monthly payments."
+
+corruption-index:
+  value: 56
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 46
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 60
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 2.97
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 4.50
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 6.31
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 2.0
+  date: "2025-12-31"
+  unit: "Points"

@@ -1,0 +1,87 @@
+# Irland — kuratierte Indikatoren
+country: IE
+
+corporate-tax-rate:
+  value: 12.5
+  date: "2026-12-31"
+  unit: "%"
+  note: "Standard CIT rate. 15% effective for large MNEs (Pillar 2 since 2024)."
+
+personal-income-tax-rate:
+  value: 40
+  date: "2026-12-31"
+  unit: "%"
+  note: "Higher rate income tax (above standard cut-off)."
+
+sales-tax-rate:
+  value: 23
+  date: "2026-12-31"
+  unit: "%"
+  note: "VAT Standard Rate."
+
+social-security-rate:
+  value: 15.05
+  date: "2026-12-31"
+  unit: "%"
+  note: "PRSI total."
+
+social-security-rate-companies:
+  value: 11.05
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 4.00
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 13.50
+  date: "2026-01-31"
+  unit: "EUR/Hour"
+  note: "National Minimum Wage 2026."
+
+corruption-index:
+  value: 77
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 11
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 90
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 2.96
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 4.00
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 12.50
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 1.0
+  date: "2025-12-31"
+  unit: "Points"

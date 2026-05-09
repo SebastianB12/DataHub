@@ -1,0 +1,94 @@
+# Italien — kuratierte Indikatoren (Stand 2026, gegen TE zu verifizieren)
+country: IT
+
+corporate-tax-rate:
+  value: 24
+  date: "2026-12-31"
+  unit: "%"
+  note: "IRES Standard rate (since 2017). Plus IRAP ~3.9%."
+  source_url: "https://tradingeconomics.com/italy/corporate-tax-rate"
+
+personal-income-tax-rate:
+  value: 43
+  date: "2026-12-31"
+  unit: "%"
+  note: "IRPEF top marginal (>50k EUR/year, 2024 reform)."
+  source_url: "https://tradingeconomics.com/italy/personal-income-tax-rate"
+
+sales-tax-rate:
+  value: 22
+  date: "2026-12-31"
+  unit: "%"
+  note: "IVA Standard Rate."
+  source_url: "https://tradingeconomics.com/italy/sales-tax-rate"
+
+social-security-rate:
+  value: 39.49
+  date: "2026-12-31"
+  unit: "%"
+  note: "Total INPS contributions."
+
+social-security-rate-companies:
+  value: 30.00
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 9.49
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 67
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Statutory retirement age (Fornero reform)."
+
+retirement-age-women:
+  value: 67
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 0
+  date: "2026-12-31"
+  unit: "EUR/Month"
+  note: "Italien hat keinen gesetzlichen Mindestlohn — Tarifverträge regeln Mindestlöhne sektoral."
+
+corruption-index:
+  value: 56
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Transparency International CPI 2025."
+
+corruption-rank:
+  value: 41
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 47
+  date: "2026-04-01"
+  unit: "Rating"
+  note: "TE-Score. Moody's Baa3, S&P BBB+, Fitch BBB+."
+
+hospital-beds:
+  value: 3.20
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 4.18
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 6.42
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 2.5
+  date: "2025-12-31"
+  unit: "Points"
+  source_url: "https://www.visionofhumanity.org/maps/global-terrorism-index/"

@@ -1,0 +1,85 @@
+# Slowakei — kuratierte Indikatoren
+country: SK
+
+corporate-tax-rate:
+  value: 24
+  date: "2026-12-31"
+  unit: "%"
+  note: "Erhöht von 21% auf 24% ab 2025."
+
+personal-income-tax-rate:
+  value: 25
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top progressive rate."
+
+sales-tax-rate:
+  value: 23
+  date: "2026-12-31"
+  unit: "%"
+  note: "DPH Standard Rate (erhöht von 20% auf 23% ab 2025)."
+
+social-security-rate:
+  value: 48.6
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 35.2
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 13.4
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 64
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 64
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 816
+  date: "2026-01-31"
+  unit: "EUR/Month"
+
+corruption-index:
+  value: 53
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 49
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 70
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 5.7
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 3.70
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 5.80
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

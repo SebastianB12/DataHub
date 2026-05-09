@@ -116,10 +116,37 @@ export async function getIndicatorCatalog(
 }
 
 export const COUNTRIES = [
+  // Bestehend (Phase 1-6)
   { code: "US", name: "United States", name_de: "USA", flag: "\u{1F1FA}\u{1F1F8}" },
   { code: "EA", name: "Euro Area", name_de: "Euro-Raum", flag: "\u{1F1EA}\u{1F1FA}" },
   { code: "GB", name: "United Kingdom", name_de: "UK", flag: "\u{1F1EC}\u{1F1E7}" },
   { code: "DE", name: "Germany", name_de: "Deutschland", flag: "\u{1F1E9}\u{1F1EA}" },
   { code: "CN", name: "China", name_de: "China", flag: "\u{1F1E8}\u{1F1F3}" },
   { code: "FR", name: "France", name_de: "Frankreich", flag: "\u{1F1EB}\u{1F1F7}" },
+  // EU-Erweiterung Phase 7 (2026-05-09): die restlichen 25 EU-Mitgliedstaaten
+  { code: "IT", name: "Italy",          name_de: "Italien",        flag: "\u{1F1EE}\u{1F1F9}" },
+  { code: "ES", name: "Spain",          name_de: "Spanien",        flag: "\u{1F1EA}\u{1F1F8}" },
+  { code: "NL", name: "Netherlands",    name_de: "Niederlande",    flag: "\u{1F1F3}\u{1F1F1}" },
+  { code: "BE", name: "Belgium",        name_de: "Belgien",        flag: "\u{1F1E7}\u{1F1EA}" },
+  { code: "PL", name: "Poland",         name_de: "Polen",          flag: "\u{1F1F5}\u{1F1F1}" },
+  { code: "SE", name: "Sweden",         name_de: "Schweden",       flag: "\u{1F1F8}\u{1F1EA}" },
+  { code: "AT", name: "Austria",        name_de: "Österreich",     flag: "\u{1F1E6}\u{1F1F9}" },
+  { code: "IE", name: "Ireland",        name_de: "Irland",         flag: "\u{1F1EE}\u{1F1EA}" },
+  { code: "DK", name: "Denmark",        name_de: "Dänemark",       flag: "\u{1F1E9}\u{1F1F0}" },
+  { code: "FI", name: "Finland",        name_de: "Finnland",       flag: "\u{1F1EB}\u{1F1EE}" },
+  { code: "PT", name: "Portugal",       name_de: "Portugal",       flag: "\u{1F1F5}\u{1F1F9}" },
+  { code: "GR", name: "Greece",         name_de: "Griechenland",   flag: "\u{1F1EC}\u{1F1F7}" },
+  { code: "CZ", name: "Czech Republic", name_de: "Tschechien",     flag: "\u{1F1E8}\u{1F1FF}" },
+  { code: "HU", name: "Hungary",        name_de: "Ungarn",         flag: "\u{1F1ED}\u{1F1FA}" },
+  { code: "RO", name: "Romania",        name_de: "Rumänien",       flag: "\u{1F1F7}\u{1F1F4}" },
+  { code: "BG", name: "Bulgaria",       name_de: "Bulgarien",      flag: "\u{1F1E7}\u{1F1EC}" },
+  { code: "HR", name: "Croatia",        name_de: "Kroatien",       flag: "\u{1F1ED}\u{1F1F7}" },
+  { code: "SK", name: "Slovakia",       name_de: "Slowakei",       flag: "\u{1F1F8}\u{1F1F0}" },
+  { code: "SI", name: "Slovenia",       name_de: "Slowenien",      flag: "\u{1F1F8}\u{1F1EE}" },
+  { code: "LU", name: "Luxembourg",     name_de: "Luxemburg",      flag: "\u{1F1F1}\u{1F1FA}" },
+  { code: "LT", name: "Lithuania",      name_de: "Litauen",        flag: "\u{1F1F1}\u{1F1F9}" },
+  { code: "LV", name: "Latvia",         name_de: "Lettland",       flag: "\u{1F1F1}\u{1F1FB}" },
+  { code: "EE", name: "Estonia",        name_de: "Estland",        flag: "\u{1F1EA}\u{1F1EA}" },
+  { code: "CY", name: "Cyprus",         name_de: "Zypern",         flag: "\u{1F1E8}\u{1F1FE}" },
+  { code: "MT", name: "Malta",          name_de: "Malta",          flag: "\u{1F1F2}\u{1F1F9}" },
 ] as const;

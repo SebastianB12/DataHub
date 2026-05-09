@@ -1,0 +1,85 @@
+# Tschechien — kuratierte Indikatoren
+country: CZ
+
+corporate-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+  note: "Erhöht von 19% auf 21% ab 2024."
+
+personal-income-tax-rate:
+  value: 23
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top progressive rate (>3-fold avg salary)."
+
+sales-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+  note: "DPH Standard Rate."
+
+social-security-rate:
+  value: 45.0
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 33.8
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 11.2
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 20800
+  date: "2026-01-31"
+  unit: "CZK/Month"
+
+corruption-index:
+  value: 54
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 49
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 80
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 6.5
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 4.20
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 8.00
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

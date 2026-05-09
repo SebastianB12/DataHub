@@ -1,0 +1,83 @@
+# Lettland — kuratierte Indikatoren
+country: LV
+
+corporate-tax-rate:
+  value: 20
+  date: "2026-12-31"
+  unit: "%"
+  note: "Distribution-based CIT (only on distributed profits)."
+
+personal-income-tax-rate:
+  value: 31
+  date: "2026-12-31"
+  unit: "%"
+
+sales-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate:
+  value: 34.09
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 23.59
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 10.50
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 740
+  date: "2026-01-31"
+  unit: "EUR/Month"
+
+corruption-index:
+  value: 60
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 38
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 72
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 5.4
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 3.40
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 4.20
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

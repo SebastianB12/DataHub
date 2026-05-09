@@ -34,6 +34,7 @@ GEO_MAP = {
     "EA20": "EA", "EA19": "EA", "EA21": "EA", "EA": "EA",
     "DE": "DE",
     "UK": "GB",   # Eurostat uses UK, we use GB
+    "EL": "GR",   # Eurostat uses EL, we use GR (ISO-3166)
     "FR": "FR", "IT": "IT", "ES": "ES", "NL": "NL", "BE": "BE",
     "AT": "AT", "FI": "FI", "GR": "GR", "PT": "PT", "IE": "IE",
     "PL": "PL", "SE": "SE", "DK": "DK", "CZ": "CZ", "HU": "HU",
@@ -44,7 +45,8 @@ GEO_MAP = {
 # Reverse map: our code → preferred Eurostat geo codes (try in order)
 COUNTRY_TO_GEO: dict[str, list[str]] = {
     "EA": ["EA20", "EA19", "EA21", "EA"],
-    "DE": ["DE"], "GB": ["UK"], "FR": ["FR"], "IT": ["IT"], "ES": ["ES"],
+    "DE": ["DE"], "GB": ["UK"], "GR": ["EL"],
+    "FR": ["FR"], "IT": ["IT"], "ES": ["ES"],
 }
 
 

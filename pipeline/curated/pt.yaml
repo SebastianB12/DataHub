@@ -1,0 +1,87 @@
+# Portugal — kuratierte Indikatoren
+country: PT
+
+corporate-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+  note: "IRC Standard Rate. Surtax up to 9% for large profits."
+
+personal-income-tax-rate:
+  value: 48
+  date: "2026-12-31"
+  unit: "%"
+  note: "IRS top marginal."
+
+sales-tax-rate:
+  value: 23
+  date: "2026-12-31"
+  unit: "%"
+  note: "IVA Standard Rate."
+
+social-security-rate:
+  value: 34.75
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 23.75
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 11.00
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Steigt mit Lebenserwartung."
+
+retirement-age-women:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 870
+  date: "2026-01-31"
+  unit: "EUR/Month"
+  note: "Salário Mínimo Nacional 2026, 14 monthly payments."
+
+corruption-index:
+  value: 57
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 35
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 73
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 3.51
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 5.46
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 7.43
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

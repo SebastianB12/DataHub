@@ -23,7 +23,9 @@ BASE_URL = "https://data-api.ecb.europa.eu/service/data"
 # for each (it's the same policy rate). Aggregate-only indicators like
 # central-bank-balance and money-supply-m2 are NOT replicated — they describe
 # the Eurosystem / EA aggregate, not any single member.
-EA_MEMBERS = ["DE", "FR"]  # extend with AT, BE, IT, ES, ... when countries are added
+EA_MEMBERS = ["DE", "FR", "AT", "BE", "CY", "EE", "FI", "GR", "IE", "IT",
+              "LV", "LT", "LU", "MT", "NL", "PT", "SK", "SI", "ES", "HR"]
+# HR (Croatia) joined the EA on 2023-01-01. All 20 current EA members share ECB rate.
 
 # Indicators where the ECB value applies to every EA member (shared policy).
 SHARED_POLICY_INDICATORS = {"interest-rate"}

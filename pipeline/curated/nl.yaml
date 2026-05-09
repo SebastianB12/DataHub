@@ -1,0 +1,87 @@
+# Niederlande — kuratierte Indikatoren
+country: NL
+
+corporate-tax-rate:
+  value: 25.8
+  date: "2026-12-31"
+  unit: "%"
+  note: "Standard CIT rate (incomes >395k EUR)."
+
+personal-income-tax-rate:
+  value: 49.5
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top marginal income tax rate (>75k EUR)."
+
+sales-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+  note: "BTW Standard Rate."
+
+social-security-rate:
+  value: 51.24
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 23.59
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 27.65
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 67
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 67
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 14.40
+  date: "2026-01-31"
+  unit: "EUR/Hour"
+  note: "Wettelijk minimumloon Stundenlohn ab 2024."
+
+corruption-index:
+  value: 78
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 8
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 96
+  date: "2026-04-01"
+  unit: "Rating"
+  note: "Moody's Aaa, S&P AAA, Fitch AAA."
+
+hospital-beds:
+  value: 2.92
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 3.74
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 11.40
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 1.6
+  date: "2025-12-31"
+  unit: "Points"

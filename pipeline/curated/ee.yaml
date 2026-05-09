@@ -1,0 +1,85 @@
+# Estland — kuratierte Indikatoren
+country: EE
+
+corporate-tax-rate:
+  value: 22
+  date: "2026-12-31"
+  unit: "%"
+  note: "Distribution-based CIT (erhöht von 20% auf 22% ab 2025)."
+
+personal-income-tax-rate:
+  value: 22
+  date: "2026-12-31"
+  unit: "%"
+  note: "Flat tax (erhöht von 20% auf 22% ab 2025)."
+
+sales-tax-rate:
+  value: 24
+  date: "2026-12-31"
+  unit: "%"
+  note: "KMS (erhöht von 22% auf 24% ab Juli 2025)."
+
+social-security-rate:
+  value: 35
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 33.8
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 1.6
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 64.75
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 64.75
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 886
+  date: "2026-01-31"
+  unit: "EUR/Month"
+
+corruption-index:
+  value: 76
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 12
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 80
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 4.6
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 3.50
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 5.80
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

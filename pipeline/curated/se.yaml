@@ -1,0 +1,87 @@
+# Schweden — kuratierte Indikatoren
+country: SE
+
+corporate-tax-rate:
+  value: 20.6
+  date: "2026-12-31"
+  unit: "%"
+  note: "Bolagsskatt (CIT) Standard Rate (since 2021)."
+
+personal-income-tax-rate:
+  value: 52.3
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top marginal incl. statlig inkomstskatt + kommunalskatt."
+
+sales-tax-rate:
+  value: 25
+  date: "2026-12-31"
+  unit: "%"
+  note: "Moms Standard Rate."
+
+social-security-rate:
+  value: 38.42
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 31.42
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 7.00
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Wird ab 2026 auf 67 angehoben."
+
+retirement-age-women:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 0
+  date: "2026-12-31"
+  unit: "SEK/Month"
+  note: "Schweden hat keinen gesetzlichen Mindestlohn — Tarifverträge regeln Mindestlöhne."
+
+corruption-index:
+  value: 82
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 6
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 96
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 2.07
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 4.31
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 11.94
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 4.0
+  date: "2025-12-31"
+  unit: "Points"

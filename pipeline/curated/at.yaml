@@ -1,0 +1,87 @@
+# Österreich — kuratierte Indikatoren
+country: AT
+
+corporate-tax-rate:
+  value: 23
+  date: "2026-12-31"
+  unit: "%"
+  note: "KöSt Standard Rate (Senkung von 24% auf 23% ab 2024)."
+
+personal-income-tax-rate:
+  value: 55
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top marginal Einkommensteuer (>1 Mio EUR)."
+
+sales-tax-rate:
+  value: 20
+  date: "2026-12-31"
+  unit: "%"
+  note: "USt Standard Rate."
+
+social-security-rate:
+  value: 39.6
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 21.43
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 18.12
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 60
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Wird ab 2024 schrittweise auf 65 angehoben."
+
+minimum-wages:
+  value: 0
+  date: "2026-12-31"
+  unit: "EUR/Month"
+  note: "Kein gesetzlicher Mindestlohn — KV-Vereinbarungen."
+
+corruption-index:
+  value: 71
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 17
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 94
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 7.04
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 5.40
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 6.96
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 1.5
+  date: "2025-12-31"
+  unit: "Points"

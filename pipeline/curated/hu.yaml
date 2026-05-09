@@ -1,0 +1,86 @@
+# Ungarn — kuratierte Indikatoren
+country: HU
+
+corporate-tax-rate:
+  value: 9
+  date: "2026-12-31"
+  unit: "%"
+  note: "Niedrigster CIT in der EU."
+
+personal-income-tax-rate:
+  value: 15
+  date: "2026-12-31"
+  unit: "%"
+  note: "Flat tax rate (Személyi Jövedelemadó)."
+
+sales-tax-rate:
+  value: 27
+  date: "2026-12-31"
+  unit: "%"
+  note: "ÁFA — höchste VAT in der EU."
+
+social-security-rate:
+  value: 31.5
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 13.0
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 18.5
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 290800
+  date: "2026-01-31"
+  unit: "HUF/Month"
+  note: "Minimálbér 2026."
+
+corruption-index:
+  value: 41
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 76
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 56
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 6.78
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 6.10
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 6.20
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

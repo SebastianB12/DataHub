@@ -1,0 +1,85 @@
+# Luxemburg — kuratierte Indikatoren
+country: LU
+
+corporate-tax-rate:
+  value: 24.94
+  date: "2026-12-31"
+  unit: "%"
+  note: "Combined CIT + municipal trade tax + solidarity surtax."
+
+personal-income-tax-rate:
+  value: 42
+  date: "2026-12-31"
+  unit: "%"
+
+sales-tax-rate:
+  value: 17
+  date: "2026-12-31"
+  unit: "%"
+  note: "Niedrigste VAT in der EU."
+
+social-security-rate:
+  value: 25.94
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 13.05
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 12.89
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 2638
+  date: "2026-01-31"
+  unit: "EUR/Month"
+  note: "Höchster Mindestlohn EU."
+
+corruption-index:
+  value: 81
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 9
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 96
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 4.30
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 3.10
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 12.40
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"

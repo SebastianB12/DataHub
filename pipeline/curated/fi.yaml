@@ -1,0 +1,85 @@
+# Finnland — kuratierte Indikatoren
+country: FI
+
+corporate-tax-rate:
+  value: 20
+  date: "2026-12-31"
+  unit: "%"
+
+personal-income-tax-rate:
+  value: 56.95
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top marginal incl. statlig + kommunalskatt + kyrkoskatt."
+
+sales-tax-rate:
+  value: 25.5
+  date: "2026-09-01"
+  unit: "%"
+  note: "ALV Standard Rate (Erhöhung von 24% auf 25.5% am 1. Sept 2024)."
+
+social-security-rate:
+  value: 31.04
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 21.55
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 9.49
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 65
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 0
+  date: "2026-12-31"
+  unit: "EUR/Month"
+  note: "Kein gesetzlicher Mindestlohn — Tarifverträge."
+
+corruption-index:
+  value: 88
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 2
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 90
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 2.81
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 3.81
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 14.30
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 1.5
+  date: "2025-12-31"
+  unit: "Points"

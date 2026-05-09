@@ -1,0 +1,84 @@
+# Litauen — kuratierte Indikatoren
+country: LT
+
+corporate-tax-rate:
+  value: 16
+  date: "2026-12-31"
+  unit: "%"
+  note: "Erhöht von 15% auf 16% ab 2025."
+
+personal-income-tax-rate:
+  value: 32
+  date: "2026-12-31"
+  unit: "%"
+
+sales-tax-rate:
+  value: 21
+  date: "2026-12-31"
+  unit: "%"
+  note: "PVM Standard Rate."
+
+social-security-rate:
+  value: 21.27
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-companies:
+  value: 1.77
+  date: "2026-12-31"
+  unit: "%"
+
+social-security-rate-employees:
+  value: 19.50
+  date: "2026-12-31"
+  unit: "%"
+
+retirement-age-men:
+  value: 64.5
+  date: "2026-12-31"
+  unit: "Years"
+
+retirement-age-women:
+  value: 63.83
+  date: "2026-12-31"
+  unit: "Years"
+
+minimum-wages:
+  value: 1038
+  date: "2026-01-31"
+  unit: "EUR/Month"
+
+corruption-index:
+  value: 61
+  date: "2025-12-31"
+  unit: "Points"
+
+corruption-rank:
+  value: 32
+  date: "2025-12-31"
+  unit: "Rank"
+
+credit-rating:
+  value: 75
+  date: "2026-04-01"
+  unit: "Rating"
+
+hospital-beds:
+  value: 6.4
+  date: "2022-12-31"
+  unit: "per 1000 people"
+
+medical-doctors:
+  value: 5.40
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+nurses:
+  value: 7.70
+  date: "2021-12-31"
+  unit: "per 1000 people"
+
+terrorism-index:
+  value: 0
+  date: "2025-12-31"
+  unit: "Points"
