@@ -1,0 +1,62 @@
+"""Promote national-source rows for DK/FI/SE/IE inflation-cpi etc., demote Eurostat to fallback.
+
+Sources:
+  dst    -> Statistics Denmark (Statbank)
+  stat_fi-> Statistics Finland (Tilastokeskus)
+  scb_se -> Statistics Sweden (SCB PxWeb)
+  cso_ie -> CSO Ireland (PxStat)
+"""
+import sys
+sys.stdout.reconfigure(encoding="utf-8")
+from pipeline.db import supabase as sb
+
+# (country, slug, src, series_id, freq, unit, adjustment, conversion, note)
+SEEDS = [
+    # Denmark
+    ("DK", "inflation-cpi",         "dst", "DST/PRIS01",   "M", "Index", "NSA", 1.0, "DK Statbank PRIS01 CPI all-items index"),
+    ("DK", "industrial-production", "dst", "DST/IPOP21",   "M", "Index", "SA",  1.0, "DK Statbank IPOP21 IP manufacturing SA"),
+    ("DK", "unemployment",          "dst", "DST/AUP01",    "M", "%",     "SA",  1.0, "DK Statbank AUP01 unemployment rate (registered)"),
+    ("DK", "retail-sales",          "dst", "DST/DETA211A", "M", "Index", "NSA", 1.0, "DK Statbank DETA211A Retail Trade Index G47"),
+    # Finland
+    ("FI", "inflation-cpi",         "stat_fi", "STATFI/khi/15b5", "M", "Index", "NSA", 1.0, "FI Tilastokeskus 15b5 CPI 2025=100 monthly"),
+    # Sweden
+    ("SE", "inflation-cpi",         "scb_se", "SCB/PR0101A/KPI2020M", "M", "Index", "NSA", 1.0, "SE SCB shadow CPI continuous index 1980=100"),
+    # Ireland
+    ("IE", "inflation-cpi",         "cso_ie", "CSO/CPM01",   "M", "Index", "NSA", 1.0, "CSO Ireland CPM01 CPI Base Dec 2023=100 all items"),
+]
+
+
+def main():
+    inserted = 0
+    for country, slug, src, series_id, freq, unit, adj, conv, note in SEEDS:
+        # Delete same-source row if any
+        sb.table("indicator_sources").delete().eq(
+            "indicator", slug
+        ).eq("country", country).eq("source", src).execute()
+        # Demote eurostat for this slug
+        sb.table("indicator_sources").update({"is_default": False}).eq(
+            "indicator", slug
+        ).eq("country", country).eq("source", "eurostat").execute()
+        row = {
+            "indicator": slug,
+            "country": country,
+            "source": src,
+            "series_id": series_id,
+            "is_default": True,
+            "transform": "raw",
+            "conversion": conv,
+            "unit": unit,
+            "adjustment": adj,
+            "freq_hint": freq,
+            "extra_params": None,
+            "active": True,
+            "note": note,
+        }
+        sb.table("indicator_sources").insert(row).execute()
+        inserted += 1
+        print(f"  + {country}/{slug:<22} | {src:<8} | {series_id}")
+    print(f"\n{inserted} national-source rows promoted; eurostat counterparts demoted.")
+
+
+if __name__ == "__main__":
+    main()

@@ -21,6 +21,7 @@ PROVIDERS = [
     "pipeline.providers.bdf",         # FR Banque de France (via DBnomics)
     "pipeline.providers.ine_es",      # ES (TE-source-conform via INE Tempus3 JSON API)
     "pipeline.providers.dbnomics",    # IT/IE/PT/BE/GR/SE/PL national stat offices via DBnomics gateway
+    "pipeline.providers.national_eu", # DK/FI/SE/IE/PT direct national APIs
     "pipeline.providers.ecb",         # EA money/rates
     "pipeline.providers.ons",         # GB (slow due to anti-bot sleeps)
     "pipeline.providers.bundesbank",  # DE money/banking
