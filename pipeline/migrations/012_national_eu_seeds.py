@@ -37,6 +37,8 @@ SEEDS = [
     ("BE", "inflation-cpi",         "statbel", "STATBEL/208b69bd", "M", "Index (2013=100)", "NSA", 1.0, "Statbel CPI base 2013=100 (last 13 months)"),
     # Slovakia — direct from ŠÚ SR DataCube REST
     ("SK", "inflation-cpi",         "susr_sk", "SUSR/sp2038ms/odb01/mj38", "M", "Index (Dec 2000=100)", "NSA", 1.0, "ŠÚ SR sp2038ms CPI Total, Dec 2000=100"),
+    # Hungary — direct from KSH STADAT (HTML scrape)
+    ("HU", "inflation-cpi",         "ksh_hu",  "KSH/ara0040", "M", "Index (same month previous year=100)", "NSA", 1.0, "KSH ara0040 CPI YoY, total"),
 ]
 
 

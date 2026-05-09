@@ -738,6 +738,78 @@ def _parse_jsonstat_year_month(js: dict) -> list[tuple[date, float]]:
     return sorted(out)
 
 
+# === Hungary — KSH STADAT (HTML scrape) ===
+
+HU_SERIES = [
+    # ara0040 = "The consumer price index by main consumption groups, monthly"
+    # Format: YoY index (same period previous year=100.0%). Columns: Year, Month,
+    # Food, AlcTobacco, Clothing, Durable, FuelPower, Other, Services, Total, Pensioners
+    {"slug": "inflation-cpi", "table": "ara0040",
+     "value_col_index": 9,  # 0-indexed: Year=0, Month=1, ..., Total=9
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 1.2.1.2 ara0040 CPI total YoY Index (sm-py=100)"},
+]
+
+HU_MONTHS = {
+    "January":1, "February":2, "March":3, "April":4, "May":5, "June":6,
+    "July":7, "August":8, "September":9, "October":10, "November":11, "December":12,
+}
+
+
+def fetch_hu_stadat(table: str, value_col_index: int, freq: str = "M") -> list[tuple[date, float]]:
+    """Scrape KSH STADAT HTML table. Year repeats only on January-row.
+    KSH tables have multiple sections (YoY/MoM/base100); we keep only first occurrence
+    of each (year, month) tuple — that's the YoY section which appears first."""
+    import bs4
+    url = f"https://www.ksh.hu/stadat_files/ara/en/{table}.html"
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    soup = bs4.BeautifulSoup(r.text, "html.parser")
+    out = []
+    seen = set()
+    table_el = soup.find("table")
+    if not table_el:
+        return out
+    current_year = None
+    for tr in table_el.find_all("tr"):
+        cells = [c.get_text(strip=True) for c in tr.find_all(["td", "th"])]
+        if not cells:
+            continue
+        # Header rows have all-text cells; data rows start with Year (4-digit) or empty
+        first = cells[0]
+        # Skip header rows
+        if first.lower() in ("period", "") and len(cells) >= 2 and cells[1] not in HU_MONTHS:
+            continue
+        # Year carry-over
+        if first.isdigit() and len(first) == 4:
+            current_year = int(first)
+            month_text = cells[1] if len(cells) > 1 else ""
+        elif first == "" and len(cells) >= 2 and cells[1] in HU_MONTHS:
+            # continuation row — first cell is empty, month is in cells[1]
+            month_text = cells[1]
+        elif first in HU_MONTHS:
+            month_text = first
+        else:
+            continue
+        if month_text not in HU_MONTHS:
+            continue
+        if current_year is None:
+            continue
+        # Get the value at value_col_index
+        if value_col_index < len(cells):
+            key = (current_year, HU_MONTHS[month_text])
+            if key in seen:
+                continue
+            seen.add(key)
+            val_str = cells[value_col_index].replace(",", ".").replace("\xa0", "")
+            try:
+                val = float(val_str)
+            except ValueError:
+                continue
+            out.append((date(current_year, HU_MONTHS[month_text], 1), val))
+    return sorted(out)
+
+
 # === Slovakia — Štatistický úrad SR DataCube REST ===
 
 SK_SERIES = [
@@ -852,6 +924,7 @@ COUNTRY_FETCHERS = {
     "dzs_hr":   ("HR", HR_SERIES, "DZS Croatian Bureau of Statistics",   "https://web.dzs.hr"),
     "statbel":  ("BE", BE_SERIES, "Statbel (Belgium)",                   "https://statbel.fgov.be"),
     "susr_sk":  ("SK", SK_SERIES, "Štatistický úrad SR (Slovakia)",      "https://slovak.statistics.sk"),
+    "ksh_hu":   ("HU", HU_SERIES, "KSH (Hungary)",                       "https://www.ksh.hu"),
 }
 
 
@@ -1040,6 +1113,24 @@ class NationalEUProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/BE (Statbel): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/BE: {e}")
+            time.sleep(0.3)
+
+        # Hungary
+        for cfg in HU_SERIES:
+            try:
+                pairs = fetch_hu_stadat(cfg["table"], cfg["value_col_index"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="HU",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="ksh_hu", unit=cfg["unit"],
+                        series_id=f"KSH/{cfg['table']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/HU ({cfg['table']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/HU: {e}")
             time.sleep(0.3)
 
         # Slovakia
