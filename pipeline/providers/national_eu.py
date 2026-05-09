@@ -875,7 +875,7 @@ RO_SERIES = [
     # 4000 INDICII PRETURILOR DE CONSUM
     # IPC102A: monthly CPI vs previous month=100 (kept for backward compat).
     {"slug": "inflation-cpi", "parent": "4000", "matrix": "IPC102A",
-     "filter_dims": {"Categorii de marfuri si servicii cumparate": "TOTAL"},
+     "filter_dims": {"Categorii de marfuri si servicii cumparate": "Total"},
      "unit_value": "Procente",
      "freq": "M", "unit": "Index (prev month=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "INSSE Tempo IPC102A CPI MoM index (prev month=100), total"},
@@ -1651,7 +1651,11 @@ class NationalEUProvider(BaseProvider):
         # Romania
         for cfg in RO_SERIES:
             try:
-                pairs = fetch_ro_tempo(cfg["matrix"], cfg.get("category_label", "Total"), cfg["freq"])
+                pairs = fetch_ro_tempo(
+                    cfg["parent"], cfg["matrix"],
+                    cfg.get("filter_dims", {}), cfg.get("unit_value", "Procente"),
+                    cfg["freq"],
+                )
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="RO",
