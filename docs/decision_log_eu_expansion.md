@@ -168,4 +168,58 @@ Re-Iterate auf nationale Provider in folgenden Sessions wenn:
 - Bessere Discovery der Series-Codes per Land
 - Größere User-Sichtbarkeit der Source-Mismatch (TE: ISTAT vs Wir: Eurostat)
 
+## Validation-Pass Summary (2026-05-09)
+
+Alle 25 neuen EU-Länder haben aktuelle Daten via Eurostat-Baseline:
+
+| Land | inflation-cpi (Apr 2026 YoY) | unemployment (Mar 2026) | gdp-real (Q1 2026 Bil EUR) | industrial-production |
+|---|---|---|---|---|
+| IT | 2.9% | 5.2% | 435 | 93.6 |
+| ES | 2.3% (Eurostat HICP) / 3.2% (INE NIC ✓ TE) | 10.83% (INE EPA ✓ TE) | 335 | 110.5 |
+| NL | 2.5% | 4.0% | 204 | 101.1 |
+| BE | 4.3% | 6.3% | 113 | 93.6 |
+| PL | 3.2% | 3.3% | 152 | 118.4 |
+| SE | 1.5% | 9.2% | 121 | 106.5 |
+| AT | 3.3% | 5.6% | 87 | 105.3 |
+| IE | 3.6% | 4.7% | 106 | 113.4 |
+| DK | 1.0% | 6.9% | 81 | 131.3 |
+| FI | 2.3% | 10.5% | 52 | 107.9 |
+| PT | 3.3% | 5.8% | 54 | 101.1 |
+| GR | 4.6% | 9.0% | 54 | 118.0 |
+| CZ | 1.5% | 3.1% | 53 | 103.0 |
+| HU | 2.1% | 4.4% | 35 | 95.9 |
+| RO | 9.0% | 6.1% | 49 | 94.2 |
+| BG | 6.2% | 3.2% | 14 | 94.2 |
+| HR | 5.4% | 4.1% | 16 | 101.2 |
+| SK | 4.0% | 5.6% | 24 | 96.8 |
+| SI | 3.4% | 3.9% | 12 | 92.2 |
+| LU | 5.2% | 6.9% | 14 | 84.2 |
+| LT | 4.9% | 6.5% | 12 | 115.3 |
+| LV | 3.0% | 6.4% | 6 | 102.0 |
+| EE | 3.3% | 6.9% | 5 | 89.5 |
+| CY | 3.0% | 4.3% | 8 | 113.8 |
+| MT | 2.4% | 3.5% | 4 | 115.1 |
+
+Alle Werte sind plausibel und decken sich mit TE-Größenordnung. Kleinere Diffs (<0.5pp) bei inflation-cpi sind methodologisch (Eurostat HICP vs. nationale CPI/NIC); unemployment-Diffs (~0.5pp) liegen zwischen LFS-standardisiert und EPA. Wo nationale Quellen direkt einbindbar sind (ES INE), wurde umgestellt.
+
+## Phase-7 Final Status
+
+**Geliefert (2026-05-09):**
+- 25 EU-Länder neu in DB (`countries`-Tabelle)
+- 1150+ neue `indicator_sources`-Rows, 268k+ neue `data_points`
+- ECB Main-Refi-Rate für alle 20 EA-Mitglieder
+- World Bank GDP/Population x25
+- Curated YAMLs (Steuern/Sozialversicherung/Renteneintritt/etc.) für alle 25
+- INE-Spain-Direct-Provider (7 Slugs ✓ TE-konform)
+- Frontend COUNTRIES-Liste auf 31 Länder erweitert
+- Decision-Log mit Strategie + IT/NL-Befunde
+
+**Deferred (für Folge-Sessions):**
+- ISTAT-direct (Italien): SDMX-Endpoint stale
+- CBS-direct (Niederlande): Endpoint nicht erreichbar
+- Statbel/NBB (Belgien), GUS/NBP (Polen), SCB (Schweden): Library-Setup angetestet, Implementation deferred wegen Zeitbudget
+- 9 weitere kleine EU-Mitglieder mit national-source provider work (AT, IE, DK, FI, PT, GR, CZ, HU, RO)
+
+**Coverage-Status:** Jedes der 25 neuen EU-Länder hat 60-63 Indikatoren mit aktuellen Daten. Eurostat-Baseline ist solide; per-country National-Provider werden iterativ nachgezogen.
+
 (Weitere Country-Blöcke folgen analog.)
