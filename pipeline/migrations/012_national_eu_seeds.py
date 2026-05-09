@@ -28,11 +28,33 @@ SEEDS = [
     ("SE", "trade-balance",            "scb_se", "SCB/HA0201A/ImportExportSnabbM", "M", "SEK million", "NSA", 1.0, "SE SCB HA0201A Net Trade of goods SEK million"),
     ("SE", "retail-sales-yoy",         "scb_se", "SCB/HA0101B/DetOms07N",  "M", "%",                "WDA", 1.0, "SE SCB HA0101B Retail Sales YoY% (excl fuel) WDA constant prices"),
     # Ireland
-    ("IE", "inflation-cpi",         "cso_ie", "CSO/CPM01",   "M", "Index", "NSA", 1.0, "CSO Ireland CPM01 CPI Base Dec 2023=100 all items"),
-    # Austria — direct from Statistik Austria OGD CSV
+    ("IE", "inflation-cpi",         "cso_ie", "CSO/CPM01",   "M", "Index",            "NSA", 1.0, "CSO Ireland CPM01 CPI Base Dec 2023=100 all items"),
+    ("IE", "unemployment",          "cso_ie", "CSO/MUM01",   "M", "%",                "SA",  1.0, "CSO Ireland MUM01 SA Monthly Unemployment Rate 15-74 both sexes"),
+    ("IE", "ppi",                   "cso_ie", "CSO/WPM35",   "M", "Index (2020=100)", "NSA", 1.0, "CSO Ireland WPM35 Industrial Price Index (excl VAT) Manufacturing 10-33"),
+    ("IE", "industrial-production", "cso_ie", "CSO/MIM05",   "M", "Index (2021=100)", "SA",  1.0, "CSO Ireland MIM05 SA Industrial Production Index Industries 05-35"),
+    ("IE", "retail-sales",          "cso_ie", "CSO/RSM08",   "M", "Index (2021=100)", "SA",  1.0, "CSO Ireland RSM08 Retail Sales Volume Index SA all retail businesses"),
+    ("IE", "trade-balance",         "cso_ie", "CSO/TSM01",   "M", "EUR thousand",     "NSA", 1.0, "CSO Ireland TSM01 Merchandise Trade Surplus (Exports-Imports)"),
+    ("IE", "housing-index",         "cso_ie", "CSO/HPM09",   "M", "Index",            "NSA", 1.0, "CSO Ireland HPM09 Residential Property Price Index national all properties"),
+    ("IE", "gdp-real",              "cso_ie", "CSO/NAQ03",   "Q", "EUR million",      "SA",  1.0, "CSO Ireland NAQ03 GDP at Constant Market Prices SA chain-linked"),
+    # Austria — direct from Statistik Austria OGD CSV (catalog at data.statistik.gv.at)
     ("AT", "inflation-cpi",         "stat_at", "STATAT/OGD_vpi20_VPI_2020_1", "M", "Index", "NSA", 1.0, "Statistik Austria VPI base 2020=100 (2021-01..2025-12)"),
+    ("AT", "ppi",                   "stat_at", "STATAT/OGD_epi2021nac08_EPI_2021_OENACE_1", "M", "Index (2021=100)", "NSA", 1.0, "Statistik Austria EPI 2021=100 Gesamtmarkt (TE-matching)"),
+    ("AT", "industrial-production", "stat_at", "STATAT/OGD_kjiprodindex2021_KJID2021_PI_1", "M", "Index (2021=100, WDA)", "WDA", 1.0, "Statistik Austria Produktionsindex 2021=100 AT total WDA (TE-matching)"),
+    ("AT", "unemployment",          "stat_at", "STATAT/OGD_ake100_hvd_ogdonly_HVD_ALQUO_1", "Q", "%", "NSA", 1.0, "Statistik Austria ALQ ILO concept, AT total quarterly"),
+    ("AT", "gdp",                   "stat_at", "STATAT/OGD_vgr108_VGR_HA_vj_1", "Q", "Bn EUR (real, SA)", "SA", 0.001, "Statistik Austria VGR108 BIP real SA, Mio->Bn EUR"),
+    ("AT", "wages",                 "stat_at", "STATAT/OGD_bruttoverdiensteindex2021a_KJID2021_BVIa_1", "M", "Index (2021=100, SA)", "SA", 1.0, "Statistik Austria Bruttoverdiensteindex 2021=100 SA"),
+    ("AT", "import-prices",         "stat_at", "STATAT/OGD_impi21_Impi21_1", "Q", "Index (2021=100)", "NSA", 1.0, "Statistik Austria IMPI 2021=100 Gesamtmarkt"),
     # Slovenia — direct from SURS PxWeb
     ("SI", "inflation-cpi",         "surs_si", "SURS/0400608S.px", "M", "Index (same month py=100)", "NSA", 1.0, "SURS 0400608S CPI Index vs same month previous year, TOTAL"),
+    ("SI", "ppi",                   "surs_si", "SURS/0457101S.px", "M", "Index (2021=100)", "NSA", 1.0, "SURS 0457101 PPI Industry (B-E), Month / avg 2021"),
+    ("SI", "industrial-production", "surs_si", "SURS/1701111S.px", "M", "Index (2021=100, SA)", "SA", 1.0, "SURS 1701111 IP Total industry (B+C+D), seasonally+calendar adjusted"),
+    ("SI", "unemployment",          "surs_si", "SURS/0762013S.px", "M", "%", "SA", 1.0, "SURS 0762013 monthly unemployment rate (experimental, SA, total sex+age)"),
+    ("SI", "gdp-growth-rate",       "surs_si", "SURS/0300220S.px", "Q", "% YoY", "SA", 1.0, "SURS 0300220 GDP volume YoY growth rate, SA"),
+    ("SI", "gdp",                   "surs_si", "SURS/0300220S.px", "Q", "Million EUR", "SA", 1.0, "SURS 0300220 GDP current prices, mio EUR, SA"),
+    ("SI", "retail-sales",          "surs_si", "SURS/2001303S.px", "M", "Index (2021=100, WDA)", "WDA", 1.0, "SURS 2001303 Retail trade ex fuel value index, calendar adjusted"),
+    ("SI", "trade-balance",         "surs_si", "SURS/2490001S.px", "M", "Million EUR", "NSA", 1e-6, "SURS 2490001 Trade balance (exports - imports), EUR -> mio EUR"),
+    ("SI", "exports",               "surs_si", "SURS/2490001S.px", "M", "Million EUR", "NSA", 1e-6, "SURS 2490001 Exports of goods, EUR -> mio EUR"),
+    ("SI", "imports",               "surs_si", "SURS/2490001S.px", "M", "Million EUR", "NSA", 1e-6, "SURS 2490001 Imports of goods, EUR -> mio EUR"),
     # Latvia — direct from CSP PxWeb
     ("LV", "inflation-cpi",         "csp_lv", "CSP/PCI030m", "M", "Index (Dec 1990=100)", "NSA", 1.0, "CSP Latvia PCI030m CPI continuous index Dec 1990=100"),
     # Estonia — direct from Statistics Estonia PxWeb

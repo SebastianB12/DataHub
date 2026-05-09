@@ -89,12 +89,14 @@ DK_SERIES = [
      "filters": {"BRANCHEDB25UDVALG": "G47"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "DK Statbank DETA211A Retail Trade total G47"},
-    # PRIS4221: Producer price index for commodities
-    # STANDGRP=BC (Mining+Manufacturing), TAL=100 (Index level)
-    {"slug": "ppi", "table": "PRIS4221",
-     "filters": {"STANDGRP": "BC", "TAL": "100"},
+    # PRIS4321: Producer and import price index for commodities
+    # HOVEDGRP=BCDE (Mining+manufacturing+electricity+water supply — TE uses this aggregation),
+    # MARKED1=500 (Total Danish production), ENHED=100 (Index level).
+    # Verified 2026-05-09: 2026M03 = 145.1, exact TE match.
+    {"slug": "ppi", "table": "PRIS4321",
+     "filters": {"HOVEDGRP": "BCDE", "MARKED1": "500", "ENHED": "100"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
-     "note": "DK Statbank PRIS4221 PPI mining+manufacturing index"},
+     "note": "DK Statbank PRIS4321 PPI BCDE Total Danish production index"},
     # NAN1: Demand and supply, annual GDP at market prices
     # TRANSAKT=B1GQK (GDP), PRISENHED=V_M (current prices, bn DKK)
     {"slug": "gdp", "table": "NAN1",
@@ -583,21 +585,93 @@ def fetch_gus_variable(var_id: int, freq: str = "M") -> list[tuple[date, float]]
 #   length 4 + freq=A  -> YYYY  (annual)
 
 AT_SERIES = [
-    # vpi20 (base 2020) covers 2021-01 to 2025-12 monthly. F-VPIMZVM is the index level;
-    # filter VPI5NEU = VPI-0 for all-items.
+    # CPI — VPI Basis 2020, Jan 2021..Dec 2025.
     {"slug": "inflation-cpi", "ogd": "OGD_vpi20_VPI_2020_1",
-     "filter_col": "C-VPI5NEU-0", "filter_val": "VPI-0",
-     "value_col": "F-VPIMZVM",
+     "filters": {"C-VPI5NEU-0": "VPI-0"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZVM",
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "Statistik Austria VPI base 2020=100 (covers 2021-01..2025-12)"},
-    # vpi25 (base 2025) for 2026 onwards. We'll add it as a supplementary row that data_points
-    # gets merged on (date, indicator, country, source) — but use a different source code so
-    # rows don't conflict. Actually keep it simple — use vpi20 for now.
+
+    # PPI — Erzeugerpreisindex Basis 2021, Gesamtmarkt (B72EPI-5).
+    # TE shows 117.50 points (Mar 2026) — exact match with our F-EZPINSG-0 + B72EPI-5.
+    {"slug": "ppi", "ogd": "OGD_epi2021nac08_EPI_2021_OENACE_1",
+     "filters": {"C-B72EPI-0": "B72EPI-5"},
+     "time_col": "C-EPIA10-0", "value_col": "F-EZPINSG-0",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria EPI 2021=100 Gesamtmarkt (Total domestic+foreign)"},
+
+    # Industrial production — Produktionsindex Basis 2021, Österreich (KJIB00-10),
+    # arbeitstägig bereinigt (X93-2). TE shows IP YoY 1.7% (Mar 2026); 111.8/109.9 -> +1.7%.
+    {"slug": "industrial-production", "ogd": "OGD_kjiprodindex2021_KJID2021_PI_1",
+     "filters": {"C-X93-0": "X93-2", "C-KJIB00-0": "KJIB00-10"},
+     "time_col": "C-A10-0", "value_col": "F-KJIP_UI_INSG",
+     "freq": "M", "unit": "Index (2021=100, WDA)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "Statistik Austria Produktionsindex 2021=100, AT total, working-day adjusted"},
+
+    # Unemployment — ake100 ALQ (LFS/ILO concept), Österreich insgesamt (AKEQUOT_AL-1).
+    # Quarterly only (codes YYYYQ length 5). Annual rows (length 4) filtered by freq.
+    # NOTE: TE shows AMS registered rate (~7.5% Apr 2026); we publish the Eurostat-comparable
+    # ILO rate (5.7% Q4 2025) — the official Statistik Austria number.
+    {"slug": "unemployment", "ogd": "OGD_ake100_hvd_ogdonly_HVD_ALQUO_1",
+     "filters": {"C-AKEQUOT_AL-0": "AKEQUOT_AL-1"},
+     "time_col": "C-AKEQUOT_ZEIT-0", "value_col": "F-AKEQUOT_AL",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria ALQ (ILO/LFS concept), AT total, quarterly"},
+
+    # GDP (real, SA, level) — vgr108 quarterly, BIP zu Marktpreisen (VGRHAG-14).
+    # F-RSAIB = real, seasonally and working-day adjusted. Convert Mio. EUR -> Bn EUR.
+    {"slug": "gdp", "ogd": "OGD_vgr108_VGR_HA_vj_1",
+     "filters": {"C-VGRHAG79-0": "VGRHAG-14"},
+     "time_col": "C-A10-0", "value_col": "F-RSAIB",
+     "freq": "Q", "unit": "Bn EUR (real, SA)", "adjustment": "SA", "conversion": 0.001,
+     "note": "Statistik Austria VGR108 BIP real, SA — converted Mio->Bn EUR"},
+
+    # Wages — Bruttoverdiensteindex Basis 2021, saisonbereinigt (X93-3).
+    {"slug": "wages", "ogd": "OGD_bruttoverdiensteindex2021a_KJID2021_BVIa_1",
+     "filters": {"C-X93-0": "X93-3"},
+     "time_col": "C-A10-0", "value_col": "F-KJIP_BLG_INSG",
+     "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Statistik Austria Bruttoverdiensteindex 2021=100, SA"},
+
+    # Import prices — IMPI Basis 2021, Gesamtmarkt (RAUM-1), F-IMPI-01 = Gesamtindex.
+    # Quarterly only (16 obs Q1 2022..Q4 2025).
+    {"slug": "import-prices", "ogd": "OGD_impi21_Impi21_1",
+     "filters": {"C-RAUM-0": "RAUM-1"},
+     "time_col": "C-A10-0", "value_col": "F-IMPI-01",
+     "freq": "Q", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria IMPI 2021=100 Gesamtmarkt (total origin)"},
 ]
 
 
-def fetch_at_csv(ogd: str, filter_col: str, filter_val: str, value_col: str, freq: str = "M") -> list[tuple[date, float]]:
-    """Fetch Statistik Austria OGD CSV, filter and parse."""
+def _parse_at_period(time_code: str, freq: str) -> date | None:
+    """Parse Statistik Austria period codes like 'A10-202601' (M), 'A10-20251' (Q),
+    'AKEQUOT_ZEIT-2025' (A). Splits at LAST dash; interprets remainder by length+freq.
+    """
+    if not time_code or "-" not in time_code:
+        return None
+    digits = time_code.rsplit("-", 1)[1]
+    if not digits.isdigit():
+        return None
+    try:
+        if freq == "M" and len(digits) == 6:
+            yy, mm = int(digits[:4]), int(digits[4:])
+            if 1 <= mm <= 12:
+                return date(yy, mm, 1)
+        if freq == "Q" and len(digits) == 5:
+            yy, q = int(digits[:4]), int(digits[4:])
+            if 1 <= q <= 4:
+                return date(yy, {1: 1, 2: 4, 3: 7, 4: 10}[q], 1)
+        if freq == "A" and len(digits) == 4:
+            return date(int(digits), 1, 1)
+    except Exception:
+        return None
+    return None
+
+
+def fetch_at_csv(ogd: str, filters: dict, time_col: str, value_col: str, freq: str = "M") -> list[tuple[date, float]]:
+    """Fetch Statistik Austria OGD CSV. Filter rows by `filters` dict; parse `time_col`
+    and `value_col`. German decimals (',' -> '.'). Skip zero placeholders and ':' (geheim).
+    """
     import csv as csvm
     import io as iom
     url = f"https://data.statistik.gv.at/data/{ogd}.csv"
@@ -606,29 +680,21 @@ def fetch_at_csv(ogd: str, filter_col: str, filter_val: str, value_col: str, fre
     reader = csvm.DictReader(iom.StringIO(r.text), delimiter=";")
     out = []
     for row in reader:
-        if row.get(filter_col) != filter_val:
+        if not all(row.get(k) == v for k, v in filters.items()):
             continue
-        time_code = row.get("C-VPIZR-0") or row.get("C-MZR-0") or row.get("C-ZR-0") or ""
-        # VPIZR-202601 -> 2026-01 (monthly), VPIZR-2025 -> 2025 (annual; skip)
-        if not time_code or "-" not in time_code:
+        dt = _parse_at_period(row.get(time_col, ""), freq)
+        if dt is None:
             continue
-        period = time_code.split("-")[1]
-        if len(period) == 6 and period.isdigit():
-            try:
-                yy, mm = int(period[:4]), int(period[4:6])
-                dt = date(yy, mm, 1)
-            except Exception:
-                continue
-        else:
-            # annual or unsupported - skip monthly-only fetcher
+        raw = row.get(value_col, "")
+        if raw in ("", ":"):
             continue
-        val_str = row.get(value_col, "").replace(",", ".")
+        val_str = raw.replace(",", ".")
         try:
             val = float(val_str)
         except ValueError:
             continue
-        if val == 0.0:  # placeholder for missing data in some rows
-            continue
+        if val == 0.0:
+            continue  # zero placeholder for "no data"
         out.append((dt, val))
     return sorted(out)
 
@@ -636,15 +702,64 @@ def fetch_at_csv(ogd: str, filter_col: str, filter_val: str, value_col: str, fre
 # === Slovenia — SURS PxWeb (pxweb.stat.si) ===
 
 SI_SERIES = [
-    # 0400608S CPI ECOICOP v2 — TOT = all-items, MERITVE=2 = Index (same month previous year)
-    # Better: MERITVE=3 (Index month/Dec of previous year). For our use we want the LEVEL.
-    # Use MERITVE=2 which is the most-cited YoY index format. Or MERITVE=1 for month-on-month.
-    # The cleanest "level" doesn't exist directly — SI publishes only relatives.
-    # Use MERITVE=2 (Index vs same month previous year) — TE shows YoY rate, this is the source.
+    # CPI: 0400608S ECOICOP v2 — TOTAL, MERITVE=2 = Index vs same month previous year
     {"slug": "inflation-cpi", "table": "0400608S.px",
      "query": {"ŽIVLJENJSKA POTREBŠČINA": "TOT", "MERITVE": "2"},
      "freq": "M", "unit": "Index (same month py=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "SURS 0400608S CPI YoY index (same-month-previous-year=100), TOTAL"},
+    # PPI: 0457101S Producer price indices, by activities (NACE Rev. 2), monthly.
+    # B_TO_E = Industry except construction; INDEKS=29 = Month / avg 2021 (level index, base 2021=100).
+    # Verified Mar 2026 = 126.98, matches TE 127 points.
+    {"slug": "ppi", "table": "0457101S.px",
+     "query": {"SKD DEJAVNOST": "B_TO_E", "INDEKS": "29"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0457101 PPI Industry (B-E) Month / avg 2021"},
+    # Industrial production: 1701111S Section + MIG, monthly (base 2021=100).
+    # B+C+D[skd] = Total industry; VRSTA PODATKA=sa = seasonally+calendar adjusted.
+    # Verified Feb 2026 = 92.2 SA -> YoY -2.5% matches TE.
+    {"slug": "industrial-production", "table": "1701111S.px",
+     "query": {"SKD DEJAVNOST / NAMENSKA SKUPINA": "B+C+D[skd]", "VRSTA PODATKA": "sa"},
+     "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 1701111 IP Total industry (B+C+D) seasonally+calendar adjusted"},
+    # Unemployment: 0762013S monthly experimental rate. MERITVE=1 = unemployment rate %, VRSTA PODATKA=1 = SA, total sex+age.
+    # NB: SURS publishes only the experimental monthly LFS-based rate; differs from TE's
+    # registered-unemployment-rate proxy (TE Feb/26 = 4.9%; this series ~3.8-3.9%).
+    {"slug": "unemployment", "table": "0762013S.px",
+     "query": {"MERITVE": "1", "VRSTA PODATKA": "1", "STAROSTNA SKUPINA": "0", "SPOL": "0"},
+     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 0762013 monthly unemployment rate (experimental, SA, total)"},
+    # GDP growth: 0300220S quarterly. TRANSAKCIJE=B1GQ (GDP), MERITVE=G4 = volume growth rate vs same quarter prev. year (%), SA.
+    # Verified Q4 2025 = 1.6% (TE shows 2.0% - minor revision difference).
+    {"slug": "gdp-growth-rate", "table": "0300220S.px",
+     "query": {"TRANSAKCIJE": "B1GQ", "MERITVE": "G4", "VRSTA PODATKA": "Y"},
+     "freq": "Q", "unit": "% YoY", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 0300220 GDP volume YoY growth rate, SA"},
+    # GDP level: 0300220 V (current prices, mio EUR), SA - Q4 2025 = 18,117 mio EUR.
+    {"slug": "gdp", "table": "0300220S.px",
+     "query": {"TRANSAKCIJE": "B1GQ", "MERITVE": "V", "VRSTA PODATKA": "Y"},
+     "freq": "Q", "unit": "Million EUR", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 0300220 GDP current prices, mio EUR, SA"},
+    # Retail sales: 2001303S value/volume indices of turnover in retail trade, monthly (base 2021=100).
+    # "47 brez 47.3" = Retail trade except fuel; INDEKS=1 (Value); VRSTA PODATKA=3 (calendar adjusted).
+    # Verified Mar 2026 = 132.7.
+    {"slug": "retail-sales", "table": "2001303S.px",
+     "query": {"INDEKS": "1", "VRSTA PODATKA": "3", "SKD DEJAVNOST": "47 brez 47.3"},
+     "freq": "M", "unit": "Index (2021=100, WDA)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SURS 2001303 Retail trade ex fuel value index, calendar adjusted"},
+    # Trade balance/exports/imports: 2490001S monthly, EUR. Convert raw EUR to million EUR (* 1e-6).
+    # Verified Mar 2026 balance = -1,104,646,903 EUR / 1e6 = -1104.6 mio EUR (TE: -1,105M).
+    {"slug": "trade-balance", "table": "2490001S.px",
+     "query": {"UVOZ/IZVOZ": "4", "VALUTA": "EUR"},
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "SURS 2490001 Trade balance (exports - imports), EUR -> mio EUR"},
+    {"slug": "exports", "table": "2490001S.px",
+     "query": {"UVOZ/IZVOZ": "2", "VALUTA": "EUR"},
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "SURS 2490001 Exports of goods, EUR -> mio EUR"},
+    {"slug": "imports", "table": "2490001S.px",
+     "query": {"UVOZ/IZVOZ": "1", "VALUTA": "EUR"},
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "SURS 2490001 Imports of goods, EUR -> mio EUR"},
 ]
 
 
@@ -747,55 +862,133 @@ def fetch_lv_pxweb(table_path: str, query_filters: dict, freq: str = "M") -> lis
 
 
 # === Romania — INSSE Tempo (HTTP only on port 8077) ===
+#
+# Tempo matrices have 2..N dimensions. The time dim is labelled "Luni" (months)
+# or "Ani" (years). The unit dim label starts "UM:". For each non-time/non-unit
+# dim we pin a single category (typically "Total"/"TOTAL") via filter_dims.
+#
+# Discovery: tempo.Node().get_all() -> all theme nodes with .name; .by_code(...)
+# gives a node and .children traverses to leaf matrices. Matrix dimensions
+# expose .label and .options (each option has .label).
 
 RO_SERIES = [
-    # IPC102A: monthly CPI vs previous month=100. Via tempo-py library.
-    {"slug": "inflation-cpi", "matrix": "IPC102A", "category_label": "Total",
+    # 4000 INDICII PRETURILOR DE CONSUM
+    # IPC102A: monthly CPI vs previous month=100 (kept for backward compat).
+    {"slug": "inflation-cpi", "parent": "4000", "matrix": "IPC102A",
+     "filter_dims": {"Categorii de marfuri si servicii cumparate": "TOTAL"},
+     "unit_value": "Procente",
      "freq": "M", "unit": "Index (prev month=100)", "adjustment": "NSA", "conversion": 1.0,
-     "note": "INSSE Tempo IPC102A monthly CPI MoM index (prev month=100)"},
+     "note": "INSSE Tempo IPC102A CPI MoM index (prev month=100), total"},
+    # 5010 INDUSTRIE — IND104N gross monthly IP index, base 2021=100
+    {"slug": "industrial-production", "parent": "5010", "matrix": "IND104N",
+     "filter_dims": {"Activitati ale industriei CAEN Rev.2 - total": "TOTAL"},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo IND104N IP gross monthly index, total CAEN Rev.2, base 2021=100"},
+    # 4020 INDICII PRETURILOR PRODUCTIEI INDUSTRIALE — PPI1035 total internal+external
+    {"slug": "ppi", "parent": "4020", "matrix": "PPI1035",
+     "filter_dims": {"CAEN Rev.2 (activitati ale industriei - diviziuni)": "TOTAL"},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo PPI1035 PPI total (internal+external markets), all CAEN Rev.2 activities"},
+    # 1511 SOMERI BIM — AMG157H LFS unemployment rate, seasonally adjusted, monthly
+    {"slug": "unemployment", "parent": "1511", "matrix": "AMG157H",
+     "filter_dims": {"Grupe de varsta": "15 - 74 ani", "Sexe": "Total "},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "INSSE Tempo AMG157H LFS unemployment rate 15-74, total sex, seasonally adjusted"},
+    # 6005 COMERT INTERIOR — COM1071 retail trade volume index, gross series, base 2021
+    {"slug": "retail-sales", "parent": "6005", "matrix": "COM1071",
+     "filter_dims": {"Comert cu amanuntul cu exceptia comertului cu autovehicule si motocicl": "Total"},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo COM1071 retail trade volume index gross series, base 2021=100"},
+    # 1525 CASTIG SALARIAL — FOM107D gross monthly nominal wages, RON
+    {"slug": "wages", "parent": "1525", "matrix": "FOM107D",
+     "filter_dims": {"CAEN Rev.2  (activitati ale economiei nationale - sectiuni si diviziuni)": "TOTAL"},
+     "unit_value": "Lei RON",
+     "freq": "M", "unit": "RON/Month", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo FOM107D gross monthly nominal wage, total economy, RON"},
 ]
 
 
-def fetch_ro_tempo(matrix: str, category_label: str = "Total", freq: str = "M") -> list[tuple[date, float]]:
-    """RO INSSE Tempo via tempo-py library. Returns CSV-formatted text:
-    'Categorii..., Luni, UM, Valoare\nTotal, Luna ianuarie 1991, Procente, 114.8\n...'
+def fetch_ro_tempo(parent_code: str, matrix: str, filter_dims: dict, unit_value: str,
+                   freq: str = "M") -> list[tuple[date, float]]:
+    """RO INSSE Tempo via tempo-py library.
+
+    Generic fetcher: handles arbitrary number of dimensions by pinning each
+    non-time, non-unit dim to the value supplied in filter_dims (key matched
+    by exact-or-startswith against dim .label, to tolerate truncation).
+    The unit dim (label starts 'UM:') is pinned to unit_value.
+    The time dim ('Luni' for monthly, 'Ani' for annual) is selected exhaustively.
+    Returns list of (date, value) sorted ascending.
     """
     import tempo
     RO_MONTHS = {"ianuarie":1, "februarie":2, "martie":3, "aprilie":4, "mai":5, "iunie":6,
                  "iulie":7, "august":8, "septembrie":9, "octombrie":10, "noiembrie":11, "decembrie":12}
     node = tempo.Node()
-    # Find leaf by code via children search
-    parent_4000 = node.by_code("4000")
-    leaves = [c for c in (parent_4000.children if parent_4000 else []) if c.code == matrix]
-    if not leaves:
+    parent = node.by_code(parent_code)
+    if not parent:
         return []
-    leaf = leaves[0]
-    # Get full month list from dim
-    months = [opt.label for opt in leaf.dimensions[1].options]
-    csv_text = leaf.query(
-        (leaf.dimensions[0].label, [category_label]),
-        ("Luni", months),
-        ("UM: Procente", ["Procente"]),
-    )
+    leaf = next((c for c in parent.children if c.code == matrix), None)
+    if not leaf:
+        return []
+
+    selections = []
+    time_dim_label = None
+    for dim in leaf.dimensions:
+        lbl = dim.label
+        if lbl in ("Luni", "Ani"):
+            time_dim_label = lbl
+            time_values = [opt.label for opt in dim.options]
+            selections.append((lbl, time_values))
+        elif lbl.startswith("UM:"):
+            selections.append((lbl, [unit_value]))
+        else:
+            chosen = filter_dims.get(lbl)
+            if chosen is None:
+                for k, v in filter_dims.items():
+                    if lbl.startswith(k) or k.startswith(lbl):
+                        chosen = v
+                        break
+            if chosen is None:
+                chosen = dim.options[0].label  # fallback (typically "Total"/"TOTAL")
+            selections.append((lbl, [chosen]))
+    if time_dim_label is None:
+        return []
+
+    csv_text = leaf.query(*selections)
+    lines = csv_text.splitlines()
+    if len(lines) < 2:
+        return []
+    header = [h.strip() for h in lines[0].split(",")]
+    try:
+        time_col = header.index(time_dim_label)
+    except ValueError:
+        return []
+    val_col = len(header) - 1  # 'Valoare' is always last
+
     out = []
-    for line in csv_text.splitlines()[1:]:  # skip header
+    for line in lines[1:]:
         parts = [p.strip() for p in line.split(",")]
-        if len(parts) < 4:
+        if len(parts) <= max(time_col, val_col):
             continue
-        period = parts[1].lower()
+        period = parts[time_col].lower()
         try:
-            val = float(parts[3])
+            val = float(parts[val_col])
         except ValueError:
             continue
-        # "luna ianuarie 1991" or "anul 1991"
         words = period.split()
-        if len(words) == 3 and words[0] == "luna":
-            month_name, year = words[1], words[2]
-            if month_name in RO_MONTHS:
-                try:
-                    out.append((date(int(year), RO_MONTHS[month_name], 1), val))
-                except ValueError:
-                    pass
+        if freq == "M" and len(words) == 3 and words[0] == "luna" and words[1] in RO_MONTHS:
+            try:
+                out.append((date(int(words[2]), RO_MONTHS[words[1]], 1), val))
+            except ValueError:
+                pass
+        elif freq == "A" and len(words) == 2 and words[0] == "anul":
+            try:
+                out.append((date(int(words[1]), 1, 1), val))
+            except ValueError:
+                pass
     return sorted(out)
 
 
@@ -1313,7 +1506,7 @@ class NationalEUProvider(BaseProvider):
         # Austria
         for cfg in AT_SERIES:
             try:
-                pairs = fetch_at_csv(cfg["ogd"], cfg["filter_col"], cfg["filter_val"], cfg["value_col"], cfg["freq"])
+                pairs = fetch_at_csv(cfg["ogd"], cfg["filters"], cfg["time_col"], cfg["value_col"], cfg["freq"])
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="AT",

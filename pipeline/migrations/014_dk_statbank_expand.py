@@ -19,7 +19,7 @@ from pipeline.db import supabase as sb
 
 SEEDS = [
     # (country, slug, src, series_id, freq, unit, adjustment, conversion, note)
-    ("DK", "ppi",              "dst", "DST/PRIS4221",  "M", "Index",                       "NSA", 1.0,   "DK Statbank PRIS4221 PPI BC mining+manufacturing index"),
+    ("DK", "ppi",              "dst", "DST/PRIS4321",  "M", "Index",                       "NSA", 1.0,   "DK Statbank PRIS4321 PPI BCDE Total Danish production index"),
     ("DK", "gdp",              "dst", "DST/NAN1",      "A", "Billion DKK",                 "NSA", 1.0,   "DK Statbank NAN1 GDP at market prices, current prices, bn DKK"),
     ("DK", "gdp-real",         "dst", "DST/NKHO2",     "Q", "Million DKK (2020 chained)",  "SA",  1.0,   "DK Statbank NKHO2 quarterly real GDP chained 2020 prices, SA"),
     ("DK", "trade-balance",    "dst", "DST/BBM",       "M", "Million DKK",                 "SA",  1.0,   "DK Statbank BBM Goods FOB trade balance vs World, SA, mio DKK"),
