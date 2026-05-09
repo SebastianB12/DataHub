@@ -30,6 +30,13 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   insee: { label: "INSEE", url: "https://www.insee.fr" },
   bdf: { label: "Banque de France", url: "https://www.banque-france.fr" },
   ine_es: { label: "INE Spain", url: "https://www.ine.es" },
+  istat:  { label: "ISTAT (Italy)", url: "https://www.istat.it/en/" },
+  cso_ie: { label: "CSO Ireland", url: "https://www.cso.ie/" },
+  inept:  { label: "INE Portugal", url: "https://www.ine.pt/" },
+  nbb:    { label: "National Bank of Belgium", url: "https://stat.nbb.be/" },
+  elstat: { label: "ELSTAT (Greece)", url: "https://www.statistics.gr/en/home/" },
+  scb:    { label: "Statistics Sweden (SCB)", url: "https://www.scb.se/" },
+  statpol:{ label: "Statistics Poland (GUS)", url: "https://stat.gov.pl/en/" },
   eia: { label: "U.S. Energy Information Administration", url: "https://www.eia.gov" },
   gacc: {
     label: "General Administration of Customs of China",

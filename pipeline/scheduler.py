@@ -30,6 +30,7 @@ PROVIDER_MAP = {
     "gacc": "pipeline.providers.gacc",
     "akshare_cn": "pipeline.providers.akshare_cn",
     "ine_es": "pipeline.providers.ine_es",
+    "dbnomics": "pipeline.providers.dbnomics",
 }
 
 
