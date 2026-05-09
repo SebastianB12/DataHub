@@ -1,8 +1,25 @@
-"""ISTAT direct SDMX REST provider (sdmx.istat.it).
+"""ISTAT direct provider — modern Esploradati endpoint (post-2023 platform).
 
-Uses ONLY the official ISTAT SDMX REST endpoint — no DBnomics, no Eurostat.
-sdmx.istat.it currently exposes base-2015 dataflows; base-2025/2021 dataflows
-are partially exposed and may be slower. We accept the data as ISTAT publishes it.
+Uses esploradati.istat.it/SDMXWS/rest — the new SDMX REST web service that
+replaced the legacy sdmx.istat.it endpoint (which had read timeouts on most
+requests). The new endpoint is stable and returns fresh data.
+
+Confirmed curated dataflows (IT1, all version 1.0):
+  CPI    Consumer Price Index (PCPI_IX, base 2025=100, monthly)
+  PPI    Producer Price Index (PPPI_IX, base 2021=100, monthly)
+  IND    Industrial production index (AIP_SA_IX, SA, monthly)
+  UEM    Unemployment (LU_PE_SA_NUM, thousand persons, quarterly)
+  EMP    Employment (LE_PE_SA_NUM, thousand persons, quarterly)
+  POP    Population (LP_PE_NUM, annual)
+  WOE    Index of contractual hourly earnings (LCEAI_H_IX, monthly)
+
+URL pattern:
+  https://esploradati.istat.it/SDMXWS/rest/data/IT1,{DATAFLOW},1.0/all/ALL
+  Accept: application/vnd.sdmx.data+csv;version=1.0.0
+
+CSV schema:
+  DATAFLOW,DATA_DOMAIN,REF_AREA,INDICATOR,COUNTERPART_AREA,FREQ,TIME_PERIOD,
+  OBS_VALUE,COMMENT,BASE_PER,UNIT_MULT,OBS_STATUS,TIME_FORMAT
 """
 import os
 import csv
@@ -18,26 +35,27 @@ from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
-BASE = "https://sdmx.istat.it/SDMXWS/rest/data"
+BASE = "https://esploradati.istat.it/SDMXWS/rest/data"
 
 SERIES = [
-    # Inflation CPI (NIC base 2015) — dataflow 167_744, key M.IT.39.4.00 (CPI all-items, monthly index)
-    {"slug": "inflation-cpi", "dataflow": "167_744", "key": "M.IT.39.4.00",
-     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT NIC monthly all-items, base 2015=100"},
-    # PPI (Industrial producer prices) — 145_360, base 2015 monthly all-industry total
-    {"slug": "ppi", "dataflow": "145_360", "key": "M.IT.IND_PRIC.N.D.0020",
-     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT IPRI monthly base 2015"},
-    # Industrial production index — 115_333, base 2015 (DCSC_INDXPRODIND_1)
-    {"slug": "industrial-production", "dataflow": "115_333", "key": "M.IT.IND_PROD.N.0020",
-     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT IPI monthly total industry base 2015"},
-    # Retail trade sales volume — 120_337
-    {"slug": "retail-sales", "dataflow": "120_337", "key": "M.IT.RTD_TURN_VOL.N.1.9.TOTAL",
-     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT retail trade monthly total"},
+    {"slug": "inflation-cpi",         "dataflow": "CPI", "freq": "M", "unit": "Index", "adjustment": "NSA",
+     "conversion": 1.0, "note": "ISTAT modern Esploradati CPI (PCPI_IX, base 2025=100)"},
+    {"slug": "ppi",                   "dataflow": "PPI", "freq": "M", "unit": "Index", "adjustment": "NSA",
+     "conversion": 1.0, "note": "ISTAT modern Esploradati PPI (PPPI_IX, base 2021=100)"},
+    {"slug": "industrial-production", "dataflow": "IND", "freq": "M", "unit": "Index", "adjustment": "SA",
+     "conversion": 1.0, "note": "ISTAT modern Esploradati IP (AIP_SA_IX seasonally adjusted)"},
+    {"slug": "unemployed-persons",    "dataflow": "UEM", "freq": "Q", "unit": "Thousand", "adjustment": "SA",
+     "conversion": 1.0, "note": "ISTAT modern Esploradati Unemployed (LU_PE_SA_NUM)"},
+    {"slug": "employed-persons",      "dataflow": "EMP", "freq": "Q", "unit": "Thousand", "adjustment": "SA",
+     "conversion": 1.0, "note": "ISTAT modern Esploradati Employed (LE_PE_SA_NUM)"},
+    {"slug": "population",            "dataflow": "POP", "freq": "A", "unit": "Million", "adjustment": "NSA",
+     "conversion": 1e-6, "note": "ISTAT modern Esploradati Population (LP_PE_NUM)"},
 ]
+
+HDR = {
+    "Accept": "application/vnd.sdmx.data+csv;version=1.0.0",
+    "User-Agent": "EconPulse/0.1 (Sebastian/SVM-AG)",
+}
 
 
 def _parse_period(p: str, freq: str) -> date | None:
@@ -55,20 +73,19 @@ def _parse_period(p: str, freq: str) -> date | None:
     return None
 
 
-def _fetch(dataflow: str, key: str, freq: str) -> list[tuple[date, float]]:
-    url = f"{BASE}/{dataflow}/{key}"
-    r = requests.get(url, headers={"Accept": "application/vnd.sdmx.data+csv;version=1.0.0"}, timeout=120)
-    if r.status_code != 200:
-        raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
+def _fetch(dataflow: str, freq: str) -> list[tuple[date, float]]:
+    url = f"{BASE}/IT1,{dataflow},1.0/all/ALL"
+    r = requests.get(url, headers=HDR, timeout=120)
+    r.raise_for_status()
     reader = csv.DictReader(io.StringIO(r.text))
     out = []
     for row in reader:
         per = row.get("TIME_PERIOD", "")
-        val_str = row.get("OBS_VALUE", "")
-        if not val_str:
+        val = row.get("OBS_VALUE", "")
+        if not per or not val:
             continue
         try:
-            v = float(val_str)
+            v = float(val)
         except ValueError:
             continue
         dt = _parse_period(per, freq)
@@ -85,7 +102,7 @@ class IstatProvider(BaseProvider):
         out: list[DataPoint] = []
         for cfg in SERIES:
             try:
-                pairs = _fetch(cfg["dataflow"], cfg["key"], cfg["freq"])
+                pairs = _fetch(cfg["dataflow"], cfg["freq"])
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="IT",
@@ -93,7 +110,7 @@ class IstatProvider(BaseProvider):
                         value=round(v * cfg["conversion"], 4),
                         source="istat",
                         unit=cfg["unit"],
-                        series_id=f"ISTAT/{cfg['dataflow']}/{cfg['key']}",
+                        series_id=f"ISTAT/IT1,{cfg['dataflow']},1.0",
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/IT (ISTAT {cfg['dataflow']}): {len(pairs)} pts")
@@ -104,7 +121,7 @@ class IstatProvider(BaseProvider):
 
 def run():
     p = IstatProvider()
-    print(f"Fetching from {p.display_name}...")
+    print(f"Fetching from {p.display_name} (Esploradati)...")
     try:
         pts = p.fetch()
         print(f"\nTotal: {len(pts)} data points")
