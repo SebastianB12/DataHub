@@ -19,6 +19,7 @@ PROVIDERS = [
     "pipeline.providers.eurostat",    # DE/EA/GB
     "pipeline.providers.insee",       # FR (TE-source-conform via pynsee)
     "pipeline.providers.bdf",         # FR Banque de France (via DBnomics)
+    "pipeline.providers.ine_es",      # ES (TE-source-conform via INE Tempus3 JSON API)
     "pipeline.providers.ecb",         # EA money/rates
     "pipeline.providers.ons",         # GB (slow due to anti-bot sleeps)
     "pipeline.providers.bundesbank",  # DE money/banking

@@ -113,6 +113,59 @@ Wo kein Wrapper existiert, fallback auf `sdmx1` (für SDMX-konforme APIs) bzw. `
 
 ## Country Block: ES (Spanien)
 
-(Wird befüllt sobald ES-Phase beginnt.)
+**TE-Inventory (2026-05-09):** INE für CPI/Unemployment/IP/Retail/PPI; Banco de España für interest-rate (= ECB MRO); Eurostat für gov-debt/budget-deficit/current-account.
+
+**Library-Suche:** Mehrere PyPI-Wrapper gefunden (INEapy, INEAPIpy, INEPandas), aber INE Tempus3 JSON API ist trivial direkt nutzbar. Direktes `requests` an `https://servicios.ine.es/wstempus/js/EN/DATOS_SERIE/{COD}` gewählt.
+
+**Implementierung:** `pipeline/providers/ine_es.py` (~120 Zeilen) mit hardcoded SERIES-Liste:
+- inflation-cpi: IPC290751 (Index 2026=100)
+- core-cpi: IPC290851 (Subyacente, ex Unprocessed Food + Energy)
+- food-inflation: IPC290755 (Food and non-alcoholic beverages)
+- unemployment: EPA452434 (Tasa de paro nacional, both genders)
+- ppi: IPR34522 (IPRI Industria total, Index)
+- industrial-production: IPI13491 (IPI National Total, Index)
+- retail-sales: ICM4147 (Volume index commercial retail, no service stations)
+
+**Werte gegen TE (2026-05-09):**
+- inflation-cpi April 2026: TE 3.2% YoY ✓ exakt (INE YoY-Reihe IPC290750)
+- inflation-cpi Mar 2026 INE Index: 102.44 (YoY 3.45% — minimaler Diff zur YoY-Reihe wegen INE Vintage-Revisionen, MoM gleich)
+- unemployment Q1 2026: INE EPA muss noch validiert werden gegen TE 10.83%
+- ppi Mar 2026: 130.04 (Eurostat: 130.4 — sehr nah)
+- industrial-production Mar 2026: 110.47 (TE: +1.8% YoY → 110.47/108.x ≈ +2.1% YoY, leichter Vintage-Diff)
+
+**Stolperfallen:**
+- INE publishes YoY series ~2 weeks before final index (April 2026 YoY released, April Index not yet). Solution: use index series for storage; frontend computes YoY from index.
+- ICM has multiple base years; ICM4147 is base 2021=100 with constant prices (volume index).
+- IPRI has separate "general" and "consumer goods" indices; IPR34522 = Industry total (matches TE).
+
+**DB-Status:** 7 INE-direct rows mit `is_default=true`; korrespondierende Eurostat-ES-Rows demoted auf `is_default=false`. Werte werden im run_all-Pass laufend aktualisiert.
+
+## Country Block: NL (Niederlande)
+
+**TE-Inventory:** TE zeigt CBS Statistics Netherlands für die meisten NL-Indikatoren.
+
+**Library-Suche:** `cbsodata` v1.3.5 von PyPI installiert. Aber: CBS hat alte v3-OData-Endpoint (`opendata.cbs.nl`) deprecated; Antwort liefert nur HTML-Homepage. Neuer Endpoint `datasets.cbs.nl` (OData v4) ist von diesem Netzwerk nicht erreichbar (Connect Timeout). DBnomics-Mirror auch Timeouts.
+
+**Entscheidung (2026-05-09):** CBS-direct nicht implementiert. Eurostat bleibt Default für NL. Eurostat-NL-Daten kommen aus CBS und sind daher methodisch identisch — nur Source-Label unterschiedlich. Source-Attribution-Gap zu TE dokumentiert.
+
+**Status:** Eurostat-Baseline akzeptiert. Re-Visit wenn Netzwerkzugriff zu `datasets.cbs.nl` möglich wird, oder wenn CBS einen neuen Endpoint anbietet, der erreichbar ist.
+
+## Strategischer Pivot (2026-05-09)
+
+**Erkenntnis nach IT/ES/NL:** Per-Country National-Provider-Build ist sehr aufwändig:
+- IT: ISTAT SDMX 12 Monate stale → unbrauchbar
+- ES: INE Tempus3 funktioniert ✓
+- NL: CBS-Endpoints nicht erreichbar (Firewall/Migration)
+
+**Neue Priorisierung:** Statt für jedes Land einen Custom-Provider zu bauen, fokussieren wir auf:
+1. **Eurostat-Baseline ist Default für alle 25 Länder** (akzeptiert, dokumentiert).
+2. **National-Provider nur dort bauen wo es funktioniert** (ES INE ✓ als Beispiel). Bei Connection-Issues oder stale Data: Eurostat-Fallback.
+3. **Validation-Pass** für Stichproben (Top-5-Slugs pro Land) gegen TE-Werte; Korrekturen bei größeren Diffs.
+4. **Decision-Log + te_coverage_gaps.yaml** dokumentiert die Source-Attribution-Lücken transparent.
+
+Re-Iterate auf nationale Provider in folgenden Sessions wenn:
+- Netzwerkzugriff zu CBS/Statbel/SCB/PxWeb möglich
+- Bessere Discovery der Series-Codes per Land
+- Größere User-Sichtbarkeit der Source-Mismatch (TE: ISTAT vs Wir: Eurostat)
 
 (Weitere Country-Blöcke folgen analog.)

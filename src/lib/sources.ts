@@ -29,6 +29,7 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   bundesbank: { label: "Deutsche Bundesbank", url: "https://api.statistiken.bundesbank.de" },
   insee: { label: "INSEE", url: "https://www.insee.fr" },
   bdf: { label: "Banque de France", url: "https://www.banque-france.fr" },
+  ine_es: { label: "INE Spain", url: "https://www.ine.es" },
   eia: { label: "U.S. Energy Information Administration", url: "https://www.eia.gov" },
   gacc: {
     label: "General Administration of Customs of China",
