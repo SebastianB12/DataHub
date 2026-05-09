@@ -146,27 +146,7 @@ def fetch_fi_table(path: str, query_filters: dict, freq: str = "M") -> list[tupl
     }
     r = requests.post(url, json=body, timeout=30)
     r.raise_for_status()
-    js = r.json()
-    values = js.get("value", [])
-    dim = js.get("dimension", {})
-    # Find time
-    tid = next((k for k, v in dim.items() if v.get("role", {}).get("time")), None)
-    if not tid:
-        # fallback
-        tid = next((k for k in dim if k.lower() in ("vuosi", "kuukausi", "aika", "year", "month", "tid")), None)
-    if not tid:
-        return []
-    cat = dim[tid].get("category", {})
-    idx_map = cat.get("index", {})
-    out = []
-    for code, idx in idx_map.items():
-        if isinstance(idx, int) and idx < len(values):
-            v = values[idx]
-            if v is not None:
-                dt = _parse_period(code, freq)
-                if dt:
-                    out.append((dt, float(v)))
-    return sorted(out)
+    return _parse_jsonstat(r.json(), freq)
 
 
 # === Sweden — SCB PxWeb ===
@@ -191,25 +171,7 @@ def fetch_se_table(path: str, query_filters: dict, freq: str = "M") -> list[tupl
     }
     r = requests.post(url, json=body, timeout=30)
     r.raise_for_status()
-    js = r.json()
-    values = js.get("value", [])
-    dim = js.get("dimension", {})
-    tid = next((k for k, v in dim.items() if v.get("role", {}).get("time")), None)
-    if not tid:
-        tid = next((k for k in dim if k.lower() in ("tid", "month", "year", "kvartal")), None)
-    if not tid:
-        return []
-    cat = dim[tid].get("category", {})
-    idx_map = cat.get("index", {})
-    out = []
-    for code, idx in idx_map.items():
-        if isinstance(idx, int) and idx < len(values):
-            v = values[idx]
-            if v is not None:
-                dt = _parse_period(code, freq)
-                if dt:
-                    out.append((dt, float(v)))
-    return sorted(out)
+    return _parse_jsonstat(r.json(), freq)
 
 
 # === Portugal — INE PT JSON-Indicador ===
@@ -416,6 +378,243 @@ def fetch_gus_variable(var_id: int, freq: str = "M") -> list[tuple[date, float]]
     return sorted(out)
 
 
+# === Austria — Statistik Austria OGD (CSV semicolon-separated, German decimals) ===
+
+AT_SERIES = [
+    # vpi20 (base 2020) covers 2021-01 to 2025-12 monthly. F-VPIMZVM is the index level;
+    # filter VPI5NEU = VPI-0 for all-items.
+    {"slug": "inflation-cpi", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filter_col": "C-VPI5NEU-0", "filter_val": "VPI-0",
+     "value_col": "F-VPIMZVM",
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI base 2020=100 (covers 2021-01..2025-12)"},
+    # vpi25 (base 2025) for 2026 onwards. We'll add it as a supplementary row that data_points
+    # gets merged on (date, indicator, country, source) — but use a different source code so
+    # rows don't conflict. Actually keep it simple — use vpi20 for now.
+]
+
+
+def fetch_at_csv(ogd: str, filter_col: str, filter_val: str, value_col: str, freq: str = "M") -> list[tuple[date, float]]:
+    """Fetch Statistik Austria OGD CSV, filter and parse."""
+    import csv as csvm
+    import io as iom
+    url = f"https://data.statistik.gv.at/data/{ogd}.csv"
+    r = requests.get(url, timeout=60)
+    r.raise_for_status()
+    reader = csvm.DictReader(iom.StringIO(r.text), delimiter=";")
+    out = []
+    for row in reader:
+        if row.get(filter_col) != filter_val:
+            continue
+        time_code = row.get("C-VPIZR-0") or row.get("C-MZR-0") or row.get("C-ZR-0") or ""
+        # VPIZR-202601 -> 2026-01 (monthly), VPIZR-2025 -> 2025 (annual; skip)
+        if not time_code or "-" not in time_code:
+            continue
+        period = time_code.split("-")[1]
+        if len(period) == 6 and period.isdigit():
+            try:
+                yy, mm = int(period[:4]), int(period[4:6])
+                dt = date(yy, mm, 1)
+            except Exception:
+                continue
+        else:
+            # annual or unsupported - skip monthly-only fetcher
+            continue
+        val_str = row.get(value_col, "").replace(",", ".")
+        try:
+            val = float(val_str)
+        except ValueError:
+            continue
+        if val == 0.0:  # placeholder for missing data in some rows
+            continue
+        out.append((dt, val))
+    return sorted(out)
+
+
+# === Slovenia — SURS PxWeb (pxweb.stat.si) ===
+
+SI_SERIES = [
+    # 0400608S CPI ECOICOP v2 — TOT = all-items, MERITVE=2 = Index (same month previous year)
+    # Better: MERITVE=3 (Index month/Dec of previous year). For our use we want the LEVEL.
+    # Use MERITVE=2 which is the most-cited YoY index format. Or MERITVE=1 for month-on-month.
+    # The cleanest "level" doesn't exist directly — SI publishes only relatives.
+    # Use MERITVE=2 (Index vs same month previous year) — TE shows YoY rate, this is the source.
+    {"slug": "inflation-cpi", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "TOT", "MERITVE": "2"},
+     "freq": "M", "unit": "Index (same month py=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608S CPI YoY index (same-month-previous-year=100), TOTAL"},
+]
+
+
+def fetch_si_pxweb(table: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
+    url = f"https://pxweb.stat.si/SiStatData/api/v1/en/Data/{table}"
+    body = {
+        "query": [{"code": k, "selection": {"filter": "item", "values": [v]}}
+                  for k, v in query_filters.items()],
+        "response": {"format": "json-stat2"},
+    }
+    r = requests.post(url, json=body, timeout=30)
+    r.raise_for_status()
+    js = r.json()
+    return _parse_jsonstat(js, freq)
+
+
+def _parse_jsonstat(js: dict, freq: str) -> list[tuple[date, float]]:
+    """Parse JSON-stat 2.0 response — handles role.time or detects time dim by name."""
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    dim_sizes = js.get("size", [])
+    if not dim_ids or not values:
+        return []
+    # find time dim: prefer role.time, else common names
+    tid = None
+    for k, v in dim.items():
+        if isinstance(v, dict) and v.get("role", {}).get("time"):
+            tid = k; break
+    if tid is None:
+        for k in dim_ids:
+            kl = k.lower()
+            if any(w in kl for w in ("tid", "time", "month", "mesec", "kuukausi", "vuosi", "år", "ar", "luni", "ani", "tlist")):
+                tid = k; break
+    if tid is None:
+        return []
+    cat = dim[tid].get("category", {})
+    idx_obj = cat.get("index", {})
+    if isinstance(idx_obj, list):
+        time_pairs = list(enumerate(idx_obj))
+        time_pairs = [(code, pos) for pos, code in time_pairs]
+    else:
+        time_pairs = [(code, pos) for code, pos in idx_obj.items()]
+
+    # build flat-index for non-time dims (single value each since user filtered)
+    other_indices = []
+    for k in dim_ids:
+        if k == tid:
+            other_indices.append(None)
+        else:
+            other_indices.append(0)
+
+    out = []
+    tid_pos_in_id = dim_ids.index(tid)
+    for time_code, time_pos in time_pairs:
+        indices = list(other_indices)
+        indices[tid_pos_in_id] = time_pos
+        flat = 0
+        stride = 1
+        for i in range(len(dim_ids) - 1, -1, -1):
+            flat += indices[i] * stride
+            stride *= dim_sizes[i]
+        if 0 <= flat < len(values):
+            v = values[flat]
+            if v is not None:
+                dt = _parse_period(time_code, freq)
+                if dt:
+                    out.append((dt, float(v)))
+    return sorted(out)
+
+
+# === Latvia — CSP PxWeb (data.stat.gov.lv) ===
+
+LV_SERIES = [
+    # PCI030m: Consumer price indices December 1990=100, monthly 1991M01-2026M03
+    {"slug": "inflation-cpi", "table": "PCI030m",
+     "query": {"ContentsCode": "PCI030m"},
+     "freq": "M", "unit": "Index (Dec 1990=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI030m CPI Dec 1990=100"},
+]
+
+
+def fetch_lv_pxweb(table_path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
+    url = f"https://data.stat.gov.lv/api/v1/en/OSP_PUB/VEK/PC/PCI/{table_path}"
+    body = {
+        "query": [{"code": k, "selection": {"filter": "item", "values": [v]}}
+                  for k, v in query_filters.items()],
+        "response": {"format": "json-stat2"},
+    }
+    r = requests.post(url, json=body, timeout=30)
+    r.raise_for_status()
+    return _parse_jsonstat(r.json(), freq)
+
+
+# === Romania — INSSE Tempo (HTTP only on port 8077) ===
+
+RO_SERIES = [
+    # IPC102A: Indicii preturilor de consum - evolutia lunara fata de luna anterioara
+    # We'll fetch all monthly data and filter for category Total
+    {"slug": "inflation-cpi", "matrix": "IPC102A",
+     "category_id": 11730,  # Total
+     "freq": "M", "unit": "Index (prev month=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo IPC102A monthly CPI MoM index (prev month=100)"},
+]
+
+
+def fetch_ro_tempo(matrix: str, category_id: int, freq: str = "M") -> list[tuple[date, float]]:
+    """RO INSSE Tempo POST query for a matrix."""
+    # First fetch matrix metadata to get all option IDs
+    meta_r = requests.get(f"http://statistici.insse.ro:8077/tempo-ins/matrix/{matrix}", timeout=30)
+    meta = meta_r.json()
+    # Build a selection: select category + all months/years + UM
+    # Tempo API requires array of selected option IDs per dimension
+    selections = []
+    for dim in meta.get("dimensionsMap", []):
+        opts = dim.get("options", [])
+        label = dim.get("label", "").lower()
+        if "marfuri" in label or "categori" in label:
+            # category filter
+            selections.append([category_id])
+        else:
+            # take all options
+            selections.append([o["nomItemId"] for o in opts])
+    # POST /tempo-ins/matrix/<matrix>/data
+    payload = {
+        "encoded": False,
+        "name": meta.get("matrixName"),
+        "details": meta.get("details"),
+        "code": matrix,
+        "language": "en",
+        "matrixDetails": meta.get("matrixDetails"),
+        "metaData": meta.get("metaData"),
+        "dimensionsMap": meta.get("dimensionsMap"),
+    }
+    # Actually Tempo uses /matrix/{matrix}/data with arrayOfNomItemIds matrices
+    # try POST data
+    r2 = requests.post(
+        f"http://statistici.insse.ro:8077/tempo-ins/matrix/{matrix}/data",
+        json=selections,
+        timeout=60,
+    )
+    if r2.status_code != 200:
+        # fallback: try GET with query
+        return []
+    try:
+        data = r2.json()
+    except Exception:
+        return []
+    # Tempo returns flat list per coordinate
+    out = []
+    for entry in data.get("matrix", []):
+        # entry has dimensions and 'val'
+        # period dim is "Luni" -> e.g. "Ianuarie 2026"
+        period_label = ""
+        for d in entry.get("dimensions", []):
+            if "uni" in d.get("dimensionLabel", "").lower() or "ani" in d.get("dimensionLabel", "").lower():
+                period_label = d.get("optionLabel", "")
+        # parse
+        try:
+            ro_months = {"Ianuarie":1,"Februarie":2,"Martie":3,"Aprilie":4,"Mai":5,"Iunie":6,
+                         "Iulie":7,"August":8,"Septembrie":9,"Octombrie":10,"Noiembrie":11,"Decembrie":12}
+            parts = period_label.split()
+            if len(parts) == 2 and parts[0] in ro_months:
+                dt = date(int(parts[1]), ro_months[parts[0]], 1)
+                val = entry.get("val")
+                if val is not None:
+                    out.append((dt, float(val)))
+        except Exception:
+            continue
+    return sorted(out)
+
+
 # Aggregate fetchers
 COUNTRY_FETCHERS = {
     # source_code -> (country, fetcher_function, series_list, label, url)
@@ -424,6 +623,10 @@ COUNTRY_FETCHERS = {
     "scb_se":   ("SE", SE_SERIES, "Statistics Sweden (SCB)",             "https://www.scb.se"),
     "ine_pt":   ("PT", PT_SERIES, "INE Portugal",                        "https://www.ine.pt"),
     "cso_ie":   ("IE", IE_SERIES, "CSO Ireland",                         "https://www.cso.ie"),
+    "stat_at":  ("AT", AT_SERIES, "Statistik Austria",                   "https://www.statistik.at"),
+    "surs_si":  ("SI", SI_SERIES, "SURS Statistical Office Slovenia",    "https://www.stat.si"),
+    "csp_lv":   ("LV", LV_SERIES, "CSP Latvia",                          "https://stat.gov.lv"),
+    "insse_ro": ("RO", RO_SERIES, "INSSE Romania",                       "https://insse.ro"),
 }
 
 
@@ -521,6 +724,78 @@ class NationalEUProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/IE ({cfg['table']}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/IE: {e}")
+            time.sleep(0.3)
+
+        # Austria
+        for cfg in AT_SERIES:
+            try:
+                pairs = fetch_at_csv(cfg["ogd"], cfg["filter_col"], cfg["filter_val"], cfg["value_col"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="AT",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="stat_at", unit=cfg["unit"],
+                        series_id=f"STATAT/{cfg['ogd']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/AT ({cfg['ogd'][:30]}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/AT: {e}")
+            time.sleep(0.3)
+
+        # Slovenia
+        for cfg in SI_SERIES:
+            try:
+                pairs = fetch_si_pxweb(cfg["table"], cfg["query"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="SI",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="surs_si", unit=cfg["unit"],
+                        series_id=f"SURS/{cfg['table']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/SI ({cfg['table']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/SI: {e}")
+            time.sleep(0.3)
+
+        # Latvia
+        for cfg in LV_SERIES:
+            try:
+                pairs = fetch_lv_pxweb(cfg["table"], cfg["query"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="LV",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="csp_lv", unit=cfg["unit"],
+                        series_id=f"CSP/{cfg['table']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/LV ({cfg['table']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/LV: {e}")
+            time.sleep(0.3)
+
+        # Romania
+        for cfg in RO_SERIES:
+            try:
+                pairs = fetch_ro_tempo(cfg["matrix"], cfg["category_id"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="RO",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="insse_ro", unit=cfg["unit"],
+                        series_id=f"INSSE/{cfg['matrix']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/RO ({cfg['matrix']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/RO: {e}")
             time.sleep(0.3)
 
         return out

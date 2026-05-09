@@ -41,6 +41,10 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   statpol:{ label: "Statistics Poland (GUS)", url: "https://stat.gov.pl/en/" },
   dst:    { label: "Statistics Denmark", url: "https://www.dst.dk/en" },
   stat_fi:{ label: "Statistics Finland", url: "https://www.stat.fi/index_en.html" },
+  stat_at:{ label: "Statistik Austria", url: "https://www.statistik.at/" },
+  surs_si:{ label: "SURS (Statistical Office Slovenia)", url: "https://www.stat.si/StatWeb/en" },
+  csp_lv: { label: "Statistics Latvia (CSP)", url: "https://stat.gov.lv/en" },
+  insse_ro:{ label: "INSSE Romania", url: "https://insse.ro/cms/en" },
   eia: { label: "U.S. Energy Information Administration", url: "https://www.eia.gov" },
   gacc: {
     label: "General Administration of Customs of China",

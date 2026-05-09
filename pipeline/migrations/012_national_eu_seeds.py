@@ -23,6 +23,12 @@ SEEDS = [
     ("SE", "inflation-cpi",         "scb_se", "SCB/PR0101A/KPI2020M", "M", "Index", "NSA", 1.0, "SE SCB shadow CPI continuous index 1980=100"),
     # Ireland
     ("IE", "inflation-cpi",         "cso_ie", "CSO/CPM01",   "M", "Index", "NSA", 1.0, "CSO Ireland CPM01 CPI Base Dec 2023=100 all items"),
+    # Austria — direct from Statistik Austria OGD CSV
+    ("AT", "inflation-cpi",         "stat_at", "STATAT/OGD_vpi20_VPI_2020_1", "M", "Index", "NSA", 1.0, "Statistik Austria VPI base 2020=100 (2021-01..2025-12)"),
+    # Slovenia — direct from SURS PxWeb
+    ("SI", "inflation-cpi",         "surs_si", "SURS/0400608S.px", "M", "Index (same month py=100)", "NSA", 1.0, "SURS 0400608S CPI Index vs same month previous year, TOTAL"),
+    # Latvia — direct from CSP PxWeb
+    ("LV", "inflation-cpi",         "csp_lv", "CSP/PCI030m", "M", "Index (Dec 1990=100)", "NSA", 1.0, "CSP Latvia PCI030m CPI continuous index Dec 1990=100"),
 ]
 
 
