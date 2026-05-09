@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { createChart, type IChartApi, AreaSeries, ColorType } from "lightweight-charts";
+import { createChart, type IChartApi, AreaSeries, LineSeries, ColorType } from "lightweight-charts";
 import { useTheme } from "next-themes";
 
 interface DataPoint {
@@ -9,13 +9,20 @@ interface DataPoint {
   value: number;
 }
 
+export interface ChartOverlay {
+  label: string;
+  data: DataPoint[];
+  color: string;
+}
+
 interface ChartProps {
   data: DataPoint[];
+  overlays?: ChartOverlay[];
   height?: number;
   color?: string;
 }
 
-export function Chart({ data, height = 300, color = "#818cf8" }: ChartProps) {
+export function Chart({ data, overlays = [], height = 300, color = "#818cf8" }: ChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
   const seriesRef = useRef<ReturnType<IChartApi["addSeries"]> | null>(null);
@@ -66,6 +73,18 @@ export function Chart({ data, height = 300, color = "#818cf8" }: ChartProps) {
     });
 
     series.setData(data);
+
+    // Add overlay series (thin lines in distinct colors)
+    for (const overlay of overlays) {
+      const line = chart.addSeries(LineSeries, {
+        color: overlay.color,
+        lineWidth: 2,
+        priceLineVisible: false,
+        lastValueVisible: false,
+      });
+      line.setData(overlay.data);
+    }
+
     chart.timeScale().fitContent();
 
     chartRef.current = chart;
@@ -83,7 +102,7 @@ export function Chart({ data, height = 300, color = "#818cf8" }: ChartProps) {
       chart.remove();
       chartRef.current = null;
     };
-  }, [data, height, color, isDark]);
+  }, [data, overlays, height, color, isDark]);
 
   return <div ref={containerRef} className="w-full rounded-lg overflow-hidden" />;
 }

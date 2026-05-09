@@ -1,0 +1,124 @@
+# Kuratierte CN-Indikatoren — Werte gegen Trading Economics geprüft 2026-05-02.
+
+country: CN
+
+# --- Taxes ---
+
+corporate-tax-rate:
+  value: 25
+  date: "2026-12-31"
+  unit: "%"
+  note: "Standard rate Enterprise Income Tax. TE: 25%."
+  source_url: "https://tradingeconomics.com/china/corporate-tax-rate"
+
+personal-income-tax-rate:
+  value: 45
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top marginal IIT rate (über 960k CNY/Jahr)."
+  source_url: "https://tradingeconomics.com/china/personal-income-tax-rate"
+
+sales-tax-rate:
+  value: 13
+  date: "2026-12-31"
+  unit: "%"
+  note: "VAT Standard Rate (since 2019, was 16% before)."
+  source_url: "https://tradingeconomics.com/china/sales-tax-rate"
+
+social-security-rate:
+  value: 38.70
+  date: "2026-12-31"
+  unit: "%"
+  note: "Social Insurance + Housing Provident Fund. AG 28.20% + AN 10.50%."
+  source_url: "https://tradingeconomics.com/china/social-security-rate"
+
+social-security-rate-companies:
+  value: 28.20
+  date: "2026-12-31"
+  unit: "%"
+  note: "Employer share: pension, medical, unemployment, work injury, maternity + housing fund."
+
+social-security-rate-employees:
+  value: 10.50
+  date: "2026-12-31"
+  unit: "%"
+  note: "Employee share."
+
+# --- Government ---
+
+corruption-index:
+  value: 42
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Transparency International CPI 2025."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+corruption-rank:
+  value: 76
+  date: "2025-12-31"
+  unit: "Rank"
+  note: "TI CPI 2025 rank."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+credit-rating:
+  value: 70
+  date: "2026-04-01"
+  unit: "Rating"
+  note: "TE-Score. Moody's A1, S&P A+, Fitch A+ (stable to negative outlook)."
+  source_url: "https://tradingeconomics.com/china/rating"
+
+# --- Labour ---
+
+retirement-age-men:
+  value: 60
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Statutorisches Renteneintrittsalter Männer. Schrittweise Anhebung auf 63 bis 2040 beschlossen."
+
+retirement-age-women:
+  value: 50
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Statutorisches Renteneintrittsalter Frauen (Arbeiterin). 55 für weibliche Angestellte. Anhebung auf 55/58 bis 2040 beschlossen."
+
+# --- Health (OECD / WHO / NHC of China) ---
+
+hospital-beds:
+  value: 4.5
+  date: "2023-12-31"
+  unit: "per 1000 people"
+  note: "NHC China Health Yearbook 2024 (data 2023): ~4.5 beds per 1000. OECD-comparable methodology."
+
+hospitals:
+  value: 25.4
+  date: "2023-12-31"
+  unit: "per one million people"
+  note: "NHC + WHO. Includes all hospitals: tertiary, secondary, primary."
+
+medical-doctors:
+  value: 2.4
+  date: "2023-12-31"
+  unit: "per 1000 people"
+  note: "OECD Health Stats / NHC. Practising physicians."
+
+nurses:
+  value: 3.4
+  date: "2022-12-31"
+  unit: "per 1000 people"
+  note: "OECD / NHC. Registered nurses."
+
+# --- Trade/Other (annual reference indices) ---
+
+weapons-sales:
+  value: 1131
+  date: "2024-12-31"
+  unit: "SIPRI TIV Million"
+  note: "SIPRI Arms Transfers Database — exports 2024. TE: 1131."
+  source_url: "https://www.sipri.org/databases/armstransfers"
+
+terrorism-index:
+  value: 1.31
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Global Terrorism Index 2025 (Institute for Economics and Peace). 0=keine Wirkung, 10=extrem."
+  source_url: "https://www.visionofhumanity.org/maps/global-terrorism-index/"

@@ -1,0 +1,125 @@
+# Kuratierte FR-Indikatoren — Werte gegen Trading Economics geprüft 2026-05-05.
+
+country: FR
+
+# --- Taxes ---
+
+corporate-tax-rate:
+  value: 25
+  date: "2026-12-31"
+  unit: "%"
+  note: "Standard CIT rate (since 2022)."
+  source_url: "https://tradingeconomics.com/france/corporate-tax-rate"
+
+personal-income-tax-rate:
+  value: 45
+  date: "2026-12-31"
+  unit: "%"
+  note: "Top marginal IR rate (>177k EUR/year)."
+  source_url: "https://tradingeconomics.com/france/personal-income-tax-rate"
+
+sales-tax-rate:
+  value: 20
+  date: "2026-12-31"
+  unit: "%"
+  note: "VAT (TVA) Standard Rate."
+  source_url: "https://tradingeconomics.com/france/sales-tax-rate"
+
+social-security-rate:
+  value: 67.4
+  date: "2026-12-31"
+  unit: "%"
+  note: "Total social security contributions: AG ~45% + AN ~22.4%."
+  source_url: "https://tradingeconomics.com/france/social-security-rate"
+
+social-security-rate-companies:
+  value: 45.0
+  date: "2026-12-31"
+  unit: "%"
+  note: "Employer share."
+
+social-security-rate-employees:
+  value: 22.4
+  date: "2026-12-31"
+  unit: "%"
+  note: "Employee share."
+
+# --- Government ---
+
+corruption-index:
+  value: 66
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Transparency International CPI 2025 (TE: 66)."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+corruption-rank:
+  value: 27
+  date: "2025-12-31"
+  unit: "Rank"
+  note: "TI CPI 2025 rank (TE: 27)."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+credit-rating:
+  value: 80
+  date: "2026-04-01"
+  unit: "Rating"
+  note: "TE-Score. Moody's Aa3, S&P AA-, Fitch AA- (negative outlook)."
+  source_url: "https://tradingeconomics.com/france/rating"
+
+# --- Labour ---
+
+retirement-age-men:
+  value: 64
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Statutorisches Renteneintrittsalter (Reform 2023). Schrittweise Anhebung von 62 auf 64 bis 2030."
+
+retirement-age-women:
+  value: 64
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Gleich wie Männer."
+
+minimum-wages:
+  value: 1801.80
+  date: "2026-01-31"
+  unit: "EUR/Month"
+  note: "SMIC mensuel brut (gross) ab 1. Jan 2026 = 1801.80 EUR/Monat (35h)."
+  source_url: "https://tradingeconomics.com/france/minimum-wages"
+
+# --- Health (OECD) ---
+
+hospital-beds:
+  value: 5.40
+  date: "2023-12-31"
+  unit: "per 1000 people"
+  note: "OECD Health Stats 2023 (TE: 5.40, down from 5.48 in 2022)."
+
+medical-doctors:
+  value: 3.36
+  date: "2021-12-31"
+  unit: "per 1000 people"
+  note: "OECD Health Stats 2021 (TE: 3.36 unchanged from 2020)."
+
+nurses:
+  value: 9.64
+  date: "2021-12-31"
+  unit: "per 1000 people"
+  note: "OECD Health Stats 2021 (TE: 9.64)."
+
+# --- Other (annual reference) ---
+
+weapons-sales:
+  value: 2272
+  date: "2024-12-31"
+  unit: "SIPRI TIV Million"
+  note: "SIPRI Arms Transfers Database — exports 2024 (TE: 2272 SIPRI TIV)."
+  source_url: "https://www.sipri.org/databases/armstransfers"
+
+terrorism-index:
+  value: 4.8
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Global Terrorism Index 2025 (Institute for Economics and Peace)."
+  source_url: "https://www.visionofhumanity.org/maps/global-terrorism-index/"

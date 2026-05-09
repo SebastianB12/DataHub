@@ -1,0 +1,123 @@
+# Kuratierte GB-Indikatoren — Werte gegen Trading Economics geprüft 2026-05-01.
+# Pflegen = YAML editieren, dann `python -m pipeline.providers.curated`.
+
+country: GB
+
+# --- Taxes (TE "Taxes" Tab, Stand 2026) ---
+
+corporate-tax-rate:
+  value: 25
+  date: "2026-12-31"
+  unit: "%"
+  note: "Hauptsteuersatz seit April 2023 (vorher 19%). TE: 25%."
+  source_url: "https://tradingeconomics.com/united-kingdom/corporate-tax-rate"
+
+personal-income-tax-rate:
+  value: 45
+  date: "2026-12-31"
+  unit: "%"
+  note: "Additional rate (über 125k GBP). Higher rate 40%, Basic 20%."
+  source_url: "https://tradingeconomics.com/united-kingdom/personal-income-tax-rate"
+
+sales-tax-rate:
+  value: 20
+  date: "2026-12-31"
+  unit: "%"
+  note: "VAT Standard Rate. Reduced 5%, Zero 0% nicht hier."
+  source_url: "https://tradingeconomics.com/united-kingdom/sales-tax-rate"
+
+social-security-rate:
+  value: 25.80
+  date: "2026-12-31"
+  unit: "%"
+  note: "National Insurance: AG 13.80% + AN 12.00% = 25.80%."
+  source_url: "https://tradingeconomics.com/united-kingdom/social-security-rate"
+
+social-security-rate-companies:
+  value: 13.80
+  date: "2026-12-31"
+  unit: "%"
+  note: "Employer NI Class 1."
+
+social-security-rate-employees:
+  value: 12.00
+  date: "2026-12-31"
+  unit: "%"
+  note: "Employee NI Class 1 main rate."
+
+# --- Government ---
+
+corruption-index:
+  value: 71
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Transparency International CPI 2025 (0=korrupt, 100=sauber)."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+corruption-rank:
+  value: 20
+  date: "2025-12-31"
+  unit: "Rank"
+  note: "Rang im CPI 2025."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+credit-rating:
+  value: 92.5
+  date: "2026-04-01"
+  unit: "Rating"
+  note: "TE-Score. Moody's Aa3, S&P AA, DBRS AA — alle stable."
+  source_url: "https://tradingeconomics.com/united-kingdom/rating"
+
+military-expenditure:
+  value: 88977.50
+  date: "2025-12-31"
+  unit: "USD Million"
+  note: "SIPRI Military Expenditure 2025."
+  source_url: "https://tradingeconomics.com/united-kingdom/military-expenditure"
+
+# --- Labour ---
+
+minimum-wages:
+  value: 12.71
+  date: "2026-04-01"
+  unit: "GBP/Hour"
+  note: "National Living Wage 21+ ab April 2026. Vorher 12.21 (2025)."
+  source_url: "https://tradingeconomics.com/united-kingdom/minimum-wages"
+
+retirement-age-men:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+  note: "State Pension Age. Steigt schrittweise auf 67 bis 2028."
+
+retirement-age-women:
+  value: 66
+  date: "2026-12-31"
+  unit: "Years"
+  note: "State Pension Age (Anpassung an Männer abgeschlossen 2018)."
+
+# --- Health (OECD Health Statistics) ---
+
+hospital-beds:
+  value: 2.36
+  date: "2023-12-31"
+  unit: "per 1000 people"
+  note: "OECD Health Stats. UK unter OECD-Schnitt."
+
+hospitals:
+  value: 28.0
+  date: "2023-12-31"
+  unit: "per one million people"
+  note: "WHO Global Health Observatory."
+
+medical-doctors:
+  value: 3.16
+  date: "2022-12-31"
+  unit: "per 1000 people"
+  note: "OECD."
+
+nurses:
+  value: 8.71
+  date: "2022-12-31"
+  unit: "per 1000 people"
+  note: "OECD."

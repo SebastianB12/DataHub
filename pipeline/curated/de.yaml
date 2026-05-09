@@ -1,0 +1,155 @@
+# Kuratierte DE-Indikatoren — Werte gegen Trading Economics geprüft 2026-05-01.
+# Pflegen = YAML editieren, dann `python -m pipeline.providers.curated`.
+
+country: DE
+
+# --- Taxes (TE "Taxes" Tab, alle Stand Dec/26) ---
+
+corporate-tax-rate:
+  value: 30
+  date: "2026-12-31"
+  unit: "%"
+  note: "Körperschaftsteuer 15% + Solidaritätszuschlag 5.5% darauf + Gewerbesteuer (Hebesatz-abhängig). TE: 30%."
+  source_url: "https://tradingeconomics.com/germany/corporate-tax-rate"
+
+personal-income-tax-rate:
+  value: 45
+  date: "2026-12-31"
+  unit: "%"
+  note: "Reichensteuersatz 45% (ab ~278k zu versteuerndem Einkommen). Spitzensteuersatz darunter ist 42%."
+  source_url: "https://tradingeconomics.com/germany/personal-income-tax-rate"
+
+sales-tax-rate:
+  value: 19
+  date: "2026-12-31"
+  unit: "%"
+  note: "Umsatzsteuer / Mehrwertsteuer (Regelsatz). Ermäßigter Satz 7% nicht hier abgebildet."
+  source_url: "https://tradingeconomics.com/germany/sales-tax-rate"
+
+social-security-rate:
+  value: 38.74
+  date: "2026-12-31"
+  unit: "%"
+  note: "Gesamt (AG + AN). RV + KV + PV + AV summiert. TE-konform."
+  source_url: "https://tradingeconomics.com/germany/social-security-rate"
+
+social-security-rate-companies:
+  value: 19.42
+  date: "2026-12-31"
+  unit: "%"
+  note: "Arbeitgeberanteil."
+  source_url: "https://tradingeconomics.com/germany/social-security-rate-for-companies"
+
+social-security-rate-employees:
+  value: 19.33
+  date: "2026-12-31"
+  unit: "%"
+  note: "Arbeitnehmeranteil."
+  source_url: "https://tradingeconomics.com/germany/social-security-rate-for-employees"
+
+withholding-tax-rate:
+  value: 0
+  date: "2025-12-31"
+  unit: "%"
+  note: "Innerhalb EU keine Quellensteuer; bilateral oft reduziert. TE: 0%."
+  source_url: "https://tradingeconomics.com/germany/withholding-tax-rate"
+
+# --- Government: Statische Ranking-/Rating-Indikatoren ---
+
+corruption-index:
+  value: 77
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Transparency International CPI 2025 (0=korrupt, 100=sauber)."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+corruption-rank:
+  value: 10
+  date: "2025-12-31"
+  unit: "Rank"
+  note: "Rang im CPI 2025 (1 = am saubersten)."
+  source_url: "https://www.transparency.org/en/cpi/2025"
+
+credit-rating:
+  value: 100
+  date: "2026-04-01"
+  unit: "Rating"
+  note: "TE-Score 100. Fitch/Moody's/S&P alle AAA stable."
+  source_url: "https://tradingeconomics.com/germany/rating"
+
+military-expenditure:
+  value: 113586
+  date: "2025-12-31"
+  unit: "USD Million"
+  note: "NATO-Definition. DE erreicht 2025 das 2%-Ziel deutlich."
+  source_url: "https://tradingeconomics.com/germany/military-expenditure"
+
+government-spending-to-gdp:
+  value: 50.5
+  date: "2025-12-31"
+  unit: "% of GDP"
+  note: "General government expenditure / BIP. IMF/Eurostat."
+  source_url: "https://tradingeconomics.com/germany/government-spending-to-gdp"
+
+# --- Labour: Demografie / gesetzliche Schwellen ---
+
+retirement-age-men:
+  value: 66.33
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Regelaltersgrenze. Schrittweise Anhebung auf 67 bis 2031."
+
+retirement-age-women:
+  value: 66.33
+  date: "2026-12-31"
+  unit: "Years"
+  note: "Regelaltersgrenze. Schrittweise Anhebung auf 67 bis 2031."
+
+minimum-wages:
+  value: 13.9
+  date: "2026-01-01"
+  unit: "EUR/Hour"
+  note: "Gesetzlicher Mindestlohn ab 2026. Davor: 12.82 (2025), 12.41 (2024)."
+  source_url: "https://www.bmas.de/DE/Arbeit/Arbeitsrecht/Mindestlohn/mindestlohn.html"
+
+# --- Trade ---
+
+terrorism-index:
+  value: 4.45
+  date: "2025-12-31"
+  unit: "Points"
+  note: "Global Terrorism Index 2025 (0=kein Impact, 10=extrem)."
+  source_url: "https://www.visionofhumanity.org/maps/global-terrorism-index/"
+
+weapons-sales:
+  value: 2049
+  date: "2024-12-31"
+  unit: "SIPRI TIV Million"
+  note: "SIPRI Arms Transfers — exports. Stand 2024."
+  source_url: "https://www.sipri.org/databases/armstransfers"
+
+# --- Health (TE "Health" Tab, OECD/WHO data) ---
+
+hospital-beds:
+  value: 7.66
+  date: "2023-12-31"
+  unit: "per 1000 people"
+  note: "OECD Health Stats. DE deutlich über OECD-Schnitt."
+
+hospitals:
+  value: 35.46
+  date: "2023-12-31"
+  unit: "per one million people"
+  note: "WHO Global Health Observatory."
+
+medical-doctors:
+  value: 4.98
+  date: "2021-12-31"
+  unit: "per 1000 people"
+  note: "OECD. DE über OECD-Schnitt (~3.7)."
+
+nurses:
+  value: 14.41
+  date: "2023-12-31"
+  unit: "per 1000 people"
+  note: "OECD."

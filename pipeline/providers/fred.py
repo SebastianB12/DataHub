@@ -1,53 +1,36 @@
+"""
+FredProvider — Federal Reserve Economic Data (fredapi).
+Reads its series config from the DB table `indicator_sources` (source='fred').
+Adding a new FRED series = INSERT one row, no Python edit.
+"""
+
 import os
-from datetime import date
+import time
 from fredapi import Fred
 from dotenv import load_dotenv
 
 from pipeline.base_provider import BaseProvider, DataPoint
-from pipeline.db import upsert_data_points, log_pipeline_run
+from pipeline.transforms import normalize_date
+from pipeline.db import datapoints_to_rows, upsert_data_points, log_pipeline_run, load_series_config
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
-# FRED Series ID → our indicator slug
-SERIES_MAP = {
-    # GDP & Growth
-    "GDP": "gdp",  # Nominal GDP (Billions USD, quarterly)
-    "GDPC1": "gdp-real",  # Real GDP (Billions chained 2017 USD, quarterly)
-    "A191RL1Q225SBEA": "gdp-growth",  # Real GDP growth rate (% change, quarterly)
-    "A939RC0Q052SBEA": "gdp-per-capita",  # GDP per capita (USD, quarterly)
-    # Inflation & Prices
-    "CPIAUCSL": "inflation-cpi",  # CPI for All Urban Consumers (Index, monthly) → we compute YoY %
-    "CPILFESL": "core-cpi",  # Core CPI excl. food & energy (Index, monthly) → we compute YoY %
-    "PPIACO": "ppi",  # PPI All Commodities (Index, monthly) → we compute YoY %
-    # Labor
-    "UNRATE": "unemployment",  # Unemployment Rate (%, monthly)
-    "EMRATIO": "employment-rate",  # Employment-Population Ratio (%, monthly)
-    "POPTHM": "population",  # Population (Thousands, monthly)
-    # Monetary
-    "FEDFUNDS": "interest-rate",  # Federal Funds Rate (%, monthly)
-    "WALCL": "central-bank-balance",  # Fed Total Assets (Millions USD, weekly)
-    "M2SL": "money-supply-m2",  # M2 Money Stock (Billions USD, monthly)
-    # Trade
-    "BOPGSTB": "trade-balance",  # Trade Balance (Millions USD, monthly)
-    "NETFI": "current-account",  # Current Account (Billions USD, quarterly)
-    "BOPGEXP": "exports",  # Exports (Millions USD, monthly)
-    "BOPGIMP": "imports",  # Imports (Millions USD, monthly)
-    # Government
-    "GFDEGDQ188S": "government-debt",  # Federal Debt to GDP (%, quarterly)
-    "FYFSGDA188S": "budget-deficit",  # Federal Surplus/Deficit to GDP (%, annual)
-}
+# Strings that indicate FRED-side transient hiccups; retry on these.
+# "Internal Server Error" is the most common — FRED's API drops a few %
+# of requests under load. Retry-once is enough to clear nearly all of them.
+TRANSIENT_FRED_ERRORS = (
+    "Internal Server Error",
+    "Bad Gateway",
+    "Service Unavailable",
+    "Gateway Timeout",
+    "Connection",
+    "timed out",
+)
 
-# Series that are indexes where we need to compute YoY % change
-YOY_SERIES = {"CPIAUCSL", "CPILFESL", "PPIACO"}
 
-# Unit conversions: FRED value → our standard unit
-UNIT_CONVERSIONS = {
-    "WALCL": 1 / 1000,  # Millions → Billions
-    "BOPGSTB": 1 / 1000,  # Millions → Billions
-    "BOPGEXP": 1 / 1000,  # Millions → Billions
-    "BOPGIMP": 1 / 1000,  # Millions → Billions
-    "POPTHM": 1 / 1000,  # Thousands → Millions
-}
+def _is_transient(exc: BaseException) -> bool:
+    msg = str(exc)
+    return any(s in msg for s in TRANSIENT_FRED_ERRORS)
 
 
 class FredProvider(BaseProvider):
@@ -57,86 +40,87 @@ class FredProvider(BaseProvider):
     def __init__(self):
         self.fred = Fred(api_key=os.environ["FRED_API_KEY"])
 
-    def _fetch_series(self, series_id: str, indicator_slug: str) -> list[DataPoint]:
-        """Fetch a single FRED series and convert to DataPoints."""
-        series = self.fred.get_series(series_id)
-        series = series.dropna()
+    def _get_series_with_retry(self, series_id: str, retries: int = 3, base_delay: float = 5.0):
+        """Fetch a FRED series with backoff retry on transient 5xx errors."""
+        last_exc: BaseException | None = None
+        for attempt in range(retries):
+            try:
+                return self.fred.get_series(series_id)
+            except Exception as exc:  # fredapi wraps urllib.HTTPError as plain Exception
+                last_exc = exc
+                if attempt == retries - 1 or not _is_transient(exc):
+                    raise
+                delay = base_delay * (attempt + 1)  # 5s, 10s, 15s
+                time.sleep(delay)
+        raise last_exc  # unreachable, satisfies type checkers
 
-        points = []
-        conversion = UNIT_CONVERSIONS.get(series_id, 1)
+    def _fetch_series(self, cfg: dict) -> list[DataPoint]:
+        series = self._get_series_with_retry(cfg["series_id"]).dropna()
+        indicator = cfg["indicator"]
+        country = cfg["country"]
+        conversion = float(cfg.get("conversion") or 1)
+        unit = cfg.get("unit") or ""
+        adjustment = cfg.get("adjustment") or ""
+        freq = cfg.get("freq_hint") or "M"
+        series_id = cfg["series_id"]
 
-        if series_id in YOY_SERIES:
-            # Compute year-over-year % change from index values
-            yoy = series.pct_change(periods=12) * 100  # 12 months
-            yoy = yoy.dropna()
-            for dt, value in yoy.items():
-                points.append(DataPoint(
-                    indicator=indicator_slug,
-                    country="US",
-                    date=dt.date(),
-                    value=round(float(value), 2),
-                    source="fred",
-                ))
-        else:
+        # Daily series: collapse to month-end value (latest obs per month).
+        if freq == "D":
+            monthly: dict[tuple[int, int], tuple] = {}
             for dt, value in series.items():
-                points.append(DataPoint(
-                    indicator=indicator_slug,
-                    country="US",
-                    date=dt.date(),
+                key = (dt.year, dt.month)
+                if key not in monthly or dt > monthly[key][0]:
+                    monthly[key] = (dt, value)
+            return [
+                DataPoint(
+                    indicator=indicator, country=country,
+                    date=normalize_date(dt.date(), "M"),
                     value=round(float(value) * conversion, 2),
-                    source="fred",
-                ))
+                    source="fred", unit=unit, series_id=series_id, adjustment=adjustment,
+                )
+                for dt, value in monthly.values()
+            ]
 
-        return points
+        return [
+            DataPoint(
+                indicator=indicator, country=country,
+                date=normalize_date(dt.date(), freq),
+                value=round(float(value) * conversion, 2),
+                source="fred", unit=unit, series_id=series_id, adjustment=adjustment,
+            )
+            for dt, value in series.items()
+        ]
 
     def fetch(self) -> list[DataPoint]:
-        """Fetch all US indicators from FRED."""
-        all_points = []
-
-        for series_id, indicator_slug in SERIES_MAP.items():
+        configs = load_series_config("fred")
+        all_points: list[DataPoint] = []
+        for cfg in configs:
             try:
-                points = self._fetch_series(series_id, indicator_slug)
+                points = self._fetch_series(cfg)
                 all_points.extend(points)
-                print(f"  OK {indicator_slug}: {len(points)} data points")
+                adj = f" [{cfg['adjustment']}]" if cfg.get("adjustment") else ""
+                print(f"  OK {cfg['indicator']} ({cfg['country']}){adj}: {len(points)} ({cfg.get('unit') or ''})")
             except Exception as e:
-                print(f"  FAIL {indicator_slug} ({series_id}): {e}")
-
+                print(f"  FAIL {cfg['indicator']} ({cfg['country']}, {cfg['series_id']}): {e}")
         return all_points
 
 
 def run():
-    """Run the FRED provider and write to Supabase."""
     provider = FredProvider()
     print(f"Fetching data from {provider.display_name}...")
-
     try:
         points = provider.fetch()
         print(f"\nTotal: {len(points)} data points")
-
-        # Convert to dicts for Supabase
-        rows = [
-            {
-                "indicator": p.indicator,
-                "country": p.country,
-                "date": p.date.isoformat(),
-                "value": p.value,
-                "source": p.source,
-            }
-            for p in points
-        ]
-
-        # Upsert in batches of 500
-        total_upserted = 0
+        rows = datapoints_to_rows(points)
+        total = 0
         batch_size = 500
         for i in range(0, len(rows), batch_size):
             batch = rows[i : i + batch_size]
             count = upsert_data_points(batch)
-            total_upserted += count
+            total += count
             print(f"  Upserted batch {i // batch_size + 1}: {count} rows")
-
-        log_pipeline_run("fred", "success", total_upserted)
-        print(f"\nDone. {total_upserted} rows upserted to Supabase.")
-
+        log_pipeline_run("fred", "success", total)
+        print(f"\nDone. {total} rows upserted.")
     except Exception as e:
         log_pipeline_run("fred", "failed", error_message=str(e))
         print(f"\nFailed: {e}")

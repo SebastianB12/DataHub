@@ -10,6 +10,9 @@ class DataPoint:
     date: date
     value: float
     source: str  # 'fred', 'eurostat', 'ecb', 'ons'
+    unit: str = ""  # 'Billion USD', 'Index', '% YoY', '%'
+    series_id: str = ""  # Original series ID, e.g. 'CPIAUCSL', 'BBDP1.M.DE.N.VPI...'
+    adjustment: str = ""  # 'SA' (seasonally adjusted), 'NSA' (not), or '' (not applicable)
 
 
 class BaseProvider(ABC):

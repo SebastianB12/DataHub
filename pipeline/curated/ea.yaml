@@ -1,0 +1,27 @@
+# Kuratierte EA-Indikatoren — Werte gegen Trading Economics geprüft 2026-05-01.
+# TE-Eurozone-Aggregate sind Durchschnitte über die Mitglieder.
+
+country: EA
+
+# --- Taxes (TE Eurozone Average, Stand 2025) ---
+
+corporate-tax-rate:
+  value: 22.20
+  date: "2025-12-31"
+  unit: "%"
+  note: "Eurozone Average Corporate Tax Rate. TE: 22.20%."
+  source_url: "https://tradingeconomics.com/euro-area/corporate-tax-rate"
+
+personal-income-tax-rate:
+  value: 41.30
+  date: "2025-12-31"
+  unit: "%"
+  note: "Eurozone Average Top Marginal Personal Income Tax Rate."
+  source_url: "https://tradingeconomics.com/euro-area/personal-income-tax-rate"
+
+sales-tax-rate:
+  value: 21.20
+  date: "2025-12-31"
+  unit: "%"
+  note: "Eurozone Average VAT Standard Rate."
+  source_url: "https://tradingeconomics.com/euro-area/sales-tax-rate"

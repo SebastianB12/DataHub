@@ -1,0 +1,364 @@
+tier,category,indicator,indicator_name,country,value,unit,date,source,series_id
+1,Business,business-confidence,Business Confidence,EA,-0.28,Points,2026-04-30,eurostat,ei_bsin_m_r2:BCI
+1,Business,durable-goods-orders,Durable Goods Orders,US,315879,%,2026-02-28,fred,DGORDER
+1,Business,industrial-production,Industrial Production YoY,DE,91.7,Index,2026-02-28,eurostat,sts_inpr_m:B-D:I21
+1,Business,industrial-production,Industrial Production YoY,EA,97.9,Index,2026-02-28,eurostat,sts_inpr_m:B-D:I21
+1,Business,industrial-production,Industrial Production YoY,GB,100.2,Index,2026-02-28,ons,
+1,Business,industrial-production,Industrial Production YoY,US,101.79,Index,2026-03-31,fred,INDPRO
+1,Consumer,consumer-confidence,Consumer Confidence (UMich),EA,-20.6,Points,2026-04-30,eurostat,ei_bsco_m:BS-CSMCI
+1,Consumer,consumer-confidence,Consumer Confidence (UMich),US,56.6,Index,2026-02-28,fred,UMCSENT
+1,Consumer,retail-sales,Retail Sales,DE,98.5,Index,2026-03-31,eurostat,sts_trtu_m:G47:I21
+1,Consumer,retail-sales,Retail Sales,EA,103.8,Index,2026-02-28,eurostat,sts_trtu_m:G47:I21
+1,Consumer,retail-sales,Retail Sales,GB,103.7,Index,2026-03-31,ons,
+1,Government,government-debt,Government Debt to GDP,DE,63.5,% of GDP,2025-12-31,eurostat,gov_10dd_edpt1:GD
+1,Government,government-debt,Government Debt to GDP,EA,87.4,% of GDP,2025-12-31,eurostat,gov_10dd_edpt1:GD
+1,Government,government-debt,Government Debt to GDP,GB,93.8,% of GDP,2026-03-31,ons,
+1,Government,government-debt,Government Debt to GDP,US,122.57,% of GDP,2025-12-31,fred,GFDEGDQ188S
+1,Housing,30-year-mortgage-rate,30 Year Mortgage Rate,US,6.3,%,2026-04-16,fred,MORTGAGE30US
+1,Housing,building-permits,Building Permits,US,1386,Thousand,2026-01-31,fred,PERMIT
+1,Housing,housing-starts,Housing Starts,US,1487,Thousand units,2026-01-31,fred,HOUST
+1,Labour,initial-jobless-claims,Initial Jobless Claims,US,207,Thousand,2026-04-11,fred,ICSA
+1,Labour,non-farm-payrolls,Non-Farm Payrolls,US,158637,Thousand,2026-03-31,fred,PAYEMS
+1,Labour,unemployment,Unemployment Rate,DE,6.4,%,2026-04-30,destatis,13211-0002
+1,Labour,unemployment,Unemployment Rate,EA,6.2,%,2026-03-31,eurostat,ei_lmhr_m:LM-UN-T-TOT
+1,Labour,unemployment,Unemployment Rate,GB,4.9,%,2026-01-31,ons,
+1,Labour,unemployment,Unemployment Rate,US,4.3,%,2026-03-31,fred,UNRATE
+1,Money,interest-rate,Central Bank Interest Rate,GB,3.75,%,2026-04-30,ons,
+1,Money,interest-rate,Central Bank Interest Rate,US,3.75,%,2026-04-30,fred,DFEDTARU
+1,Prices,core-pce-price-index,Core PCE Price Index,US,128.86,Index,2026-02-28,fred,PCEPILFE
+1,Prices,inflation-cpi,Consumer Price Index (CPI),DE,124.5,Index,2026-03-31,destatis,61111-0002
+1,Prices,inflation-cpi,Consumer Price Index (CPI),EA,103.06,Index,2026-04-30,eurostat,ei_cphi_m:TOTAL
+1,Prices,inflation-cpi,Consumer Price Index (CPI),GB,141,Index,2026-03-31,ons,
+1,Prices,inflation-cpi,Consumer Price Index (CPI),US,330.29,Index,2026-03-31,fred,CPIAUCSL
+1,Trade,trade-balance,Trade Balance,DE,20.34,Billion EUR,2026-02-28,destatis,51000-0002
+1,Trade,trade-balance,Trade Balance,GB,-0.72,Billion GBP,2026-02-28,ons,
+1,Trade,trade-balance,Trade Balance,US,-57.35,Billion USD,2026-02-28,fred,BOPGSTB
+2,Business,capacity-utilization,Capacity Utilization,DE,78.4,%,2026-06-30,eurostat,ei_bsin_q_r2:BS-ICU-PC
+2,Business,capacity-utilization,Capacity Utilization,EA,78.5,%,2026-06-30,eurostat,ei_bsin_q_r2:BS-ICU-PC
+2,Business,capacity-utilization,Capacity Utilization,US,75.66,%,2026-03-31,fred,TCU
+2,Business,chicago-fed-national-activity-index,Chicago Fed National Activity Index,US,-0.11,Index,2026-02-28,fred,CFNAI
+2,Business,corporate-profits,Corporate Profits,US,3792.21,Billion USD,2025-12-31,fred,CP
+2,Business,factory-orders,Factory Orders,DE,101.7,Index,2026-02-28,destatis,42151-0001
+2,Business,factory-orders,Factory Orders,US,619607,%,2026-02-28,fred,AMTMNO
+2,Business,manufacturing-production,Manufacturing Production,DE,92.3,Index,2026-02-28,eurostat,sts_inpr_m:C:I21
+2,Business,manufacturing-production,Manufacturing Production,EA,98.4,Index,2026-02-28,eurostat,sts_inpr_m:C:I21
+2,Business,manufacturing-production,Manufacturing Production,GB,99.1,Index,2026-02-28,ons,
+2,Business,manufacturing-production,Manufacturing Production,US,98,Index,2026-03-31,fred,IPMAN
+2,Business,ny-empire-state-manufacturing-index,NY Empire State Manufacturing Index,US,11,Index,2026-04-30,fred,GACDISA066MSFRBNY
+2,Business,philadelphia-fed-manufacturing-index,Philadelphia Fed Manufacturing Index,US,12591,Index,2026-03-31,fred,MANEMP
+2,Business,total-vehicle-sales,Total Vehicle Sales,US,16.69,Million,2026-03-31,fred,TOTALSA
+2,Consumer,consumer-spending,Consumer Spending,DE,586.17,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P31_S14
+2,Consumer,consumer-spending,Consumer Spending,EA,2071.79,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P31_S14
+2,Consumer,consumer-spending,Consumer Spending,US,16698.9,Billion USD,2026-03-31,fred,PCEC96
+2,Consumer,personal-income,Personal Income MoM,US,26661,%,2026-02-28,fred,PI
+2,Consumer,personal-savings,Personal Savings Rate,US,4,%,2026-02-28,fred,PSAVERT
+2,Consumer,personal-spending,Personal Spending MoM,US,21615.1,%,2026-02-28,fred,PCE
+2,Consumer,retail-sales-ex-autos,Retail Sales Ex Autos,US,598988,%,2026-02-28,fred,RSFSXMV
+2,Energy,crude-oil-stocks,Crude Oil Stocks,US,459495,Thousand Barrels,2026-04-24,eia,WCESTUS1
+2,Energy,weekly-crude-oil-production,Weekly Crude Oil Production,US,13586,Thousand Barrels Per Day,2026-04-24,eia,WCRFPUS2
+2,GDP,gdp,Gross Domestic Product,DE,4685.59,Billion USD,2024-12-31,worldbank,NY.GDP.MKTP.CD
+2,GDP,gdp,Gross Domestic Product,EA,16485.44,Billion USD,2024-12-31,worldbank,NY.GDP.MKTP.CD
+2,GDP,gdp,Gross Domestic Product,GB,3686.03,Billion USD,2024-12-31,worldbank,NY.GDP.MKTP.CD
+2,GDP,gdp,Gross Domestic Product,US,28750.96,Billion USD,2024-12-31,worldbank,NY.GDP.MKTP.CD
+2,GDP,gdp-per-capita,GDP Per Capita,DE,56103.73,USD,2024-12-31,worldbank,NY.GDP.PCAP.CD
+2,GDP,gdp-per-capita,GDP Per Capita,EA,46945.42,USD,2024-12-31,worldbank,NY.GDP.PCAP.CD
+2,GDP,gdp-per-capita,GDP Per Capita,GB,53246.37,USD,2024-12-31,worldbank,NY.GDP.PCAP.CD
+2,GDP,gdp-per-capita,GDP Per Capita,US,84534.04,USD,2024-12-31,worldbank,NY.GDP.PCAP.CD
+2,GDP,gdp-per-capita-ppp,GDP per Capita PPP,DE,73551.93,USD,2024-12-31,worldbank,NY.GDP.PCAP.PP.CD
+2,GDP,gdp-per-capita-ppp,GDP per Capita PPP,EA,66097.02,USD,2024-12-31,worldbank,NY.GDP.PCAP.PP.CD
+2,GDP,gdp-per-capita-ppp,GDP per Capita PPP,GB,62009.49,USD,2024-12-31,worldbank,NY.GDP.PCAP.PP.CD
+2,GDP,gdp-per-capita-ppp,GDP per Capita PPP,US,85809.9,USD,2024-12-31,worldbank,NY.GDP.PCAP.PP.CD
+2,GDP,gdp-real,Real GDP,DE,769.47,Billion EUR,2026-03-31,eurostat,namq_10_gdp:CLV10_MEUR
+2,GDP,gdp-real,Real GDP,EA,2920.89,Billion EUR,2026-03-31,eurostat,namq_10_gdp:CLV10_MEUR
+2,GDP,gdp-real,Real GDP,GB,706.07,Billion GBP,2025-12-31,ons,
+2,GDP,gdp-real,Real GDP,US,24055.75,Billion USD,2025-12-31,fred,GDPC1
+2,GDP,real-consumer-spending,Real Consumer Spending,US,0.1,% YoY,2026-02-28,fred,DPCERAM1M225NBEA
+2,Government,budget-deficit,Budget Deficit,DE,-2.7,% of GDP,2025-12-31,eurostat,gov_10dd_edpt1:B9
+2,Government,budget-deficit,Budget Deficit,EA,-2.9,% of GDP,2025-12-31,eurostat,gov_10dd_edpt1:B9
+2,Government,budget-deficit,Budget Deficit,GB,-4.3,% of GDP,2026-03-31,ons,
+2,Government,budget-deficit,Budget Deficit,US,-5.77,% of GDP,2025-12-31,fred,FYFSGDA188S
+2,Government,government-debt-total,Government Debt,DE,2838.24,Billion EUR,2025-12-31,eurostat,gov_10dd_edpt1:GD:MIO_EUR
+2,Government,government-debt-total,Government Debt,EA,13945.71,Billion EUR,2025-12-31,eurostat,gov_10dd_edpt1:GD:MIO_EUR
+2,Government,government-debt-total,Government Debt,US,38514009,USD Million,2025-12-31,fred,GFDEBTN
+2,Government,government-spending,Government Spending,DE,258.25,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P3_S13
+2,Government,government-spending,Government Spending,EA,3424.91,Billion EUR,2025-12-31,eurostat,gov_10a_main:S13:P3
+2,Government,government-spending,Government Spending,US,3957.1,Billion USD,2025-12-31,fred,GCEC1
+2,Housing,15-year-mortgage-rate,15 Year Mortgage Rate,US,5.65,%,2026-04-16,fred,MORTGAGE15US
+2,Housing,case-shiller-home-price-index,Case-Shiller Home Price Index,US,332.18,Index,2026-01-31,fred,CSUSHPISA
+2,Housing,construction-spending,Construction Spending MoM,US,2190424,%,2026-01-31,fred,TTLCONS
+2,Housing,existing-home-sales,Existing Home Sales,US,3980000,Thousand,2026-03-31,fred,EXHOSLUSM495S
+2,Housing,mortgage-approvals,Mortgage Approvals,GB,63.53,Thousand,2026-03-31,ons,
+2,Housing,new-home-sales,New Home Sales,US,587,Thousand units,2026-01-31,fred,HSN1F
+2,Labour,adp-employment-change,ADP Employment Change,US,132398,Thousand,2026-03-31,fred,ADPMNUSNERSA
+2,Labour,continuing-jobless-claims,Continuing Jobless Claims,US,1818,Thousand,2026-04-04,fred,CCSA
+2,Labour,employed-persons,Employed Persons,DE,42404,Thousand,2025-12-31,eurostat,lfsi_emp_q:EMP_LFS:Y15-74
+2,Labour,employed-persons,Employed Persons,GB,34328,Thousand,2026-01-31,ons,
+2,Labour,employed-persons,Employed Persons,US,162848,Thousand,2026-03-31,fred,CE16OV
+2,Labour,employment-rate,Employment Rate,DE,77.2,%,2025-12-31,eurostat,lfsa_ergan:Y15-64
+2,Labour,employment-rate,Employment Rate,EA,70.8,%,2025-12-31,eurostat,lfsa_ergan:Y15-64
+2,Labour,employment-rate,Employment Rate,GB,75,%,2026-01-31,ons,
+2,Labour,employment-rate,Employment Rate,US,59.2,%,2026-03-31,fred,EMRATIO
+2,Labour,job-vacancies,Job Vacancies,DE,2.6,%,2025-12-31,eurostat,jvs_q_nace2:JVR
+2,Labour,job-vacancies,Job Vacancies,US,6882,Thousand,2026-02-28,fred,JTSJOL
+2,Labour,labor-force-participation-rate,Labor Force Participation Rate,DE,80.3,%,2025-12-31,eurostat,lfsi_emp_q:ACT
+2,Labour,labor-force-participation-rate,Labor Force Participation Rate,EA,75.6,%,2025-12-31,eurostat,lfsi_emp_q:ACT
+2,Labour,labor-force-participation-rate,Labor Force Participation Rate,GB,63.8,%,2026-01-31,ons,
+2,Labour,labor-force-participation-rate,Labor Force Participation Rate,US,61.9,%,2026-03-31,fred,CIVPART
+2,Labour,nonfarm-payrolls-private,Nonfarm Payrolls Private,US,135320,Thousand,2026-03-31,fred,USPRIV
+2,Labour,u6-unemployment-rate,U-6 Unemployment Rate,US,8,%,2026-03-31,fred,U6RATE
+2,Labour,unemployed-persons,Unemployed Persons,DE,1760,Thousand,2026-03-31,eurostat,une_rt_m:TOTAL:THS_PER
+2,Labour,unemployed-persons,Unemployed Persons,EA,10984,Thousand,2026-03-31,eurostat,une_rt_m:TOTAL:THS_PER
+2,Labour,unemployed-persons,Unemployed Persons,GB,1780,Thousand,2026-01-31,ons,
+2,Labour,unemployed-persons,Unemployed Persons,US,7239,Thousand,2026-03-31,fred,UNEMPLOY
+2,Labour,youth-unemployment-rate,Youth Unemployment Rate,DE,7.5,%,2026-03-31,eurostat,une_rt_m:Y_LT25
+2,Labour,youth-unemployment-rate,Youth Unemployment Rate,EA,14.9,%,2026-03-31,eurostat,une_rt_m:Y_LT25
+2,Labour,youth-unemployment-rate,Youth Unemployment Rate,GB,15.8,%,2026-01-31,ons,
+2,Labour,youth-unemployment-rate,Youth Unemployment Rate,US,13.7,%,2026-03-31,fred,LNS14000012
+2,Money,central-bank-balance,Central Bank Balance Sheet,DE,2327.9,Billion EUR,2026-04-24,bundesbank,BBBK11.D.TTA032
+2,Money,central-bank-balance,Central Bank Balance Sheet,GB,644,Billion GBP,2026-03-31,ons,
+2,Money,central-bank-balance,Central Bank Balance Sheet,US,6705.7,Billion USD,2026-04-15,fred,WALCL
+2,Money,effective-federal-funds-rate,Effective Federal Funds Rate,US,3.64,%,2026-03-31,fred,FEDFUNDS
+2,Money,money-supply-m2,Money Supply M2,GB,3277.27,Billion GBP,2026-03-31,ons,
+2,Money,money-supply-m2,Money Supply M2,US,22667.3,Billion USD,2026-02-28,fred,M2SL
+2,Money,money-supply-m3,Money Supply M3,DE,4145,Billion EUR,2026-03-31,bundesbank,BBBS2.M.DB.Y.U.M30A.X.1.U2.2300.Z01.E
+2,Money,money-supply-m3,Money Supply M3,EA,17446.55,Billion EUR,2026-03-31,ecb,
+2,Money,secured-overnight-financing-rate,SOFR,US,3.67,%,2026-04-30,fred,SOFR
+2,Overview,currency,USD Trade-Weighted Index,US,118.86,Index,2026-04-30,fred,DTWEXBGS
+2,Prices,core-cpi,Core CPI,DE,102.01,Index,2026-04-30,eurostat,ei_cphi_m:CP-HI00XEF
+2,Prices,core-cpi,Core CPI,EA,102.34,Index,2026-04-30,eurostat,ei_cphi_m:CP-HI00XEF
+2,Prices,core-cpi,Core CPI,GB,139.2,Index,2026-03-31,ons,
+2,Prices,core-cpi,Core CPI,US,334.17,Index,2026-03-31,fred,CPILFESL
+2,Prices,core-producer-prices,Core Producer Prices,US,266.64,Index,2026-03-31,fred,WPSFD4131
+2,Prices,energy-inflation,Energy Inflation,DE,108.89,Index,2026-04-30,eurostat,ei_cphi_m:CP-HIE:HICP2025
+2,Prices,energy-inflation,Energy Inflation,EA,110.41,Index,2026-04-30,eurostat,ei_cphi_m:CP-HIE:HICP2025
+2,Prices,energy-inflation,Energy Inflation,US,314.02,% YoY,2026-03-31,fred,CPIENGSL
+2,Prices,export-prices,Export Prices,US,161,Index,2026-03-31,fred,IQ
+2,Prices,food-inflation,Food Inflation,DE,102.22,Index,2026-04-30,eurostat,ei_cphi_m:CP-HIF:HICP2025
+2,Prices,food-inflation,Food Inflation,EA,102.2,Index,2026-04-30,eurostat,ei_cphi_m:CP-HIF:HICP2025
+2,Prices,food-inflation,Food Inflation,GB,140.8,Index,2026-03-31,ons,
+2,Prices,food-inflation,Food Inflation,US,346.6,% YoY,2026-03-31,fred,CPIUFDSL
+2,Prices,import-prices,Import Prices,US,144.6,Index,2026-03-31,fred,IR
+2,Prices,michigan-inflation-expectations,Michigan Inflation Expectations 1Y,US,3.4,%,2026-02-28,fred,MICH
+2,Prices,pce-price-index,PCE Price Index,US,129.45,Index,2026-02-28,fred,PCEPI
+2,Prices,ppi,Producer Price Index,DE,126.9,Index,2026-03-31,destatis,61241-0002
+2,Prices,ppi,Producer Price Index,EA,124.8,Index,2026-02-28,eurostat,sts_inppd_m:B-D
+2,Prices,ppi,Producer Price Index,GB,145,Index,2026-03-31,ons,
+2,Prices,ppi,Producer Price Index,US,274.1,Index,2026-03-31,fred,PPIACO
+2,Prices,rent-inflation,Rent Inflation,US,442.7,% YoY,2026-03-31,fred,CUSR0000SEHA
+2,Prices,services-inflation,Services Inflation,DE,102.56,Index,2026-04-30,eurostat,ei_cphi_m:CP-HIS:HICP2025
+2,Prices,services-inflation,Services Inflation,EA,102.75,Index,2026-04-30,eurostat,ei_cphi_m:CP-HIS:HICP2025
+2,Prices,services-inflation,Services Inflation,US,427.28,% YoY,2026-03-31,fred,CUSR0000SAS
+2,Taxes,corporate-tax-rate,Corporate Tax Rate,DE,30,%,2026-12-31,curated,DE:corporate-tax-rate
+2,Taxes,corporate-tax-rate,Corporate Tax Rate,EA,22.2,%,2025-12-31,curated,EA:corporate-tax-rate
+2,Taxes,corporate-tax-rate,Corporate Tax Rate,GB,25,%,2026-12-31,curated,GB:corporate-tax-rate
+2,Taxes,corporate-tax-rate,Corporate Tax Rate,US,21,%,2026-12-31,curated,US:corporate-tax-rate
+2,Taxes,personal-income-tax-rate,Personal Income Tax Rate,DE,45,%,2026-12-31,curated,DE:personal-income-tax-rate
+2,Taxes,personal-income-tax-rate,Personal Income Tax Rate,EA,41.3,%,2025-12-31,curated,EA:personal-income-tax-rate
+2,Taxes,personal-income-tax-rate,Personal Income Tax Rate,GB,45,%,2026-12-31,curated,GB:personal-income-tax-rate
+2,Taxes,personal-income-tax-rate,Personal Income Tax Rate,US,37,%,2026-12-31,curated,US:personal-income-tax-rate
+2,Trade,current-account,Current Account Balance,DE,51.26,Billion EUR,2025-12-31,eurostat,bop_c6_q:CA
+2,Trade,current-account,Current Account Balance,EA,80.77,Billion EUR,2025-12-31,eurostat,bop_eu6_q:CA
+2,Trade,current-account,Current Account Balance,GB,-18.39,Billion GBP,2025-12-31,ons,
+2,Trade,current-account,Current Account Balance,US,-890.03,Billion USD,2025-12-31,fred,NETFI
+2,Trade,exports,Exports,DE,132.05,Billion EUR,2026-02-28,destatis,51000-0002
+2,Trade,exports,Exports,EA,7741.41,Billion EUR,2025-12-31,eurostat,nama_10_exi:P6
+2,Trade,exports,Exports,GB,80.2,Billion GBP,2026-02-28,ons,
+2,Trade,exports,Exports,US,206.92,Billion USD,2026-02-28,fred,BOPGEXP
+2,Trade,goods-exports,Goods Exports,US,206918,USD Million,2026-02-28,fred,BOPGEXP
+2,Trade,goods-imports,Goods Imports,US,291522,USD Million,2026-02-28,fred,BOPGIMP
+2,Trade,imports,Imports,DE,111.71,Billion EUR,2026-02-28,destatis,51000-0002
+2,Trade,imports,Imports,EA,7122.75,Billion EUR,2025-12-31,eurostat,nama_10_exi:P7
+2,Trade,imports,Imports,GB,80.92,Billion GBP,2026-02-28,ons,
+2,Trade,imports,Imports,US,291.52,Billion USD,2026-02-28,fred,BOPGIMP
+3,Business,business-inventories,Business Inventories,US,2675001,%,2026-01-31,fred,BUSINV
+3,Business,car-production,Car Production,US,111.34,Thousand Units,2026-03-31,fred,DAUPSA
+3,Business,changes-in-inventories,Changes in Inventories,DE,18,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P52
+3,Business,changes-in-inventories,Changes in Inventories,EA,20.52,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P52
+3,Business,changes-in-inventories,Changes in Inventories,US,-15.64,Billion USD,2025-12-31,fred,CBIC1
+3,Business,dallas-fed-manufacturing-index,Dallas Fed Manufacturing Index,US,-0.2,Index,2026-03-31,fred,BACTSAMFRBDAL
+3,Business,durable-goods-orders-ex-defense,Durable Goods Orders Ex Defense,US,297358,%,2026-02-28,fred,ADXDNO
+3,Business,durable-goods-orders-ex-transport,Durable Goods Orders Ex Transportation,US,209589,%,2026-02-28,fred,ADXTNO
+3,Business,mining-production,Mining Production,DE,84.2,Index,2026-02-28,eurostat,sts_inpr_m:B:I21
+3,Business,mining-production,Mining Production,EA,78.6,Index,2026-02-28,eurostat,sts_inpr_m:B:I21
+3,Business,mining-production,Mining Production,GB,84.8,Index,2026-02-28,ons,
+3,Business,mining-production,Mining Production,US,120.1,Index,2026-03-31,fred,IPMINE
+3,Business,new-orders,New Orders (level),US,619607,USD Million,2026-02-28,fred,AMTMNO
+3,Business,services-sentiment,Services Sentiment,EA,0.9,Points,2026-04-30,eurostat,ei_bsse_m_r2:SCI
+3,Business,steel-production,Steel Production,US,99.65,Thousand Tonnes,2026-03-31,fred,IPG331S
+3,Business,wholesale-inventories,Wholesale Inventories,US,909334,%,2026-01-31,fred,WHLSLRIMSA
+3,Consumer,bank-lending-rate,Bank Lending Rate,US,6.75,%,2026-04-30,fred,DPRIME
+3,Consumer,consumer-credit,Consumer Credit MoM,US,5116788.24,Billion USD,2026-02-28,fred,TOTALSL
+3,Consumer,disposable-personal-income,Disposable Personal Income,DE,729198,Million EUR,2025-12-31,eurostat,nasq_10_nf_tr:B6G
+3,Consumer,disposable-personal-income,Disposable Personal Income,EA,2450613,Million EUR,2025-12-31,eurostat,nasq_10_nf_tr:B6G
+3,Consumer,disposable-personal-income,Disposable Personal Income,US,23429.8,Billion USD,2026-02-28,fred,DSPI
+3,Consumer,gasoline-prices,Gasoline Prices,US,4.12,USD/Liter,2026-04-13,fred,GASREGW
+3,Consumer,households-debt-to-gdp,Households Debt to GDP,US,68.55,% of GDP,2025-06-30,fred,HDTGPDUSQ163N
+3,Consumer,private-sector-credit,Private Sector Credit,US,13718.62,Billion USD,2026-04-30,fred,TOTLL
+3,Energy,crude-oil-imports,Crude Oil Imports,US,5750,Thousand Barrels Per Day,2026-04-24,eia,WCEIMUS2
+3,Energy,cushing-crude-oil-stocks,Cushing Crude Oil Stocks,US,266087,Thousand Barrels,2026-04-24,eia,WCESTP31
+3,Energy,distillate-fuel-production,Distillate Fuel Production,US,4940,Thousand Barrels Per Day,2026-04-24,eia,WDIRPUS2
+3,Energy,distillate-stocks,Distillate Stocks,US,103638,Thousand Barrels,2026-04-24,eia,WDISTUS1
+3,Energy,gasoline-production,Gasoline Production,US,9838,Thousand Barrels Per Day,2026-04-24,eia,WGFRPUS2
+3,Energy,gasoline-stocks,Gasoline Stocks,US,222299,Thousand Barrels,2026-04-24,eia,WGTSTUS1
+3,Energy,natural-gas-storage,Natural Gas Storage,US,2142,billion cubic feet,2026-04-24,eia,NW2_EPG0_SWO_R48_BCF
+3,Energy,refinery-crude-runs,Refinery Crude Runs,US,16071,Thousand Barrels Per Day,2026-04-24,eia,WCRRIUS2
+3,Energy,strategic-petroleum-reserve,SPR Crude Oil Stocks,US,397924,Thousand Barrels,2026-04-24,eia,WCSSTUS1
+3,GDP,full-year-gdp-growth,Full Year GDP Growth,US,2.1,%,2025-12-31,fred,A191RL1A225NBEA
+3,GDP,gdp-from-construction,GDP from Construction,US,4.3,Billion USD,2025-12-31,fred,VAPGDPC
+3,GDP,gdp-from-transport,GDP from Transport,US,3.3,Billion USD,2025-12-31,fred,VAPGDPT
+3,GDP,gdp-from-utilities,GDP from Utilities,US,1.5,Billion USD,2025-12-31,fred,VAPGDPU
+3,GDP,gdp-growth-contribution-consumer,GDP Contribution: Consumer Spending,US,1.3,pp,2025-12-31,fred,DPCERY2Q224SBEA
+3,GDP,gdp-growth-contribution-exports,GDP Contribution: Exports,US,-0.22,pp,2025-12-31,fred,A019RY2Q224SBEA
+3,GDP,gdp-growth-contribution-government,GDP Contribution: Government,US,-0.99,pp,2025-12-31,fred,A822RY2Q224SBEA
+3,GDP,gdp-growth-contribution-imports,GDP Contribution: Imports,US,0.13,pp,2025-12-31,fred,A021RY2Q224SBEA
+3,GDP,gdp-growth-contribution-investment,GDP Contribution: Investment,US,0.4,pp,2025-12-31,fred,A006RY2Q224SBEA
+3,GDP,gdp-sales-qoq,GDP Final Sales QoQ,US,2.4,%,2025-12-31,fred,A008RL1Q225SBEA
+3,GDP,gross-fixed-capital-formation,Gross Fixed Capital Formation,DE,231.57,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P51G
+3,GDP,gross-fixed-capital-formation,Gross Fixed Capital Formation,EA,860.4,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P51G
+3,GDP,gross-fixed-capital-formation,Gross Fixed Capital Formation,US,4408.3,Billion USD,2025-12-31,fred,GPDIC1
+3,GDP,gross-national-product,Gross National Product,US,31553.79,Billion USD,2025-12-31,fred,GNP
+3,GDP,weekly-economic-index,Weekly Economic Index,US,2.8,%,2026-04-11,fred,WEI
+3,Government,corruption-index,Corruption Index,DE,77,Points,2025-12-31,curated,DE:corruption-index
+3,Government,corruption-index,Corruption Index,GB,71,Points,2025-12-31,curated,GB:corruption-index
+3,Government,corruption-index,Corruption Index,US,64,Points,2025-12-31,curated,US:corruption-index
+3,Government,corruption-rank,Corruption Rank,DE,10,Rank,2025-12-31,curated,DE:corruption-rank
+3,Government,corruption-rank,Corruption Rank,GB,20,Rank,2025-12-31,curated,GB:corruption-rank
+3,Government,corruption-rank,Corruption Rank,US,29,Rank,2025-12-31,curated,US:corruption-rank
+3,Government,credit-rating,Credit Rating,DE,100,Rating,2026-04-01,curated,DE:credit-rating
+3,Government,credit-rating,Credit Rating,GB,92.5,Rating,2026-04-01,curated,GB:credit-rating
+3,Government,credit-rating,Credit Rating,US,97,Rating,2026-04-01,curated,US:credit-rating
+3,Government,fiscal-expenditure,Fiscal Expenditure,US,548962.92,USD Million,2026-03-31,fred,MTSO133FMS
+3,Government,government-budget-value,Government Budget Value,US,-164100.34,USD Million,2026-03-31,fred,MTSDS133FMS
+3,Government,government-revenues,Government Revenues,US,384862.58,USD Million,2026-03-31,fred,MTSR133FMS
+3,Government,government-spending-eur,Government Spending,DE,258.25,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P3_S13
+3,Government,government-spending-eur,Government Spending,EA,878.4,Billion EUR,2025-12-31,eurostat,namq_10_gdp:P3_S13
+3,Government,government-spending-to-gdp,Government Spending to GDP,DE,50.5,% of GDP,2025-12-31,curated,DE:government-spending-to-gdp
+3,Government,government-spending-to-gdp,Government Spending to GDP,US,33.8,% of GDP,2025-12-31,curated,US:government-spending-to-gdp
+3,Government,military-expenditure,Military Expenditure,DE,113586,USD Million,2025-12-31,curated,DE:military-expenditure
+3,Government,military-expenditure,Military Expenditure,GB,88977.5,USD Million,2025-12-31,curated,GB:military-expenditure
+3,Government,military-expenditure,Military Expenditure,US,997309,USD Million,2024-12-31,worldbank,MS.MIL.XPND.CD
+3,Health,hospital-beds,Hospital Beds,DE,7.66,per 1000 people,2023-12-31,curated,DE:hospital-beds
+3,Health,hospital-beds,Hospital Beds,GB,2.36,per 1000 people,2023-12-31,curated,GB:hospital-beds
+3,Health,hospital-beds,Hospital Beds,US,2.75,per 1000 people,2022-12-31,curated,US:hospital-beds
+3,Health,hospitals,Hospitals,DE,35.46,per one million people,2023-12-31,curated,DE:hospitals
+3,Health,hospitals,Hospitals,GB,28,per one million people,2023-12-31,curated,GB:hospitals
+3,Health,hospitals,Hospitals,US,18.36,per one million people,2022-12-31,curated,US:hospitals
+3,Health,medical-doctors,Medical Doctors,DE,4.98,per 1000 people,2021-12-31,curated,DE:medical-doctors
+3,Health,medical-doctors,Medical Doctors,GB,3.16,per 1000 people,2022-12-31,curated,GB:medical-doctors
+3,Health,medical-doctors,Medical Doctors,US,2.77,per 1000 people,2019-12-31,curated,US:medical-doctors
+3,Health,nurses,Nurses,DE,14.41,per 1000 people,2023-12-31,curated,DE:nurses
+3,Health,nurses,Nurses,GB,8.71,per 1000 people,2022-12-31,curated,GB:nurses
+3,Health,nurses,Nurses,US,12.71,per 1000 people,2024-12-31,curated,US:nurses
+3,Housing,home-ownership-rate,Home Ownership Rate,US,65.7,%,2025-12-31,fred,RHORUSQ156N
+3,Housing,house-price-index,House Price Index,DE,153.7,Index,2025-12-31,eurostat,prc_hpi_q:INX
+3,Housing,house-price-index,House Price Index,EA,157.06,Index,2025-12-31,eurostat,prc_hpi_q:INX
+3,Housing,housing-index,Housing Index (FHFA),US,709.05,Index,2025-12-31,fred,USSTHPI
+3,Housing,housing-starts-multi-family,Housing Starts Multi Family,US,524,Thousand units,2026-01-31,fred,HOUST5F
+3,Housing,housing-starts-single-family,Housing Starts Single Family,US,935,Thousand units,2026-01-31,fred,HOUST1F
+3,Housing,total-housing-inventory,Total Housing Inventory,US,1360000,Thousands,2026-03-31,fred,HOSINVUSM495N
+3,Labour,average-hourly-earnings-yoy,Average Hourly Earnings YoY,US,37.38,%,2026-03-31,fred,CES0500000003
+3,Labour,average-weekly-hours,Average Weekly Hours,US,34.2,Hours,2026-03-31,fred,AWHAETP
+3,Labour,construction-payrolls,Construction Payrolls,US,8330,Thousand,2026-03-31,fred,USCONS
+3,Labour,employment-cost-index,Employment Cost Index,US,174.04,%,2025-12-31,fred,ECIALLCIV
+3,Labour,employment-cost-index-benefits,Employment Cost Index Benefits,US,166.88,%,2025-12-31,fred,ECIBEN
+3,Labour,employment-cost-index-wages,Employment Cost Index Wages,US,176.23,%,2025-12-31,fred,ECIWAG
+3,Labour,federal-government-payrolls,Federal Government Payrolls,US,2658,Thousand,2026-03-31,fred,CES9091000001
+3,Labour,financial-activities-payrolls,Financial Activities Payrolls,US,9134,Thousand,2026-03-31,fred,USFIRE
+3,Labour,full-time-employment,Full-Time Employment,US,134676,Thousand,2026-03-31,fred,LNS12500000
+3,Labour,government-payrolls,Government Payrolls,US,23317,Thousand,2026-03-31,fred,USGOVT
+3,Labour,health-care-payrolls,Health Care Payrolls,US,23756.5,Thousand,2026-03-31,fred,CES6562000001
+3,Labour,information-payrolls,Information Payrolls,US,2791,Thousand,2026-03-31,fred,USINFO
+3,Labour,job-layoffs-and-discharges,Job Layoffs and Discharges,US,1721,Thousand,2026-02-28,fred,JTSLDL
+3,Labour,job-quits,Job Quits,US,2974,Thousand,2026-02-28,fred,JTSQUL
+3,Labour,job-quits-rate,Job Quits Rate,US,1.9,%,2026-02-28,fred,JTSQUR
+3,Labour,jobless-claims-4-week-average,Jobless Claims 4-Week Average,US,209.75,Thousand,2026-04-11,fred,IC4WSA
+3,Labour,labour-costs,Labour Costs,DE,121.5,Index,2025-12-31,eurostat,lc_lci_r2_q:I20
+3,Labour,labour-costs,Labour Costs,US,147.85,Index,2025-12-31,fred,COMPNFB
+3,Labour,leisure-and-hospitality-payrolls,Leisure & Hospitality Payrolls,US,16999,Thousand,2026-03-31,fred,USLAH
+3,Labour,long-term-unemployment-rate,Long-Term Unemployment Rate,DE,1.1,%,2025-12-31,eurostat,une_ltu_q:LTU
+3,Labour,long-term-unemployment-rate,Long-Term Unemployment Rate,EA,2,%,2025-12-31,eurostat,une_ltu_q:LTU
+3,Labour,long-term-unemployment-rate,Long-Term Unemployment Rate,US,25.4,%,2026-03-31,fred,LNS13025703
+3,Labour,manufacturing-payrolls,Manufacturing Payrolls,US,12591,Thousand,2026-03-31,fred,MANEMP
+3,Labour,minimum-wages,Minimum Wages,DE,13.9,EUR/Hour,2026-01-01,curated,DE:minimum-wages
+3,Labour,minimum-wages,Minimum Wages,GB,12.71,GBP/Hour,2026-04-01,curated,GB:minimum-wages
+3,Labour,minimum-wages,Minimum Wages,US,7.25,USD/Hour,2025-12-31,curated,US:minimum-wages
+3,Labour,mining-and-energy-payrolls,Mining & Energy Payrolls,US,603,Thousand,2026-03-31,fred,USMINE
+3,Labour,nonfarm-productivity-qoq,Nonfarm Productivity QoQ,US,119.34,Index,2025-12-31,fred,OPHNFB
+3,Labour,part-time-employment,Part-Time Employment,US,28290,Thousand,2026-03-31,fred,LNS12600000
+3,Labour,population,Population,DE,83.58,Millions,2025-12-31,eurostat,demo_pjan:TOTAL
+3,Labour,population,Population,EA,358.08,Millions,2025-12-31,eurostat,demo_pjan:TOTAL
+3,Labour,population,Population,GB,69.67,Millions,2025-12-31,ons,
+3,Labour,population,Population,US,342.58,Millions,2026-02-28,fred,POPTHM
+3,Labour,productivity,Productivity,DE,100.28,Index,2025-12-31,eurostat,namq_10_lp_ulc:RLPR_HW:I20
+3,Labour,productivity,Productivity,EA,99.38,Index,2025-12-31,eurostat,namq_10_lp_ulc:RLPR_HW:I20
+3,Labour,productivity,Productivity,US,119.34,Index,2025-12-31,fred,OPHNFB
+3,Labour,professional-and-business-services-payrolls,Professional & Business Services Payrolls,US,22417,Thousand,2026-03-31,fred,USPBS
+3,Labour,retail-trade-payrolls,Retail Trade Payrolls,US,15427.9,Thousand,2026-03-31,fred,USTRADE
+3,Labour,retirement-age-men,Retirement Age Men,DE,66.33,Years,2026-12-31,curated,DE:retirement-age-men
+3,Labour,retirement-age-men,Retirement Age Men,GB,66,Years,2026-12-31,curated,GB:retirement-age-men
+3,Labour,retirement-age-men,Retirement Age Men,US,67,Years,2026-12-31,curated,US:retirement-age-men
+3,Labour,retirement-age-women,Retirement Age Women,DE,66.33,Years,2026-12-31,curated,DE:retirement-age-women
+3,Labour,retirement-age-women,Retirement Age Women,GB,66,Years,2026-12-31,curated,GB:retirement-age-women
+3,Labour,retirement-age-women,Retirement Age Women,US,67,Years,2026-12-31,curated,US:retirement-age-women
+3,Labour,transportation-and-warehousing-payrolls,Transportation & Warehousing Payrolls,US,1464.1,Thousand,2026-03-31,fred,CES4348400001
+3,Labour,unit-labour-costs-qoq,Unit Labour Costs QoQ,US,4.4,%,2025-12-31,fred,PRS85006112
+3,Labour,wages,Wages,DE,100.4,Index,2026-02-28,destatis,62361-0007
+3,Labour,wages,Wages,GB,745,GBP/Week,2026-02-28,ons,
+3,Labour,wages,Wages,US,37.38,USD/Hour,2026-03-31,fred,CES0500000003
+3,Labour,wages-in-manufacturing,Wages in Manufacturing,US,29.95,USD/Hour,2026-03-31,fred,CES3000000008
+3,Labour,wholesale-trade-payrolls,Wholesale Trade Payrolls,US,6054.6,Thousand,2026-03-31,fred,USWTRADE
+3,Money,banks-balance-sheet,Banks Balance Sheet,DE,9979.82,Billion EUR,2026-02-28,bundesbank,BBBK10.M.TXI355
+3,Money,banks-balance-sheet,Banks Balance Sheet,US,25253.07,Billion USD,2026-04-15,fred,TLAACBW027SBOG
+3,Money,foreign-exchange-reserves,Foreign Exchange Reserves,DE,518.69,Billion EUR,2026-03-31,bundesbank,BBFI1.M.N.DE.W1.S121.S1.LE.A.FA.R.F._Z.X1._X.N
+3,Money,foreign-exchange-reserves,Foreign Exchange Reserves,US,244880.37,USD Million,2026-02-28,fred,TRESEGUSM052N
+3,Money,loans-to-private-sector,Loans to Private Sector,DE,3901.36,Billion EUR,2026-02-28,bundesbank,BBBK10.M.TXI358
+3,Money,loans-to-private-sector,Loans to Private Sector,EA,5383.07,Billion EUR,2026-03-31,ecb,
+3,Money,loans-to-private-sector,Loans to Private Sector,US,13718.62,Billion USD,2026-04-30,fred,TOTLL
+3,Money,money-supply-m0,Money Supply M0,US,5.39,Billion USD,2026-02-28,fred,BOGMBASE
+3,Money,money-supply-m1,Money Supply M1,DE,2912.3,Billion EUR,2026-03-31,bundesbank,BBBK10.M.TXI301
+3,Money,money-supply-m1,Money Supply M1,EA,11279.79,Billion EUR,2026-03-31,ecb,
+3,Money,money-supply-m1,Money Supply M1,US,19396.9,Billion USD,2026-02-28,fred,M1SL
+3,Money,private-debt-to-gdp,Private Debt to GDP,US,42637.25,% of GDP,2025-09-30,fred,QUSPAMUSDA
+3,Prices,cpi-clothing,CPI Clothing,DE,102.02,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI03
+3,Prices,cpi-clothing,CPI Clothing,EA,102.61,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI03:HICP2025
+3,Prices,cpi-clothing,CPI Clothing,US,135.8,Index,2026-03-31,fred,CPIAPPSL
+3,Prices,cpi-education,CPI Education,DE,103.5,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI10
+3,Prices,cpi-education,CPI Education,EA,102.88,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI10:HICP2025
+3,Prices,cpi-education,CPI Education,US,316.14,Index,2026-03-31,fred,CUSR0000SAE1
+3,Prices,cpi-food,CPI Food,DE,101.52,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI01
+3,Prices,cpi-food,CPI Food,US,346.6,Index,2026-03-31,fred,CPIUFDSL
+3,Prices,cpi-housing-utilities,CPI Housing & Utilities,DE,100.48,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI04
+3,Prices,cpi-housing-utilities,CPI Housing & Utilities,EA,101.91,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI04:HICP2025
+3,Prices,cpi-housing-utilities,CPI Housing & Utilities,US,354.89,Index,2026-03-31,fred,CPIHOSSL
+3,Prices,cpi-median,CPI Median,US,2.31,%,2026-03-31,fred,MEDCPIM158SFRBCLE
+3,Prices,cpi-recreation-and-culture,CPI Recreation & Culture,DE,99.67,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI09
+3,Prices,cpi-recreation-and-culture,CPI Recreation & Culture,EA,100.26,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI09:HICP2025
+3,Prices,cpi-recreation-and-culture,CPI Recreation & Culture,US,143.59,Index,2026-03-31,fred,CPIRECSL
+3,Prices,cpi-transportation,CPI Transportation,DE,105.95,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI07
+3,Prices,cpi-transportation,CPI Transportation,EA,104.49,Index,2026-03-31,eurostat,ei_cphi_m:CP-HI07:HICP2025
+3,Prices,cpi-transportation,CPI Transportation,US,285.48,Index,2026-03-31,fred,CPITRNSL
+3,Prices,cpi-trimmed-mean,CPI Trimmed-Mean,US,2.26,%,2026-03-31,fred,TRMMEANCPIM158SFRBCLE
+3,Prices,gdp-deflator,GDP Deflator,US,130.62,Index,2025-12-31,fred,GDPDEF
+3,Prices,ppi-ex-food-energy-trade-svcs,"PPI ex Food, Energy & Trade Services",US,140.4,Index,2026-03-31,fred,WPSFD49116
+3,Taxes,sales-tax-rate,Sales Tax Rate,DE,19,%,2026-12-31,curated,DE:sales-tax-rate
+3,Taxes,sales-tax-rate,Sales Tax Rate,EA,21.2,%,2025-12-31,curated,EA:sales-tax-rate
+3,Taxes,sales-tax-rate,Sales Tax Rate,GB,20,%,2026-12-31,curated,GB:sales-tax-rate
+3,Taxes,sales-tax-rate,Sales Tax Rate,US,0,%,2026-12-31,curated,US:sales-tax-rate
+3,Taxes,social-security-rate,Social Security Rate,DE,38.74,%,2026-12-31,curated,DE:social-security-rate
+3,Taxes,social-security-rate,Social Security Rate,GB,25.8,%,2026-12-31,curated,GB:social-security-rate
+3,Taxes,social-security-rate,Social Security Rate,US,15.3,%,2026-12-31,curated,US:social-security-rate
+3,Taxes,social-security-rate-companies,Social Security Rate For Companies,DE,19.42,%,2026-12-31,curated,DE:social-security-rate-companies
+3,Taxes,social-security-rate-companies,Social Security Rate For Companies,GB,13.8,%,2026-12-31,curated,GB:social-security-rate-companies
+3,Taxes,social-security-rate-companies,Social Security Rate For Companies,US,7.65,%,2026-12-31,curated,US:social-security-rate-companies
+3,Taxes,social-security-rate-employees,Social Security Rate For Employees,DE,19.33,%,2026-12-31,curated,DE:social-security-rate-employees
+3,Taxes,social-security-rate-employees,Social Security Rate For Employees,GB,12,%,2026-12-31,curated,GB:social-security-rate-employees
+3,Taxes,social-security-rate-employees,Social Security Rate For Employees,US,7.65,%,2026-12-31,curated,US:social-security-rate-employees
+3,Taxes,withholding-tax-rate,Withholding Tax Rate,DE,0,%,2025-12-31,curated,DE:withholding-tax-rate
+3,Taxes,withholding-tax-rate,Withholding Tax Rate,US,30,%,2025-12-31,curated,US:withholding-tax-rate
+3,Trade,capital-flows,Capital Flows,US,-890031,USD Million,2025-12-31,fred,NETFI
+3,Trade,crude-oil-production,Crude Oil Production,US,13626,Thousand Barrels Per Day,2026-02-28,eia,MCRFPUS2
+3,Trade,goods-trade-balance,Goods Trade Balance,US,-57347,USD Million,2026-02-28,fred,BOPGSTB
+3,Trade,terrorism-index,Terrorism Index,DE,4.45,Points,2025-12-31,curated,DE:terrorism-index
+3,Trade,terrorism-index,Terrorism Index,US,4.52,Points,2025-12-31,curated,US:terrorism-index
+3,Trade,weapons-sales,Weapons Sales,DE,2049,SIPRI TIV Million,2024-12-31,curated,DE:weapons-sales
+3,Trade,weapons-sales,Weapons Sales,US,13512,SIPRI TIV Million,2024-12-31,curated,US:weapons-sales

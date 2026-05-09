@@ -1,0 +1,593 @@
+# Trading Economics Indikatoren, die wir nicht haben — zentraler Katalog
+# ---------------------------------------------------------------------
+# Format pro Eintrag:
+#   country:            ISO-2 Ländercode (US, DE, GB, EA, ...)
+#   indicator_name:     Originalname wie bei Trading Economics
+#   te_category:        Tab in dem TE ihn listet (Overview / GDP / Labour / Prices / Money / Trade / Government / Business / Consumer / Housing / Energy / Health / Taxes)
+#   reason:             licensed / no-free-source / deprecated / annual-survey / market-data / other
+#   source:             ursprüngliche Quelle (ISM, MBA, Reuters, ...)
+#   note:               1–2 Sätze warum die Reihe nicht kostenfrei oder zuverlässig zu kriegen ist
+#   possible_workaround:  Optional — Proxy-Reihe oder spätere Alternative
+#
+# Pflegehinweise:
+# - Neue Länder: unten anhängen, gleiche Struktur.
+# - "licensed" = kostenpflichtig. "no-free-source" = keine frei verfügbare Alternative gefunden.
+# - "market-data" = Stock Market, Currency-Indizes — bewusst aus dem Scope.
+# - Bei Re-Scan eines Landes: duplikate Einträge löschen, neue hinzufügen.
+
+gaps:
+
+  # ==========================================================================
+  # USA
+  # ==========================================================================
+
+  - country: US
+    indicator_name: "ISM Manufacturing PMI"
+    te_category: Business
+    reason: licensed
+    source: Institute for Supply Management
+    note: "Proprietärer Index (ISM). Headline in Medien zitiert, aber ohne Lizenz keine freie Zeitreihe."
+    possible_workaround: "Regional Fed Manufacturing Indices als Proxy (Philly/NY Empire/Richmond/Dallas/Kansas) — wir decken die einzeln ab."
+
+  - country: US
+    indicator_name: "ISM Non-Manufacturing / Services PMI"
+    te_category: Business
+    reason: licensed
+    source: Institute for Supply Management
+    note: "Gleiche Situation wie ISM Manufacturing — proprietärer Index."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "ISM Manufacturing Subcomponents (Employment, Inventories, New Orders, Prices, Production, Supplier Deliveries, Backlog of Orders)"
+    te_category: Business
+    reason: licensed
+    source: Institute for Supply Management
+    note: "Sub-Indizes der ISM-Umfrage, nicht einzeln frei."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "S&P Global PMI (Manufacturing / Services / Composite)"
+    te_category: Business
+    reason: licensed
+    source: S&P Global
+    note: "Früher Markit, jetzt S&P Global. Historische Reihen hinter Paywall."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "MBA Mortgage Market Index / Refinance Index / Purchase Index"
+    te_category: Housing
+    reason: licensed
+    source: Mortgage Bankers Association
+    note: "Wöchentlicher Mortgage-Applications-Index, hinter Paywall."
+    possible_workaround: "30Y und 15Y Mortgage Rate kommen von Freddie Mac via FRED — decken den Zins-Aspekt ab."
+
+  - country: US
+    indicator_name: "Redbook Index"
+    te_category: Consumer
+    reason: licensed
+    source: Johnson Redbook
+    note: "Wöchentlicher Retail-Sales-Proxy, proprietär."
+    possible_workaround: "Monatlicher Census Retail Sales als Ersatz (bereits via FRED)."
+
+  - country: US
+    indicator_name: "API Crude Oil Stock Change / API Cushing / API Distillate / API Gasoline"
+    te_category: Energy
+    reason: licensed
+    source: American Petroleum Institute
+    note: "Wöchentliche API-Vorab-Zahlen nur für Mitglieder. EIA-Wochenzahlen (Mittwochs) sind amtlich und frei."
+    possible_workaround: "EIA Weekly Petroleum Status Report (decken wir)."
+
+  - country: US
+    indicator_name: "Conference Board Leading Economic Index (LEI)"
+    te_category: Business
+    reason: licensed
+    source: The Conference Board
+    note: "Kommerziell lizenziert seit 2022. FRED hat historische Daten bis 2022, aber kein laufendes Update."
+    possible_workaround: "Eigene LEI-Konstruktion aus Subkomponenten — hoher Aufwand, nicht MVP."
+
+  - country: US
+    indicator_name: "Conference Board Consumer Confidence"
+    te_category: Consumer
+    reason: licensed
+    source: The Conference Board
+    note: "Ähnliche Situation wie LEI. Wir führen stattdessen den Michigan Consumer Sentiment (via FRED UMCSENT)."
+    possible_workaround: "Michigan Consumer Sentiment als Hauptindikator."
+
+  - country: US
+    indicator_name: "Coincident Index"
+    te_category: Business
+    reason: licensed
+    source: The Conference Board
+    note: "Teil des Conference-Board-Index-Pakets."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "LMI Logistics Managers Index (+ Transport/Warehouse/Inventory Sub-Indizes)"
+    te_category: Business
+    reason: licensed
+    source: Logistics Managers Index Research Team
+    note: "Wissenschaftlicher Index einer Forschungsgruppe, nicht frei als historische Zeitreihe."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "Dry-Van Rate / Average Equipment Rate"
+    te_category: Business
+    reason: market-data
+    source: DAT Freight & Analytics
+    note: "Kommerzielle Frachtraten-Daten."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "Challenger Job Cuts / Hiring Plans Announcements"
+    te_category: Labour
+    reason: licensed
+    source: Challenger, Gray & Christmas
+    note: "Privater Job-Cut-Tracker. Historische Reihen via Press Releases erreichbar, aber kein stabiler kostenloser Endpoint."
+    possible_workaround: "Scraper des monatlichen Press Release möglich, aber fragil."
+
+  - country: US
+    indicator_name: "Earnings Growth Expectations"
+    te_category: Labour
+    reason: licensed
+    source: NY Fed Survey of Consumer Expectations
+    note: "SCE-Microdata zugänglich, aber Ein-Monats-Feld ohne stabilen API-Endpoint."
+    possible_workaround: "NY Fed SCE CSV-Download monatlich."
+
+  - country: US
+    indicator_name: "NAHB Housing Market Index"
+    te_category: Housing
+    reason: no-free-source
+    source: National Association of Home Builders
+    note: "NAHB-HMI wird monatlich veröffentlicht, aber FRED-Spiegelung vage/wechselnd. Zu erforschen."
+
+  - country: US
+    indicator_name: "Pending Home Sales Index (MoM)"
+    te_category: Housing
+    reason: no-free-source
+    source: National Association of Realtors (NAR)
+    note: "NAR PHSI — FRED-Code unsicher. NAR publiziert monatlich Press Releases."
+
+  - country: US
+    indicator_name: "NY Fed Household Debt Balances (Mortgages, Auto, Credit Cards, Student Loans, Total)"
+    te_category: Consumer
+    reason: no-free-source
+    source: NY Fed Consumer Credit Panel
+    note: "Quarterly Quarterly Report on Household Debt. NY Fed publiziert als Excel, FRED-Spiegelung unklar."
+    possible_workaround: "Eigener NY-Fed-Excel-Scraper (quarterly)."
+
+  - country: US
+    indicator_name: "Michigan Current Conditions Index"
+    te_category: Consumer
+    reason: no-free-source
+    source: University of Michigan
+    note: "UMCSENT2 existiert nicht in FRED. Nur Gesamt-Sentiment (UMCSENT) + evtl. Expectations (UMCSENT1) sind frei."
+
+  - country: US
+    indicator_name: "Chicago PMI"
+    te_category: Business
+    reason: licensed
+    source: MNI / ISM Chicago
+    note: "MNI-Lizenz-Index. Keine FRED-Spiegelung."
+
+  - country: US
+    indicator_name: "NFIB Small Business Optimism Index"
+    te_category: Business
+    reason: no-free-source
+    source: NFIB
+    note: "NFIB publiziert als PDF Press Release monatlich. Kein FRED-Mirror. Scraper machbar (Phase B7b)."
+    possible_workaround: "Monatlicher PDF-Scraper via nfib.com."
+
+  - country: US
+    indicator_name: "Richmond Fed / Kansas Fed Manufacturing Composite (+Sub-Indizes)"
+    te_category: Business
+    reason: no-free-source
+    source: Regional Federal Reserve Banks
+    note: "Einzelne Sub-Indizes (Employment, Orders, Shipments, Prices) dieser Regional-Fed-Surveys existieren teilweise nicht in FRED. Nur Philly/NY/Dallas haben konsistente FRED-Codes."
+    possible_workaround: "Regional-Fed-CSV-Scraper (Richmond publiziert XLS, Kansas PDF)."
+
+  - country: US
+    indicator_name: "Current Account Goods / Services, FDI, Gold Reserves, External Debt, TIC sub-flows, Terms of Trade"
+    te_category: Trade
+    reason: no-free-source
+    source: BEA / Treasury TIC / World Gold Council / IMF
+    note: "Diese sehr spezifischen Unterteilungen der US-Leistungsbilanz liegen in BEA-IIP-Tabellen und Treasury-TIC-Reports, die nicht einheitlich FRED-codiert sind. current-account (netto) und capital-flows (NETFI) decken den Kern ab."
+    possible_workaround: "Current-Account-to-GDP kann im Frontend als current-account / gdp berechnet werden. BEA ITA Table 1 CSV-Scraper als eigener Provider wäre die richtige Langzeit-Lösung."
+
+  - country: US
+    indicator_name: "Foreign Treasury Holdings (Total + Belgium/Canada/China/Japan/UK)"
+    te_category: Trade
+    reason: no-free-source
+    source: US Treasury International Capital (TIC)
+    note: "TIC publiziert monatlich als HTML-Table + CSV-Downloads pro Land. Kein FRED-Mirror für Länder-Holdings-Zeitreihen."
+    possible_workaround: "Eigener TIC-Scraper (monatlich), idealerweise als neuer Provider 'tic'."
+
+  - country: US
+    indicator_name: "Oil Exports / Auto Exports / Tourism Revenues / Tourist Arrivals / Weekly Crude Oil Production"
+    te_category: Trade
+    reason: no-free-source
+    source: EIA / Census / NTTO
+    note: "Tourism & Auto-Exporte liegen bei NTTO (National Travel & Tourism Office) und BEA ITA Service-Tabellen — keine FRED-Spiegelung. Weekly Crude via EIA API (s. Phase B10)."
+    possible_workaround: "EIA Provider für Crude-Oil-Weekly (Phase B10)."
+
+  - country: US
+    indicator_name: "Michigan Consumer Expectations Index (Sub-Index)"
+    te_category: Consumer
+    reason: deprecated
+    source: University of Michigan
+    note: "FRED `UMCSENT1` ist 1977 abgekündigt (Index 1966=100, alte Reihe). Aktuelles Sub-Index Expectations gibt es nicht separat auf FRED — nur Total Sentiment via UMCSENT."
+    possible_workaround: "UMCSENT (Total) als Sentiment-Proxy, decken wir bereits."
+
+  - country: US
+    indicator_name: "Crude Oil Production (Thousand Barrels per Day)"
+    te_category: Trade
+    reason: no-free-source
+    source: EIA Petroleum Supply Monthly
+    note: "FRED `IPG211111CN` 2021 abgekündigt. EIA hat Production via API series PET.MCRFPUS2.M, aber wir haben EIA-Provider noch nicht implementiert (B10)."
+    possible_workaround: "Phase B10 EIA-Provider implementieren."
+
+  - country: US
+    indicator_name: "Leading Economic Index (Philly Fed / Conference Board)"
+    te_category: Business
+    reason: deprecated
+    source: Conference Board / Philly Fed
+    note: "FRED `USSLIND` 2020 abgekündigt. Conference Board LEI lizenzpflichtig. Philly Fed alternative via XLS-Download."
+    possible_workaround: "Eigener Philly-Fed-XLS-Scraper möglich, geringe Prio."
+
+  - country: US
+    indicator_name: "OECD Composite Leading Indicator US"
+    te_category: Business
+    reason: deprecated
+    source: OECD
+    note: "FRED `USALOLITONOSTSAM` letztes Update 2024-01. OECD hat CLI-Methodologie überarbeitet, neue Reihen-IDs noch nicht stabil bei FRED."
+    possible_workaround: "OECD SDMX direkt abfragen sobald Reihen-ID stabil."
+
+  - country: US
+    indicator_name: "Michigan 5-Year Inflation Expectations"
+    te_category: Prices
+    reason: no-free-source
+    source: University of Michigan Surveys of Consumers
+    note: "Nur 1-Year Inflation Expectations (MICH) ist frei via FRED. 5Y-Zahl nur in Microdata-PDFs."
+    possible_workaround: "MICH (1Y) als Hauptreihe. 5Y kann per Press-Release-Scraper gezogen werden."
+
+  - country: US
+    indicator_name: "Wage Growth (Atlanta Fed Wage Tracker)"
+    te_category: Labour
+    reason: no-free-source
+    source: Atlanta Fed Wage Growth Tracker
+    note: "FRED Series-ID unklar (mehrere Schreibweisen existieren nicht). Atlanta Fed bietet CSV-Download auf eigener Seite. Zu erforschen."
+    possible_workaround: "ECI (Employment Cost Index) abdeckt ähnliches Konzept."
+
+  - country: US
+    indicator_name: "Michigan Inflation Expectations (1Y, 3Y, 5Y)"
+    te_category: Prices
+    reason: other
+    source: University of Michigan (UMCSENT1)
+    note: "Teilweise via FRED (MICH 1Y), aber 3Y/5Y aus Microdata nicht frei via API."
+    possible_workaround: "MICH (1Y Inflation Expectations) via FRED."
+
+  - country: US
+    indicator_name: "Currency (US Dollar Index)"
+    te_category: Overview
+    reason: market-data
+    source: ICE (DXY Index)
+    note: "DXY ist ein ICE-Index, lizenziert. FRED hat Broad Dollar Index (DTWEXBGS) als Pendant."
+    possible_workaround: "FRED DTWEXBGS als Proxy, nicht deckungsgleich mit DXY."
+
+  - country: US
+    indicator_name: "Stock Market (Dow Jones / S&P 500 / Nasdaq)"
+    te_category: Overview
+    reason: market-data
+    source: Various (ICE, S&P, Nasdaq)
+    note: "Bewusst aus dem MVP-Scope ausgeschlossen (Fokus auf makroökonomische Indikatoren)."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "Credit Card Accounts"
+    te_category: Consumer
+    reason: annual-survey
+    source: Federal Reserve G.19 (detail) / FDIC
+    note: "Jährliche Erhebung, unregelmäßig publiziert."
+    possible_workaround: null
+
+  - country: US
+    indicator_name: "GDP from Agriculture / Manufacturing / Mining / Services / Public Administration"
+    te_category: GDP
+    reason: no-free-source
+    source: BEA Value Added by Industry (Table 1.3.5)
+    note: "Sektor-BIP-Zerlegung. FRED hat VAPGDPC (Construction), VAPGDPT (Transport), VAPGDPU (Utilities) — andere Sektor-Codes (Agriculture, Manufacturing, Mining, Services, Government) existieren in FRED nicht. BEA publiziert sie per Table-Download, nicht API."
+    possible_workaround: "BEA Table 1.3.5 monatlich per CSV scrapen. Noch nicht implementiert."
+
+  - country: US
+    indicator_name: "Used Car Prices MoM/YoY"
+    te_category: Consumer
+    reason: licensed
+    source: Manheim Used Vehicle Value Index
+    note: "Cox Automotive (Manheim) proprietär."
+    possible_workaround: "CPI Used Cars & Trucks (CUSR0000SETA02) als Proxy — bereits über BLS/FRED."
+
+  # ==========================================================================
+  # Deutschland (DE)
+  # ==========================================================================
+
+  - country: DE
+    indicator_name: "Ifo Geschäftsklimaindex (+ Current Conditions / Expectations)"
+    te_category: Business
+    reason: no-free-source
+    source: ifo Institut
+    note: "Ifo publiziert nur als Excel-Download auf ifo.de. Keine API. Lizenz für Wiederveröffentlichung erforderlich für kommerziellen Einsatz."
+    possible_workaround: "Eigener Excel-Scraper als ifo-Provider (monatlich)."
+
+  - country: DE
+    indicator_name: "ZEW Indicator of Economic Sentiment / Current Situation"
+    te_category: Business
+    reason: no-free-source
+    source: ZEW Mannheim
+    note: "ZEW publiziert als PDF-Pressemitteilung + Excel auf zew.de. Keine API."
+    possible_workaround: "ZEW-Excel-Scraper (monatlich) — vergleichbarer Aufwand wie Ifo."
+
+  - country: DE
+    indicator_name: "GfK Consumer Confidence (Konsumklimaindex)"
+    te_category: Consumer
+    reason: licensed
+    source: GfK / NIM (Nürnberg Institut für Marktentscheidungen)
+    note: "Lizenzpflichtig. Headline in Pressemitteilungen, aber keine freie historische Reihe."
+    possible_workaround: "Eurostat ei_bsco_m BS-CSMCI (DG ECFIN) als Proxy für DE — nicht deckungsgleich mit GfK."
+
+  - country: DE
+    indicator_name: "S&P Global PMI (Manufacturing / Services / Composite) — DE"
+    te_category: Business
+    reason: licensed
+    source: S&P Global / HCOB
+    note: "Lizenzpflichtig. Identische Situation wie US-PMI."
+    possible_workaround: null
+
+  - country: DE
+    indicator_name: "Hauspreisindex (vdpResearch / Bauer)"
+    te_category: Housing
+    reason: licensed
+    source: vdpResearch / Bauer
+    note: "Lizenzpflichtige Indizes von Verbänden."
+    possible_workaround: "Destatis 61262-0001 House Price Index (decken wir bereits)."
+
+  - country: DE
+    indicator_name: "DLUHC-style Housing Starts/Construction Output (Beginn von Wohnungsbauten)"
+    te_category: Housing
+    reason: no-free-source
+    source: Destatis 31111-0006
+    note: "TE listet Housing Starts als „Building Permits" — Destatis hat nur Genehmigungen, keine Starts. Genehmigungen 31111-0001 decken wir."
+    possible_workaround: "Building Permits = Destatis Baugenehmigungen 31111 (geplant Phase 2)."
+
+  # ==========================================================================
+  # United Kingdom (GB)
+  # ==========================================================================
+
+  - country: GB
+    indicator_name: "GfK Consumer Confidence"
+    te_category: Consumer
+    reason: licensed
+    source: GfK
+    note: "Lizenzpflichtig. Headline in Pressemitteilungen, aber keine freie historische Reihe."
+    possible_workaround: "DG ECFIN UK Consumer Confidence existiert nicht mehr (Brexit). Keine guten Proxies."
+
+  - country: GB
+    indicator_name: "S&P Global PMI (Manufacturing / Services / Composite) — UK"
+    te_category: Business
+    reason: licensed
+    source: S&P Global
+    note: "Lizenzpflichtig."
+    possible_workaround: null
+
+  - country: GB
+    indicator_name: "CBI Industrial Trends Survey / Distributive Trades / Business Optimism"
+    te_category: Business
+    reason: no-free-source
+    source: Confederation of British Industry
+    note: "CBI publiziert Press Releases als PDF/HTML. Kein API. Stabilität von Scrapern fragwürdig."
+    possible_workaround: "CBI-Press-Release-Scraper (monatlich/quartalsweise)."
+
+  - country: GB
+    indicator_name: "Halifax / Nationwide House Price Index"
+    te_category: Housing
+    reason: licensed
+    source: Halifax (Lloyds) / Nationwide Building Society
+    note: "Lizenzpflichtig. Beide publizieren Headline in Pressemitteilungen."
+    possible_workaround: "ONS HPI als amtlicher Index (decken wir, anderer Lag)."
+
+  - country: GB
+    indicator_name: "RICS Housing Market Survey (Price Balance)"
+    te_category: Housing
+    reason: licensed
+    source: Royal Institution of Chartered Surveyors
+    note: "Diffusionsindex. Lizenzpflichtig."
+    possible_workaround: null
+
+  - country: GB
+    indicator_name: "DLUHC Housing Starts / Completions"
+    te_category: Housing
+    reason: no-free-source
+    source: Department for Levelling Up, Housing and Communities
+    note: "DLUHC publiziert quartalsweise als CSV-Tabelle. Kein REST-Endpoint, aber CSV-Download stabil."
+    possible_workaround: "Quartersweise CSV-Scrape (Live-Tables Housing Starts/Completions). Kann als gov-uk-Provider implementiert werden."
+
+  - country: GB
+    indicator_name: "REC/KPMG Report on Jobs"
+    te_category: Labour
+    reason: licensed
+    source: KPMG / Recruitment & Employment Confederation
+    note: "Lizenzpflichtig."
+    possible_workaround: null
+
+  - country: GB
+    indicator_name: "BRC Retail Sales Monitor"
+    te_category: Consumer
+    reason: licensed
+    source: British Retail Consortium / KPMG
+    note: "Lizenzpflichtig. ONS J5EK ist amtliche Reihe."
+    possible_workaround: "ONS Retail Sales Index (decken wir als retail-sales-Slug)."
+
+  # ==========================================================================
+  # Eurozone (EA)
+  # ==========================================================================
+
+  - country: EA
+    indicator_name: "S&P Global / HCOB PMI (Manufacturing / Services / Composite)"
+    te_category: Business
+    reason: licensed
+    source: S&P Global / Hamburg Commercial Bank
+    note: "Lizenzpflichtig."
+    possible_workaround: null
+
+  - country: EA
+    indicator_name: "Sentix Investor Confidence"
+    te_category: Business
+    reason: licensed
+    source: Sentix
+    note: "Lizenzpflichtig."
+    possible_workaround: null
+
+  - country: EA
+    indicator_name: "ZEW Eurozone Economic Sentiment"
+    te_category: Business
+    reason: no-free-source
+    source: ZEW Mannheim
+    note: "ZEW publiziert nur als PDF/Excel."
+    possible_workaround: "ZEW-Excel-Scraper (monatlich)."
+
+  # ==========================================================================
+  # China (CN)
+  # ==========================================================================
+
+  - country: CN
+    indicator_name: "Loan Prime Rate 1Y / 5Y"
+    te_category: Money
+    reason: no-free-source
+    source: People's Bank of China (PBoC)
+    note: "PBoC publiziert LPR via SHIBOR-Webseite und chinesischer SDMX-Endpoint, aber kein freier englischer/JSON API-Zugang. TE nutzt diesen Wert als Headline-Interest-Rate."
+    possible_workaround: "FRED IR3TIB01CNM156N (3M Interbank, 1.71%) als Tier-3-Proxy — nicht TE-konform, document. PBoC-HTML-Scrape möglich aber fragil."
+
+  - country: CN
+    indicator_name: "Surveyed Urban Unemployment Rate"
+    te_category: Labour
+    reason: no-free-source
+    source: National Bureau of Statistics (NBS)
+    note: "NBS publiziert monatlich nur als HTML-Tabelle/PDF (chinesisch). FRED-Mirror existiert nicht. World Bank annual Youth-Unemployment haben wir."
+    possible_workaround: "NBS-HTML-Scrape möglich, hoher Aufwand."
+
+  - country: CN
+    indicator_name: "Manufacturing PMI (NBS + Caixin) / Non-Manufacturing PMI / Services PMI"
+    te_category: Business
+    reason: licensed
+    source: NBS / Caixin / S&P Global
+    note: "NBS PMI ist offiziell aber nur als HTML-Press-Release. Caixin/S&P Global PMIs sind lizenziert."
+    possible_workaround: "NBS-Press-Release-Scrape (monatlich) für offiziellen PMI."
+
+  - country: CN
+    indicator_name: "Industrial Production YoY (current)"
+    te_category: Business
+    reason: deprecated
+    source: NBS
+    note: "FRED-Mirror CHNPRINTO01IXPYM endet 2023-11. NBS aktuelle Daten nur per HTML-Press-Release."
+
+  - country: CN
+    indicator_name: "Retail Sales YoY (current)"
+    te_category: Consumer
+    reason: deprecated
+    source: NBS
+    note: "FRED-Mirror CHNSLRTTO02MLM endet 2023-10. Aktuelle Daten via NBS-HTML."
+
+  - country: CN
+    indicator_name: "House Price Index (70 cities)"
+    te_category: Housing
+    reason: no-free-source
+    source: NBS
+    note: "70-Städte-HPI publiziert NBS monatlich, nur HTML/Excel — kein API."
+
+  - country: CN
+    indicator_name: "Consumer Confidence"
+    te_category: Consumer
+    reason: no-free-source
+    source: NBS
+    note: "NBS Consumer Confidence Index nur HTML. Kein freier API-Mirror."
+
+  - country: CN
+    indicator_name: "Foreign Exchange Reserves (PBoC FX-only)"
+    te_category: Money
+    reason: other
+    source: PBoC
+    note: "TE zeigt PBoC FX-only ($3.21T Jan 2026). Wir nutzen FRED TRESEGCNM052N (IMF Total Reserves excl. Gold = $3.47T) — methodologische Diff ~5-7%. Akzeptabel als Proxy, aber TE-Wert nicht 1:1 reproduzierbar ohne PBoC-Direktzugriff."
+
+  - country: CN
+    indicator_name: "Inflation CPI (frische Werte)"
+    te_category: Prices
+    reason: deprecated
+    source: NBS
+    note: "FRED-Mirror CHNCPIALLMINMEI ist ~1Y stale (last update ~Apr 2025). TE-CPI-Werte aktuell nicht reproduzierbar ohne NBS-Scrape."
+    possible_workaround: "NBS HTML monthly press release."
+
+  - country: EA
+    indicator_name: "Factory Orders / Industrial New Orders"
+    te_category: Business
+    reason: deprecated
+    source: Eurostat sts_iorders_m
+    note: "Eurostat hat das Industrial-New-Orders-Dataset 2023 abgekündigt. Keine Aggregat-Reihe mehr für EA verfügbar."
+    possible_workaround: "DE Destatis 42151-0001 plus FR/IT National Statistics einzeln aggregieren — hoher Aufwand."
+
+  - country: EA
+    indicator_name: "Eurozone Housing Starts (Quartalsweise)"
+    te_category: Housing
+    reason: no-free-source
+    source: Eurostat sts_cobp_q
+    note: "Eurostat sts_cobp_q liefert nur Building Permits (Index, Quartalswerte), keine separaten Starts."
+    possible_workaround: "Building Permits via sts_cobp_q geplant Phase 2."
+
+  # ==========================================================================
+  # Frankreich (FR) — Phase 1, Mai 2026. Tier-1 ~30+ Reihen via Eurostat
+  # (Upstream INSEE) + WB + ECB + Curated. Folgende Lücken übrig.
+  # ==========================================================================
+
+  - country: FR
+    indicator_name: "Manufacturing PMI / Services PMI / Composite PMI"
+    te_category: Business
+    reason: licensed
+    source: HCOB / S&P Global
+    note: "Wie DE/EA/GB: S&P-Global-PMI-Reihen sind lizenziert."
+
+  - country: FR
+    indicator_name: "Balance of Trade (Goods, monthly EUR)"
+    te_category: Trade
+    reason: no-free-source
+    source: INSEE Douanes (Customs)
+    note: "TE zeigt monatliche Goods-Bilanz von INSEE/Douanes (Feb 2026 = -5778 EUR Mio). Eurostat bop_c6_m liefert Goods+Services (-5924), nicht 1:1 vergleichbar. Eurostat ext_lt_intratrd + ext_st_eu27_2020sitc = Aggregation aus 2 Datasets — Aufwand für Phase 2."
+    possible_workaround: "INSEE BDM via pynsee (FR-Provider Phase 2)."
+
+  - country: FR
+    indicator_name: "Consumer Confidence (CAMME-Ménages)"
+    te_category: Consumer
+    reason: other
+    source: INSEE
+    note: "INSEE Climat de Confiance Ménages (CAMME). Eurostat ei_bsco_m hat das aber nur als Composite-Index."
+    possible_workaround: "INSEE pynsee CAMME-MENAGES Dataset oder Eurostat ei_bsco_m direct."
+
+  - country: FR
+    indicator_name: "Business Confidence (Climat des Affaires)"
+    te_category: Business
+    reason: other
+    source: INSEE
+    note: "INSEE CLIMAT-AFFAIRES (Industrie). Eurostat ei_bsfs_m hat Business-Confidence, aber FR-Spezifika via INSEE-pynsee genauer."
+    possible_workaround: "INSEE pynsee oder Eurostat ei_bsfs_m."
+
+  - country: FR
+    indicator_name: "Building Permits / Housing Starts (monthly)"
+    te_category: Housing
+    reason: no-free-source
+    source: INSEE / SDES
+    note: "TE zeigt monatliche Permits von SDES (Service de la donnée et études statistiques). Eurostat sts_cobp_m liefert ähnliche Index-Werte als Quartalsdaten."
+    possible_workaround: "Eurostat sts_cobp_m (Phase 2)."
+
+  - country: FR
+    indicator_name: "Money Supply M2/M3 (FR-Anteil)"
+    te_category: Money
+    reason: other
+    source: Banque de France / ECB BSI
+    note: "ECB BSI-Reihe ist EA-Aggregat. Für FR-spezifischen M2/M3-Anteil bräuchte man BdF Webstat SDMX (eigener Provider)."
+

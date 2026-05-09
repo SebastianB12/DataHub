@@ -27,3 +27,29 @@ Thumbs.db
 
 # Superpowers (brainstorming mockups)
 .superpowers/
+
+# Playwright MCP scratch
+.playwright-mcp/
+
+# Build / cache artifacts
+tsconfig.tsbuildinfo
+docs/.coverage_audit.pkl
+
+# Provider exploration scratch (root-level only — keep src/ and pipeline/ assets)
+/*.png
+/*.json
+/*.xml
+/*.csv
+/*.pdf
+/*.wadl
+/run_all.log
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/components.json
+!/eslint.config.mjs
+!/next.config.ts
+!/postcss.config.mjs
+
+# Claude local config
+.claude/

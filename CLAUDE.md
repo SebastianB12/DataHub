@@ -25,13 +25,13 @@ Kostenlose Alternative zu Trading Economics. MVP: Makroökonomische Indikatoren.
 | Region | Quelle | Status |
 |---|---|---|
 | US | FRED (fredapi) | Implementiert, 11.816 Datenpunkte |
-| EU + DE | Eurostat | Noch nicht implementiert |
-| EU (Zinsen) | ECB Data Portal | Noch nicht implementiert |
-| UK | ONS | Noch nicht implementiert |
+| EU + DE | Eurostat Statistics API | Implementiert, ~4.000 Datenpunkte |
+| EU (Zinsen) | ECB Data API (SDMX) | Implementiert, ~4.000 Datenpunkte |
+| UK | ONS CSV + BoE IADB | Implementiert, ~6.700 Datenpunkte |
 
 ## DB-Schema (Supabase)
 
-5 Tabellen: `countries` (4), `indicators` (19), `data_points` (~12k), `data_sources` (4), `pipeline_runs`
+5 Tabellen: `countries` (4), `indicators` (19), `data_points` (~26.6k), `data_sources` (4), `pipeline_runs`
 - RLS: Daten öffentlich lesbar, Schreiben nur via Service Role Key
 - Unique Constraint: `(indicator, country, date)` — eine Quelle pro Datenpunkt
 - Supabase MCP für DDL-Operationen verwenden (direkte DB-Verbindung funktioniert nicht wg. IPv6/Firmennetzwerk)
@@ -46,9 +46,14 @@ src/app/                     -> Next.js Pages
 src/components/              -> UI-Komponenten (sidebar, chart, theme)
 src/lib/                     -> Supabase Client, Indicator-Definitionen
 pipeline/                    -> Python Datenpipeline
-  providers/fred.py          -> FredProvider (implementiert)
+  providers/fred.py          -> FredProvider (US)
+  providers/eurostat.py      -> EurostatProvider (EU + DE)
+  providers/ecb.py           -> EcbProvider (EU Zinsen/Bilanz/M2)
+  providers/ons.py           -> OnsProvider (UK, inkl. BoE)
   base_provider.py           -> BaseProvider ABC
+  transforms.py              -> Shared transforms (compute_yoy, compute_trade_balance)
   db.py                      -> Supabase write helpers
+  scheduler.py               -> APScheduler (dynamische Jobs)
 ```
 
 ## Aktueller Stand & Naechste Schritte
@@ -56,14 +61,13 @@ pipeline/                    -> Python Datenpipeline
 Plan: `C:\Users\sb\.claude\plans\wise-moseying-waterfall.md`
 Spec: `docs/superpowers/specs/2026-04-15-econpulse-mvp-design.md`
 
-**Erledigt:** Phase 1 (Setup) + Phase 2 (FRED End-to-End Slice)
-**Naechste Phase:** Phase 2b — Navigation & Source-Fixes:
-1. Source-Anzeige fixen (aus `data_points.source` statt `indicators.source_name`)
-2. Sidebar aufklappbar mit allen Indikatoren pro Kategorie
-3. Country-Switcher auf Detailseite
-4. Links korrigieren (-> Laendervergleich statt US-Default)
-
-Danach: Phase 3 (Eurostat, ECB, ONS Provider)
+**Erledigt:** Phase 1 (Setup) + Phase 2 (FRED) + Phase 2b (Navigation) + Phase 3 (alle Provider)
+**Naechste Phase:** Phase 4 — Frontend-Features:
+1. Laender-Overlay im Chart (Vergleich zweier Laender)
+2. CSV + Excel Export
+3. ISR konfigurieren
+4. Dashboard erweitern (Multi-Series Chart, Releases Feed)
+5. Responsive Layout (Tablet/Mobile)
 
 ## Konventionen
 
