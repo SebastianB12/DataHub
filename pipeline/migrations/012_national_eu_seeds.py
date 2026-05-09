@@ -29,6 +29,10 @@ SEEDS = [
     ("SI", "inflation-cpi",         "surs_si", "SURS/0400608S.px", "M", "Index (same month py=100)", "NSA", 1.0, "SURS 0400608S CPI Index vs same month previous year, TOTAL"),
     # Latvia — direct from CSP PxWeb
     ("LV", "inflation-cpi",         "csp_lv", "CSP/PCI030m", "M", "Index (Dec 1990=100)", "NSA", 1.0, "CSP Latvia PCI030m CPI continuous index Dec 1990=100"),
+    # Estonia — direct from Statistics Estonia PxWeb
+    ("EE", "inflation-cpi",         "stat_ee", "STATEE/IA002.px", "M", "Index (1997=100)", "NSA", 1.0, "Statistics Estonia IA002 CPI 1997=100, total"),
+    # Croatia — direct from DZS PxWeb (web.dzs.hr)
+    ("HR", "inflation-cpi",         "dzs_hr", "DZS/ME_PS09.px", "M", "Index (2025=100)", "NSA", 1.0, "DZS Croatia ME_PS09 CPI 2025=100, total ECOICOP v2"),
 ]
 
 

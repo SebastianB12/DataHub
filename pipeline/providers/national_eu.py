@@ -467,15 +467,22 @@ def _parse_jsonstat(js: dict, freq: str) -> list[tuple[date, float]]:
     dim_sizes = js.get("size", [])
     if not dim_ids or not values:
         return []
-    # find time dim: prefer role.time, else common names
+    # find time dim: prefer top-level role.time (JSON-stat 2.0)
     tid = None
-    for k, v in dim.items():
-        if isinstance(v, dict) and v.get("role", {}).get("time"):
-            tid = k; break
+    role = js.get("role") or {}
+    role_time = role.get("time") if isinstance(role, dict) else None
+    if role_time:
+        tid = role_time[0] if isinstance(role_time, list) else role_time
+    # fallback: per-dim role.time (older format)
+    if tid is None:
+        for k, v in dim.items():
+            if isinstance(v, dict) and v.get("role", {}).get("time"):
+                tid = k; break
+    # heuristic: dim name contains time-like word
     if tid is None:
         for k in dim_ids:
             kl = k.lower()
-            if any(w in kl for w in ("tid", "time", "month", "mesec", "kuukausi", "vuosi", "år", "ar", "luni", "ani", "tlist")):
+            if any(w in kl for w in ("tid", "time", "month", "mjesec", "mesec", "kuukausi", "vuosi", "år", "ar", "luni", "ani", "tlist")):
                 tid = k; break
     if tid is None:
         return []
@@ -615,6 +622,120 @@ def fetch_ro_tempo(matrix: str, category_id: int, freq: str = "M") -> list[tuple
     return sorted(out)
 
 
+# === Estonia — Statistics Estonia PxWeb (andmed.stat.ee) ===
+
+EE_SERIES = [
+    # IA002.px = CPI 1997=100 monthly. Filter Kaubagrupp=1 (Total)
+    {"slug": "inflation-cpi", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "1"},  # Total commodity group
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistics Estonia IA002 CPI 1997=100, total commodity"},
+]
+
+
+def fetch_ee_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
+    """Estonia PxWeb. Note: their tables often have separate Year and Month dims (not single Tid)."""
+    url = f"https://andmed.stat.ee/api/v1/en/stat/{path}"
+    body = {
+        "query": [{"code": k, "selection": {"filter": "item", "values": [v]}}
+                  for k, v in query_filters.items()],
+        "response": {"format": "json-stat2"},
+    }
+    r = requests.post(url, json=body, timeout=30)
+    r.raise_for_status()
+    js = r.json()
+    # If freq is 'M_year_month_combo', the table has Year and Month dims separately
+    if freq == "M_year_month_combo":
+        return _parse_jsonstat_year_month(js)
+    return _parse_jsonstat(js, freq)
+
+
+def _parse_jsonstat_year_month(js: dict) -> list[tuple[date, float]]:
+    """Parse JSON-stat where time is split across Year (Aasta/Vuosi) and Month (Kuu/Kuukausi) dimensions."""
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    dim_sizes = js.get("size", [])
+    if not values:
+        return []
+    # find year and month dims
+    year_dim = next((k for k in dim_ids if k.lower() in ("aasta", "vuosi", "year", "år", "ar")), None)
+    month_dim = next((k for k in dim_ids if k.lower() in ("kuu", "kuukausi", "month", "månad", "manad", "mesec")), None)
+    if not year_dim or not month_dim:
+        return []
+
+    def get_index(name):
+        idx = dim[name].get("category", {}).get("index", {})
+        if isinstance(idx, list):
+            return [(code, pos) for pos, code in enumerate(idx)]
+        return [(code, pos) for code, pos in idx.items()]
+
+    year_pairs = get_index(year_dim)
+    month_pairs = get_index(month_dim)
+
+    other_indices = {}
+    for k in dim_ids:
+        if k in (year_dim, month_dim):
+            continue
+        other_indices[k] = 0
+
+    out = []
+    yi = dim_ids.index(year_dim)
+    mi = dim_ids.index(month_dim)
+    for ycode, ypos in year_pairs:
+        for mcode, mpos in month_pairs:
+            indices = []
+            for k in dim_ids:
+                if k == year_dim:
+                    indices.append(ypos)
+                elif k == month_dim:
+                    indices.append(mpos)
+                else:
+                    indices.append(other_indices.get(k, 0))
+            flat = 0
+            stride = 1
+            for i in range(len(dim_ids) - 1, -1, -1):
+                flat += indices[i] * stride
+                stride *= dim_sizes[i]
+            if 0 <= flat < len(values):
+                v = values[flat]
+                if v is not None:
+                    try:
+                        yy = int(ycode)
+                        mm = int(mcode)
+                        if 1 <= mm <= 12:
+                            out.append((date(yy, mm, 1), float(v)))
+                    except Exception:
+                        continue
+    return sorted(out)
+
+
+# === Croatia — DZS PxWeb (web.dzs.hr) ===
+
+HR_SERIES = [
+    # ME_PS09.px CPI ECOICOP v2 monthly. ECOICOP_ver_2='00' (Total), Indikatori='4' (index 2025=100)
+    {"slug": "inflation-cpi",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "00", "Indikatori": "4"},
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI 2025=100 total ECOICOP v2"},
+]
+
+
+def fetch_hr_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
+    import urllib.parse
+    encoded_path = "/".join(urllib.parse.quote(p) for p in path.split("/"))
+    url = f"https://web.dzs.hr/PXWeb/api/v1/en/{encoded_path}"
+    body = {
+        "query": [{"code": k, "selection": {"filter": "item", "values": [v]}}
+                  for k, v in query_filters.items()],
+        "response": {"format": "json-stat2"},
+    }
+    r = requests.post(url, json=body, timeout=30)
+    r.raise_for_status()
+    return _parse_jsonstat(r.json(), freq)
+
+
 # Aggregate fetchers
 COUNTRY_FETCHERS = {
     # source_code -> (country, fetcher_function, series_list, label, url)
@@ -627,6 +748,8 @@ COUNTRY_FETCHERS = {
     "surs_si":  ("SI", SI_SERIES, "SURS Statistical Office Slovenia",    "https://www.stat.si"),
     "csp_lv":   ("LV", LV_SERIES, "CSP Latvia",                          "https://stat.gov.lv"),
     "insse_ro": ("RO", RO_SERIES, "INSSE Romania",                       "https://insse.ro"),
+    "stat_ee":  ("EE", EE_SERIES, "Statistics Estonia",                  "https://andmed.stat.ee"),
+    "dzs_hr":   ("HR", HR_SERIES, "DZS Croatian Bureau of Statistics",   "https://web.dzs.hr"),
 }
 
 
@@ -778,6 +901,43 @@ class NationalEUProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/LV ({cfg['table']}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/LV: {e}")
+            time.sleep(0.3)
+
+        # Estonia
+        for cfg in EE_SERIES:
+            try:
+                pairs = fetch_ee_pxweb(cfg["path"], cfg["query"], cfg["freq"])
+                eff_freq = "M" if cfg["freq"] == "M_year_month_combo" else cfg["freq"]
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="EE",
+                        date=normalize_date(dt, eff_freq),
+                        value=round(v * cfg["conversion"], 4),
+                        source="stat_ee", unit=cfg["unit"],
+                        series_id=f"STATEE/{cfg['path']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/EE ({cfg['path'][-25:]}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/EE: {e}")
+            time.sleep(0.3)
+
+        # Croatia
+        for cfg in HR_SERIES:
+            try:
+                pairs = fetch_hr_pxweb(cfg["path"], cfg["query"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="HR",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="dzs_hr", unit=cfg["unit"],
+                        series_id=f"DZS/{cfg['path'][-30:]}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/HR (ME_PS09): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/HR: {e}")
             time.sleep(0.3)
 
         # Romania
