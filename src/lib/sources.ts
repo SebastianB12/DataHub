@@ -50,6 +50,8 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   statbel: { label: "Statbel (Belgium)", url: "https://statbel.fgov.be/en" },
   susr_sk: { label: "Štatistický úrad SR (Slovakia)", url: "https://slovak.statistics.sk" },
   ksh_hu:  { label: "KSH (Hungary)", url: "https://www.ksh.hu/?lang=en" },
+  nso_mt:  { label: "NSO Malta", url: "https://nso.gov.mt/" },
+  cystat_cy: { label: "Statistical Service of Cyprus (CYSTAT)", url: "https://www.cystat.gov.cy/en/" },
   statec_lu: { label: "STATEC (Luxembourg)", url: "https://statec.gouvernement.lu/en.html" },
   eia: { label: "U.S. Energy Information Administration", url: "https://www.eia.gov" },
   gacc: {

@@ -109,17 +109,17 @@ DK_SERIES = [
      "note": "DK Statbank NKHO2 quarterly real GDP chained 2020 prices, SA"},
     # BBM: Balance of payments monthly — Goods (FOB) trade balance
     # POST=1.A.A (Goods FOB), INDUDBOP=N (Net), LAND=W1 (World), ENHED=93 (mil DKK), SA
-    {"slug": "trade-balance", "table": "BBM",
+    {"slug": "trade-balance", "table": "BBM", "series_id": "DST/BBM",
      "filters": {"POST": "1.A.A", "INDUDBOP": "N", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
      "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
      "note": "DK Statbank BBM Goods FOB trade balance vs World, SA, mio DKK"},
     # BBM Exports of Goods (Current receipts side, K)
-    {"slug": "exports", "table": "BBM",
+    {"slug": "exports", "table": "BBM", "series_id": "DST/BBM/exp",
      "filters": {"POST": "1.A.A", "INDUDBOP": "K", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
      "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
      "note": "DK Statbank BBM Goods FOB exports vs World, SA, mio DKK"},
     # BBM Imports of Goods (Current expenditure side, D)
-    {"slug": "imports", "table": "BBM",
+    {"slug": "imports", "table": "BBM", "series_id": "DST/BBM/imp",
      "filters": {"POST": "1.A.A", "INDUDBOP": "D", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
      "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
      "note": "DK Statbank BBM Goods FOB imports vs World, SA, mio DKK"},
@@ -354,6 +354,41 @@ IE_SERIES = [
      "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "-"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "CSO Ireland CPM01 CPI Base Dec 2023=100, all items"},
+    # MUM01: Seasonally Adjusted Monthly Unemployment Rate (C02), 15-74 yrs, both sexes
+    {"slug": "unemployment", "table": "MUM01",
+     "filters": {"STATISTIC": "MUM01C02", "C02076V02508": "316", "C02199V02655": "-"},
+     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland MUM01 SA Monthly Unemployment Rate 15-74 both sexes"},
+    # WPM35: Industrial Price Index (Excl VAT), Manufacturing industries (V2100, NACE 10-33)
+    {"slug": "ppi", "table": "WPM35",
+     "filters": {"STATISTIC": "WPM35C01", "C02596V03150": "V2100"},
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland WPM35 Industrial Price Index (Excl VAT), Manufacturing 10-33"},
+    # MIM05: Industrial Production Volume Index SA (C03), Industries (V1100, NACE 05-35) base 2021=100
+    {"slug": "industrial-production", "table": "MIM05",
+     "filters": {"STATISTIC": "MIM05C03", "C02576V03125": "V1100"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland MIM05 SA Industrial Production Index, Industries 05-35"},
+    # RSM08: Retail Sales Index Volume Adjusted (C04), All retail businesses (V3970)
+    {"slug": "retail-sales", "table": "RSM08",
+     "filters": {"STATISTIC": "RSM08C04", "C02583V03135": "V3970"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland RSM08 Retail Sales Volume Index SA, All retail businesses"},
+    # TSM01: Value of Merchandise Trade — Trade Surplus NSA (C3), State
+    {"slug": "trade-balance", "table": "TSM01",
+     "filters": {"STATISTIC": "TSM01C3", "C02196V02652": "-"},
+     "freq": "M", "unit": "EUR thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland TSM01 Merchandise Trade Surplus (Exports-Imports) NSA"},
+    # HPM09: Residential Property Price Index — National all properties (latest base, ~2015=100)
+    {"slug": "housing-index", "table": "HPM09",
+     "filters": {"STATISTIC": "HPM09C01", "C02803V03373": "-"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland HPM09 Residential Property Price Index, National all properties"},
+    # NAQ03: Quarterly National Accounts, GDP at Constant Market Prices SA (S04)
+    {"slug": "gdp-real", "table": "NAQ03",
+     "filters": {"STATISTIC": "NAQ03S04", "C02196V02652": "-"},
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland NAQ03 GDP at Constant Market Prices SA, chain-linked"},
 ]
 
 
@@ -540,6 +575,12 @@ def fetch_gus_variable(var_id: int, freq: str = "M") -> list[tuple[date, float]]
 
 
 # === Austria — Statistik Austria OGD (CSV semicolon-separated, German decimals) ===
+#
+# Each AT entry uses a `filters` dict (col -> required value) plus `time_col` + `value_col`.
+# Time codes have the form "<PREFIX>-<digits>". The digits encode the period:
+#   length 6 + freq=M  -> YYYYMM
+#   length 5 + freq=Q  -> YYYYQ (1..4)
+#   length 4 + freq=A  -> YYYY  (annual)
 
 AT_SERIES = [
     # vpi20 (base 2020) covers 2021-01 to 2025-12 monthly. F-VPIMZVM is the index level;
@@ -1181,13 +1222,15 @@ class NationalEUProvider(BaseProvider):
         for cfg in DK_SERIES:
             try:
                 pairs = fetch_dk_table(cfg["table"], cfg["filters"], cfg["freq"])
+                # Optional disambiguator for tables that serve multiple slugs (e.g. BBM)
+                sid = cfg.get("series_id") or f"DST/{cfg['table']}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="DK",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="dst", unit=cfg["unit"],
-                        series_id=f"DST/{cfg['table']}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/DK ({cfg['table']}): {len(pairs)} pts")
