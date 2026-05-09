@@ -575,78 +575,53 @@ def fetch_lv_pxweb(table_path: str, query_filters: dict, freq: str = "M") -> lis
 # === Romania — INSSE Tempo (HTTP only on port 8077) ===
 
 RO_SERIES = [
-    # IPC102A: Indicii preturilor de consum - evolutia lunara fata de luna anterioara
-    # We'll fetch all monthly data and filter for category Total
-    {"slug": "inflation-cpi", "matrix": "IPC102A",
-     "category_id": 11730,  # Total
+    # IPC102A: monthly CPI vs previous month=100. Via tempo-py library.
+    {"slug": "inflation-cpi", "matrix": "IPC102A", "category_label": "Total",
      "freq": "M", "unit": "Index (prev month=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "INSSE Tempo IPC102A monthly CPI MoM index (prev month=100)"},
 ]
 
 
-def fetch_ro_tempo(matrix: str, category_id: int, freq: str = "M") -> list[tuple[date, float]]:
-    """RO INSSE Tempo POST query for a matrix."""
-    # First fetch matrix metadata to get all option IDs
-    meta_r = requests.get(f"http://statistici.insse.ro:8077/tempo-ins/matrix/{matrix}", timeout=30)
-    meta = meta_r.json()
-    # Build a selection: select category + all months/years + UM
-    # Tempo API requires array of selected option IDs per dimension
-    selections = []
-    for dim in meta.get("dimensionsMap", []):
-        opts = dim.get("options", [])
-        label = dim.get("label", "").lower()
-        if "marfuri" in label or "categori" in label:
-            # category filter
-            selections.append([category_id])
-        else:
-            # take all options
-            selections.append([o["nomItemId"] for o in opts])
-    # POST /tempo-ins/matrix/<matrix>/data
-    payload = {
-        "encoded": False,
-        "name": meta.get("matrixName"),
-        "details": meta.get("details"),
-        "code": matrix,
-        "language": "en",
-        "matrixDetails": meta.get("matrixDetails"),
-        "metaData": meta.get("metaData"),
-        "dimensionsMap": meta.get("dimensionsMap"),
-    }
-    # Actually Tempo uses /matrix/{matrix}/data with arrayOfNomItemIds matrices
-    # try POST data
-    r2 = requests.post(
-        f"http://statistici.insse.ro:8077/tempo-ins/matrix/{matrix}/data",
-        json=selections,
-        timeout=60,
+def fetch_ro_tempo(matrix: str, category_label: str = "Total", freq: str = "M") -> list[tuple[date, float]]:
+    """RO INSSE Tempo via tempo-py library. Returns CSV-formatted text:
+    'Categorii..., Luni, UM, Valoare\nTotal, Luna ianuarie 1991, Procente, 114.8\n...'
+    """
+    import tempo
+    RO_MONTHS = {"ianuarie":1, "februarie":2, "martie":3, "aprilie":4, "mai":5, "iunie":6,
+                 "iulie":7, "august":8, "septembrie":9, "octombrie":10, "noiembrie":11, "decembrie":12}
+    node = tempo.Node()
+    # Find leaf by code via children search
+    parent_4000 = node.by_code("4000")
+    leaves = [c for c in (parent_4000.children if parent_4000 else []) if c.code == matrix]
+    if not leaves:
+        return []
+    leaf = leaves[0]
+    # Get full month list from dim
+    months = [opt.label for opt in leaf.dimensions[1].options]
+    csv_text = leaf.query(
+        (leaf.dimensions[0].label, [category_label]),
+        ("Luni", months),
+        ("UM: Procente", ["Procente"]),
     )
-    if r2.status_code != 200:
-        # fallback: try GET with query
-        return []
-    try:
-        data = r2.json()
-    except Exception:
-        return []
-    # Tempo returns flat list per coordinate
     out = []
-    for entry in data.get("matrix", []):
-        # entry has dimensions and 'val'
-        # period dim is "Luni" -> e.g. "Ianuarie 2026"
-        period_label = ""
-        for d in entry.get("dimensions", []):
-            if "uni" in d.get("dimensionLabel", "").lower() or "ani" in d.get("dimensionLabel", "").lower():
-                period_label = d.get("optionLabel", "")
-        # parse
-        try:
-            ro_months = {"Ianuarie":1,"Februarie":2,"Martie":3,"Aprilie":4,"Mai":5,"Iunie":6,
-                         "Iulie":7,"August":8,"Septembrie":9,"Octombrie":10,"Noiembrie":11,"Decembrie":12}
-            parts = period_label.split()
-            if len(parts) == 2 and parts[0] in ro_months:
-                dt = date(int(parts[1]), ro_months[parts[0]], 1)
-                val = entry.get("val")
-                if val is not None:
-                    out.append((dt, float(val)))
-        except Exception:
+    for line in csv_text.splitlines()[1:]:  # skip header
+        parts = [p.strip() for p in line.split(",")]
+        if len(parts) < 4:
             continue
+        period = parts[1].lower()
+        try:
+            val = float(parts[3])
+        except ValueError:
+            continue
+        # "luna ianuarie 1991" or "anul 1991"
+        words = period.split()
+        if len(words) == 3 and words[0] == "luna":
+            month_name, year = words[1], words[2]
+            if month_name in RO_MONTHS:
+                try:
+                    out.append((date(int(year), RO_MONTHS[month_name], 1), val))
+                except ValueError:
+                    pass
     return sorted(out)
 
 
@@ -1172,7 +1147,7 @@ class NationalEUProvider(BaseProvider):
         # Romania
         for cfg in RO_SERIES:
             try:
-                pairs = fetch_ro_tempo(cfg["matrix"], cfg["category_id"], cfg["freq"])
+                pairs = fetch_ro_tempo(cfg["matrix"], cfg.get("category_label", "Total"), cfg["freq"])
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="RO",

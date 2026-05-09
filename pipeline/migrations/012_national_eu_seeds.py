@@ -39,6 +39,8 @@ SEEDS = [
     ("SK", "inflation-cpi",         "susr_sk", "SUSR/sp2038ms/odb01/mj38", "M", "Index (Dec 2000=100)", "NSA", 1.0, "ŠÚ SR sp2038ms CPI Total, Dec 2000=100"),
     # Hungary — direct from KSH STADAT (HTML scrape)
     ("HU", "inflation-cpi",         "ksh_hu",  "KSH/ara0040", "M", "Index (same month previous year=100)", "NSA", 1.0, "KSH ara0040 CPI YoY, total"),
+    # Romania — direct from INSSE Tempo via tempo-py library
+    ("RO", "inflation-cpi",         "insse_ro", "INSSE/IPC102A", "M", "Index (previous month=100)", "NSA", 1.0, "INSSE Tempo IPC102A CPI MoM index, total"),
 ]
 
 
