@@ -53,3 +53,4 @@ docs/.coverage_audit.pkl
 
 # Claude local config
 .claude/
+cache.sqlite

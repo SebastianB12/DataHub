@@ -21,8 +21,13 @@ PROVIDERS = [
     "pipeline.providers.bdf",         # FR Banque de France (via DBnomics)
     "pipeline.providers.ine_es",      # ES (TE-source-conform via INE Tempus3 JSON API)
     "pipeline.providers.istat",       # IT (TE-source-conform via Esploradati SDMX REST)
+    "pipeline.providers.statec",      # LU (TE-source-conform via lustat.statec.lu .Stat Suite)
+    "pipeline.providers.czso",        # CZ (TE-source-conform via CZSO open-data CSV)
+    "pipeline.providers.elstat",      # GR (TE-source-conform via ELSTAT XLS publication portal)
     "pipeline.providers.dbnomics",    # legacy gateway — kept for transition; reduced usage
     "pipeline.providers.national_eu", # DK/FI/SE/IE/PT direct national APIs
+    "pipeline.providers.lsd_lt",      # LT (LSD Lithuania via data.gov.lt)
+    "pipeline.providers.nsi_bg",      # BG (NSI via BNB SDDS Plus SDMX)
     "pipeline.providers.ecb",         # EA money/rates
     "pipeline.providers.ons",         # GB (slow due to anti-bot sleeps)
     "pipeline.providers.bundesbank",  # DE money/banking

@@ -20,7 +20,13 @@ SEEDS = [
     # Finland
     ("FI", "inflation-cpi",         "stat_fi", "STATFI/khi/15b5", "M", "Index", "NSA", 1.0, "FI Tilastokeskus 15b5 CPI 2025=100 monthly"),
     # Sweden
-    ("SE", "inflation-cpi",         "scb_se", "SCB/PR0101A/KPI2020M", "M", "Index", "NSA", 1.0, "SE SCB shadow CPI continuous index 1980=100"),
+    ("SE", "inflation-cpi",            "scb_se", "SCB/PR0101A/KPI2020M",   "M", "Index",            "NSA", 1.0, "SE SCB shadow CPI continuous index 1980=100"),
+    ("SE", "ppi",                      "scb_se", "SCB/PR0301G/PPI2020M",   "M", "Index (2020=100)", "NSA", 1.0, "SE SCB PR0301G Producer Price Index, total B-E, 2020=100"),
+    ("SE", "industrial-production-yoy","scb_se", "SCB/NV0402A/IPI2010KedjM","M", "%",               "WDA", 1.0, "SE SCB NV0402A Industrial Production YoY% WDA (B-D)"),
+    ("SE", "unemployment",             "scb_se", "SCB/AM0401A/AKURLBefM",  "M", "%",                "SA",  1.0, "SE SCB AM0401A LFS unemployment rate 15-74 SA trend"),
+    ("SE", "gdp-growth-rate",          "scb_se", "SCB/NR0103B/T10SKv",     "Q", "%",                "SA",  1.0, "SE SCB NR0103B GDP QoQ% volume change SA"),
+    ("SE", "trade-balance",            "scb_se", "SCB/HA0201A/ImportExportSnabbM", "M", "SEK million", "NSA", 1.0, "SE SCB HA0201A Net Trade of goods SEK million"),
+    ("SE", "retail-sales-yoy",         "scb_se", "SCB/HA0101B/DetOms07N",  "M", "%",                "WDA", 1.0, "SE SCB HA0101B Retail Sales YoY% (excl fuel) WDA constant prices"),
     # Ireland
     ("IE", "inflation-cpi",         "cso_ie", "CSO/CPM01",   "M", "Index", "NSA", 1.0, "CSO Ireland CPM01 CPI Base Dec 2023=100 all items"),
     # Austria — direct from Statistik Austria OGD CSV

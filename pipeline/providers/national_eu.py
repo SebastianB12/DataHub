@@ -11,6 +11,8 @@ Currently supported (verified reachable from this network as of 2026-05-09):
   PT — INE Portugal JSON-Indicador API (www.ine.pt)
   IE — CSO Ireland PxStat REST (ws.cso.ie)
   BE — Statbel REST API (bestat.statbel.fgov.be)
+  MT — NSO Malta SDMX REST (apidesign-statdb.nso.gov.mt) — Cloudflare-protected, needs cloudscraper
+  CY — CYSTAT PxWeb (cystatdb.cystat.gov.cy) — Cloudflare-protected, needs cloudscraper
 
 Network-blocked from this environment (deferred):
   NL — datasets.cbs.nl Connection Timeout
@@ -26,6 +28,12 @@ from datetime import date
 
 import requests
 from dotenv import load_dotenv
+
+try:
+    import cloudscraper  # type: ignore
+    _CF_SCRAPER = cloudscraper.create_scraper()
+except Exception:  # pragma: no cover
+    _CF_SCRAPER = None
 
 from pipeline.base_provider import BaseProvider, DataPoint
 from pipeline.transforms import normalize_date
@@ -81,6 +89,46 @@ DK_SERIES = [
      "filters": {"BRANCHEDB25UDVALG": "G47"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "DK Statbank DETA211A Retail Trade total G47"},
+    # PRIS4221: Producer price index for commodities
+    # STANDGRP=BC (Mining+Manufacturing), TAL=100 (Index level)
+    {"slug": "ppi", "table": "PRIS4221",
+     "filters": {"STANDGRP": "BC", "TAL": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS4221 PPI mining+manufacturing index"},
+    # NAN1: Demand and supply, annual GDP at market prices
+    # TRANSAKT=B1GQK (GDP), PRISENHED=V_M (current prices, bn DKK)
+    {"slug": "gdp", "table": "NAN1",
+     "filters": {"TRANSAKT": "B1GQK", "PRISENHED": "V_M"},
+     "freq": "A", "unit": "Billion DKK", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank NAN1 GDP at market prices, current prices, bn DKK"},
+    # NKHO2: Quarterly national accounts — real GDP, chained 2020 prices, SA
+    # TRANSAKT=B1GQD (GDP), PRISENHED=LKV (chained 2020), SAESON=Y (SA)
+    {"slug": "gdp-real", "table": "NKHO2",
+     "filters": {"TRANSAKT": "B1GQD", "PRISENHED": "LKV", "SÆSON": "Y"},
+     "freq": "Q", "unit": "Million DKK (2020 chained)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank NKHO2 quarterly real GDP chained 2020 prices, SA"},
+    # BBM: Balance of payments monthly — Goods (FOB) trade balance
+    # POST=1.A.A (Goods FOB), INDUDBOP=N (Net), LAND=W1 (World), ENHED=93 (mil DKK), SA
+    {"slug": "trade-balance", "table": "BBM",
+     "filters": {"POST": "1.A.A", "INDUDBOP": "N", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
+     "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank BBM Goods FOB trade balance vs World, SA, mio DKK"},
+    # BBM Exports of Goods (Current receipts side, K)
+    {"slug": "exports", "table": "BBM",
+     "filters": {"POST": "1.A.A", "INDUDBOP": "K", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
+     "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank BBM Goods FOB exports vs World, SA, mio DKK"},
+    # BBM Imports of Goods (Current expenditure side, D)
+    {"slug": "imports", "table": "BBM",
+     "filters": {"POST": "1.A.A", "INDUDBOP": "D", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
+     "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank BBM Goods FOB imports vs World, SA, mio DKK"},
+    # LBESK104: Employees (seasonally adjusted), all sectors, monthly, in persons
+    # SEKTOR=1000 (All sectors); we publish in thousands to match indicator unit
+    {"slug": "employed-persons", "table": "LBESK104",
+     "filters": {"SEKTOR": "1000"},
+     "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 0.001,
+     "note": "DK Statbank LBESK104 employees, all sectors, SA, thousands"},
 ]
 
 
@@ -134,6 +182,42 @@ FI_SERIES = [
      "query": {"Hyödyke": "SSS", "Tiedot": "ip_khi"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "FI Tilastokeskus 15b5 CPI 2025=100 total monthly"},
+    # Producer Price Index (2021=100) monthly. "1" = PPI for manufactured products.
+    # Verified 2026-05-09: latest 2026M03 = 120.6 (matches TE).
+    {"slug": "ppi", "path": "StatFin/thi/statfin_thi_pxt_13m8.px",
+     "query": {"Tuotteet toimialoittain (CPA 2015, MIG)": "SSS",
+               "Indeksisarja": "1",
+               "Tiedot": "pisteluku21"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 13m8 PPI manufactured products total 2021=100"},
+    # Industrial output volume index (2021=100), original (NSA). BTD=BCD Total industries.
+    # Verified 2026-05-09: latest 2026M03 = 116.7 (NSA original) -> implies +7.3% YoY (matches TE).
+    {"slug": "industrial-production", "path": "StatFin/ttvi/statfin_ttvi_pxt_14mh.px",
+     "query": {"Toimiala (TOL 2008)": "BTD",
+               "Tiedot": "Alkuperainen"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 14mh Industrial Output BCD Total NSA 2021=100"},
+    # Unemployment rate (Labour Force Survey, ages 15-74), monthly NSA.
+    # Verified 2026-05-09: latest 2026M03 = 11.1% (matches TE exactly).
+    {"slug": "unemployment", "path": "StatFin/tyti/statfin_tyti_pxt_135y.px",
+     "query": {"Sukupuoli": "SSS",
+               "Ikäluokka": "15-74",
+               "Tiedot": "Tyottomyysaste"},
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 135y LFS unemployment rate 15-74 monthly NSA"},
+    # NOTE: GDP intentionally NOT added here. Tilastokeskus QNA 132h provides chained-2015
+    # EUR-mn quarterly volumes, but the catalog's `gdp` slug is annual nominal USD (World Bank
+    # NY.GDP.MKTP.CD) for cross-country comparability. Mixing a quarterly EUR series under
+    # the same slug would break overview displays. If we later add a `gdp-qoq` slug, the
+    # vol_kk_kausit_2015_chained MoM% from QNA 132h is the right TE-aligned source.
+    # Retail trade volume index G47 (2021=100), working-day-adjusted.
+    # Verified 2026-05-09: latest 2026M03 = 91.5 WDA volume.
+    {"slug": "retail-sales", "path": "StatFin/klv/statfin_klv_pxt_14kr.px",
+     "query": {"Toimiala": "G47",
+               "Muuttuja": "mi",
+               "Tiedot": "tyopaivakorjattu"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 14kr Retail trade G47 volume index 2021=100 WDA"},
 ]
 
 
@@ -153,12 +237,55 @@ def fetch_fi_table(path: str, query_filters: dict, freq: str = "M") -> list[tupl
 
 SE_SERIES = [
     # PR/PR0101/PR0101A/KPI2020M: CPI by ContentsCode, monthly
-    # Using shadow/fixed numbers — specific COD via probing
-    # 00000807 = CPI shadow index (continuous index)
+    # 00000807 = CPI shadow index (continuous 1980=100)
     {"slug": "inflation-cpi", "path": "PR/PR0101/PR0101A/KPI2020M",
      "query": {"ContentsCode": "00000807"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "SE SCB CPI shadow index (continuous 1980=100)"},
+    # PR/PR0301/PR0301G/PPI2020M: Producer Price Index, 2020=100, monthly 1990M01->
+    # SPIN2015=B-E (Total), ContentsCode=000000SA (PPI). Verified 2026-05-09: 2026M03 = 135.8 (matches TE 135.80).
+    {"slug": "ppi", "path": "PR/PR0301/PR0301G/PPI2020M",
+     "query": {"SPIN2015": "B-E", "ContentsCode": "000000SA"},
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB PR0301G Producer Price Index, total B-E, 2020=100"},
+    # NV/NV0402/NV0402A/IPI2010KedjM: Industrial Production Index 2021=100, monthly 2000M01->
+    # SNI2007=B-D (Mining/Manufacturing/Energy), ContentsCode=NV0402AZ (Annual development % WDA).
+    # Verified 2026-05-09: 2026M03=2.8%, 2026M02=6.9% (TE shows 3% / 6.2% revised — matches w/ rounding/vintage).
+    {"slug": "industrial-production-yoy", "path": "NV/NV0402/NV0402A/IPI2010KedjM",
+     "query": {"SNI2007": "B-D", "ContentsCode": "NV0402AZ"},
+     "freq": "M", "unit": "%", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SE SCB NV0402A Industrial Production YoY% WDA (B-D mining+mfg+energy)"},
+    # AM/AM0401/AM0401A/AKURLBefM: LFS Unemployment rate 15-74, monthly 2001M01->
+    # Arbetskraftstillh=ALÖSP (rate %), TypData=TC_DATA (SA + smoothed/trend; matches TE headline 8.7%).
+    # Kon=1+2 (both sexes), Alder=tot15-74, ContentsCode=000007L9.
+    # Verified 2026-05-09: 2026M03 = 8.7 (matches TE exactly).
+    {"slug": "unemployment", "path": "AM/AM0401/AM0401A/AKURLBefM",
+     "query": {"Arbetskraftstillh": "ALÖSP", "TypData": "TC_DATA",
+               "Kon": "1+2", "Alder": "tot15-74", "ContentsCode": "000007L9"},
+     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB AM0401A LFS unemployment rate 15-74 SA trend (ALÖSP/TC_DATA)"},
+    # NR/NR0103/NR0103B/NR0103ENS2010T10SKv: GDP expenditure approach, SA, quarterly 1981Q1->
+    # Anvandningstyp=BNPM (GDP at market prices), ContentsCode=NR0103CF (% volume change vs prev period SA).
+    # Verified 2026-05-09: latest 2025Q4 = 0.5% (TE shows -0.2 for Q1 2026 flash; vintage lag normal).
+    {"slug": "gdp-growth-rate", "path": "NR/NR0103/NR0103B/NR0103ENS2010T10SKv",
+     "query": {"Anvandningstyp": "BNPM", "ContentsCode": "NR0103CF"},
+     "freq": "Q", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB NR0103B GDP QoQ% volume change SA (BNPM/NR0103CF)"},
+    # HA/HA0201/HA0201A/ImportExportSnabbM: Foreign trade in goods, SEK million, monthly 1975M01->
+    # ImportExport=HANDELSB (Net Trade), ContentsCode=HA0201A2.
+    # Verified 2026-05-09: 2026M03 = 9300 SEK million (matches TE 9,300 exactly).
+    {"slug": "trade-balance", "path": "HA/HA0201/HA0201A/ImportExportSnabbM",
+     "query": {"ImportExport": "HANDELSB", "ContentsCode": "HA0201A2"},
+     "freq": "M", "unit": "SEK million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB HA0201A Net Trade of goods SEK million (HANDELSB)"},
+    # HA/HA0101/HA0101B/DetOms07N: Retail sale index 2021=100, monthly 1991M01->
+    # SNI2007=47exkl47.3 (retail trade except fuel - SCB headline), ContentsCode=000006VZ
+    # (Yearly development % WDA constant prices). Verified 2026-05-09: 2026M03=6.2, 2026M02=2.2.
+    # TE: 6.2% YoY Mar 2026 (prev=2.2%) — exact match.
+    {"slug": "retail-sales-yoy", "path": "HA/HA0101/HA0101B/DetOms07N",
+     "query": {"SNI2007": "47exkl47.3", "ContentsCode": "000006VZ"},
+     "freq": "M", "unit": "%", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SE SCB HA0101B Retail Sales YoY% (excl fuel), WDA constant prices"},
 ]
 
 
@@ -296,10 +423,16 @@ def fetch_ie_table(table: str, filters: dict, freq: str = "M") -> list[tuple[dat
 
 
 def _parse_ie_time(p: str, freq: str) -> date | None:
-    """CSO time codes: '202604' (YYYYMM), '2026Q1' (YYYYQ#)."""
+    """CSO time codes: '202604' (YYYYMM), '20261' (YYYYQ — single digit), '2026' (YYYY)."""
     try:
         if freq == "M" and len(p) == 6 and p.isdigit():
             return date(int(p[:4]), int(p[4:]), 1)
+        if freq == "Q" and len(p) == 5 and p.isdigit():
+            yy, q = int(p[:4]), int(p[4])
+            if 1 <= q <= 4:
+                return date(yy, {1: 1, 2: 4, 3: 7, 4: 10}[q], 1)
+        if freq == "A" and len(p) == 4 and p.isdigit():
+            return date(int(p), 1, 1)
     except Exception:
         pass
     return _parse_period(p, freq)
@@ -857,6 +990,139 @@ def fetch_sk_datacube(dataset_id: str, years: str, coicop: str, measure: str, fr
     return sorted(out)
 
 
+# === Malta — NSO Malta SDMX REST (Cloudflare-protected) ===
+# Endpoint: https://apidesign-statdb.nso.gov.mt/rest/ (newest data; release variant
+# lags behind). Plain `requests` gets blocked by Cloudflare; cloudscraper passes.
+# DSD_RETAIL_PRICE_INDEX_MONTHLY has 2 dims: CS_SUB_SECTION + CSE_FREQ.
+# CS_SUB_SECTION code CC00000 = 00.000 RETAIL PRICE INDEX (all-items total).
+# Response is SDMX-CSV; columns include TIME_PERIOD,OBS_VALUE.
+
+MT_SERIES = [
+    {"slug": "inflation-cpi", "dataflow": "DF_RETAIL_PRICE_INDEX_MONTHLY",
+     "key": "CC00000.M", "freq": "M",
+     "unit": "Index (2015=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSO Malta DF_RETAIL_PRICE_INDEX_MONTHLY total RPI (CC00000)"},
+]
+
+
+def fetch_mt_sdmx(dataflow: str, key: str, freq: str = "M") -> list[tuple[date, float]]:
+    """Fetch SDMX-CSV from NSO Malta. Returns sorted [(date, value)]."""
+    if _CF_SCRAPER is None:
+        raise RuntimeError("cloudscraper not installed; required for nso.gov.mt")
+    url = f"https://apidesign-statdb.nso.gov.mt/rest/data/{dataflow}/{key}"
+    headers = {"Accept": "application/vnd.sdmx.data+csv;version=1.0.0"}
+    r = _CF_SCRAPER.get(url, headers=headers, timeout=60)
+    r.raise_for_status()
+    out = []
+    lines = r.text.strip().splitlines()
+    if not lines:
+        return []
+    header = [h.strip() for h in lines[0].split(",")]
+    try:
+        time_idx = header.index("TIME_PERIOD")
+        val_idx = header.index("OBS_VALUE")
+    except ValueError:
+        return []
+    for line in lines[1:]:
+        parts = line.split(",")
+        if len(parts) <= max(time_idx, val_idx):
+            continue
+        period = parts[time_idx].strip()
+        val_str = parts[val_idx].strip()
+        try:
+            val = float(val_str)
+        except ValueError:
+            continue
+        dt = _parse_period(period, freq)
+        if dt:
+            out.append((dt, val))
+    return sorted(out)
+
+
+# === Cyprus — CYSTAT PxWeb (Cloudflare-protected) ===
+# Endpoint: https://cystatdb.cystat.gov.cy/api/v1/en/ — classic PxWeb v1 API.
+# Pretty path: 8.CYSTAT-DB / Price Indices / Consumer Price Index / 0410055E.px
+# (Continuous CPI Timeseries Base Year 1986/1992/2005/2015/2025, monthly).
+# valueTexts of MONTH are YYYYMmm. PxWeb here only accepts selection.filter='all'
+# for code 'BASE YEAR' (filter='item' returns 404). We fetch all 5 base years
+# and pick the requested one (label match, not code).
+
+CY_SERIES = [
+    # Base 1986 spans 1980-01..present (556 obs); base 2025 only 2019+ (88 obs).
+    # We use 1986 for full history; YoY computation is base-invariant.
+    {"slug": "inflation-cpi",
+     "px_path": "8.CYSTAT-DB/Price Indices/Consumer Price Index/0410055E.px",
+     "base_year": "1986",
+     "freq": "M",
+     "unit": "Index (1986=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CYSTAT 0410055E continuous CPI timeseries, base 1986=100"},
+]
+
+
+def fetch_cy_pxweb(px_path: str, base_year: str, freq: str = "M") -> list[tuple[date, float]]:
+    """CYSTAT PxWeb. POST data endpoint requires literal spaces in path
+    (URL-encoding gives 404). filter='all' is the only accepted selection."""
+    if _CF_SCRAPER is None:
+        raise RuntimeError("cloudscraper not installed; required for cystat.gov.cy")
+    url = f"https://cystatdb.cystat.gov.cy/api/v1/en/{px_path}"
+    body = {
+        "query": [{"code": "BASE YEAR", "selection": {"filter": "all", "values": ["*"]}}],
+        "response": {"format": "json-stat2"},
+    }
+    r = _CF_SCRAPER.post(url, json=body, timeout=60)
+    r.raise_for_status()
+    js = r.json()
+
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    sizes = js.get("size", [])
+    if not values or "MONTH" not in dim or "BASE YEAR" not in dim:
+        return []
+
+    by_cat = dim["BASE YEAR"]["category"]
+    by_idx = by_cat.get("index", {})
+    by_lbl = by_cat.get("label", {})
+    target_by_pos = None
+    if isinstance(by_idx, dict):
+        for code, pos in by_idx.items():
+            if str(by_lbl.get(code, code)) == base_year:
+                target_by_pos = pos
+                break
+    if target_by_pos is None:
+        target_by_pos = sizes[dim_ids.index("BASE YEAR")] - 1
+
+    m_cat = dim["MONTH"]["category"]
+    m_idx = m_cat.get("index", {})
+    m_lbl = m_cat.get("label", {})
+    if isinstance(m_idx, dict):
+        m_pairs = sorted(m_idx.items(), key=lambda x: x[1])
+    else:
+        m_pairs = [(c, i) for i, c in enumerate(m_idx)]
+
+    month_pos = dim_ids.index("MONTH")
+    by_pos = dim_ids.index("BASE YEAR")
+    out = []
+    for mcode, mpos in m_pairs:
+        indices = [0] * len(dim_ids)
+        indices[month_pos] = mpos
+        indices[by_pos] = target_by_pos
+        flat = 0
+        stride = 1
+        for i in range(len(dim_ids) - 1, -1, -1):
+            flat += indices[i] * stride
+            stride *= sizes[i]
+        if 0 <= flat < len(values):
+            v = values[flat]
+            if v is None:
+                continue
+            label = m_lbl.get(mcode, mcode)  # e.g. "2026M04"
+            dt = _parse_period(str(label), freq)
+            if dt:
+                out.append((dt, float(v)))
+    return sorted(out)
+
+
 # === Croatia — DZS PxWeb (web.dzs.hr) ===
 
 HR_SERIES = [
@@ -900,6 +1166,8 @@ COUNTRY_FETCHERS = {
     "statbel":  ("BE", BE_SERIES, "Statbel (Belgium)",                   "https://statbel.fgov.be"),
     "susr_sk":  ("SK", SK_SERIES, "Štatistický úrad SR (Slovakia)",      "https://slovak.statistics.sk"),
     "ksh_hu":   ("HU", HU_SERIES, "KSH (Hungary)",                       "https://www.ksh.hu"),
+    "nso_mt":   ("MT", MT_SERIES, "NSO Malta",                           "https://nso.gov.mt"),
+    "cystat_cy":("CY", CY_SERIES, "Statistical Service of Cyprus (CYSTAT)", "https://www.cystat.gov.cy"),
 }
 
 
@@ -1160,6 +1428,42 @@ class NationalEUProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/RO ({cfg['matrix']}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/RO: {e}")
+            time.sleep(0.3)
+
+        # Malta — NSO via cloudscraper
+        for cfg in MT_SERIES:
+            try:
+                pairs = fetch_mt_sdmx(cfg["dataflow"], cfg["key"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="MT",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="nso_mt", unit=cfg["unit"],
+                        series_id=f"NSO/{cfg['dataflow']}/{cfg['key']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/MT ({cfg['dataflow']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/MT: {e}")
+            time.sleep(0.3)
+
+        # Cyprus — CYSTAT PxWeb via cloudscraper
+        for cfg in CY_SERIES:
+            try:
+                pairs = fetch_cy_pxweb(cfg["px_path"], cfg["base_year"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="CY",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="cystat_cy", unit=cfg["unit"],
+                        series_id=f"CYSTAT/{cfg['px_path'].rsplit('/',1)[-1]}/B{cfg['base_year']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/CY ({cfg['px_path'][-30:]}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/CY: {e}")
             time.sleep(0.3)
 
         return out

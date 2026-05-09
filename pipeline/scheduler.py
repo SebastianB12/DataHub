@@ -32,6 +32,7 @@ PROVIDER_MAP = {
     "ine_es": "pipeline.providers.ine_es",
     "dbnomics": "pipeline.providers.dbnomics",
     "national_eu": "pipeline.providers.national_eu",
+    "nsi_bg": "pipeline.providers.nsi_bg",
 }
 
 
