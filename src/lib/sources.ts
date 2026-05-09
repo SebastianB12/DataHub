@@ -48,6 +48,7 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   stat_ee: { label: "Statistics Estonia", url: "https://andmed.stat.ee" },
   dzs_hr:  { label: "DZS Croatian Bureau of Statistics", url: "https://web.dzs.hr" },
   statbel: { label: "Statbel (Belgium)", url: "https://statbel.fgov.be/en" },
+  susr_sk: { label: "Štatistický úrad SR (Slovakia)", url: "https://slovak.statistics.sk" },
   eia: { label: "U.S. Energy Information Administration", url: "https://www.eia.gov" },
   gacc: {
     label: "General Administration of Customs of China",

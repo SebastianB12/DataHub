@@ -738,6 +738,78 @@ def _parse_jsonstat_year_month(js: dict) -> list[tuple[date, float]]:
     return sorted(out)
 
 
+# === Slovakia — Štatistický úrad SR DataCube REST ===
+
+SK_SERIES = [
+    # sp2038ms: Consumer Price Indices by COICOP - monthly. Hierarchy:
+    # /dataset/sp2038ms/{years CSV}/{months CSV or all}/{coicop}/{measure}
+    # odb01 = Úhrn (Total), mj38 = December 2000=100 (continuous index)
+    {"slug": "inflation-cpi", "dataset_id": "sp2038ms",
+     "years": "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+     "coicop": "odb01", "measure": "mj38",
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "ŠÚ SR sp2038ms CPI Total, Dec 2000=100 continuous monthly"},
+]
+
+
+def fetch_sk_datacube(dataset_id: str, years: str, coicop: str, measure: str, freq: str = "M") -> list[tuple[date, float]]:
+    """SK datacube: /dataset/{id}/{years}/all/{coicop}/{measure}"""
+    url = f"https://data.statistics.sk/api/v2.0/dataset/{dataset_id}/{years}/all/{coicop}/{measure}"
+    r = requests.get(url, timeout=60)
+    r.raise_for_status()
+    js = r.json()
+    sizes = js.get("size", [])
+    values = js.get("value", [])
+    if not sizes or not values:
+        return []
+    # Find year and month dim positions
+    dim_ids = js.get("id", [])
+    year_pos = next((i for i, k in enumerate(dim_ids) if "rok" in k.lower()), None)
+    month_pos = next((i for i, k in enumerate(dim_ids) if "mes" in k.lower()), None)
+    if year_pos is None or month_pos is None:
+        return []
+    year_idx = js["dimension"][dim_ids[year_pos]]["category"]["index"]
+    month_idx = js["dimension"][dim_ids[month_pos]]["category"]["index"]
+    # idx may be list (=positional) or dict
+    if isinstance(year_idx, dict):
+        year_pairs = list(year_idx.items())
+    else:
+        year_pairs = [(c, i) for i, c in enumerate(year_idx)]
+    if isinstance(month_idx, dict):
+        month_pairs = list(month_idx.items())
+    else:
+        month_pairs = [(c, i) for i, c in enumerate(month_idx)]
+
+    out = []
+    for ycode, ypos in year_pairs:
+        try:
+            yy = int(ycode)
+        except ValueError:
+            continue
+        for mcode, mpos in month_pairs:
+            mm_str = mcode.rstrip(".")
+            try:
+                mm = int(mm_str)
+            except ValueError:
+                continue
+            if mm < 1 or mm > 12:
+                continue
+            # Build flat index across all dims
+            indices = [0] * len(dim_ids)
+            indices[year_pos] = ypos
+            indices[month_pos] = mpos
+            flat = 0
+            stride = 1
+            for i in range(len(dim_ids) - 1, -1, -1):
+                flat += indices[i] * stride
+                stride *= sizes[i]
+            if 0 <= flat < len(values):
+                v = values[flat]
+                if v is not None:
+                    out.append((date(yy, mm, 1), float(v)))
+    return sorted(out)
+
+
 # === Croatia — DZS PxWeb (web.dzs.hr) ===
 
 HR_SERIES = [
@@ -779,6 +851,7 @@ COUNTRY_FETCHERS = {
     "stat_ee":  ("EE", EE_SERIES, "Statistics Estonia",                  "https://andmed.stat.ee"),
     "dzs_hr":   ("HR", HR_SERIES, "DZS Croatian Bureau of Statistics",   "https://web.dzs.hr"),
     "statbel":  ("BE", BE_SERIES, "Statbel (Belgium)",                   "https://statbel.fgov.be"),
+    "susr_sk":  ("SK", SK_SERIES, "Štatistický úrad SR (Slovakia)",      "https://slovak.statistics.sk"),
 }
 
 
@@ -967,6 +1040,24 @@ class NationalEUProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/BE (Statbel): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/BE: {e}")
+            time.sleep(0.3)
+
+        # Slovakia
+        for cfg in SK_SERIES:
+            try:
+                pairs = fetch_sk_datacube(cfg["dataset_id"], cfg["years"], cfg["coicop"], cfg["measure"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="SK",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="susr_sk", unit=cfg["unit"],
+                        series_id=f"SUSR/{cfg['dataset_id']}/{cfg['coicop']}/{cfg['measure']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/SK ({cfg['dataset_id']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/SK: {e}")
             time.sleep(0.3)
 
         # Croatia
