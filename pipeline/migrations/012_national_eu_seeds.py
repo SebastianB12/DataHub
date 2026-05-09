@@ -33,6 +33,8 @@ SEEDS = [
     ("EE", "inflation-cpi",         "stat_ee", "STATEE/IA002.px", "M", "Index (1997=100)", "NSA", 1.0, "Statistics Estonia IA002 CPI 1997=100, total"),
     # Croatia — direct from DZS PxWeb (web.dzs.hr)
     ("HR", "inflation-cpi",         "dzs_hr", "DZS/ME_PS09.px", "M", "Index (2025=100)", "NSA", 1.0, "DZS Croatia ME_PS09 CPI 2025=100, total ECOICOP v2"),
+    # Belgium — direct from Statbel REST API
+    ("BE", "inflation-cpi",         "statbel", "STATBEL/208b69bd", "M", "Index (2013=100)", "NSA", 1.0, "Statbel CPI base 2013=100 (last 13 months)"),
 ]
 
 

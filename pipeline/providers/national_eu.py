@@ -311,14 +311,42 @@ def _parse_ie_time(p: str, freq: str) -> date | None:
 # For inflation: search "consumer price index" — view ID encoded.
 
 BE_SERIES = [
-    # Belgium HICP via NBB Belgostat — NBB is the central bank but it serves data
-    # via stat.nbb.be. The reachable JSON API:
-    # https://stat.nbb.be/sdmx/V21/data/<dataset>/<key>
-    # Belgostat is HTML-only for some datasets. Use NBB Belgostat for HICP.
-    # Actually for Belgium HICP, Statbel publishes CSV at:
-    # https://statbel.fgov.be/sites/default/files/files/opendata/CPI/CPI%202024.csv
-    # We use NBB SDMX as primary since Statbel CSV requires year scraping.
+    # Statbel API via bestat.statbel.fgov.be — view ID for "Consumer price index,
+    # inflation, health index..." monthly. Gives ~13 months history.
+    {"slug": "inflation-cpi", "view_id": "208b69bd-05c5-4947-b7f9-2d2300f517b8",
+     "value_col": "Consumer price index",
+     "freq": "M", "unit": "Index (2013=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI base 2013=100, last 13 months"},
 ]
+
+
+def fetch_be_statbel_csv(view_id: str, value_col: str, freq: str = "M") -> list[tuple[date, float]]:
+    """Statbel publishes views as CSV. Year/Month columns + named value cols."""
+    import csv as csvm, io as iom
+    url = f"https://bestat.statbel.fgov.be/bestat/api/views/{view_id}/result/CSV"
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    reader = csvm.DictReader(iom.StringIO(r.text))
+    out = []
+    months_map = {"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,
+                  "July":7,"August":8,"September":9,"October":10,"November":11,"December":12}
+    for row in reader:
+        month_text = row.get("Month", "")
+        # "January 2025" -> 2025-01
+        try:
+            mname, ystr = month_text.rsplit(" ", 1)
+            yy = int(ystr)
+            mm = months_map[mname]
+            dt = date(yy, mm, 1)
+        except Exception:
+            continue
+        val_str = row.get(value_col, "").replace(",", "")
+        try:
+            val = float(val_str)
+        except ValueError:
+            continue
+        out.append((dt, val))
+    return sorted(out)
 
 
 def fetch_nbb_sdmx(dataset: str, key: str, freq: str = "M") -> list[tuple[date, float]]:
@@ -750,6 +778,7 @@ COUNTRY_FETCHERS = {
     "insse_ro": ("RO", RO_SERIES, "INSSE Romania",                       "https://insse.ro"),
     "stat_ee":  ("EE", EE_SERIES, "Statistics Estonia",                  "https://andmed.stat.ee"),
     "dzs_hr":   ("HR", HR_SERIES, "DZS Croatian Bureau of Statistics",   "https://web.dzs.hr"),
+    "statbel":  ("BE", BE_SERIES, "Statbel (Belgium)",                   "https://statbel.fgov.be"),
 }
 
 
@@ -920,6 +949,24 @@ class NationalEUProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/EE ({cfg['path'][-25:]}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/EE: {e}")
+            time.sleep(0.3)
+
+        # Belgium
+        for cfg in BE_SERIES:
+            try:
+                pairs = fetch_be_statbel_csv(cfg["view_id"], cfg["value_col"], cfg["freq"])
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="BE",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="statbel", unit=cfg["unit"],
+                        series_id=f"STATBEL/{cfg['view_id'][:8]}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/BE (Statbel): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/BE: {e}")
             time.sleep(0.3)
 
         # Croatia
