@@ -85,6 +85,18 @@ SERIES = [
 ]
 
 
+# Country-specific Balance of Payments — current account (BPS dataflow).
+# Key structure: M.{ADJUSTMENT=N}.{REF_AREA}.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL
+# Returns NSA monthly net current account in mill EUR; matches the value reported
+# by the respective national central bank (TE 'current-account' for HU/SK/RO uses
+# national CB figures, which are sourced from this ECB BPS dataflow).
+COUNTRY_CA_SERIES = [
+    ("HU", "M.N.HU.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"),
+    ("SK", "M.N.SK.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"),
+    ("RO", "M.N.RO.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"),
+]
+
+
 def _parse_period(period_str: str) -> date | None:
     """Parse ECB time period to date.
     Formats: '2024-03-15' (daily/business), '2026-W15' (weekly),
@@ -169,6 +181,26 @@ class EcbProvider(BaseProvider):
                 print(f"  OK {series['indicator']}: {len(raw)} periods x {len(targets)} countries")
             except Exception as e:
                 print(f"  FAIL {series['indicator']}: {e}")
+
+        # Country-specific BPS current-account (monthly, NSA, mill EUR).
+        for cc, key in COUNTRY_CA_SERIES:
+            try:
+                raw = _fetch_series("BPS", key)
+                sid = f"BPS/{key}"
+                for dt, value in raw:
+                    all_points.append(DataPoint(
+                        indicator="current-account",
+                        country=cc,
+                        date=dt,
+                        value=round(value, 2),
+                        source="ecb",
+                        unit="Million EUR",
+                        series_id=sid,
+                        adjustment="NSA",
+                    ))
+                print(f"  OK current-account/{cc}: {len(raw)} periods (BPS {key})")
+            except Exception as e:
+                print(f"  FAIL current-account/{cc}: {e}")
 
         return all_points
 

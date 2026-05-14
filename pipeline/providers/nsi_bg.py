@@ -4,9 +4,10 @@ files on behalf of NSI as part of Bulgaria's Special Data Dissemination
 Standard Plus participation).
 
 Source label: ``nsi_bg`` — the data is **produced by NSI** (National Statistical
-Institute, Bulgaria) for CPI / PPI / Employment, even though the file lives on
-www.bnb.bg/bnbweb/groups/public/documents/bnb_sdmx/. TE attributes the same
-indicators as "National Statistical Institute, Bulgaria".
+Institute, Bulgaria) for CPI / PPI / Employment / National Accounts / Industrial
+production. BoP series come from BNB (Bulgarian National Bank). TE attributes
+the same indicators as "National Statistical Institute, Bulgaria" or
+"Bulgarian National Bank".
 
 Why this endpoint and not NSI's SDMX-RI directly?
   * www.nsi.bg/sdmxwebclient/ exposes only ~20 dataflows (Tourism, Agriculture,
@@ -14,17 +15,24 @@ Why this endpoint and not NSI's SDMX-RI directly?
   * www.nsi.bg/restsdmx/sdmx.ashx is behind an F5 WAF that rejects every
     GET/POST with "Request Rejected" (support ID).
   * BNB's bnb_sdmx/ directory hosts the canonical SDDS Plus SDMX-ML 2.1
-    StructureSpecificData files: cpi.xml, ppi.xml, emp.xml, bop_bpm6.xml,
-    cgo.xml. These are refreshed monthly and contain the full history.
+    StructureSpecificData files: cpi.xml, ppi.xml, emp.xml, nag.xml, ind.xml,
+    bop_bpm6.xml, cgo.xml. These are refreshed monthly and contain the full
+    history.
 
 Endpoint: https://www.bnb.bg/bnbweb/groups/public/documents/bnb_sdmx/<topic>.xml
-Format:   SDMX-ML 2.1 StructureSpecific (IMF ECOFIN_DSD)
+Format:   SDMX-ML 2.1 StructureSpecific (IMF ECOFIN_DSD / ESTAT NA_MAIN / IMF BOP)
 Auth:     none required
 
 Verified 2026-05-09 (network test from this environment, public unauth):
-  cpi.xml   PCPI_IX  M  base 2025=100   1995-01..2026-03   375 obs
-  ppi.xml   PPPI_IX  M  base 2021=100   2005-01..2026-03   255 obs
-  emp.xml   LE_PE_NUM Q (UNIT_MULT=3, thousand persons)    2010-Q1..2025-Q4   64 obs
+  cpi.xml      PCPI_IX   M  base 2025=100   1995-01..2026-03   375 obs
+  ppi.xml      PPPI_IX   M  base 2021=100   2005-01..2026-03   255 obs
+  emp.xml      LE_PE_NUM Q  thousand persons 2010-Q1..2025-Q4    64 obs
+  ind.xml      AIP_IX    M  base 2021=100   2000-01..2026-03   315 obs
+  nag.xml      NA_MAIN   Q  mln BGN          2000-Q1..2025-Q4   104 obs/series
+  bop_bpm6.xml BOP       M  mln EUR         2007-01..2026-02   230 obs/series
+
+Quarterly NAG series are in BGN millions (UNIT_MULT=6, UNIT_MEASURE=XDC).
+BOP series are in EUR millions (UNIT_MULT=6, UNIT_MEASURE=EUR).
 """
 import os
 import re
@@ -46,8 +54,8 @@ HDR = {
     "Accept": "application/xml, text/xml",
 }
 
-# series mapping
-SERIES = [
+# Simple single-series files (one Series block per .xml)
+SIMPLE_SERIES = [
     {
         "slug": "inflation-cpi", "topic": "cpi", "freq": "M",
         "indicator_id": "PCPI_IX",
@@ -69,10 +77,56 @@ SERIES = [
         "indicator_id": "LE_PE_NUM",
         "unit": "Thousand",
         "adjustment": "NSA",
-        # SDMX UNIT_MULT="3" => 1e3 already-thousands. Values in file ~2800 = thousand persons.
         "conversion": 1.0,
         "note": "NSI Bulgaria Employed Persons (LE_PE_NUM), thousand persons, quarterly (NA basis), via BNB SDDS Plus SDMX",
     },
+    {
+        "slug": "industrial-production", "topic": "ind", "freq": "M",
+        "indicator_id": "AIP_IX",
+        "unit": "Index (2021=100)",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "NSI Bulgaria Industrial Production Index (AIP_IX) base 2021=100, monthly, via BNB SDDS Plus SDMX",
+    },
+]
+
+# NAG (National Accounts) — multi-series file. Match Series by STO/PRICES/ACTIVITY/REF_SECTOR.
+# UNIT_MEASURE=XDC (BGN), UNIT_MULT=6 (mln). Quarterly, current prices (PRICES=V).
+# Bulgaria's official currency is BGN (pegged 1.95583 BGN = 1 EUR).
+NAG_SERIES = [
+    # Household final consumption expenditure (P31, sector S1M)
+    {"slug": "consumer-spending", "match": {"STO": "P31", "PRICES": "V", "REF_SECTOR": "S1M"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG P31 Household final consumption expenditure (current prices, mln BGN)"},
+    # Government final consumption expenditure (P3, sector S13)
+    {"slug": "government-spending", "match": {"STO": "P3", "PRICES": "V", "REF_SECTOR": "S13"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG P3 General-government final consumption expenditure (current prices, mln BGN)"},
+    # Gross fixed capital formation (P51G)
+    {"slug": "gross-fixed-capital-formation", "match": {"STO": "P51G", "PRICES": "V"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG P51G Gross fixed capital formation (current prices, mln BGN)"},
+    # Changes in inventories (P5M)
+    {"slug": "changes-in-inventories", "match": {"STO": "P5M", "PRICES": "V"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG P5M Changes in inventories (current prices, mln BGN)"},
+    # Exports of goods + services (P6)
+    {"slug": "exports", "match": {"STO": "P6", "PRICES": "V"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG P6 Exports of goods and services (current prices, mln BGN)"},
+    # Imports of goods + services (P7)
+    {"slug": "imports", "match": {"STO": "P7", "PRICES": "V"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG P7 Imports of goods and services (current prices, mln BGN)"},
+]
+
+# BOP_BPM6 — multi-series file. Match by INT_ACC_ITEM + ACCOUNTING_ENTRY.
+# Source: Bulgarian National Bank (BNB). UNIT_MEASURE=EUR, UNIT_MULT=6 -> mln EUR.
+BOP_SERIES = [
+    # Current account balance (CA, accounting entry B = balance)
+    {"slug": "current-account", "match": {"INT_ACC_ITEM": "CA", "ACCOUNTING_ENTRY": "B"},
+     "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "BNB Bulgaria BOP BPM6 Current account balance (mln EUR, vis-à-vis World)"},
 ]
 
 
@@ -92,17 +146,16 @@ def _parse_period(p: str, freq: str) -> date | None:
     return None
 
 
-def _fetch_topic(topic: str, freq: str) -> list[tuple[date, float]]:
-    """Download the SDMX-ML StructureSpecific file and return (date, value) pairs.
-
-    The file uses message:DataSet > Series > Obs. We extract the first Series
-    block (each topic file contains exactly one series) and its observations.
-    """
+def _fetch_xml(topic: str) -> str:
     url = f"{BASE}/{topic}.xml"
     r = requests.get(url, headers=HDR, timeout=60)
     r.raise_for_status()
-    xml = r.text
-    # parse all <Obs TIME_PERIOD="..." OBS_VALUE="..." ...>
+    return r.text
+
+
+def _fetch_simple(topic: str, freq: str) -> list[tuple[date, float]]:
+    """Download single-series SDMX-ML file (cpi/ppi/emp/ind) and return obs."""
+    xml = _fetch_xml(topic)
     obs = re.findall(
         r'<Obs\s+TIME_PERIOD="([^"]+)"\s+OBS_VALUE="([^"]+)"',
         xml,
@@ -120,15 +173,49 @@ def _fetch_topic(topic: str, freq: str) -> list[tuple[date, float]]:
     return sorted(out)
 
 
+def _fetch_multi(topic: str, match: dict, freq: str) -> list[tuple[date, float]]:
+    """Download multi-series SDMX-ML file and return obs from the first Series
+    block whose attributes match every key/value in ``match``."""
+    xml = _fetch_xml(topic)
+    blocks = re.findall(r'<Series ([^>]+)>(.*?)</Series>', xml, flags=re.S)
+    for attrs, body in blocks:
+        ok = True
+        for k, v in match.items():
+            m = re.search(rf'{k}="([^"]+)"', attrs)
+            if not m or m.group(1) != v:
+                ok = False
+                break
+        if not ok:
+            continue
+        obs = re.findall(
+            r'TIME_PERIOD="([^"]+)"\s+OBS_VALUE="([^"]+)"',
+            body,
+        )
+        out: list[tuple[date, float]] = []
+        for per, val in obs:
+            dt = _parse_period(per, freq)
+            if dt is None:
+                continue
+            try:
+                fv = float(val)
+            except ValueError:
+                continue
+            out.append((dt, fv))
+        return sorted(out)
+    # No matching series block
+    return []
+
+
 class NsiBgProvider(BaseProvider):
     name = "nsi_bg"
     display_name = "NSI Bulgaria (via BNB SDDS Plus SDMX)"
 
     def fetch(self) -> list[DataPoint]:
         out: list[DataPoint] = []
-        for cfg in SERIES:
+        # Simple single-series files
+        for cfg in SIMPLE_SERIES:
             try:
-                pairs = _fetch_topic(cfg["topic"], cfg["freq"])
+                pairs = _fetch_simple(cfg["topic"], cfg["freq"])
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"],
@@ -143,6 +230,47 @@ class NsiBgProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/BG ({cfg['indicator_id']}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/BG ({cfg['indicator_id']}): {e}")
+
+        # NAG multi-series file (quarterly national accounts)
+        for cfg in NAG_SERIES:
+            try:
+                pairs = _fetch_multi("nag", cfg["match"], "Q")
+                tag = "/".join(f"{k}={v}" for k, v in cfg["match"].items())
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"],
+                        country="BG",
+                        date=normalize_date(dt, "Q"),
+                        value=round(v * cfg["conversion"], 4),
+                        source="nsi_bg",
+                        unit=cfg["unit"],
+                        series_id=f"NSI-BG/NAG/{cfg['match'].get('STO','?')}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/BG (NAG {tag}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/BG (NAG): {e}")
+
+        # BOP_BPM6 multi-series file (monthly balance of payments, BNB)
+        for cfg in BOP_SERIES:
+            try:
+                pairs = _fetch_multi("bop_bpm6", cfg["match"], "M")
+                tag = "/".join(f"{k}={v}" for k, v in cfg["match"].items())
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"],
+                        country="BG",
+                        date=normalize_date(dt, "M"),
+                        value=round(v * cfg["conversion"], 4),
+                        source="nsi_bg",
+                        unit=cfg["unit"],
+                        series_id=f"NSI-BG/BOP/{cfg['match'].get('INT_ACC_ITEM','?')}_{cfg['match'].get('ACCOUNTING_ENTRY','?')}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/BG (BOP {tag}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/BG (BOP): {e}")
+
         return out
 
 

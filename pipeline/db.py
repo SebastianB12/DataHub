@@ -11,26 +11,41 @@ supabase = create_client(
 )
 
 
+import math
+
+
 def datapoints_to_rows(points: list) -> list[dict]:
     """Convert DataPoint objects to dicts for Supabase upsert.
 
     adjustment is always stored as a non-null string ("" for unspecified).
     Postgres unique constraints treat NULL as distinct, so NULL here would
     break upsert and produce duplicate rows per (indicator, country, date, source).
+
+    NaN/inf values are skipped (some upstream APIs publish these as placeholders
+    for missing observations; PostgREST rejects them as JSON-non-compliant).
     """
-    return [
-        {
+    rows: list[dict] = []
+    for p in points:
+        v = p.value
+        if v is None:
+            continue
+        try:
+            fv = float(v)
+        except (TypeError, ValueError):
+            continue
+        if not math.isfinite(fv):
+            continue
+        rows.append({
             "indicator": p.indicator,
             "country": p.country,
             "date": p.date.isoformat(),
-            "value": p.value,
+            "value": fv,
             "source": p.source,
             "unit": p.unit or None,
             "series_id": p.series_id or None,
             "adjustment": p.adjustment or "",
-        }
-        for p in points
-    ]
+        })
+    return rows
 
 
 def upsert_data_points(points: list[dict]) -> int:

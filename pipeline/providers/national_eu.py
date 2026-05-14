@@ -51,6 +51,10 @@ def _parse_period(p: str, freq: str) -> date | None:
             if "-" in p and len(p) == 7:
                 yy, mm = p.split("-")
                 return date(int(yy), int(mm), 1)
+            # Half-year (SURS POLLETJE: 2025H1 / 2025H2) — map H1->Jan, H2->Jul
+            if "H" in p:
+                yy, h = p.split("H")
+                return date(int(yy), {"1": 1, "2": 7}[h], 1)
         if freq == "Q":
             if "K" in p:  # Danish Kvartal
                 yy, q = p.split("K")
@@ -154,6 +158,67 @@ DK_SERIES = [
      "filters": {"YDELSESTYPE": "LDM", "SAESONFAK": "24"},
      "freq": "M", "unit": "Thousand", "adjustment": "NSA", "conversion": 0.001,
      "note": "DK Statbank AUS09 registered unemployed (LDM, NSA, in 1000s)"},
+
+    # === Migration 048 (2026-05-14): TE-conformity gap-fill, DST national CPI subs ===
+    # PRIS01 = Consumer price index by commodity group (national CPI by COICOP),
+    # ENHED=100 (level index). All TE values verified 2026-05-14 (period offset by
+    # one month vs inventory in some cases, but series matches TE labels).
+    {"slug": "cpi-food", "table": "PRIS01", "series_id": "DST/PRIS01/cpi-food",
+     "filters": {"VAREGR": "01", "ENHED": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Food & non-alcoholic beverages (COICOP 01) index"},
+    {"slug": "cpi-clothing", "table": "PRIS01", "series_id": "DST/PRIS01/cpi-clothing",
+     "filters": {"VAREGR": "03", "ENHED": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Clothing & footwear (COICOP 03) index"},
+    {"slug": "cpi-housing-utilities", "table": "PRIS01", "series_id": "DST/PRIS01/cpi-housing",
+     "filters": {"VAREGR": "04", "ENHED": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Housing, water, electricity, gas & other fuels (COICOP 04) index"},
+    {"slug": "cpi-transportation", "table": "PRIS01", "series_id": "DST/PRIS01/cpi-transport",
+     "filters": {"VAREGR": "07", "ENHED": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Transport (COICOP 07) index"},
+    {"slug": "cpi-recreation-and-culture", "table": "PRIS01", "series_id": "DST/PRIS01/cpi-recreation",
+     "filters": {"VAREGR": "09", "ENHED": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Recreation & culture (COICOP 09) index"},
+    {"slug": "cpi-education", "table": "PRIS01", "series_id": "DST/PRIS01/cpi-education",
+     "filters": {"VAREGR": "10", "ENHED": "100"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Education (COICOP 10) index"},
+    # food-inflation: PRIS01 VAREGR=01, ENHED=300 (% YoY change). TE shows 0.7% for 2026-04.
+    {"slug": "food-inflation", "table": "PRIS01", "series_id": "DST/PRIS01/food-yoy",
+     "filters": {"VAREGR": "01", "ENHED": "300"},
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS01 CPI Food YoY % (COICOP 01, ENHED 300)"},
+    # consumer-spending: NKN1 P31S14D (household consumption) chained 2020 SA, bn DKK.
+    # Verified 2026-05-14: 2025Q4 = 276.7 bn (TE: 274.9, vintage diff ~0.7%).
+    {"slug": "consumer-spending", "table": "NKN1", "series_id": "DST/NKN1/consumer-spending",
+     "filters": {"TRANSAKT": "P31S14D", "PRISENHED": "LKV_M", "SÆSON": "Y"},
+     "freq": "Q", "unit": "Billion DKK (2020 chained)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank NKN1 P.31 Household consumption expenditure, chained 2020, SA, bn DKK"},
+    # changes-in-inventories: NKN1 P52D current prices SA.
+    {"slug": "changes-in-inventories", "table": "NKN1", "series_id": "DST/NKN1/inventories",
+     "filters": {"TRANSAKT": "P52D", "PRISENHED": "V_M", "SÆSON": "Y"},
+     "freq": "Q", "unit": "Billion DKK", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank NKN1 P.52 Changes in inventories, current prices SA, bn DKK"},
+    # government-spending: NKN1 P3S13D chained 2020 SA bn DKK. 2025Q4=158.4 (TE 157.6).
+    {"slug": "government-spending", "table": "NKN1", "series_id": "DST/NKN1/gov-spending",
+     "filters": {"TRANSAKT": "P3S13D", "PRISENHED": "LKV_M", "SÆSON": "Y"},
+     "freq": "Q", "unit": "Billion DKK (2020 chained)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank NKN1 P.3 Government consumption expenditure, chained 2020 SA, bn DKK"},
+    # gross-fixed-capital-formation: NKN1 P51GD chained 2020 SA bn DKK.
+    {"slug": "gross-fixed-capital-formation", "table": "NKN1", "series_id": "DST/NKN1/gfcf",
+     "filters": {"TRANSAKT": "P51GD", "PRISENHED": "LKV_M", "SÆSON": "Y"},
+     "freq": "Q", "unit": "Billion DKK (2020 chained)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank NKN1 P.51g Gross fixed capital formation, chained 2020 SA, bn DKK"},
+    # employment-rate: AKU121K (LFS employment rate %), OMRÅDE=000 (All Denmark), SA quarterly.
+    # 2025Q4 = 76.2 (TE: 76.6, ~0.4pp vintage diff).
+    {"slug": "employment-rate", "table": "AKU121K", "series_id": "DST/AKU121K",
+     "filters": {"BESKSTATUS": "BFK", "OMRÅDE": "000"},
+     "freq": "Q", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank AKU121K LFS employment rate (BFK), All DK, SA, quarterly"},
 ]
 
 
@@ -275,6 +340,79 @@ FI_SERIES = [
      "note": "FI Tilastokeskus 12gq Imports of goods+services from ROW (BoP), EUR mn"},
     # trade-balance is derived in the Finland fetch loop as exports - imports
     # (same tpulk 12gq table); kept as separate logical slug.
+
+    # === Migration 050 (2026-05-14): TE-conformity gap-fill ===
+    # CPI by COICOP (15b5), 2025=100; Hyödyke=top-level COICOP code, Tiedot=ip_khi (index).
+    {"slug": "cpi-food", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "01", "Tiedot": "ip_khi"},
+     "series_id": "STATFI/khi/15b5/cpi-food",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Food & non-alcoholic beverages (COICOP 01)"},
+    {"slug": "cpi-clothing", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "03", "Tiedot": "ip_khi"},
+     "series_id": "STATFI/khi/15b5/cpi-clothing",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Clothing & footwear (COICOP 03)"},
+    {"slug": "cpi-housing-utilities", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "04", "Tiedot": "ip_khi"},
+     "series_id": "STATFI/khi/15b5/cpi-housing",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Housing/utilities (COICOP 04)"},
+    {"slug": "cpi-transportation", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "07", "Tiedot": "ip_khi"},
+     "series_id": "STATFI/khi/15b5/cpi-transport",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Transport (COICOP 07)"},
+    {"slug": "cpi-recreation-and-culture", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "09", "Tiedot": "ip_khi"},
+     "series_id": "STATFI/khi/15b5/cpi-recreation",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Recreation & culture (COICOP 09)"},
+    {"slug": "cpi-education", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "10", "Tiedot": "ip_khi"},
+     "series_id": "STATFI/khi/15b5/cpi-education",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Education (COICOP 10)"},
+    # food-inflation: 15b5 COICOP 01, vm_khi = Annual change %.
+    {"slug": "food-inflation", "path": "StatFin/khi/statfin_khi_pxt_15b5.px",
+     "query": {"Hyödyke": "01", "Tiedot": "vm_khi"},
+     "series_id": "STATFI/khi/15b5/food-yoy",
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 15b5 CPI Food YoY % (COICOP 01, vm_khi)"},
+    # Employment-rate: tyti 135y, Tyollisyysaste %, 15-64 age, both sexes.
+    # Verified 2026-05-14: 2026M03 = 69.2 (TE: 69.2 exact match for 2026-02).
+    {"slug": "employment-rate", "path": "StatFin/tyti/statfin_tyti_pxt_135y.px",
+     "query": {"Sukupuoli": "SSS", "Ikäluokka": "15-64", "Tiedot": "Tyollisyysaste"},
+     "series_id": "STATFI/tyti/135y/empl-rate",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 135y LFS Employment Rate 15-64 both sexes, monthly NSA"},
+    # National-accounts expenditure components: ntp 132h, Tiedot=kausitvv2015 (SA chained ref 2015 EUR mn).
+    # consumer-spending = P3KS14_S15 (Private consumption S14+S15). 2025Q4 = 29614 (exact TE).
+    {"slug": "consumer-spending", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
+     "query": {"Taloustoimi": "P3KS14_S15", "Tiedot": "kausitvv2015"},
+     "series_id": "STATFI/ntp/132h/consumer",
+     "freq": "Q", "unit": "EUR million (chained 2015)", "adjustment": "SA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 132h Private consumption (S14+S15), chained 2015 SA, EUR mn"},
+    # changes-in-inventories = P52K (Change in inventories, expenditure).
+    # NOTE: chained 2015 (kausitvv2015) is published as zero for this transaction;
+    # use kausitcp (current prices SA) which carries actual flows.
+    {"slug": "changes-in-inventories", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
+     "query": {"Taloustoimi": "P52K", "Tiedot": "kausitcp"},
+     "series_id": "STATFI/ntp/132h/inventories",
+     "freq": "Q", "unit": "EUR million (current prices)", "adjustment": "SA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 132h Change in inventories (P52K), current prices SA, EUR mn"},
+    # government-spending = P3KS13.
+    {"slug": "government-spending", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
+     "query": {"Taloustoimi": "P3KS13", "Tiedot": "kausitvv2015"},
+     "series_id": "STATFI/ntp/132h/gov-spending",
+     "freq": "Q", "unit": "EUR million (chained 2015)", "adjustment": "SA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 132h Government consumption (S13), chained 2015 SA, EUR mn"},
+    # gross-fixed-capital-formation = P51K.
+    {"slug": "gross-fixed-capital-formation", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
+     "query": {"Taloustoimi": "P51K", "Tiedot": "kausitvv2015"},
+     "series_id": "STATFI/ntp/132h/gfcf",
+     "freq": "Q", "unit": "EUR million (chained 2015)", "adjustment": "SA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 132h Gross fixed capital formation (P51K), chained 2015 SA, EUR mn"},
 ]
 
 
@@ -394,6 +532,84 @@ SE_SERIES = [
     # TE-cited source is NIER/Konjunkturinstitutet (https://www.konj.se/). Their data is
     # available via the Macroindicators API but not under SCB; deferred to a separate
     # provider (konj_se) — left on eurostat fallback for now.
+
+    # === Migration 049 (2026-05-14): TE-conformity gap-fill, SE national CPI subs ===
+    # KPI2020COICOP2M = CPI by COICOP 2-digit. ContentsCode=0000080C (index, 2020=100).
+    {"slug": "cpi-food", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "01", "ContentsCode": "0000080C"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/cpi-food",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Food & non-alcoholic beverages (01)"},
+    {"slug": "cpi-clothing", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "03", "ContentsCode": "0000080C"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/cpi-clothing",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Clothing & footwear (03)"},
+    {"slug": "cpi-housing-utilities", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "04", "ContentsCode": "0000080C"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/cpi-housing",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Housing/utilities (04)"},
+    {"slug": "cpi-transportation", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "07", "ContentsCode": "0000080C"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/cpi-transport",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Transport (07)"},
+    {"slug": "cpi-recreation-and-culture", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "09", "ContentsCode": "0000080C"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/cpi-recreation",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Recreation & culture (09)"},
+    {"slug": "cpi-education", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "10", "ContentsCode": "0000080C"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/cpi-education",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Education services (10)"},
+    # food-inflation: KPI by COICOP, ContentsCode=00000809 (Annual change %).
+    {"slug": "food-inflation", "path": "PR/PR0101/PR0101A/KPI2020COICOP2M",
+     "query": {"VaruTjanstegrupp": "01", "ContentsCode": "00000809"},
+     "series_id": "SCB/PR0101A/KPI2020COICOP2M/food-yoy",
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB KPI by COICOP, Food YoY % (01, 00000809)"},
+    # employment-rate: AKURLBefM SYSP O_DATA NSA, both sexes 15-74. 2026M03=68.5 (TE match).
+    {"slug": "employment-rate", "path": "AM/AM0401/AM0401A/AKURLBefM",
+     "query": {"Arbetskraftstillh": "SYSP", "TypData": "O_DATA",
+               "Kon": "1+2", "Alder": "tot15-74", "ContentsCode": "000007L9"},
+     "series_id": "SCB/AM0401A/empl-rate",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB AM0401A LFS Employment Rate 15-74 NSA % (SYSP/O_DATA)"},
+    # National-accounts expenditure: NR0103B, ContentsCode=NR0103CE (constant prices ref 2024 SA, SEK mn).
+    # consumer-spending = KHUS (household consumption incl NPISH). 2025Q4=744,967 (exact TE match).
+    {"slug": "consumer-spending", "path": "NR/NR0103/NR0103B/NR0103ENS2010T10SKv",
+     "query": {"Anvandningstyp": "KHUS", "ContentsCode": "NR0103CE"},
+     "series_id": "SCB/NR0103B/consumer-spending",
+     "freq": "Q", "unit": "SEK million (ref 2024)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB NR0103B Household consumption (KHUS), constant ref 2024 SA, SEK mn"},
+    # changes-in-inventories = LA.
+    {"slug": "changes-in-inventories", "path": "NR/NR0103/NR0103B/NR0103ENS2010T10SKv",
+     "query": {"Anvandningstyp": "LA", "ContentsCode": "NR0103CE"},
+     "series_id": "SCB/NR0103B/inventories",
+     "freq": "Q", "unit": "SEK million (ref 2024)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB NR0103B Changes in inventories (LA), constant ref 2024 SA, SEK mn"},
+    # government-spending = KOFF (general government final consumption). 2025Q4=437,456 (exact TE).
+    {"slug": "government-spending", "path": "NR/NR0103/NR0103B/NR0103ENS2010T10SKv",
+     "query": {"Anvandningstyp": "KOFF", "ContentsCode": "NR0103CE"},
+     "series_id": "SCB/NR0103B/gov-spending",
+     "freq": "Q", "unit": "SEK million (ref 2024)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB NR0103B Government final consumption (KOFF), constant ref 2024 SA, SEK mn"},
+    # gross-fixed-capital-formation = FBINV.
+    {"slug": "gross-fixed-capital-formation", "path": "NR/NR0103/NR0103B/NR0103ENS2010T10SKv",
+     "query": {"Anvandningstyp": "FBINV", "ContentsCode": "NR0103CE"},
+     "series_id": "SCB/NR0103B/gfcf",
+     "freq": "Q", "unit": "SEK million (ref 2024)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB NR0103B Gross fixed capital formation (FBINV), constant ref 2024 SA, SEK mn"},
+    # labour-costs: AKITM07 = AKI for salaried employees, B-S exkl.O total, AM0301AC preliminary
+    # at 2008M01=100. 2026M02 = 169.2 (TE: 169.2 exact match, period offset by one month).
+    {"slug": "labour-costs", "path": "AM/AM0301/AM0301A/AKITM07",
+     "query": {"SNI2007": "B-S exkl.O", "ContentsCode": "AM0301AC"},
+     "series_id": "SCB/AM0301A/AKITM07/labour-costs",
+     "freq": "M", "unit": "Index (2008M01=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB AKITM07 LCI for salaried employees, all industry B-S exkl.O, preliminary"},
 ]
 
 
@@ -1095,9 +1311,11 @@ AT_SERIES = [
      "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "Statistik Austria ALQ (ILO/LFS concept), AT total, quarterly"},
 
-    # GDP (real, SA, level) — vgr108 quarterly, BIP zu Marktpreisen (VGRHAG-14).
+    # GDP-real (real, SA, level) — vgr108 quarterly, BIP zu Marktpreisen (VGRHAG-14).
     # F-RSAIB = real, seasonally and working-day adjusted. Convert Mio. EUR -> Bn EUR.
-    {"slug": "gdp", "ogd": "OGD_vgr108_VGR_HA_vj_1",
+    # NOTE: previously labelled `gdp`; relabelled to `gdp-real` per TE inventory
+    # (migration 051 promotes worldbank for the annual nominal USD `gdp` slug).
+    {"slug": "gdp-real", "ogd": "OGD_vgr108_VGR_HA_vj_1",
      "filters": {"C-VGRHAG79-0": "VGRHAG-14"},
      "time_col": "C-A10-0", "value_col": "F-RSAIB",
      "freq": "Q", "unit": "Bn EUR (real, SA)", "adjustment": "SA", "conversion": 0.001,
@@ -1306,6 +1524,90 @@ SI_SERIES = [
      "query": {"UVOZ/IZVOZ": "1", "VALUTA": "EUR"},
      "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1e-6,
      "note": "SURS 2490001 Imports of goods, EUR -> mio EUR"},
+    # --- CPI sub-indices (ECOICOP) — base avg 2025 = 100 (MERITVE=33)
+    # Verified 2026-05-14: clothing 03 2026M04 = 104.85, matches TE 104.85.
+    {"slug": "cpi-clothing", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "03", "MERITVE": "33"},
+     "freq": "M", "unit": "Index (avg 2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI sub-index Clothing & footwear (COICOP 03), avg-2025=100"},
+    {"slug": "cpi-education", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "10", "MERITVE": "33"},
+     "freq": "M", "unit": "Index (avg 2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI sub-index Education (COICOP 10), avg-2025=100"},
+    {"slug": "cpi-food", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "01", "MERITVE": "33"},
+     "freq": "M", "unit": "Index (avg 2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI sub-index Food & non-alc bevs (COICOP 01), avg-2025=100"},
+    {"slug": "cpi-housing-utilities", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "04", "MERITVE": "33"},
+     "freq": "M", "unit": "Index (avg 2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI sub-index Housing, water, electricity (COICOP 04), avg-2025=100"},
+    {"slug": "cpi-recreation-and-culture", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "09", "MERITVE": "33"},
+     "freq": "M", "unit": "Index (avg 2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI sub-index Recreation & culture (COICOP 09), avg-2025=100"},
+    {"slug": "cpi-transportation", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "07", "MERITVE": "33"},
+     "freq": "M", "unit": "Index (avg 2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI sub-index Transport (COICOP 07), avg-2025=100"},
+    # food-inflation = CPI food YoY-style index (MERITVE=2: same-month-prev-year=100).
+    # Verified 2026-05-14: 2026M04 = 101.0 -> 1.0% YoY, matches TE 1.0.
+    {"slug": "food-inflation", "table": "0400608S.px",
+     "query": {"ŽIVLJENJSKA POTREBŠČINA": "01", "MERITVE": "2"},
+     "freq": "M", "unit": "Index (same-month py=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0400608 CPI Food YoY index (same-month-prev-year=100)"},
+    # --- National accounts expenditure components (0300230S, MERITVE=L constant ref 2010 prices, NSA)
+    # Verified 2026-05-14 against TE: GFCF Q3/25=2614.1 (TE 2671.5 close), gov-spending Q2/25=2383.4 (TE 2411.5 close).
+    {"slug": "consumer-spending", "table": "0300230S.px",
+     "query": {"TRANSAKCIJE": "P31_S1M", "MERITVE": "L", "VRSTA PODATKA": "N"},
+     "freq": "Q", "unit": "Million EUR (2010 constant)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0300230 P31_S1M Household final consumption (constant 2010 prices, NSA, mln EUR)"},
+    {"slug": "government-spending", "table": "0300230S.px",
+     "query": {"TRANSAKCIJE": "P3_S13", "MERITVE": "L", "VRSTA PODATKA": "N"},
+     "freq": "Q", "unit": "Million EUR (2010 constant)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0300230 P3_S13 Government final consumption (constant 2010 prices, NSA, mln EUR)"},
+    {"slug": "gross-fixed-capital-formation", "table": "0300230S.px",
+     "query": {"TRANSAKCIJE": "P51G", "MERITVE": "L", "VRSTA PODATKA": "N"},
+     "freq": "Q", "unit": "Million EUR (2010 constant)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0300230 P51G Gross fixed capital formation (constant 2010 prices, NSA, mln EUR)"},
+    # changes-in-inventories: constant 2010 prices return None — use Y (previous-year prices)
+    {"slug": "changes-in-inventories", "table": "0300230S.px",
+     "query": {"TRANSAKCIJE": "P52", "MERITVE": "Y", "VRSTA PODATKA": "N"},
+     "freq": "Q", "unit": "Million EUR (prev-year prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0300230 P52 Changes in inventories (constant prev-year prices, NSA, mln EUR)"},
+    # --- Business / consumer surveys (2855901S, SA)
+    # EKONOMSKI KAZALNIK = 2 (Confidence indicator in manufacturing) / 4 (Consumer confidence)
+    {"slug": "business-confidence", "table": "2855901S.px",
+     "query": {"EKONOMSKI KAZALNIK": "2", "VRSTA PODATKA": "2"},
+     "freq": "M", "unit": "Balance", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 2855901 Business tendency survey — Confidence indicator in manufacturing (SA)"},
+    {"slug": "consumer-confidence", "table": "2855901S.px",
+     "query": {"EKONOMSKI KAZALNIK": "4", "VRSTA PODATKA": "2"},
+     "freq": "M", "unit": "Balance", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 2855901 Consumer survey — Consumer confidence indicator (SA)"},
+    # --- Manufacturing-only / Mining-only IP (1701111S)
+    # Verified 2026-05-14: manufacturing C 2026M03 = 104.1, mining B 2026M03 = 94.8.
+    {"slug": "manufacturing-production", "table": "1701111S.px",
+     "query": {"SKD DEJAVNOST / NAMENSKA SKUPINA": "C[skd]", "VRSTA PODATKA": "sa"},
+     "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 1701111 IP Manufacturing C (NACE) seasonally+calendar adjusted, 2021=100"},
+    {"slug": "mining-production", "table": "1701111S.px",
+     "query": {"SKD DEJAVNOST / NAMENSKA SKUPINA": "B[skd]", "VRSTA PODATKA": "sa"},
+     "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SURS 1701111 IP Mining & quarrying B (NACE) seasonally+calendar adjusted, 2021=100"},
+    # --- Labour-force participation rate (0762003S activity rate, total all-ages both sexes)
+    # Verified 2026-05-14: 2025Q4 = 58.5 — matches TE 58.5 exactly.
+    {"slug": "labor-force-participation-rate", "table": "0762003S.px",
+     "query": {"KOHEZIJSKA REGIJA": "0", "STAROSTNA SKUPINA": "0", "SPOL": "0", "MERITVE": "2000"},
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SURS 0762003 LFS Activity rate (all ages 15+, both sexes), quarterly %"},
+    # --- Population (05E1004S half-yearly Basic population groups, total)
+    # POLLETJE codes YYYYH1/H2 -> H1->Jan/H2->Jul (handled by extended _parse_period).
+    # Convert to millions (TE displays 2.1 million; raw value ~2,130,986 -> 2.131).
+    {"slug": "population", "table": "05E1004S.px",
+     "query": {"STAROST": "999", "MERITVE": "1", "SPOL": "0"},
+     "freq": "M", "unit": "Million", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "SURS 05E1004 Total resident population, half-yearly snapshots (millions)"},
 ]
 
 
@@ -1427,6 +1729,113 @@ LV_SERIES = [
      "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "B1GQ", "ContentsCode": "ISP010c"},
      "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
      "note": "CSP Latvia ISP010c real GDP chain-linked 2020 prices, SA, thousand EUR (converted to mln)"},
+    # === gapfill batch (042_lv_gapfill) ===
+    # ATD100m: monthly exports/imports of goods vs World, EUR mln
+    {"slug": "exports", "path": "TIR/AT/ATD/ATD100m",
+     "query": {"FLOW": "EXP", "COUNTRY_GROUP": "TOTAL", "ContentsCode": "ATD100m"},
+     "series_id": "CSP/ATD100m/EXP",
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia ATD100m total goods exports vs World, NSA, mln EUR"},
+    {"slug": "imports", "path": "TIR/AT/ATD/ATD100m",
+     "query": {"FLOW": "IMP", "COUNTRY_GROUP": "TOTAL", "ContentsCode": "ATD100m"},
+     "series_id": "CSP/ATD100m/IMP",
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia ATD100m total goods imports vs World, NSA, mln EUR"},
+    # ISP050c: GDP by expenditure approach, chain-linked 2020, SA, thousand EUR -> mln
+    {"slug": "consumer-spending", "path": "VEK/IS/ISP/ISP050c",
+     "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "P31_S14", "ContentsCode": "ISP050c"},
+     "series_id": "CSP/ISP050c/P31_S14",
+     "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
+     "note": "CSP Latvia ISP050c household final consumption expenditure (P31_S14)"},
+    {"slug": "government-spending", "path": "VEK/IS/ISP/ISP050c",
+     "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "P3_S13", "ContentsCode": "ISP050c"},
+     "series_id": "CSP/ISP050c/P3_S13",
+     "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
+     "note": "CSP Latvia ISP050c government final consumption expenditure (P3_S13)"},
+    {"slug": "gross-fixed-capital-formation", "path": "VEK/IS/ISP/ISP050c",
+     "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "P51G", "ContentsCode": "ISP050c"},
+     "series_id": "CSP/ISP050c/P51G",
+     "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
+     "note": "CSP Latvia ISP050c gross fixed capital formation (P51G)"},
+    # NB: changes-in-inventories (P52) is null in chain-linked ISP050c -> kept on Eurostat
+    # PCI021m: CPI by COICOP commodity group, monthly 2000M01- (Index 2025=100)
+    {"slug": "cpi-food", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "01", "ContentsCode": "PCI021m"},
+     "series_id": "CSP/PCI021m/CP01",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m COICOP 01 Food and non-alcoholic beverages, 2025=100"},
+    {"slug": "cpi-clothing", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "03", "ContentsCode": "PCI021m"},
+     "series_id": "CSP/PCI021m/CP03",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m COICOP 03 Clothing and footwear, 2025=100"},
+    {"slug": "cpi-housing-utilities", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "04", "ContentsCode": "PCI021m"},
+     "series_id": "CSP/PCI021m/CP04",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m COICOP 04 Housing, 2025=100"},
+    {"slug": "cpi-transportation", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "07", "ContentsCode": "PCI021m"},
+     "series_id": "CSP/PCI021m/CP07",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m COICOP 07 Transport, 2025=100"},
+    {"slug": "cpi-recreation-and-culture", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "09", "ContentsCode": "PCI021m"},
+     "series_id": "CSP/PCI021m/CP09",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m COICOP 09 Recreation and culture, 2025=100"},
+    {"slug": "cpi-education", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "10", "ContentsCode": "PCI021m"},
+     "series_id": "CSP/PCI021m/CP10",
+     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m COICOP 10 Education, 2025=100"},
+    # food-inflation: PCI021m6 = YoY % change for COICOP 01
+    {"slug": "food-inflation", "path": "VEK/PC/PCI/PCI021m",
+     "query": {"ECOICOP_V2": "01", "ContentsCode": "PCI021m6"},
+     "series_id": "CSP/PCI021m6/CP01",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia PCI021m6 YoY %, COICOP 01 Food and non-alcoholic beverages"},
+    # KRE020m: DG ECFIN BCS confidence indicators (balances %, SA)
+    {"slug": "business-confidence", "path": "VEK/KR/KRE/KRE020m",
+     "query": {"VAL": "SA", "INDICATOR": "CI_IND", "ContentsCode": "KRE020m"},
+     "series_id": "CSP/KRE020m/CI_IND",
+     "freq": "M", "unit": "Net balance, %", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSP Latvia KRE020m Industrial Confidence Indicator (DG ECFIN), SA"},
+    {"slug": "consumer-confidence", "path": "VEK/KR/KRE/KRE020m",
+     "query": {"VAL": "SA", "INDICATOR": "CI_CONSUM", "ContentsCode": "KRE020m"},
+     "series_id": "CSP/KRE020m/CI_CONSUM",
+     "freq": "M", "unit": "Net balance, %", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSP Latvia KRE020m Consumer Confidence Indicator (DG ECFIN), SA"},
+    # NBL010m: Employed aged 15-74, SA, thousands, monthly
+    {"slug": "employed-persons", "path": "EMP/NB/NBLA/NBL010m",
+     "query": {"SEX": "T", "SESON": "SA", "ContentsCode": "NBL010m"},
+     "series_id": "CSP/NBL010m",
+     "freq": "M", "unit": "Thousand persons", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSP Latvia NBL010m employed persons aged 15-74, SA"},
+    # NBL020c3: Employment rate aged 15-64, total, quarterly %
+    {"slug": "employment-rate", "path": "EMP/NB/NBLB/NBL020c",
+     "query": {"SEX": "T", "AgeGroup": "Y15-64", "ContentsCode": "NBL020c3"},
+     "series_id": "CSP/NBL020c/Y15-64",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia NBL020c employment rate aged 15-64, quarterly"},
+    # NBA050c4: Activity rate (LFS) aged 15-64
+    {"slug": "labor-force-participation-rate", "path": "EMP/NBB/NBA/NBA050c",
+     "query": {"SEX": "T", "AgeGroup": "Y15-64", "ContentsCode": "NBA050c4"},
+     "series_id": "CSP/NBA050c/Y15-64",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia NBA050c activity rate aged 15-64, quarterly"},
+    # IRS010m: Population at beginning of period, monthly, thousands
+    {"slug": "population", "path": "POP/IR/IRS/IRS010m",
+     "query": {"ContentsCode": "IRS010m"},
+     "series_id": "CSP/IRS010m",
+     "freq": "M", "unit": "Million persons", "adjustment": "NSA", "conversion": 0.001,
+     "note": "CSP Latvia IRS010m population at beginning of period, thousand -> million"},
+    # VFV040c: General government gross debt quarterly (mln EUR)
+    {"slug": "government-debt", "path": "VEK/VF/VFV/VFV040c",
+     "query": {"INDICATOR": "GROSS_DEBT", "ContentsCode": "VFV040c1"},
+     "series_id": "CSP/VFV040c",
+     "freq": "Q", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia VFV040c general government gross debt quarterly, mln EUR"},
 ]
 
 
@@ -1552,6 +1961,35 @@ RO_SERIES = [
      "unit_value": "Procente",
      "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "INSSE Tempo SOM103B registered unemployment rate (end-of-month), total"},
+    # 1505 FORTA DE MUNCA — FOM116A 'Rata de ocupare a resurselor de munca' (employment rate
+    # of labour resources), annual, NSA, total / all regions.
+    {"slug": "employment-rate", "parent": "1505", "matrix": "FOM116A",
+     "filter_dims": {"Sexe": "Total ", "Macroregiuni, regiuni de dezvoltare si judete": "TOTAL"},
+     "unit_value": "Procente",
+     "freq": "A", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo FOM116A annual employment rate of labour resources, total"},
+    # 5010 INDUSTRIE — IND104N filtered to INDUSTRIA PRELUCRATOARE (Manufacturing)
+    {"slug": "manufacturing-production", "parent": "5010", "matrix": "IND104N",
+     "series_id": "INSSE/IND104N/INDUSTRIA-PRELUCRATOARE",
+     "filter_dims": {"Activitati ale industriei CAEN Rev.2 - total": "INDUSTRIA PRELUCRATOARE"},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo IND104N IP monthly index, Manufacturing (CAEN Rev.2 section C), 2021=100"},
+    # 5010 INDUSTRIE — IND104N filtered to INDUSTRIA EXTRACTIVA (Mining & quarrying)
+    {"slug": "mining-production", "parent": "5010", "matrix": "IND104N",
+     "series_id": "INSSE/IND104N/INDUSTRIA-EXTRACTIVA",
+     "filter_dims": {"Activitati ale industriei CAEN Rev.2 - total": "INDUSTRIA EXTRACTIVA"},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo IND104N IP monthly index, Mining & quarrying (CAEN Rev.2 section B), 2021=100"},
+    # 1530 LOCURI DE MUNCA VACANTE — LMV102B job vacancies (number), all sections;
+    # 'Perioade' dim mixes annual+quarterly — fetch_ro_tempo filters by 'trimestrul' for Q freq.
+    {"slug": "job-vacancies", "parent": "1530", "matrix": "LMV102B",
+     "filter_dims": {"CAEN Rev.2  (activitati ale economiei nationale)": "TOTAL",
+                     "Macroregiuni si regiuni de dezvoltare": "TOTAL"},
+     "unit_value": "Numar",
+     "freq": "Q", "unit": "Number", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo LMV102B Job vacancies (number), quarterly, total economy"},
 ]
 
 # Romania trade pairs (computed: balance = exports - imports). Both matrices have
@@ -1599,7 +2037,7 @@ def fetch_ro_tempo(parent_code: str, matrix: str, filter_dims: dict, unit_value:
     time_dim_label = None
     for dim in leaf.dimensions:
         lbl = dim.label
-        if lbl in ("Luni", "Ani"):
+        if lbl in ("Luni", "Ani", "Perioade"):
             time_dim_label = lbl
             time_values = [opt.label for opt in dim.options]
             selections.append((lbl, time_values))
@@ -1650,6 +2088,12 @@ def fetch_ro_tempo(parent_code: str, matrix: str, filter_dims: dict, unit_value:
                 out.append((date(int(words[1]), 1, 1), val))
             except ValueError:
                 pass
+        elif freq == "Q" and len(words) == 3 and words[0] == "trimestrul" and words[1] in ("i","ii","iii","iv"):
+            try:
+                qmap = {"i": 3, "ii": 6, "iii": 9, "iv": 12}
+                out.append((date(int(words[2]), qmap[words[1]], 1), val))
+            except ValueError:
+                pass
     return sorted(out)
 
 
@@ -1692,6 +2136,106 @@ EE_SERIES = [
      "query": {"Näitaja": "UNEMP_RATE", "Sugu": "T", "Vanuserühm": "Y15-74"},
      "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "Statistics Estonia TT0160 LFS unemployment rate 15-74 total quarterly"},
+    # === gapfill batch (044_ee_gapfill) ===
+    # IA002.px CPI 1997=100 monthly, by Kaubagrupp (commodity group)
+    {"slug": "cpi-food", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "2"},
+     "series_id": "STATEE/IA002/K2",
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia IA002 CPI Food and non-alcoholic beverages"},
+    {"slug": "cpi-clothing", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "4"},
+     "series_id": "STATEE/IA002/K4",
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia IA002 CPI Clothing and footwear"},
+    {"slug": "cpi-housing-utilities", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "5"},
+     "series_id": "STATEE/IA002/K5",
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia IA002 CPI Housing"},
+    {"slug": "cpi-transportation", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "8"},
+     "series_id": "STATEE/IA002/K8",
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia IA002 CPI Transport"},
+    {"slug": "cpi-recreation-and-culture", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "10"},
+     "series_id": "STATEE/IA002/K10",
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia IA002 CPI Recreation, sport and culture"},
+    {"slug": "cpi-education", "path": "majandus/hinnad/IA002.px",
+     "query": {"Kaubagrupp": "11"},
+     "series_id": "STATEE/IA002/K11",
+     "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia IA002 CPI Education services"},
+    # RAA0061.PX GDP by expenditure (ESA 2010), quarterly chain-linked vol mln EUR (Näitaja=2)
+    # Komponent: 1=Private consumption, 2=Government, 4=GFCF, 7=Exports, 10=Imports
+    # NB: 5=Change in inventories has no chain-linked vol; pulled at current prices (Näitaja=1)
+    {"slug": "consumer-spending", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "1", "Näitaja": "2"},
+     "series_id": "STATEE/RAA0061/K1",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 private consumption expenditure, chain-linked vol ref 2020"},
+    {"slug": "government-spending", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "2", "Näitaja": "2"},
+     "series_id": "STATEE/RAA0061/K2",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 general government final consumption expenditure, chain-linked"},
+    {"slug": "gross-fixed-capital-formation", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "4", "Näitaja": "2"},
+     "series_id": "STATEE/RAA0061/K4",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 gross fixed capital formation + valuables, chain-linked"},
+    {"slug": "changes-in-inventories", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "5", "Näitaja": "1"},
+     "series_id": "STATEE/RAA0061/K5",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (current prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 change in inventories at current prices (chain-linked not published)"},
+    {"slug": "exports", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "7", "Näitaja": "2"},
+     "series_id": "STATEE/RAA0061/K7",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 exports of goods and services, chain-linked"},
+    {"slug": "imports", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "10", "Näitaja": "2"},
+     "series_id": "STATEE/RAA0061/K10",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 imports of goods and services, chain-linked"},
+    # TO0053.PX Industrial production volume index 2021=100, monthly, SA+CA (Y)
+    {"slug": "manufacturing-production", "path": "majandus/toostus/TO0053.PX",
+     "query": {"Näitaja": "PROD", "Tegevusala": "C", "Korrigeerimine": "Y"},
+     "series_id": "STATEE/TO0053/C",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Stat Estonia TO0053 manufacturing C volume index SA, 2021=100"},
+    {"slug": "mining-production", "path": "majandus/toostus/TO0053.PX",
+     "query": {"Näitaja": "PROD", "Tegevusala": "B", "Korrigeerimine": "Y"},
+     "series_id": "STATEE/TO0053/B",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Stat Estonia TO0053 mining and quarrying B volume index SA, 2021=100"},
+    # TT0130.px employed persons (thousands), quarterly
+    {"slug": "employed-persons", "path": "sotsiaalelu/tooturg/heivatud/luhiajastatistika/TT0130.px",
+     "query": {"Näitaja": "EMP_NR", "Sugu": "T", "Vanuserühm": "Y15-74", "Töötaja hõivatus": "TOTAL"},
+     "series_id": "STATEE/TT0130",
+     "freq": "Q", "unit": "Thousand persons", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia TT0130 employed persons 15-74, both sexes, full+part time"},
+    # TT0160.px employment-rate, quarterly (Y20-64 EU std)
+    {"slug": "employment-rate", "path": "sotsiaalelu/tooturg/tooturu-uldandmed/luhiajastatistika/TT0160.px",
+     "query": {"Näitaja": "EMPRATE", "Sugu": "T", "Vanuserühm": "Y20-64"},
+     "series_id": "STATEE/TT0160/EMPRATE",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia TT0160 employment rate Y20-64, total"},
+    # labor-force-participation-rate (LABOUR_RATE) Y15-74
+    {"slug": "labor-force-participation-rate", "path": "sotsiaalelu/tooturg/tooturu-uldandmed/luhiajastatistika/TT0160.px",
+     "query": {"Näitaja": "LABOUR_RATE", "Sugu": "T", "Vanuserühm": "Y15-74"},
+     "series_id": "STATEE/TT0160/LABOUR_RATE",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia TT0160 labour force participation rate Y15-74"},
+    # RV021.PX population at 1 January (annual)
+    {"slug": "population", "path": "rahvastik/rahvastikunaitajad-ja-koosseis/rahvaarv-ja-rahvastiku-koosseis/RV021.PX",
+     "query": {"Sugu": "1", "Vanuserühm": "1"},
+     "series_id": "STATEE/RV021",
+     "freq": "A", "unit": "Million persons", "adjustment": "NSA", "conversion": 0.000001,
+     "note": "Stat Estonia RV021 population at 1 January, total -> million"},
 ]
 
 
@@ -1878,6 +2422,22 @@ HU_SERIES = [
      "value_col_index": 19,
      "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
      "note": "KSH STADAT 17.2.3.1+17.2.3.2 kkr0065-kkr0064 HU exports minus imports, mEUR"},
+    # ara0042 = 'Consumer price indices by main groups of COICOP, monthly'. Row-oriented:
+    # each COICOP class is one row, columns are 5 years × 12 months. YoY index (sm-py=100).
+    # Row indices (0-based, within full HTML <table>): 3=Food, 4=Alc/tob, 5=Clothing,
+    # 6=Housing, 7=Furn, 8=Health, 9=Transport, 10=Communication, 11=Recreation,
+    # 12=Education, 13=Restaurants, 14=Misc, 15=Total. Section-header at row 2.
+    {"slug": "cpi-transportation", "section": "ara", "table": "ara0042",
+     "row_index": 9, "row_oriented": True, "n_years": 5, "start_year": 2022,
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 1.2.1.4 ara0042 row 9 (COICOP 07 Transport) YoY index"},
+    # ipa0037 = 'Volume indices of industrial production by sub-sections, monthly avg 2021=100'.
+    # Column 1 (0-indexed) = 'Mining and quarrying' (NACE B). Period column then 14 sub-sections.
+    # value_col_index 2 = 'Period(yr)' / 'Period(mo)' / Mining=col 2 in legacy parser.
+    {"slug": "mining-production", "section": "ipa", "table": "ipa0037",
+     "value_col_index": 2,
+     "freq": "M", "unit": "Index (monthly avg 2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 13.2.1.7 ipa0037 col 2 (Mining&quarrying NACE B) index 2021=100"},
 ]
 
 HU_MONTHS = {
@@ -1950,6 +2510,40 @@ def fetch_hu_stadat(table: str, value_col_index: int, freq: str = "M",
     return sorted(out)
 
 
+def fetch_hu_stadat_row(table: str, row_index: int, n_years: int, start_year: int,
+                         section: str = "ara") -> list[tuple[date, float]]:
+    """Scrape a row-oriented KSH STADAT HTML table where each row corresponds to
+    one category and columns are flat-laid year×month (12 × n_years values).
+
+    Used for tables like ara0042 'CPI by COICOP main groups, monthly' where each
+    COICOP class is one row spanning many year×month columns. cells[0] is the
+    category code, cells[1] the label, cells[2:] are the monthly values.
+    Returns sorted [(date, value)].
+    """
+    import bs4
+    url = f"https://www.ksh.hu/stadat_files/{section}/en/{table}.html"
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    soup = bs4.BeautifulSoup(r.text, "html.parser")
+    table_el = soup.find("table")
+    if not table_el:
+        return []
+    rows = table_el.find_all("tr")
+    if row_index >= len(rows):
+        return []
+    cells = [c.get_text(strip=True) for c in rows[row_index].find_all(["td", "th"])]
+    data = cells[2:2 + n_years * 12]
+    out = []
+    for i, raw in enumerate(data):
+        val = _hu_parse_number(raw)
+        if val is None:
+            continue
+        y = start_year + i // 12
+        m = (i % 12) + 1
+        out.append((date(y, m, 1), val))
+    return sorted(out)
+
+
 def fetch_hu_trade_balance() -> list[tuple[date, float]]:
     """Synthesise HU trade balance = exports (kkr0065) - imports (kkr0064), million EUR.
     Hungary appears at value_col_index 19 in both EU-comparison tables."""
@@ -2010,6 +2604,68 @@ SK_SERIES = [
      "segments": ["all", "all", "UKAZ15", "METO04", "MJ01"],
      "freq": "Q", "unit": "Million EUR (chain-linked, prev-year prices)", "adjustment": "NSA", "conversion": 1.0,
      "note": "SUSR nu0004qs Quarterly GDP chain-linked volumes, mill EUR"},
+    # CPI by COICOP main groups — same sp2038ms dataset, different odb codes.
+    # odb01=Total (already mapped to inflation-cpi), odb02..odb12 = COICOP 01..12.
+    # Mapping (KSH SUSR odb code -> TE indicator slug):
+    #   odb02 (Food & non-alc bev)           -> cpi-food
+    #   odb04 (Clothing & footwear)          -> cpi-clothing
+    #   odb05 (Housing, water, electricity)  -> cpi-housing-utilities
+    #   odb08 (Transport)                    -> cpi-transportation
+    #   odb09 (Recreation & culture)         -> cpi-recreation-and-culture
+    #   odb10 (Education)                    -> cpi-education
+    # All measured as 'Dec 2000 = 100' continuous index (mj38); YoY/MoM derivable.
+    {"slug": "cpi-food", "dataset_id": "sp2038ms",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb02", "mj38",
+     ],
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp2038ms CPI COICOP 01 Food & non-alc bev, Dec 2000=100 continuous"},
+    {"slug": "cpi-clothing", "dataset_id": "sp2038ms",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb04", "mj38",
+     ],
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp2038ms CPI COICOP 03 Clothing & footwear, Dec 2000=100 continuous"},
+    {"slug": "cpi-housing-utilities", "dataset_id": "sp2038ms",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb05", "mj38",
+     ],
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp2038ms CPI COICOP 04 Housing+utilities, Dec 2000=100 continuous"},
+    {"slug": "cpi-transportation", "dataset_id": "sp2038ms",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb08", "mj38",
+     ],
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp2038ms CPI COICOP 07 Transport, Dec 2000=100 continuous"},
+    {"slug": "cpi-recreation-and-culture", "dataset_id": "sp2038ms",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb09", "mj38",
+     ],
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp2038ms CPI COICOP 09 Recreation & culture, Dec 2000=100 continuous"},
+    {"slug": "cpi-education", "dataset_id": "sp2038ms",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb10", "mj38",
+     ],
+     "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp2038ms CPI COICOP 10 Education, Dec 2000=100 continuous"},
+    # pm0042ms industrial production YoY adjusted: NACE 05-09 = mining,
+    # 10-33 = manufacturing.
+    {"slug": "manufacturing-production", "dataset_id": "pm0042ms",
+     "segments": ["all", "all", "SPECU_Y_ROMR", "10 - 33", "UNIT_INDEX", "U_PM_0001"],
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SUSR pm0042ms Industrial production YoY adjusted, NACE 10-33 Manufacturing"},
+    {"slug": "mining-production", "dataset_id": "pm0042ms",
+     "segments": ["all", "all", "SPECU_Y_ROMR", "05 - 09", "UNIT_INDEX", "U_PM_0001"],
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SUSR pm0042ms Industrial production YoY adjusted, NACE 05-09 Mining & quarrying"},
 ]
 
 
@@ -2286,6 +2942,72 @@ HR_SERIES = [
      "freq": "Q", "parse": "hr_year_quarter",
      "unit": "Million EUR (constant 2021 prices)", "adjustment": "NSA", "conversion": 1.0,
      "note": "DZS Croatia BDP-T01_EUR real GDP constant ref-year 2021 prices, mln EUR"},
+    # --- CPI sub-indices (ECOICOP v2) — ME_PS09 Indikatori=4 (index 2025=100)
+    # Verified 2026-05-14 against TE: food 01 2026M02 = 101.1 ≈ TE 101.2.
+    {"slug": "cpi-clothing",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "03", "Indikatori": "4"},
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI sub-index Clothing & footwear (COICOP 03), 2025=100"},
+    {"slug": "cpi-education",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "10", "Indikatori": "4"},
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI sub-index Education (COICOP 10), 2025=100"},
+    {"slug": "cpi-food",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "01", "Indikatori": "4"},
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI sub-index Food & non-alc bevs (COICOP 01), 2025=100"},
+    {"slug": "cpi-housing-utilities",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "04", "Indikatori": "4"},
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI sub-index Housing, water, electricity (COICOP 04), 2025=100"},
+    {"slug": "cpi-recreation-and-culture",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "09", "Indikatori": "4"},
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI sub-index Recreation & culture (COICOP 09), 2025=100"},
+    # food-inflation = ME_PS09 Indikatori=1 (YoY % rate). Verified 2026M03 = 3.3% matches TE 3.3.
+    {"slug": "food-inflation",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "01", "Indikatori": "1"},
+     "freq": "M", "parse": "tid",
+     "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI Food YoY % rate of change"},
+    # --- National accounts expenditure components (BDP-T01_EUR, Način=2 constant ref-2021 prices)
+    # Verified 2026-05-14 against TE: consumer-spending Q4/25=10510 matches TE 10510 exactly.
+    # changes-in-inventories has no data at Način=2; use Način=1 current prices.
+    {"slug": "consumer-spending",
+     "path": "Nacionalni racuni/BDP/Kvartalni nacionalni računi/BDP-T01_EUR.px",
+     "query": {"Pokazatelj": "P31_S14", "Način prikaza": "2"},
+     "freq": "Q", "parse": "hr_year_quarter",
+     "unit": "Million EUR (constant 2021 prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BDP-T01_EUR P31_S14 Household final consumption (constant ref 2021, mln EUR)"},
+    {"slug": "government-spending",
+     "path": "Nacionalni racuni/BDP/Kvartalni nacionalni računi/BDP-T01_EUR.px",
+     "query": {"Pokazatelj": "P3_S13", "Način prikaza": "2"},
+     "freq": "Q", "parse": "hr_year_quarter",
+     "unit": "Million EUR (constant 2021 prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BDP-T01_EUR P3_S13 Government final consumption (constant ref 2021, mln EUR)"},
+    {"slug": "gross-fixed-capital-formation",
+     "path": "Nacionalni racuni/BDP/Kvartalni nacionalni računi/BDP-T01_EUR.px",
+     "query": {"Pokazatelj": "P51G", "Način prikaza": "2"},
+     "freq": "Q", "parse": "hr_year_quarter",
+     "unit": "Million EUR (constant 2021 prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BDP-T01_EUR P51G Gross fixed capital formation (constant ref 2021, mln EUR)"},
+    {"slug": "changes-in-inventories",
+     "path": "Nacionalni racuni/BDP/Kvartalni nacionalni računi/BDP-T01_EUR.px",
+     "query": {"Pokazatelj": "P5M", "Način prikaza": "1"},
+     "freq": "Q", "parse": "hr_year_quarter",
+     "unit": "Million EUR (current prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BDP-T01_EUR P5M Changes in inventories + valuables (current prices, mln EUR)"},
 ]
 
 
@@ -2519,13 +3241,14 @@ class NationalEUProvider(BaseProvider):
         for cfg in SE_SERIES:
             try:
                 pairs = fetch_se_table(cfg["path"], cfg["query"], cfg["freq"])
+                sid = cfg.get("series_id") or f"SCB/{cfg['path']}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="SE",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="scb_se", unit=cfg["unit"],
-                        series_id=f"SCB/{cfg['path']}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/SE: {len(pairs)} pts")
@@ -2616,13 +3339,14 @@ class NationalEUProvider(BaseProvider):
         for cfg in LV_SERIES:
             try:
                 pairs = fetch_lv_pxweb(cfg["path"], cfg["query"], cfg["freq"])
+                sid = cfg.get("series_id") or f"CSP/{cfg['path'].rsplit('/',1)[-1]}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="LV",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="csp_lv", unit=cfg["unit"],
-                        series_id=f"CSP/{cfg['path'].rsplit('/',1)[-1]}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/LV ({cfg['path'].rsplit('/',1)[-1]}): {len(pairs)} pts")
@@ -2638,13 +3362,14 @@ class NationalEUProvider(BaseProvider):
                     cfg["freq"], cfg["freq"]
                 )
                 table_id = cfg["path"].rsplit("/", 1)[-1].split(".")[0]
+                sid = cfg.get("series_id") or f"STATEE/{table_id}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="EE",
                         date=normalize_date(dt, eff_freq),
                         value=round(v * cfg["conversion"], 4),
                         source="stat_ee", unit=cfg["unit"],
-                        series_id=f"STATEE/{table_id}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/EE ({table_id}): {len(pairs)} pts")
@@ -2690,6 +3415,12 @@ class NationalEUProvider(BaseProvider):
             try:
                 if cfg["table"] == "kkr_synthetic":
                     pairs = fetch_hu_trade_balance()
+                elif cfg.get("row_oriented"):
+                    pairs = fetch_hu_stadat_row(
+                        cfg["table"], cfg["row_index"],
+                        cfg.get("n_years", 5), cfg.get("start_year", 2022),
+                        section=cfg.get("section", "ara"),
+                    )
                 else:
                     pairs = fetch_hu_stadat(
                         cfg["table"], cfg["value_col_index"],
@@ -2755,13 +3486,14 @@ class NationalEUProvider(BaseProvider):
                     cfg.get("filter_dims", {}), cfg.get("unit_value", "Procente"),
                     cfg["freq"],
                 )
+                sid = cfg.get("series_id") or f"INSSE/{cfg['matrix']}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="RO",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="insse_ro", unit=cfg["unit"],
-                        series_id=f"INSSE/{cfg['matrix']}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/RO ({cfg['matrix']}): {len(pairs)} pts")
