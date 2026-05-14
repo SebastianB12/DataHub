@@ -147,12 +147,44 @@ SERIES = [
         "adjustment": "NSA",
         "series_label": "Außenhandel Importe, alle Länder",
     },
+    # ============== DE Stage-2 (TE-source-conformity) — 2026-05-14 ==============
+    # Current-account: Leistungsbilanz Saldo, monatlich, gegenüber Welt (W1), Originalwerte
+    # BBFBOPV: M.N.DE.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL — Mio EUR (UNIT_MULT=6)
+    # March 2026 = 23,635 Mio EUR (TE-conform)
+    {
+        "flow": "BBFBOPV",
+        "key": "M.N.DE.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL",
+        "indicator": "current-account",
+        "country": "DE",
+        "freq": "M",
+        "unit": "Million EUR",
+        "conversion": 1,  # already in Mio EUR
+        "adjustment": "NSA",
+        "series_label": "Leistungsbilanzsaldo (BoP) gg. Welt, Bundesbank",
+    },
+    # Labour-costs: Arbeitskostenindex Gesamtwirtschaft (B-S), quarterly, calendar+seasonally adjusted, 2020=100
+    # BBDE1 key: Q.DE.Y.LCA1.A2N100000.A.L.I20.A — value 2025-Q2 = 121.5; TE 124.27 Q4 2025
+    {
+        "flow": "BBDE1",
+        "key": "Q.DE.Y.LCA1.A2N100000.A.L.I20.A",
+        "indicator": "labour-costs",
+        "country": "DE",
+        "freq": "Q",
+        "unit": "Index (2020=100)",
+        "conversion": 1,
+        "adjustment": "SA",
+        "series_label": "Index der Arbeitskosten / B-S Gesamtwirtschaft / kal.+saisonbereinigt",
+    },
 ]
 
 
 def _parse_period(period_str: str) -> date | None:
-    """Parse Bundesbank period string."""
+    """Parse Bundesbank period string. Supports YYYY-MM, YYYY-Qn, YYYY, YYYY-MM-DD."""
     try:
+        if len(period_str) == 7 and "Q" in period_str:  # YYYY-Qn
+            year, q = period_str.split("-Q")
+            month = (int(q) - 1) * 3 + 1
+            return date(int(year), month, 1)
         if len(period_str) == 7:  # YYYY-MM
             year, month = period_str.split("-")
             return date(int(year), int(month), 1)

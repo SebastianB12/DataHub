@@ -150,6 +150,196 @@ TABLES: list[dict] = [
         "unit": "Index",
         "adjustment": "NSA",
     },
+    # ============== DE Stage-2 (TE-source-conformity) — 2026-05-14 ==============
+    # Retail-sales: Umsatz im Einzelhandel ohne KFZ/Tankstellen (WZ47-02), real, original, 2015=100
+    # Big table — needs server-side classifying filters to stay under sync size cap.
+    {
+        "name": "45212-0005",
+        "indicator": "retail-sales",
+        "classifyingvariable1": "WZ08E7",   "classifyingkey1": "WZ08-47-02",  # Einzelhandel ohne Kfz/Tankstellen
+        "classifyingvariable2": "WERTE4",   "classifyingkey2": "REAL",        # Preisbereinigt (Realumsatz)
+        "classifyingvariable3": "WERT03",   "classifyingkey3": "WERTORG",     # Originalwerte
+        "filter_unit": "2015=100",
+        "filter_value_code": "UMS002",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+    },
+    # Manufacturing-production: Produktionsindex, WZ08-C (Verarbeitendes Gewerbe), Original
+    {
+        "name": "42153-0001",
+        "indicator": "manufacturing-production",
+        "classifyingvariable1": "WERT03",   "classifyingkey1": "WERTORG",  # Originalwerte
+        "classifyingvariable2": "WZ08V1",   "classifyingkey2": "WZ08-C",   # Verarb. Gewerbe
+        "filter_unit": "2021=100",
+        "filter_value_code": "PRO101",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+    },
+    # Mining-production: same table, WZ08-B (Bergbau)
+    {
+        "name": "42153-0001",
+        "indicator": "mining-production",
+        "classifyingvariable1": "WERT03",   "classifyingkey1": "WERTORG",
+        "classifyingvariable2": "WZ08V1",   "classifyingkey2": "WZ08-B",
+        "filter_unit": "2021=100",
+        "filter_value_code": "PRO101",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+    },
+    # Industrial-production: Produktionsindex, "Produzierendes Gewerbe ohne Baugewerbe" (Industrie inkl. Energie)
+    {
+        "name": "42153-0001",
+        "indicator": "industrial-production",
+        "classifyingvariable1": "WERT03",   "classifyingkey1": "WERTORG",
+        "classifyingvariable2": "WZ08V1",   "classifyingkey2": "WZ08-BCDE",
+        "filter_unit": "2021=100",
+        "filter_value_code": "PRO101",
+        "filter_attrs": {
+            "4_variable_attribute_code": "WZ08-B-18",  # Produzierendes Gewerbe ohne Baugewerbe (Industrie-Headline)
+        },
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+    },
+    # Employed-persons: Erwerbstaetige Inlaenderkonzept, monatlich (in Tsd.)
+    # March 2026 KONZEPTW Original = 45,519 (TE-conform)
+    {
+        "name": "13321-0001",
+        "indicator": "employed-persons",
+        "filter_unit": "1000",
+        "filter_value_code": "ERW002",
+        "filter_attrs": {
+            "3_variable_attribute_code": "KONZEPTW",  # Inlaenderkonzept (residents)
+            "4_variable_attribute_code": "WERTORG",   # Originalwerte
+        },
+        "freq": "M",
+        "unit": "Thousand persons",
+        "adjustment": "NSA",
+    },
+    # Youth-unemployment-rate: Erwerbslosenquote 15-24, monatlich, beide Geschlechter, saisonbereinigt (X13)
+    # March 2026 = 7.5% (TE-conform)
+    {
+        "name": "13231-0003",
+        "indicator": "youth-unemployment-rate",
+        "filter_unit": "Prozent",
+        "filter_value_code": "ERW089",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDTB",   # X13 JDemetra+ saisonbereinigt (matches TE 7.5)
+            "4_variable_attribute_code": "",           # Insgesamt (beide Geschlechter)
+            "5_variable_attribute_code": "ALT015B25",  # 15-24 Jahre
+        },
+        "freq": "M",
+        "unit": "%",
+        "adjustment": "SA",
+    },
+    # Population: Bevoelkerung Stichtag, annual
+    {
+        "name": "12411-0001",
+        "indicator": "population",
+        "filter_unit": "Anzahl",
+        "filter_value_code": "BEVSTD",
+        "conversion": 1e-6,  # absolute Personen -> Mio
+        "freq": "A",
+        "unit": "Million",
+        "adjustment": "NSA",
+    },
+    # Government-debt level: Schulden beim nicht-oeffentl. Bereich, Quartalsende
+    # Insgesamt: alle 2_/3_/4_ Attribute = leerer Code (= "Insgesamt"); Q4 2025 TE = 2,661,549 Mill. EUR
+    {
+        "name": "71311-0001",
+        "indicator": "government-debt",
+        "filter_unit": "Mill. EUR",
+        "filter_value_code": "SLD016",
+        "filter_attrs": {
+            "2_variable_attribute_code": "",  # Insgesamt (alle Ebenen)
+            "3_variable_attribute_code": "",  # Insgesamt (Kern + Extrahaushalte)
+            "4_variable_attribute_code": "",  # Insgesamt (alle Schuldenarten)
+        },
+        "freq": "Q",
+        "unit": "Million EUR",
+        "adjustment": "NSA",
+    },
+    # Government-debt-total: same series (TE has dupe slug)
+    {
+        "name": "71311-0001",
+        "indicator": "government-debt-total",
+        "filter_unit": "Mill. EUR",
+        "filter_value_code": "SLD016",
+        "filter_attrs": {
+            "2_variable_attribute_code": "",
+            "3_variable_attribute_code": "",
+            "4_variable_attribute_code": "",
+        },
+        "freq": "Q",
+        "unit": "Million EUR",
+        "adjustment": "NSA",
+    },
+    # Consumer-spending: Private Konsumausgaben, sa real chain, Mrd EUR (Q4 2025 TE = 484.81)
+    {
+        "name": "81000-0020",
+        "indicator": "consumer-spending",
+        "filter_value_code": "VGR035",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDKSB",  # X13 kalender- und saisonbereinigt
+            "4_variable_attribute_code": "VGRPVK",     # preisbereinigt, verkettete Volumenang. Mrd EUR
+        },
+        "freq": "Q",
+        "unit": "Billion EUR",
+        "adjustment": "SA",
+    },
+    # Government-spending: Konsumausgaben des Staates, sa real chain (Q4 2025 TE = 209.33)
+    {
+        "name": "81000-0020",
+        "indicator": "government-spending",
+        "filter_value_code": "VGR015",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDKSB",
+            "4_variable_attribute_code": "VGRPVK",
+        },
+        "freq": "Q",
+        "unit": "Billion EUR",
+        "adjustment": "SA",
+    },
+    # Gross-fixed-capital-formation: Bruttoanlageinvestitionen, sa real chain (Q4 2025 TE = 177.05)
+    {
+        "name": "81000-0020",
+        "indicator": "gross-fixed-capital-formation",
+        "filter_value_code": "VGR041",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDKSB",
+            "4_variable_attribute_code": "VGRPVK",
+        },
+        "freq": "Q",
+        "unit": "Billion EUR",
+        "adjustment": "SA",
+    },
+    # Disposable-personal-income: Bezugsgroesse fuer Sparquote = SA Verfuegb.Einkommen (Q4 2025 TE = 670.87)
+    {
+        "name": "81000-0010",
+        "indicator": "disposable-personal-income",
+        "filter_unit": "Mrd. EUR",
+        "filter_value_code": "VGR092",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDSB",  # X13 JDemetra+ saisonbereinigt
+        },
+        "freq": "Q",
+        "unit": "Billion EUR",
+        "adjustment": "SA",
+    },
+    # Budget-deficit: Finanzierungssaldo des Staates, annual Mrd EUR
+    # TE shows -2.7% of GDP for 2025 = -119.147 / ~4400 GDP. Frontend computes ratio.
+    {
+        "name": "81000-0031",
+        "indicator": "budget-deficit",
+        "filter_unit": "Mrd. EUR",
+        "filter_value_code": "VGR114",
+        "freq": "A",
+        "unit": "Billion EUR",
+        "adjustment": "NSA",
+    },
 ]
 
 
@@ -263,9 +453,20 @@ def _fetch_table_direct(table: dict, startyear: str = "1991"):
 
 
 def _parse_period(year_str: str, sub_label: str, freq: str) -> date | None:
-    """Parse GENESIS period fields to a normalised date."""
+    """Parse GENESIS period fields to a normalised date.
+
+    `year_str` may be "1991" or a full date "2024-12-31" (when the table's
+    primary time-dim is Stichtag).
+    """
+    # Try full date first (Stichtag tables)
     try:
-        year = int(year_str)
+        if len(year_str) >= 10 and "-" in year_str:
+            return date.fromisoformat(year_str[:10])
+    except ValueError:
+        pass
+
+    try:
+        year = int(year_str[:4])
     except (ValueError, TypeError):
         return None
 
@@ -322,7 +523,14 @@ def _parse_dataframe(df, table: dict) -> list[DataPoint]:
         if filter_attrs:
             mismatch = False
             for col, expected in filter_attrs.items():
-                if str(d.get(col, "")).strip() != expected:
+                raw = d.get(col, "")
+                # pystatis returns NaN (float) for empty cells; normalise to ""
+                if raw is None:
+                    val = ""
+                else:
+                    s = str(raw).strip()
+                    val = "" if s.lower() == "nan" else s
+                if val != expected:
                     mismatch = True
                     break
             if mismatch:

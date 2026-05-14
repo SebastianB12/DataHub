@@ -535,10 +535,13 @@ PT_SERIES = [
     # GDP Real - Produto interno bruto dados encadeados em volume, YoY %,
     # Base 2021, trimestral. Single row per period (no dim_3).
     # Verified 2026-05-14: Q1 2026 = 2.3 % (TE: 2.3 %).
+    # NOTE: INE pindica op=1 for this varcd is server-side broken (returns the
+    # same value for every period). We therefore use op=2 (latest period only).
+    # History gap is back-filled by Eurostat namq_10_gdp until INE fixes op=1.
     {"slug": "gdp-real", "varcd": "0013431", "freq": "Q",
      "unit": "% YoY", "adjustment": "SA+CDA", "conversion": 1.0,
-     "row_filter": {"geocod": "PT"},
-     "note": "INE PT 0013431 GDP chain-linked YoY%, Base 2021, quarterly"},
+     "row_filter": {"geocod": "PT"}, "op2_only": True,
+     "note": "INE PT 0013431 GDP chain-linked YoY%, Base 2021, quarterly (op=2 latest-only; op=1 broken upstream)"},
 ]
 
 
@@ -550,7 +553,8 @@ def _row_matches(row: dict, flt: dict) -> bool:
 
 
 def fetch_pt_indicator(varcd: str, freq: str = "M",
-                       row_filter: dict | None = None) -> list[tuple[date, float]]:
+                       row_filter: dict | None = None,
+                       op2_only: bool = False) -> list[tuple[date, float]]:
     """INE Portugal pindica - full history via op=1.
 
     The pindica JSON re-uses the same "Pref" object key once per observation
@@ -558,9 +562,36 @@ def fetch_pt_indicator(varcd: str, freq: str = "M",
     than nested). Standard json.loads collapses duplicate keys to the last one,
     which would only ever return the most-recent value for every period. We
     therefore stream the document with ijson and walk Pref entries pair-wise.
+
+    Some varcds (notably 0013431 GDP-YoY) have an upstream bug under op=1
+    that returns the same value for every period. For those, callers can pass
+    op2_only=True to fetch just the latest period via op=2.
     """
     import json as _json
     import re as _re
+    if op2_only:
+        url2 = f"https://www.ine.pt/ine/json_indicador/pindica.jsp?op=2&varcd={varcd}&lang=PT"
+        r2 = requests.get(url2, timeout=60)
+        r2.raise_for_status()
+        d2 = r2.json()
+        flt = row_filter or {}
+        out2: list[tuple[date, float]] = []
+        if isinstance(d2, list) and d2:
+            dados = d2[0].get("Dados") or {}
+            for label, rows in dados.items():
+                dt = _parse_pt_period(label, freq)
+                if dt is None:
+                    continue
+                for row in rows:
+                    if flt and not _row_matches(row, flt):
+                        continue
+                    try:
+                        val = float(row.get("valor"))
+                    except (ValueError, TypeError):
+                        continue
+                    out2.append((dt, val))
+                    break
+        return sorted({d: v for d, v in out2}.items())
     url = f"https://www.ine.pt/ine/json_indicador/pindica.jsp?op=1&varcd={varcd}&lang=PT"
     r = requests.get(url, timeout=120)
     r.raise_for_status()
