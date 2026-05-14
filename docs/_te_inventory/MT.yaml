@@ -1,0 +1,660 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/budget-deficit"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: "European Commission"
+  te_url: "http://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/malta/business-confidence"
+  te_value: 107.5
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+capacity-utilization:
+  te_label: "European Commission"
+  te_url: "https://ec.europa.eu/eurostat/en/"
+  te_page: "https://tradingeconomics.com/malta/capacity-utilization"
+  te_value: 67.0
+  te_period: "2026-Q1"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+changes-in-inventories:
+  te_label: "National Statistics Office, Malta"
+  te_url: "http://nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/changes-in-inventories"
+  te_value: null
+  te_period: "2025-Q4"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+consumer-confidence:
+  te_label: "European Commission"
+  te_url: "http://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/malta/consumer-confidence"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/consumer-spending"
+  te_value: 2246723.0
+  te_period: "2025-Q4"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/core-cpi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/corporate-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+cpi-clothing:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/"
+  te_page: "https://tradingeconomics.com/malta/cpi-clothing"
+  te_value: 98.41
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-education:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/"
+  te_page: "https://tradingeconomics.com/malta/cpi-education"
+  te_value: 102.41
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-food:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/"
+  te_page: "https://tradingeconomics.com/malta/cpi-food"
+  te_value: 101.69
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-housing-utilities:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/en/"
+  te_page: "https://tradingeconomics.com/malta/cpi-housing-utilities"
+  te_value: 102.01
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-recreation-and-culture:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/"
+  te_page: "https://tradingeconomics.com/malta/cpi-recreation-and-culture"
+  te_value: 100.97
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-transportation:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/en/"
+  te_page: "https://tradingeconomics.com/malta/cpi-transportation"
+  te_value: 98.72
+  te_period: "2026-03"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/credit-rating"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+current-account:
+  te_label: "Central Bank of Malta"
+  te_url: "http://www.centralbankmalta.org"
+  te_page: "https://tradingeconomics.com/malta/current-account"
+  te_value: null
+  te_period: "2025-Q4"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+current-account-to-gdp:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/current-account-to-gdp"
+  te_value: null
+  te_period: "2025"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/employed-persons"
+  te_value: 303070.0
+  te_period: "2025-11"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/employment-rate"
+  te_value: 79.8
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: "National Statistics Office, Malta"
+  te_url: "http://www.nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/exports"
+  te_value: 404516.0
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+food-inflation:
+  te_label: "Malta National Statistics Office"
+  te_url: "http://www.nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/food-inflation"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/malta/gdp"
+  te_value: null
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/malta/gdp-per-capita"
+  te_value: 265.0
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/malta/gdp-per-capita-ppp"
+  te_value: 340.0
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/gdp-real"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt:
+  te_label: "Central Bank of Malta"
+  te_url: "http://www.centralbankmalta.org"
+  te_page: "https://tradingeconomics.com/malta/government-debt"
+  te_value: 11397.1
+  te_period: "2025-Q4"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+government-debt-total:
+  te_label: "Central Bank of Malta"
+  te_url: "http://www.centralbankmalta.org"
+  te_page: "https://tradingeconomics.com/malta/government-debt"
+  te_value: 11397.1
+  te_period: "2025-Q4"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/government-spending"
+  te_value: 945270.0
+  te_period: "2025-Q4"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/government-spending-eur"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/gross-fixed-capital-formation"
+  te_value: 1140869.0
+  te_period: "2025-Q4"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/hospital-beds"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+house-price-index:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/housing-index"
+  te_value: 177.36
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+imports:
+  te_label: "National Statistics Office, Malta"
+  te_url: "http://www.nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/imports"
+  te_value: 664053.0
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+industrial-production:
+  te_label: "National Statistics Office, Malta"
+  te_url: "http://www.nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/industrial-production"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+inflation-cpi:
+  te_label: "National Statistics Office, Malta"
+  te_url: "http://www.nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/inflation-cpi"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: nso_mt
+  current_source: nso_mt
+  conform: true
+  verified: true
+interest-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/interest-rate"
+  te_value: null
+  te_period: "2000-10"
+  suggested_source: null
+  current_source: ecb
+  conform: false
+  verified: false
+job-vacancies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+labor-force-participation-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/labor-force-participation-rate"
+  te_value: 82.7
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+labour-costs:
+  te_label: "European Central Bank"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/labour-costs"
+  te_value: 143.82
+  te_period: "2025-Q4"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/long-term-unemployment-rate"
+  te_value: 0.7
+  te_period: "2025-Q4"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+manufacturing-production:
+  te_label: "National Statistics Office, Malta"
+  te_url: "http://www.nso.gov.mt"
+  te_page: "https://tradingeconomics.com/malta/manufacturing-production"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/minimum-wages"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+mining-production:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/mining-production"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/personal-income-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+population:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/population"
+  te_value: null
+  te_period: "2025"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+ppi:
+  te_label: "National Statistics Office, Malta"
+  te_url: "https://nso.gov.mt/"
+  te_page: "https://tradingeconomics.com/malta/producer-prices"
+  te_value: 109.28
+  te_period: "2026-02"
+  suggested_source: nso_mt
+  current_source: eurostat
+  conform: false
+  verified: true
+productivity:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/malta/productivity"
+  te_value: 111.48
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+retail-sales:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/retail-sales"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/sales-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/social-security-rate-companies"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/social-security-rate-employees"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/unemployed-persons"
+  te_value: 1287.0
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+unemployment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/unemployment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/malta/youth-unemployment-rate"
+  te_value: 9.6
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false

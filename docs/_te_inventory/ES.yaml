@@ -1,0 +1,794 @@
+# Spain — TE source inventory
+# Generated 2026-05-14 by sub-agent. te_value/te_period from TE indicators overview page.
+# All per-indicator TE pages were rate-limited (HTTP 403) during this session, so
+# source attributions could not be independently confirmed. verified:false everywhere
+# with te_label:null per spec. te_value/te_period reflect the TE overview page snapshot.
+
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/government-budget"
+  te_value: -2.4
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE per-indicator page rate-limited"
+
+business-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/business-confidence"
+  te_value: -5
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely INE Spain (ICE Business Confidence Index) per truth.yaml note"
+
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/capacity-utilization"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+construction-output:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/construction-output"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "TE page rate-limited; INE IPCO per truth.yaml"
+
+consumer-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/consumer-confidence"
+  te_value: 66.9
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; on TE typically CIS/INE for ES (not Eurostat)"
+
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/consumer-spending"
+  te_value: 235827
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; consumer spending in EUR Million"
+
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/core-inflation-rate"
+  te_value: 2.8
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "TE page rate-limited; INE IPC subyacente per truth"
+
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/corporate-tax-rate"
+  te_value: 25
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Transparency International"
+
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/cpi-clothing"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely INE Spain"
+
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/cpi-food"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+current-account:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/current-account"
+  te_value: 4040
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; typically Banco de España"
+
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/current-account-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+employed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/employed-persons"
+  te_value: 22293
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "TE page rate-limited; INE EPA per truth"
+
+employment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/employment-rate"
+  te_value: 52.48
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely INE Spain (EPA)"
+
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+exports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/exports"
+  te_value: 31719600
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; typically Ministerio de Industria/Aduanas, value in EUR Thousand"
+
+food-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/food-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "TE page rate-limited; INE per truth"
+
+gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/gdp"
+  te_value: 1723
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+  note: "TE page rate-limited; almost certainly World Bank per pattern"
+
+gdp-growth-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/gdp-growth"
+  te_value: 0.6
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "TE page rate-limited; INE CNTR per truth"
+
+gdp-per-capita:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/gdp-per-capita"
+  te_value: 29193
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+  note: "TE page rate-limited; almost certainly World Bank"
+
+gdp-per-capita-ppp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/gdp-per-capita-ppp"
+  te_value: null
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/gdp-growth-annual"
+  te_value: 2.7
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely INE"
+
+government-debt:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/government-debt"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; typically Banco de España"
+
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/government-debt-to-gdp"
+  te_value: 101
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/government-spending"
+  te_value: 84039
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/government-spending-value"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/gross-fixed-capital-formation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/hospital-beds"
+  te_value: 2.88
+  te_period: "2023"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/housing-index"
+  te_value: 12.9
+  te_period: "2025"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE IPV per truth"
+
+imports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/imports"
+  te_value: 35015200
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "EUR Thousand"
+
+industrial-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/industrial-production"
+  te_value: 1.8
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE IPI per truth"
+
+inflation-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/inflation-cpi"
+  te_value: 3.2
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "TE page rate-limited; INE IPC per truth"
+
+interest-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/interest-rate"
+  te_value: 2.15
+  te_period: "2026-04"
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: false
+  note: "TE page rate-limited; ES is in EA, shares ECB MRO rate"
+
+job-vacancies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+labor-force-participation-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/labor-force-participation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/labour-costs"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/long-term-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+manufacturing-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/manufacturing-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/medical-doctors"
+  te_value: 4.8
+  te_period: "2021"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/minimum-wages"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+mining-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/mining-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/nurses"
+  te_value: 6.08
+  te_period: "2023"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/personal-income-tax-rate"
+  te_value: 47
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+population:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/population"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/producer-prices"
+  te_value: 130
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE IPRI per truth"
+
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+retail-sales:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/retail-sales-annual"
+  te_value: 4.1
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE ICM per truth"
+
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/sales-tax-rate"
+  te_value: 21
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/social-security-rate-for-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/social-security-rate-for-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE EPA per truth"
+
+unemployment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/unemployment-rate"
+  te_value: 10.83
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE EPA per truth"
+
+wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/wages"
+  te_value: 2531
+  te_period: "2025"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE ETCL per truth"
+
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/spain/youth-unemployment-rate"
+  te_value: 24.3
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: ine_es
+  conform: true
+  verified: false
+  note: "INE EPA per truth"

@@ -2,6 +2,21 @@
 
 Kostenlose Alternative zu Trading Economics. MVP: Makroökonomische Indikatoren.
 
+## TE-Source-Konformität (HART)
+
+`docs/te_sources_truth.yaml` ist die einzige Wahrheit für (country, slug) → source.
+`pipeline/.venv/Scripts/python -m pipeline.validate_te_conformity` MUSS grün sein vor
+jedem Commit und läuft automatisch als Pre-Flight in `pipeline.run_all`.
+
+Wenn ich (Claude) versucht bin, einen Eurostat-Default für einen Mitgliedstaat
+anzulegen, wo TE eine nationale Quelle nennt: STOPP. Stattdessen:
+1. Nationaler Provider erweitern (TE-Source-First), ODER
+2. `truth.yaml`-Entry mit `stage: gap` + Grund eintragen, ODER
+3. Slug für dieses Land als Coverage-Gap dokumentieren.
+
+Nie still mit Eurostat-Fallback überschreiben. Wer eine Row in `indicator_sources`
+mit `is_default=true` ändert/anlegt, ändert vorher `docs/te_sources_truth.yaml`.
+
 ## Stack
 
 | Komponente | Service |

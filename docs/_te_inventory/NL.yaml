@@ -1,0 +1,749 @@
+# Netherlands — TE source inventory
+# Generated 2026-05-14 by sub-agent. te_value/te_period from TE indicators overview page.
+# All per-indicator TE pages were rate-limited (HTTP 403) during this session, so
+# source attributions could not be independently confirmed. verified:false everywhere
+# with te_label:null per spec. te_value/te_period reflect the TE overview page snapshot.
+# Note: cbs_nl is not yet in STATIC_LABELS in src/lib/sources.ts — use literal cbs_nl
+# as suggested_source when CBS Netherlands / Statistics Netherlands attribution applies.
+
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/government-budget"
+  te_value: -1.6
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE per-indicator page rate-limited"
+
+business-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/business-confidence"
+  te_value: -0.7
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS Netherlands publishes producer confidence"
+
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/capacity-utilization"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+consumer-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/consumer-confidence"
+  te_value: -44
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS typically the source for NL consumer confidence"
+
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/consumer-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/core-inflation-rate"
+  te_value: 2.5
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/corporate-tax-rate"
+  te_value: 25.8
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/cpi-clothing"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/cpi-food"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+current-account:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/current-account"
+  te_value: 34532
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; typically De Nederlandsche Bank / CBS for NL"
+
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/current-account-to-gdp"
+  te_value: 7.9
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+employed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/employed-persons"
+  te_value: 9850
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL publishes employment"
+
+employment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/employment-rate"
+  te_value: 82.4
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+exports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/exports"
+  te_value: 61435
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL typically"
+
+food-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/food-inflation"
+  te_value: 1.5
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/gdp"
+  te_value: 1228
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+  note: "TE page rate-limited; almost certainly World Bank per pattern"
+
+gdp-per-capita:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/gdp-per-capita"
+  te_value: 51471
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+  note: "TE page rate-limited; almost certainly World Bank per pattern"
+
+gdp-per-capita-ppp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/gdp-per-capita-ppp"
+  te_value: 70902
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/gdp-growth-annual"
+  te_value: 1.2
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS typically the source"
+
+government-debt:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/government-debt"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/government-debt-to-gdp"
+  te_value: 44.4
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/government-spending"
+  te_value: 62787
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/government-spending-value"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/gross-fixed-capital-formation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/hospital-beds"
+  te_value: 2.31
+  te_period: "2023"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/housing-index"
+  te_value: 6.2
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL typically"
+
+imports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/imports"
+  te_value: 51538
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+industrial-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/industrial-production"
+  te_value: 0.3
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL typically"
+
+inflation-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/inflation-cpi"
+  te_value: 2.8
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL is the typical TE source for NL CPI"
+
+interest-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/interest-rate"
+  te_value: 2.15
+  te_period: "2026-04"
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: false
+  note: "TE page rate-limited; NL is in EA, shares ECB MRO rate"
+
+job-vacancies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+labor-force-participation-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/labor-force-participation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/labour-costs"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/long-term-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+manufacturing-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/manufacturing-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/minimum-wages"
+  te_value: 2545
+  te_period: "2026-01"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+mining-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/mining-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/personal-income-tax-rate"
+  te_value: 49.5
+  te_period: "2025"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+population:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/population"
+  te_value: 18.04
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL typical"
+
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/producer-prices"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+retail-sales:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/retail-sales-annual"
+  te_value: 2.9
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL typical"
+
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/sales-tax-rate"
+  te_value: 21
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/social-security-rate-for-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/social-security-rate-for-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+
+unemployment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/unemployment-rate"
+  te_value: 4
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; CBS NL typical"
+
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/netherlands/youth-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false

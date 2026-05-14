@@ -354,7 +354,7 @@ gaps:
     te_category: Housing
     reason: no-free-source
     source: Destatis 31111-0006
-    note: "TE listet Housing Starts als „Building Permits" — Destatis hat nur Genehmigungen, keine Starts. Genehmigungen 31111-0001 decken wir."
+    note: "TE listet Housing Starts als 'Building Permits' — Destatis hat nur Genehmigungen, keine Starts. Genehmigungen 31111-0001 decken wir."
     possible_workaround: "Building Permits = Destatis Baugenehmigungen 31111 (geplant Phase 2)."
 
   # ==========================================================================

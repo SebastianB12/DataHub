@@ -1,0 +1,660 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/budget-deficit"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: "European Commission"
+  te_url: "https://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/croatia/business-confidence"
+  te_value: 5.8
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/capacity-utilization"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+changes-in-inventories:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://podaci.dzs.hr/en/"
+  te_page: "https://tradingeconomics.com/croatia/changes-in-inventories"
+  te_value: 280.0
+  te_period: null
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+consumer-confidence:
+  te_label: "European Commission"
+  te_url: "http://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/croatia/consumer-confidence"
+  te_value: -1.7
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+consumer-spending:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://podaci.dzs.hr/en/"
+  te_page: "https://tradingeconomics.com/croatia/consumer-spending"
+  te_value: 10510.0
+  te_period: null
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/core-cpi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/corporate-tax-rate"
+  te_value: 18.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/corruption-index"
+  te_value: 47.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/corruption-rank"
+  te_value: 63.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+cpi-clothing:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://dzs.gov.hr/en"
+  te_page: "https://tradingeconomics.com/croatia/cpi-clothing"
+  te_value: 95.3
+  te_period: "2026-02"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-education:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://dzs.gov.hr/en"
+  te_page: "https://tradingeconomics.com/croatia/cpi-education"
+  te_value: 98.5
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-food:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://dzs.gov.hr/en"
+  te_page: "https://tradingeconomics.com/croatia/cpi-food"
+  te_value: 101.2
+  te_period: "2026-02"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-housing-utilities:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://dzs.gov.hr/en"
+  te_page: "https://tradingeconomics.com/croatia/cpi-housing-utilities"
+  te_value: 109.3
+  te_period: "2026-02"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-recreation-and-culture:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://dzs.gov.hr/en"
+  te_page: "https://tradingeconomics.com/croatia/cpi-recreation-and-culture"
+  te_value: 101.3
+  te_period: "2026-02"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/cpi-transportation"
+  te_value: 107.6
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/credit-rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+current-account:
+  te_label: "Croatian National Bank"
+  te_url: "https://www.hnb.hr"
+  te_page: "https://tradingeconomics.com/croatia/current-account"
+  te_value: 2204.0
+  te_period: null
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+current-account-to-gdp:
+  te_label: "Croatian National Bank"
+  te_url: "https://www.hnb.hr"
+  te_page: "https://tradingeconomics.com/croatia/current-account-to-gdp"
+  te_value: 3.5
+  te_period: null
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employed-persons:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://podaci.dzs.hr/en/"
+  te_page: "https://tradingeconomics.com/croatia/employed-persons"
+  te_value: 1701.0
+  te_period: null
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+employment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/croatia/employment-rate"
+  te_value: 68.7
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: "Croatian National Bank"
+  te_url: "http://www.dzs.hr"
+  te_page: "https://tradingeconomics.com/croatia/exports"
+  te_value: 2506.65
+  te_period: "2107-03"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+food-inflation:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr/"
+  te_page: "https://tradingeconomics.com/croatia/food-inflation"
+  te_value: 3.3
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/croatia/gdp"
+  te_value: 92.53
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/croatia/gdp-per-capita"
+  te_value: 17770.87
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/croatia/gdp-per-capita-ppp"
+  te_value: 42631.32
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/gdp-real"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt:
+  te_label: "Croatian National Bank"
+  te_url: "http://www.hnb.hr"
+  te_page: "https://tradingeconomics.com/croatia/government-debt"
+  te_value: 52448.7
+  te_period: "5237-01"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/government-debt-total"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://podaci.dzs.hr/en/"
+  te_page: "https://tradingeconomics.com/croatia/government-spending"
+  te_value: 4886.0
+  te_period: null
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/government-spending-eur"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://podaci.dzs.hr/en/"
+  te_page: "https://tradingeconomics.com/croatia/gross-fixed-capital-formation"
+  te_value: 4552.0
+  te_period: null
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/hospital-beds"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/house-price-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+imports:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://www.dzs.hr"
+  te_page: "https://tradingeconomics.com/croatia/imports"
+  te_value: 4515.07
+  te_period: "3528-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+industrial-production:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr/"
+  te_page: "https://tradingeconomics.com/croatia/industrial-production"
+  te_value: 0.8
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+inflation-cpi:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr/"
+  te_page: "https://tradingeconomics.com/croatia/inflation-cpi"
+  te_value: 5.8
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: dzs_hr
+  conform: true
+  verified: true
+interest-rate:
+  te_label: "Croatian National Bank"
+  te_url: "http://www.hnb.hr"
+  te_page: "https://tradingeconomics.com/croatia/interest-rate"
+  te_value: 4.5
+  te_period: null
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: true
+job-vacancies:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/croatia/job-vacancies"
+  te_value: 17253.0
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+labor-force-participation-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/labor-force-participation-rate"
+  te_value: 72.3
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/labour-costs"
+  te_value: 161.35
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+long-term-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/croatia/long-term-unemployment-rate"
+  te_value: 1.7
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+manufacturing-production:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr/"
+  te_page: "https://tradingeconomics.com/croatia/manufacturing-production"
+  te_value: 1.9
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+minimum-wages:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/croatia/minimum-wages"
+  te_value: 1050.0
+  te_period: null
+  suggested_source: eurostat
+  current_source: curated
+  conform: false
+  verified: true
+mining-production:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr/"
+  te_page: "https://tradingeconomics.com/croatia/mining-production"
+  te_value: 3.4
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+personal-income-tax-rate:
+  te_label: "Croatian Tax Administration"
+  te_url: "https://www.porezna-uprava.hr/Stranice/Naslovnica.aspx"
+  te_page: "https://tradingeconomics.com/croatia/personal-income-tax-rate"
+  te_value: 30.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+population:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/croatia/population"
+  te_value: 3.9
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/ppi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/productivity"
+  te_value: 5.9
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+retail-sales:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr"
+  te_page: "https://tradingeconomics.com/croatia/retail-sales"
+  te_value: 0.9
+  te_period: "2026-03"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/retirement-age-men"
+  te_value: 65.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+retirement-age-women:
+  te_label: "The Republic of Croatia, Tax Administration"
+  te_url: "http://siteresources.worldbank.org"
+  te_page: "https://tradingeconomics.com/croatia/retirement-age-women"
+  te_value: 63.75
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+sales-tax-rate:
+  te_label: "Ministry of Finance, Tax Administration, Croatia"
+  te_url: "https://www.vatlive.com"
+  te_page: "https://tradingeconomics.com/croatia/sales-tax-rate"
+  te_value: 25.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/social-security-rate"
+  te_value: 36.5
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/social-security-rate-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/social-security-rate-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/croatia/terrorism-index"
+  te_value: 0.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+unemployed-persons:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "https://podaci.dzs.hr/en/"
+  te_page: "https://tradingeconomics.com/croatia/unemployed-persons"
+  te_value: 83992.0
+  te_period: "2026-02"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+unemployment:
+  te_label: "Croatian Bureau of Statistics"
+  te_url: "http://www.dzs.hr"
+  te_page: "https://tradingeconomics.com/croatia/unemployment-rate"
+  te_value: 4.3
+  te_period: "2026-02"
+  suggested_source: dzs_hr
+  current_source: eurostat
+  conform: false
+  verified: true
+youth-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/croatia/youth-unemployment-rate"
+  te_value: 16.3
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true

@@ -39,6 +39,7 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   scb:    { label: "Statistics Sweden (SCB)", url: "https://www.scb.se/" },
   scb_se: { label: "Statistics Sweden (SCB)", url: "https://www.scb.se/" },
   statpol:{ label: "Statistics Poland (GUS)", url: "https://stat.gov.pl/en/" },
+  gus_pl: { label: "Statistics Poland (GUS DBW)", url: "https://dbw.stat.gov.pl/en" },
   dst:    { label: "Statistics Denmark", url: "https://www.dst.dk/en" },
   stat_fi:{ label: "Statistics Finland", url: "https://www.stat.fi/index_en.html" },
   stat_at:{ label: "Statistik Austria", url: "https://www.statistik.at/" },

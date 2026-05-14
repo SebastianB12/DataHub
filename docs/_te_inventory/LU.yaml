@@ -1,0 +1,660 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/government-budget"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/business-confidence"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/capacity-utilization"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+consumer-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/consumer-confidence"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/consumer-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/core-inflation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/corporate-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+current-account:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/current-account"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/current-account-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/employed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+employment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/employment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/exports"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+food-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/food-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: worldbank
+  conform: false
+  verified: false
+gdp-per-capita:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/gdp-per-capita"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: worldbank
+  conform: false
+  verified: false
+gdp-per-capita-ppp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/gdp-per-capita-ppp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: worldbank
+  conform: false
+  verified: false
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/gdp-growth-annual"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/government-debt"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/government-debt-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/government-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/government-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/gross-fixed-capital-formation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/hospital-beds"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/housing-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+imports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/imports"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+industrial-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/industrial-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+inflation-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/inflation-cpi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+interest-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/interest-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: ecb
+  conform: false
+  verified: false
+job-vacancies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+labor-force-participation-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/labor-force-participation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/labour-costs"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/long-term-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+manufacturing-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/manufacturing-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/minimum-wages"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+mining-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/mining-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/personal-income-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+population:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/population"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/producer-prices"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+retail-sales:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/retail-sales"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/sales-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/social-security-rate-for-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/social-security-rate-for-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+unemployment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: statec_lu
+  conform: false
+  verified: false
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/luxembourg/youth-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false

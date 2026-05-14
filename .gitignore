@@ -43,6 +43,12 @@ docs/.coverage_audit.pkl
 /*.pdf
 /*.wadl
 /run_all.log
+/probe_*.py
+/check_*.py
+/_smoke_*.py
+/_probe_*.py
+/_at_catalog.html
+/pipeline/_probe_*.py
 !/package.json
 !/package-lock.json
 !/tsconfig.json

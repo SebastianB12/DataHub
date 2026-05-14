@@ -1,0 +1,680 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/government-budget"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/business-confidence"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/capacity-utilization"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+consumer-confidence:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/consumer-confidence"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/consumer-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/core-inflation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/corporate-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+current-account:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/current-account"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/current-account-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/employed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/employment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/exports"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+food-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/food-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: worldbank
+  conform: false
+  verified: false
+gdp-per-capita:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/gdp-per-capita"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: worldbank
+  conform: false
+  verified: false
+gdp-per-capita-ppp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/gdp-per-capita-ppp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: worldbank
+  conform: false
+  verified: false
+gdp-real:
+  te_label: "Central Statistics Office Ireland"
+  te_url: "https://www.cso.ie/"
+  te_page: "https://tradingeconomics.com/ireland/gdp-growth-annual"
+  te_value: -6.0
+  te_period: "2026-Q1"
+  suggested_source: cso_ie
+  current_source: cso_ie
+  conform: true
+  verified: true
+government-debt:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/government-debt"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/government-debt-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/government-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/government-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/gross-fixed-capital-formation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/hospital-beds"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/housing-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+housing-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/housing-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: cso_ie
+  conform: false
+  verified: false
+imports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/imports"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+industrial-production:
+  te_label: "Central Statistics Office Ireland"
+  te_url: "https://www.cso.ie/"
+  te_page: "https://tradingeconomics.com/ireland/industrial-production"
+  te_value: -20.8
+  te_period: "2026-03"
+  suggested_source: cso_ie
+  current_source: cso_ie
+  conform: true
+  verified: true
+inflation-cpi:
+  te_label: "Central Statistics Office Ireland"
+  te_url: "https://www.cso.ie/"
+  te_page: "https://tradingeconomics.com/ireland/inflation-cpi"
+  te_value: 3.6
+  te_period: "2026-03"
+  suggested_source: cso_ie
+  current_source: cso_ie
+  conform: true
+  verified: true
+interest-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/interest-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: ecb
+  conform: false
+  verified: false
+job-vacancies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+labor-force-participation-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/labor-force-participation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/labour-costs"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/long-term-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+manufacturing-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/manufacturing-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/minimum-wages"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+mining-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/mining-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/personal-income-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+population:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/population"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+ppi:
+  te_label: "Central Statistics Office Ireland"
+  te_url: "https://www.cso.ie/"
+  te_page: "https://tradingeconomics.com/ireland/producer-prices"
+  te_value: 106.7
+  te_period: "2026-03"
+  suggested_source: cso_ie
+  current_source: cso_ie
+  conform: true
+  verified: true
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+retail-sales:
+  te_label: "Central Statistics Office Ireland"
+  te_url: "https://www.cso.ie/"
+  te_page: "https://tradingeconomics.com/ireland/retail-sales"
+  te_value: 0.2
+  te_period: "2026-03"
+  suggested_source: cso_ie
+  current_source: cso_ie
+  conform: true
+  verified: true
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/sales-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/social-security-rate-for-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/social-security-rate-for-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+trade-balance:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/balance-of-trade"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: cso_ie
+  conform: false
+  verified: false
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+unemployment:
+  te_label: "Central Statistics Office Ireland"
+  te_url: "https://www.cso.ie/"
+  te_page: "https://tradingeconomics.com/ireland/unemployment-rate"
+  te_value: 4.8
+  te_period: "2026-04"
+  suggested_source: cso_ie
+  current_source: cso_ie
+  conform: true
+  verified: true
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/ireland/youth-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false

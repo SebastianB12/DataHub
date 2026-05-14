@@ -1,0 +1,660 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/budget-deficit"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/business-confidence"
+  te_value: 100.7
+  te_period: "2026-04"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+capacity-utilization:
+  te_label: "European Commission"
+  te_url: "https://commission.europa.eu/index_en"
+  te_page: "https://tradingeconomics.com/denmark/capacity-utilization"
+  te_value: 76.4
+  te_period: "2026-Q1"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+changes-in-inventories:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/changes-in-inventories"
+  te_value: null
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+consumer-confidence:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/consumer-confidence"
+  te_value: -18.6
+  te_period: "2026-04"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+consumer-spending:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/consumer-spending"
+  te_value: 274.9
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/core-cpi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/corporate-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+cpi-clothing:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/cpi-clothing"
+  te_value: 102.02
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-education:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/cpi-education"
+  te_value: null
+  te_period: "2026-01"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-food:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/cpi-food"
+  te_value: 100.74
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-housing-utilities:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/cpi-housing-utilities"
+  te_value: 99.36
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-recreation-and-culture:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/cpi-recreation-and-culture"
+  te_value: 98.88
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-transportation:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/cpi-transportation"
+  te_value: 103.46
+  te_period: "2026-04"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/credit-rating"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+current-account:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/current-account"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+current-account-to-gdp:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/denmark/current-account-to-gdp"
+  te_value: null
+  te_period: "2025"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+disposable-personal-income:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/disposable-personal-income"
+  te_value: 1436127.85
+  te_period: "2024"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+employed-persons:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/employed-persons"
+  te_value: 3068.0
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+employment-rate:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/employment-rate"
+  te_value: 76.6
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/exports"
+  te_value: null
+  te_period: "2024-12"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+food-inflation:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/food-inflation"
+  te_value: null
+  te_period: "2026-04"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/denmark/gdp"
+  te_value: null
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: dst
+  conform: false
+  verified: true
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/denmark/gdp-per-capita"
+  te_value: 501.0
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/denmark/gdp-per-capita-ppp"
+  te_value: 415.0
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/gdp-real"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: dst
+  conform: false
+  verified: false
+government-debt:
+  te_label: "Danmarks Nationalbank"
+  te_url: "http://www.nationalbanken.dk"
+  te_page: "https://tradingeconomics.com/denmark/government-debt"
+  te_value: 592.73
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: true
+government-debt-total:
+  te_label: "Danmarks Nationalbank"
+  te_url: "http://www.nationalbanken.dk"
+  te_page: "https://tradingeconomics.com/denmark/government-debt"
+  te_value: 592.73
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: true
+government-spending:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/government-spending"
+  te_value: 157.6
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/government-spending-eur"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/gross-fixed-capital-formation"
+  te_value: 130.5
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/hospital-beds"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+house-price-index:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/denmark/housing-index"
+  te_value: 156.61
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+imports:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/imports"
+  te_value: null
+  te_period: "2024-12"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+industrial-production:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/industrial-production"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+inflation-cpi:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/inflation-cpi"
+  te_value: 1.4
+  te_period: "2026-04"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+job-vacancies:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/job-vacancies"
+  te_value: 45766.0
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+labor-force-participation-rate:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/labor-force-participation-rate"
+  te_value: 81.9
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+labour-costs:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu/"
+  te_page: "https://tradingeconomics.com/denmark/labour-costs"
+  te_value: 112.0
+  te_period: "2025-Q4"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+long-term-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/denmark/long-term-unemployment-rate"
+  te_value: null
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+manufacturing-production:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/manufacturing-production"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/minimum-wages"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+mining-production:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/mining-production"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/personal-income-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+population:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/population"
+  te_value: null
+  te_period: "2025"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+ppi:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/producer-prices"
+  te_value: 145.1
+  te_period: "2026-02"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+productivity:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/productivity"
+  te_value: 119.31
+  te_period: "2025-Q4"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+retail-sales:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/retail-sales"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/sales-tax-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+services-inflation:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/services-inflation"
+  te_value: 2.2
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/social-security-rate-companies"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/social-security-rate-employees"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+trade-balance:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk/"
+  te_page: "https://tradingeconomics.com/denmark/balance-of-trade"
+  te_value: null
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: dst
+  conform: true
+  verified: true
+unemployed-persons:
+  te_label: "Statistics Denmark"
+  te_url: "https://www.dst.dk"
+  te_page: "https://tradingeconomics.com/denmark/unemployed-persons"
+  te_value: 80.9
+  te_period: "2026-03"
+  suggested_source: dst
+  current_source: eurostat
+  conform: false
+  verified: true
+unemployment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/denmark/unemployment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: dst
+  conform: false
+  verified: false
+youth-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/denmark/youth-unemployment-rate"
+  te_value: 16.4
+  te_period: "2026-02"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true

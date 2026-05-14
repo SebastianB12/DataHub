@@ -5,10 +5,33 @@ released as XLS/XLSX files through their Liferay-based publication portal
 (www.statistics.gr) — the SAME files the press releases reference, with
 filenames carrying the publication code, time range, and table number.
 
-Three primary indicators TE shows for GR are sourced from ELSTAT directly:
-  - inflation-cpi          DKT87  Table IV monthly CPI 1959-…  (XLSX, 2020=100)
-  - industrial-production  DKT21  Table 04 SA monthly IPI 2000-…  (XLSX, 2021=100)
-  - unemployment           SJO02  Table 1A monthly LFS 2004-…  (XLS legacy)
+Indicators TE shows for GR that are sourced from ELSTAT directly:
+
+  Stage 1 (already live):
+    - inflation-cpi          DKT87  Table IV monthly CPI 1959-…  (XLSX, 2020=100)
+    - industrial-production  DKT21  Table 04 SA monthly IPI 2000-…  (XLSX, 2021=100)
+    - unemployment           SJO02  Table 1A monthly LFS 2004-…  (XLS legacy)
+
+  Stage 2 (this commit):
+    - ppi                    DKT15  Table 1 Total PPI 2021=100  (XLS legacy, current
+                                    quarter only — ELSTAT publishes a "rolling" press
+                                    release file, deep history requires archive scrape)
+    - retail-sales           DKT39  Table 3 SA Turnover Index 2000-… (XLSX, 2021=100)
+    - trade-balance          SFC02  Trade Balance SDDS monthly (XLSX, mEUR)
+    - exports                SFC02  same workbook, EXPORTS-DISPATCHES col (mEUR)
+    - imports                SFC02  same workbook, IMPORTS-ARRIVALS col (mEUR)
+    - gdp-real               SEL84  Quarterly GDP SA chain-linked 2020 prices
+                                    (XLS legacy, transposed wide)
+    - employed-persons       SJO01  Table 3 Persons employed quarterly (NACE Rev 2
+                                    aggregate, thousands)
+
+  Documented gaps (NOT seeded — different publishers):
+    - consumer-confidence    -> IOBE (Foundation for Economic & Industrial Research)
+                                publishes the survey, NOT ELSTAT. TE attributes to
+                                European Commission DG ECFIN — kept on Eurostat.
+    - business-confidence    -> same as above, IOBE/DG ECFIN, kept on Eurostat.
+    - current-account        -> Bank of Greece (bankofgreece.gr), NOT ELSTAT.
+                                Future provider — BoG SDMX endpoint pending.
 
 The download URL is the Liferay portlet "downloadResources" resource URL with a
 stable numeric `documentID`. ELSTAT does not version these IDs — when a new
@@ -183,6 +206,257 @@ def fetch_elstat_unemployment_sa() -> list[tuple[date, float]]:
     return out
 
 
+# === PPI: DKT15, "Total PPI" sheet — Monthly (current rolling quarter only) =
+
+PPI_DOC_ID = 587776  # "Producer Price Index in Industry, base 2021=100, current quarter"
+
+
+def fetch_elstat_ppi() -> list[tuple[date, float]]:
+    """Download DKT15 'Total PPI' sheet (XLS legacy). Layout:
+      row 11: header — col 0='Code', col 1='Description',
+              col 2='Weight…', cols 3..N = 'YYYY_MM' period labels
+      row 14: code '0020' Overall Market — values in cols 3..N
+    We extract the Overall Market row only.
+    """
+    r = requests.get(_resource_url(PPI_DOC_ID), headers=HDR, timeout=60)
+    r.raise_for_status()
+    wb = xlrd.open_workbook(file_contents=r.content)
+    ws = wb.sheet_by_name("Total PPI") if "Total PPI" in wb.sheet_names() else wb.sheet_by_index(0)
+
+    # Locate header row (contains 'YYYY_MM' patterns)
+    header_row: int | None = None
+    period_cols: list[tuple[int, date]] = []
+    for r_i in range(min(ws.nrows, 30)):
+        row = [ws.cell_value(r_i, c) for c in range(ws.ncols)]
+        labels = [(j, c) for j, c in enumerate(row) if isinstance(c, str) and len(c) == 7 and c[4] == "_"]
+        if len(labels) >= 2:
+            header_row = r_i
+            for j, lbl in labels:
+                try:
+                    yr, mo = int(lbl[:4]), int(lbl[5:7])
+                    if 1900 <= yr <= 2100 and 1 <= mo <= 12:
+                        period_cols.append((j, date(yr, mo, 1)))
+                except ValueError:
+                    continue
+            break
+    if header_row is None or not period_cols:
+        return []
+
+    # Locate the "Overall Market" / code '0020' row
+    out: list[tuple[date, float]] = []
+    for r_i in range(header_row + 1, ws.nrows):
+        c0 = ws.cell_value(r_i, 0)
+        if str(c0).strip() in ("0020",) or (isinstance(c0, float) and int(c0) == 20):
+            for col_j, dt in period_cols:
+                v = ws.cell_value(r_i, col_j)
+                if isinstance(v, (int, float)) and v != "" and not isinstance(v, bool):
+                    out.append((dt, float(v)))
+            break
+    out.sort()
+    return out
+
+
+# === RETAIL: DKT39, SA Turnover Index — Monthly 2000-… (XLSX, 2021=100) ===
+
+RETAIL_DOC_ID = 500036  # "Seasonally Adjusted Turnover Index in Retail Trade"
+
+MONTHS_ROMAN = {
+    "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6,
+    "VII": 7, "VIII": 8, "IX": 9, "X": 10, "XI": 11, "XII": 12,
+}
+
+
+def fetch_elstat_retail_turnover_sa() -> list[tuple[date, float]]:
+    """Download DKT39 SA Turnover (XLSX). Layout sheet 'TABLE 3':
+      row 8+: col 0 = 'YYYY    I'..'YYYY    XII' (year only on month I row,
+                                                   roman numerals thereafter),
+              col 1 = Overall Index.
+    """
+    r = requests.get(_resource_url(RETAIL_DOC_ID), headers=HDR, timeout=60)
+    r.raise_for_status()
+    wb = openpyxl.load_workbook(io.BytesIO(r.content), data_only=True, read_only=True)
+    ws = wb.active
+
+    out: list[tuple[date, float]] = []
+    current_year: int | None = None
+    for row in ws.iter_rows(values_only=True):
+        cells = list(row)
+        if not cells:
+            continue
+        c0 = cells[0]
+        if not isinstance(c0, str):
+            continue
+        label = c0.strip()
+        # "YYYY    I" pattern — year + roman I
+        parts = label.split()
+        month_token: str | None = None
+        if len(parts) >= 2 and parts[0].isdigit() and 1900 <= int(parts[0]) <= 2100:
+            current_year = int(parts[0])
+            month_token = parts[1]
+        elif label in MONTHS_ROMAN:
+            month_token = label
+        if month_token is None or month_token not in MONTHS_ROMAN or current_year is None:
+            continue
+        v = cells[1] if len(cells) > 1 else None
+        if isinstance(v, (int, float)) and not isinstance(v, bool):
+            out.append((date(current_year, MONTHS_ROMAN[month_token], 1), float(v)))
+    out.sort()
+    return out
+
+
+# === TRADE: SFC02, "TRADE BALANCE SDDS MONTHLY DATA" — 2004-… (XLSX, mEUR) ==
+
+TRADE_DOC_ID = 115720  # "Imports/Exports/Trade Balance Intra+Extra EU, monthly"
+
+
+def _fetch_elstat_trade_columns() -> list[tuple[date, float, float, float]]:
+    """Returns rows of (date, imports_mEUR, exports_mEUR, balance_mEUR).
+    Layout (SDDS MONTHLY sheet):
+      header row idx 5 — cols 0,1 = imports YEAR/MONTH, col 2 = imports value,
+                          cols 5,6 = exports YEAR/MONTH, col 7 = exports value,
+                          col 10 = trade balance value.
+    """
+    r = requests.get(_resource_url(TRADE_DOC_ID), headers=HDR, timeout=60)
+    r.raise_for_status()
+    wb = openpyxl.load_workbook(io.BytesIO(r.content), data_only=True, read_only=True)
+    ws = wb["TRADE BALANCE SDDS MONTHLY DATA"]
+
+    out: list[tuple[date, float, float, float]] = []
+    for row in ws.iter_rows(values_only=True):
+        cells = list(row)
+        if len(cells) < 11:
+            continue
+        yr, mo = cells[0], cells[1]
+        if not (isinstance(yr, int) and isinstance(mo, int)
+                and 2000 <= yr <= 2100 and 1 <= mo <= 12):
+            continue
+        imp, exp, bal = cells[2], cells[7], cells[10]
+        if not all(isinstance(v, (int, float)) and not isinstance(v, bool)
+                   for v in (imp, exp, bal)):
+            continue
+        out.append((date(yr, mo, 1), float(imp), float(exp), float(bal)))
+    out.sort()
+    return out
+
+
+def fetch_elstat_imports() -> list[tuple[date, float]]:
+    return [(d, imp) for d, imp, _, _ in _fetch_elstat_trade_columns()]
+
+
+def fetch_elstat_exports() -> list[tuple[date, float]]:
+    return [(d, exp) for d, _, exp, _ in _fetch_elstat_trade_columns()]
+
+
+def fetch_elstat_trade_balance() -> list[tuple[date, float]]:
+    return [(d, bal) for d, _, _, bal in _fetch_elstat_trade_columns()]
+
+
+# === GDP REAL: SEL84, "GDP_SA_CLV20" — Quarterly chain-linked, 1995-… ======
+
+GDP_DOC_ID = 115384  # "Quarterly GDP SA, chain-linked volumes constant 2020 prices"
+
+
+def fetch_elstat_gdp_real() -> list[tuple[date, float]]:
+    """Download SEL84 GDP file (XLS legacy). Wide-transposed layout:
+      row 5: cols 1..N = '1995 Q1', '1995 Q2', … period labels (strings)
+      row 6: col 0 = 'Gross Domestic Product', cols 1..N = values in mEUR.
+    """
+    r = requests.get(_resource_url(GDP_DOC_ID), headers=HDR, timeout=60)
+    r.raise_for_status()
+    wb = xlrd.open_workbook(file_contents=r.content)
+    ws = wb.sheet_by_index(0)
+
+    # Locate header row containing 'YYYY Q1' patterns
+    header_row: int | None = None
+    period_cols: list[tuple[int, date]] = []
+    for r_i in range(min(ws.nrows, 15)):
+        row = [ws.cell_value(r_i, c) for c in range(ws.ncols)]
+        labels = []
+        for j, c in enumerate(row):
+            if isinstance(c, str) and " Q" in c:
+                parts = c.replace("\xa0", " ").split()
+                if len(parts) == 2 and parts[0].isdigit() and parts[1] in ("Q1", "Q2", "Q3", "Q4"):
+                    yr = int(parts[0])
+                    q = int(parts[1][1])
+                    quarter_end_month = q * 3
+                    labels.append((j, date(yr, quarter_end_month, 1)))
+        if len(labels) >= 4:
+            header_row = r_i
+            period_cols = labels
+            break
+    if header_row is None:
+        return []
+
+    # The first row after header carrying 'Gross Domestic Product' string in col 0
+    out: list[tuple[date, float]] = []
+    for r_i in range(header_row + 1, ws.nrows):
+        c0 = ws.cell_value(r_i, 0)
+        if isinstance(c0, str) and "Gross Domestic Product" in c0:
+            for col_j, dt in period_cols:
+                v = ws.cell_value(r_i, col_j)
+                if isinstance(v, (int, float)) and v != "" and not isinstance(v, bool):
+                    out.append((dt, float(v)))
+            break
+    out.sort()
+    return out
+
+
+# === LFS EMPLOYED: SJO01, Table 3 — Persons employed (quarterly, thousands) =
+
+LFS_EMPLOYED_DOC_ID = 115983  # "Persons employed 15+ by economic activities"
+
+
+def fetch_elstat_employed() -> list[tuple[date, float]]:
+    """SJO01 Table 3 (XLS legacy). Two stacked tables:
+      A) NACE Rev 1 — header row 2, 'Total employed' row 3 (2001..pre-2008)
+      B) NACE Rev 2 — header row ~215, 'Total employed' row ~216 (2001..current)
+    Strategy: scan all rows; if col 0 has a Greek/English 'Total employed' string,
+    look upward for the most recent quarter-header row and align by column.
+    """
+    r = requests.get(_resource_url(LFS_EMPLOYED_DOC_ID), headers=HDR, timeout=60)
+    r.raise_for_status()
+    wb = xlrd.open_workbook(file_contents=r.content)
+    ws = wb.sheet_by_index(0)
+
+    rows = [[ws.cell_value(r_i, c) for c in range(ws.ncols)] for r_i in range(ws.nrows)]
+
+    def parse_q_label(s) -> date | None:
+        if not isinstance(s, str):
+            return None
+        s2 = " ".join(s.split())
+        # Patterns: '1st quarter 2001', '2d quarter 2001', '3d quarter 2001', '4th quarter 2001'
+        for prefix, q in (("1st", 1), ("2d", 2), ("3d", 3), ("4th", 4)):
+            if s2.lower().startswith(prefix):
+                tok = s2.split()
+                for t in tok:
+                    if t.isdigit() and 1900 <= int(t) <= 2100:
+                        return date(int(t), q * 3, 1)
+        return None
+
+    # Collect (date, value) — prefer NACE Rev 2 table (later in the file)
+    # so we walk from the BOTTOM. Find a 'Total employed' row, then look upward
+    # for the matching header.
+    out: dict[date, float] = {}
+    last_header_cols: list[tuple[int, date]] = []
+    for r_i, row in enumerate(rows):
+        # detect header row
+        labels = [(j, parse_q_label(c)) for j, c in enumerate(row)]
+        labels = [(j, d) for j, d in labels if d is not None]
+        if len(labels) >= 4:
+            last_header_cols = labels
+            continue
+        # Total employed row
+        col1 = row[1] if len(row) > 1 else None
+        if isinstance(col1, str) and "Total employed" in col1 and last_header_cols:
+            for col_j, dt in last_header_cols:
+                v = row[col_j] if col_j < len(row) else None
+                if isinstance(v, (int, float)) and not isinstance(v, bool):
+                    # NACE Rev 2 (later in file) overwrites NACE Rev 1 -> good
+                    out[dt] = float(v)
+
+    return sorted(out.items())
+
+
 SERIES = [
     {
         "slug": "inflation-cpi",
@@ -213,6 +487,76 @@ SERIES = [
         "doc_id": UNEMP_DOC_ID,
         "publication": "SJO02",
         "note": "ELSTAT SJO02 Table 1A LFS monthly unemployment rate (seasonally adjusted), 2004-onwards",
+    },
+    {
+        "slug": "ppi",
+        "fetcher": fetch_elstat_ppi,
+        "freq": "M",
+        "unit": "Index (2021=100)",
+        "adjustment": "NSA",
+        "doc_id": PPI_DOC_ID,
+        "publication": "DKT15",
+        "note": "ELSTAT DKT15 Total PPI Overall Market base 2021=100 (current rolling quarter press-release; deeper history via Eurostat sts_inpp_m fallback)",
+    },
+    {
+        "slug": "retail-sales",
+        "fetcher": fetch_elstat_retail_turnover_sa,
+        "freq": "M",
+        "unit": "Index (2021=100)",
+        "adjustment": "SA",
+        "doc_id": RETAIL_DOC_ID,
+        "publication": "DKT39",
+        "note": "ELSTAT DKT39 Table 3 SA Turnover Index in Retail Trade 2021=100, 2000-onwards",
+    },
+    {
+        "slug": "imports",
+        "fetcher": fetch_elstat_imports,
+        "freq": "M",
+        "unit": "Million EUR",
+        "adjustment": "NSA",
+        "doc_id": TRADE_DOC_ID,
+        "publication": "SFC02",
+        "note": "ELSTAT SFC02 Trade Balance SDDS monthly — imports/arrivals (intra+extra EU), 2004-onwards",
+    },
+    {
+        "slug": "exports",
+        "fetcher": fetch_elstat_exports,
+        "freq": "M",
+        "unit": "Million EUR",
+        "adjustment": "NSA",
+        "doc_id": TRADE_DOC_ID,
+        "publication": "SFC02",
+        "note": "ELSTAT SFC02 Trade Balance SDDS monthly — exports/dispatches (intra+extra EU), 2004-onwards",
+    },
+    {
+        "slug": "trade-balance",
+        "fetcher": fetch_elstat_trade_balance,
+        "freq": "M",
+        "unit": "Million EUR",
+        "adjustment": "NSA",
+        "doc_id": TRADE_DOC_ID,
+        "publication": "SFC02",
+        "note": "ELSTAT SFC02 Trade Balance SDDS monthly — exports - imports (intra+extra EU), 2004-onwards",
+    },
+    {
+        "slug": "gdp-real",
+        "fetcher": fetch_elstat_gdp_real,
+        "freq": "Q",
+        "unit": "Million EUR (chain-linked, 2020 prices)",
+        "adjustment": "SA",
+        "doc_id": GDP_DOC_ID,
+        "publication": "SEL84",
+        "note": "ELSTAT SEL84 Quarterly GDP SA chain-linked volumes constant 2020 prices, 1995-Q1 onwards",
+    },
+    {
+        "slug": "employed-persons",
+        "fetcher": fetch_elstat_employed,
+        "freq": "Q",
+        "unit": "Thousand persons",
+        "adjustment": "NSA",
+        "doc_id": LFS_EMPLOYED_DOC_ID,
+        "publication": "SJO01",
+        "note": "ELSTAT SJO01 Table 3 LFS Persons employed 15+ quarterly (NACE Rev 2 aggregate, thousands), 2001-onwards",
     },
 ]
 

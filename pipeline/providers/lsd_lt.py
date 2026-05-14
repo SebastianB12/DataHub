@@ -71,6 +71,47 @@ LT_SERIES: list[dict[str, Any]] = [
         "conversion": 1.0,
         "note": "LSD Pramones produkcijos kainu indeksai, B_TO_E total industry, visa rinka",
     },
+    # Retail trade turnover index (constant prices, 2015=100), monthly.
+    # evrk_2_id="G47" = retail trade except motor vehicles/motorcycles;
+    # islyginimas_id="sezon" = SA; lyginimas_id="palyg_2021" = 2021 index level
+    {
+        "slug": "retail-sales",
+        "ns": "mazmen_prekyb_imoniu_apyvartos_indeksai",
+        "table_id": "S8R838M40701035",
+        "filter": {"evrk_2_id": "G47", "islyginimas_id": "sezon", "lyginimas_id": "palyg_2021"},
+        "freq": "M",
+        "unit": "Index (2021=100)",
+        "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "LSD Mazmenines prekybos apyvartos indeksai G47 SA 2021=100",
+    },
+    # GDP at comparable prices (chain-linked), quarterly mln EUR.
+    # islyginimas_id="darbo" = working-day adjusted (only available; no NSA)
+    {
+        "slug": "gdp-real",
+        "ns": "bvp_palyginamosiomis_kainomis",
+        "table_id": "S7R203M21101011",
+        "filter": {"islyginimas_id": "darbo"},
+        "freq": "Q",
+        "unit": "Million EUR (chain-linked)",
+        "adjustment": "CA",
+        "conversion": 1.0,
+        "note": "LSD BVP palyginamosiomis kainomis (chain-linked), working-day adj, mln EUR",
+    },
+    # Annual unemployment rate (LFS, ages 15+), national total, both sexes.
+    # teritorija_id="00" = Lietuvos Respublika (national); lytis_id="0" = Both sexes;
+    # amzius_15_24_ir_vyresni_id="15_ir_daugiau" = age 15+.
+    {
+        "slug": "unemployment",
+        "ns": "metinis_nedarbo_lygis",
+        "table_id": "S3R347M3030903",
+        "filter": {"teritorija_id": "00", "lytis_id": "0", "amzius_15_24_ir_vyresni_id": "15_ir_daugiau"},
+        "freq": "A",
+        "unit": "%",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "LSD Metinis nedarbo lygis age 15+ both sexes LT national annual %",
+    },
 ]
 
 

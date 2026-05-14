@@ -1,0 +1,825 @@
+# TE-Source-Inventory for Germany (DE)
+# Generated 2026-05-14. Sources verified via WebFetch of tradingeconomics.com.
+# Slugs where the TE detail page returned HTTP 403 are marked verified: false
+# and `te_label: null`. truth.yaml is unchanged — overrides go there.
+
+bankruptcies:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/bankruptcies"
+  te_value: 1919
+  te_period: "2026-01"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+banks-balance-sheet:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/banks-balance-sheet"
+  te_value: 11379.50
+  te_period: "2026-03"
+  suggested_source: bundesbank
+  current_source: bundesbank
+  conform: true
+  verified: true
+budget-deficit:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/government-budget"
+  te_value: -2.7
+  te_period: "2025"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes to Destatis, not Eurostat — mismatch"
+capacity-utilization:
+  te_label: "European Commission"
+  te_url: "https://ec.europa.eu/eurostat/en/"
+  te_page: "https://tradingeconomics.com/germany/capacity-utilization"
+  te_value: 77.40
+  te_period: "2026-Q1"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+  note: "DG ECFIN survey, Eurostat-mirrored"
+central-bank-balance:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/central-bank-balance-sheet"
+  te_value: null
+  te_period: null
+  suggested_source: bundesbank
+  current_source: bundesbank
+  conform: true
+  verified: false
+  note: "TE page returned 403; inferred from truth.yaml note"
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail page 403; national-accounts series — TE typically attributes to Destatis"
+consumer-spending:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/consumer-spending"
+  te_value: 484.81
+  te_period: "2025-Q4"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes to Destatis"
+core-cpi:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/core-inflation-rate"
+  te_value: 2.30
+  te_period: "2026-04"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes core CPI YoY to Destatis"
+corporate-tax-rate:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/corporate-tax-rate"
+  te_value: 30
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Statutory rate; curated"
+corruption-index:
+  te_label: "Transparency International"
+  te_url: "https://www.transparency.org"
+  te_page: "https://tradingeconomics.com/germany/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+corruption-rank:
+  te_label: "Transparency International"
+  te_url: "https://www.transparency.org"
+  te_page: "https://tradingeconomics.com/germany/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/cpi-clothing"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403; HICP sub-indices typically Eurostat — but headline DE inflation is Destatis on TE"
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/cpi-food"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+credit-rating:
+  te_label: "TE Sovereign Score"
+  te_url: "https://tradingeconomics.com/country-list/rating"
+  te_page: "https://tradingeconomics.com/germany/rating"
+  te_value: 100
+  te_period: "2026-05"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+current-account:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/current-account"
+  te_value: 23635
+  te_period: "2026-03"
+  suggested_source: bundesbank
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes to Bundesbank — mismatch"
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/current-account-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: bundesbank
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403; CA-to-GDP typically follows CA source (Bundesbank for DE)"
+disposable-personal-income:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/disposable-personal-income"
+  te_value: 670.87
+  te_period: "2025-Q4"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+employed-persons:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/employed-persons"
+  te_value: 45519
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes to Destatis"
+employment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/germany/employment-rate"
+  te_value: 77.70
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/energy-inflation"
+  te_value: 10.1
+  te_period: "2026-04"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403; DE inflation aggregates usually Destatis on TE"
+export-prices:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/export-prices"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: false
+  note: "TE detail 403; truth.yaml says TE-conform Destatis"
+exports:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/exports"
+  te_value: 135.80
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+factory-orders:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/factory-orders"
+  te_value: 5.0
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+food-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/food-inflation"
+  te_value: 1.5
+  te_period: "2026-04"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403"
+foreign-exchange-reserves:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/foreign-exchange-reserves"
+  te_value: 513150
+  te_period: "2026-04"
+  suggested_source: bundesbank
+  current_source: bundesbank
+  conform: true
+  verified: true
+gdp:
+  te_label: "World Bank"
+  te_url: "https://data.worldbank.org"
+  te_page: "https://tradingeconomics.com/germany/gdp"
+  te_value: 4660
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+  note: "TE detail 403; World Bank attribution standard for annual GDP USD"
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://data.worldbank.org"
+  te_page: "https://tradingeconomics.com/germany/gdp-per-capita"
+  te_value: 44109
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://data.worldbank.org"
+  te_page: "https://tradingeconomics.com/germany/gdp-per-capita-ppp"
+  te_value: null
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+gdp-real:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/gdp-constant-prices"
+  te_value: null
+  te_period: "2026-Q1"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403; gdp-growth uses Destatis on TE — gdp-real likely same"
+government-debt:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/government-debt"
+  te_value: 2661549
+  te_period: "2025-Q4"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes nominal debt level to Destatis"
+government-debt-total:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/government-debt"
+  te_value: 2661549
+  te_period: "2025-Q4"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "Same series as government-debt; TE attributes to Destatis"
+government-spending:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/government-spending"
+  te_value: 209.33
+  te_period: "2025-Q4"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+government-spending-eur:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/government-spending-value"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending-to-gdp:
+  te_label: "IMF"
+  te_url: "https://www.imf.org"
+  te_page: "https://tradingeconomics.com/germany/government-spending-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+gross-fixed-capital-formation:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/gross-fixed-capital-formation"
+  te_value: 177.05
+  te_period: "2025-Q4"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+hospital-beds:
+  te_label: "OECD"
+  te_url: "https://stats.oecd.org"
+  te_page: "https://tradingeconomics.com/germany/hospital-beds"
+  te_value: 7.66
+  te_period: "2023"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+hospitals:
+  te_label: "WHO"
+  te_url: "https://www.who.int"
+  te_page: "https://tradingeconomics.com/germany/hospitals"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+house-price-index:
+  te_label: "Europace AG, Germany"
+  te_url: "https://neu.europace.de"
+  te_page: "https://tradingeconomics.com/germany/housing-index"
+  te_value: 220.65
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "licensed by Europace AG — no public API; our eurostat HPI is a substitute"
+import-prices:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/import-prices"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: false
+  note: "TE detail 403; truth.yaml says TE-conform Destatis"
+imports:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/imports"
+  te_value: 121.50
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+industrial-production:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/industrial-production"
+  te_value: -2.80
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes to Destatis"
+inflation-cpi:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/inflation-cpi"
+  te_value: 2.90
+  te_period: "2026-04"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+job-vacancies:
+  te_label: "Bundesagentur für Arbeit"
+  te_url: "https://statistik.arbeitsagentur.de"
+  te_page: "https://tradingeconomics.com/germany/job-vacancies"
+  te_value: 641.21
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "licensed/gap — no STATIC_LABEL for Bundesagentur. Our eurostat JVR is a different concept (rate not stock)"
+labor-force-participation-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/germany/labor-force-participation-rate"
+  te_value: 80.80
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+labour-costs:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/labour-costs"
+  te_value: 124.27
+  te_period: "2025-Q4"
+  suggested_source: bundesbank
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes labour-cost index to Bundesbank — mismatch"
+loans-to-private-sector:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/loans-to-private-sector"
+  te_value: 1975.51
+  te_period: "2025-Q4"
+  suggested_source: bundesbank
+  current_source: bundesbank
+  conform: true
+  verified: true
+long-term-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/germany/long-term-unemployment-rate"
+  te_value: 1.10
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+manufacturing-production:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/manufacturing-production"
+  te_value: -3.60
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+medical-doctors:
+  te_label: "OECD"
+  te_url: "https://stats.oecd.org"
+  te_page: "https://tradingeconomics.com/germany/medical-doctors"
+  te_value: 4.98
+  te_period: "2021"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+military-expenditure:
+  te_label: "SIPRI"
+  te_url: "https://www.sipri.org"
+  te_page: "https://tradingeconomics.com/germany/military-expenditure"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+minimum-wages:
+  te_label: "Federal Ministry of Labour and Social Affairs"
+  te_url: "https://www.bmas.de"
+  te_page: "https://tradingeconomics.com/germany/minimum-wages"
+  te_value: 13.9
+  te_period: "2026-01"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+mining-production:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/mining-production"
+  te_value: -4.80
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+money-supply-m1:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/money-supply-m1"
+  te_value: 2906
+  te_period: "2026-02"
+  suggested_source: bundesbank
+  current_source: bundesbank
+  conform: true
+  verified: true
+money-supply-m3:
+  te_label: "Deutsche Bundesbank"
+  te_url: "https://www.bundesbank.de"
+  te_page: "https://tradingeconomics.com/germany/money-supply-m3"
+  te_value: 4144
+  te_period: "2026-02"
+  suggested_source: bundesbank
+  current_source: bundesbank
+  conform: true
+  verified: false
+  note: "TE detail 403; overview page confirms Bundesbank-style series"
+nurses:
+  te_label: "OECD"
+  te_url: "https://stats.oecd.org"
+  te_page: "https://tradingeconomics.com/germany/nurses"
+  te_value: 14.41
+  te_period: "2023"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+personal-income-tax-rate:
+  te_label: "Federal Central Tax Office"
+  te_url: "https://www.bzst.de"
+  te_page: "https://tradingeconomics.com/germany/personal-income-tax-rate"
+  te_value: 45
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+population:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/population"
+  te_value: 83.58
+  te_period: "2024"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes population to Destatis"
+ppi:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/producer-prices"
+  te_value: 126.90
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+  note: "TE detail 403; productivity series typically Eurostat-mirrored"
+retail-sales:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/retail-sales"
+  te_value: -2.0
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+retirement-age-men:
+  te_label: "Deutsche Rentenversicherung"
+  te_url: "https://www.deutsche-rentenversicherung.de"
+  te_page: "https://tradingeconomics.com/germany/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+retirement-age-women:
+  te_label: "Deutsche Rentenversicherung"
+  te_url: "https://www.deutsche-rentenversicherung.de"
+  te_page: "https://tradingeconomics.com/germany/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+sales-tax-rate:
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.bundesfinanzministerium.de"
+  te_page: "https://tradingeconomics.com/germany/sales-tax-rate"
+  te_value: 19
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403; DE inflation aggregates typically Destatis on TE"
+social-security-rate:
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.bundesfinanzministerium.de"
+  te_page: "https://tradingeconomics.com/germany/social-security-rate"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+social-security-rate-companies:
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.bundesfinanzministerium.de"
+  te_page: "https://tradingeconomics.com/germany/social-security-rate-for-companies"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+social-security-rate-employees:
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.bundesfinanzministerium.de"
+  te_page: "https://tradingeconomics.com/germany/social-security-rate-for-employees"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+terrorism-index:
+  te_label: "Institute for Economics and Peace"
+  te_url: "https://www.visionofhumanity.org"
+  te_page: "https://tradingeconomics.com/germany/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+trade-balance:
+  te_label: "Federal Statistical Office (Destatis)"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/balance-of-trade"
+  te_value: 14.3
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/germany/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE detail 403; unemployment-rate is from Bundesagentur on TE — likely same for stock. Bundesagentur has no STATIC_LABEL"
+unemployment:
+  te_label: "Bundesagentur für Arbeit"
+  te_url: "https://statistik.arbeitsagentur.de"
+  te_page: "https://tradingeconomics.com/germany/unemployment-rate"
+  te_value: 6.4
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: destatis
+  conform: false
+  verified: true
+  note: "licensed/gap — Bundesagentur not in STATIC_LABELS. Our destatis ILO rate differs"
+wages:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/wages"
+  te_value: 4701
+  te_period: "2024"
+  suggested_source: destatis
+  current_source: destatis
+  conform: true
+  verified: true
+weapons-sales:
+  te_label: "SIPRI"
+  te_url: "https://www.sipri.org"
+  te_page: "https://tradingeconomics.com/germany/weapons-sales"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+withholding-tax-rate:
+  te_label: "Federal Central Tax Office"
+  te_url: "https://www.bzst.de"
+  te_page: "https://tradingeconomics.com/germany/withholding-tax"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+youth-unemployment-rate:
+  te_label: "Federal Statistical Office"
+  te_url: "https://www.destatis.de"
+  te_page: "https://tradingeconomics.com/germany/youth-unemployment-rate"
+  te_value: 7.50
+  te_period: "2026-03"
+  suggested_source: destatis
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes to Destatis"

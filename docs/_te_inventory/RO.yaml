@@ -1,0 +1,650 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/budget-deficit"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: "European Commission"
+  te_url: "http://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/romania/business-confidence"
+  te_value: -3.3
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/capacity-utilization"
+  te_value: 69.9
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/changes-in-inventories"
+  te_value: 1669.4
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+consumer-confidence:
+  te_label: "European Commission"
+  te_url: "http://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/romania/consumer-confidence"
+  te_value: -35.1
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/consumer-spending"
+  te_value: 197012.0
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/core-cpi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/corporate-tax-rate"
+  te_value: 16.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/corruption-index"
+  te_value: 45.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/corruption-rank"
+  te_value: 70.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/cpi-clothing"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/cpi-food"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/cpi-transportation"
+  te_value: 100.07
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/credit-rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+current-account:
+  te_label: "National Bank of Romania"
+  te_url: "https://www.bnr.ro/"
+  te_page: "https://tradingeconomics.com/romania/current-account"
+  te_value: 2322.0
+  te_period: "2026-02"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/current-account-to-gdp"
+  te_value: 8.0
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/employed-persons"
+  te_value: 5121.0
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employment-rate:
+  te_label: "Institutul National de Statistica"
+  te_url: "https://insse.ro/cms/"
+  te_page: "https://tradingeconomics.com/romania/employment-rate"
+  te_value: 62.6
+  te_period: null
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/exports"
+  te_value: 8958.8
+  te_period: "7959-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+food-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/food-inflation"
+  te_value: 7.39
+  te_period: "2026-04"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/romania/gdp"
+  te_value: 382.77
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/romania/gdp-per-capita"
+  te_value: 12493.43
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/romania/gdp-per-capita-ppp"
+  te_value: 40608.42
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/gdp-real"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/government-debt"
+  te_value: 1236906.2
+  te_period: "1239-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/government-debt-total"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/government-spending"
+  te_value: 25993.3
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/government-spending-eur"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/gross-fixed-capital-formation"
+  te_value: 78237.5
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/hospital-beds"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/house-price-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+imports:
+  te_label: "Institutul National de Statistica"
+  te_url: "http://www.insse.ro"
+  te_page: "https://tradingeconomics.com/romania/imports"
+  te_value: 11885.3
+  te_period: "1038-03"
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+industrial-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/industrial-production"
+  te_value: 2.2
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+inflation-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/inflation-cpi"
+  te_value: 10.7
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: insse_ro
+  conform: false
+  verified: false
+job-vacancies:
+  te_label: "Institutul National de Statistica"
+  te_url: "https://insse.ro/cms/"
+  te_page: "https://tradingeconomics.com/romania/job-vacancies"
+  te_value: 28360.0
+  te_period: null
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+labor-force-participation-rate:
+  te_label: "Institutul National de Statistica"
+  te_url: "https://insse.ro/cms/ro"
+  te_page: "https://tradingeconomics.com/romania/labor-force-participation-rate"
+  te_value: 66.8
+  te_period: null
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/labour-costs"
+  te_value: 192.75
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/long-term-unemployment-rate"
+  te_value: 2.3
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+manufacturing-production:
+  te_label: "Institutul National de Statistica"
+  te_url: "https://insse.ro/cms/"
+  te_page: "https://tradingeconomics.com/romania/manufacturing-production"
+  te_value: 3.1
+  te_period: "2026-03"
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/medical-doctors"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+minimum-wages:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/romania/minimum-wages"
+  te_value: 795.0
+  te_period: null
+  suggested_source: eurostat
+  current_source: curated
+  conform: false
+  verified: true
+mining-production:
+  te_label: "Institutul National de Statistica"
+  te_url: "https://insse.ro/cms/"
+  te_page: "https://tradingeconomics.com/romania/mining-production"
+  te_value: 1.3
+  te_period: "2026-03"
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/nurses"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/personal-income-tax-rate"
+  te_value: 10.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+population:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/romania/population"
+  te_value: 19.0
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/ppi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+productivity:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/romania/productivity"
+  te_value: 132.04
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+retail-sales:
+  te_label: "Institutul National de Statistica"
+  te_url: "http://www.insse.ro"
+  te_page: "https://tradingeconomics.com/romania/retail-sales"
+  te_value: 2.6
+  te_period: "2026-03"
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+retirement-age-men:
+  te_label: "National Revenue Agency"
+  te_url: "https://www.cnpp.ro"
+  te_page: "https://tradingeconomics.com/romania/retirement-age-men"
+  te_value: 65.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+retirement-age-women:
+  te_label: "National Revenue Agency"
+  te_url: "https://www.cnpp.ro"
+  te_page: "https://tradingeconomics.com/romania/retirement-age-women"
+  te_value: 62.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+sales-tax-rate:
+  te_label: "National Agency for Fiscal Administration (ANAF)"
+  te_url: "https://www.vatlive.com"
+  te_page: "https://tradingeconomics.com/romania/sales-tax-rate"
+  te_value: 19.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: "Ministry of Labor, Family, and Social Protection"
+  te_url: "https://home.kpmg.com"
+  te_page: "https://tradingeconomics.com/romania/social-security-rate"
+  te_value: 37.25
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/social-security-rate-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/social-security-rate-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/terrorism-index"
+  te_value: 0.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/unemployed-persons"
+  te_value: 260.0
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+unemployment:
+  te_label: "Institutul National de Statistica"
+  te_url: "http://www.insse.ro"
+  te_page: "https://tradingeconomics.com/romania/unemployment-rate"
+  te_value: 6.1
+  te_period: "2026-02"
+  suggested_source: insse_ro
+  current_source: eurostat
+  conform: false
+  verified: true
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/romania/youth-unemployment-rate"
+  te_value: 28.2
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false

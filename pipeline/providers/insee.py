@@ -145,16 +145,19 @@ SERIES: list[dict] = [
         "freq": "M", "unit": "Index", "adjustment": "SA", "conversion": 1.0,
     },
 
-    # Core CPI — IPC-2025 ex Energy ex Food (PRIX_CONSO=4001 spec)
+    # Core CPI — INSEE "inflation sous-jacente" (ISJ), published only as
+    # CVS-FISC for France métropolitaine. PRIX_CONSO=4022 = "Sous-jacent
+    # Ensemble" (ex energy, food, tobacco, regulated tariffs). IDBANK
+    # resolves to 011814143; Apr/26 index = 100.96 ⇒ 1.19% YoY = TE 1.2%.
     {
         "indicator": "core-cpi",
         "dataset": "IPC-2025",
         "filters": {
-            "FREQ": "M", "MENAGES_IPC": "ENSEMBLE", "REF_AREA": "FE",
-            "NATURE": "INDICE", "CORRECTION": "BRUT",
-            "COICOP2018": "SO", "PRIX_CONSO": "4001", "UNIT_MEASURE": "SO",
+            "FREQ": "M", "MENAGES_IPC": "ENSEMBLE", "REF_AREA": "FM",
+            "NATURE": "INDICE", "CORRECTION": "CVS-FISC",
+            "COICOP2018": "SO", "PRIX_CONSO": "4022", "UNIT_MEASURE": "SO",
         },
-        "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+        "freq": "M", "unit": "Index", "adjustment": "SA", "conversion": 1.0,
     },
 
     # CPI sub-items by COICOP — Index Base 2025

@@ -1,0 +1,660 @@
+budget-deficit:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/budget-deficit"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+business-confidence:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/business-confidence"
+  te_value: -2.0
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+capacity-utilization:
+  te_label: "European Commission"
+  te_url: "https://ec.europa.eu/eurostat/en/"
+  te_page: "https://tradingeconomics.com/lithuania/capacity-utilization"
+  te_value: 69.1
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+changes-in-inventories:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/changes-in-inventories"
+  te_value: 829.5
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+consumer-confidence:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/consumer-confidence"
+  te_value: -3.0
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+consumer-spending:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/consumer-spending"
+  te_value: 8860.0
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+core-cpi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/core-cpi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/corporate-tax-rate"
+  te_value: 17.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/corruption-index"
+  te_value: 65.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/corruption-rank"
+  te_value: 28.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+cpi-clothing:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/cpi-clothing"
+  te_value: 102.75
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-education:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/cpi-education"
+  te_value: 102.82
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-food:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/cpi-food"
+  te_value: 100.99
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-housing-utilities:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/cpi-housing-utilities"
+  te_value: 107.82
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-recreation-and-culture:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/cpi-recreation-and-culture"
+  te_value: 106.07
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+cpi-transportation:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/cpi-transportation"
+  te_value: 114.55
+  te_period: "2026-04"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/credit-rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+current-account:
+  te_label: "Bank of Lithuania"
+  te_url: "http://www.lb.lt"
+  te_page: "https://tradingeconomics.com/lithuania/current-account"
+  te_value: 395.5
+  te_period: "2026-02"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+current-account-to-gdp:
+  te_label: "Bank of Lithuania"
+  te_url: "http://www.lb.lt"
+  te_page: "https://tradingeconomics.com/lithuania/current-account-to-gdp"
+  te_value: 0.9
+  te_period: null
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+employed-persons:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/employed-persons"
+  te_value: 1460.9
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+employment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/lithuania/employment-rate"
+  te_value: 73.8
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+energy-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/energy-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+exports:
+  te_label: "Statistics Lithuania"
+  te_url: "http://www.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/exports"
+  te_value: 3352.5
+  te_period: "2881-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+food-inflation:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/food-inflation"
+  te_value: 0.9
+  te_period: "2026-04"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/lithuania/gdp"
+  te_value: 84.87
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/lithuania/gdp-per-capita"
+  te_value: 19094.12
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/lithuania/gdp-per-capita-ppp"
+  te_value: 47169.01
+  te_period: null
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+gdp-real:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/gdp-real"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-debt:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/en/"
+  te_page: "https://tradingeconomics.com/lithuania/government-debt"
+  te_value: 36186.8
+  te_period: "3587-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+government-debt-total:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/government-debt-total"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+government-spending:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/government-spending"
+  te_value: 2551.6
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/government-spending-eur"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+gross-fixed-capital-formation:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/gross-fixed-capital-formation"
+  te_value: 4442.7
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/hospital-beds"
+  te_value: 5.48
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/house-price-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+imports:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/imports"
+  te_value: 3900.8
+  te_period: "3377-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+industrial-production:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/industrial-production"
+  te_value: 4.8
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+inflation-cpi:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/"
+  te_page: "https://tradingeconomics.com/lithuania/inflation-cpi"
+  te_value: 5.3
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: lsd_lt
+  conform: true
+  verified: true
+interest-rate:
+  te_label: "Bank of Lithuania"
+  te_url: "http://www.lb.lt"
+  te_page: "https://tradingeconomics.com/lithuania/interest-rate"
+  te_value: 4.5
+  te_period: null
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: true
+job-vacancies:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/en/"
+  te_page: "https://tradingeconomics.com/lithuania/job-vacancies"
+  te_value: 30528.0
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+labor-force-participation-rate:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/labor-force-participation-rate"
+  te_value: 62.6
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+labour-costs:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/en/"
+  te_page: "https://tradingeconomics.com/lithuania/labour-costs"
+  te_value: 170.4
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+long-term-unemployment-rate:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/long-term-unemployment-rate"
+  te_value: 2.4
+  te_period: null
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+manufacturing-production:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/en/"
+  te_page: "https://tradingeconomics.com/lithuania/manufacturing-production"
+  te_value: 5.1
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+medical-doctors:
+  te_label: "OECD"
+  te_url: "https://www.oecd.org/"
+  te_page: "https://tradingeconomics.com/lithuania/medical-doctors"
+  te_value: 4.47
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+minimum-wages:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/lithuania/minimum-wages"
+  te_value: 1153.0
+  te_period: null
+  suggested_source: eurostat
+  current_source: curated
+  conform: false
+  verified: true
+mining-production:
+  te_label: "Statistics Lithuania"
+  te_url: "http://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/mining-production"
+  te_value: 4.4
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/nurses"
+  te_value: 7.5
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+personal-income-tax-rate:
+  te_label: "State Tax Inspectorate"
+  te_url: "http://ec.europa.eu"
+  te_page: "https://tradingeconomics.com/lithuania/personal-income-tax-rate"
+  te_value: 32.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: true
+population:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/population"
+  te_value: 2.9
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/ppi"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: lsd_lt
+  conform: false
+  verified: false
+productivity:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/lithuania/productivity"
+  te_value: 126.23
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: true
+retail-sales:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt"
+  te_page: "https://tradingeconomics.com/lithuania/retail-sales"
+  te_value: 2.5
+  te_period: "2026-02"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/retirement-age-men"
+  te_value: 64.83
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/retirement-age-women"
+  te_value: 64.67
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/sales-tax-rate"
+  te_value: 21.0
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+services-inflation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/social-security-rate"
+  te_value: 21.27
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/social-security-rate-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/social-security-rate-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/terrorism-index"
+  te_value: 0.42
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: false
+  verified: false
+unemployed-persons:
+  te_label: "Statistics Lithuania"
+  te_url: "https://osp.stat.gov.lt/en/"
+  te_page: "https://tradingeconomics.com/lithuania/unemployed-persons"
+  te_value: 155.27
+  te_period: "2026-03"
+  suggested_source: lsd_lt
+  current_source: eurostat
+  conform: false
+  verified: true
+unemployment:
+  te_label: "Lithuanian Labour Exchange"
+  te_url: "http://www.ldb.lt"
+  te_page: "https://tradingeconomics.com/lithuania/unemployment-rate"
+  te_value: 8.5
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: true
+youth-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/lithuania/youth-unemployment-rate"
+  te_value: 16.0
+  te_period: "2026-02"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false

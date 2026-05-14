@@ -9,6 +9,8 @@ Usage from repo root: pipeline/.venv/Scripts/python -m pipeline.run_all
 """
 
 import importlib
+import subprocess
+import sys
 import time
 import traceback
 
@@ -28,6 +30,7 @@ PROVIDERS = [
     "pipeline.providers.national_eu", # DK/FI/SE/IE/PT direct national APIs
     "pipeline.providers.lsd_lt",      # LT (LSD Lithuania via data.gov.lt)
     "pipeline.providers.nsi_bg",      # BG (NSI via BNB SDDS Plus SDMX)
+    "pipeline.providers.gus_pl",      # PL (GUS DBW via dbw.stat.gov.pl/api_app)
     "pipeline.providers.ecb",         # EA money/rates
     "pipeline.providers.ons",         # GB (slow due to anti-bot sleeps)
     "pipeline.providers.bundesbank",  # DE money/banking
@@ -38,7 +41,17 @@ PROVIDERS = [
 ]
 
 
+def _preflight_te_conformity():
+    """Block run_all on TE-source-conformity violations. See docs/te_sources_truth.yaml."""
+    print("Pre-flight: TE-source-conformity check...")
+    r = subprocess.run([sys.executable, "-m", "pipeline.validate_te_conformity"])
+    if r.returncode != 0:
+        print("ABORT: TE-conformity violations block run_all. Fix truth.yaml or DB rows.")
+        sys.exit(1)
+
+
 def main():
+    _preflight_te_conformity()
     results: list[tuple[str, str, float]] = []
     overall_start = time.time()
     for mod_path in PROVIDERS:

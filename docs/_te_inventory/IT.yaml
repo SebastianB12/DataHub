@@ -1,0 +1,783 @@
+# Italy — TE source inventory
+# Generated 2026-05-14 by sub-agent. te_value/te_period from TE indicators overview page.
+# verified: true entries had their te_label/te_url confirmed via the per-indicator TE page.
+# verified: false entries: TE indicator page was rate-limited (HTTP 403) so source
+# attribution could not be confirmed; te_label set to null per spec.
+
+budget-deficit:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/government-budget"
+  te_value: -3.1
+  te_period: "2025"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Government Budget to ISTAT, not Eurostat"
+
+business-confidence:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/business-confidence"
+  te_value: 87.9
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Business Confidence (manufacturing climate) to ISTAT"
+
+capacity-utilization:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/capacity-utilization"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; not on indicators overview"
+
+changes-in-inventories:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+consumer-confidence:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/consumer-confidence"
+  te_value: 90.8
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Consumer Confidence to ISTAT, not Eurostat"
+
+consumer-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/consumer-spending"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+core-cpi:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/core-inflation-rate"
+  te_value: 1.6
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Core Inflation Rate to ISTAT"
+
+corporate-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/corporate-tax-rate"
+  te_value: 24
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "TE page rate-limited; tax rates typically cited from PwC/national tax authority"
+
+corruption-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/corruption-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Transparency International series"
+
+corruption-rank:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/corruption-rank"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Transparency International series"
+
+cpi-clothing:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/cpi-clothing"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely ISTAT-attributed per pattern"
+
+cpi-education:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+cpi-food:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/cpi-food"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+cpi-housing-utilities:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+cpi-recreation-and-culture:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+cpi-transportation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/rating"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Rating agencies (S&P, Moody's, Fitch)"
+
+current-account:
+  te_label: "Banca d'Italia"
+  te_url: "https://www.bancaditalia.it/"
+  te_page: "https://tradingeconomics.com/italy/current-account"
+  te_value: 3654
+  te_period: "2026-02"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Current Account to Banca d'Italia (BoI in ECB system => maps to ecb internally)"
+
+current-account-to-gdp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/current-account-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely Banca d'Italia"
+
+disposable-personal-income:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+employed-persons:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/employed-persons"
+  te_value: 24124
+  te_period: "2026-03"
+  suggested_source: istat
+  current_source: istat
+  conform: true
+  verified: true
+
+employment-rate:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/employment-rate"
+  te_value: 62.4
+  te_period: "2026-03"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Employment Rate to ISTAT, not Eurostat"
+
+energy-inflation:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/energy-inflation"
+  te_value: 9.5
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Energy Inflation to ISTAT"
+
+exports:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/exports"
+  te_value: 53764
+  te_period: "2026-02"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Exports to ISTAT, not Eurostat"
+
+food-inflation:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/food-inflation"
+  te_value: 3.1
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Food Inflation to ISTAT"
+
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/italy/gdp"
+  te_value: 2373
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/italy/gdp-per-capita"
+  te_value: 34398
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+
+gdp-per-capita-ppp:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/gdp-per-capita-ppp"
+  te_value: 53115
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+  note: "TE page rate-limited; almost certainly World Bank per pattern"
+
+gdp-real:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/gdp-growth-annual"
+  te_value: 0.8
+  te_period: "2026-03"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "GDP Annual Growth Rate; TE attributes to ISTAT"
+
+government-debt:
+  te_label: "Banca d'Italia"
+  te_url: "https://www.bancaditalia.it/"
+  te_page: "https://tradingeconomics.com/italy/government-debt"
+  te_value: null
+  te_period: "2025"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Government Debt to Banca d'Italia"
+
+government-debt-total:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/government-debt-to-gdp"
+  te_value: 137
+  te_period: "2025"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "Government Debt to GDP attributed to ISTAT on TE"
+
+government-spending:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/government-spending"
+  te_value: 51.2
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; Government Spending to GDP 51.2%"
+
+government-spending-eur:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/government-spending-value"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+gross-fixed-capital-formation:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/gross-fixed-capital-formation"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely ISTAT"
+
+hospital-beds:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/hospital-beds"
+  te_value: 3.04
+  te_period: "2023"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "WHO/OECD typical source for hospital-beds on TE"
+
+house-price-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/housing-index"
+  te_value: 4.1
+  te_period: "2025"
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; House Price Index YoY"
+
+imports:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/imports"
+  te_value: 48821
+  te_period: "2026-02"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Imports to ISTAT, not Eurostat"
+
+industrial-production:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/industrial-production"
+  te_value: 1.5
+  te_period: "2026-03"
+  suggested_source: istat
+  current_source: istat
+  conform: true
+  verified: true
+
+inflation-cpi:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/inflation-cpi"
+  te_value: 2.8
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: istat
+  conform: true
+  verified: true
+
+interest-rate:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
+  te_page: "https://tradingeconomics.com/italy/interest-rate"
+  te_value: 2.15
+  te_period: "2026-04"
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: true
+
+job-vacancies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+labor-force-participation-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/labor-force-participation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; likely ISTAT"
+
+labour-costs:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/labour-costs"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited; Eurostat is plausible (harmonised LCI)"
+
+long-term-unemployment-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/long-term-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+manufacturing-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/manufacturing-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: istat
+  conform: true
+  verified: false
+  note: "TE page rate-limited; likely ISTAT per pattern"
+
+medical-doctors:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/medical-doctors"
+  te_value: 4.25
+  te_period: "2022"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "WHO/OECD"
+
+minimum-wages:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/minimum-wages"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Italy has no statutory minimum wage; curated/null"
+
+mining-production:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/mining-production"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+nurses:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/nurses"
+  te_value: 6.93
+  te_period: "2023"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+personal-income-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/personal-income-tax-rate"
+  te_value: 45
+  te_period: "2027"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+  note: "Tax rate"
+
+population:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/population"
+  te_value: 58.94
+  te_period: "2025"
+  suggested_source: istat
+  current_source: istat
+  conform: true
+  verified: false
+  note: "TE page rate-limited; likely ISTAT per pattern (truth says istat)"
+
+ppi:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/producer-prices"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: istat
+  conform: true
+  verified: false
+  note: "TE page rate-limited"
+
+productivity:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+retail-sales:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/retail-sales-annual"
+  te_value: 3.7
+  te_period: "2026-03"
+  suggested_source: null
+  current_source: istat
+  conform: true
+  verified: false
+  note: "TE page rate-limited; likely ISTAT per pattern"
+
+retirement-age-men:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/retirement-age-men"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+retirement-age-women:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/retirement-age-women"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+sales-tax-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/sales-tax-rate"
+  te_value: 22
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+services-inflation:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/services-inflation"
+  te_value: 2.4
+  te_period: "2026-04"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Services Inflation to ISTAT"
+
+services-sentiment:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE page rate-limited"
+
+social-security-rate:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/social-security-rate"
+  te_value: 40
+  te_period: "2026"
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+social-security-rate-companies:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/social-security-rate-for-companies"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+social-security-rate-employees:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/social-security-rate-for-employees"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+terrorism-index:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/terrorism-index"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: curated
+  conform: true
+  verified: false
+
+unemployed-persons:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/italy/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: null
+  current_source: istat
+  conform: true
+  verified: false
+  note: "TE page rate-limited; likely ISTAT per pattern"
+
+unemployment:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/unemployment-rate"
+  te_value: 5.2
+  te_period: "2026-03"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Unemployment Rate to ISTAT, not Eurostat"
+
+youth-unemployment-rate:
+  te_label: "National Institute of Statistics (ISTAT)"
+  te_url: "https://www.istat.it"
+  te_page: "https://tradingeconomics.com/italy/youth-unemployment-rate"
+  te_value: 18.1
+  te_period: "2026-03"
+  suggested_source: istat
+  current_source: eurostat
+  conform: false
+  verified: true
+  note: "TE attributes Youth Unemployment Rate to ISTAT"

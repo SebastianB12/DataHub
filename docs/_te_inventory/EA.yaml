@@ -1,0 +1,530 @@
+# TE-Source-Inventory for Euro Area (EA)
+# Generated 2026-05-14. TE detail pages returned HTTP 403 for EA slugs
+# (bot protection). Suggestions below derive from:
+#   (a) TE indicators-overview page (values + periods harvested OK)
+#   (b) TE's documented per-indicator source patterns for the Euro Area
+#   (c) Cross-check against our truth.yaml notes
+# All entries marked verified: false until a future fetch confirms.
+
+budget-deficit:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/government-budget"
+  te_value: -2.9
+  te_period: "2025"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+business-confidence:
+  te_label: "European Commission (DG ECFIN)"
+  te_url: "https://ec.europa.eu/economy_finance"
+  te_page: "https://tradingeconomics.com/euro-area/business-confidence"
+  te_value: null
+  te_period: "2026-04"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+  note: "DG ECFIN ESI — Eurostat-mirrored"
+capacity-utilization:
+  te_label: "European Commission (DG ECFIN)"
+  te_url: "https://ec.europa.eu/economy_finance"
+  te_page: "https://tradingeconomics.com/euro-area/capacity-utilization"
+  te_value: null
+  te_period: "2026-Q1"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+changes-in-inventories:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/changes-in-inventories"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+consumer-confidence:
+  te_label: "European Commission (DG ECFIN)"
+  te_url: "https://ec.europa.eu/economy_finance"
+  te_page: "https://tradingeconomics.com/euro-area/consumer-confidence"
+  te_value: -20.6
+  te_period: "2026-04"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+consumer-spending:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/consumer-spending"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+core-cpi:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/core-inflation-rate"
+  te_value: 2.2
+  te_period: "2026-04"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+corporate-tax-rate:
+  te_label: "TE (cross-country average)"
+  te_url: "https://tradingeconomics.com"
+  te_page: "https://tradingeconomics.com/euro-area/corporate-tax-rate"
+  te_value: null
+  te_period: "2025"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+cpi-clothing:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/cpi-clothing"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+cpi-education:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/cpi-education"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+cpi-housing-utilities:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/cpi-housing-utilities"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+cpi-recreation-and-culture:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/cpi-recreation-and-culture"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+cpi-transportation:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/cpi-transportation"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+current-account:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
+  te_page: "https://tradingeconomics.com/euro-area/current-account"
+  te_value: 21090
+  te_period: "2026-02"
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: false
+  note: "TE attributes EA current account to ECB BoP — not Eurostat"
+current-account-to-gdp:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
+  te_page: "https://tradingeconomics.com/euro-area/current-account-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: ecb
+  current_source: eurostat
+  conform: false
+  verified: false
+disposable-personal-income:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/disposable-personal-income"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+employment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/employment-rate"
+  te_value: 70.9
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+energy-inflation:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/energy-inflation"
+  te_value: 10.9
+  te_period: "2026-04"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+exports:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/exports"
+  te_value: 232409
+  te_period: "2026-02"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+food-inflation:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/food-inflation"
+  te_value: 2.2
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+gdp:
+  te_label: "World Bank"
+  te_url: "https://data.worldbank.org"
+  te_page: "https://tradingeconomics.com/euro-area/gdp"
+  te_value: 16406
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://data.worldbank.org"
+  te_page: "https://tradingeconomics.com/euro-area/gdp-per-capita"
+  te_value: 38145
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://data.worldbank.org"
+  te_page: "https://tradingeconomics.com/euro-area/gdp-per-capita-ppp"
+  te_value: null
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: false
+gdp-real:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/gdp-constant-prices"
+  te_value: null
+  te_period: "2026-Q1"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+government-debt:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/government-debt"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+government-debt-total:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/government-debt-to-gdp"
+  te_value: 87.8
+  te_period: "2025"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+government-spending:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/government-spending"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+government-spending-eur:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/government-spending-value"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+gross-fixed-capital-formation:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/gross-fixed-capital-formation"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+house-price-index:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/housing-index"
+  te_value: 5.2
+  te_period: "2025-Q4"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+imports:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/imports"
+  te_value: null
+  te_period: "2026-02"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+industrial-production:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/industrial-production"
+  te_value: -2.1
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+inflation-cpi:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/inflation-cpi"
+  te_value: 3.0
+  te_period: "2026-04"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+job-vacancies:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/job-vacancies"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+labor-force-participation-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/labor-force-participation-rate"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+loans-to-private-sector:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
+  te_page: "https://tradingeconomics.com/euro-area/loans-to-private-sector"
+  te_value: null
+  te_period: null
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: false
+long-term-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/long-term-unemployment-rate"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+manufacturing-production:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/manufacturing-production"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+mining-production:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/mining-production"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+money-supply-m1:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
+  te_page: "https://tradingeconomics.com/euro-area/money-supply-m1"
+  te_value: null
+  te_period: null
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: false
+money-supply-m3:
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
+  te_page: "https://tradingeconomics.com/euro-area/money-supply-m3"
+  te_value: 17446547
+  te_period: "2026-03"
+  suggested_source: ecb
+  current_source: ecb
+  conform: true
+  verified: false
+personal-income-tax-rate:
+  te_label: "TE (cross-country average)"
+  te_url: "https://tradingeconomics.com"
+  te_page: "https://tradingeconomics.com/euro-area/personal-income-tax-rate"
+  te_value: null
+  te_period: "2025"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+population:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/population"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+ppi:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/producer-prices"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+productivity:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/productivity"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+retail-sales:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/retail-sales"
+  te_value: -0.1
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+sales-tax-rate:
+  te_label: "TE (cross-country average)"
+  te_url: "https://tradingeconomics.com"
+  te_page: "https://tradingeconomics.com/euro-area/sales-tax-rate"
+  te_value: null
+  te_period: "2025"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+services-inflation:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/services-inflation"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+services-sentiment:
+  te_label: "European Commission (DG ECFIN)"
+  te_url: "https://ec.europa.eu/economy_finance"
+  te_page: "https://tradingeconomics.com/euro-area/services-sentiment"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+unemployed-persons:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/unemployed-persons"
+  te_value: null
+  te_period: null
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+unemployment:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/unemployment-rate"
+  te_value: 6.2
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false
+youth-unemployment-rate:
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat"
+  te_page: "https://tradingeconomics.com/euro-area/youth-unemployment-rate"
+  te_value: 14.9
+  te_period: "2026-03"
+  suggested_source: eurostat
+  current_source: eurostat
+  conform: true
+  verified: false

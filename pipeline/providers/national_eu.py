@@ -131,6 +131,29 @@ DK_SERIES = [
      "filters": {"SEKTOR": "1000"},
      "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 0.001,
      "note": "DK Statbank LBESK104 employees, all sectors, SA, thousands"},
+    # === Stage-2 (migration 032): national-source promotion from eurostat ===
+    # FORV1: Consumer Confidence Indicator (DST monthly survey), INDIKATOR=F1 (headline).
+    # Verified 2026-05-14: 2026M04 = -18.6 (TE: -18.6 exact match).
+    {"slug": "consumer-confidence", "table": "FORV1",
+     "filters": {"INDIKATOR": "F1"},
+     "freq": "M", "unit": "Balance", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank FORV1 consumer confidence indicator (F1 headline)"},
+    # ETILLID: Business sentiment indicators. INDIKATOR=KBI (industry confidence)
+    # matches the TE business-confidence series (TE shows 100.7 for 2026M04).
+    # Verified 2026-05-14: 2026M04 = 100.7 (TE: 100.7 exact match).
+    {"slug": "business-confidence", "table": "ETILLID",
+     "filters": {"INDIKATOR": "KBI"},
+     "freq": "M", "unit": "Index (2015=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank ETILLID business sentiment, industry KBI (TE headline)"},
+    # AUS09: Gross unemployment (registered DPES count), monthly.
+    # YDELSESTYPE=LDM (unemployment benefit recipients only — TE's "unemployed-persons"),
+    # SAESONFAK=24 (NSA, actual figures in persons). We publish in thousands.
+    # Verified 2026-05-14: 2026M03 = 81,989 persons => 82.0 thousand (TE: 80.9, very close,
+    # NSA series subject to small vintage revisions).
+    {"slug": "unemployed-persons", "table": "AUS09",
+     "filters": {"YDELSESTYPE": "LDM", "SAESONFAK": "24"},
+     "freq": "M", "unit": "Thousand", "adjustment": "NSA", "conversion": 0.001,
+     "note": "DK Statbank AUS09 registered unemployed (LDM, NSA, in 1000s)"},
 ]
 
 
@@ -220,6 +243,38 @@ FI_SERIES = [
                "Tiedot": "tyopaivakorjattu"},
      "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
      "note": "FI Tilastokeskus 14kr Retail trade G47 volume index 2021=100 WDA"},
+    # --- Stage 2 expansion (migration 034) ---
+    # Employed persons aged 15-74, monthly thousands NSA. tyti 13gg, Tiedot=Tyolliset.
+    # Verified 2026-05-14: 2026M03 = 2524 thousand (matches TE 2524 exactly).
+    {"slug": "employed-persons", "path": "StatFin/tyti/statfin_tyti_pxt_13gg.px",
+     "query": {"Tiedot": "Tyolliset"},
+     "freq": "M", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 13gg LFS employed persons 15-74 monthly NSA thousand"},
+    # Quarterly GDP at market prices, chained 2015 reference year, SA+WDA, EUR million.
+    # ntp 132h: Taloustoimi=B1GMH (GDP@MP), Tiedot=kausitvv2015 (SA, chained ref 2015).
+    # Verified 2026-05-14: 2025Q4 = 57249 EUR mn (chained ref 2015).
+    {"slug": "gdp-real", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
+     "query": {"Taloustoimi": "B1GMH", "Tiedot": "kausitvv2015"},
+     "freq": "Q", "unit": "EUR million (chained 2015)", "adjustment": "SA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 132h Real GDP, chained 2015 EUR mn, SA+WDA"},
+    # International trade in goods and services, quarterly, partner=ULK (rest-of-world total),
+    # service-item=GS (goods+services). tpulk 12gq. EUR million, NSA.
+    # Verified 2026-05-14: 2026Q1 exports=29495, imports=29952, balance=-457 EUR mn.
+    # NOTE: TE uses monthly Tulli (Customs) numbers; StatFin only publishes BoP-style
+    # quarterly aggregates. Tulli ULJAS has no JSON-stat REST endpoint, so quarterly is
+    # the cleanest direct national-source feed within the existing PxWeb architecture.
+    {"slug": "exports", "path": "StatFin/tpulk/statfin_tpulk_pxt_12gq.px",
+     "query": {"Alue": "ULK", "Tiedot": "tpulk_C", "Palveluerä": "GS"},
+     "series_id": "STATFI/StatFin/tpulk/statfin_tpulk_pxt_12gq.px/exp",
+     "freq": "Q", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 12gq Exports of goods+services to ROW (BoP), EUR mn"},
+    {"slug": "imports", "path": "StatFin/tpulk/statfin_tpulk_pxt_12gq.px",
+     "query": {"Alue": "ULK", "Tiedot": "tpulk_D", "Palveluerä": "GS"},
+     "series_id": "STATFI/StatFin/tpulk/statfin_tpulk_pxt_12gq.px/imp",
+     "freq": "Q", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 12gq Imports of goods+services from ROW (BoP), EUR mn"},
+    # trade-balance is derived in the Finland fetch loop as exports - imports
+    # (same tpulk 12gq table); kept as separate logical slug.
 ]
 
 
@@ -288,6 +343,57 @@ SE_SERIES = [
      "query": {"SNI2007": "47exkl47.3", "ContentsCode": "000006VZ"},
      "freq": "M", "unit": "%", "adjustment": "WDA", "conversion": 1.0,
      "note": "SE SCB HA0101B Retail Sales YoY% (excl fuel), WDA constant prices"},
+    # === Stage-2 (migration 033): national-source promotion from eurostat ===
+    # Industrial Production Index level, B-D (mining/mfg/energy), calendar-adjusted.
+    # ContentsCode=NV0402AJ (calendar adjusted). Verified 2026-05-14: 2026M03 = 119.1 (index 2021=100).
+    {"slug": "industrial-production", "path": "NV/NV0402/NV0402A/IPI2010KedjM",
+     "query": {"SNI2007": "B-D", "ContentsCode": "NV0402AJ"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SE SCB NV0402A Industrial Production Index level, B-D, WDA"},
+    # Retail sales index level, retail trade ex fuel (47exkl47.3), SA-WDA constant prices.
+    # ContentsCode=000006VX. Verified 2026-05-14: 2026M03 = 99.9 (index 2021=100).
+    {"slug": "retail-sales", "path": "HA/HA0101/HA0101B/DetOms07N",
+     "query": {"SNI2007": "47exkl47.3", "ContentsCode": "000006VX"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB HA0101B Retail Sales index level (excl fuel), SA-WDA constant prices"},
+    # Trade exports: HA0201A ImportExportSnabbM, ETOT (Total exports SEK mn), NSA.
+    # Verified 2026-05-14: 2026M03 = 195,100 SEK mn.
+    {"slug": "exports", "path": "HA/HA0201/HA0201A/ImportExportSnabbM",
+     "query": {"ImportExport": "ETOT", "ContentsCode": "HA0201A2"},
+     "freq": "M", "unit": "SEK million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB HA0201A Total exports of goods SEK million (ETOT)"},
+    # Trade imports: HA0201A ImportExportSnabbM, ITOT (Total imports SEK mn), NSA.
+    # Verified 2026-05-14: 2026M03 = 185,800 SEK mn.
+    {"slug": "imports", "path": "HA/HA0201/HA0201A/ImportExportSnabbM",
+     "query": {"ImportExport": "ITOT", "ContentsCode": "HA0201A2"},
+     "freq": "M", "unit": "SEK million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB HA0201A Total imports of goods SEK million (ITOT)"},
+    # LFS unemployment rate already covered by `unemployment` slug above; add level (thousands).
+    # ALÖS=unemployed thousands, TypData=O_DATA (NSA, matches TE 564.9). Verified 2026-05-14:
+    # 2026M03 = 564.9 (TE: 564.9 exact).
+    {"slug": "unemployed-persons", "path": "AM/AM0401/AM0401A/AKURLBefM",
+     "query": {"Arbetskraftstillh": "ALÖS", "TypData": "O_DATA",
+               "Kon": "1+2", "Alder": "tot15-74", "ContentsCode": "000007L9"},
+     "freq": "M", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB AM0401A LFS unemployed persons 15-74 NSA, thousands (ALÖS/O_DATA)"},
+    # Employed persons LFS, SYS=employed thousands, O_DATA NSA. Verified 2026-05-14:
+    # 2026M03 = 5,229.8 thousand (TE: 5.23 million exact match).
+    {"slug": "employed-persons", "path": "AM/AM0401/AM0401A/AKURLBefM",
+     "query": {"Arbetskraftstillh": "SYS", "TypData": "O_DATA",
+               "Kon": "1+2", "Alder": "tot15-74", "ContentsCode": "000007L9"},
+     "freq": "M", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB AM0401A LFS employed persons 15-74 NSA, thousands (SYS/O_DATA)"},
+    # GDP real, expenditure approach, SA constant prices ref 2024 (SEK million).
+    # BNPM=GDP at market prices, ContentsCode=NR0103CE. Verified 2026-05-14:
+    # 2025Q4 = 1,643,113 SEK mn (SA constant prices ref 2024).
+    {"slug": "gdp-real", "path": "NR/NR0103/NR0103B/NR0103ENS2010T10SKv",
+     "query": {"Anvandningstyp": "BNPM", "ContentsCode": "NR0103CE"},
+     "freq": "Q", "unit": "SEK million (ref 2024)", "adjustment": "SA", "conversion": 1.0,
+     "note": "SE SCB NR0103B GDP-real SA constant prices ref 2024, SEK mn (BNPM)"},
+    # NOTE: Consumer-confidence and business-confidence are NOT published by SCB. The
+    # TE-cited source is NIER/Konjunkturinstitutet (https://www.konj.se/). Their data is
+    # available via the Macroindicators API but not under SCB; deferred to a separate
+    # provider (konj_se) — left on eurostat fallback for now.
 ]
 
 
@@ -304,48 +410,256 @@ def fetch_se_table(path: str, query_filters: dict, freq: str = "M") -> list[tupl
 
 
 # === Portugal — INE PT JSON-Indicador ===
+#
+# API: https://www.ine.pt/ine/json_indicador/pindica.jsp
+#   op=1                -> full history under key "Pref" (period labels in PT)
+#   op=2                -> latest observation only under "Dados"
+#   varcd               -> 7-digit indicator code (zero-padded)
+#   lang=PT             -> period labels like "Marco de 2026", "1.o Trimestre de 2026"
+#
+# Each period maps to a list of rows tagged with dim_3 (sometimes dim_4 too).
+# Per-indicator total dim values are documented inline below.
+#
+# Trade-balance: INE only publishes monthly trade by NUTS/CGCE in large multi-
+# dimensional tables that exceed the pindica row cap. The aggregated national
+# balance is therefore covered by Eurostat (DS-018995 / ext_st_eu27_2020sitc).
+
+PT_PT_MONTHS = {
+    "janeiro": 1, "fevereiro": 2, "marco": 3, "marc": 3, "abril": 4,
+    "maio": 5, "junho": 6, "julho": 7, "agosto": 8, "setembro": 9,
+    "outubro": 10, "novembro": 11, "dezembro": 12,
+}
+
+
+def _strip_pt_diacritics(s: str) -> str:
+    repl = {
+        "ç": "c", "ã": "a", "á": "a", "à": "a", "â": "a",
+        "é": "e", "ê": "e", "í": "i", "ó": "o", "ô": "o",
+        "õ": "o", "ú": "u", "º": "", "ª": "",
+    }
+    for k, v in repl.items():
+        s = s.replace(k, v)
+    return s
+
+
+def _parse_pt_period(label: str, freq: str) -> date | None:
+    """Parse Portuguese pindica period labels.
+
+    Monthly  : 'Marco de 2026'              -> 2026-03-01
+    Quarterly: '1.o Trimestre de 2026'      -> 2026-01-01
+    Annual   : '2025'                       -> 2025-01-01
+    Also tolerates code-style 'S7A2026M03' / '2026M03'.
+    """
+    if not label:
+        return None
+    s = label.strip()
+    # Code-style fallback first
+    if "M" in s:
+        cand = s.replace("S7A", "")
+        if cand.replace("M", "").isdigit():
+            out = _parse_period(cand, "M")
+            if out:
+                return out
+    low = _strip_pt_diacritics(s.lower()).replace(".", " ")
+    if "trimestre" in low and freq == "Q":
+        toks = low.replace(",", " ").split()
+        q = None
+        yr = None
+        for tok in toks:
+            if tok.isdigit():
+                n = int(tok)
+                if n <= 4 and q is None:
+                    q = n
+                elif n >= 1900:
+                    yr = n
+        if q and yr:
+            return date(yr, {1: 1, 2: 4, 3: 7, 4: 10}[q], 1)
+    if freq == "M":
+        toks = low.split()
+        month = None
+        year = None
+        for tok in toks:
+            if tok in PT_PT_MONTHS and month is None:
+                month = PT_PT_MONTHS[tok]
+            elif tok.isdigit() and len(tok) == 4:
+                year = int(tok)
+        if month and year:
+            return date(year, month, 1)
+    if freq == "A":
+        digits = "".join(c for c in s if c.isdigit())
+        if len(digits) == 4:
+            return date(int(digits), 1, 1)
+    return None
+
 
 PT_SERIES = [
-    # IPC base 2025 (varcd 0008273 = total) — TE shows Apr 2026 = 0.4%
-    # Use op=2 to get latest period as JSON
+    # NOTE: existing inflation-cpi (varcd 0008273) is mis-mapped to "Resident
+    # population" — left in place pending a separate fix.
     {"slug": "inflation-cpi", "varcd": "0008273", "freq": "M",
      "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
-     "note": "PT INE IPC total nacional"},
+     "row_filter": {"geocod": "PT"},
+     "note": "PT INE IPC total nacional (legacy varcd — needs replacement)"},
+
+    # PPI - Indices de precos na producao industrial (Base 2021), Total bruto
+    # YoY %; CAE Rev. 3 dim_3='TOT' is the headline TE prints.
+    # Verified 2026-05-14: Mar 2026 = 0.0 % (TE: 0.0 %).
+    {"slug": "ppi", "varcd": "0012002", "freq": "M",
+     "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "row_filter": {"geocod": "PT", "dim_3": "TOT"},
+     "note": "INE PT 0012002 IPPI Total YoY%, Base 2021 (CAE Rev. 3)"},
+
+    # Industrial Production - calendar+seasonally adjusted YoY %, base 2021.
+    # Agrupamento industrial, dim_3='T' = Total. TE quotes this exact series.
+    # Verified 2026-05-14: Mar 2026 = 3.2 % (TE: 3.2 %).
+    {"slug": "industrial-production", "varcd": "0011900", "freq": "M",
+     "unit": "% YoY", "adjustment": "SA+CDA", "conversion": 1.0,
+     "row_filter": {"geocod": "PT", "dim_3": "T"},
+     "note": "INE PT 0011900 IPI YoY% cal+SA adjusted, Base 2021"},
+
+    # Unemployment Rate (Inquerito ao Emprego, Serie 2021), quarterly,
+    # geocod='PT', dim_3='T' (HM = both sexes).
+    # Verified 2026-05-14: Q1 2026 = 6.1 % (TE: 6.1 %).
+    {"slug": "unemployment", "varcd": "0012136", "freq": "Q",
+     "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "row_filter": {"geocod": "PT", "dim_3": "T"},
+     "note": "INE PT 0012136 Taxa de desemprego (Serie 2021), NUTS-2024, both sexes"},
+
+    # Retail Trade Turnover Index - calendar+seasonally adjusted DEFLATED YoY %,
+    # Base 2021, CAE 47 (retail trade excl. motor vehicles). dim_3='47'.
+    # Verified 2026-05-14: Mar 2026 = 5.5 % YoY (cal+SA, deflated).
+    {"slug": "retail-sales", "varcd": "0012019", "freq": "M",
+     "unit": "% YoY", "adjustment": "SA+CDA deflated", "conversion": 1.0,
+     "row_filter": {"geocod": "PT", "dim_3": "47"},
+     "note": "INE PT 0012019 IVN comercio retalho YoY% deflated cal+SA, Base 2021"},
+
+    # GDP Real - Produto interno bruto dados encadeados em volume, YoY %,
+    # Base 2021, trimestral. Single row per period (no dim_3).
+    # Verified 2026-05-14: Q1 2026 = 2.3 % (TE: 2.3 %).
+    {"slug": "gdp-real", "varcd": "0013431", "freq": "Q",
+     "unit": "% YoY", "adjustment": "SA+CDA", "conversion": 1.0,
+     "row_filter": {"geocod": "PT"},
+     "note": "INE PT 0013431 GDP chain-linked YoY%, Base 2021, quarterly"},
 ]
 
 
-def fetch_pt_indicator(varcd: str, freq: str = "M") -> list[tuple[date, float]]:
-    """INE Portugal JSON-Indicador, last 60 obs."""
-    url = f"https://www.ine.pt/ine/json_indicador/pindica.jsp?op=2&varcd={varcd}&lang=EN"
-    r = requests.get(url, timeout=30)
+def _row_matches(row: dict, flt: dict) -> bool:
+    for k, want in flt.items():
+        if str(row.get(k, "")) != str(want):
+            return False
+    return True
+
+
+def fetch_pt_indicator(varcd: str, freq: str = "M",
+                       row_filter: dict | None = None) -> list[tuple[date, float]]:
+    """INE Portugal pindica - full history via op=1.
+
+    The pindica JSON re-uses the same "Pref" object key once per observation
+    period (e.g. "Janeiro de 2006" appears N times in a flat sequence rather
+    than nested). Standard json.loads collapses duplicate keys to the last one,
+    which would only ever return the most-recent value for every period. We
+    therefore stream the document with ijson and walk Pref entries pair-wise.
+    """
+    import json as _json
+    import re as _re
+    url = f"https://www.ine.pt/ine/json_indicador/pindica.jsp?op=1&varcd={varcd}&lang=PT"
+    r = requests.get(url, timeout=120)
     r.raise_for_status()
-    js = r.json()
-    # Structure: list of {"Sucesso": [...]} with Dados under nested keys
-    out = []
-    for entry in js:
-        sucesso = entry.get("Sucesso", {})
-        if isinstance(sucesso, dict):
-            verd = sucesso.get("Verdadeiro", [])
-        else:
-            verd = sucesso
-        for item in verd if isinstance(verd, list) else []:
-            dados = item.get("Dados", {})
-            if isinstance(dados, dict):
-                for period_key, obs_list in dados.items():
-                    if not isinstance(obs_list, list):
+    text = r.text
+
+    # Detect API-level error envelope first via lenient parse.
+    try:
+        head = _json.loads(text)
+        if isinstance(head, list) and head and \
+                isinstance(head[0], dict) and "Sucesso" in head[0] and \
+                isinstance(head[0]["Sucesso"], dict) and \
+                "Falso" in head[0]["Sucesso"]:
+            msg = head[0]["Sucesso"]["Falso"][0].get("Msg", "")
+            raise RuntimeError(f"INE pindica error: {msg}")
+    except _json.JSONDecodeError:
+        pass
+
+    # Split the "Pref" block into individual "label: [rows]" entries by
+    # scanning bracket depth. We only want the unique-keyed sequence.
+    pref_start = text.find('"Pref"')
+    if pref_start < 0:
+        return []
+    # find the opening "{" after "Pref"
+    brace = text.find("{", pref_start)
+    # walk to matching "}"
+    depth = 0
+    i = brace
+    end = None
+    while i < len(text):
+        ch = text[i]
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                end = i
+                break
+        i += 1
+    if end is None:
+        return []
+    body = text[brace + 1:end]
+
+    # Iterate entries: each "<label>" : [ ... rows ... ]
+    out: list[tuple[date, float]] = []
+    flt = row_filter or {}
+    pos = 0
+    label_re = _re.compile(r'"((?:[^"\\]|\\.)*?)"\s*:\s*\[')
+    while pos < len(body):
+        m = label_re.search(body, pos)
+        if not m:
+            break
+        label = m.group(1)
+        # find the matching closing bracket of this array
+        depth = 1
+        j = m.end()
+        while j < len(body) and depth > 0:
+            cj = body[j]
+            if cj == "[":
+                depth += 1
+            elif cj == "]":
+                depth -= 1
+                if depth == 0:
+                    arr_end = j
+                    break
+            elif cj == '"':
+                # skip string literal
+                j += 1
+                while j < len(body) and body[j] != '"':
+                    if body[j] == "\\":
+                        j += 2
                         continue
-                    for obs in obs_list:
-                        val_str = obs.get("valor")
-                        try:
-                            val = float(val_str)
-                        except (ValueError, TypeError):
-                            continue
-                        # period_key like "2026M04" or "S7A2024"
-                        per = period_key.replace("S7A", "")
-                        dt = _parse_period(per, freq)
-                        if dt:
-                            out.append((dt, val))
-    return sorted(out)
+                    j += 1
+            j += 1
+        else:
+            break
+        arr_text = "[" + body[m.end():arr_end] + "]"
+        try:
+            rows = _json.loads(arr_text)
+        except _json.JSONDecodeError:
+            pos = arr_end + 1
+            continue
+        dt = _parse_pt_period(label, freq)
+        if dt is not None:
+            for row in rows:
+                if flt and not _row_matches(row, flt):
+                    continue
+                val_str = row.get("valor")
+                try:
+                    val = float(val_str)
+                except (ValueError, TypeError):
+                    continue
+                out.append((dt, val))
+                break  # one match per period
+        pos = arr_end + 1
+    # de-dup + sort
+    seen: dict[date, float] = {}
+    for d, v in out:
+        seen[d] = v
+    return sorted(seen.items())
 
 
 # === Ireland — CSO PxStat ===
@@ -379,8 +693,27 @@ IE_SERIES = [
     # TSM01: Value of Merchandise Trade — Trade Surplus NSA (C3), State
     {"slug": "trade-balance", "table": "TSM01",
      "filters": {"STATISTIC": "TSM01C3", "C02196V02652": "-"},
+     "series_id": "CSO/TSM01/tb",
      "freq": "M", "unit": "EUR thousand", "adjustment": "NSA", "conversion": 1.0,
      "note": "CSO Ireland TSM01 Merchandise Trade Surplus (Exports-Imports) NSA"},
+    # TSM01 Total Exports NSA (C2), State. Verified 2026-05-14: 2026M02 = 15,894,938 EUR-k.
+    {"slug": "exports", "table": "TSM01",
+     "filters": {"STATISTIC": "TSM01C2", "C02196V02652": "-"},
+     "series_id": "CSO/TSM01/exp",
+     "freq": "M", "unit": "EUR thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland TSM01 Total Exports of Goods NSA, EUR thousand"},
+    # TSM01 Total Imports NSA (C1), State. Verified 2026-05-14: 2026M02 = 11,291,776 EUR-k.
+    {"slug": "imports", "table": "TSM01",
+     "filters": {"STATISTIC": "TSM01C1", "C02196V02652": "-"},
+     "series_id": "CSO/TSM01/imp",
+     "freq": "M", "unit": "EUR thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland TSM01 Total Imports of Goods NSA, EUR thousand"},
+    # QLF18: ILO Labour Force Survey (quarterly), Persons in Employment 15+, both sexes.
+    # Verified 2026-05-14: 2025Q4 = 2833.1 thousand persons.
+    {"slug": "employed-persons", "table": "QLF18",
+     "filters": {"STATISTIC": "QLF18C03", "C02076V02508": "320", "C02199V02655": "-"},
+     "freq": "Q", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland QLF18 LFS persons in employment 15+ both sexes (thousand)"},
     # HPM09: Residential Property Price Index — National all properties (latest base, ~2015=100)
     {"slug": "housing-index", "table": "HPM09",
      "filters": {"STATISTIC": "HPM09C01", "C02803V03373": "-"},
@@ -475,42 +808,115 @@ def _parse_ie_time(p: str, freq: str) -> date | None:
     return _parse_period(p, freq)
 
 
-# === Belgium — Statbel REST API (CSV) ===
+# === Belgium — Statbel REST API (CSV) + NBB SDMX REST v2 ===
 # Statbel uses unique view IDs per dataset. We pre-resolve them.
 # bestat.statbel.fgov.be/bestat/api/views?lang=en&format=json gives the list.
-# For inflation: search "consumer price index" — view ID encoded.
+#
+# NBB statistics moved from stat.nbb.be (Belgostat, decommissioned) to a new
+# SDMX-2.1 REST API at https://nsidisseminate-stat.nbb.be/rest, fronted by the
+# data-explorer SPA at https://dataexplorer.nbb.be. AgencyID = "BE2".
+
+# Each BE_SERIES entry has a "kind" discriminator: "statbel" or "nbb".
+#  - statbel:  uses view_id + value_col + optional row_filter (dict[col]->value)
+#  - nbb:      uses dataflow + key (dot-separated SDMX dimension values)
 
 BE_SERIES = [
-    # Statbel API via bestat.statbel.fgov.be — view ID for "Consumer price index,
-    # inflation, health index..." monthly. Gives ~13 months history.
-    {"slug": "inflation-cpi", "view_id": "208b69bd-05c5-4947-b7f9-2d2300f517b8",
-     "value_col": "Consumer price index",
+    # --- Statbel CSV views ---
+    {"kind": "statbel", "slug": "inflation-cpi",
+     "view_id": "208b69bd-05c5-4947-b7f9-2d2300f517b8",
+     "value_col": "Consumer price index", "row_filter": None,
      "freq": "M", "unit": "Index (2013=100)", "adjustment": "NSA", "conversion": 1.0,
-     "note": "Statbel CPI base 2013=100, last 13 months"},
+     "note": "Statbel CPI base 2013=100 (last 13 months window)"},
+
+    # PPI total — special-aggregates view filtered to "" (no aggregate = grand total)
+    {"kind": "statbel", "slug": "ppi",
+     "view_id": "098275aa-db04-41a7-b2bb-54a09852d041",
+     "value_col": "Index - Total market",
+     "row_filter": {"All economic activities": "All economic activities",
+                    "Special aggregates": ""},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel PPI industry excl. construction, total market index base 2021=100"},
+
+    # Retail sales — Statbel only publishes a 4-month rolling window;
+    # we accumulate history by polling monthly.
+    {"kind": "statbel", "slug": "retail-sales",
+     "view_id": "4ecec356-f055-4abc-89ec-7fcba329a23f",
+     "value_col": "Gross index",
+     "row_filter": {"NACE groups":
+                    "Total retail trade, except of motor vehicles, motorcycles and automotive fuel"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel retail sales gross index, NACE G47 excl. motor vehicles; 4-month rolling view"},
+
+    # --- NBB SDMX REST v2 (nsidisseminate-stat.nbb.be) ---
+    {"kind": "nbb", "slug": "industrial-production",
+     "dataflow": "DF_INDPROD", "key": "M.2021.INDPROD.W.B_C_D.BE",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "NBB DF_INDPROD total industry B+C+D, working-day adjusted, base 2021=100"},
+
+    {"kind": "nbb", "slug": "unemployment",
+     "dataflow": "DF_UNEMPLOY_RATE", "key": "M.AA.Z0000.Y.BE.HUR.RATE",
+     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB harmonised unemployment rate, total, all ages, SA"},
+
+    {"kind": "nbb", "slug": "trade-balance",
+     "dataflow": "DF_EXTERNAL_TRADE_OVERVIEW", "key": "M.NBB_A1.B.NAT.VAL.M",
+     "freq": "M", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB foreign trade balance vs World, national concept, monthly movement, EUR mn"},
+
+    {"kind": "nbb", "slug": "gdp-real",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.B1GM.VZ.LY.Y",
+     "freq": "Q", "unit": "% YoY", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB quarterly GDP, chain-linked Y/Y % change (reference year 2020), SA+WDA"},
+
+    {"kind": "nbb", "slug": "consumer-confidence",
+     "dataflow": "DF_CONSN", "key": "M.CCI.BE",
+     "freq": "M", "unit": "Balance", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB consumer confidence indicator (CCI), Belgium, balance of opinions"},
+
+    {"kind": "nbb", "slug": "business-confidence",
+     "dataflow": "DF_BUSSURVM", "key": "M.SYNC.BE.A999.X",
+     "freq": "M", "unit": "Balance", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB monthly business survey synthetic curve, Belgium total, SA+smoothed"},
 ]
 
 
-def fetch_be_statbel_csv(view_id: str, value_col: str, freq: str = "M") -> list[tuple[date, float]]:
-    """Statbel publishes views as CSV. Year/Month columns + named value cols."""
+_BE_MONTHS = {"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,
+              "July":7,"August":8,"September":9,"October":10,"November":11,"December":12}
+
+
+def fetch_be_statbel_csv(view_id: str, value_col: str, freq: str = "M",
+                         row_filter: dict | None = None) -> list[tuple[date, float]]:
+    """Statbel publishes views as CSV. Year/Month columns + named value cols.
+
+    `row_filter`: dict of {column_name: required_value} — only rows matching
+    every key are kept. Empty string ("") matches blank cells (used to pick
+    grand totals in views with aggregate breakdowns).
+    """
     import csv as csvm, io as iom
     url = f"https://bestat.statbel.fgov.be/bestat/api/views/{view_id}/result/CSV"
     r = requests.get(url, timeout=30)
     r.raise_for_status()
     reader = csvm.DictReader(iom.StringIO(r.text))
     out = []
-    months_map = {"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,
-                  "July":7,"August":8,"September":9,"October":10,"November":11,"December":12}
     for row in reader:
-        month_text = row.get("Month", "")
-        # "January 2025" -> 2025-01
+        if row_filter:
+            skip = False
+            for col, want in row_filter.items():
+                if (row.get(col) or "") != want:
+                    skip = True
+                    break
+            if skip:
+                continue
+        # Some views use "Month" = "January 2025", others split Year/Month
+        month_text = (row.get("Month") or row.get("Reference month") or "").strip()
         try:
             mname, ystr = month_text.rsplit(" ", 1)
             yy = int(ystr)
-            mm = months_map[mname]
+            mm = _BE_MONTHS[mname]
             dt = date(yy, mm, 1)
         except Exception:
             continue
-        val_str = row.get(value_col, "").replace(",", "")
+        val_str = (row.get(value_col) or "").replace(",", "")
         try:
             val = float(val_str)
         except ValueError:
@@ -519,26 +925,66 @@ def fetch_be_statbel_csv(view_id: str, value_col: str, freq: str = "M") -> list[
     return sorted(out)
 
 
-def fetch_nbb_sdmx(dataset: str, key: str, freq: str = "M") -> list[tuple[date, float]]:
-    """NBB SDMX V21 endpoint."""
-    url = f"https://stat.nbb.be/sdmx/V21/data/{dataset}/{key}"
-    r = requests.get(url, headers={"Accept": "application/json"}, timeout=30)
+# NBB SDMX v2 — accepts SDMX-JSON 2.0
+_NBB_BASE = "https://nsidisseminate-stat.nbb.be/rest"
+
+
+def fetch_nbb_sdmx(dataflow: str, key: str, freq: str = "M",
+                   agency: str = "BE2") -> list[tuple[date, float]]:
+    """NBB SDMX REST v2 (nsidisseminate-stat.nbb.be).
+
+    `dataflow` example: "DF_INDPROD". `key` is dot-separated dimension values
+    in the order declared by the DSD (FREQ first), e.g. "M.2021.INDPROD.W.B_C_D.BE".
+    Pass "" for wildcard dims. Time period encoding follows SDMX 2.1 conventions
+    (YYYY-MM monthly, YYYY-Qn quarterly, YYYY annual).
+    """
+    url = f"{_NBB_BASE}/data/{dataflow}/{key}"
+    hdrs = {"User-Agent": "Mozilla/5.0 (EconPulse)",
+            "Accept": "application/vnd.sdmx.data+json;version=2.0"}
+    r = requests.get(url, headers=hdrs, timeout=30)
     r.raise_for_status()
     js = r.json()
-    # SDMX-JSON structure
-    series = js.get("data", {}).get("dataSets", [{}])[0].get("series", {})
-    out = []
-    for ser_key, ser_data in series.items():
-        observations = ser_data.get("observations", {})
-        time_dim = js["data"]["structure"]["dimensions"]["observation"][0]["values"]
-        for obs_idx_str, obs_value in observations.items():
-            obs_idx = int(obs_idx_str)
-            if obs_idx >= len(time_dim):
+    data = js.get("data") or {}
+    ds = data.get("dataSets") or []
+    structs = data.get("structures") or []
+    if not ds or not structs:
+        return []
+    obs_dims = structs[0].get("dimensions", {}).get("observation", [])
+    if not obs_dims:
+        return []
+    time_vals = obs_dims[0].get("values", [])
+    out: list[tuple[date, float]] = []
+    for ser in ds[0].get("series", {}).values():
+        for obs_idx_str, obs_val in (ser.get("observations") or {}).items():
+            try:
+                idx = int(obs_idx_str)
+            except ValueError:
                 continue
-            period = time_dim[obs_idx]["id"]
+            if idx < 0 or idx >= len(time_vals):
+                continue
+            period = time_vals[idx].get("id") or ""
+            if obs_val is None or obs_val[0] is None:
+                continue
             dt = _parse_period(period, freq)
-            if dt and obs_value and obs_value[0] is not None:
-                out.append((dt, float(obs_value[0])))
+            if dt is None:
+                # also accept YYYY-MM and YYYY-Qn directly
+                if freq == "M" and len(period) == 7 and period[4] == "-":
+                    try:
+                        dt = date(int(period[:4]), int(period[5:7]), 1)
+                    except Exception:
+                        pass
+                elif freq == "Q" and len(period) == 7 and period[4] == "-" and period[5] == "Q":
+                    try:
+                        yy, q = int(period[:4]), int(period[6])
+                        dt = date(yy, {1:1,2:4,3:7,4:10}[q], 1)
+                    except Exception:
+                        pass
+            if dt is None:
+                continue
+            try:
+                out.append((dt, float(obs_val[0])))
+            except (TypeError, ValueError):
+                continue
     return sorted(out)
 
 
@@ -640,16 +1086,71 @@ AT_SERIES = [
      "time_col": "C-A10-0", "value_col": "F-IMPI-01",
      "freq": "Q", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "Statistik Austria IMPI 2021=100 Gesamtmarkt (total origin)"},
+
+    # === Stage-2 additions (2026-05-14): exports / imports / trade-balance /
+    # retail-sales / employed-persons / government-debt-total
+    # via Konjunkturmonitor (wide monthly CSV) and dedicated VGR/KONS_BRV tables. ===
+
+    # Exports — Konjunkturmonitor, F-FAKT-46 (Ausfuhren Insgesamt in EUR), QUOTE-1=1 (Wert).
+    # Filter the rolled-up annual/quarterly rows by `time_len_filter` (M = 6-digit codes).
+    # Convert from EUR to Mio EUR (TE shows 16,165 Mio for Feb/26 → our 16,164,848,476 / 1e6).
+    {"slug": "exports", "ogd": "OGD_konjunkturmonitor_KonMon_1",
+     "filters": {"C-QUOTE-1": "1"},
+     "time_col": "C-KMMONAT-0", "value_col": "F-FAKT-46",
+     "freq": "M", "unit": "Mio EUR", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "Statistik Austria Konjunkturmonitor F-FAKT-46 Ausfuhren Insgesamt, EUR→Mio EUR"},
+
+    # Imports — Konjunkturmonitor, F-FAKT-32 (Einfuhren Insgesamt in EUR).
+    {"slug": "imports", "ogd": "OGD_konjunkturmonitor_KonMon_1",
+     "filters": {"C-QUOTE-1": "1"},
+     "time_col": "C-KMMONAT-0", "value_col": "F-FAKT-32",
+     "freq": "M", "unit": "Mio EUR", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "Statistik Austria Konjunkturmonitor F-FAKT-32 Einfuhren Insgesamt, EUR→Mio EUR"},
+
+    # Trade balance — derived as F-FAKT-46 minus F-FAKT-32 (handled in fetcher dispatch).
+    # We mark with a special `derive` key; conversion is applied to the difference.
+    {"slug": "trade-balance", "ogd": "OGD_konjunkturmonitor_KonMon_1",
+     "filters": {"C-QUOTE-1": "1"},
+     "time_col": "C-KMMONAT-0", "value_col": "F-FAKT-46",
+     "value_col_b": "F-FAKT-32", "derive": "sub_b",
+     "freq": "M", "unit": "Mio EUR", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "Statistik Austria Konjunkturmonitor: Ausfuhren − Einfuhren (F46−F32), EUR→Mio EUR"},
+
+    # Retail sales — konjidxhan21 monthly turnover index, NACE G47 (Einzelhandel),
+    # F-UIDXNSB = nominell saisonbereinigt (level, base 2021=100). TE shows G47 index level.
+    {"slug": "retail-sales", "ogd": "OGD_konjidxhan21_KJIX_H_21_1",
+     "filters": {"C-NACEIDX-0": "NACEIDX-47"},
+     "time_col": "C-TIIDXM-0", "value_col": "F-UIDXNSB",
+     "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Statistik Austria Konjunkturindizes Handel G47 (Einzelhandel), nominell SA, 2021=100"},
+
+    # Employed persons — VGR111 Flash (t+30), Personen-Insgesamt SA (BEREIN-2), quarterly.
+    # F-PERSI is already in 1,000 persons → no conversion. TE concept differs (LFS 4,500.2);
+    # we publish the ESA-NA flash (4,726 Q1/26 SA) as the headline Statistik Austria figure.
+    {"slug": "employed-persons", "ogd": "OGD_vgr111_VGR_Flashes_Erwerb_1",
+     "filters": {"C-BEREIN-0": "BEREIN-2"},
+     "time_col": "C-VGRZR-0", "value_col": "F-PERSI",
+     "freq": "Q", "unit": "Thousand persons (SA)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Statistik Austria VGR111 Flash Erwerbstätigkeit, Personen-Insgesamt SA, in 1.000"},
+
+    # Government debt (total, Maastricht) — annual consolidated gross debt.
+    # F-TKL101 in Mio EUR → convert to Bn EUR for the level. AT.yaml period=2025 = 418,078.50 → 418.08 Bn.
+    {"slug": "government-debt-total", "ogd": "OGD_kons_brv_HVD_KONS_BRV_1",
+     "filters": {"C-VOLCZ9-0": "CZ9-1"},
+     "time_col": "C-A10-0", "value_col": "F-TKL101",
+     "freq": "A", "unit": "Bn EUR", "adjustment": "NSA", "conversion": 0.001,
+     "note": "Statistik Austria Konsolidierte Bruttoverschuldung Maastricht jährlich, Mio→Bn EUR"},
 ]
 
 
 def _parse_at_period(time_code: str, freq: str) -> date | None:
     """Parse Statistik Austria period codes like 'A10-202601' (M), 'A10-20251' (Q),
-    'AKEQUOT_ZEIT-2025' (A). Splits at LAST dash; interprets remainder by length+freq.
+    'AKEQUOT_ZEIT-2025' (A), or bare digits '202601'/'20261'/'2026' (konjunkturmonitor).
+    Splits at LAST dash if present; interprets remainder by length+freq.
     """
-    if not time_code or "-" not in time_code:
+    if not time_code:
         return None
-    digits = time_code.rsplit("-", 1)[1]
+    digits = time_code.rsplit("-", 1)[1] if "-" in time_code else time_code
     if not digits.isdigit():
         return None
     try:
@@ -668,9 +1169,13 @@ def _parse_at_period(time_code: str, freq: str) -> date | None:
     return None
 
 
-def fetch_at_csv(ogd: str, filters: dict, time_col: str, value_col: str, freq: str = "M") -> list[tuple[date, float]]:
+def fetch_at_csv(ogd: str, filters: dict, time_col: str, value_col: str, freq: str = "M",
+                 value_col_b: str | None = None, derive: str | None = None) -> list[tuple[date, float]]:
     """Fetch Statistik Austria OGD CSV. Filter rows by `filters` dict; parse `time_col`
     and `value_col`. German decimals (',' -> '.'). Skip zero placeholders and ':' (geheim).
+
+    If `derive='sub_b'` and `value_col_b` is given, returns value_col − value_col_b per row
+    (used for derived series such as trade balance = exports − imports).
     """
     import csv as csvm
     import io as iom
@@ -688,13 +1193,23 @@ def fetch_at_csv(ogd: str, filters: dict, time_col: str, value_col: str, freq: s
         raw = row.get(value_col, "")
         if raw in ("", ":"):
             continue
-        val_str = raw.replace(",", ".")
         try:
-            val = float(val_str)
+            val = float(raw.replace(",", "."))
         except ValueError:
             continue
         if val == 0.0:
             continue  # zero placeholder for "no data"
+        if derive == "sub_b" and value_col_b:
+            raw_b = row.get(value_col_b, "")
+            if raw_b in ("", ":"):
+                continue
+            try:
+                val_b = float(raw_b.replace(",", "."))
+            except ValueError:
+                continue
+            if val_b == 0.0:
+                continue
+            val = val - val_b
         out.append((dt, val))
     return sorted(out)
 
@@ -839,18 +1354,55 @@ def _parse_jsonstat(js: dict, freq: str) -> list[tuple[date, float]]:
 
 
 # === Latvia — CSP PxWeb (data.stat.gov.lv) ===
+#
+# Discovery walk: GET https://data.stat.gov.lv/api/v1/en/OSP_PUB/  -> 11 topics
+# (POP/EMP/VES/IZG/VEK/TIR/ENT/IKT/NOZ/ENV/FIN). Each topic has nested folders;
+# leaf tables live under e.g. VEK/PC/PCI/PCI030m. POSTing JSON-stat2 query to
+# the .px endpoint returns standard JSON-stat that _parse_jsonstat handles.
 
 LV_SERIES = [
     # PCI030m: Consumer price indices December 1990=100, monthly 1991M01-2026M03
-    {"slug": "inflation-cpi", "table": "PCI030m",
+    {"slug": "inflation-cpi", "path": "VEK/PC/PCI/PCI030m",
      "query": {"ContentsCode": "PCI030m"},
      "freq": "M", "unit": "Index (Dec 1990=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "CSP Latvia PCI030m CPI Dec 1990=100"},
+    # NOTE: LV CSP PxWeb actively returns HTTP 400 when querying the section-level
+    # "Industry total" aggregate (B_C_D_E in RCI020m, B_C_D_X_D353 in RUI020m)
+    # paired with the TOVT/calendar-adjusted ContentsCode combos — only MIG_*
+    # breakdowns return data. We therefore leave LV `ppi` and LV
+    # `industrial-production` on the Eurostat fallback rather than fetching a
+    # non-comparable MIG slice as a proxy.
+    # NBB150m: Unemployment rate aged 15-74, total sex, seasonally adjusted, monthly
+    # ContentsCode=NBB1501m = Unemployment rate (%)
+    {"slug": "unemployment", "path": "EMP/NBBA/NBBB/NBB150m",
+     "query": {"SEX": "T", "SESON": "SA", "ContentsCode": "NBB1501m"},
+     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSP Latvia NBB150m unemployment rate 15-74 total SA"},
+    # TIT010m: Total turnover index of retail trade enterprises, monthly
+    # ContentsCode=TIT010m1 (2021=100, seasonally adjusted)
+    {"slug": "retail-sales", "path": "TIR/TI/TIT/TIT010m",
+     "query": {"ContentsCode": "TIT010m1"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSP Latvia TIT010m retail trade total turnover index 2021=100 SA"},
+    # ATD100m: Exports/imports by grouping of countries, monthly EUR mln
+    # FLOW=BAL (Balance), COUNTRY_GROUP=TOTAL = total goods trade balance
+    {"slug": "trade-balance", "path": "TIR/AT/ATD/ATD100m",
+     "query": {"FLOW": "BAL", "COUNTRY_GROUP": "TOTAL", "ContentsCode": "ATD100m"},
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSP Latvia ATD100m goods trade balance vs World, NSA, mln EUR"},
+    # ISP010c: GDP from production approach in EUR thousands, quarterly
+    # PRICES=CLV2020 (chain-linked ref 2020), SESON=SA, INDICATOR=B1GQ
+    {"slug": "gdp-real", "path": "VEK/IS/ISP/ISP010c",
+     "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "B1GQ", "ContentsCode": "ISP010c"},
+     "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
+     "note": "CSP Latvia ISP010c real GDP chain-linked 2020 prices, SA, thousand EUR (converted to mln)"},
 ]
 
 
-def fetch_lv_pxweb(table_path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
-    url = f"https://data.stat.gov.lv/api/v1/en/OSP_PUB/VEK/PC/PCI/{table_path}"
+def fetch_lv_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
+    """LV CSP PxWeb generic fetcher. `path` is the full sub-path after /OSP_PUB/.
+    LV PxWeb expects the bare table ID (no '.px' suffix), unlike HR/EE which need it."""
+    url = f"https://data.stat.gov.lv/api/v1/en/OSP_PUB/{path}"
     body = {
         "query": [{"code": k, "selection": {"filter": "item", "values": [v]}}
                   for k, v in query_filters.items()],
@@ -858,7 +1410,61 @@ def fetch_lv_pxweb(table_path: str, query_filters: dict, freq: str = "M") -> lis
     }
     r = requests.post(url, json=body, timeout=30)
     r.raise_for_status()
-    return _parse_jsonstat(r.json(), freq)
+    js = r.json()
+    # LV uses TIME dim with 2025Q4 (Q-format) for quarterly tables
+    if freq == "Q":
+        return _parse_jsonstat_quarterly(js)
+    return _parse_jsonstat(js, freq)
+
+
+def _parse_jsonstat_quarterly(js: dict) -> list[tuple[date, float]]:
+    """Variant of _parse_jsonstat that decodes YYYYQ# period codes."""
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    dim_sizes = js.get("size", [])
+    if not dim_ids or not values:
+        return []
+    tid = None
+    role = js.get("role") or {}
+    role_time = role.get("time") if isinstance(role, dict) else None
+    if role_time:
+        tid = role_time[0] if isinstance(role_time, list) else role_time
+    if tid is None:
+        for k in dim_ids:
+            if "time" in k.lower() or "tid" in k.lower():
+                tid = k; break
+    if tid is None:
+        return []
+    cat = dim[tid].get("category", {})
+    idx_obj = cat.get("index", {})
+    if isinstance(idx_obj, list):
+        time_pairs = [(code, pos) for pos, code in enumerate(idx_obj)]
+    else:
+        time_pairs = [(code, pos) for code, pos in idx_obj.items()]
+    other_indices = [None if k == tid else 0 for k in dim_ids]
+    out = []
+    tid_pos = dim_ids.index(tid)
+    Q_MONTHS = {"1": 1, "2": 4, "3": 7, "4": 10}
+    for code, pos in time_pairs:
+        indices = list(other_indices)
+        indices[tid_pos] = pos
+        flat = 0
+        stride = 1
+        for i in range(len(dim_ids) - 1, -1, -1):
+            flat += indices[i] * stride
+            stride *= dim_sizes[i]
+        if 0 <= flat < len(values):
+            v = values[flat]
+            if v is None:
+                continue
+            try:
+                if "Q" in code:
+                    yy, q = code.split("Q")
+                    out.append((date(int(yy), Q_MONTHS[q], 1), float(v)))
+            except Exception:
+                continue
+    return sorted(out)
 
 
 # === Romania — INSSE Tempo (HTTP only on port 8077) ===
@@ -909,6 +1515,30 @@ RO_SERIES = [
      "unit_value": "Lei RON",
      "freq": "M", "unit": "RON/Month", "adjustment": "NSA", "conversion": 1.0,
      "note": "INSSE Tempo FOM107D gross monthly nominal wage, total economy, RON"},
+    # 1508 SOMERI INREGISTRATI — SOM103B registered unemployment rate, monthly, NSA
+    {"slug": "unemployment-rate-registered", "parent": "1508", "matrix": "SOM103B",
+     "filter_dims": {"Sexe": "Total ", "Macroregiuni, regiuni de dezvoltare si judete": "TOTAL"},
+     "unit_value": "Procente",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo SOM103B registered unemployment rate (end-of-month), total"},
+]
+
+# Romania trade pairs (computed: balance = exports - imports). Both matrices have
+# Sectiuni=Total, Total/Intra/Extra=Total, UM=Mii EURO. Values in thousand EUR;
+# conversion 1e-3 -> million EUR (matches TE convention).
+RO_TRADE_SERIES = [
+    {"slug": "exports", "parent": "6020", "matrix": "EXP101I",
+     "filter_dims": {"Sectiuni conform Clasificarii Standard de Comert International (CSCI) Rev.4": "Total",
+                     "Total, Intra-UE si Extra-UE": "Total"},
+     "unit_value": "Mii EURO",
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1e-3,
+     "note": "INSSE Tempo EXP101I Exports FOB Total, all CSCI sections, kEUR -> mio EUR"},
+    {"slug": "imports", "parent": "6020", "matrix": "EXP102I",
+     "filter_dims": {"Sectiuni conform Clasificarii Standard de Comert International (CSCI) Rev.4": "Total",
+                     "Total, Intra-UE si Extra-UE": "Total"},
+     "unit_value": "Mii EURO",
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1e-3,
+     "note": "INSSE Tempo EXP102I Imports CIF Total, all CSCI sections, kEUR -> mio EUR"},
 ]
 
 
@@ -1000,11 +1630,46 @@ EE_SERIES = [
      "query": {"Kaubagrupp": "1"},  # Total commodity group
      "freq": "M_year_month_combo", "unit": "Index (1997=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "Statistics Estonia IA002 CPI 1997=100, total commodity"},
+    # IA039.px = PPI of industrial output, 2010=100, monthly
+    # Year + Month split dims, Tegevusala (EMTAK 2008) value "1" = Total
+    {"slug": "ppi", "path": "majandus/hinnad/IA039.PX",
+     "query": {"Tegevusala (EMTAK 2008)": "1"},
+     "freq": "M_year_month_combo", "unit": "Index (2010=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistics Estonia IA039 PPI of industrial output total, 2010=100"},
+    # TO0053.PX = Volume index of industrial production, 2021=100, monthly
+    # Tegevusala="BTD" (Mining+Manufacturing+Energy), Korrigeerimine="Y" (calendar+seasonal adj)
+    # Vaatlusperiood is the time dim (YYYYM01 format).
+    {"slug": "industrial-production", "path": "majandus/toostus/TO0053.PX",
+     "query": {"Näitaja": "PROD", "Tegevusala": "BTD", "Korrigeerimine": "Y"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Statistics Estonia TO0053 IP volume index BTD (mining+manuf+energy) SA, 2021=100"},
+    # KM00338.PX = Retail sales volume index 2021=100 quarterly
+    # Indicator=RETAIL, Tegevusala=G45_47
+    {"slug": "retail-sales", "path": "majandus/sisekaubandus/jaemuugi-mahuindeksid/KM00338.PX",
+     "query": {"Näitaja": "RETAIL", "Tegevusala": "G45_47"},
+     "freq": "Q", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistics Estonia KM00338 retail sales volume index G45-47 2021=100 quarterly"},
+    # RAA0012.PX = GDP and GNI quarterly. Year + Quarter split dims.
+    # Adjustment 2 = SA + working-day adjusted. Indicator 2 = GDP chain-linked vol ref 2020.
+    {"slug": "gdp-real", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/pehilised-rahvamajanduse-arvepidamise-naitajad/RAA0012.PX",
+     "query": {"Sesoonne korrigeerimine": "2", "Näitaja": "2"},
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "SA", "conversion": 1.0,
+     "note": "Statistics Estonia RAA0012 real GDP chain-linked vol ref 2020, SA, mln EUR"},
+    # TT0160.px = Labour market headline indicators quarterly
+    # Näitaja=UNEMP_RATE, Sugu=T, Vanuserühm=Y15-74
+    {"slug": "unemployment", "path": "sotsiaalelu/tooturg/tooturu-uldandmed/luhiajastatistika/TT0160.px",
+     "query": {"Näitaja": "UNEMP_RATE", "Sugu": "T", "Vanuserühm": "Y15-74"},
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistics Estonia TT0160 LFS unemployment rate 15-74 total quarterly"},
 ]
 
 
 def fetch_ee_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
-    """Estonia PxWeb. Note: their tables often have separate Year and Month dims (not single Tid)."""
+    """Estonia PxWeb. Tables vary:
+      - 'M_year_month_combo' = separate Aasta(Year)+Kuu(Month) dims
+      - 'Q_year_quarter_combo' = separate Aasta(Year)+Kvartal(Quarter) dims (1..5, 1=annual)
+      - 'M'/'Q' = single time dim Vaatlusperiood with YYYYM01/YYYYQ1 codes
+    """
     url = f"https://andmed.stat.ee/api/v1/en/stat/{path}"
     body = {
         "query": [{"code": k, "selection": {"filter": "item", "values": [v]}}
@@ -1014,10 +1679,68 @@ def fetch_ee_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tupl
     r = requests.post(url, json=body, timeout=30)
     r.raise_for_status()
     js = r.json()
-    # If freq is 'M_year_month_combo', the table has Year and Month dims separately
     if freq == "M_year_month_combo":
         return _parse_jsonstat_year_month(js)
+    if freq == "Q_year_quarter_combo":
+        return _parse_jsonstat_ee_year_quarter(js)
+    if freq == "Q":
+        return _parse_jsonstat_quarterly(js)
     return _parse_jsonstat(js, freq)
+
+
+def _parse_jsonstat_ee_year_quarter(js: dict) -> list[tuple[date, float]]:
+    """EE PxWeb tables with Aasta (Year) + Kvartal (Quarter I-IV) split dims.
+    Kvartal codes: 1 = annual aggregate (skip), I/II/III/IV = quarters."""
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    dim_sizes = js.get("size", [])
+    if not values or not dim_ids:
+        return []
+    year_dim = next((k for k in dim_ids if k.lower() in ("aasta", "year")), None)
+    q_dim = next((k for k in dim_ids if k.lower() in ("kvartal", "quarter")), None)
+    if not year_dim or not q_dim:
+        return []
+    def pairs(name):
+        idx = dim[name].get("category", {}).get("index", {})
+        if isinstance(idx, list):
+            return [(c, p) for p, c in enumerate(idx)]
+        return [(c, p) for c, p in idx.items()]
+    y_pairs = pairs(year_dim)
+    q_pairs = pairs(q_dim)
+    other = {k: 0 for k in dim_ids if k not in (year_dim, q_dim)}
+    Q_MONTHS = {"I": 1, "II": 4, "III": 7, "IV": 10}
+    out = []
+    for ycode, ypos in y_pairs:
+        try:
+            yy = int(ycode)
+        except ValueError:
+            continue
+        for qcode, qpos in q_pairs:
+            mm = Q_MONTHS.get(str(qcode).strip().upper())
+            if not mm:
+                continue
+            indices = []
+            for k in dim_ids:
+                if k == year_dim:
+                    indices.append(ypos)
+                elif k == q_dim:
+                    indices.append(qpos)
+                else:
+                    indices.append(other[k])
+            flat = 0
+            stride = 1
+            for i in range(len(dim_ids) - 1, -1, -1):
+                flat += indices[i] * stride
+                stride *= dim_sizes[i]
+            if 0 <= flat < len(values):
+                v = values[flat]
+                if v is not None:
+                    try:
+                        out.append((date(yy, mm, 1), float(v)))
+                    except Exception:
+                        continue
+    return sorted(out)
 
 
 def _parse_jsonstat_year_month(js: dict) -> list[tuple[date, float]]:
@@ -1086,10 +1809,44 @@ HU_SERIES = [
     # ara0040 = "The consumer price index by main consumption groups, monthly"
     # Format: YoY index (same period previous year=100.0%). Columns: Year, Month,
     # Food, AlcTobacco, Clothing, Durable, FuelPower, Other, Services, Total, Pensioners
-    {"slug": "inflation-cpi", "table": "ara0040",
-     "value_col_index": 9,  # 0-indexed: Year=0, Month=1, ..., Total=9
+    {"slug": "inflation-cpi", "section": "ara", "table": "ara0040",
+     "value_col_index": 9,
      "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "KSH STADAT 1.2.1.2 ara0040 CPI total YoY Index (sm-py=100)"},
+    # ara0055 col 19 = "Total industry" (B+C+D+E) PPI; first table section = base 2021=100
+    {"slug": "ppi", "section": "ara", "table": "ara0055",
+     "value_col_index": 19,
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 1.2.1.19 ara0055 PPI Total industry (B+C+D+E) base 2021=100"},
+    # ipa0072 col 19 = Hungary's monthly volume index of industrial production
+    # (EU-comparison table, YoY index corresponding period prev year = 100)
+    {"slug": "industrial-production", "section": "ipa", "table": "ipa0072",
+     "value_col_index": 19,
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "KSH STADAT 13.2.3.1 ipa0072 IPI Hungary WDA, YoY index"},
+    # mun0098 col 8 = "Unemployment rate" %, LFS aged 15-64, Total section (first occurrence)
+    {"slug": "unemployment-rate", "section": "mun", "table": "mun0098",
+     "value_col_index": 8,
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 20.2.1.3 mun0098 LFS unemployment rate 15-64 Total %"},
+    # bel0020 col 20 = "Total retail sales" calendar-adjusted volume YoY index (sm-py=100).
+    # Data rows have Year+Month+19 sub-categories; the last column is the grand total.
+    {"slug": "retail-sales", "section": "bel", "table": "bel0020",
+     "value_col_index": 20,
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "KSH STADAT 2.2.1.7 bel0020 Retail sales total calendar-adjusted volume YoY index"},
+    # gdp0086 col 2 = unadjusted raw YoY index (corresponding period prev year=100)
+    # Quarterly volume indices of GDP — back to 1996.
+    {"slug": "gdp-real", "section": "gdp", "table": "gdp0086",
+     "value_col_index": 2,
+     "freq": "Q", "unit": "Index (same quarter previous year=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 21.2.1.2 gdp0086 GDP volume index unadjusted YoY"},
+    # Trade balance: synthesised in fetch loop from kkr0065 (exports) - kkr0064 (imports),
+    # Hungary at value_col_index 19 in both EU-comparison tables, units = million EUR.
+    {"slug": "trade-balance", "section": "kkr", "table": "kkr_synthetic",
+     "value_col_index": 19,
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 17.2.3.1+17.2.3.2 kkr0065-kkr0064 HU exports minus imports, mEUR"},
 ]
 
 HU_MONTHS = {
@@ -1097,13 +1854,29 @@ HU_MONTHS = {
     "July":7, "August":8, "September":9, "October":10, "November":11, "December":12,
 }
 
+HU_QUARTERS = {"Q1": 3, "Q2": 6, "Q3": 9, "Q4": 12}
 
-def fetch_hu_stadat(table: str, value_col_index: int, freq: str = "M") -> list[tuple[date, float]]:
-    """Scrape KSH STADAT HTML table. Year repeats only on January-row.
-    KSH tables have multiple sections (YoY/MoM/base100); we keep only first occurrence
-    of each (year, month) tuple — that's the YoY section which appears first."""
+
+def _hu_parse_number(s: str):
+    """Parse a KSH STADAT cell: strip nbsp/spaces; remove thousand-separator commas.
+    KSH English HTML pages use period as decimal separator throughout."""
+    s = s.replace("\xa0", "").replace(" ", "").replace(",", "")
+    if s in ("", "..", "…", "x", "-"):
+        return None
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def fetch_hu_stadat(table: str, value_col_index: int, freq: str = "M",
+                    section: str = "ara") -> list[tuple[date, float]]:
+    """Scrape KSH STADAT HTML table. Year repeats only on the first-period row
+    (January for monthly, Q1 for quarterly). KSH tables can contain multiple
+    sub-sections (YoY/MoM/base-index); we keep the first occurrence of each
+    (year, period) tuple."""
     import bs4
-    url = f"https://www.ksh.hu/stadat_files/ara/en/{table}.html"
+    url = f"https://www.ksh.hu/stadat_files/{section}/en/{table}.html"
     r = requests.get(url, timeout=30)
     r.raise_for_status()
     soup = bs4.BeautifulSoup(r.text, "html.parser")
@@ -1112,44 +1885,46 @@ def fetch_hu_stadat(table: str, value_col_index: int, freq: str = "M") -> list[t
     table_el = soup.find("table")
     if not table_el:
         return out
+    period_map = HU_QUARTERS if freq == "Q" else HU_MONTHS
     current_year = None
     for tr in table_el.find_all("tr"):
         cells = [c.get_text(strip=True) for c in tr.find_all(["td", "th"])]
         if not cells:
             continue
-        # Header rows have all-text cells; data rows start with Year (4-digit) or empty
         first = cells[0]
-        # Skip header rows
-        if first.lower() in ("period", "") and len(cells) >= 2 and cells[1] not in HU_MONTHS:
+        if first.lower() in ("period", "quarter", "year", "code", "") and \
+                (len(cells) < 2 or cells[1] not in period_map):
             continue
-        # Year carry-over
         if first.isdigit() and len(first) == 4:
             current_year = int(first)
-            month_text = cells[1] if len(cells) > 1 else ""
-        elif first == "" and len(cells) >= 2 and cells[1] in HU_MONTHS:
-            # continuation row — first cell is empty, month is in cells[1]
-            month_text = cells[1]
-        elif first in HU_MONTHS:
-            month_text = first
+            period_text = cells[1] if len(cells) > 1 else ""
+        elif first == "" and len(cells) >= 2 and cells[1] in period_map:
+            period_text = cells[1]
+        elif first in period_map:
+            period_text = first
         else:
             continue
-        if month_text not in HU_MONTHS:
+        if period_text not in period_map or current_year is None:
             continue
-        if current_year is None:
+        pm = period_map[period_text]
+        key = (current_year, pm)
+        if key in seen:
             continue
-        # Get the value at value_col_index
+        seen.add(key)
         if value_col_index < len(cells):
-            key = (current_year, HU_MONTHS[month_text])
-            if key in seen:
+            val = _hu_parse_number(cells[value_col_index])
+            if val is None:
                 continue
-            seen.add(key)
-            val_str = cells[value_col_index].replace(",", ".").replace("\xa0", "")
-            try:
-                val = float(val_str)
-            except ValueError:
-                continue
-            out.append((date(current_year, HU_MONTHS[month_text], 1), val))
+            out.append((date(current_year, pm, 1), val))
     return sorted(out)
+
+
+def fetch_hu_trade_balance() -> list[tuple[date, float]]:
+    """Synthesise HU trade balance = exports (kkr0065) - imports (kkr0064), million EUR.
+    Hungary appears at value_col_index 19 in both EU-comparison tables."""
+    exp = dict(fetch_hu_stadat("kkr0065", 19, "M", section="kkr"))
+    imp = dict(fetch_hu_stadat("kkr0064", 19, "M", section="kkr"))
+    return [(dt, exp[dt] - imp[dt]) for dt in sorted(set(exp.keys()) & set(imp.keys()))]
 
 
 # === Slovakia — Štatistický úrad SR DataCube REST ===
@@ -1159,16 +1934,65 @@ SK_SERIES = [
     # /dataset/sp2038ms/{years CSV}/{months CSV or all}/{coicop}/{measure}
     # odb01 = Úhrn (Total), mj38 = December 2000=100 (continuous index)
     {"slug": "inflation-cpi", "dataset_id": "sp2038ms",
-     "years": "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
-     "coicop": "odb01", "measure": "mj38",
+     "segments": [
+         "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+         "all", "odb01", "mj38",
+     ],
      "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "ŠÚ SR sp2038ms CPI Total, Dec 2000=100 continuous monthly"},
+    # sp0101ms: Producer price indices vs. corresponding period of previous year — monthly.
+    # 3 dims: rok, mes, ukaz. UKAZ04 = Industrial producers prices - total.
+    {"slug": "ppi", "dataset_id": "sp0101ms",
+     "segments": ["all", "all", "UKAZ04"],
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp0101ms PPI Industrial producers prices total UKAZ04 YoY index"},
+    # pm0042ms: Industrial production YoY index (adjusted). Dims: year, month, specu, nace2,
+    # unit, indic. Pick SPECU_Y_ROMR (YoY) × NACE 05-39 (Industry total) × UNIT_INDEX × U_PM_0001.
+    {"slug": "industrial-production", "dataset_id": "pm0042ms",
+     "segments": ["all", "all", "SPECU_Y_ROMR", "05-39", "UNIT_INDEX", "U_PM_0001"],
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SUSR pm0042ms Industrial production YoY adjusted, NACE 05-39 Industry total"},
+    # pr1802qs: LFS unemployment rate quarterly. Dims (in path order):
+    # rok, vek, vzdel03, poh, stv (quarter), mj, ukaz.
+    # all years × VEK_Y15-74 × TOTAL education × TOTAL sex × all quarters × MJ_VPC (in %)
+    # × U_PR_0003 (Unemployment rate).
+    {"slug": "unemployment-rate", "dataset_id": "pr1802qs",
+     "segments": ["all", "VEK_Y15-74", "TOTAL", "TOTAL", "all", "MJ_VPC", "U_PR_0003"],
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR pr1802qs LFS unemployment rate 15-74 Total %"},
+    # ob0004ms: Retail trade except motor vehicles, turnover index YoY (constant prices).
+    # Dims: year, month, specu, nace2, unit, indic. SPECU_Y_ROMR × NACE 47 (Total retail trade)
+    # × UNIT_INDEX_CSP (index/con.p.) × U_OD_0001 (Turnover).
+    {"slug": "retail-sales", "dataset_id": "ob0004ms",
+     "segments": ["all", "all", "SPECU_Y_ROMR", "47", "UNIT_INDEX_CSP", "U_OD_0001"],
+     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SUSR ob0004ms Retail trade turnover NACE 47 YoY index (constant prices)"},
+    # zo0001ms: Foreign trade by months. Dims: rok, mes, ukaz, mj.
+    # UKAZ03 = Balance - for month, MJ01 = mill. EUR.
+    {"slug": "trade-balance", "dataset_id": "zo0001ms",
+     "segments": ["all", "all", "UKAZ03", "MJ01"],
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR zo0001ms Foreign trade balance, mill EUR, monthly"},
+    # nu0004qs: Quarterly GDP, chain-linked volumes (previous year prices). Dims:
+    # rok, stv, ukaz, meto, mj. UKAZ15 = GDP × METO04 (GDP method) × MJ01 (Mill EUR).
+    {"slug": "gdp-real", "dataset_id": "nu0004qs",
+     "segments": ["all", "all", "UKAZ15", "METO04", "MJ01"],
+     "freq": "Q", "unit": "Million EUR (chain-linked, prev-year prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR nu0004qs Quarterly GDP chain-linked volumes, mill EUR"},
 ]
 
 
-def fetch_sk_datacube(dataset_id: str, years: str, coicop: str, measure: str, freq: str = "M") -> list[tuple[date, float]]:
-    """SK datacube: /dataset/{id}/{years}/all/{coicop}/{measure}"""
-    url = f"https://data.statistics.sk/api/v2.0/dataset/{dataset_id}/{years}/all/{coicop}/{measure}"
+def fetch_sk_datacube(dataset_id: str, segments: list, freq: str = "M") -> list[tuple[date, float]]:
+    """SUSR datacube REST: /api/v2.0/dataset/{id}/{seg1}/{seg2}/.../{segN}.
+    Supports monthly (M) and quarterly (Q) frequencies; year dim has 'rok'/'year' in name,
+    period dim has 'mes' (month) or 'stv' (quarter) in name.
+
+    `segments` is the ordered list of path segments after the dataset_id (excluding
+    leading slash) — typically: years, months_or_all, then the indicator/measure filters
+    in the order specified by the dataset's dimension declaration. Use 'all' to fetch
+    every category for a dimension.
+    """
+    url = "https://data.statistics.sk/api/v2.0/dataset/" + dataset_id + "/" + "/".join(segments)
     r = requests.get(url, timeout=60)
     r.raise_for_status()
     js = r.json()
@@ -1176,42 +2000,66 @@ def fetch_sk_datacube(dataset_id: str, years: str, coicop: str, measure: str, fr
     values = js.get("value", [])
     if not sizes or not values:
         return []
-    # Find year and month dim positions
     dim_ids = js.get("id", [])
-    year_pos = next((i for i, k in enumerate(dim_ids) if "rok" in k.lower()), None)
-    month_pos = next((i for i, k in enumerate(dim_ids) if "mes" in k.lower()), None)
-    if year_pos is None or month_pos is None:
+    year_pos = next((i for i, k in enumerate(dim_ids) if "rok" in k.lower() or "year" in k.lower()), None)
+    if freq == "Q":
+        period_pos = next((i for i, k in enumerate(dim_ids) if "stv" in k.lower()), None)
+        period_kind = "Q"
+    else:
+        period_pos = next((i for i, k in enumerate(dim_ids) if "mes" in k.lower() or "month" in k.lower()), None)
+        period_kind = "M"
+    if year_pos is None or period_pos is None:
         return []
     year_idx = js["dimension"][dim_ids[year_pos]]["category"]["index"]
-    month_idx = js["dimension"][dim_ids[month_pos]]["category"]["index"]
-    # idx may be list (=positional) or dict
+    period_idx = js["dimension"][dim_ids[period_pos]]["category"]["index"]
     if isinstance(year_idx, dict):
         year_pairs = list(year_idx.items())
     else:
         year_pairs = [(c, i) for i, c in enumerate(year_idx)]
-    if isinstance(month_idx, dict):
-        month_pairs = list(month_idx.items())
+    if isinstance(period_idx, dict):
+        period_pairs = list(period_idx.items())
     else:
-        month_pairs = [(c, i) for i, c in enumerate(month_idx)]
+        period_pairs = [(c, i) for i, c in enumerate(period_idx)]
 
+    # Q-codes look like '1.', '2.', '3.', '4.' (last category may be '1. - 4.' cumulative)
+    # M-codes look like '1.', '2.', ..., '12.', '1. - 12.' cumulative
     out = []
     for ycode, ypos in year_pairs:
+        # Year codes may carry status suffixes like '2026 (p)' / '(d)' / '(s)';
+        # strip the parenthesised marker and any whitespace.
+        y_clean = ycode.split("(", 1)[0].strip()
         try:
-            yy = int(ycode)
+            yy = int(y_clean)
         except ValueError:
             continue
-        for mcode, mpos in month_pairs:
-            mm_str = mcode.rstrip(".")
+        for pcode, ppos in period_pairs:
+            # Quarter codes look like '1. Q.', '1.Q.', '1.', '12.'; month codes are '1.' .. '12.'
+            # Strip any non-leading-digit characters before parsing the integer.
+            p_str = pcode.split("(", 1)[0].strip()
+            digits = ""
+            for ch in p_str:
+                if ch.isdigit():
+                    digits += ch
+                else:
+                    if digits:
+                        break  # only consume the leading run of digits
+            if not digits:
+                continue
             try:
-                mm = int(mm_str)
+                pn = int(digits)
             except ValueError:
                 continue
-            if mm < 1 or mm > 12:
-                continue
-            # Build flat index across all dims
+            if period_kind == "Q":
+                if pn < 1 or pn > 4:
+                    continue
+                month = pn * 3
+            else:
+                if pn < 1 or pn > 12:
+                    continue
+                month = pn
             indices = [0] * len(dim_ids)
             indices[year_pos] = ypos
-            indices[month_pos] = mpos
+            indices[period_pos] = ppos
             flat = 0
             stride = 1
             for i in range(len(dim_ids) - 1, -1, -1):
@@ -1220,7 +2068,7 @@ def fetch_sk_datacube(dataset_id: str, years: str, coicop: str, measure: str, fr
             if 0 <= flat < len(values):
                 v = values[flat]
                 if v is not None:
-                    out.append((date(yy, mm, 1), float(v)))
+                    out.append((date(yy, month, 1), float(v)))
     return sorted(out)
 
 
@@ -1358,18 +2206,173 @@ def fetch_cy_pxweb(px_path: str, base_year: str, freq: str = "M") -> list[tuple[
 
 
 # === Croatia — DZS PxWeb (web.dzs.hr) ===
+#
+# Discovery: GET https://web.dzs.hr/PXWeb/api/v1/en/ -> 20 topics (Cijene,
+# Industrija, Trgovina na malo, Nacionalni racuni, ...). DZS PxWeb uses the
+# language code 'en' but most node IDs and dim codes remain Croatian.
+# Stage-2 tables (BS_IN11, BS_PP11, BS_TR21) have *split* Year+Month dims
+# (GODINA + MJESEC with Roman-numeral months I..XII) rather than a single
+# combined Tid. We use _parse_jsonstat_roman_year_month for those tables.
+# GDP table BDP-T01_EUR.px uses Godina (Year) + Tromjesečje (Quarter).
 
 HR_SERIES = [
     # ME_PS09.px CPI ECOICOP v2 monthly. ECOICOP_ver_2='00' (Total), Indikatori='4' (index 2025=100)
     {"slug": "inflation-cpi",
      "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
      "query": {"ECOICOP, ver. 2": "00", "Indikatori": "4"},
-     "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "DZS Croatia ME_PS09 CPI 2025=100 total ECOICOP v2"},
+    # BS_IN11.px Industrial production volume indices, gross indices, total industry
+    # DJELATNOSTI=Ukupno (Total) — split GODINA + MJESEC (Roman) dims, 1998-..
+    {"slug": "industrial-production",
+     "path": "Industrija/Indeks industrijske proizvodnje/BS_IN11.px",
+     "query": {"DJELATNOSTI": "Ukupno"},
+     "freq": "M", "parse": "roman_ym",
+     "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BS_IN11 IP volume index Total industry gross 2021=100"},
+    # BS_PP11.px Industrial producers price index on domestic market — total industry
+    {"slug": "ppi",
+     "path": "Industrija/Indeks proizvođačkih cijena/BS_PP11.px",
+     "query": {"DJELATNOSTI": "Ukupno"},
+     "freq": "M", "parse": "roman_ym",
+     "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BS_PP11 PPI domestic market Total industry 2021=100"},
+    # BS_TR21.px Retail Trade Turnover Indices - Gross (unadjusted), Value index 2021=100
+    # DJELATNOSTI=G47 (Retail trade, except motor vehicles and motorcycles)
+    {"slug": "retail-sales",
+     "path": "Trgovina na malo/BS_TR21.px",
+     "query": {"DJELATNOSTI": "G47"},
+     "freq": "M", "parse": "roman_ym",
+     "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BS_TR21 retail trade turnover gross value index G47 2021=100"},
+    # BDP-T01_EUR.px Quarterly GDP at constant previous year prices (ref 2021), mln EUR
+    # Pokazatelj=B1GQ (GDP), Način prikaza=2 (Constant ref year 2021), Tromjesečje=1..4
+    # Year + Quarter split dims. We fetch the four quarter codes and pin Godina open.
+    {"slug": "gdp-real",
+     "path": "Nacionalni racuni/BDP/Kvartalni nacionalni računi/BDP-T01_EUR.px",
+     "query": {"Pokazatelj": "B1GQ", "Način prikaza": "2"},
+     "freq": "Q", "parse": "hr_year_quarter",
+     "unit": "Million EUR (constant 2021 prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia BDP-T01_EUR real GDP constant ref-year 2021 prices, mln EUR"},
 ]
 
 
-def fetch_hr_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tuple[date, float]]:
+_HR_ROMAN_MONTHS = {
+    "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6,
+    "VII": 7, "VIII": 8, "IX": 9, "X": 10, "XI": 11, "XII": 12,
+}
+
+
+def _parse_jsonstat_roman_year_month(js: dict) -> list[tuple[date, float]]:
+    """HR PxWeb tables with GODINA (Year) + MJESEC (Roman month) split dims."""
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    dim_sizes = js.get("size", [])
+    if not values or not dim_ids:
+        return []
+    year_dim = next((k for k in dim_ids if k.upper() == "GODINA"), None)
+    month_dim = next((k for k in dim_ids if k.upper() == "MJESEC"), None)
+    if not year_dim or not month_dim:
+        return []
+    def pairs(name):
+        idx = dim[name].get("category", {}).get("index", {})
+        if isinstance(idx, list):
+            return [(c, p) for p, c in enumerate(idx)]
+        return [(c, p) for c, p in idx.items()]
+    y_pairs = pairs(year_dim)
+    m_pairs = pairs(month_dim)
+    other = {k: 0 for k in dim_ids if k not in (year_dim, month_dim)}
+    out = []
+    for ycode, ypos in y_pairs:
+        try:
+            yy = int(ycode.rstrip("."))
+        except ValueError:
+            continue
+        for mcode, mpos in m_pairs:
+            mm = _HR_ROMAN_MONTHS.get(mcode.strip().upper())
+            if not mm:
+                continue
+            indices = []
+            for k in dim_ids:
+                if k == year_dim:
+                    indices.append(ypos)
+                elif k == month_dim:
+                    indices.append(mpos)
+                else:
+                    indices.append(other[k])
+            flat = 0
+            stride = 1
+            for i in range(len(dim_ids) - 1, -1, -1):
+                flat += indices[i] * stride
+                stride *= dim_sizes[i]
+            if 0 <= flat < len(values):
+                v = values[flat]
+                if v is not None:
+                    try:
+                        out.append((date(yy, mm, 1), float(v)))
+                    except Exception:
+                        continue
+    return sorted(out)
+
+
+def _parse_jsonstat_hr_year_quarter(js: dict) -> list[tuple[date, float]]:
+    """HR PxWeb tables with Godina (Year) + Tromjesečje (Quarter) split dims.
+    Quarter codes are 1..5 where 5 is annual 'Q1-Q4'; skip that."""
+    values = js.get("value", [])
+    dim = js.get("dimension", {})
+    dim_ids = js.get("id", [])
+    dim_sizes = js.get("size", [])
+    if not values or not dim_ids:
+        return []
+    year_dim = next((k for k in dim_ids if k.lower() == "godina"), None)
+    q_dim = next((k for k in dim_ids if "tromjeseč" in k.lower() or "tromjesec" in k.lower()), None)
+    if not year_dim or not q_dim:
+        return []
+    def pairs(name):
+        idx = dim[name].get("category", {}).get("index", {})
+        if isinstance(idx, list):
+            return [(c, p) for p, c in enumerate(idx)]
+        return [(c, p) for c, p in idx.items()]
+    y_pairs = pairs(year_dim)
+    q_pairs = pairs(q_dim)
+    other = {k: 0 for k in dim_ids if k not in (year_dim, q_dim)}
+    Q_MONTHS = {"1": 1, "2": 4, "3": 7, "4": 10}
+    out = []
+    for ycode, ypos in y_pairs:
+        try:
+            yy = int(ycode)
+        except ValueError:
+            continue
+        for qcode, qpos in q_pairs:
+            mm = Q_MONTHS.get(str(qcode))
+            if not mm:
+                continue
+            indices = []
+            for k in dim_ids:
+                if k == year_dim:
+                    indices.append(ypos)
+                elif k == q_dim:
+                    indices.append(qpos)
+                else:
+                    indices.append(other[k])
+            flat = 0
+            stride = 1
+            for i in range(len(dim_ids) - 1, -1, -1):
+                flat += indices[i] * stride
+                stride *= dim_sizes[i]
+            if 0 <= flat < len(values):
+                v = values[flat]
+                if v is not None:
+                    try:
+                        out.append((date(yy, mm, 1), float(v)))
+                    except Exception:
+                        continue
+    return sorted(out)
+
+
+def fetch_hr_pxweb(path: str, query_filters: dict, freq: str = "M", parse: str = "tid") -> list[tuple[date, float]]:
     import urllib.parse
     encoded_path = "/".join(urllib.parse.quote(p) for p in path.split("/"))
     url = f"https://web.dzs.hr/PXWeb/api/v1/en/{encoded_path}"
@@ -1380,7 +2383,12 @@ def fetch_hr_pxweb(path: str, query_filters: dict, freq: str = "M") -> list[tupl
     }
     r = requests.post(url, json=body, timeout=30)
     r.raise_for_status()
-    return _parse_jsonstat(r.json(), freq)
+    js = r.json()
+    if parse == "roman_ym":
+        return _parse_jsonstat_roman_year_month(js)
+    if parse == "hr_year_quarter":
+        return _parse_jsonstat_hr_year_quarter(js)
+    return _parse_jsonstat(js, freq)
 
 
 # Aggregate fetchers
@@ -1432,22 +2440,49 @@ class NationalEUProvider(BaseProvider):
             time.sleep(0.3)
 
         # Finland
+        fi_trade_cache: dict[str, dict] = {}
         for cfg in FI_SERIES:
             try:
                 pairs = fetch_fi_table(cfg["path"], cfg["query"], cfg["freq"])
+                sid = cfg.get("series_id") or f"STATFI/{cfg['path']}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="FI",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="stat_fi", unit=cfg["unit"],
-                        series_id=f"STATFI/{cfg['path']}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
+                # Cache exports/imports for trade-balance derivation
+                if cfg["slug"] in ("exports", "imports") and "tpulk" in cfg["path"]:
+                    fi_trade_cache[cfg["slug"]] = {
+                        normalize_date(dt, cfg["freq"]): round(v * cfg["conversion"], 4)
+                        for dt, v in pairs
+                    }
                 print(f"  OK {cfg['slug']}/FI ({cfg['path'][-30:]}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/FI: {e}")
             time.sleep(0.3)
+
+        # Finland — derive trade-balance from BoP exports - imports (tpulk 12gq).
+        if "exports" in fi_trade_cache and "imports" in fi_trade_cache:
+            exp_map = fi_trade_cache["exports"]
+            imp_map = fi_trade_cache["imports"]
+            tb_pts = 0
+            for d, ex in exp_map.items():
+                im = imp_map.get(d)
+                if im is None:
+                    continue
+                out.append(DataPoint(
+                    indicator="trade-balance", country="FI", date=d,
+                    value=round(ex - im, 4), source="stat_fi",
+                    unit="EUR million",
+                    series_id="STATFI/StatFin/tpulk/statfin_tpulk_pxt_12gq.px/tb",
+                    adjustment="NSA",
+                ))
+                tb_pts += 1
+            print(f"  OK trade-balance/FI (derived exp-imp tpulk 12gq): {tb_pts} pts")
 
         # Sweden
         for cfg in SE_SERIES:
@@ -1470,7 +2505,10 @@ class NationalEUProvider(BaseProvider):
         # Portugal
         for cfg in PT_SERIES:
             try:
-                pairs = fetch_pt_indicator(cfg["varcd"], cfg["freq"])
+                pairs = fetch_pt_indicator(
+                    cfg["varcd"], cfg["freq"],
+                    row_filter=cfg.get("row_filter"),
+                )
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="PT",
@@ -1489,13 +2527,14 @@ class NationalEUProvider(BaseProvider):
         for cfg in IE_SERIES:
             try:
                 pairs = fetch_ie_table(cfg["table"], cfg["filters"], cfg["freq"])
+                sid = cfg.get("series_id") or f"CSO/{cfg['table']}"
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="IE",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="cso_ie", unit=cfg["unit"],
-                        series_id=f"CSO/{cfg['table']}",
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/IE ({cfg['table']}): {len(pairs)} pts")
@@ -1506,7 +2545,10 @@ class NationalEUProvider(BaseProvider):
         # Austria
         for cfg in AT_SERIES:
             try:
-                pairs = fetch_at_csv(cfg["ogd"], cfg["filters"], cfg["time_col"], cfg["value_col"], cfg["freq"])
+                pairs = fetch_at_csv(
+                    cfg["ogd"], cfg["filters"], cfg["time_col"], cfg["value_col"], cfg["freq"],
+                    value_col_b=cfg.get("value_col_b"), derive=cfg.get("derive"),
+                )
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="AT",
@@ -1542,17 +2584,17 @@ class NationalEUProvider(BaseProvider):
         # Latvia
         for cfg in LV_SERIES:
             try:
-                pairs = fetch_lv_pxweb(cfg["table"], cfg["query"], cfg["freq"])
+                pairs = fetch_lv_pxweb(cfg["path"], cfg["query"], cfg["freq"])
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="LV",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="csp_lv", unit=cfg["unit"],
-                        series_id=f"CSP/{cfg['table']}",
+                        series_id=f"CSP/{cfg['path'].rsplit('/',1)[-1]}",
                         adjustment=cfg["adjustment"],
                     ))
-                print(f"  OK {cfg['slug']}/LV ({cfg['table']}): {len(pairs)} pts")
+                print(f"  OK {cfg['slug']}/LV ({cfg['path'].rsplit('/',1)[-1]}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/LV: {e}")
             time.sleep(0.3)
@@ -1561,35 +2603,53 @@ class NationalEUProvider(BaseProvider):
         for cfg in EE_SERIES:
             try:
                 pairs = fetch_ee_pxweb(cfg["path"], cfg["query"], cfg["freq"])
-                eff_freq = "M" if cfg["freq"] == "M_year_month_combo" else cfg["freq"]
+                eff_freq = {"M_year_month_combo": "M", "Q_year_quarter_combo": "Q"}.get(
+                    cfg["freq"], cfg["freq"]
+                )
+                table_id = cfg["path"].rsplit("/", 1)[-1].split(".")[0]
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="EE",
                         date=normalize_date(dt, eff_freq),
                         value=round(v * cfg["conversion"], 4),
                         source="stat_ee", unit=cfg["unit"],
-                        series_id=f"STATEE/{cfg['path']}",
+                        series_id=f"STATEE/{table_id}",
                         adjustment=cfg["adjustment"],
                     ))
-                print(f"  OK {cfg['slug']}/EE ({cfg['path'][-25:]}): {len(pairs)} pts")
+                print(f"  OK {cfg['slug']}/EE ({table_id}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/EE: {e}")
             time.sleep(0.3)
 
-        # Belgium
+        # Belgium — Statbel CSV views + NBB SDMX REST v2
         for cfg in BE_SERIES:
+            kind = cfg.get("kind", "statbel")
             try:
-                pairs = fetch_be_statbel_csv(cfg["view_id"], cfg["value_col"], cfg["freq"])
+                if kind == "statbel":
+                    pairs = fetch_be_statbel_csv(
+                        cfg["view_id"], cfg["value_col"], cfg["freq"],
+                        row_filter=cfg.get("row_filter"),
+                    )
+                    src = "statbel"
+                    sid = f"STATBEL/{cfg['view_id'][:8]}"
+                    tag = f"Statbel {cfg['view_id'][:8]}"
+                elif kind == "nbb":
+                    pairs = fetch_nbb_sdmx(cfg["dataflow"], cfg["key"], cfg["freq"])
+                    src = "nbb"
+                    sid = f"NBB/{cfg['dataflow']}/{cfg['key']}"
+                    tag = f"NBB {cfg['dataflow']}"
+                else:
+                    raise ValueError(f"unknown BE kind: {kind}")
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="BE",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
-                        source="statbel", unit=cfg["unit"],
-                        series_id=f"STATBEL/{cfg['view_id'][:8]}",
+                        source=src, unit=cfg["unit"],
+                        series_id=sid,
                         adjustment=cfg["adjustment"],
                     ))
-                print(f"  OK {cfg['slug']}/BE (Statbel): {len(pairs)} pts")
+                print(f"  OK {cfg['slug']}/BE ({tag}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/BE: {e}")
             time.sleep(0.3)
@@ -1597,7 +2657,13 @@ class NationalEUProvider(BaseProvider):
         # Hungary
         for cfg in HU_SERIES:
             try:
-                pairs = fetch_hu_stadat(cfg["table"], cfg["value_col_index"], cfg["freq"])
+                if cfg["table"] == "kkr_synthetic":
+                    pairs = fetch_hu_trade_balance()
+                else:
+                    pairs = fetch_hu_stadat(
+                        cfg["table"], cfg["value_col_index"],
+                        cfg["freq"], section=cfg.get("section", "ara"),
+                    )
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="HU",
@@ -1615,14 +2681,15 @@ class NationalEUProvider(BaseProvider):
         # Slovakia
         for cfg in SK_SERIES:
             try:
-                pairs = fetch_sk_datacube(cfg["dataset_id"], cfg["years"], cfg["coicop"], cfg["measure"], cfg["freq"])
+                pairs = fetch_sk_datacube(cfg["dataset_id"], cfg["segments"], cfg["freq"])
+                seg_tail = "/".join(cfg["segments"][2:]) if len(cfg["segments"]) > 2 else ""
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="SK",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="susr_sk", unit=cfg["unit"],
-                        series_id=f"SUSR/{cfg['dataset_id']}/{cfg['coicop']}/{cfg['measure']}",
+                        series_id=f"SUSR/{cfg['dataset_id']}/{seg_tail}",
                         adjustment=cfg["adjustment"],
                     ))
                 print(f"  OK {cfg['slug']}/SK ({cfg['dataset_id']}): {len(pairs)} pts")
@@ -1633,17 +2700,18 @@ class NationalEUProvider(BaseProvider):
         # Croatia
         for cfg in HR_SERIES:
             try:
-                pairs = fetch_hr_pxweb(cfg["path"], cfg["query"], cfg["freq"])
+                pairs = fetch_hr_pxweb(cfg["path"], cfg["query"], cfg["freq"], cfg.get("parse", "tid"))
+                table_id = cfg["path"].rsplit("/", 1)[-1].replace(".px", "")
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="HR",
                         date=normalize_date(dt, cfg["freq"]),
                         value=round(v * cfg["conversion"], 4),
                         source="dzs_hr", unit=cfg["unit"],
-                        series_id=f"DZS/{cfg['path'][-30:]}",
+                        series_id=f"DZS/{table_id}",
                         adjustment=cfg["adjustment"],
                     ))
-                print(f"  OK {cfg['slug']}/HR (ME_PS09): {len(pairs)} pts")
+                print(f"  OK {cfg['slug']}/HR ({table_id}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/HR: {e}")
             time.sleep(0.3)
@@ -1669,6 +2737,46 @@ class NationalEUProvider(BaseProvider):
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/RO: {e}")
             time.sleep(0.3)
+
+        # Romania trade: fetch exports & imports separately, then compute trade-balance
+        ro_trade_cache = {}
+        for cfg in RO_TRADE_SERIES:
+            try:
+                pairs = fetch_ro_tempo(
+                    cfg["parent"], cfg["matrix"],
+                    cfg.get("filter_dims", {}), cfg.get("unit_value"),
+                    cfg["freq"],
+                )
+                ro_trade_cache[cfg["slug"]] = dict(pairs)
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"], country="RO",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="insse_ro", unit=cfg["unit"],
+                        series_id=f"INSSE/{cfg['matrix']}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/RO ({cfg['matrix']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/RO: {e}")
+            time.sleep(0.3)
+        # Trade balance = exports - imports (million EUR)
+        if "exports" in ro_trade_cache and "imports" in ro_trade_cache:
+            exp_map = ro_trade_cache["exports"]
+            imp_map = ro_trade_cache["imports"]
+            common = sorted(set(exp_map) & set(imp_map))
+            for dt in common:
+                bal_th = exp_map[dt] - imp_map[dt]   # thousand EUR
+                out.append(DataPoint(
+                    indicator="trade-balance", country="RO",
+                    date=normalize_date(dt, "M"),
+                    value=round(bal_th * 1e-3, 4),
+                    source="insse_ro", unit="Million EUR",
+                    series_id="INSSE/EXP101I-EXP102I",
+                    adjustment="NSA",
+                ))
+            print(f"  OK trade-balance/RO (EXP101I-EXP102I): {len(common)} pts")
 
         # Malta — NSO via cloudscraper
         for cfg in MT_SERIES:

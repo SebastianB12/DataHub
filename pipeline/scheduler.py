@@ -10,6 +10,7 @@ import signal
 import sys
 
 from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.interval import IntervalTrigger
 
 from pipeline.db import supabase, log_pipeline_run
@@ -33,6 +34,7 @@ PROVIDER_MAP = {
     "dbnomics": "pipeline.providers.dbnomics",
     "national_eu": "pipeline.providers.national_eu",
     "nsi_bg": "pipeline.providers.nsi_bg",
+    "gus_pl": "pipeline.providers.gus_pl",
 }
 
 
@@ -51,22 +53,34 @@ def _run_provider(source_slug: str):
         print(f"Provider {source_slug} failed: {e}")
 
 
-def _parse_schedule(schedule_str: str) -> dict | None:
-    """Parse schedule string like 'interval:15m' to APScheduler trigger kwargs."""
+def _build_trigger(schedule_str: str):
+    """Parse schedule string into an APScheduler trigger.
+
+    Supported forms:
+      interval:15m / 1h / 30s      → IntervalTrigger
+      cron:<crontab>               → CronTrigger from a 5-field crontab
+                                      (e.g. 'cron:0 7 * * 1-5' = Mon-Fri 07:00)
+    Returns None for unsupported strings.
+    """
     if not schedule_str or ":" not in schedule_str:
         return None
 
     kind, value = schedule_str.split(":", 1)
-    if kind != "interval":
+
+    if kind == "interval":
+        if value.endswith("m"):
+            return IntervalTrigger(minutes=int(value[:-1]))
+        if value.endswith("h"):
+            return IntervalTrigger(hours=int(value[:-1]))
+        if value.endswith("s"):
+            return IntervalTrigger(seconds=int(value[:-1]))
         return None
 
-    # Parse value: "15m", "1h", "30s"
-    if value.endswith("m"):
-        return {"minutes": int(value[:-1])}
-    if value.endswith("h"):
-        return {"hours": int(value[:-1])}
-    if value.endswith("s"):
-        return {"seconds": int(value[:-1])}
+    if kind == "cron":
+        try:
+            return CronTrigger.from_crontab(value)
+        except (ValueError, KeyError):
+            return None
 
     return None
 
@@ -92,14 +106,14 @@ def main():
             print(f"  SKIP {slug}: no provider implementation")
             continue
 
-        trigger_kwargs = _parse_schedule(schedule)
-        if not trigger_kwargs:
+        trigger = _build_trigger(schedule)
+        if trigger is None:
             print(f"  SKIP {slug}: invalid schedule '{schedule}'")
             continue
 
         scheduler.add_job(
             _run_provider,
-            trigger=IntervalTrigger(**trigger_kwargs),
+            trigger=trigger,
             args=[slug],
             id=slug,
             name=f"{source['name']} ({schedule})",

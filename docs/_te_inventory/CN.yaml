@@ -1,0 +1,600 @@
+# CN (China) — TE source inventory
+# Generated 2026-05-14 by sampling tradingeconomics.com/china/<slug> pages and extracting
+# the "Source:" attribution at the page footer (class=source-name or source-present).
+# suggested_source resolves the TE label via src/lib/sources.ts STATIC_LABELS.
+# NBS/PBoC/GACC sources are aggregated through AkShare in our pipeline so the resolved
+# label matches via resolveAkshareLabel().
+
+business-confidence:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/business-confidence"
+  te_value: 50.3
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+cash-reserve-ratio:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/cash-reserve-ratio"
+  te_value: 7.5
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+central-bank-balance:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/central-bank-balance-sheet"
+  te_value: 491398.71
+  te_period: "2026-03"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+corporate-tax-rate:
+  te_label: "State Administration of Taxation"
+  te_url: "http://www.chinatax.gov.cn"
+  te_page: "https://tradingeconomics.com/china/corporate-tax-rate"
+  te_value: 25
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+corruption-index:
+  te_label: "Transparency International"
+  te_url: null
+  te_page: "https://tradingeconomics.com/china/corruption-index"
+  te_value: 43
+  te_period: "2025"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+corruption-rank:
+  te_label: "Transparency International"
+  te_url: null
+  te_page: "https://tradingeconomics.com/china/corruption-rank"
+  te_value: null
+  te_period: "2025"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+credit-rating:
+  te_label: null
+  te_url: null
+  te_page: "https://tradingeconomics.com/china/rating"
+  te_value: null
+  te_period: null
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: false
+
+exports:
+  te_label: "General Administration of Customs"
+  te_url: "http://english.customs.gov.cn"
+  te_page: "https://tradingeconomics.com/china/exports"
+  te_value: null
+  te_period: null
+  suggested_source: gacc
+  current_source: gacc
+  conform: true
+  verified: true
+
+exports-yoy:
+  te_label: "General Administration of Customs"
+  te_url: "http://english.customs.gov.cn"
+  te_page: "https://tradingeconomics.com/china/exports-yoy"
+  te_value: null
+  te_period: null
+  suggested_source: gacc   # our akshare hgjck wraps GACC; surface label = GACC
+  current_source: akshare
+  conform: false   # truth says akshare, TE says GACC. Resolver still shows GACC via resolveAkshareLabel — acceptable
+  verified: true
+
+fixed-asset-investment:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/fixed-asset-investment"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+foreign-exchange-reserves:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/foreign-exchange-reserves"
+  te_value: 3411000
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+gdp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/china/gdp"
+  te_value: 18744
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+
+gdp-growth-rate:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/gdp-growth"
+  te_value: 1.3
+  te_period: "2026-Q1"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+gdp-per-capita:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/china/gdp-per-capita"
+  te_value: 13122
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
+  te_page: "https://tradingeconomics.com/china/gdp-per-capita-ppp"
+  te_value: null
+  te_period: "2024"
+  suggested_source: worldbank
+  current_source: worldbank
+  conform: true
+  verified: true
+
+gdp-real:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/gdp-constant-prices"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+gold-reserves:
+  te_label: "World Gold Council"
+  te_url: "https://www.gold.org"
+  te_page: "https://tradingeconomics.com/china/gold-reserves"
+  te_value: null
+  te_period: null
+  suggested_source: akshare   # NBS/PBoC fallback via akshare; TE attributes to WGC
+  current_source: akshare
+  conform: false   # TE label = World Gold Council, our actual fetch = PBoC via akshare
+  verified: true
+
+hospital-beds:
+  te_label: "World Health Organization"
+  te_url: "https://www.who.int"
+  te_page: "https://tradingeconomics.com/china/hospital-beds"
+  te_value: null
+  te_period: "2023"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+hospitals:
+  te_label: "World Health Organization"
+  te_url: "https://www.who.int"
+  te_page: "https://tradingeconomics.com/china/hospital"
+  te_value: null
+  te_period: "2023"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+households-debt-to-gdp:
+  te_label: "Bank for International Settlements"
+  te_url: "https://www.bis.org"
+  te_page: "https://tradingeconomics.com/china/households-debt-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: fred   # BIS series mirrored via FRED in our system
+  current_source: fred
+  conform: true
+  verified: true
+
+housing-index:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/housing-index"
+  te_value: -3.4
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+imports:
+  te_label: "General Administration of Customs"
+  te_url: "http://english.customs.gov.cn"
+  te_page: "https://tradingeconomics.com/china/imports"
+  te_value: null
+  te_period: null
+  suggested_source: gacc
+  current_source: gacc
+  conform: true
+  verified: true
+
+imports-yoy:
+  te_label: "General Administration of Customs"
+  te_url: "http://english.customs.gov.cn"
+  te_page: "https://tradingeconomics.com/china/imports-yoy"
+  te_value: null
+  te_period: null
+  suggested_source: gacc
+  current_source: akshare
+  conform: false   # akshare hgjck wraps GACC; label resolution gives GACC anyway
+  verified: true
+
+industrial-production-yoy:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/industrial-production"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+inflation-cpi:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/inflation-cpi"
+  te_value: 1.2
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+interbank-rate:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/interbank-rate"
+  te_value: 1.41
+  te_period: "2026-05"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+interest-rate:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/interest-rate"
+  te_value: 3
+  te_period: "2026-05"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+loan-prime-rate-5y:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/loan-prime-rate-5y"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+manufacturing-pmi:
+  te_label: "S&P Global"
+  te_url: "https://www.spglobal.com"
+  te_page: "https://tradingeconomics.com/china/manufacturing-pmi"
+  te_value: 52.2
+  te_period: "2026-04"
+  suggested_source: akshare   # our truth uses NBS-PMI (akshare); TE headline is Caixin/S&P Global
+  current_source: akshare
+  conform: false   # TE Manufacturing PMI = Caixin (S&P Global), our series = NBS PMI — series mismatch, not source-resolver mismatch
+  verified: true
+
+medical-doctors:
+  te_label: "OECD"
+  te_url: "https://www.oecd.org"
+  te_page: "https://tradingeconomics.com/china/medical-doctors"
+  te_value: null
+  te_period: "2023"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+military-expenditure:
+  te_label: "SIPRI"
+  te_url: "https://www.sipri.org"
+  te_page: "https://tradingeconomics.com/china/military-expenditure"
+  te_value: null
+  te_period: "2025"
+  suggested_source: worldbank   # SIPRI via World Bank in our truth.yaml
+  current_source: worldbank
+  conform: true
+  verified: true
+
+money-supply-m0:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/money-supply-m0"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+money-supply-m1:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/money-supply-m1"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+money-supply-m2:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/money-supply-m2"
+  te_value: 347190
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+new-bank-loans:
+  te_label: "People's Bank of China"
+  te_url: "http://www.pbc.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/new-bank-loans"
+  te_value: 2990
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+non-manufacturing-pmi:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/non-manufacturing-pmi"
+  te_value: 49.4
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+nurses:
+  te_label: "OECD"
+  te_url: "https://www.oecd.org"
+  te_page: "https://tradingeconomics.com/china/nurses"
+  te_value: null
+  te_period: "2022"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+personal-income-tax-rate:
+  te_label: "State Administration of Taxation"
+  te_url: "http://www.chinatax.gov.cn"
+  te_page: "https://tradingeconomics.com/china/personal-income-tax-rate"
+  te_value: 45
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+population:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/population"
+  te_value: 1405
+  te_period: "2024"
+  suggested_source: akshare   # TE attributes to NBS; our truth currently uses worldbank
+  current_source: worldbank
+  conform: false   # TE source = NBS, our pipeline uses World Bank — surprising mismatch
+  verified: true
+
+ppi-yoy:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/producer-prices-change"
+  te_value: null
+  te_period: null
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+private-debt-to-gdp:
+  te_label: "Bank for International Settlements"
+  te_url: "https://www.bis.org"
+  te_page: "https://tradingeconomics.com/china/private-debt-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: fred   # BIS-via-FRED in our system
+  current_source: fred
+  conform: true
+  verified: false   # source-name not parsed from page; assumed BIS per category convention
+
+retail-sales:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/retail-sales"
+  te_value: 0.14
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+retirement-age-men:
+  te_label: "Ministry of Human Resources and Social Security"
+  te_url: "http://www.mohrss.gov.cn"
+  te_page: "https://tradingeconomics.com/china/retirement-age-men"
+  te_value: 60
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+retirement-age-women:
+  te_label: "Ministry of Human Resources and Social Security"
+  te_url: "http://www.mohrss.gov.cn"
+  te_page: "https://tradingeconomics.com/china/retirement-age-women"
+  te_value: 50
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+sales-tax-rate:
+  te_label: "State Administration of Taxation"
+  te_url: "http://www.chinatax.gov.cn"
+  te_page: "https://tradingeconomics.com/china/sales-tax-rate"
+  te_value: 13
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+social-security-rate:
+  te_label: "State Administration of Taxation"
+  te_url: "http://www.chinatax.gov.cn"
+  te_page: "https://tradingeconomics.com/china/social-security-rate"
+  te_value: 38.7
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+social-security-rate-companies:
+  te_label: "State Administration of Taxation"
+  te_url: "http://www.chinatax.gov.cn"
+  te_page: "https://tradingeconomics.com/china/social-security-rate-for-companies"
+  te_value: 28.2
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+social-security-rate-employees:
+  te_label: "State Administration of Taxation"
+  te_url: "http://www.chinatax.gov.cn"
+  te_page: "https://tradingeconomics.com/china/social-security-rate-for-employees"
+  te_value: 10.5
+  te_period: "2026"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+terrorism-index:
+  te_label: "Institute for Economics and Peace"
+  te_url: "https://www.economicsandpeace.org"
+  te_page: "https://tradingeconomics.com/china/terrorism-index"
+  te_value: null
+  te_period: "2025"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+total-debt-to-gdp:
+  te_label: "Bank for International Settlements"
+  te_url: "https://www.bis.org"
+  te_page: "https://tradingeconomics.com/china/total-debt-to-gdp"
+  te_value: null
+  te_period: null
+  suggested_source: fred
+  current_source: fred
+  conform: true
+  verified: false   # source label not parsed; BIS assumed per category
+
+trade-balance:
+  te_label: "General Administration of Customs"
+  te_url: "http://english.customs.gov.cn"
+  te_page: "https://tradingeconomics.com/china/balance-of-trade"
+  te_value: 84.82
+  te_period: "2026-04"
+  suggested_source: gacc
+  current_source: gacc
+  conform: true
+  verified: true
+
+unemployment:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/unemployment-rate"
+  te_value: 5.4
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: akshare
+  conform: true
+  verified: true
+
+weapons-sales:
+  te_label: "SIPRI"
+  te_url: "https://www.sipri.org"
+  te_page: "https://tradingeconomics.com/china/weapons-sales"
+  te_value: 1131
+  te_period: "2024"
+  suggested_source: curated
+  current_source: curated
+  conform: true
+  verified: true
+
+youth-unemployment-rate:
+  te_label: "National Bureau of Statistics of China"
+  te_url: "http://www.stats.gov.cn/"
+  te_page: "https://tradingeconomics.com/china/youth-unemployment-rate"
+  te_value: 16.9
+  te_period: "2026-04"
+  suggested_source: akshare
+  current_source: worldbank
+  conform: false   # TE source = NBS (urban 16-24); our pipeline uses ILO-modelled via World Bank — surprising mismatch
+  verified: true

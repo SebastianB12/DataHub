@@ -39,16 +39,18 @@ SERIES = [
         "conversion": 1.0,
         "note": "INE IPC base 2026=100, monthly index, all-items, national",
     },
-    # Core CPI — IPC290851 = National Overall index without unprocessed food and energy
-    # (this is the "subyacente" series TE shows).
+    # Core CPI — IPC292511 = National "Subyacente: General sin alimentos no elaborados
+    # ni productos energéticos" — index level from table 76130 (special groups).
+    # YoY of this series for Apr-2026 = 2.8% (matches TE te_value=2.8). Previous COD
+    # IPC290851 was incorrect (it was "Bienes y servicios mantenimiento del hogar").
     {
         "indicator": "core-cpi",
-        "cod": "IPC290851",
+        "cod": "IPC292511",
         "freq": "M",
         "unit": "Index",
         "adjustment": "NSA",
         "conversion": 1.0,
-        "note": "INE IPC subyacente (ex. unprocessed food + energy)",
+        "note": "INE IPC Subyacente (ex unprocessed food + energy), Index level base 2025=100",
     },
     # Food inflation — IPC290755 (Food and non-alcoholic beverages, index)
     {
@@ -188,6 +190,70 @@ SERIES = [
         "adjustment": "NSA",
         "conversion": 1.0,
         "note": "INE IPCO Construction production index, base 2021=100, NSA",
+    },
+    # === Stage-2 (2026-05-14): CPI sub-components + national-accounts demand-side ===
+    # Services inflation — IPC292495 = National Servicios Index level (special groups).
+    {
+        "indicator": "services-inflation",
+        "cod": "IPC292495",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC Servicios Index level (special groups), base 2025=100",
+    },
+    # Energy inflation — IPC292459 = National Productos energéticos Index level.
+    {
+        "indicator": "energy-inflation",
+        "cod": "IPC292459",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC Productos energéticos Index level (special groups), base 2025=100",
+    },
+    # Consumer spending — CNTR6845 = Gasto en consumo final de los hogares, SA,
+    # current prices, quarterly (table 67823 demand-side). Q1-2026 = 239302 EUR Mn.
+    # TE 2025 value 235827 matches Q4-2025 SA level (~235221).
+    {
+        "indicator": "consumer-spending",
+        "cod": "CNTR6845",
+        "freq": "Q",
+        "unit": "EUR Million",
+        "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "INE CNTR Household final consumption (SA, current prices), EUR Mn",
+    },
+    # Government spending — CNTR6860 = Gasto en consumo final de las AAPP, SA.
+    # Q4-2025 SA = 84496 vs TE 84039. Match.
+    {
+        "indicator": "government-spending",
+        "cod": "CNTR6860",
+        "freq": "Q",
+        "unit": "EUR Million",
+        "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "INE CNTR General-government final consumption (SA, current prices), EUR Mn",
+    },
+    # Gross fixed capital formation — CNTR6875 FBCF SA, current prices, quarterly.
+    {
+        "indicator": "gross-fixed-capital-formation",
+        "cod": "CNTR6875",
+        "freq": "Q",
+        "unit": "EUR Million",
+        "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "INE CNTR Gross fixed capital formation (FBCF, SA, current prices), EUR Mn",
+    },
+    # Manufacturing production — IPI13870 = Industria manufacturera Index level (NSA).
+    {
+        "indicator": "manufacturing-production",
+        "cod": "IPI13870",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPI Manufacturing index level (CNAE Section C), base 2021=100, NSA",
     },
 ]
 
