@@ -1,21 +1,19 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/greece/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Statistical Service of Greece"
+  te_url: "https://www.statistics.gr/"
+  te_page: "https://tradingeconomics.com/greece/government-budget"
+  te_value: 1.7
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "European Commission"
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/greece/business-confidence"
   te_value: 105.7
   te_period: "2026-03"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 capacity-utilization:
@@ -24,18 +22,17 @@ capacity-utilization:
   te_page: "https://tradingeconomics.com/greece/capacity-utilization"
   te_value: 77.2
   te_period: "2026-Q1"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 changes-in-inventories:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/changes-in-inventories"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +41,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/greece/consumer-confidence"
   te_value: -54.7
   te_period: "2026-03"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 consumer-spending:
@@ -54,49 +51,37 @@ consumer-spending:
   te_page: "https://tradingeconomics.com/greece/consumer-spending"
   te_value: 37201.79
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/greece/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Statistical Service of Greece"
+  te_url: "https://www.statistics.gr/"
+  te_page: "https://tradingeconomics.com/greece/core-inflation-rate"
+  te_value: 6.7
+  te_period: "2026-04"
+  current_source: "eurostat"
+  conform: false
+  verified: true
+corporate-tax-rate:
+  te_label: "GSIS, Greece"
+  te_url: "https://www.gsis.gr/"
+  te_page: "https://tradingeconomics.com/greece/corporate-tax-rate"
+  te_value: 22.0
+  current_source: "curated"
+  conform: false
+  verified: true
+corruption-index:
+  te_page: "https://tradingeconomics.com/greece/corruption-index"
+  te_value: 53.5
+  current_source: "curated"
   conform: false
   verified: false
-corporate-tax-rate:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/greece/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-corruption-index:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/greece/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 cpi-clothing:
   te_label: "National Statistical Service of Greece"
@@ -104,18 +89,17 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/greece/cpi-clothing"
   te_value: 132.64
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/cpi-education"
-  te_value: null
   te_period: "2011-01"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +108,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/greece/cpi-food"
   te_value: 138.07
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +118,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/greece/cpi-housing-utilities"
   te_value: 139.52
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +128,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/greece/cpi-recreation-and-culture"
   te_value: 112.94
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,48 +138,36 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/greece/cpi-transportation"
   te_value: 135.73
   te_period: "2026-04"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 current-account:
   te_label: "Bank of Greece"
   te_url: "https://www.bankofgreece.gr"
   te_page: "https://tradingeconomics.com/greece/current-account"
-  te_value: null
   te_period: "2026-01"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/greece/current-account-to-gdp"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -204,8 +176,8 @@ employed-persons:
   te_page: "https://tradingeconomics.com/greece/employed-persons"
   te_value: 4412.4
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -214,48 +186,40 @@ employment-rate:
   te_page: "https://tradingeconomics.com/greece/employment-rate"
   te_value: 91.7
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/exports"
-  te_value: null
   te_period: "2026-01"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/food-inflation"
-  te_value: null
   te_period: "2026-04"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/greece/gdp"
-  te_value: null
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -264,8 +228,8 @@ gdp-per-capita:
   te_page: "https://tradingeconomics.com/greece/gdp-per-capita"
   te_value: 171.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -274,28 +238,26 @@ gdp-per-capita-ppp:
   te_page: "https://tradingeconomics.com/greece/gdp-per-capita-ppp"
   te_value: 213.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/greece/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Statistical Service of Greece"
+  te_url: "https://www.statistics.gr/"
+  te_page: "https://tradingeconomics.com/greece/gdp-growth-annual"
+  te_value: 15.0
+  te_period: "2025-Q4"
+  current_source: "elstat"
   conform: false
-  verified: false
+  verified: true
 government-debt:
   te_label: "Ministry of Economy and Finance"
   te_url: "https://minfin.gov.gr/"
   te_page: "https://tradingeconomics.com/greece/government-debt"
   te_value: 406181.06
   te_period: "2025-Q4"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt-total:
@@ -304,8 +266,7 @@ government-debt-total:
   te_page: "https://tradingeconomics.com/greece/government-debt"
   te_value: 406181.06
   te_period: "2025-Q4"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending:
@@ -314,18 +275,13 @@ government-spending:
   te_page: "https://tradingeconomics.com/greece/government-spending"
   te_value: 10652.1
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -334,19 +290,14 @@ gross-fixed-capital-formation:
   te_page: "https://tradingeconomics.com/greece/gross-fixed-capital-formation"
   te_value: 9866.9
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 house-price-index:
   te_label: "Bank of Greece"
@@ -354,28 +305,26 @@ house-price-index:
   te_page: "https://tradingeconomics.com/greece/housing-index"
   te_value: 110.5
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 imports:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/imports"
-  te_value: null
   te_period: "2026-01"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/industrial-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: elstat
+  suggested_source: "elstat"
+  current_source: "elstat"
   conform: true
   verified: true
 inflation-cpi:
@@ -384,18 +333,17 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/greece/inflation-cpi"
   te_value: 5.4
   te_period: "2026-04"
-  suggested_source: elstat
-  current_source: elstat
+  suggested_source: "elstat"
+  current_source: "elstat"
   conform: true
   verified: true
 interest-rate:
   te_label: "European Central Bank"
   te_url: "https://www.ecb.europa.eu"
   te_page: "https://tradingeconomics.com/greece/interest-rate"
-  te_value: null
   te_period: "2000-10"
-  suggested_source: ecb
-  current_source: ecb
+  suggested_source: "ecb"
+  current_source: "ecb"
   conform: true
   verified: true
 job-vacancies:
@@ -404,8 +352,8 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/greece/job-vacancies"
   te_value: 31059.0
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -414,8 +362,8 @@ labor-force-participation-rate:
   te_page: "https://tradingeconomics.com/greece/labor-force-participation-rate"
   te_value: 52.8
   te_period: "2025-Q4"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -424,88 +372,71 @@ labour-costs:
   te_page: "https://tradingeconomics.com/greece/labour-costs"
   te_value: 118.26
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 long-term-unemployment-rate:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/greece/long-term-unemployment-rate"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/manufacturing-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 minimum-wages:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/greece/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_period: "2026-Q2"
+  suggested_source: "eurostat"
+  current_source: "curated"
+  conform: false
+  verified: true
 mining-production:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/mining-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "GSIS, Greece"
+  te_url: "https://www.gsis.gr/"
   te_page: "https://tradingeconomics.com/greece/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 44.0
+  current_source: "curated"
+  conform: false
+  verified: true
 population:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/greece/population"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 ppi:
@@ -514,8 +445,8 @@ ppi:
   te_page: "https://tradingeconomics.com/greece/producer-prices"
   te_value: 136.25
   te_period: "2026-02"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 productivity:
@@ -524,137 +455,104 @@ productivity:
   te_page: "https://tradingeconomics.com/greece/productivity"
   te_value: 99.6
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/retail-sales"
-  te_value: null
   te_period: "2026-02"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 retirement-age-women:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 sales-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "GSIS, Greece"
+  te_url: "https://www.gsis.gr/"
   te_page: "https://tradingeconomics.com/greece/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 24.0
+  current_source: "curated"
+  conform: false
+  verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 35.16
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/greece/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 2.79
+  current_source: "curated"
+  conform: false
   verified: false
+trade-balance:
+  te_label: "National Statistical Service of Greece"
+  te_url: "https://www.statistics.gr/"
+  te_page: "https://tradingeconomics.com/greece/balance-of-trade"
+  te_value: 2.1
+  te_period: "2026-03"
+  current_source: "elstat"
+  conform: false
+  verified: true
 unemployed-persons:
   te_label: "National Statistical Service of Greece"
   te_url: "https://www.statistics.gr/"
   te_page: "https://tradingeconomics.com/greece/unemployed-persons"
   te_value: 436.1
   te_period: "2026-03"
-  suggested_source: elstat
-  current_source: eurostat
+  suggested_source: "elstat"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/greece/unemployment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: elstat
+  te_label: "National Statistical Service of Greece"
+  te_url: "https://www.statistics.gr/"
+  te_page: "https://tradingeconomics.com/greece/unemployment-rate"
+  te_value: 9.0
+  te_period: "2026-03"
+  current_source: "elstat"
   conform: false
-  verified: false
+  verified: true
 youth-unemployment-rate:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/greece/youth-unemployment-rate"
   te_value: 21.0
   te_period: "2026-02"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

@@ -78,38 +78,16 @@ SERIES = [
      "filter_key": "M.IT.CLIMAMAN_21.Y.C.TOTAL", "freq": "M", "unit": "Index (2021=100)",
      "adjustment": "SA", "conversion": 1.0,
      "note": "ISTAT SA climate, mfg confidence (CLIMAMAN_21, NACE C)"},
-    # ---- TE-conformity gap-fill (added 2026-05-15) ---------------------------
+    # ---- TE-conformity gap-fill (verified 2026-05-15) -------------------------
     # Core CPI (HICP excl. energy + unprocessed food, base 2015=100).
-    # COICOP_IPCA=00XEFOODUNP, MISURA1=4 (index), IND_TYPE=41 (index level).
+    # Dim order: FREQ.REF_AREA.DATA_TYPE.MEASURE.E_COICOP_REV_ISTAT.
+    # DATA_TYPE=41 (index level), MEASURE=4, COICOP=00XEFOODUNP.
     {"slug": "core-cpi",              "dataflow_full": "168_760_DF_DCSP_IPCA1B2015_1",
      "filter_key": "M.IT.41.4.00XEFOODUNP", "freq": "M", "unit": "Index (2015=100)",
      "adjustment": "NSA", "conversion": 1.0,
      "note": "ISTAT HICP excl. energy & unprocessed food (core CPI) base 2015=100"},
-    # Food inflation — HICP food (COICOP 01) YoY rate. IND_TYPE=43 = YoY%.
-    {"slug": "food-inflation",        "dataflow_full": "168_760_DF_DCSP_IPCA1B2015_1",
-     "filter_key": "M.IT.43.4.01", "freq": "M", "unit": "% YoY",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT HICP Food & non-alc beverages (COICOP 01) YoY%"},
-    # Services inflation — COICOP_IPCA=SERV.
-    {"slug": "services-inflation",    "dataflow_full": "168_760_DF_DCSP_IPCA1B2015_1",
-     "filter_key": "M.IT.43.4.SERV", "freq": "M", "unit": "% YoY",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT HICP Services aggregate YoY%"},
-    # Energy inflation — COICOP_IPCA=ENRGY.
-    {"slug": "energy-inflation",      "dataflow_full": "168_760_DF_DCSP_IPCA1B2015_1",
-     "filter_key": "M.IT.43.4.ENRGY", "freq": "M", "unit": "% YoY",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT HICP Energy aggregate YoY%"},
-    # Employment rate (LFS monthly, total 15-64, both sexes, latest edition).
-    # 150_872 key: FREQ.REF_AREA.MEASURE.ADJUSTMENT.SEX.AGE.EDITION
-    # Use empty trailing dot for EDITION wildcard → server returns all editions;
-    # we de-dup in _fetch_filtered by keeping latest publication per period.
-    {"slug": "employment-rate",       "dataflow_full": "150_872_DF_DCCV_TAXOCCUMENS1_1",
-     "filter_key": "M.IT.EMP_R.N.9.Y15-64.", "freq": "M", "unit": "%",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT LFS Employment Rate 15-64 both sexes monthly NSA",
-     "edition_dedup": True},
     # Unemployment rate (LFS monthly, total 15-74, both sexes, latest edition).
+    # Verified 2026-05-15: 2026-03 = 5.48 %.
     {"slug": "unemployment",          "dataflow_full": "151_874_DF_DCCV_TAXDISOCCUMENS1_1",
      "filter_key": "M.IT.UNEM_R.N.9.Y15-74.", "freq": "M", "unit": "%",
      "adjustment": "NSA", "conversion": 1.0,
@@ -117,39 +95,32 @@ SERIES = [
      "edition_dedup": True},
     # Exports — Foreign Trade by country & commodity, total goods to WORLD,
     # NSA value (EV) in millions of EUR.
+    # Dim order: FREQ.REF_AREA.DATA_TYPE.CPA_ATECO2007_COE.PARTNER_COUNTRY.
+    # Verified 2026-05-15: 2026-02 = 53,764 EUR mn (matches TE exactly).
     {"slug": "exports",               "dataflow_full": "139_176",
-     "filter_key": "M.0010.WORLD.ITTOT.EV", "freq": "M", "unit": "EUR million",
+     "filter_key": "M.ITTOT.EV.0010.WORLD", "freq": "M", "unit": "EUR million",
      "adjustment": "NSA", "conversion": 1.0,
      "note": "ISTAT Foreign Trade total exports to World (NSA, EUR mn)"},
     # Imports — same dataflow, total goods from WORLD.
+    # Verified 2026-05-15: 2026-02 = 48,821 EUR mn (matches TE exactly).
     {"slug": "imports",               "dataflow_full": "139_176",
-     "filter_key": "M.0010.WORLD.ITTOT.IV", "freq": "M", "unit": "EUR million",
+     "filter_key": "M.ITTOT.IV.0010.WORLD", "freq": "M", "unit": "EUR million",
      "adjustment": "NSA", "conversion": 1.0,
      "note": "ISTAT Foreign Trade total imports from World (NSA, EUR mn)"},
-    # Manufacturing production — Industrial Production Index NACE C, NSA (Y for SA only).
-    # 115_333 key: FREQ.REF_AREA.MEASURE.ADJUSTMENT.ATECO_2007
-    {"slug": "manufacturing-production", "dataflow_full": "115_333_DF_DCSC_INDXPRODIND_1_1",
-     "filter_key": "M.IT.IND_PROD2.N.C", "freq": "M", "unit": "Index (2015=100)",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT Industrial Production Index NACE C (manufacturing) NSA"},
-    # Mining production — NACE B (extraction).
-    {"slug": "mining-production",     "dataflow_full": "115_333_DF_DCSC_INDXPRODIND_1_1",
-     "filter_key": "M.IT.IND_PROD2.N.B", "freq": "M", "unit": "Index (2015=100)",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT Industrial Production Index NACE B (mining & quarrying) NSA"},
-    # Budget deficit — General Government net lending/borrowing as % of GDP,
-    # annual, dataflow 95_42 (Government accounts) — economic account ratios.
-    # ITTER107=IT, SETTORE=S13, TIPO_DATO=B9_GDP (net lending to GDP%).
-    # Exact dimension order from DSD will be validated on first live call.
-    {"slug": "budget-deficit",        "dataflow_full": "95_42_DF_DCCN_FPQ_2",
-     "filter_key": "A.IT.S13.B9_GDP", "freq": "A", "unit": "% of GDP",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT Public Finance Quarterly accounts: net lending S13 (% GDP)"},
-    # Government debt to GDP — same FPQ_2 dataset, TIPO_DATO=DEBT_GDP (Maastricht).
-    {"slug": "government-debt-total", "dataflow_full": "95_42_DF_DCCN_FPQ_2",
-     "filter_key": "A.IT.S13.DEBT_GDP", "freq": "A", "unit": "% of GDP",
-     "adjustment": "NSA", "conversion": 1.0,
-     "note": "ISTAT General Government Maastricht debt (% GDP)"},
+    # ---- Deferred (provider entries removed 2026-05-15) -----------------------
+    # food-inflation, services-inflation, energy-inflation:
+    #   168_760_DF_DCSP_IPCA1B2015_1 only publishes DATA_TYPE=41 (index level).
+    #   YoY rates by COICOP not in this flow; would need on-the-fly compute
+    #   from index series. Remains on eurostat default until separate
+    #   COICOP-by-COICOP index ingest + transform is added.
+    # employment-rate: 150_872_DF_DCCV_TAXOCCUMENS1_1 reads time out (~120s)
+    #   from current Esploradati path even with filter_key — large series. Try
+    #   smaller `lastNObservations` or alt dataflow on next iteration.
+    # manufacturing-production, mining-production: 115_333_DF_DCSC_INDXPRODIND_1_1
+    #   is stale (latest 2023-12). Modern flow ID TBD.
+    # budget-deficit, government-debt-total: 95_42_DF_DCCN_FPQ_2 has 9 dims
+    #   (DATA_TYPE_AGGR, NONFIN_ASSETS, VALUATION, ADJUSTMENT, INSTITUTIONAL_SECTOR,
+    #   EXPEND_PURPOSE, EDITION); 4-dim filter returns 404. Needs full dim probe.
 ]
 
 HDR = {

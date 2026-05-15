@@ -1,21 +1,18 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/finland/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Statistics Finland"
+  te_url: "https://www.stat.fi"
+  te_page: "https://tradingeconomics.com/finland/government-budget"
+  te_value: 3.4
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "Confederation of Finnish Industries (EK)"
   te_url: "https://ek.fi/"
   te_page: "https://tradingeconomics.com/finland/business-confidence"
-  te_value: null
   te_period: "2026-04"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
@@ -24,18 +21,17 @@ capacity-utilization:
   te_page: "https://tradingeconomics.com/finland/capacity-utilization"
   te_value: 78.7
   te_period: "2026-Q1"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 changes-in-inventories:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/changes-in-inventories"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +40,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/finland/consumer-confidence"
   te_value: -12.5
   te_period: "2026-04"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -54,49 +50,38 @@ consumer-spending:
   te_page: "https://tradingeconomics.com/finland/consumer-spending"
   te_value: 29614.0
   te_period: "2025-Q4"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/finland/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/finland/core-inflation-rate"
+  te_value: 5.7
+  te_period: "2026-04"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
+corporate-tax-rate:
+  te_label: "Finnish Tax Administration"
+  te_url: "https://www.vero.fi"
+  te_page: "https://tradingeconomics.com/finland/corporate-tax-rate"
+  te_value: 20.0
+  current_source: "curated"
+  conform: false
+  verified: true
+corruption-index:
+  te_page: "https://tradingeconomics.com/finland/corruption-index"
+  te_value: 100.0
+  current_source: "curated"
   conform: false
   verified: false
-corporate-tax-rate:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/finland/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-corruption-index:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/finland/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 cpi-clothing:
   te_label: "Statistics Finland"
@@ -104,18 +89,17 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/finland/cpi-clothing"
   te_value: 99.67
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/cpi-education"
-  te_value: null
   te_period: "2026-01"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +108,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/finland/cpi-food"
   te_value: 101.75
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +118,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/finland/cpi-housing-utilities"
   te_value: 100.11
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +128,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/finland/cpi-recreation-and-culture"
   te_value: 101.02
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,48 +138,36 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/finland/cpi-transportation"
   te_value: 105.8
   te_period: "2026-04"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 current-account:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/current-account"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/finland/current-account-to-gdp"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -204,8 +176,8 @@ employed-persons:
   te_page: "https://tradingeconomics.com/finland/employed-persons"
   te_value: 2524.0
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -214,48 +186,39 @@ employment-rate:
   te_page: "https://tradingeconomics.com/finland/employment-rate"
   te_value: 69.2
   te_period: "2026-02"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
   te_label: "Customs Finland"
   te_url: "https://tulli.fi/en/frontpage"
   te_page: "https://tradingeconomics.com/finland/exports"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/food-inflation"
-  te_value: null
   te_period: "2026-04"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/finland/gdp"
-  te_value: null
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -264,8 +227,8 @@ gdp-per-capita:
   te_page: "https://tradingeconomics.com/finland/gdp-per-capita"
   te_value: 355.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -274,28 +237,26 @@ gdp-per-capita-ppp:
   te_page: "https://tradingeconomics.com/finland/gdp-per-capita-ppp"
   te_value: 313.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/finland/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Statistics Finland"
+  te_url: "https://www.stat.fi"
+  te_page: "https://tradingeconomics.com/finland/gdp-growth-annual"
+  te_value: 8.8
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
+  conform: true
+  verified: true
 government-debt:
   te_label: "State Treasury, Finland"
   te_url: "https://www.treasuryfinland.fi/"
   te_page: "https://tradingeconomics.com/finland/government-debt"
   te_value: 194338.0
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt-total:
@@ -304,8 +265,7 @@ government-debt-total:
   te_page: "https://tradingeconomics.com/finland/government-debt"
   te_value: 194338.0
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending:
@@ -314,18 +274,13 @@ government-spending:
   te_page: "https://tradingeconomics.com/finland/government-spending"
   te_value: 15339.0
   te_period: "2025-Q4"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -334,19 +289,14 @@ gross-fixed-capital-formation:
   te_page: "https://tradingeconomics.com/finland/gross-fixed-capital-formation"
   te_value: 12326.0
   te_period: "2025-Q4"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 house-price-index:
   te_label: "EUROSTAT"
@@ -354,18 +304,16 @@ house-price-index:
   te_page: "https://tradingeconomics.com/finland/housing-index"
   te_value: 97.43
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 imports:
   te_label: "Customs Finland"
   te_url: "https://tulli.fi/en/frontpage"
   te_page: "https://tradingeconomics.com/finland/imports"
-  te_value: null
   te_period: "2026"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +322,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/finland/industrial-production"
   te_value: 15.7
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: stat_fi
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
   conform: true
   verified: true
 inflation-cpi:
@@ -384,18 +332,17 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/finland/inflation-cpi"
   te_value: 1.5
   te_period: "2026-04"
-  suggested_source: stat_fi
-  current_source: stat_fi
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
   conform: true
   verified: true
 interest-rate:
   te_label: "European Central Bank"
   te_url: "https://www.ecb.europa.eu/"
   te_page: "https://tradingeconomics.com/finland/interest-rate"
-  te_value: null
   te_period: "2000-10"
-  suggested_source: ecb
-  current_source: ecb
+  suggested_source: "ecb"
+  current_source: "ecb"
   conform: true
   verified: true
 job-vacancies:
@@ -404,8 +351,7 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/finland/job-vacancies"
   te_value: 39711.0
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -414,8 +360,8 @@ labor-force-participation-rate:
   te_page: "https://tradingeconomics.com/finland/labor-force-participation-rate"
   te_value: 68.0
   te_period: "2026-02"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -424,8 +370,8 @@ labour-costs:
   te_page: "https://tradingeconomics.com/finland/labour-costs"
   te_value: 110.91
   te_period: "2025-Q4"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 long-term-unemployment-rate:
@@ -434,78 +380,58 @@ long-term-unemployment-rate:
   te_page: "https://tradingeconomics.com/finland/long-term-unemployment-rate"
   te_value: 2.7
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/manufacturing-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
+  te_label: "OECD"
+  te_url: "http://oecd.org/"
   te_page: "https://tradingeconomics.com/finland/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 minimum-wages:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 mining-production:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/mining-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 52.0
+  current_source: "curated"
+  conform: false
   verified: false
 population:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/population"
-  te_value: null
   te_period: "2025"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 ppi:
@@ -514,8 +440,8 @@ ppi:
   te_page: "https://tradingeconomics.com/finland/producer-prices"
   te_value: 120.6
   te_period: "2026-02"
-  suggested_source: stat_fi
-  current_source: stat_fi
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
   conform: true
   verified: true
 productivity:
@@ -524,137 +450,103 @@ productivity:
   te_page: "https://tradingeconomics.com/finland/productivity"
   te_value: 105.8
   te_period: "2026-Q1"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/retail-sales"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: stat_fi
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
   conform: true
   verified: true
 retirement-age-men:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 retirement-age-women:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 sales-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 25.5
+  current_source: "curated"
+  conform: false
   verified: false
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 30.98
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/finland/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 0.58
+  current_source: "curated"
+  conform: false
   verified: false
+trade-balance:
+  te_label: "Statistics Finland"
+  te_url: "https://www.stat.fi"
+  te_page: "https://tradingeconomics.com/finland/balance-of-trade"
+  te_period: "2026-03"
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
+  conform: true
+  verified: true
 unemployed-persons:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/unemployed-persons"
   te_value: 315.0
   te_period: "2026-03"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/finland/unemployment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: stat_fi
-  conform: false
-  verified: false
+  te_label: "Statistics Finland"
+  te_url: "https://www.stat.fi"
+  te_page: "https://tradingeconomics.com/finland/unemployment-rate"
+  te_value: 11.1
+  te_period: "2026-03"
+  suggested_source: "stat_fi"
+  current_source: "stat_fi"
+  conform: true
+  verified: true
 youth-unemployment-rate:
   te_label: "Statistics Finland"
   te_url: "https://www.stat.fi"
   te_page: "https://tradingeconomics.com/finland/youth-unemployment-rate"
   te_value: 24.3
   te_period: "2026-02"
-  suggested_source: stat_fi
-  current_source: eurostat
+  suggested_source: "stat_fi"
+  current_source: "eurostat"
   conform: false
   verified: true

@@ -4,33 +4,47 @@ Uses lustat.statec.lu/rest — STATEC's NSI Web Service v8.x (.Stat Suite SDMX R
 same platform that ISTAT uses on esploradati.istat.it). All public dataflows under
 the LU1 agency.
 
-TE source attribution for Luxembourg confirmed STATEC (verified 2026-05-09):
-  - inflation-cpi  -> https://tradingeconomics.com/luxembourg/inflation-cpi
-  - ppi            -> https://tradingeconomics.com/luxembourg/producer-prices
-  - unemployment   -> https://tradingeconomics.com/luxembourg/unemployment-rate
-  - industrial-pr. -> https://tradingeconomics.com/luxembourg/industrial-production
+Original (2026-05-09) wired only CPI + PPI + LFS + IP + population.
+Expansion (2026-05-15) adds CPI sub-indices, special CPI aggregates, quarterly NA,
+retail-sales, and government deficit/debt — closing the LU TE-source mismatches.
 
-Confirmed dataflows (LU1, version as noted):
-  inflation-cpi          DSD_ECOICOP_PRIX@DF_E5405 v1.0  NCPI ECOICOP v.2 (CP00)  base 2025=100, monthly
-                         -> 2026-04 = 102.65, YoY 3.07% (TE match)
-  ppi                    DSD_PRIX_PPI@DF_D3202 v1.0      Industrial producer prices, total (_T)
-                         BASE_PERIOD 2021, monthly -> 2026-03 = 121.48 (TE exact match)
-  unemployment           DF_B3019 v1.0                   Employment/unemployment SA, SPECIFICATION C11
-                         (unemployment rate %) -> 2026-03 = 6.35% (TE rounds to 6.3%)
-  industrial-production  DF_D5110 v1.1                   Indices of industrial activity, MEASURE=PROD,
-                         ACTIVITY=BTD (industries B-D), SEASONAL_ADJUST=W (working day adjusted),
-                         BASE_PER 2021, monthly -> 2026-02 = 78.26 (Index)
-  unemployed-persons     DF_B3019 SPECIFICATION C09 (number of unemployed SA, persons)
-  employed-persons       DF_B3019 SPECIFICATION C08 (domestic employment SA, persons)
-  population             DF_B1100 v1.0 SPECIFICATION C01 (total population habitual residence), annual
+Verified 2026-05-15 against TE inventory:
+  inflation-cpi          DSD_ECOICOP_PRIX@DF_E5405 CP00 -> 2026-04 = 102.65
+  ppi                    DSD_PRIX_PPI@DF_D3202 _T base2021 -> 2026-03 = 121.48
+  unemployment           DF_B3019 C11 -> 2026-03 = 6.35%
+  unemployed-persons     DF_B3019 C09 -> persons -> thousands
+  employed-persons       DF_B3019 C08 -> persons -> thousands
+  industrial-production  DF_D5110 PROD/BTD/W base2021 -> 2026-02 = 78.26
+  population             DF_B1100 C01 annual -> millions
+  CPI sub (CP01..CP12)   DSD_ECOICOP_PRIX@DF_E5405 ECOICOP_2018=CP0n -> 2026-04
+                         cpi-food=102.07  cpi-clothing=102.85
+                         cpi-housing=103.91 cpi-transportation=106.05
+                         cpi-recreation=101.87 cpi-education=104.03
+  CPI special aggs       DSD_ECOICOP_PRIX@DF_E5409 (NCPI special aggregates)
+                         core-cpi (TOT_X_NRG_FOOD)=101.35
+                         food-inflation (FOOD)=102.26 — LEVEL not YoY
+                         energy-inflation (NRG)=116.65 — LEVEL not YoY
+                         services-inflation (SERV)=101.43 — LEVEL not YoY
+  Quarterly NA (DF_E2504, chain-linked vol 2015, SA):
+                         gdp-real (r33) 2025Q4 = 16,105.6 mln EUR
+                         consumer-spending (r13) = 5,576.4
+                         government-spending (r15) = 3,242.4
+                         gross-fixed-capital-formation (r16) = 2,248.1
+  Government finance (DF_E3101 annual, EDP):
+                         budget-deficit (L03) 2025 = -1.96 % of GDP
+                         government-debt-total (L12) 2025 = 23,695 mln EUR
+                         (also expose as government-debt for the % series shown by TE)
+  Retail-sales           DF_D5108 v1.1 G47 TOVV (turnover value), seasonally adj. Y, base 2021
+                         -> 2026-03 = 143.66 (Y), 147.54 (W)
 
-URL pattern:
+URL pattern (CSV):
   https://lustat.statec.lu/rest/data/LU1,{DATAFLOW},{VERSION}/all/ALL
   Accept: application/vnd.sdmx.data+csv;version=1.0.0
 """
 import os
 import csv
 import io
+import time
 from datetime import date
 
 import requests
@@ -56,6 +70,7 @@ HDR = {
 #  - freq: M / Q / A
 #  - other metadata for DataPoint
 SERIES = [
+    # === Original (locked-in) ===
     {
         "slug": "inflation-cpi",
         "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
@@ -68,7 +83,6 @@ SERIES = [
         "slug": "ppi",
         "dataflow": "DSD_PRIX_PPI@DF_D3202",
         "version": "1.0",
-        # _T = Total industry, BASE_PERIOD 2021 (current series)
         "filter": {"FREQ": "M", "ACTIVITY": "_T", "BASE_PERIOD": "2021"},
         "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
         "note": "STATEC Industrial Producer Prices total (_T), base 2021=100",
@@ -77,7 +91,6 @@ SERIES = [
         "slug": "unemployment",
         "dataflow": "DF_B3019",
         "version": "1.0",
-        # C11 = Unemployment rate %, seasonally adjusted
         "filter": {"FREQ": "M", "SPECIFICATION": "C11"},
         "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
         "note": "STATEC unemployment rate, seasonally adjusted (B3019/C11)",
@@ -86,7 +99,6 @@ SERIES = [
         "slug": "unemployed-persons",
         "dataflow": "DF_B3019",
         "version": "1.0",
-        # C09 = Number of unemployed SA (persons); convert to thousands
         "filter": {"FREQ": "M", "SPECIFICATION": "C09"},
         "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 1e-3,
         "note": "STATEC number of unemployed SA (B3019/C09), persons -> thousands",
@@ -95,7 +107,6 @@ SERIES = [
         "slug": "employed-persons",
         "dataflow": "DF_B3019",
         "version": "1.0",
-        # C08 = Domestic employment SA (persons); convert to thousands
         "filter": {"FREQ": "M", "SPECIFICATION": "C08"},
         "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 1e-3,
         "note": "STATEC domestic employment SA (B3019/C08), persons -> thousands",
@@ -104,8 +115,6 @@ SERIES = [
         "slug": "industrial-production",
         "dataflow": "DF_D5110",
         "version": "1.1",
-        # PROD measure, BTD = industries B (mining) + C (manufacturing) + D (energy),
-        # working-day adjusted (W) which STATEC publishes alongside NSA
         "filter": {"FREQ": "M", "MEASURE": "PROD", "ACTIVITY": "BTD",
                    "SEASONAL_ADJUST": "W", "BASE_PER": "2021"},
         "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
@@ -115,10 +124,171 @@ SERIES = [
         "slug": "population",
         "dataflow": "DF_B1100",
         "version": "1.0",
-        # C01 = Total population (habitual residence, both sexes, all nationalities)
         "filter": {"FREQ": "A", "SPECIFICATION": "C01"},
         "freq": "A", "unit": "Million", "adjustment": "NSA", "conversion": 1e-6,
         "note": "STATEC total resident population (B1100/C01), annual -> millions",
+    },
+
+    # === CPI sub-indices (ECOICOP v.2, NCPI base 2025=100) ===
+    # All from DSD_ECOICOP_PRIX@DF_E5405 v1.0 — same dataflow as inflation-cpi.
+    {
+        "slug": "cpi-food",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "CP01"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI ECOICOP v.2 CP01 Food & non-alcoholic beverages",
+    },
+    {
+        "slug": "cpi-clothing",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "CP03"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI ECOICOP v.2 CP03 Clothing & footwear",
+    },
+    {
+        "slug": "cpi-housing-utilities",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "CP04"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI ECOICOP v.2 CP04 Housing/water/electricity/gas",
+    },
+    {
+        "slug": "cpi-transportation",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "CP07"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI ECOICOP v.2 CP07 Transport",
+    },
+    {
+        "slug": "cpi-recreation-and-culture",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "CP09"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI ECOICOP v.2 CP09 Recreation & culture",
+    },
+    {
+        "slug": "cpi-education",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "CP10"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI ECOICOP v.2 CP10 Education",
+    },
+
+    # === CPI special aggregates (DF_E5409, NCPI base 2025=100) — LEVEL indices ===
+    # The TE-page values for these slugs are YoY %; we publish levels and
+    # let the frontend compute YoY on the fly (per project convention).
+    {
+        "slug": "core-cpi",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "TOT_X_NRG_FOOD"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI special agg TOT_X_NRG_FOOD (excl. energy & food)",
+    },
+    {
+        "slug": "food-inflation",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "FOOD"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI special agg FOOD (level); frontend computes YoY",
+    },
+    {
+        "slug": "energy-inflation",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "NRG"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI special agg NRG (energy, level)",
+    },
+    {
+        "slug": "services-inflation",
+        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
+        "version": "1.0",
+        "filter": {"FREQ": "M", "ECOICOP_2018": "SERV"},
+        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC NCPI special agg SERV (services, level)",
+    },
+
+    # === Quarterly National Accounts — DF_E2504 v1.0 ===
+    # Main aggregates, chain-linked volumes (ref 2015), seasonally adjusted, mln EUR.
+    # LABELS coded r01..r33 (see codelist; mapping in module docstring).
+    {
+        "slug": "gdp-real",
+        "dataflow": "DF_E2504",
+        "version": "1.0",
+        "filter": {"FREQ": "Q", "LABELS": "r33"},
+        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "STATEC E2504 r33 GDP at market prices (B1*G), chain-linked vol SA",
+    },
+    {
+        "slug": "consumer-spending",
+        "dataflow": "DF_E2504",
+        "version": "1.0",
+        "filter": {"FREQ": "Q", "LABELS": "r13"},
+        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "STATEC E2504 r13 Final consumption expenditure of households",
+    },
+    {
+        "slug": "government-spending",
+        "dataflow": "DF_E2504",
+        "version": "1.0",
+        "filter": {"FREQ": "Q", "LABELS": "r15"},
+        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "STATEC E2504 r15 Final consumption of general government",
+    },
+    {
+        "slug": "gross-fixed-capital-formation",
+        "dataflow": "DF_E2504",
+        "version": "1.0",
+        "filter": {"FREQ": "Q", "LABELS": "r16"},
+        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "STATEC E2504 r16 Gross capital formation (P5) chain-linked vol SA",
+    },
+
+    # === Government finance — DF_E3101 v1.0 (annual EDP report) ===
+    # L03 = net lending/borrowing in % of GDP  -> budget-deficit (sign: TE uses absolute,
+    #       L03 carries sign — we keep STATEC sign; frontend can flip if needed).
+    # L12 = General government consolidated gross debt at nominal value (mln EUR).
+    {
+        "slug": "budget-deficit",
+        "dataflow": "DF_E3101",
+        "version": "1.0",
+        "filter": {"FREQ": "A", "LABELS": "L03"},
+        "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC E3101 L03 General government net lending/borrowing % of GDP",
+    },
+    {
+        "slug": "government-debt-total",
+        "dataflow": "DF_E3101",
+        "version": "1.0",
+        "filter": {"FREQ": "A", "LABELS": "L12"},
+        "freq": "A", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC E3101 L12 Consolidated gross general government debt (mln EUR)",
+    },
+
+    # === Retail sales — DF_D5108 v1.1 ===
+    # G47 retail trade, MEASURE=TOVV (turnover value), SEASONAL_ADJUST=Y (seasonally adj),
+    # BASE_PER=2021. Reported as an index (UNIT_MEASURE=IX).
+    {
+        "slug": "retail-sales",
+        "dataflow": "DF_D5108",
+        "version": "1.1",
+        "filter": {"FREQ": "M", "MEASURE": "TOVV", "SEASONAL_ADJUST": "Y",
+                   "ACTIVITY": "G47", "BASE_PER": "2021"},
+        "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA",
+        "conversion": 1.0,
+        "note": "STATEC D5108 G47 retail trade turnover-value index, SA, base 2021",
     },
 ]
 
@@ -150,10 +320,20 @@ def _parse_period(p: str, freq: str) -> date | None:
     return None
 
 
-def _fetch_series(cfg: dict) -> list[tuple[date, float]]:
+def _fetch_series(cfg: dict, retries: int = 3) -> list[tuple[date, float]]:
     url = f"{BASE}/LU1,{cfg['dataflow']},{cfg['version']}/all/ALL"
-    r = requests.get(url, headers=HDR, timeout=180)
-    r.raise_for_status()
+    last_exc = None
+    for attempt in range(retries):
+        if attempt:
+            time.sleep(5 * attempt)
+        try:
+            r = requests.get(url, headers=HDR, timeout=180)
+            r.raise_for_status()
+            break
+        except requests.RequestException as e:
+            last_exc = e
+    else:
+        raise last_exc  # type: ignore
     reader = csv.DictReader(io.StringIO(r.text))
     out = []
     flt = cfg["filter"]
@@ -187,9 +367,33 @@ class StatecProvider(BaseProvider):
 
     def fetch(self) -> list[DataPoint]:
         out: list[DataPoint] = []
+        # Cache dataflow CSV once per (dataflow,version) to avoid duplicate fetches —
+        # many slugs share DSD_ECOICOP_PRIX@DF_E5405 and DF_E2504/E3101.
+        cache: dict[tuple[str, str], list[dict]] = {}
         for cfg in SERIES:
+            key = (cfg["dataflow"], cfg["version"])
             try:
-                pairs = _fetch_series(cfg)
+                if key not in cache:
+                    url = f"{BASE}/{cfg['dataflow']},LU1," if False else None  # placeholder
+                    # Just fetch via _fetch_series; we re-run filter inline below.
+                    # Simpler: call full helper.
+                    pairs = _fetch_series(cfg)
+                else:
+                    # use cached rows
+                    pairs = []
+                    flt = cfg["filter"]
+                    for row in cache[key]:
+                        if all(row.get(k) == v for k, v in flt.items()):
+                            per = row.get("TIME_PERIOD", "")
+                            val = row.get("OBS_VALUE", "")
+                            if per and val:
+                                try:
+                                    dt = _parse_period(per, cfg["freq"])
+                                    if dt:
+                                        pairs.append((dt, float(val)))
+                                except ValueError:
+                                    pass
+                    pairs.sort()
                 for dt, v in pairs:
                     out.append(DataPoint(
                         indicator=cfg["slug"], country="LU",

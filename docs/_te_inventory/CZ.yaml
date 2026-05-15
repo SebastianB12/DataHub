@@ -1,31 +1,24 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/czech-republic/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Czech Statistical Office"
+  te_url: "https://www.czso.cz"
+  te_page: "https://tradingeconomics.com/czech-republic/government-budget"
+  te_value: 2.1
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "Czech Statistical Office"
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/business-confidence"
   te_value: 100.4
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/capacity-utilization"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 changes-in-inventories:
@@ -33,9 +26,8 @@ changes-in-inventories:
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/changes-in-inventories"
   te_value: 4.8
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +36,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/czech-republic/consumer-confidence"
   te_value: 106.0
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -53,49 +45,37 @@ consumer-spending:
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/consumer-spending"
   te_value: 729.82
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/czech-republic/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Czech National Bank"
+  te_url: "https://www.cnb.cz/en/index.html"
+  te_page: "https://tradingeconomics.com/czech-republic/core-inflation-rate"
+  te_value: 14.75
+  te_period: "2026-04"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 corporate-tax-rate:
   te_label: "Financial Administration of the Czech Republic"
   te_url: "https://taxsummaries.pwc.com/"
   te_page: "https://tradingeconomics.com/czech-republic/corporate-tax-rate"
   te_value: 21.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/corruption-index"
   te_value: 59.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/corruption-rank"
-  te_value: 39.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
@@ -104,8 +84,8 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/czech-republic/cpi-clothing"
   te_value: 97.8
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
@@ -113,9 +93,8 @@ cpi-education:
   te_url: "https://www.czso.cz/csu/czso/home"
   te_page: "https://tradingeconomics.com/czech-republic/cpi-education"
   te_value: 102.7
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +103,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/czech-republic/cpi-food"
   te_value: 98.5
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +113,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/czech-republic/cpi-housing-utilities"
   te_value: 100.6
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +123,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/czech-republic/cpi-recreation-and-culture"
   te_value: 101.2
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,18 +133,13 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/czech-republic/cpi-transportation"
   te_value: 108.6
   te_period: "2026-04"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
@@ -174,8 +148,8 @@ current-account:
   te_page: "https://tradingeconomics.com/czech-republic/current-account"
   te_value: 17373.2
   te_period: "2026-02"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
@@ -183,19 +157,13 @@ current-account-to-gdp:
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/current-account-to-gdp"
   te_value: 0.7
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -203,9 +171,8 @@ employed-persons:
   te_url: "https://www.czso.cz/csu/czso/home"
   te_page: "https://tradingeconomics.com/czech-republic/employed-persons"
   te_value: 5272.2
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -213,19 +180,13 @@ employment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/czech-republic/employment-rate"
   te_value: 75.7
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
@@ -234,8 +195,8 @@ exports:
   te_page: "https://tradingeconomics.com/czech-republic/exports"
   te_value: 459079.0
   te_period: "4063-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
@@ -244,8 +205,8 @@ food-inflation:
   te_page: "https://tradingeconomics.com/czech-republic/food-inflation"
   te_value: 1.3
   te_period: "2026-04"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
@@ -253,9 +214,8 @@ gdp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/czech-republic/gdp"
   te_value: 345.04
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -263,9 +223,8 @@ gdp-per-capita:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/czech-republic/gdp-per-capita"
   te_value: 20444.54
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -273,59 +232,48 @@ gdp-per-capita-ppp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/czech-republic/gdp-per-capita-ppp"
   te_value: 47961.81
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/czech-republic/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Czech Statistical Office"
+  te_url: "https://www.czso.cz"
+  te_page: "https://tradingeconomics.com/czech-republic/gdp-growth-annual"
+  te_value: 2.5
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-debt:
   te_label: "Czech Statistical Office"
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/government-debt"
   te_value: 3786250.0
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/czech-republic/government-debt-total"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Czech Statistical Office"
+  te_url: "https://www.czso.cz"
+  te_page: "https://tradingeconomics.com/czech-republic/government-debt"
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-spending:
   te_label: "Czech Statistical Office"
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/government-spending"
   te_value: 348.3
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -333,29 +281,18 @@ gross-fixed-capital-formation:
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/gross-fixed-capital-formation"
   te_value: 451.73
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/house-price-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
@@ -364,8 +301,8 @@ imports:
   te_page: "https://tradingeconomics.com/czech-republic/imports"
   te_value: 427166.0
   te_period: "3850-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +311,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/czech-republic/industrial-production"
   te_value: 0.9
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: czso
+  suggested_source: "czso"
+  current_source: "czso"
   conform: true
   verified: true
 inflation-cpi:
@@ -384,8 +321,8 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/czech-republic/inflation-cpi"
   te_value: 2.5
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: czso
+  suggested_source: "czso"
+  current_source: "czso"
   conform: true
   verified: true
 job-vacancies:
@@ -394,8 +331,8 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/czech-republic/job-vacancies"
   te_value: 94483.0
   te_period: "9154-04"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -403,9 +340,8 @@ labor-force-participation-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/czech-republic/labor-force-participation-rate"
   te_value: 78.1
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 labour-costs:
@@ -413,9 +349,8 @@ labour-costs:
   te_url: "https://www.ecb.europa.eu/home/html/index.en.html"
   te_page: "https://tradingeconomics.com/czech-republic/labour-costs"
   te_value: 134.97
-  te_period: null
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 long-term-unemployment-rate:
@@ -423,9 +358,8 @@ long-term-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/czech-republic/long-term-unemployment-rate"
   te_value: 1.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
@@ -434,18 +368,13 @@ manufacturing-production:
   te_page: "https://tradingeconomics.com/czech-republic/manufacturing-production"
   te_value: 1.7
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
@@ -453,9 +382,8 @@ minimum-wages:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/czech-republic/minimum-wages"
   te_value: 924.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: curated
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
   verified: true
 mining-production:
@@ -464,18 +392,13 @@ mining-production:
   te_page: "https://tradingeconomics.com/czech-republic/mining-production"
   te_value: 5.9
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
@@ -483,9 +406,8 @@ personal-income-tax-rate:
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/czech-republic/personal-income-tax-rate"
   te_value: 23.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 population:
@@ -493,29 +415,27 @@ population:
   te_url: "https://www.czso.cz"
   te_page: "https://tradingeconomics.com/czech-republic/population"
   te_value: 10.9
-  te_period: null
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 ppi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/czech-republic/ppi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: czso
-  conform: false
-  verified: false
+  te_label: "Czech Statistical Office"
+  te_url: "https://www.czso.cz/csu/czso/home"
+  te_page: "https://tradingeconomics.com/czech-republic/producer-prices"
+  te_value: 144.3
+  te_period: "March"
+  suggested_source: "czso"
+  current_source: "czso"
+  conform: true
+  verified: true
 productivity:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/czech-republic/productivity"
   te_value: 108.39
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
@@ -524,8 +444,8 @@ retail-sales:
   te_page: "https://tradingeconomics.com/czech-republic/retail-sales"
   te_value: 1.2
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
@@ -533,9 +453,7 @@ retirement-age-men:
   te_url: "https://www.duchodovareforma.cz"
   te_page: "https://tradingeconomics.com/czech-republic/retirement-age-men"
   te_value: 64.67
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 retirement-age-women:
@@ -543,79 +461,45 @@ retirement-age-women:
   te_url: "https://www.duchodovareforma.cz"
   te_page: "https://tradingeconomics.com/czech-republic/retirement-age-women"
   te_value: 64.67
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 sales-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/sales-tax-rate"
   te_value: 21.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/social-security-rate"
   te_value: 45.4
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/czech-republic/terrorism-index"
   te_value: 2.26
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 unemployed-persons:
@@ -624,8 +508,8 @@ unemployed-persons:
   te_page: "https://tradingeconomics.com/czech-republic/unemployed-persons"
   te_value: 372338.0
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: eurostat
+  suggested_source: "czso"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
@@ -634,8 +518,8 @@ unemployment:
   te_page: "https://tradingeconomics.com/czech-republic/unemployment-rate"
   te_value: 4.9
   te_period: "2026-03"
-  suggested_source: czso
-  current_source: czso
+  suggested_source: "czso"
+  current_source: "czso"
   conform: true
   verified: true
 youth-unemployment-rate:
@@ -644,7 +528,7 @@ youth-unemployment-rate:
   te_page: "https://tradingeconomics.com/czech-republic/youth-unemployment-rate"
   te_value: 10.0
   te_period: "2026-02"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

@@ -281,6 +281,18 @@ def fetch_government_debt() -> list[tuple[date, float]]:
     return sorted(out)
 
 
+def fetch_gdp_real_yoy() -> list[tuple[date, float]]:
+    """WNUC01D 9988J10 — Quarterly real GDP, SA, YoY % change."""
+    out: list[tuple[date, float]] = []
+    for r in _fetch_csv("WNUC01D"):
+        if r.get("IndicatorType") == "9988J10" and r.get("Uz0") == "CZ":
+            dt = _to_quarter_date(r.get("CasQ", ""))
+            v = _flt(r.get("Hodnota", ""))
+            if dt and v is not None:
+                out.append((dt, v))
+    return sorted(out)
+
+
 # === Series registry ===
 
 SERIES = [
@@ -379,6 +391,19 @@ SERIES = [
      "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA",
      "series_id": "CZSO/CEN0101E/COICOP=01:food-inflation",
      "note": "CZSO CEN0101E CPI COICOP-2018 01 Food (same index used as food-inflation level)"},
+
+    # === Migration 072 (2026-05-15): CZ TE-conformity gap-fill ===
+    # gdp-real YoY %: WNUC01D 9988J10 quarterly real GDP YoY % SA.
+    {"slug": "gdp-real", "kod": "WNUC01D", "fetcher": fetch_gdp_real_yoy,
+     "freq": "Q", "unit": "% YoY", "adjustment": "SA",
+     "series_id": "CZSO/WNUC01D/9988J10",
+     "note": "CZSO WNUC01D Quarterly real GDP, YoY % SA"},
+    # government-debt-total: alias of government-debt (annual gross debt, mil Kc).
+    # Wired as separate slug for inventory parity (TE attributes to CZSO).
+    {"slug": "government-debt-total", "kod": "WNUC05D", "fetcher": fetch_government_debt,
+     "freq": "A", "unit": "mil Kc", "adjustment": "NSA",
+     "series_id": "CZSO/WNUC05D/600602:total",
+     "note": "CZSO WNUC05D General government gross consolidated debt (alias of government-debt)"},
 ]
 
 

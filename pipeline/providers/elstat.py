@@ -401,6 +401,90 @@ def fetch_elstat_gdp_real() -> list[tuple[date, float]]:
     return out
 
 
+# === CPI SUB-INDICES: DKT87 Table VI doc 114839 — COICOP groups monthly ====
+
+CPI_SUBGROUPS_DOC_ID = 114839  # "06. Monthly sub-indices of groups of items of CPI"
+
+# Maps slug -> COICOP group label prefix (matches row[0] in DKT87 Table VI XLSX).
+# Note: row labels start with the group number (1..13). We match by lowercased
+# substring of the descriptive part after the number.
+CPI_SUBGROUP_LABELS = {
+    "cpi-food":                      "food and non-alcoholic",
+    "cpi-clothing":                  "clothing and footwear",
+    "cpi-housing-utilities":         "housing, water, electricity",
+    "cpi-transportation":            "transport",
+    "cpi-recreation-and-culture":    "recreation, sport and culture",
+    "cpi-education":                 "education services",
+}
+
+
+def _fetch_elstat_cpi_subgroups() -> dict[str, list[tuple[date, float]]]:
+    """Download DKT87 Table VI XLSX and parse monthly sub-indices for all
+    COICOP groups in one pass. Layout: blocks of (Year YYYY header → header
+    row with Jan..Dec → 13 data rows + Overall). Year header text is
+    e.g. 'Year  2010' (single col 0). Header row has months in cols 1..12,
+    'Average' in col 13.
+    """
+    r = requests.get(_resource_url(CPI_SUBGROUPS_DOC_ID), headers=HDR, timeout=60)
+    r.raise_for_status()
+    wb = openpyxl.load_workbook(io.BytesIO(r.content), data_only=True, read_only=True)
+    ws = wb.active
+
+    out: dict[str, list[tuple[date, float]]] = {slug: [] for slug in CPI_SUBGROUP_LABELS}
+    current_year: int | None = None
+    in_block = False
+    rows = list(ws.iter_rows(values_only=True))
+    for row in rows:
+        cells = list(row)
+        if not cells:
+            continue
+        c0 = cells[0]
+        if isinstance(c0, str):
+            s = c0.strip()
+            # Year header
+            if s.lower().startswith("year"):
+                parts = s.split()
+                for p in parts:
+                    if p.isdigit() and 1900 <= int(p) <= 2100:
+                        current_year = int(p)
+                        in_block = False
+                        break
+                continue
+            if s.lower().startswith("groups of") and current_year is not None:
+                in_block = True
+                continue
+            if in_block and current_year is not None:
+                # Strip leading group number "1 ", "10 ", etc.
+                label = s
+                if label and label[0].isdigit():
+                    label = label.split(maxsplit=1)[-1] if " " in label else label
+                low = label.lower()
+                for slug, prefix in CPI_SUBGROUP_LABELS.items():
+                    if low.startswith(prefix):
+                        for m_idx in range(1, 13):
+                            v = cells[m_idx] if m_idx < len(cells) else None
+                            if isinstance(v, (int, float)) and not isinstance(v, bool):
+                                out[slug].append((date(current_year, m_idx, 1), float(v)))
+                        break
+    for slug in out:
+        out[slug].sort()
+    return out
+
+
+def fetch_elstat_cpi_food() -> list[tuple[date, float]]:
+    return _fetch_elstat_cpi_subgroups()["cpi-food"]
+def fetch_elstat_cpi_clothing() -> list[tuple[date, float]]:
+    return _fetch_elstat_cpi_subgroups()["cpi-clothing"]
+def fetch_elstat_cpi_housing_utilities() -> list[tuple[date, float]]:
+    return _fetch_elstat_cpi_subgroups()["cpi-housing-utilities"]
+def fetch_elstat_cpi_transportation() -> list[tuple[date, float]]:
+    return _fetch_elstat_cpi_subgroups()["cpi-transportation"]
+def fetch_elstat_cpi_recreation() -> list[tuple[date, float]]:
+    return _fetch_elstat_cpi_subgroups()["cpi-recreation-and-culture"]
+def fetch_elstat_cpi_education() -> list[tuple[date, float]]:
+    return _fetch_elstat_cpi_subgroups()["cpi-education"]
+
+
 # === LFS EMPLOYED: SJO01, Table 3 — Persons employed (quarterly, thousands) =
 
 LFS_EMPLOYED_DOC_ID = 115983  # "Persons employed 15+ by economic activities"
@@ -547,6 +631,67 @@ SERIES = [
         "doc_id": GDP_DOC_ID,
         "publication": "SEL84",
         "note": "ELSTAT SEL84 Quarterly GDP SA chain-linked volumes constant 2020 prices, 1995-Q1 onwards",
+    },
+    # CPI sub-indices (COICOP groups, monthly, base 2020=100) — DKT87 Table VI
+    {
+        "slug": "cpi-food",
+        "fetcher": fetch_elstat_cpi_food,
+        "freq": "M",
+        "unit": "Index (2020=100)",
+        "adjustment": "NSA",
+        "doc_id": CPI_SUBGROUPS_DOC_ID,
+        "publication": "DKT87",
+        "note": "ELSTAT DKT87 Table VI Group 1 Food & non-alcoholic beverages, base 2020=100",
+    },
+    {
+        "slug": "cpi-clothing",
+        "fetcher": fetch_elstat_cpi_clothing,
+        "freq": "M",
+        "unit": "Index (2020=100)",
+        "adjustment": "NSA",
+        "doc_id": CPI_SUBGROUPS_DOC_ID,
+        "publication": "DKT87",
+        "note": "ELSTAT DKT87 Table VI Group 3 Clothing & footwear, base 2020=100",
+    },
+    {
+        "slug": "cpi-housing-utilities",
+        "fetcher": fetch_elstat_cpi_housing_utilities,
+        "freq": "M",
+        "unit": "Index (2020=100)",
+        "adjustment": "NSA",
+        "doc_id": CPI_SUBGROUPS_DOC_ID,
+        "publication": "DKT87",
+        "note": "ELSTAT DKT87 Table VI Group 4 Housing/water/electricity/gas, base 2020=100",
+    },
+    {
+        "slug": "cpi-transportation",
+        "fetcher": fetch_elstat_cpi_transportation,
+        "freq": "M",
+        "unit": "Index (2020=100)",
+        "adjustment": "NSA",
+        "doc_id": CPI_SUBGROUPS_DOC_ID,
+        "publication": "DKT87",
+        "note": "ELSTAT DKT87 Table VI Group 7 Transport, base 2020=100",
+    },
+    {
+        "slug": "cpi-recreation-and-culture",
+        "fetcher": fetch_elstat_cpi_recreation,
+        "freq": "M",
+        "unit": "Index (2020=100)",
+        "adjustment": "NSA",
+        "doc_id": CPI_SUBGROUPS_DOC_ID,
+        "publication": "DKT87",
+        "note": "ELSTAT DKT87 Table VI Group 9 Recreation, sport & culture, base 2020=100",
+    },
+    {
+        "slug": "cpi-education",
+        "fetcher": fetch_elstat_cpi_education,
+        "freq": "M",
+        "unit": "Index (2020=100)",
+        "adjustment": "NSA",
+        "doc_id": CPI_SUBGROUPS_DOC_ID,
+        "publication": "DKT87",
+        "note": "ELSTAT DKT87 Table VI Group 10 Education services, base 2020=100",
     },
     {
         "slug": "employed-persons",

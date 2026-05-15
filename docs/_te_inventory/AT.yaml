@@ -1,201 +1,167 @@
 budget-deficit:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "http://www.statistik.at"
   te_page: "https://tradingeconomics.com/austria/government-budget"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 4.2
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "European Commission"
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/austria/business-confidence"
   te_value: -12.5
   te_period: "2026-04"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 capacity-utilization:
-  te_label: null
-  te_url: null
+  te_label: "European Commission"
+  te_url: "https://commission.europa.eu/index_en"
   te_page: "https://tradingeconomics.com/austria/capacity-utilization"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 82.1
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 changes-in-inventories:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "http://www.statistik.at"
   te_page: "https://tradingeconomics.com/austria/changes-in-inventories"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 consumer-confidence:
   te_label: "European Commission"
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/austria/consumer-confidence"
   te_value: -24.1
   te_period: "2026-04"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 consumer-spending:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/en/"
   te_page: "https://tradingeconomics.com/austria/consumer-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 core-cpi:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/core-inflation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 corporate-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.bundesfinanzministerium.de/Web/EN/Home/home.html"
   te_page: "https://tradingeconomics.com/austria/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 23.0
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 87.0
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/"
   te_page: "https://tradingeconomics.com/austria/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 134.8
+  te_period: "2026-03"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-education:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/"
   te_page: "https://tradingeconomics.com/austria/cpi-education"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 126.8
+  te_period: "March"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-food:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/"
   te_page: "https://tradingeconomics.com/austria/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 143.5
+  te_period: "March"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-housing-utilities:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/"
   te_page: "https://tradingeconomics.com/austria/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 143.5
+  te_period: "March"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-recreation-and-culture:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/"
   te_page: "https://tradingeconomics.com/austria/cpi-recreation-and-culture"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 128.5
+  te_period: "March"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-transportation:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/"
   te_page: "https://tradingeconomics.com/austria/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 134.8
+  te_period: "2026-03"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 credit-rating:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/austria/rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/austria/credit-rating"
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
-  te_label: null
-  te_url: null
+  te_label: "Oesterreichische Nationalbank"
+  te_url: "https://www.oenb.at"
   te_page: "https://tradingeconomics.com/austria/current-account"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 current-account-to-gdp:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/current-account-to-gdp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 1.9
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -204,28 +170,23 @@ employed-persons:
   te_page: "https://tradingeconomics.com/austria/employed-persons"
   te_value: 4500.2
   te_period: "2025-Q4"
-  suggested_source: stat_at
-  current_source: eurostat
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/employment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 74.6
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
@@ -234,138 +195,112 @@ exports:
   te_page: "https://tradingeconomics.com/austria/exports"
   te_value: 16165
   te_period: "2026-02"
-  suggested_source: stat_at
-  current_source: eurostat
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "http://www.statistik.at"
   te_page: "https://tradingeconomics.com/austria/food-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 16.99
+  te_period: "2026-03"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/austria/gdp"
   te_value: 521.64
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: stat_at
+  suggested_source: "worldbank"
+  current_source: "stat_at"
   conform: false
   verified: true
 gdp-per-capita:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/austria/gdp-per-capita"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  te_value: 361.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-per-capita-ppp:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/austria/gdp-per-capita-ppp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  te_value: 356.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-real:
   te_label: "Statistics Austria"
   te_url: "http://www.statistik.at"
   te_page: "https://tradingeconomics.com/austria/gdp-growth-annual"
   te_value: 0.6
   te_period: "2026-Q1"
-  suggested_source: stat_at
-  current_source: eurostat
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt:
-  te_label: null
-  te_url: null
+  te_label: "Oesterreichische Nationalbank"
+  te_url: "https://www.oenb.at/"
   te_page: "https://tradingeconomics.com/austria/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-debt-total:
   te_label: "Statistics Austria"
   te_url: "http://www.statistik.at"
   te_page: "https://tradingeconomics.com/austria/government-debt-to-gdp"
   te_value: 81.5
   te_period: "2025"
-  suggested_source: stat_at
-  current_source: eurostat
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/en/"
   te_page: "https://tradingeconomics.com/austria/government-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/austria/government-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/austria/government-spending-eur"
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/en/"
   te_page: "https://tradingeconomics.com/austria/gross-fixed-capital-formation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/austria/housing-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/austria/house-price-index"
+  current_source: "eurostat"
   conform: false
   verified: false
 import-prices:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/import-prices"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: stat_at
+  current_source: "stat_at"
   conform: false
   verified: false
 imports:
@@ -374,8 +309,8 @@ imports:
   te_page: "https://tradingeconomics.com/austria/imports"
   te_value: 15823
   te_period: "2026-02"
-  suggested_source: stat_at
-  current_source: eurostat
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -384,8 +319,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/austria/industrial-production"
   te_value: 1.7
   te_period: "2026-03"
-  suggested_source: stat_at
-  current_source: stat_at
+  suggested_source: "stat_at"
+  current_source: "stat_at"
   conform: true
   verified: true
 inflation-cpi:
@@ -394,268 +329,212 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/austria/inflation-cpi"
   te_value: 3.3
   te_period: "2026-04"
-  suggested_source: stat_at
-  current_source: stat_at
+  suggested_source: "stat_at"
+  current_source: "stat_at"
   conform: true
   verified: true
 interest-rate:
-  te_label: null
-  te_url: null
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu/home/html/index.en.html"
   te_page: "https://tradingeconomics.com/austria/interest-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: ecb
-  conform: false
-  verified: false
+  te_value: 4.75
+  te_period: "2000-10"
+  suggested_source: "ecb"
+  current_source: "ecb"
+  conform: true
+  verified: true
 job-vacancies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/job-vacancies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "April"
+  current_source: "eurostat"
   conform: false
   verified: false
 labor-force-participation-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/labor-force-participation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 79.2
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 labour-costs:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/labour-costs"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 148.17
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 long-term-unemployment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/long-term-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 1.4
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 manufacturing-production:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/en/"
   te_page: "https://tradingeconomics.com/austria/manufacturing-production"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 38.0
+  te_period: "2026-03"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 mining-production:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Austria"
+  te_url: "https://www.statistik.at/en/"
   te_page: "https://tradingeconomics.com/austria/mining-production"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 40.1
+  te_period: "2026-03"
+  suggested_source: "stat_at"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Federal Ministry of Finance"
+  te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/austria/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 55.0
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 population:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/population"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 9.2
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 ppi:
   te_label: "Statistics Austria"
   te_url: "https://www.statistik.at"
   te_page: "https://tradingeconomics.com/austria/producer-prices"
   te_value: 117.5
   te_period: "2026-03"
-  suggested_source: stat_at
-  current_source: stat_at
+  suggested_source: "stat_at"
+  current_source: "stat_at"
   conform: true
   verified: true
 productivity:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/productivity"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 105.07
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 retail-sales:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/retail-sales"
   te_value: 0.1
   te_period: "2026-03"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retirement-age-men:
-  te_label: null
-  te_url: null
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.etk.fi/en/"
   te_page: "https://tradingeconomics.com/austria/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 retirement-age-women:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 sales-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Federal Ministry of Finance"
+  te_url: "https://www.vatlive.com"
   te_page: "https://tradingeconomics.com/austria/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 20.0
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 39.05
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/austria/social-security-rate-for-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/austria/social-security-rate-companies"
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/austria/social-security-rate-for-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/austria/social-security-rate-employees"
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/austria/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 1.5
+  current_source: "curated"
   conform: false
   verified: false
+trade-balance:
+  te_label: "Statistics Austria"
+  te_url: "http://www.statistik.at"
+  te_page: "https://tradingeconomics.com/austria/balance-of-trade"
+  te_period: "2026-02"
+  suggested_source: "stat_at"
+  current_source: "stat_at"
+  conform: true
+  verified: true
 unemployed-persons:
-  te_label: null
-  te_url: null
+  te_label: "Arbeitsmarktservice Oesterreich"
+  te_url: "https://www.ams.at"
   te_page: "https://tradingeconomics.com/austria/unemployed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-04"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 unemployment:
   te_label: "Public Employment Service Austria"
   te_url: "https://www.ams.at"
   te_page: "https://tradingeconomics.com/austria/unemployment-rate"
   te_value: 7.5
   te_period: "2026-04"
-  suggested_source: stat_at
-  current_source: stat_at
+  suggested_source: "stat_at"
+  current_source: "stat_at"
   conform: true
   verified: true
 wages:
@@ -664,17 +543,17 @@ wages:
   te_page: "https://tradingeconomics.com/austria/wages"
   te_value: 3170
   te_period: "2024"
-  suggested_source: stat_at
-  current_source: stat_at
+  suggested_source: "stat_at"
+  current_source: "stat_at"
   conform: true
   verified: true
 youth-unemployment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/austria/youth-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 11.1
+  te_period: "March"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true

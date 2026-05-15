@@ -91,9 +91,16 @@ SIMPLE_SERIES = [
 ]
 
 # NAG (National Accounts) — multi-series file. Match Series by STO/PRICES/ACTIVITY/REF_SECTOR.
-# UNIT_MEASURE=XDC (BGN), UNIT_MULT=6 (mln). Quarterly, current prices (PRICES=V).
+# UNIT_MEASURE=XDC (BGN), UNIT_MULT=6 (mln). Quarterly, current prices (PRICES=V) or
+# chain-linked volumes (PRICES=Y, reference year 2020).
 # Bulgaria's official currency is BGN (pegged 1.95583 BGN = 1 EUR).
 NAG_SERIES = [
+    # GDP — chain-linked volumes (B1GQ, PRICES=Y), reference year 2020.
+    # TE prints gdp-real as YoY% rate; the level is published here and the frontend
+    # computes YoY on-the-fly. Last obs 2025-Q4 = 31,096.22 mln BGN chain-linked.
+    {"slug": "gdp-real", "match": {"STO": "B1GQ", "PRICES": "Y"},
+     "unit": "Million BGN (chain-linked, 2020 prices)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NSI Bulgaria NAG B1GQ Gross domestic product chain-linked volumes (ref. 2020), quarterly, mln BGN"},
     # Household final consumption expenditure (P31, sector S1M)
     {"slug": "consumer-spending", "match": {"STO": "P31", "PRICES": "V", "REF_SECTOR": "S1M"},
      "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
@@ -127,6 +134,16 @@ BOP_SERIES = [
     {"slug": "current-account", "match": {"INT_ACC_ITEM": "CA", "ACCOUNTING_ENTRY": "B"},
      "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
      "note": "BNB Bulgaria BOP BPM6 Current account balance (mln EUR, vis-à-vis World)"},
+]
+
+# CGO — Central Government Operations (cash basis). Single-INDICATOR series.
+# UNIT_MEASURE=XDC (BGN), UNIT_MULT=6 -> mln BGN. Monthly.
+# Maps via INDICATOR attribute. TE budget-deficit slug is the cash net lending/
+# borrowing position (GBXCCB = Central Government Cash Balance).
+CGO_SERIES = [
+    {"slug": "budget-deficit", "match": {"INDICATOR": "GBXCCB_G01_CA_XDC"},
+     "unit": "Million BGN", "adjustment": "NSA", "conversion": 1.0,
+     "note": "BNB/Bulgaria CGO Central Government Cash Balance (GBXCCB) monthly, mln BGN — TE budget-deficit"},
 ]
 
 
@@ -250,6 +267,26 @@ class NsiBgProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/BG (NAG {tag}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/BG (NAG): {e}")
+
+        # CGO multi-series file (monthly central government operations, mln BGN)
+        for cfg in CGO_SERIES:
+            try:
+                pairs = _fetch_multi("cgo", cfg["match"], "M")
+                tag = "/".join(f"{k}={v}" for k, v in cfg["match"].items())
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"],
+                        country="BG",
+                        date=normalize_date(dt, "M"),
+                        value=round(v * cfg["conversion"], 4),
+                        source="nsi_bg",
+                        unit=cfg["unit"],
+                        series_id=f"NSI-BG/CGO/{cfg['match'].get('INDICATOR','?')}",
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/BG (CGO {tag}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/BG (CGO): {e}")
 
         # BOP_BPM6 multi-series file (monthly balance of payments, BNB)
         for cfg in BOP_SERIES:

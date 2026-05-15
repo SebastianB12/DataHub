@@ -1,21 +1,17 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "http://www.ksh.hu"
+  te_page: "https://tradingeconomics.com/hungary/government-budget"
+  te_value: 4.7
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/business-confidence"
   te_value: -8.5
-  te_period: "2026-03"
-  suggested_source: null
-  current_source: eurostat
+  te_period: "April"
+  current_source: "eurostat"
   conform: false
   verified: false
 capacity-utilization:
@@ -23,9 +19,8 @@ capacity-utilization:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/hungary/capacity-utilization"
   te_value: 76.9
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 changes-in-inventories:
@@ -33,19 +28,15 @@ changes-in-inventories:
   te_url: "http://www.ksh.hu"
   te_page: "https://tradingeconomics.com/hungary/changes-in-inventories"
   te_value: 861927.0
-  te_period: null
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/consumer-confidence"
   te_value: -17.0
-  te_period: "2026-03"
-  suggested_source: null
-  current_source: eurostat
+  te_period: "April"
+  current_source: "eurostat"
   conform: false
   verified: false
 consumer-spending:
@@ -53,99 +44,68 @@ consumer-spending:
   te_url: "http://www.ksh.hu"
   te_page: "https://tradingeconomics.com/hungary/consumer-spending"
   te_value: 9851154.0
-  te_period: null
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "https://www.ksh.hu/?lang=en"
+  te_page: "https://tradingeconomics.com/hungary/core-inflation-rate"
+  te_value: 2.2
+  te_period: "2026-04"
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 corporate-tax-rate:
   te_label: "National Tax and Customs Administration of Hungary"
   te_url: "https://nav.gov.hu/"
   te_page: "https://tradingeconomics.com/hungary/corporate-tax-rate"
   te_value: 9.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/corruption-index"
-  te_value: 40.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 55.0
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/corruption-rank"
-  te_value: 84.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/cpi-clothing"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "https://www.ksh.hu/?lang=en"
+  te_page: "https://tradingeconomics.com/hungary/cpi-transportation"
+  te_value: 99.9
+  te_period: "2026-04"
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-education:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/cpi-education"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-food:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/cpi-food"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/hungary/cpi-housing-utilities"
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-housing-utilities:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-recreation-and-culture:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/cpi-recreation-and-culture"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-transportation:
@@ -154,18 +114,13 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/hungary/cpi-transportation"
   te_value: 99.9
   te_period: "2026-04"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
@@ -173,9 +128,8 @@ current-account:
   te_url: "http://english.mnb.hu"
   te_page: "https://tradingeconomics.com/hungary/current-account"
   te_value: 321.09
-  te_period: null
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
@@ -183,19 +137,13 @@ current-account-to-gdp:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/hungary/current-account-to-gdp"
   te_value: 1.7
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -204,8 +152,8 @@ employed-persons:
   te_page: "https://tradingeconomics.com/hungary/employed-persons"
   te_value: 4627.4
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -214,18 +162,13 @@ employment-rate:
   te_page: "https://tradingeconomics.com/hungary/employment-rate"
   te_value: 65.0
   te_period: "2026-02"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
@@ -234,8 +177,8 @@ exports:
   te_page: "https://tradingeconomics.com/hungary/exports"
   te_value: 14045.41
   te_period: "1303-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
@@ -244,8 +187,8 @@ food-inflation:
   te_page: "https://tradingeconomics.com/hungary/food-inflation"
   te_value: 0.9
   te_period: "2026-04"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
@@ -253,9 +196,8 @@ gdp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/hungary/gdp"
   te_value: 222.9
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -263,9 +205,8 @@ gdp-per-capita:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/hungary/gdp-per-capita"
   te_value: 16524.82
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -273,39 +214,29 @@ gdp-per-capita-ppp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/hungary/gdp-per-capita-ppp"
   te_value: 40702.15
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "http://www.ksh.hu"
+  te_page: "https://tradingeconomics.com/hungary/gdp-growth-annual"
+  te_period: "2026-Q1"
+  suggested_source: "ksh_hu"
+  current_source: "ksh_hu"
+  conform: true
+  verified: true
 government-debt:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/government-debt"
-  te_value: 64517.27
-  te_period: "6291-03"
-  suggested_source: null
-  current_source: eurostat
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/government-debt-total"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/hungary/government-debt"
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-spending:
@@ -313,19 +244,13 @@ government-spending:
   te_url: "http://www.ksh.hu"
   te_page: "https://tradingeconomics.com/hungary/government-spending"
   te_value: 1838274.0
-  te_period: null
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -333,29 +258,18 @@ gross-fixed-capital-formation:
   te_url: "http://www.ksh.hu"
   te_page: "https://tradingeconomics.com/hungary/gross-fixed-capital-formation"
   te_value: 3072895.0
-  te_period: null
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/hospital-beds"
-  te_value: 6.51
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/house-price-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
@@ -364,8 +278,8 @@ imports:
   te_page: "https://tradingeconomics.com/hungary/imports"
   te_value: 13121.43
   te_period: "1204-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +288,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/hungary/industrial-production"
   te_value: 6.7
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,8 +298,8 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/hungary/inflation-cpi"
   te_value: 2.1
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 job-vacancies:
@@ -393,9 +307,8 @@ job-vacancies:
   te_url: "https://www.ksh.hu/?lang=en"
   te_page: "https://tradingeconomics.com/hungary/job-vacancies"
   te_value: 63762.0
-  te_period: null
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -404,8 +317,8 @@ labor-force-participation-rate:
   te_page: "https://tradingeconomics.com/hungary/labor-force-participation-rate"
   te_value: 68.1
   te_period: "2026-02"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -413,9 +326,8 @@ labour-costs:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/hungary/labour-costs"
   te_value: 211.37
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 long-term-unemployment-rate:
@@ -423,9 +335,8 @@ long-term-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/hungary/long-term-unemployment-rate"
   te_value: 1.6
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
@@ -434,18 +345,13 @@ manufacturing-production:
   te_page: "https://tradingeconomics.com/hungary/manufacturing-production"
   te_value: 7.0
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
@@ -453,9 +359,8 @@ minimum-wages:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/hungary/minimum-wages"
   te_value: 838.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: curated
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
   verified: true
 mining-production:
@@ -464,18 +369,13 @@ mining-production:
   te_page: "https://tradingeconomics.com/hungary/mining-production"
   te_value: 7.5
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
@@ -483,9 +383,8 @@ personal-income-tax-rate:
   te_url: "https://nav.gov.hu/"
   te_page: "https://tradingeconomics.com/hungary/personal-income-tax-rate"
   te_value: 15.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 population:
@@ -493,29 +392,27 @@ population:
   te_url: "http://www.ksh.hu"
   te_page: "https://tradingeconomics.com/hungary/population"
   te_value: 9.5
-  te_period: null
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 ppi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/hungary/ppi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "https://www.ksh.hu"
+  te_page: "https://tradingeconomics.com/hungary/producer-prices"
+  te_value: 152.2
+  te_period: "March"
+  suggested_source: "ksh_hu"
+  current_source: "ksh_hu"
+  conform: true
+  verified: true
 productivity:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/hungary/productivity"
   te_value: 118.22
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
@@ -524,8 +421,8 @@ retail-sales:
   te_page: "https://tradingeconomics.com/hungary/retail-sales"
   te_value: 1.9
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
@@ -533,9 +430,8 @@ retirement-age-men:
   te_url: "http://hro.ceu.edu"
   te_page: "https://tradingeconomics.com/hungary/retirement-age-men"
   te_value: 65.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 retirement-age-women:
@@ -543,9 +439,8 @@ retirement-age-women:
   te_url: "http://hro.ceu.edu"
   te_page: "https://tradingeconomics.com/hungary/retirement-age-women"
   te_value: 65.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 sales-tax-rate:
@@ -553,79 +448,59 @@ sales-tax-rate:
   te_url: "https://nav.gov.hu/"
   te_page: "https://tradingeconomics.com/hungary/sales-tax-rate"
   te_value: 27.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/social-security-rate"
   te_value: 31.5
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/terrorism-index"
   te_value: 0.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
+trade-balance:
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "https://www.ksh.hu/"
+  te_page: "https://tradingeconomics.com/hungary/balance-of-trade"
+  te_period: "2026-03"
+  suggested_source: "ksh_hu"
+  current_source: "ksh_hu"
+  conform: true
+  verified: true
 unemployed-persons:
   te_label: "Hungarian Central Statistical Office"
   te_url: "https://www.ksh.hu/?lang=en"
   te_page: "https://tradingeconomics.com/hungary/unemployed-persons"
   te_value: 226.4
   te_period: "2026-03"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
@@ -634,17 +509,24 @@ unemployment:
   te_page: "https://tradingeconomics.com/hungary/unemployment-rate"
   te_value: 4.7
   te_period: "2026-02"
-  suggested_source: ksh_hu
-  current_source: eurostat
+  suggested_source: "ksh_hu"
+  current_source: "eurostat"
   conform: false
   verified: true
+unemployment-rate:
+  te_label: "Hungarian Central Statistical Office"
+  te_url: "http://www.ksh.hu"
+  te_page: "https://tradingeconomics.com/hungary/unemployment-rate"
+  te_value: 4.7
+  te_period: "January"
+  suggested_source: "ksh_hu"
+  current_source: "ksh_hu"
+  conform: true
+  verified: true
 youth-unemployment-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/hungary/youth-unemployment-rate"
   te_value: 12.6
-  te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
   verified: false

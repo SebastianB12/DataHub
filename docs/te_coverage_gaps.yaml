@@ -623,3 +623,85 @@ gaps:
     source: Ministry of Finance, Cyprus
     note: "TE attributes CY retail-sales to mof.gov.cy press releases (XLS/PDF). CYSTAT PxWeb has no clean monthly retail-trade turnover table (8.CYSTAT-DB / Trade). Migration 062 keeps CY/retail-sales on eurostat sts_trtu_m."
     possible_workaround: "Eurostat sts_trtu_m fallback; or write a Vercel-proxy scraper for the mof.gov.cy XLS release."
+
+  # ==========================================================================
+  # Phase C9 (2026-05-15) — residual stale-inventory slugs deferred on eurostat
+  # ==========================================================================
+  # Migration 076 audit found these slugs still flagged conform:false in
+  # docs/_te_inventory/<CC>.yaml. The provider has no SERIES entry yet; the
+  # underlying national tables require dimension-discovery work (PxWeb metadata
+  # walks, SDMX DSD parsing) that didn't fit Phase C9 budget. The Eurostat
+  # fallback remains active and TE-acceptable for all of them. Listed here so
+  # the next coverage audit can pick them up explicitly.
+
+  - country: HR
+    indicator_name: "Core CPI / Employed Persons / Imports / Manufacturing / Mining / Unemployed / Unemployment"
+    te_category: Prices/Labour/Trade
+    reason: deferred
+    source: DZS Croatia
+    note: "DZS publishes these in separate PxWeb tables (KO_ST04 for trade, ANK01 for LFS, BS_IN11 sub-NACE for IP components). Phase C9 ran out of budget to map each. Eurostat fallback continues."
+    possible_workaround: "Next batch: enumerate ME_PS09 Indikatori=1 for core-cpi YoY, add KO_ST04 imports, BS_IN11 NACE C/B for manufacturing/mining."
+
+  - country: CY
+    indicator_name: "Current Account / Food Inflation YoY / HPI / Job Vacancies / LF Participation / Manufacturing / Mining / Unemployed"
+    te_category: Money/Prices/Housing/Labour/Production
+    reason: deferred
+    source: CYSTAT / Central Bank of Cyprus
+    note: "Central Bank of Cyprus publishes BoP only as XLS quarterly. CYSTAT 0210045E has industry sub-aggregates (Manufacturing/Mining) under additional NACE selector, plus separate house-price-index in 0710040E (annual). Phase C9 didn't model these. Eurostat fallback continues."
+    possible_workaround: "Add CYSTAT 0210045E pxweb_query with NACE filter for sub-industries, 0710040E for HPI."
+
+  - country: MT
+    indicator_name: "Current Account / Food Inflation YoY / Government Debt / Industrial Production / Manufacturing / PPI"
+    te_category: Money/Prices/Government/Production
+    reason: deferred
+    source: NSO Malta
+    note: "NSO Malta DF_STBS_INDUSTRIAL_INDICATORS_MONTHLY is stale since 2019-06 (already documented above). NSO publishes PPI only as XLS in releases catalog. Central Bank of Malta has BoP quarterly XLS. Phase C9 deferred."
+    possible_workaround: "Eurostat sts_inpr_m / sts_inppd_m for IP/PPI; CBM XLS scrape for BoP."
+
+  - country: PL
+    indicator_name: "Job Vacancies / LF Participation / Unemployed Persons / Unemployment Rate (LFS)"
+    te_category: Labour
+    reason: deferred
+    source: GUS Poland
+    note: "GUS BAEL (LFS) labour stats live under indicator_id≠CPI-cluster. Need DBW indicator-id discovery for each. Eurostat une_rt_q + jvs_q_nace2 are the active fallbacks (TE-equivalent concept)."
+    possible_workaround: "Next batch: GUS DBW search for BAEL indicators, add SERIES entries in pipeline/providers/gus_pl.py."
+
+  - country: SI
+    indicator_name: "Budget Deficit / Core CPI / GDP Real"
+    te_category: Government/Prices/GDP
+    reason: deferred
+    source: SURS Slovenia
+    note: "SURS publishes EDP/B9 budget deficit annually only. Core-CPI YoY available in SURS 0413050S table but indicator-code discovery deferred. GDP-real currently on eurostat namq_10_gdp; SURS has 0301920S with chain-linked variants."
+    possible_workaround: "Add SURS 0301920S (gdp-real chain-linked), 0413050S (core-CPI), 1300611S (budget deficit annual)."
+
+  - country: FR
+    indicator_name: "Budget Deficit / CPI Food / Government Debt / Long-Term Unemployment / Population"
+    te_category: Government/Prices/Labour/Demographic
+    reason: deferred
+    source: INSEE / Banque de France
+    note: "INSEE BDM has dataset CPI-FOOD (CP01) and TCRED-POP for population but pynsee filters not yet narrowed to TE's published figures. Government debt cited from BdF (Webstat SDMX). Long-term-unemp from INSEE T7 unemployment-rate table needs DURATION dimension."
+    possible_workaround: "Extend pipeline/providers/insee.py SERIES with IPC-2025 COICOP01 (food), TCRED-POP (population). BdF Webstat for debt; INSEE BIT-2025 duration filter for long-term-unemp."
+
+  - country: LV
+    indicator_name: "Government Debt Total / PPI"
+    te_category: Government/Prices
+    reason: deferred
+    source: CSP Latvia
+    note: "CSP IRG010m for PPI exists but base-year disambiguation deferred. Government-debt-total = nominal stock end-of-period from VFV table family."
+    possible_workaround: "Add CSP IRG010m / VFV variants to LV_SERIES."
+
+  - country: EE
+    indicator_name: "Business Confidence / Consumer Confidence / Food Inflation YoY / Unemployed Persons"
+    te_category: Business/Consumer/Prices/Labour
+    reason: deferred
+    source: Stat Estonia / EKI
+    note: "Estonia surveys (KI071/KI074) live under EKI not Stat. Food-inflation YoY needs derivation off IA002.px CP01. Unemployed-persons is in TT0130.px alongside employed-persons but indicator selector deferred."
+    possible_workaround: "Add IA002 derivation for food-inflation YoY; TT0130 unemployed selector."
+
+  - country: LT
+    indicator_name: "Government Debt Total"
+    te_category: Government
+    reason: deferred
+    source: LSD Lithuania / Bank of Lithuania
+    note: "LSD publishes EDP debt annually only. TE's monthly government-debt-total comes from Bank of Lithuania."
+    possible_workaround: "Add LB_LT.lt SDMX for monthly debt stock."

@@ -340,6 +340,74 @@ TABLES: list[dict] = [
         "unit": "Billion EUR",
         "adjustment": "NSA",
     },
+    # ===== DE CPI sub-indices (TE-source-conformity gap-fill, 2026-05-15) =====
+    # Table 61111-0004 (Verbraucherpreisindex 2-Steller COICOP). Filter by
+    # 3_variable_attribute_code = CC13-XX. Index base 2020=100.
+    # Verified 2026-04 vs TE inventory:
+    #   CC13-01 (food)            = 138.6
+    #   CC13-03 (clothing)        = 112.7
+    #   CC13-04 (housing/util.)   = 119.1   matches TE 119.1
+    #   CC13-07 (transport)       = 137.4   matches TE 137.4
+    #   CC13-09 (recreation)      = 117.9   matches TE 117.9
+    #   CC13-10 (education)       = 124.4   matches TE 124.4
+    {
+        "name": "61111-0004",
+        "indicator": "cpi-food",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-01"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "2020",
+    },
+    {
+        "name": "61111-0004",
+        "indicator": "cpi-clothing",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-03"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "2020",
+    },
+    {
+        "name": "61111-0004",
+        "indicator": "cpi-housing-utilities",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-04"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "2020",
+    },
+    {
+        "name": "61111-0004",
+        "indicator": "cpi-transportation",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-07"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "2020",
+    },
+    {
+        "name": "61111-0004",
+        "indicator": "cpi-recreation-and-culture",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-09"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "2020",
+    },
+    {
+        "name": "61111-0004",
+        "indicator": "cpi-education",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-10"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "2020",
+    },
+    # GDP-real: Destatis publishes 81000-0020 VGR018 as INDEX 2020=100 (chain-linked
+    # volume), not as Bn EUR level. The Mrd EUR level lives in 81000-0028 (VGR Komp.
+    # Mrd EUR jew. Preise) which is too large for sync-fetch without classifying filters.
+    # Kept on eurostat (namq_10_gdp:CLV10_MEUR) — to be revisited.
 ]
 
 

@@ -1,31 +1,27 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/bulgaria/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Statistical Institute, Bulgaria"
+  te_url: "http://www.nsi.bg"
+  te_page: "https://tradingeconomics.com/bulgaria/government-budget"
+  te_value: 3.5
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "National Statistical Institute, Bulgaria"
   te_url: "http://www.nsi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/business-confidence"
   te_value: 12.4
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/capacity-utilization"
   te_value: 73.5
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-Q1"
+  current_source: "eurostat"
   conform: false
   verified: false
 changes-in-inventories:
@@ -33,9 +29,8 @@ changes-in-inventories:
   te_url: "https://www.nsi.bg/en"
   te_page: "https://tradingeconomics.com/bulgaria/changes-in-inventories"
   te_value: 357.62
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -43,9 +38,8 @@ consumer-confidence:
   te_url: "http://www.nsi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/consumer-confidence"
   te_value: -28.6
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -53,49 +47,35 @@ consumer-spending:
   te_url: "https://www.nsi.bg/en"
   te_page: "https://tradingeconomics.com/bulgaria/consumer-spending"
   te_value: 31365.12
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/bulgaria/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/bulgaria/core-inflation-rate"
+  te_value: 550.8
+  te_period: "2026-04"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 corporate-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/corporate-tax-rate"
   te_value: 10.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/corruption-index"
-  te_value: 40.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 45.0
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/corruption-rank"
-  te_value: 84.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
@@ -104,8 +84,8 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/bulgaria/cpi-clothing"
   te_value: 102.59
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
@@ -114,8 +94,8 @@ cpi-education:
   te_page: "https://tradingeconomics.com/bulgaria/cpi-education"
   te_value: 106.67
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +104,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/bulgaria/cpi-food"
   te_value: 105.26
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +114,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/bulgaria/cpi-housing-utilities"
   te_value: 103.56
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +124,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/bulgaria/cpi-recreation-and-culture"
   te_value: 107.98
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,18 +134,13 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/bulgaria/cpi-transportation"
   te_value: 119.5
   te_period: "2026-04"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
@@ -174,8 +149,8 @@ current-account:
   te_page: "https://tradingeconomics.com/bulgaria/current-account"
   te_value: 170.0
   te_period: "2026-02"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
@@ -183,49 +158,31 @@ current-account-to-gdp:
   te_url: "http://www.bnb.bg"
   te_page: "https://tradingeconomics.com/bulgaria/current-account-to-gdp"
   te_value: 5.7
-  te_period: null
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/employed-persons"
-  te_value: 2919.5
-  te_period: null
-  suggested_source: null
-  current_source: nsi_bg
+  te_period: "2025-Q4"
+  current_source: "nsi_bg"
   conform: false
   verified: false
 employment-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/employment-rate"
   te_value: 53.1
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
@@ -234,8 +191,8 @@ exports:
   te_page: "https://tradingeconomics.com/bulgaria/exports"
   te_value: 4095.2
   te_period: "3547-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
@@ -244,8 +201,8 @@ food-inflation:
   te_page: "https://tradingeconomics.com/bulgaria/food-inflation"
   te_value: 5.7
   te_period: "2026-04"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
@@ -253,9 +210,8 @@ gdp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/bulgaria/gdp"
   te_value: 112.21
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -263,9 +219,8 @@ gdp-per-capita:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/bulgaria/gdp-per-capita"
   te_value: 10089.92
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -273,59 +228,49 @@ gdp-per-capita-ppp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/bulgaria/gdp-per-capita-ppp"
   te_value: 34083.24
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/bulgaria/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Statistical Institute, Bulgaria"
+  te_url: "http://www.nsi.bg"
+  te_page: "https://tradingeconomics.com/bulgaria/gdp-growth-annual"
+  te_value: 6.4
+  te_period: "2026-Q1"
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-debt:
   te_label: "Ministry of Finance of the Republic of Bulgaria"
   te_url: "https://www.minfin.bg"
   te_page: "https://tradingeconomics.com/bulgaria/government-debt"
   te_value: 8174.1
   te_period: "6027-03"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/bulgaria/government-debt-total"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Ministry of Finance of the Republic of Bulgaria"
+  te_url: "https://www.minfin.bg"
+  te_page: "https://tradingeconomics.com/bulgaria/government-debt"
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-spending:
   te_label: "National Statistical Institute, Bulgaria"
   te_url: "https://www.nsi.bg/en"
   te_page: "https://tradingeconomics.com/bulgaria/government-spending"
   te_value: 4452.81
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -333,29 +278,18 @@ gross-fixed-capital-formation:
   te_url: "https://www.nsi.bg/en/"
   te_page: "https://tradingeconomics.com/bulgaria/gross-fixed-capital-formation"
   te_value: 9583.36
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/house-price-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
@@ -364,8 +298,8 @@ imports:
   te_page: "https://tradingeconomics.com/bulgaria/imports"
   te_value: 5521.4
   te_period: "4357-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +308,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/bulgaria/industrial-production"
   te_value: 4.8
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,8 +318,8 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/bulgaria/inflation-cpi"
   te_value: 7.1
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: nsi_bg
+  suggested_source: "nsi_bg"
+  current_source: "nsi_bg"
   conform: true
   verified: true
 job-vacancies:
@@ -393,9 +327,8 @@ job-vacancies:
   te_url: "http://www.nsi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/job-vacancies"
   te_value: 19634.0
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -403,19 +336,15 @@ labor-force-participation-rate:
   te_url: "http://www.nsi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/labor-force-participation-rate"
   te_value: 54.8
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/labour-costs"
   te_value: 186.98
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 long-term-unemployment-rate:
@@ -423,9 +352,8 @@ long-term-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/bulgaria/long-term-unemployment-rate"
   te_value: 1.4
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
@@ -434,18 +362,13 @@ manufacturing-production:
   te_page: "https://tradingeconomics.com/bulgaria/manufacturing-production"
   te_value: 4.0
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
@@ -453,9 +376,8 @@ minimum-wages:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/bulgaria/minimum-wages"
   te_value: 620.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: curated
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
   verified: true
 mining-production:
@@ -464,18 +386,13 @@ mining-production:
   te_page: "https://tradingeconomics.com/bulgaria/mining-production"
   te_value: 27.3
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
@@ -483,9 +400,7 @@ personal-income-tax-rate:
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/bulgaria/personal-income-tax-rate"
   te_value: 10.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 population:
@@ -493,29 +408,27 @@ population:
   te_url: "https://www.nsi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/population"
   te_value: 6.4
-  te_period: null
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 ppi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/bulgaria/ppi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: nsi_bg
-  conform: false
-  verified: false
+  te_label: "National Statistical Institute, Bulgaria"
+  te_url: "https://www.nsi.bg"
+  te_page: "https://tradingeconomics.com/bulgaria/producer-prices"
+  te_value: 149.1
+  te_period: "March"
+  suggested_source: "nsi_bg"
+  current_source: "nsi_bg"
+  conform: true
+  verified: true
 productivity:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/bulgaria/productivity"
   te_value: 129.59
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
@@ -524,8 +437,8 @@ retail-sales:
   te_page: "https://tradingeconomics.com/bulgaria/retail-sales"
   te_value: 2.1
   te_period: "2026-03"
-  suggested_source: nsi_bg
-  current_source: eurostat
+  suggested_source: "nsi_bg"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
@@ -533,9 +446,7 @@ retirement-age-men:
   te_url: "http://www.noi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/retirement-age-men"
   te_value: 64.75
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 retirement-age-women:
@@ -543,9 +454,7 @@ retirement-age-women:
   te_url: "http://www.noi.bg"
   te_page: "https://tradingeconomics.com/bulgaria/retirement-age-women"
   te_value: 62.5
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 sales-tax-rate:
@@ -553,29 +462,17 @@ sales-tax-rate:
   te_url: "https://www.vatlive.com"
   te_page: "https://tradingeconomics.com/bulgaria/sales-tax-rate"
   te_value: 20.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
@@ -583,29 +480,17 @@ social-security-rate:
   te_url: "http://www.ey.com"
   te_page: "https://tradingeconomics.com/bulgaria/social-security-rate"
   te_value: 33.4
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
@@ -613,29 +498,21 @@ terrorism-index:
   te_url: "http://economicsandpeace.org"
   te_page: "https://tradingeconomics.com/bulgaria/terrorism-index"
   te_value: 0.0
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
 unemployed-persons:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/unemployed-persons"
-  te_value: 153.17
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 unemployment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/bulgaria/unemployment-rate"
   te_value: 5.4
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "February"
+  current_source: "eurostat"
   conform: false
   verified: false
 youth-unemployment-rate:
@@ -643,8 +520,7 @@ youth-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/bulgaria/youth-unemployment-rate"
   te_value: 12.5
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

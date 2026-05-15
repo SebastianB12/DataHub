@@ -1,522 +1,447 @@
-# GB (United Kingdom) — TE source inventory
-# Generated 2026-05-14 by sampling tradingeconomics.com/<slug> pages and extracting
-# the "Source:" attribution at the page footer (class=source-name or source-present).
-# suggested_source resolves the TE label via src/lib/sources.ts STATIC_LABELS.
-# verified: true means TE page was successfully fetched and source was parsed.
-
 budget-deficit:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/government-budget-value"
   te_value: -12600
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 central-bank-balance:
   te_label: "Bank of England"
   te_url: "https://www.bankofengland.co.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/central-bank-balance-sheet"
   te_value: 768567
   te_period: "2026-05"
-  suggested_source: ons   # BoE-via-ONS in our system per STATIC_LABELS comment
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 core-cpi:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/core-inflation-rate"
   te_value: 3.1
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 corporate-tax-rate:
   te_label: "HM Revenue & Customs"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/corporate-tax-rate"
   te_value: 25
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 corruption-index:
   te_label: "Transparency International"
-  te_url: null
   te_page: "https://tradingeconomics.com/united-kingdom/corruption-index"
   te_value: 70
   te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 corruption-rank:
   te_label: "Transparency International"
-  te_url: null
   te_page: "https://tradingeconomics.com/united-kingdom/corruption-rank"
   te_value: 20
   te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 credit-rating:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/united-kingdom/rating"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false   # TE rating page has no public source attribution; assumed curated
-
+  te_page: "https://tradingeconomics.com/united-kingdom/credit-rating"
+  current_source: "curated"
+  conform: false
+  verified: false
 current-account:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/current-account"
   te_value: -18392
   te_period: "2025-Q4"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 employed-persons:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/employed-persons"
   te_value: 34328
   te_period: "2026-02"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 employment-rate:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/employment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
-  verified: true   # cached page found, follows ONS convention
-
+  verified: true
 exports:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/exports"
   te_value: 80202
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 food-inflation:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/food-inflation"
   te_value: 3.7
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/united-kingdom/gdp"
   te_value: 3644
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
-
 gdp-per-capita:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/united-kingdom/gdp-per-capita"
   te_value: 47265
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
-
 gdp-per-capita-ppp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/united-kingdom/gdp-per-capita-ppp"
-  te_value: null
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
-
 gdp-real:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/gdp-constant-prices"
-  te_value: null
-  te_period: null
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 government-debt:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/government-debt"
   te_value: 2911
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 hospital-beds:
   te_label: "OECD"
   te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-kingdom/hospital-beds"
   te_value: 2.44
   te_period: "2023"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 hospitals:
   te_label: "World Health Organization"
   te_url: "https://www.who.int"
   te_page: "https://tradingeconomics.com/united-kingdom/hospital"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 imports:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/imports"
   te_value: 80922
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 industrial-production:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/industrial-production"
   te_value: 0
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 inflation-cpi:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/inflation-cpi"
   te_value: 3.3
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 interest-rate:
   te_label: "Bank of England"
   te_url: "https://www.bankofengland.co.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/interest-rate"
   te_value: 3.75
   te_period: "2026-05"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 labor-force-participation-rate:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/labor-force-participation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 manufacturing-production:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/manufacturing-production"
   te_value: 1.2
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 medical-doctors:
   te_label: "OECD"
   te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-kingdom/medical-doctors"
-  te_value: null
   te_period: "2022"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 military-expenditure:
   te_label: "SIPRI"
   te_url: "https://www.sipri.org"
   te_page: "https://tradingeconomics.com/united-kingdom/military-expenditure"
-  te_value: null
   te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 minimum-wages:
   te_label: "Department for Work and Pensions, UK"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/minimum-wages"
   te_value: 12.71
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 mining-production:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/mining-production"
   te_value: -3.9
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 money-supply-m2:
   te_label: "Bank of England"
   te_url: "https://www.bankofengland.co.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/money-supply-m2"
   te_value: 3199976
   te_period: "2026-03"
-  suggested_source: ons   # BoE-via-ONS in our system
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 mortgage-approvals:
   te_label: "Bank of England"
   te_url: "https://www.bankofengland.co.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/mortgage-approvals"
   te_value: 63.53
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 nurses:
   te_label: "OECD"
   te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-kingdom/nurses"
-  te_value: null
   te_period: "2022"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 personal-income-tax-rate:
   te_label: "HM Revenue & Customs"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/personal-income-tax-rate"
   te_value: 45
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 population:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/population"
-  te_value: null
-  te_period: null
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 ppi:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/producer-prices"
-  te_value: null
-  te_period: null
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 retail-sales:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/retail-sales"
   te_value: 0.7
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 retirement-age-men:
   te_label: "Department for Work and Pensions, UK"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/retirement-age-men"
   te_value: 66
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 retirement-age-women:
   te_label: "Department for Work and Pensions, UK"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/retirement-age-women"
   te_value: 66
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 sales-tax-rate:
   te_label: "HM Revenue & Customs"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/sales-tax-rate"
   te_value: 20
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 social-security-rate:
   te_label: "HM Revenue & Customs"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/social-security-rate"
   te_value: 25.8
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 social-security-rate-companies:
   te_label: "HM Revenue & Customs"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/social-security-rate-for-companies"
   te_value: 13.8
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 social-security-rate-employees:
   te_label: "HM Revenue & Customs"
   te_url: "https://www.gov.uk"
   te_page: "https://tradingeconomics.com/united-kingdom/social-security-rate-for-employees"
   te_value: 12
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 trade-balance:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/balance-of-trade"
   te_value: -9658
   te_period: "2026-03"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 unemployed-persons:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/unemployed-persons"
   te_value: 1667.4
   te_period: "2026-02"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 unemployment:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/unemployment-rate"
   te_value: 4.9
   te_period: "2026-02"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 wages:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/wages"
   te_value: 745
   te_period: "2026-02"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true
-
 youth-unemployment-rate:
   te_label: "Office for National Statistics"
   te_url: "http://www.ons.gov.uk/"
   te_page: "https://tradingeconomics.com/united-kingdom/youth-unemployment-rate"
   te_value: 14.3
   te_period: "2026-02"
-  suggested_source: ons
-  current_source: ons
+  suggested_source: "ons"
+  current_source: "ons"
   conform: true
   verified: true

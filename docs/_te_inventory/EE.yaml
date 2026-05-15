@@ -1,21 +1,20 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/estonia/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/estonia/government-budget"
+  te_value: 2.0
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 business-confidence:
   te_label: "Estonian Institute of Economic Research"
   te_url: "http://www.ki.ee"
   te_page: "https://tradingeconomics.com/estonia/business-confidence"
   te_value: 89.7
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
@@ -23,9 +22,8 @@ capacity-utilization:
   te_url: "https://commission.europa.eu/index_en"
   te_page: "https://tradingeconomics.com/estonia/capacity-utilization"
   te_value: 68.1
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 changes-in-inventories:
@@ -33,9 +31,8 @@ changes-in-inventories:
   te_url: "https://www.stat.ee/en"
   te_page: "https://tradingeconomics.com/estonia/changes-in-inventories"
   te_value: 409.2
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +41,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/estonia/consumer-confidence"
   te_value: -32.5
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -53,49 +50,35 @@ consumer-spending:
   te_url: "https://www.stat.ee/en"
   te_page: "https://tradingeconomics.com/estonia/consumer-spending"
   te_value: 3912.3
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/estonia/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/estonia/core-inflation-rate"
+  te_value: 13.0
+  te_period: "2026-03"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 corporate-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/corporate-tax-rate"
   te_value: 22.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/corruption-index"
   te_value: 76.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/corruption-rank"
-  te_value: 12.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
@@ -104,8 +87,8 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/estonia/cpi-clothing"
   te_value: 323.8
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
@@ -114,8 +97,8 @@ cpi-education:
   te_page: "https://tradingeconomics.com/estonia/cpi-education"
   te_value: 206.79
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +107,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/estonia/cpi-food"
   te_value: 342.16
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +117,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/estonia/cpi-housing-utilities"
   te_value: 634.02
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +127,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/estonia/cpi-recreation-and-culture"
   te_value: 373.34
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,18 +137,13 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/estonia/cpi-transportation"
   te_value: 291.44
   te_period: "2026-04"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
@@ -173,9 +151,7 @@ current-account:
   te_url: "http://statistika.eestipank.ee"
   te_page: "https://tradingeconomics.com/estonia/current-account"
   te_value: 215.6
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
@@ -183,19 +159,12 @@ current-account-to-gdp:
   te_url: "http://statistika.eestipank.ee"
   te_page: "https://tradingeconomics.com/estonia/current-account-to-gdp"
   te_value: 0.2
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -203,9 +172,8 @@ employed-persons:
   te_url: "https://www.stat.ee/"
   te_page: "https://tradingeconomics.com/estonia/employed-persons"
   te_value: 688.6
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -213,19 +181,13 @@ employment-rate:
   te_url: "https://www.stat.ee/"
   te_page: "https://tradingeconomics.com/estonia/employment-rate"
   te_value: 68.1
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
@@ -234,8 +196,8 @@ exports:
   te_page: "https://tradingeconomics.com/estonia/exports"
   te_value: 1849.0
   te_period: "1448-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
@@ -244,8 +206,8 @@ food-inflation:
   te_page: "https://tradingeconomics.com/estonia/food-inflation"
   te_value: 2.6
   te_period: "2026-04"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
@@ -253,9 +215,8 @@ gdp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/estonia/gdp"
   te_value: 42.76
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -263,9 +224,8 @@ gdp-per-capita:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/estonia/gdp-per-capita"
   te_value: 20046.03
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -273,39 +233,26 @@ gdp-per-capita-ppp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/estonia/gdp-per-capita-ppp"
   te_value: 41546.12
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/estonia/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Statistics Estonia"
+  te_url: "http://www.stat.ee"
+  te_page: "https://tradingeconomics.com/estonia/gdp-growth-annual"
+  suggested_source: "stat_ee"
+  current_source: "stat_ee"
+  conform: true
+  verified: true
 government-debt:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/estonia/government-debt-total"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/estonia/government-debt"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-spending:
@@ -313,19 +260,13 @@ government-spending:
   te_url: "https://www.stat.ee/en"
   te_page: "https://tradingeconomics.com/estonia/government-spending"
   te_value: 1741.0
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -333,29 +274,18 @@ gross-fixed-capital-formation:
   te_url: "https://www.stat.ee/en"
   te_page: "https://tradingeconomics.com/estonia/gross-fixed-capital-formation"
   te_value: 2273.6
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/hospital-beds"
-  te_value: 4.12
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/house-price-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
@@ -364,8 +294,8 @@ imports:
   te_page: "https://tradingeconomics.com/estonia/imports"
   te_value: 2083.0
   te_period: "1888-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +304,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/estonia/industrial-production"
   te_value: 3.1
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,8 +314,8 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/estonia/inflation-cpi"
   te_value: 3.4
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: stat_ee
+  suggested_source: "stat_ee"
+  current_source: "stat_ee"
   conform: true
   verified: true
 interest-rate:
@@ -393,9 +323,8 @@ interest-rate:
   te_url: "https://www.ecb.europa.eu/"
   te_page: "https://tradingeconomics.com/estonia/interest-rate"
   te_value: 2.4
-  te_period: null
-  suggested_source: ecb
-  current_source: ecb
+  suggested_source: "ecb"
+  current_source: "ecb"
   conform: true
   verified: true
 job-vacancies:
@@ -404,8 +333,7 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/estonia/job-vacancies"
   te_value: 5.37
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -413,9 +341,8 @@ labor-force-participation-rate:
   te_url: "https://www.stat.ee/"
   te_page: "https://tradingeconomics.com/estonia/labor-force-participation-rate"
   te_value: 72.7
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -423,9 +350,8 @@ labour-costs:
   te_url: "https://www.ecb.europa.eu/home/html/index.en.html"
   te_page: "https://tradingeconomics.com/estonia/labour-costs"
   te_value: 153.56
-  te_period: null
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 long-term-unemployment-rate:
@@ -433,9 +359,8 @@ long-term-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/estonia/long-term-unemployment-rate"
   te_value: 1.7
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
@@ -444,18 +369,13 @@ manufacturing-production:
   te_page: "https://tradingeconomics.com/estonia/manufacturing-production"
   te_value: 1.2
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
@@ -463,9 +383,8 @@ minimum-wages:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/estonia/minimum-wages"
   te_value: 886.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: curated
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
   verified: true
 mining-production:
@@ -474,18 +393,13 @@ mining-production:
   te_page: "https://tradingeconomics.com/estonia/mining-production"
   te_value: 5.9
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
@@ -493,9 +407,7 @@ personal-income-tax-rate:
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/estonia/personal-income-tax-rate"
   te_value: 22.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 population:
@@ -503,29 +415,27 @@ population:
   te_url: "https://www.stat.ee/en"
   te_page: "https://tradingeconomics.com/estonia/population"
   te_value: 1.4
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 ppi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/estonia/ppi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Statistics Estonia"
+  te_url: "https://www.stat.ee"
+  te_page: "https://tradingeconomics.com/estonia/producer-prices"
+  te_value: 159.92
+  te_period: "March"
+  suggested_source: "stat_ee"
+  current_source: "stat_ee"
+  conform: true
+  verified: true
 productivity:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/estonia/productivity"
   te_value: 118.03
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
@@ -534,8 +444,8 @@ retail-sales:
   te_page: "https://tradingeconomics.com/estonia/retail-sales"
   te_value: 14.5
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
@@ -543,9 +453,7 @@ retirement-age-men:
   te_url: "http://www.sotsiaalkindlustusamet.ee"
   te_page: "https://tradingeconomics.com/estonia/retirement-age-men"
   te_value: 64.75
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 retirement-age-women:
@@ -553,9 +461,7 @@ retirement-age-women:
   te_url: "http://www.sotsiaalkindlustusamet.ee"
   te_page: "https://tradingeconomics.com/estonia/retirement-age-women"
   te_value: 64.75
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 sales-tax-rate:
@@ -563,69 +469,39 @@ sales-tax-rate:
   te_url: "https://www.vatlive.com"
   te_page: "https://tradingeconomics.com/estonia/sales-tax-rate"
   te_value: 24.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/social-security-rate"
   te_value: 37.4
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/estonia/terrorism-index"
   te_value: 0.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 unemployed-persons:
@@ -634,8 +510,8 @@ unemployed-persons:
   te_page: "https://tradingeconomics.com/estonia/unemployed-persons"
   te_value: 44.32
   te_period: "2026-03"
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
@@ -643,9 +519,8 @@ unemployment:
   te_url: "https://www.stat.ee/"
   te_page: "https://tradingeconomics.com/estonia/unemployment-rate"
   te_value: 6.4
-  te_period: null
-  suggested_source: stat_ee
-  current_source: eurostat
+  suggested_source: "stat_ee"
+  current_source: "eurostat"
   conform: false
   verified: true
 youth-unemployment-rate:
@@ -654,7 +529,7 @@ youth-unemployment-rate:
   te_page: "https://tradingeconomics.com/estonia/youth-unemployment-rate"
   te_value: 21.7
   te_period: "2026-02"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

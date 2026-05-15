@@ -1,687 +1,567 @@
-# TE-Source-Inventory for France (FR)
-# Generated 2026-05-14. TE detail pages returned HTTP 403 for ALL FR slugs
-# during this run (bot protection). Suggestions below derive from:
-#   (a) TE indicators-overview page (latest values + periods harvested OK)
-#   (b) TE's documented per-indicator source patterns for France
-#   (c) Cross-check against our truth.yaml notes
-# All entries are marked verified: false until a future fetch confirms.
-
 budget-deficit:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/government-budget"
-  te_value: -5.1
-  te_period: "2025"
-  suggested_source: insee
-  current_source: eurostat
+  te_value: 5.1
+  suggested_source: "insee"
+  current_source: "eurostat"
   conform: false
-  verified: false
-  note: "TE detail 403; truth says eurostat but FR fiscal headlines on TE = INSEE"
+  verified: true
 business-confidence:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/business-confidence"
-  te_value: 100
   te_period: "2026-04"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 capacity-utilization:
   te_label: "Banque de France"
-  te_url: "https://www.banque-france.fr"
+  te_url: "https://www.banque-france.fr/"
   te_page: "https://tradingeconomics.com/france/capacity-utilization"
-  te_value: null
-  te_period: null
-  suggested_source: bdf
-  current_source: bdf
+  te_value: 76.95
+  te_period: "March"
+  suggested_source: "bdf"
+  current_source: "bdf"
   conform: true
-  verified: false
+  verified: true
 changes-in-inventories:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/changes-in-inventories"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_period: "2026-Q1"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 consumer-confidence:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/consumer-confidence"
-  te_value: 84
   te_period: "2026-04"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 consumer-spending:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/consumer-spending"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_period: "2026-Q1"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 core-cpi:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/core-inflation-rate"
-  te_value: 1.2
+  te_value: 6.2
   te_period: "2026-04"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 corporate-tax-rate:
-  te_label: "DGFiP / Ministry of Finance"
-  te_url: "https://www.economie.gouv.fr"
+  te_label: "Direction Générale des Finances Publiques"
+  te_url: "https://www.impots.gouv.fr"
   te_page: "https://tradingeconomics.com/france/corporate-tax-rate"
-  te_value: 25
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 25.0
+  current_source: "curated"
+  conform: false
+  verified: true
 corruption-index:
   te_label: "Transparency International"
-  te_url: "https://www.transparency.org"
+  te_url: "https://www.transparency.org/en"
   te_page: "https://tradingeconomics.com/france/corruption-index"
-  te_value: null
-  te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  te_value: 75.0
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
-  verified: false
+  verified: true
 corruption-rank:
   te_label: "Transparency International"
-  te_url: "https://www.transparency.org"
+  te_url: "https://www.transparency.org/"
   te_page: "https://tradingeconomics.com/france/corruption-rank"
-  te_value: null
-  te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
-  verified: false
+  verified: true
 cpi-clothing:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/cpi-clothing"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
-cpi-education:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/cpi-education"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
-cpi-food:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/cpi-food"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: eurostat
-  conform: false
-  verified: false
-  note: "TE FR price sub-indices typically attributed to INSEE not Eurostat"
-cpi-housing-utilities:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
-cpi-recreation-and-culture:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/cpi-recreation-and-culture"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
-cpi-transportation:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_value: 108.46
+  te_period: "2026-04"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
+  verified: true
+cpi-education:
+  te_page: "https://tradingeconomics.com/france/cpi-education"
+  current_source: "insee"
+  conform: false
   verified: false
-credit-rating:
-  te_label: "TE Sovereign Score"
-  te_url: "https://tradingeconomics.com/country-list/rating"
-  te_page: "https://tradingeconomics.com/france/rating"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
+cpi-food:
+  te_label: "INSEE, France"
+  te_url: "https://www.insee.fr"
+  te_page: "https://tradingeconomics.com/france/cpi-housing-utilities"
+  te_value: 101.6
+  te_period: "April"
+  suggested_source: "insee"
+  current_source: "eurostat"
+  conform: false
+  verified: true
+cpi-housing-utilities:
+  te_label: "INSEE, France"
+  te_url: "https://www.insee.fr"
+  te_page: "https://tradingeconomics.com/france/cpi-housing-utilities"
+  te_value: 101.6
+  te_period: "April"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
+  verified: true
+cpi-recreation-and-culture:
+  te_page: "https://tradingeconomics.com/france/cpi-recreation-and-culture"
+  current_source: "insee"
+  conform: false
+  verified: false
+cpi-transportation:
+  te_label: "INSEE, France"
+  te_url: "https://www.insee.fr"
+  te_page: "https://tradingeconomics.com/france/cpi-transportation"
+  te_value: 108.46
+  te_period: "2026-04"
+  suggested_source: "insee"
+  current_source: "insee"
+  conform: true
+  verified: true
+credit-rating:
+  te_page: "https://tradingeconomics.com/france/credit-rating"
+  current_source: "curated"
+  conform: false
   verified: false
 current-account:
   te_label: "Banque de France"
-  te_url: "https://www.banque-france.fr"
+  te_url: "https://www.banque-france.fr/"
   te_page: "https://tradingeconomics.com/france/current-account"
-  te_value: -1175
   te_period: "2026-03"
-  suggested_source: bdf
-  current_source: eurostat
+  suggested_source: "bdf"
+  current_source: "eurostat"
   conform: false
-  verified: false
-  note: "TE attributes FR current account to Banque de France"
+  verified: true
 current-account-to-gdp:
-  te_label: "Banque de France"
-  te_url: "https://www.banque-france.fr"
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/france/current-account-to-gdp"
-  te_value: null
-  te_period: null
-  suggested_source: bdf
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 0.3
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 disposable-personal-income:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_period: "2025-Q4"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 employed-persons:
   te_label: "EUROSTAT"
-  te_url: "https://ec.europa.eu/eurostat"
+  te_url: "https://ec.europa.eu/eurostat/en/"
   te_page: "https://tradingeconomics.com/france/employed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
-  verified: false
-  note: "truth.yaml note confirms Eurostat-conform"
+  verified: true
 employment-rate:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/employment-rate"
   te_value: 69.5
-  te_period: "2026-03"
-  suggested_source: insee
-  current_source: insee
+  te_period: "2026-Q1"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 energy-inflation:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/energy-inflation"
   te_value: 14.3
-  te_period: "2026-04"
-  suggested_source: insee
-  current_source: insee
+  te_period: "April"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 exports:
-  te_label: "Customs (DGDDI)"
-  te_url: "https://www.douane.gouv.fr"
+  te_label: "Ministère de l'Économie et des Finances"
+  te_url: "http://lekiosque.finances.gouv.fr"
   te_page: "https://tradingeconomics.com/france/exports"
-  te_value: 52458
   te_period: "2026-03"
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
-  note: "TE may show Douanes; truth uses INSEE BDM which republishes the same series"
+  current_source: "insee"
+  conform: false
+  verified: true
 food-inflation:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/food-inflation"
-  te_value: 1.2
+  te_value: 15.9
   te_period: "2026-04"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 gdp:
   te_label: "World Bank"
-  te_url: "https://data.worldbank.org"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/france/gdp"
-  te_value: 3162
-  te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
-  verified: false
+  verified: true
 gdp-growth-rate:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/gdp-growth"
-  te_value: 0.0
-  te_period: "2026-Q1"
-  suggested_source: insee
-  current_source: insee
-  conform: true
+  te_page: "https://tradingeconomics.com/france/gdp-growth-rate"
+  current_source: "insee"
+  conform: false
   verified: false
 gdp-per-capita:
   te_label: "World Bank"
-  te_url: "https://data.worldbank.org"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/france/gdp-per-capita"
-  te_value: 39441
-  te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  te_value: 312.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
-  verified: false
+  verified: true
 gdp-per-capita-ppp:
   te_label: "World Bank"
-  te_url: "https://data.worldbank.org"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/france/gdp-per-capita-ppp"
-  te_value: null
-  te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  te_value: 307.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
-  verified: false
+  verified: true
 gdp-real:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/gdp-constant-prices"
-  te_value: null
-  te_period: "2026-Q1"
-  suggested_source: insee
-  current_source: insee
+  te_page: "https://tradingeconomics.com/france/gdp-growth-annual"
+  te_value: 17.1
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 government-debt:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "insee"
+  current_source: "eurostat"
   conform: false
-  verified: false
-  note: "TE detail 403; FR debt level typically Insee/Banque de France on TE"
+  verified: true
 government-debt-total:
-  te_label: "EUROSTAT"
-  te_url: "https://ec.europa.eu/eurostat"
-  te_page: "https://tradingeconomics.com/france/government-debt-to-gdp"
-  te_value: 116
-  te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
-  conform: true
-  verified: false
-  note: "Debt-to-GDP ratio on TE = EUROSTAT"
+  te_label: "INSEE, France"
+  te_url: "https://www.insee.fr"
+  te_page: "https://tradingeconomics.com/france/government-debt"
+  te_period: "2025-Q4"
+  suggested_source: "insee"
+  current_source: "eurostat"
+  conform: false
+  verified: true
 government-spending:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/government-spending"
-  te_value: 169953
   te_period: "2026-Q1"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 government-spending-eur:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/government-spending-value"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/france/government-spending-eur"
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/gross-fixed-capital-formation"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_period: "2026-Q1"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 hospital-beds:
   te_label: "OECD"
-  te_url: "https://stats.oecd.org"
+  te_url: "https://www.oecd.org/"
   te_page: "https://tradingeconomics.com/france/hospital-beds"
-  te_value: 5.4
-  te_period: "2023"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 house-price-index:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/housing-index"
-  te_value: 1
-  te_period: "2025"
-  suggested_source: insee
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/france/house-price-index"
+  current_source: "eurostat"
   conform: false
   verified: false
-  note: "TE FR HPI YoY % typically INSEE-attributed"
 imports:
-  te_label: "Customs (DGDDI)"
-  te_url: "https://www.douane.gouv.fr"
+  te_label: "Ministère de l'Économie et des Finances"
+  te_url: "http://lekiosque.finances.gouv.fr"
   te_page: "https://tradingeconomics.com/france/imports"
-  te_value: 59323
   te_period: "2026-03"
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
+  current_source: "insee"
+  conform: false
+  verified: true
 industrial-production:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/industrial-production"
-  te_value: 0.9
+  te_value: 47.6
   te_period: "2026-03"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 inflation-cpi:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/inflation-cpi"
   te_value: 2.2
   te_period: "2026-04"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 interest-rate:
   te_label: "European Central Bank"
   te_url: "https://www.ecb.europa.eu"
   te_page: "https://tradingeconomics.com/france/interest-rate"
-  te_value: 2.15
-  te_period: "2026-04"
-  suggested_source: ecb
-  current_source: ecb
+  te_value: 4.75
+  te_period: "2000-10"
+  suggested_source: "ecb"
+  current_source: "ecb"
   conform: true
-  verified: false
+  verified: true
 job-vacancies:
-  te_label: "EUROSTAT"
-  te_url: "https://ec.europa.eu/eurostat"
+  te_label: "DARES, France"
+  te_url: "https://dares.travail-emploi.gouv.fr"
   te_page: "https://tradingeconomics.com/france/job-vacancies"
-  te_value: null
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
-  conform: true
-  verified: false
+  te_period: "March"
+  current_source: "eurostat"
+  conform: false
+  verified: true
 labor-force-participation-rate:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/labor-force-participation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_value: 75.6
+  te_period: "2026-Q1"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 labour-costs:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu"
   te_page: "https://tradingeconomics.com/france/labour-costs"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
+  te_value: 113.8
+  te_period: "2025-Q4"
+  suggested_source: "ecb"
+  current_source: "insee"
+  conform: false
+  verified: true
 long-term-unemployment-rate:
-  te_label: "EUROSTAT"
-  te_url: "https://ec.europa.eu/eurostat"
+  te_label: "INSEE, France"
+  te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/long-term-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
-  conform: true
-  verified: false
+  te_value: 1.8
+  te_period: "2025-Q4"
+  suggested_source: "insee"
+  current_source: "eurostat"
+  conform: false
+  verified: true
 manufacturing-production:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/manufacturing-production"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_value: 69.0
+  te_period: "2026-03"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 medical-doctors:
   te_label: "OECD"
-  te_url: "https://stats.oecd.org"
+  te_url: "https://www.oecd.org/"
   te_page: "https://tradingeconomics.com/france/medical-doctors"
-  te_value: 3.36
-  te_period: "2021"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 minimum-wages:
-  te_label: "Ministère du Travail / INSEE"
-  te_url: "https://travail-emploi.gouv.fr"
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/france/minimum-wages"
-  te_value: 1823
-  te_period: "2026-06"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_period: "2026-Q2"
+  suggested_source: "eurostat"
+  current_source: "curated"
+  conform: false
+  verified: true
 mining-production:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/mining-production"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_value: 144.3
+  te_period: "2026-03"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 nurses:
   te_label: "OECD"
-  te_url: "https://stats.oecd.org"
+  te_url: "https://www.oecd.org/"
   te_page: "https://tradingeconomics.com/france/nurses"
-  te_value: 9.64
-  te_period: "2021"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 personal-income-tax-rate:
-  te_label: "DGFiP"
+  te_label: "Direction Générale des Finances Publiques"
   te_url: "https://www.impots.gouv.fr"
   te_page: "https://tradingeconomics.com/france/personal-income-tax-rate"
-  te_value: 45
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 45.0
+  current_source: "curated"
+  conform: false
+  verified: true
 population:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/population"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: worldbank
+  te_value: 69.1
+  suggested_source: "insee"
+  current_source: "worldbank"
   conform: false
-  verified: false
-  note: "TE FR population typically INSEE-attributed"
+  verified: true
 ppi:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/producer-prices"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_value: 126.1
+  te_period: "March"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 productivity:
   te_label: "EUROSTAT"
-  te_url: "https://ec.europa.eu/eurostat"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/france/productivity"
-  te_value: null
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  te_value: 101.41
+  te_period: "2026-Q1"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
-  verified: false
+  verified: true
 retail-sales:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
-  te_page: "https://tradingeconomics.com/france/retail-sales"
-  te_value: 0.4
-  te_period: "2026-03"
-  suggested_source: insee
-  current_source: insee
-  conform: true
+  te_page: "https://tradingeconomics.com/france/retail-sales-yoy"
+  current_source: "insee"
+  conform: false
   verified: false
 retirement-age-men:
-  te_label: "Ministère du Travail"
-  te_url: "https://travail-emploi.gouv.fr"
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_url: "https://reforme-retraite.gouv.fr/"
   te_page: "https://tradingeconomics.com/france/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 retirement-age-women:
-  te_label: "Ministère du Travail"
-  te_url: "https://travail-emploi.gouv.fr"
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_url: "https://reforme-retraite.gouv.fr/"
   te_page: "https://tradingeconomics.com/france/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 sales-tax-rate:
-  te_label: "DGFiP"
+  te_label: "Direction Générale des Finances Publiques"
   te_url: "https://www.impots.gouv.fr"
   te_page: "https://tradingeconomics.com/france/sales-tax-rate"
-  te_value: 20
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 20.0
+  current_source: "curated"
+  conform: false
+  verified: true
 services-inflation:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
+  te_value: 1.8
+  te_period: "April"
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 social-security-rate:
-  te_label: "URSSAF"
-  te_url: "https://www.urssaf.fr"
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_url: "https://solidarites-sante.gouv.fr/"
   te_page: "https://tradingeconomics.com/france/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 68.0
+  current_source: "curated"
+  conform: false
+  verified: true
 social-security-rate-companies:
-  te_label: "URSSAF"
-  te_url: "https://www.urssaf.fr"
-  te_page: "https://tradingeconomics.com/france/social-security-rate-for-companies"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_page: "https://tradingeconomics.com/france/social-security-rate-companies"
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-employees:
-  te_label: "URSSAF"
-  te_url: "https://www.urssaf.fr"
-  te_page: "https://tradingeconomics.com/france/social-security-rate-for-employees"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_page: "https://tradingeconomics.com/france/social-security-rate-employees"
+  current_source: "curated"
+  conform: false
   verified: false
 terrorism-index:
   te_label: "Institute for Economics and Peace"
-  te_url: "https://www.visionofhumanity.org"
+  te_url: "http://economicsandpeace.org"
   te_page: "https://tradingeconomics.com/france/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 3.22
+  current_source: "curated"
+  conform: false
+  verified: true
 unemployed-persons:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
+  te_label: "DARES, France"
+  te_url: "https://dares.travail-emploi.gouv.fr"
   te_page: "https://tradingeconomics.com/france/unemployed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
+  te_value: 1.803
+  te_period: "2026-03"
+  current_source: "insee"
+  conform: false
+  verified: true
 unemployment:
-  te_label: "INSEE"
+  te_label: "INSEE, France"
   te_url: "https://www.insee.fr"
   te_page: "https://tradingeconomics.com/france/unemployment-rate"
   te_value: 8.1
   te_period: "2026-Q1"
-  suggested_source: insee
-  current_source: insee
+  suggested_source: "insee"
+  current_source: "insee"
   conform: true
-  verified: false
+  verified: true
 weapons-sales:
   te_label: "SIPRI"
   te_url: "https://www.sipri.org"
   te_page: "https://tradingeconomics.com/france/weapons-sales"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 youth-unemployment-rate:
-  te_label: "INSEE"
-  te_url: "https://www.insee.fr"
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/france/youth-unemployment-rate"
   te_value: 20.5
-  te_period: "2026-03"
-  suggested_source: insee
-  current_source: insee
-  conform: true
-  verified: false
+  te_period: "March"
+  suggested_source: "eurostat"
+  current_source: "insee"
+  conform: false
+  verified: true

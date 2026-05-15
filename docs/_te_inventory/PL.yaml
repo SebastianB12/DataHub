@@ -1,21 +1,19 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/poland/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Central Statistical Office of Poland (GUS)"
+  te_url: "https://stat.gov.pl/"
+  te_page: "https://tradingeconomics.com/poland/government-budget"
+  te_value: 7.3
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "Central Statistical Office of Poland (GUS)"
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/business-confidence"
   te_value: -4.4
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
@@ -23,9 +21,8 @@ capacity-utilization:
   te_url: "https://commission.europa.eu/index_en"
   te_page: "https://tradingeconomics.com/poland/capacity-utilization"
   te_value: 77.9
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 changes-in-inventories:
@@ -33,9 +30,8 @@ changes-in-inventories:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/changes-in-inventories"
   te_value: 12445.8
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +40,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/poland/consumer-confidence"
   te_value: -14.1
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -53,49 +49,34 @@ consumer-spending:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/consumer-spending"
   te_value: 524576.4
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/poland/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Bank of Poland"
+  te_url: "https://www.nbp.pl/"
+  te_page: "https://tradingeconomics.com/poland/core-inflation-rate"
+  te_value: 2.7
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 corporate-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/corporate-tax-rate"
   te_value: 19.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/corruption-index"
-  te_value: 53.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 62.0
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/corruption-rank"
-  te_value: 52.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
@@ -104,8 +85,8 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/poland/cpi-clothing"
   te_value: 96.8
   te_period: "2026-02"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
@@ -114,8 +95,8 @@ cpi-education:
   te_page: "https://tradingeconomics.com/poland/cpi-education"
   te_value: 106.0
   te_period: "2026-02"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,18 +105,13 @@ cpi-food:
   te_page: "https://tradingeconomics.com/poland/cpi-food"
   te_value: 102.1
   te_period: "2026-02"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "gus_pl"
   conform: false
   verified: false
 cpi-recreation-and-culture:
@@ -144,28 +120,18 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/poland/cpi-recreation-and-culture"
   te_value: 105.1
   te_period: "2026-02"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "gus_pl"
   conform: false
   verified: false
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
@@ -174,8 +140,8 @@ current-account:
   te_page: "https://tradingeconomics.com/poland/current-account"
   te_value: 990.0
   te_period: "2026-02"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
@@ -183,19 +149,13 @@ current-account-to-gdp:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/current-account-to-gdp"
   te_value: 0.9
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -203,9 +163,8 @@ employed-persons:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/employed-persons"
   te_value: 17346.0
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -213,19 +172,13 @@ employment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/employment-rate"
   te_value: 73.2
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "gus_pl"
   conform: false
   verified: false
 exports:
@@ -234,8 +187,8 @@ exports:
   te_page: "https://tradingeconomics.com/poland/exports"
   te_value: 28767.0
   te_period: "2775-02"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
@@ -244,8 +197,8 @@ food-inflation:
   te_page: "https://tradingeconomics.com/poland/food-inflation"
   te_value: 2.1
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
@@ -253,9 +206,8 @@ gdp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/poland/gdp"
   te_value: 914.7
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -263,9 +215,8 @@ gdp-per-capita:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/poland/gdp-per-capita"
   te_value: 17984.38
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -273,39 +224,29 @@ gdp-per-capita-ppp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/poland/gdp-per-capita-ppp"
   te_value: 45112.6
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/poland/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Central Statistical Office of Poland (GUS)"
+  te_url: "https://stat.gov.pl/"
+  te_page: "https://tradingeconomics.com/poland/gdp-growth-annual"
+  te_value: 0.5
+  te_period: "2026-Q1"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-debt:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/government-debt"
-  te_value: 2037497.2
-  te_period: "1998-02"
-  suggested_source: null
-  current_source: eurostat
+  te_period: "February"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/poland/government-debt-total"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/poland/government-debt"
+  te_period: "February"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-spending:
@@ -313,19 +254,13 @@ government-spending:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/government-spending"
   te_value: 256273.4
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -333,29 +268,18 @@ gross-fixed-capital-formation:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/gross-fixed-capital-formation"
   te_value: 239573.6
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/hospital-beds"
-  te_value: 6.27
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/house-price-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
@@ -364,8 +288,8 @@ imports:
   te_page: "https://tradingeconomics.com/poland/imports"
   te_value: 29792.0
   te_period: "2749-02"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +298,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/poland/industrial-production"
   te_value: 9.4
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,8 +308,8 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/poland/inflation-cpi"
   te_value: 3.2
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 job-vacancies:
@@ -394,8 +318,8 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/poland/job-vacancies"
   te_value: 41.9
   te_period: "2026-02"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -403,9 +327,8 @@ labor-force-participation-rate:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/labor-force-participation-rate"
   te_value: 58.4
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -413,9 +336,8 @@ labour-costs:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/labour-costs"
   te_value: 160.1
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 long-term-unemployment-rate:
@@ -423,9 +345,8 @@ long-term-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/long-term-unemployment-rate"
   te_value: 0.9
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
@@ -434,8 +355,8 @@ manufacturing-production:
   te_page: "https://tradingeconomics.com/poland/manufacturing-production"
   te_value: 9.1
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
@@ -443,9 +364,7 @@ medical-doctors:
   te_url: "https://www.oecd.org/"
   te_page: "https://tradingeconomics.com/poland/medical-doctors"
   te_value: 3.3
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 minimum-wages:
@@ -453,9 +372,8 @@ minimum-wages:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/minimum-wages"
   te_value: 1139.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: curated
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
   verified: true
 mining-production:
@@ -464,18 +382,13 @@ mining-production:
   te_page: "https://tradingeconomics.com/poland/mining-production"
   te_value: 21.1
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/nurses"
-  te_value: 5.84
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
@@ -483,9 +396,7 @@ personal-income-tax-rate:
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/poland/personal-income-tax-rate"
   te_value: 32.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 population:
@@ -493,29 +404,26 @@ population:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/population"
   te_value: 36.5
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 ppi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/poland/ppi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Central Statistical Office of Poland (GUS)"
+  te_url: "https://stat.gov.pl/"
+  te_page: "https://tradingeconomics.com/poland/producer-prices"
+  te_value: 115.2
+  te_period: "March"
+  current_source: "gus_pl"
   conform: false
-  verified: false
+  verified: true
 productivity:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/poland/productivity"
   te_value: 136.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
@@ -524,8 +432,8 @@ retail-sales:
   te_page: "https://tradingeconomics.com/poland/retail-sales"
   te_value: 1.9
   te_period: "2026-03"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retirement-age-men:
@@ -533,9 +441,7 @@ retirement-age-men:
   te_url: "https://www.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/retirement-age-men"
   te_value: 65.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 retirement-age-women:
@@ -543,9 +449,7 @@ retirement-age-women:
   te_url: "https://www.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/retirement-age-women"
   te_value: 60.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 sales-tax-rate:
@@ -553,69 +457,39 @@ sales-tax-rate:
   te_url: "https://www.vatlive.com"
   te_page: "https://tradingeconomics.com/poland/sales-tax-rate"
   te_value: 23.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "gus_pl"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/social-security-rate"
   te_value: 34.19
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/poland/terrorism-index"
   te_value: 1.68
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 unemployed-persons:
@@ -624,8 +498,8 @@ unemployed-persons:
   te_page: "https://tradingeconomics.com/poland/unemployed-persons"
   te_value: 949.8
   te_period: "2026-03"
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
@@ -633,9 +507,17 @@ unemployment:
   te_url: "https://stat.gov.pl/"
   te_page: "https://tradingeconomics.com/poland/unemployment-rate"
   te_value: 6.1
-  te_period: null
-  suggested_source: gus_pl
-  current_source: eurostat
+  suggested_source: "gus_pl"
+  current_source: "eurostat"
+  conform: false
+  verified: true
+unemployment-rate-registered:
+  te_label: "Central Statistical Office of Poland (GUS)"
+  te_url: "https://stat.gov.pl/"
+  te_page: "https://tradingeconomics.com/poland/unemployment-rate"
+  te_value: 6.1
+  te_period: "2026-03"
+  current_source: "gus_pl"
   conform: false
   verified: true
 youth-unemployment-rate:
@@ -644,7 +526,7 @@ youth-unemployment-rate:
   te_page: "https://tradingeconomics.com/poland/youth-unemployment-rate"
   te_value: 12.1
   te_period: "2026-02"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

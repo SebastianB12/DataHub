@@ -1,41 +1,33 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/cyprus/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Statistical Service of the Republic of Cyprus"
+  te_url: "http://www.mof.gov.cy"
+  te_page: "https://tradingeconomics.com/cyprus/government-budget"
+  te_value: 3.4
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 business-confidence:
   te_label: "European Commission"
   te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/cyprus/business-confidence"
   te_value: 97.6
   te_period: "2026-03"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 capacity-utilization:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/capacity-utilization"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 changes-in-inventories:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "https://www.cystat.gov.cy/en/"
   te_page: "https://tradingeconomics.com/cyprus/changes-in-inventories"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +36,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/cyprus/consumer-confidence"
   te_value: -12.2
   te_period: "2026-01"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 consumer-spending:
@@ -54,49 +46,31 @@ consumer-spending:
   te_page: "https://tradingeconomics.com/cyprus/consumer-spending"
   te_value: 4559.4
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/cyprus/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/cyprus/core-inflation-rate"
+  current_source: "eurostat"
   conform: false
   verified: false
 corporate-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 12.5
+  current_source: "curated"
+  conform: false
   verified: false
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 66.0
+  current_source: "curated"
+  conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 cpi-clothing:
   te_label: "Statistical Service of the Republic of Cyprus"
@@ -104,18 +78,17 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/cyprus/cpi-clothing"
   te_value: 98.76
   te_period: "2026-03"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "https://www.cystat.gov.cy/en/"
   te_page: "https://tradingeconomics.com/cyprus/cpi-education"
-  te_value: null
   te_period: "2018-10"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +97,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/cyprus/cpi-food"
   te_value: 104.62
   te_period: "2026-03"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +107,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/cyprus/cpi-housing-utilities"
   te_value: 101.64
   te_period: "2026-03"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +117,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/cyprus/cpi-recreation-and-culture"
   te_value: 102.74
   te_period: "2026-03"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,48 +127,36 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/cyprus/cpi-transportation"
   te_value: 108.87
   te_period: "2026-04"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 current-account:
   te_label: "Central Bank of Cyprus"
   te_url: "https://www.centralbank.cy"
   te_page: "https://tradingeconomics.com/cyprus/current-account"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/cyprus/current-account-to-gdp"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -204,8 +165,8 @@ employed-persons:
   te_page: "https://tradingeconomics.com/cyprus/employed-persons"
   te_value: 504.64
   te_period: "2025"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -214,48 +175,40 @@ employment-rate:
   te_page: "https://tradingeconomics.com/cyprus/employment-rate"
   te_value: 77.2
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "http://www.mof.gov.cy"
   te_page: "https://tradingeconomics.com/cyprus/exports"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "https://www.cystat.gov.cy/en/"
   te_page: "https://tradingeconomics.com/cyprus/food-inflation"
-  te_value: null
   te_period: "2026-04"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/cyprus/gdp"
-  te_value: null
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -264,8 +217,8 @@ gdp-per-capita:
   te_page: "https://tradingeconomics.com/cyprus/gdp-per-capita"
   te_value: 261.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -274,38 +227,26 @@ gdp-per-capita-ppp:
   te_page: "https://tradingeconomics.com/cyprus/gdp-per-capita-ppp"
   te_value: 300.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/cyprus/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Statistical Service of the Republic of Cyprus"
+  te_url: "https://www.cystat.gov.cy/en/default"
+  te_page: "https://tradingeconomics.com/cyprus/gdp-growth-annual"
+  te_period: "2026-Q1"
+  current_source: "cystat_cy"
   conform: false
-  verified: false
+  verified: true
 government-debt:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 government-debt-total:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 government-spending:
@@ -314,18 +255,13 @@ government-spending:
   te_page: "https://tradingeconomics.com/cyprus/government-spending"
   te_value: 1325.7
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -334,19 +270,14 @@ gross-fixed-capital-formation:
   te_page: "https://tradingeconomics.com/cyprus/gross-fixed-capital-formation"
   te_value: 1566.9
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 house-price-index:
   te_label: "Statistical Service of the Republic of Cyprus"
@@ -354,28 +285,26 @@ house-price-index:
   te_page: "https://tradingeconomics.com/cyprus/housing-index"
   te_value: 152.91
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 imports:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "http://www.mof.gov.cy"
   te_page: "https://tradingeconomics.com/cyprus/imports"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "https://www.cystat.gov.cy/en/default"
   te_page: "https://tradingeconomics.com/cyprus/industrial-production"
-  te_value: null
   te_period: "2026-02"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,18 +313,17 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/cyprus/inflation-cpi"
   te_value: 2.8
   te_period: "2026-04"
-  suggested_source: cystat_cy
-  current_source: cystat_cy
+  suggested_source: "cystat_cy"
+  current_source: "cystat_cy"
   conform: true
   verified: true
 interest-rate:
   te_label: "European Central Bank"
   te_url: "https://www.ecb.europa.eu/"
   te_page: "https://tradingeconomics.com/cyprus/interest-rate"
-  te_value: null
   te_period: "2000-10"
-  suggested_source: ecb
-  current_source: ecb
+  suggested_source: "ecb"
+  current_source: "ecb"
   conform: true
   verified: true
 job-vacancies:
@@ -404,8 +332,8 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/cyprus/job-vacancies"
   te_value: 13538.0
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -414,8 +342,8 @@ labor-force-participation-rate:
   te_page: "https://tradingeconomics.com/cyprus/labor-force-participation-rate"
   te_value: 65.2
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -424,8 +352,8 @@ labour-costs:
   te_page: "https://tradingeconomics.com/cyprus/labour-costs"
   te_value: 112.88
   te_period: "2025-Q4"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 long-term-unemployment-rate:
@@ -434,78 +362,58 @@ long-term-unemployment-rate:
   te_page: "https://tradingeconomics.com/cyprus/long-term-unemployment-rate"
   te_value: 0.7
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "https://www.cystat.gov.cy/en/default"
   te_page: "https://tradingeconomics.com/cyprus/manufacturing-production"
-  te_value: null
   te_period: "2026-02"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 minimum-wages:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 mining-production:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "http://www.cystat.gov.cy"
   te_page: "https://tradingeconomics.com/cyprus/mining-production"
-  te_value: null
   te_period: "2026-02"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Inland Revenue Department of the Republic of Cyprus"
+  te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/cyprus/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 35.0
+  current_source: "curated"
+  conform: false
+  verified: true
 population:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/cyprus/population"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 ppi:
@@ -514,8 +422,8 @@ ppi:
   te_page: "https://tradingeconomics.com/cyprus/producer-prices"
   te_value: 121.0
   te_period: "2026-02"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 productivity:
@@ -524,137 +432,100 @@ productivity:
   te_page: "https://tradingeconomics.com/cyprus/productivity"
   te_value: 116.76
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
   te_label: "Ministry of Finance, Cyprus"
   te_url: "http://www.mof.gov.cy"
   te_page: "https://tradingeconomics.com/cyprus/retail-sales"
-  te_value: null
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 retirement-age-women:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 sales-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 19.0
+  current_source: "curated"
+  conform: false
   verified: false
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 17.6
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/cyprus/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 0.18
+  current_source: "curated"
+  conform: false
   verified: false
+trade-balance:
+  te_label: "Statistical Service of the Republic of Cyprus"
+  te_url: "https://www.cystat.gov.cy/en/default"
+  te_page: "https://tradingeconomics.com/cyprus/balance-of-trade"
+  te_period: "2026-03"
+  current_source: "cystat_cy"
+  conform: false
+  verified: true
 unemployed-persons:
   te_label: "Statistical Service of the Republic of Cyprus"
   te_url: "https://www.cystat.gov.cy/en/"
   te_page: "https://tradingeconomics.com/cyprus/unemployed-persons"
   te_value: 21289.0
   te_period: "2025-Q4"
-  suggested_source: cystat_cy
-  current_source: eurostat
+  suggested_source: "cystat_cy"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/cyprus/unemployment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/cyprus/unemployment-rate"
+  te_value: 4.3
+  te_period: "March"
+  suggested_source: "eurostat"
+  current_source: "cystat_cy"
   conform: false
-  verified: false
+  verified: true
 youth-unemployment-rate:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/cyprus/youth-unemployment-rate"
-  te_value: null
   te_period: "2013-07"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

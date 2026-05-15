@@ -1,21 +1,19 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/sweden/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/sweden/government-budget"
+  te_value: 1.3
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 business-confidence:
   te_label: "National Institute of Economic Research, Sweden"
   te_url: "https://www.konj.se/"
   te_page: "https://tradingeconomics.com/sweden/business-confidence"
   te_value: 103.3
   te_period: "2026-04"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
@@ -24,18 +22,17 @@ capacity-utilization:
   te_page: "https://tradingeconomics.com/sweden/capacity-utilization"
   te_value: 20.0
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 changes-in-inventories:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/changes-in-inventories"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +41,7 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/sweden/consumer-confidence"
   te_value: 91.5
   te_period: "2026-04"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -54,49 +50,38 @@ consumer-spending:
   te_page: "https://tradingeconomics.com/sweden/consumer-spending"
   te_value: 744967.0
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/sweden/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Statistics Sweden"
+  te_url: "https://www.scb.se/"
+  te_page: "https://tradingeconomics.com/sweden/core-inflation-rate"
+  te_value: 11.6
+  te_period: "2026-04"
+  suggested_source: "scb_se"
+  current_source: "eurostat"
+  conform: false
+  verified: true
+corporate-tax-rate:
+  te_label: "Skatteverket"
+  te_url: "https://www.skatteverket.se/"
+  te_page: "https://tradingeconomics.com/sweden/corporate-tax-rate"
+  te_value: 20.6
+  current_source: "curated"
+  conform: false
+  verified: true
+corruption-index:
+  te_page: "https://tradingeconomics.com/sweden/corruption-index"
+  te_value: 95.0
+  current_source: "curated"
   conform: false
   verified: false
-corporate-tax-rate:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/sweden/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-corruption-index:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/sweden/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 cpi-clothing:
   te_label: "Statistics Sweden"
@@ -104,18 +89,13 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/sweden/cpi-clothing"
   te_value: 124.95
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/cpi-education"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "scb_se"
   conform: false
   verified: false
 cpi-food:
@@ -124,8 +104,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/sweden/cpi-food"
   te_value: 125.14
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,18 +114,17 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/sweden/cpi-housing-utilities"
   te_value: 134.93
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/cpi-recreation-and-culture"
-  te_value: null
   te_period: "2025-07"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,38 +133,31 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/sweden/cpi-transportation"
   te_value: 124.89
   te_period: "2026-04"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 current-account:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/current-account"
-  te_value: null
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/sweden/current-account-to-gdp"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
@@ -194,8 +166,8 @@ disposable-personal-income:
   te_page: "https://tradingeconomics.com/sweden/disposable-personal-income"
   te_value: 773762.0
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 employed-persons:
@@ -204,8 +176,8 @@ employed-persons:
   te_page: "https://tradingeconomics.com/sweden/employed-persons"
   te_value: 5.23
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -214,58 +186,48 @@ employment-rate:
   te_page: "https://tradingeconomics.com/sweden/employment-rate"
   te_value: 68.5
   te_period: "2026-02"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/exports"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/food-inflation"
-  te_value: null
   te_period: "2026-04"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/sweden/gdp"
-  te_value: null
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-growth-rate:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/gdp-growth"
-  te_value: null
-  te_period: null
-  suggested_source: scb_se
-  current_source: scb_se
+  suggested_source: "scb_se"
+  current_source: "scb_se"
   conform: true
   verified: true
 gdp-per-capita:
@@ -274,8 +236,8 @@ gdp-per-capita:
   te_page: "https://tradingeconomics.com/sweden/gdp-per-capita"
   te_value: 435.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -284,28 +246,26 @@ gdp-per-capita-ppp:
   te_page: "https://tradingeconomics.com/sweden/gdp-per-capita-ppp"
   te_value: 356.0
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/sweden/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Statistics Sweden"
+  te_url: "https://www.scb.se/"
+  te_page: "https://tradingeconomics.com/sweden/gdp-growth-annual"
+  te_value: 10.6
+  suggested_source: "scb_se"
+  current_source: "scb_se"
+  conform: true
+  verified: true
 government-debt:
   te_label: "Swedish National Debt Office"
   te_url: "https://www.riksgalden.se/"
   te_page: "https://tradingeconomics.com/sweden/government-debt"
   te_value: 1212851.0
   te_period: "2026-03"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt-total:
@@ -314,8 +274,7 @@ government-debt-total:
   te_page: "https://tradingeconomics.com/sweden/government-debt"
   te_value: 1212851.0
   te_period: "2026-03"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending:
@@ -324,18 +283,13 @@ government-spending:
   te_page: "https://tradingeconomics.com/sweden/government-spending"
   te_value: 437456.0
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -344,19 +298,14 @@ gross-fixed-capital-formation:
   te_page: "https://tradingeconomics.com/sweden/gross-fixed-capital-formation"
   te_value: 421627.0
   te_period: "2025-Q4"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 house-price-index:
   te_label: "Statistics Sweden"
@@ -364,18 +313,17 @@ house-price-index:
   te_page: "https://tradingeconomics.com/sweden/housing-index"
   te_value: 953.0
   te_period: "2026-Q1"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 imports:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/imports"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -384,8 +332,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/sweden/industrial-production"
   te_value: 3.5
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production-yoy:
@@ -394,18 +342,17 @@ industrial-production-yoy:
   te_page: "https://tradingeconomics.com/sweden/industrial-production"
   te_value: 3.5
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: scb_se
+  suggested_source: "scb_se"
+  current_source: "scb_se"
   conform: true
   verified: true
 inflation-cpi:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/inflation-cpi"
-  te_value: null
   te_period: "2026-04"
-  suggested_source: scb_se
-  current_source: scb_se
+  suggested_source: "scb_se"
+  current_source: "scb_se"
   conform: true
   verified: true
 job-vacancies:
@@ -414,8 +361,7 @@ job-vacancies:
   te_page: "https://tradingeconomics.com/sweden/job-vacancies"
   te_value: 1378.0
   te_period: "2026-02"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 labor-force-participation-rate:
@@ -424,8 +370,8 @@ labor-force-participation-rate:
   te_page: "https://tradingeconomics.com/sweden/labor-force-participation-rate"
   te_value: 75.9
   te_period: "2026-02"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -434,8 +380,8 @@ labour-costs:
   te_page: "https://tradingeconomics.com/sweden/labour-costs"
   te_value: 169.2
   te_period: "2026-01"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 long-term-unemployment-rate:
@@ -444,78 +390,60 @@ long-term-unemployment-rate:
   te_page: "https://tradingeconomics.com/sweden/long-term-unemployment-rate"
   te_value: 1.9
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/manufacturing-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
+  te_label: "OECD"
+  te_url: "https://www.oecd.org/"
   te_page: "https://tradingeconomics.com/sweden/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 minimum-wages:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 mining-production:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/mining-production"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Skatteverket"
+  te_url: "https://www.skatteverket.se/"
   te_page: "https://tradingeconomics.com/sweden/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 52.0
+  current_source: "curated"
+  conform: false
+  verified: true
 population:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/sweden/population"
-  te_value: null
   te_period: "2025"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 ppi:
@@ -524,8 +452,8 @@ ppi:
   te_page: "https://tradingeconomics.com/sweden/producer-prices"
   te_value: 135.8
   te_period: "2026-02"
-  suggested_source: scb_se
-  current_source: scb_se
+  suggested_source: "scb_se"
+  current_source: "scb_se"
   conform: true
   verified: true
 productivity:
@@ -534,128 +462,91 @@ productivity:
   te_page: "https://tradingeconomics.com/sweden/productivity"
   te_value: 108.32
   te_period: "2025-Q4"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/retail-sales"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 retail-sales-yoy:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/retail-sales"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: scb_se
+  suggested_source: "scb_se"
+  current_source: "scb_se"
   conform: true
   verified: true
 retirement-age-men:
-  te_label: null
-  te_url: null
+  te_label: "Ministry of Health and Social Affairs, Sweden"
+  te_url: "https://www.government.se"
   te_page: "https://tradingeconomics.com/sweden/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 retirement-age-women:
-  te_label: null
-  te_url: null
+  te_label: "Ministry of Health and Social Affairs, Sweden"
+  te_url: "https://www.government.se"
   te_page: "https://tradingeconomics.com/sweden/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  current_source: "curated"
+  conform: false
+  verified: true
 sales-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Skatteverket"
+  te_url: "https://www.skatteverket.se/"
   te_page: "https://tradingeconomics.com/sweden/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 25.0
+  current_source: "curated"
+  conform: false
+  verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
+  te_label: "Skatteverket"
+  te_url: "https://www.skatteverket.se/"
   te_page: "https://tradingeconomics.com/sweden/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
+  te_value: 31.42
+  current_source: "curated"
+  conform: false
+  verified: true
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/sweden/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 1.84
+  current_source: "curated"
+  conform: false
   verified: false
 trade-balance:
   te_label: "Statistics Sweden"
   te_url: "https://www.scb.se/"
   te_page: "https://tradingeconomics.com/sweden/balance-of-trade"
-  te_value: null
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: scb_se
+  suggested_source: "scb_se"
+  current_source: "scb_se"
   conform: true
   verified: true
 unemployed-persons:
@@ -664,27 +555,27 @@ unemployed-persons:
   te_page: "https://tradingeconomics.com/sweden/unemployed-persons"
   te_value: 564.9
   te_period: "2026-03"
-  suggested_source: scb_se
-  current_source: eurostat
+  suggested_source: "scb_se"
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/sweden/unemployment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: scb_se
-  conform: false
-  verified: false
+  te_label: "Statistics Sweden"
+  te_url: "https://www.scb.se/"
+  te_page: "https://tradingeconomics.com/sweden/unemployment-rate"
+  te_value: 9.7
+  te_period: "2026-03"
+  suggested_source: "scb_se"
+  current_source: "scb_se"
+  conform: true
+  verified: true
 youth-unemployment-rate:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/sweden/youth-unemployment-rate"
   te_value: 26.6
   te_period: "2026-02"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

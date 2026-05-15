@@ -1,2110 +1,1669 @@
-# US (United States) — TE source inventory
-# Generated 2026-05-14. Source attributions extracted from TE indicator-page footers
-# (class=source-name / source-present) where the page could be retrieved, and inferred
-# from documented TE category conventions where rate-limit prevented direct verification.
-# suggested_source resolves via src/lib/sources.ts STATIC_LABELS.
-# Note: BLS / BEA / Federal Reserve / U.S. Treasury / U.S. Census Bureau / HUD / Freddie Mac
-#       / U. of Michigan / Conference Board / ISM / S&P / NAHB / NAR / API are all available
-#       through FRED, so the resolved label = "FRED (Federal Reserve)" in our system.
-#       BIS series mirrored via FRED resolve to "Bank for International Settlements (BIS)".
-
 15-year-mortgage-rate:
   te_label: "Freddie Mac"
-  te_url: "https://www.freddiemac.com"
+  te_url: "https://www.freddiemac.com/"
   te_page: "https://tradingeconomics.com/united-states/15-year-mortgage-rate"
-  te_value: 5.72
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  te_value: 5.71
+  te_period: "May"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 30-year-mortgage-rate:
   te_label: "Freddie Mac"
   te_url: "https://www.freddiemac.com"
   te_page: "https://tradingeconomics.com/united-states/30-year-mortgage-rate"
   te_value: 6.37
   te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 adp-employment-change:
-  te_label: "ADP"
-  te_url: "https://www.adpemploymentreport.com"
+  te_label: "Automatic Data Processing, Inc."
+  te_url: "https://adpemploymentreport.com/"
   te_page: "https://tradingeconomics.com/united-states/adp-employment-change"
-  te_value: 109
   te_period: "2026-04"
-  suggested_source: fred   # ADPMNUSNERSA mirror in FRED
-  current_source: fred
-  conform: true
-  verified: false
-
+  current_source: "fred"
+  conform: false
+  verified: true
 average-hourly-earnings-yoy:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/average-hourly-earnings-yoy"
-  te_value: 3.6
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 average-weekly-hours:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/average-weekly-hours"
-  te_value: 34.3
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 bank-lending-rate:
   te_label: "Federal Reserve"
   te_url: "http://www.federalreserve.gov/"
   te_page: "https://tradingeconomics.com/united-states/bank-lending-rate"
   te_value: 6.75
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 banks-balance-sheet:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/banks-balance-sheet"
-  te_value: 25312
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 budget-deficit:
-  te_label: "U.S. Department of the Treasury"
-  te_url: "https://home.treasury.gov"
-  te_page: "https://tradingeconomics.com/united-states/government-budget-value"
-  te_value: 215024
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_label: "U.S. Treasury"
+  te_url: "https://home.treasury.gov/"
+  te_page: "https://tradingeconomics.com/united-states/government-budget"
+  te_value: 5.9
+  current_source: "fred"
+  conform: false
+  verified: true
 building-permits:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/building-permits"
-  te_value: 1363
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 1.363
+  te_period: "2026-03"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 business-inventories:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/business-inventories"
-  te_value: 0.4
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 capacity-utilization:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/capacity-utilization"
-  te_value: 75.7
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 76.1
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 capital-flows:
   te_label: "U.S. Department of the Treasury"
-  te_url: "https://home.treasury.gov"
+  te_url: "https://home.treasury.gov/"
   te_page: "https://tradingeconomics.com/united-states/capital-flows"
-  te_value: 184500
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "2026-02"
+  current_source: "fred"
+  conform: false
+  verified: true
 car-production:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "https://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/car-production"
   te_value: 9.98
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 case-shiller-home-price-index:
   te_label: "Standard & Poor's"
   te_url: "https://www.spglobal.com"
   te_page: "https://tradingeconomics.com/united-states/case-shiller-home-price-index"
   te_value: 338
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 central-bank-balance:
-  te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
-  te_page: "https://tradingeconomics.com/united-states/central-bank-balance-sheet"
-  te_value: 6709505
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/central-bank-balance"
+  current_source: "fred"
+  conform: false
   verified: false
-
 changes-in-inventories:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/changes-in-inventories"
-  te_value: -7.5
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 chicago-fed-national-activity-index:
   te_label: "Federal Reserve Bank of Chicago"
-  te_url: "https://www.chicagofed.org"
+  te_url: "https://www.chicagofed.org/"
   te_page: "https://tradingeconomics.com/united-states/chicago-fed-national-activity-index"
-  te_value: -0.2
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2026-03"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 construction-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/construction-payrolls"
-  te_value: 9
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 construction-spending:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/construction-spending"
-  te_value: 0.6
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 consumer-confidence:
   te_label: "University of Michigan"
   te_url: "https://data.sca.isr.umich.edu"
   te_page: "https://tradingeconomics.com/united-states/consumer-confidence"
   te_value: 48.2
   te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 consumer-credit:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "https://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/consumer-credit"
-  te_value: 24.86
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 consumer-spending:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/consumer-spending"
-  te_value: 16731
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 continuing-jobless-claims:
   te_label: "U.S. Department of Labor"
-  te_url: "https://www.dol.gov"
+  te_url: "http://www.dol.gov"
   te_page: "https://tradingeconomics.com/united-states/continuing-jobless-claims"
-  te_value: 1766
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "2020-05"
+  current_source: "fred"
+  conform: false
+  verified: true
 core-cpi:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/core-inflation-rate"
   te_value: 2.8
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 core-pce-price-index:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov/"
   te_page: "https://tradingeconomics.com/united-states/core-pce-price-index"
-  te_value: 129
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_value: 129.28
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 core-producer-prices:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_label: "U.S. Department of Labor"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/core-producer-prices"
-  te_value: 154
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_value: 154.06
+  te_period: "April"
+  current_source: "fred"
+  conform: false
+  verified: true
 corporate-profits:
-  te_label: "U.S. Bureau of Economic Analysis"
+  te_label: "U.S. Bureau of Economics Analysis"
   te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/corporate-profits"
-  te_value: 3606
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "2025-Q4"
+  current_source: "fred"
+  conform: false
+  verified: true
 corporate-tax-rate:
   te_label: "Internal Revenue Service"
   te_url: "https://www.taxpolicycenter.org/"
   te_page: "https://tradingeconomics.com/united-states/corporate-tax-rate"
   te_value: 21
   te_period: "2026"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 corruption-index:
   te_label: "Transparency International"
-  te_url: null
   te_page: "https://tradingeconomics.com/united-states/corruption-index"
   te_value: 64
   te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 corruption-rank:
   te_label: "Transparency International"
-  te_url: null
   te_page: "https://tradingeconomics.com/united-states/corruption-rank"
   te_value: 29
   te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 cpi-clothing:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
-  te_page: "https://tradingeconomics.com/united-states/cpi-clothing"
-  te_value: 138
+  te_url: "http://www.bls.gov"
+  te_page: "https://tradingeconomics.com/united-states/cpi-transportation"
+  te_value: 291.75
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-education:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/cpi-education"
-  te_value: 315
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 315.42
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-food:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
-  te_page: "https://tradingeconomics.com/united-states/cpi-food"
-  te_value: 348
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_url: "http://www.bls.gov"
+  te_page: "https://tradingeconomics.com/united-states/cpi-housing-utilities"
+  te_value: 357.35
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-housing-utilities:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/cpi-housing-utilities"
-  te_value: 357
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 357.35
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-median:
   te_label: "Federal Reserve Bank of Cleveland"
-  te_url: "https://www.clevelandfed.org"
+  te_url: "https://www.clevelandfed.org/"
   te_page: "https://tradingeconomics.com/united-states/cpi-median"
   te_value: 2.8
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-recreation-and-culture:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/cpi-recreation-and-culture"
-  te_value: 144
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 143.92
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-transportation:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/cpi-transportation"
-  te_value: 292
+  te_value: 291.75
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cpi-trimmed-mean:
   te_label: "Federal Reserve Bank of Cleveland"
-  te_url: "https://www.clevelandfed.org"
+  te_url: "https://www.clevelandfed.org/"
   te_page: "https://tradingeconomics.com/united-states/cpi-trimmed-mean"
   te_value: 2.8
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 credit-rating:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/united-states/rating"
-  te_value: 97
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false   # TE rating page has no public source attribution
-
+  te_page: "https://tradingeconomics.com/united-states/credit-rating"
+  current_source: "curated"
+  conform: false
+  verified: false
 crude-oil-imports:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/crude-oil-imports"
-  te_value: -318
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "2025-06"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 crude-oil-production:
   te_label: "U.S. Energy Information Administration"
   te_url: "http://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/crude-oil-production"
   te_value: 13626
   te_period: "2026-02"
-  suggested_source: eia
-  current_source: eia
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
   verified: true
-
 crude-oil-stocks:
-  te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
-  te_page: "https://tradingeconomics.com/united-states/crude-oil-stocks-change"
-  te_value: -4.31
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/crude-oil-stocks"
+  current_source: "eia"
+  conform: false
   verified: false
-
 currency:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/united-states/currency"
-  te_value: 98.44
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false   # TE currency page has no public source attribution
-
+  te_period: "March"
+  current_source: "fred"
+  conform: false
+  verified: false
 current-account:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/current-account"
-  te_value: -191
+  te_value: 2.4
   te_period: "2025-Q4"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 cushing-crude-oil-stocks:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/cushing-crude-oil-stocks"
-  te_value: -1702
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "2020-04"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 dallas-fed-manufacturing-index:
   te_label: "Federal Reserve Bank of Dallas"
   te_url: "https://www.dallasfed.org"
   te_page: "https://tradingeconomics.com/united-states/dallas-fed-manufacturing-index"
-  te_value: -2.3
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 disposable-personal-income:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/disposable-personal-income"
-  te_value: 23430
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_period: "February"
+  current_source: "fred"
+  conform: false
   verified: false
-
 distillate-fuel-production:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/distillate-fuel-production"
-  te_value: -124
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "May"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 distillate-stocks:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/distillate-stocks"
-  te_value: 190
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "May"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 durable-goods-orders:
   te_label: "U.S. Census Bureau"
   te_url: "https://www.census.gov/"
   te_page: "https://tradingeconomics.com/united-states/durable-goods-orders"
-  te_value: 0.8
+  te_value: 28.8
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 durable-goods-orders-ex-defense:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/durable-goods-orders-ex-defense"
-  te_value: -0.3
+  te_value: 29.3
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 durable-goods-orders-ex-transport:
-  te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
-  te_page: "https://tradingeconomics.com/united-states/durable-goods-orders-ex-transportation"
-  te_value: 0.9
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/durable-goods-orders-ex-transport"
+  current_source: "fred"
+  conform: false
   verified: false
-
 effective-federal-funds-rate:
-  te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_label: "Federal Reserve Bank of New York"
+  te_url: "https://www.newyorkfed.org"
   te_page: "https://tradingeconomics.com/united-states/effective-federal-funds-rate"
   te_value: 3.63
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "1981-07"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 employed-persons:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/employed-persons"
-  te_value: 162622
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 employment-cost-index:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/employment-cost-index"
-  te_value: 0.9
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
-employment-cost-index-benefits:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
-  te_page: "https://tradingeconomics.com/united-states/employment-cost-index-benefits"
   te_value: 1.2
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
+employment-cost-index-benefits:
+  te_label: "U.S. Bureau of Labor Statistics"
+  te_url: "http://www.bls.gov"
+  te_page: "https://tradingeconomics.com/united-states/employment-cost-index-benefits"
+  te_value: 5.7
+  suggested_source: "fred"
+  current_source: "fred"
+  conform: true
+  verified: true
 employment-cost-index-wages:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/employment-cost-index-wages"
-  te_value: 0.8
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 employment-rate:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/employment-rate"
   te_value: 59.1
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_period: "April"
+  current_source: "fred"
+  conform: false
   verified: false
-
 energy-inflation:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/energy-inflation"
   te_value: 17.9
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 existing-home-sales:
   te_label: "National Association of Realtors"
   te_url: "https://www.nar.realtor"
   te_page: "https://tradingeconomics.com/united-states/existing-home-sales"
-  te_value: 4020
+  te_value: 4.02
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  current_source: "fred"
+  conform: false
+  verified: true
 export-prices:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/export-prices"
-  te_value: 161
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 166.1
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 exports:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Census Bureau"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/exports"
-  te_value: 321
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 factory-orders:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "http://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/factory-orders"
-  te_value: 1.5
+  te_value: 0.5
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 federal-government-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/federal-government-payrolls"
-  te_value: -9
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 financial-activities-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/financial-activities-payrolls"
-  te_value: -11
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 fiscal-expenditure:
-  te_label: "U.S. Department of the Treasury"
-  te_url: "https://home.treasury.gov"
+  te_label: "Financial Management Service, United States"
+  te_url: "https://www.fiscal.treasury.gov"
   te_page: "https://tradingeconomics.com/united-states/fiscal-expenditure"
-  te_value: 622316
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "April"
+  current_source: "fred"
+  conform: false
+  verified: true
 food-inflation:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/food-inflation"
   te_value: 3.2
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 foreign-exchange-reserves:
   te_label: "Federal Reserve"
   te_url: "http://www.federalreserve.gov/"
   te_page: "https://tradingeconomics.com/united-states/foreign-exchange-reserves"
   te_value: 38121
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 full-time-employment:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/full-time-employment"
-  te_value: 134252
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 full-year-gdp-growth:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/full-year-gdp-growth"
-  te_value: 2.1
-  te_period: "2025"
-  suggested_source: fred
-  current_source: fred
+  te_value: 2.2
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gasoline-prices:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/gasoline-prices"
-  te_value: 1.08
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "April"
+  suggested_source: "eia"
+  current_source: "fred"
+  conform: false
+  verified: true
 gasoline-production:
   te_label: "U.S. Energy Information Administration"
   te_url: "http://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/gasoline-production"
-  te_value: 222
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "May"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 gasoline-stocks:
-  te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
-  te_page: "https://tradingeconomics.com/united-states/gasoline-stocks-change"
-  te_value: -4084
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/gasoline-stocks"
+  current_source: "eia"
+  conform: false
   verified: false
-
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/united-states/gdp"
   te_value: 29184.89
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
-
 gdp-deflator:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gdp-deflator"
-  te_value: 131
+  te_value: 4.5
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-from-construction:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Bureau of Economic Analysis (BEA)"
+  te_url: "https://www.bea.gov/"
   te_page: "https://tradingeconomics.com/united-states/gdp-from-construction"
-  te_value: 885
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2025-Q4"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-from-transport:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Bureau of Economic Analysis (BEA)"
+  te_url: "https://www.bea.gov/"
   te_page: "https://tradingeconomics.com/united-states/gdp-from-transport"
-  te_value: 749
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2025-Q4"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-from-utilities:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Bureau of Economic Analysis (BEA)"
+  te_url: "https://www.bea.gov/"
   te_page: "https://tradingeconomics.com/united-states/gdp-from-utilities"
-  te_value: 350
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2025-Q4"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-growth-contribution-consumer:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
-  te_page: "https://tradingeconomics.com/united-states/gdp-growth-contribution-consumer-spending"
-  te_value: 1.08
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/gdp-growth-contribution-consumer"
+  current_source: "fred"
+  conform: false
   verified: false
-
 gdp-growth-contribution-exports:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gdp-growth-contribution-exports"
   te_value: 1.32
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-growth-contribution-government:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gdp-growth-contribution-government"
   te_value: 0.73
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-growth-contribution-imports:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gdp-growth-contribution-imports"
   te_value: -2.62
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-growth-contribution-investment:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gdp-growth-contribution-investment"
   te_value: 1.48
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-per-capita:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/united-states/gdp-per-capita"
-  te_value: 66683
-  te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  te_value: 528.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
-  verified: false
-
+  verified: true
 gdp-per-capita-ppp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/united-states/gdp-per-capita-ppp"
-  te_value: 75492
-  te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  te_value: 425.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
-  verified: false
-
+  verified: true
 gdp-real:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
-  te_page: "https://tradingeconomics.com/united-states/gdp-constant-prices"
-  te_value: 24174
+  te_url: "http://www.bea.gov"
+  te_page: "https://tradingeconomics.com/united-states/gdp-growth-annual"
+  te_value: 2.0
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 gdp-sales-qoq:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gdp-sales-qoq"
   te_value: 1.6
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 goods-exports:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Census Bureau"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/goods-exports"
-  te_value: 212504
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 goods-imports:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Census Bureau"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/goods-imports"
-  te_value: 299950
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 goods-trade-balance:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Census Bureau"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/goods-trade-balance"
-  te_value: -87446
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 government-budget-value:
-  te_label: "U.S. Department of the Treasury"
-  te_url: "https://home.treasury.gov"
+  te_label: "Financial Management Service, US Treasury"
+  te_url: "https://www.fiscal.treasury.gov"
   te_page: "https://tradingeconomics.com/united-states/government-budget-value"
-  te_value: 215024
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  current_source: "fred"
+  conform: false
+  verified: true
 government-debt:
   te_label: "U.S. Department of the Treasury"
   te_url: "https://home.treasury.gov"
   te_page: "https://tradingeconomics.com/united-states/government-debt"
   te_value: 38967834
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 government-debt-total:
   te_label: "U.S. Department of the Treasury"
-  te_url: "https://home.treasury.gov"
+  te_url: "https://www.treasurydirect.gov"
   te_page: "https://tradingeconomics.com/united-states/government-debt"
-  te_value: 38967834
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "April"
+  current_source: "fred"
+  conform: false
+  verified: true
 government-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/government-payrolls"
-  te_value: -8
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 government-revenues:
-  te_label: "U.S. Department of the Treasury"
-  te_url: "https://home.treasury.gov"
+  te_label: "Financial Management Service, United States"
+  te_url: "https://www.fiscal.treasury.gov"
   te_page: "https://tradingeconomics.com/united-states/government-revenues"
-  te_value: 837340
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "April"
+  current_source: "fred"
+  conform: false
+  verified: true
 government-spending:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/government-spending"
-  te_value: 4000
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 government-spending-to-gdp:
   te_label: "U.S. Treasury"
   te_url: "https://home.treasury.gov"
   te_page: "https://tradingeconomics.com/united-states/government-spending-to-gdp"
   te_value: 33.8
   te_period: "2024"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 gross-fixed-capital-formation:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/gross-fixed-capital-formation"
-  te_value: 4473
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 gross-national-product:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "https://www.bea.gov/"
   te_page: "https://tradingeconomics.com/united-states/gross-national-product"
-  te_value: 24174
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2025-Q4"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 health-care-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/health-care-payrolls"
-  te_value: 37.3
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 home-ownership-rate:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "http://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/home-ownership-rate"
   te_value: 65.3
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 hospital-beds:
-  te_label: "OECD"
-  te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-states/hospital-beds"
-  te_value: 2.75
-  te_period: "2023"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
-
 hospitals:
-  te_label: "World Health Organization"
-  te_url: "https://www.who.int"
-  te_page: "https://tradingeconomics.com/united-states/hospital"
-  te_value: 18.36
-  te_period: "2023"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/hospitals"
+  current_source: "curated"
+  conform: false
   verified: false
-
 households-debt-to-gdp:
   te_label: "Bank for International Settlements"
   te_url: "https://www.bis.org"
   te_page: "https://tradingeconomics.com/united-states/households-debt-to-gdp"
   te_value: 68
   te_period: "2025-Q3"
-  suggested_source: fred   # BIS-via-FRED in our resolver
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 housing-index:
-  te_label: "U.S. Federal Housing Finance Agency"
+  te_label: "Federal Housing Finance Agency"
   te_url: "https://www.fhfa.gov"
   te_page: "https://tradingeconomics.com/united-states/housing-index"
-  te_value: 441
-  te_period: "2026-02"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_value: 441.4
+  te_period: "February"
+  current_source: "fred"
+  conform: false
+  verified: true
 housing-starts:
   te_label: "U.S. Census Bureau"
   te_url: "https://www.census.gov/"
   te_page: "https://tradingeconomics.com/united-states/housing-starts"
   te_value: 1502
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 housing-starts-multi-family:
   te_label: "U.S. Census Bureau"
   te_url: "https://www.census.gov/"
   te_page: "https://tradingeconomics.com/united-states/housing-starts-multi-family"
-  te_value: 446
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 housing-starts-single-family:
   te_label: "U.S. Census Bureau"
   te_url: "https://www.census.gov/"
   te_page: "https://tradingeconomics.com/united-states/housing-starts-single-family"
-  te_value: 1032
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 import-prices:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/import-prices"
-  te_value: 145
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 147.6
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 imports:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "U.S. Census Bureau"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/imports"
-  te_value: 381
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 industrial-production:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/industrial-production"
-  te_value: 0.7
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 inflation-cpi:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/inflation-cpi"
   te_value: 3.8
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 information-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/information-payrolls"
-  te_value: -13
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 initial-jobless-claims:
-  te_label: "U.S. Department of Labor"
-  te_url: "https://www.dol.gov"
-  te_page: "https://tradingeconomics.com/united-states/jobless-claims"
-  te_value: 200
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/initial-jobless-claims"
+  current_source: "fred"
+  conform: false
   verified: false
-
 interest-rate:
   te_label: "Federal Reserve"
   te_url: "http://www.federalreserve.gov/"
   te_page: "https://tradingeconomics.com/united-states/interest-rate"
   te_value: 3.75
   te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 job-layoffs-and-discharges:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/job-layoffs-and-discharges"
-  te_value: 1867
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 job-quits:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/job-quits"
-  te_value: 3171
+  te_value: 3.171
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 job-quits-rate:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/job-quits-rate"
-  te_value: 2
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_value: 2.0
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 job-vacancies:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/job-vacancies"
-  te_value: 6685
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 jobless-claims-4-week-average:
   te_label: "U.S. Department of Labor"
-  te_url: "https://www.dol.gov"
+  te_url: "http://www.dol.gov"
   te_page: "https://tradingeconomics.com/united-states/jobless-claims-4-week-average"
-  te_value: 203
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "May"
+  current_source: "fred"
+  conform: false
+  verified: true
 labor-force-participation-rate:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/labor-force-participation-rate"
   te_value: 61.8
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 labour-costs:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/labour-costs"
-  te_value: 123
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  te_value: 122.55
+  te_period: "2025-Q4"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 leisure-and-hospitality-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/leisure-and-hospitality-payrolls"
-  te_value: 14
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 loans-to-private-sector:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/loans-to-private-sector"
-  te_value: 2828
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 long-term-unemployment-rate:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/long-term-unemployment-rate"
   te_value: 1.08
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 manufacturing-payrolls:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/manufacturing-payrolls"
-  te_value: -2
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 manufacturing-production:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/manufacturing-production"
-  te_value: 0.5
+  te_value: 67.9
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 medical-doctors:
-  te_label: "OECD"
-  te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-states/medical-doctors"
-  te_value: 2.79
-  te_period: "2022"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
-
 michigan-inflation-expectations:
   te_label: "University of Michigan"
   te_url: "https://data.sca.isr.umich.edu"
   te_page: "https://tradingeconomics.com/united-states/michigan-inflation-expectations"
   te_value: 4.5
   te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 military-expenditure:
   te_label: "SIPRI"
   te_url: "https://www.sipri.org"
   te_page: "https://tradingeconomics.com/united-states/military-expenditure"
   te_value: 954387
   te_period: "2025"
-  suggested_source: worldbank   # SIPRI via World Bank in our pipeline
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
-
 minimum-wages:
-  te_label: "U.S. Department of Labor"
-  te_url: "https://www.dol.gov"
+  te_label: "Department of Labor"
+  te_url: "http://www.dol.gov"
   te_page: "https://tradingeconomics.com/united-states/minimum-wages"
-  te_value: 7.25
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-
+  current_source: "curated"
+  conform: false
+  verified: true
 mining-and-energy-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/mining-and-energy-payrolls"
-  te_value: 2.5
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 mining-production:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/mining-production"
-  te_value: -0.2
+  te_value: 108.2
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 money-supply-m0:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "https://www.federalreserve.gov/"
   te_page: "https://tradingeconomics.com/united-states/money-supply-m0"
-  te_value: 5458600
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 money-supply-m1:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "https://www.federalreserve.gov/"
   te_page: "https://tradingeconomics.com/united-states/money-supply-m1"
-  te_value: 19531
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 money-supply-m2:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "https://www.federalreserve.gov/"
   te_page: "https://tradingeconomics.com/united-states/money-supply-m2"
-  te_value: 22686
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "January"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 natural-gas-storage:
-  te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
-  te_page: "https://tradingeconomics.com/united-states/natural-gas-stocks-change"
-  te_value: 63
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/natural-gas-storage"
+  current_source: "eia"
+  conform: false
   verified: false
-
 new-home-sales:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/new-home-sales"
-  te_value: 682
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2026-03"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 new-orders:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/new-orders"
-  te_value: 630448
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 non-farm-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/non-farm-payrolls"
   te_value: 115
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 nonfarm-payrolls-private:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/nonfarm-payrolls-private"
-  te_value: 123
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 nonfarm-productivity-qoq:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/nonfarm-productivity-qoq"
-  te_value: 0.8
+  te_value: 1.4
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 nurses:
-  te_label: "OECD"
-  te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-states/nurses"
-  te_value: 12.71
-  te_period: "2022"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  current_source: "curated"
+  conform: false
   verified: false
-
 ny-empire-state-manufacturing-index:
   te_label: "Federal Reserve Bank of New York"
   te_url: "https://www.newyorkfed.org"
   te_page: "https://tradingeconomics.com/united-states/ny-empire-state-manufacturing-index"
-  te_value: 11
   te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 part-time-employment:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "http://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/part-time-employment"
-  te_value: 28413
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 pce-price-index:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov/"
   te_page: "https://tradingeconomics.com/united-states/pce-price-index"
-  te_value: 130
-  te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  te_value: 130.34
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 personal-income:
   te_label: "U.S. Bureau of Economic Analysis"
   te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/personal-income"
-  te_value: 0.6
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 personal-income-tax-rate:
-  te_label: "Internal Revenue Service"
-  te_url: "https://www.taxpolicycenter.org/"
   te_page: "https://tradingeconomics.com/united-states/personal-income-tax-rate"
-  te_value: 37
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 37.0
+  current_source: "curated"
+  conform: false
   verified: false
-
 personal-savings:
   te_label: "U.S. Bureau of Economic Analysis"
   te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/personal-savings"
   te_value: 3.6
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 personal-spending:
   te_label: "U.S. Bureau of Economic Analysis"
   te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/personal-spending"
-  te_value: 0.9
+  te_value: 0.2
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 philadelphia-fed-manufacturing-index:
   te_label: "Federal Reserve Bank of Philadelphia"
-  te_url: "https://www.philadelphiafed.org"
+  te_url: "https://www.philadelphiafed.org/"
   te_page: "https://tradingeconomics.com/united-states/philadelphia-fed-manufacturing-index"
-  te_value: 26.7
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  te_period: "2026-04"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 population:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "https://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/population"
-  te_value: 342
-  te_period: "2025"
-  suggested_source: fred
-  current_source: fred
+  te_value: 342.3
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 ppi:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/producer-prices"
-  te_value: 156
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_value: 156.5
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 ppi-ex-food-energy-trade-svcs:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
-  te_page: "https://tradingeconomics.com/united-states/ppi-ex-food-energy-and-trade-services"
-  te_value: 141
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/ppi-ex-food-energy-trade-svcs"
+  current_source: "fred"
+  conform: false
   verified: false
-
 private-debt-to-gdp:
   te_label: "OECD"
   te_url: "https://www.oecd.org"
   te_page: "https://tradingeconomics.com/united-states/private-debt-to-gdp"
   te_value: 142
   te_period: "2024"
-  suggested_source: fred
-  current_source: fred
-  conform: false   # TE source = OECD, our truth uses fred (BIS) — surprising
+  suggested_source: "fred"
+  current_source: "fred"
+  conform: false
   verified: true
-
 private-sector-credit:
   te_label: "Federal Reserve"
-  te_url: "http://www.federalreserve.gov/"
+  te_url: "http://www.federalreserve.gov"
   te_page: "https://tradingeconomics.com/united-states/private-sector-credit"
-  te_value: 13627
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "March"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 productivity:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/productivity"
-  te_value: 120
+  te_value: 119.58
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 professional-and-business-services-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/professional-and-business-services-payrolls"
-  te_value: 7
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 real-consumer-spending:
   te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_url: "http://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/real-consumer-spending"
   te_value: 1.6
   te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 refinery-crude-runs:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov"
   te_page: "https://tradingeconomics.com/united-states/refinery-crude-runs"
-  te_value: 370
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "2021-03"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 rent-inflation:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_label: "Bureau of Labor Statistics"
+  te_url: "https://www.bls.gov/home.htm"
   te_page: "https://tradingeconomics.com/united-states/rent-inflation"
-  te_value: 3.3
+  te_value: 3.0
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 retail-sales-ex-autos:
   te_label: "U.S. Census Bureau"
-  te_url: "https://www.census.gov/"
+  te_url: "http://www.census.gov"
   te_page: "https://tradingeconomics.com/united-states/retail-sales-ex-autos"
-  te_value: 1.9
+  te_value: 0.6
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 retail-trade-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/retail-trade-payrolls"
-  te_value: 21.8
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 retirement-age-men:
   te_label: "Social Security Administration"
-  te_url: "https://www.ssa.gov"
+  te_url: "https://www.ssa.gov/"
   te_page: "https://tradingeconomics.com/united-states/retirement-age-men"
-  te_value: 67
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-
+  current_source: "curated"
+  conform: false
+  verified: true
 retirement-age-women:
   te_label: "Social Security Administration"
-  te_url: "https://www.ssa.gov"
+  te_url: "https://www.ssa.gov/"
   te_page: "https://tradingeconomics.com/united-states/retirement-age-women"
-  te_value: 67
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-
+  current_source: "curated"
+  conform: false
+  verified: true
 sales-tax-rate:
-  te_label: "Internal Revenue Service"
-  te_url: "https://www.taxpolicycenter.org/"
   te_page: "https://tradingeconomics.com/united-states/sales-tax-rate"
-  te_value: 0
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_value: 0.0
+  current_source: "curated"
+  conform: false
   verified: false
-
 secured-overnight-financing-rate:
   te_label: "Federal Reserve Bank of New York"
   te_url: "https://www.newyorkfed.org"
   te_page: "https://tradingeconomics.com/united-states/secured-overnight-financing-rate"
-  te_value: 3.6
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  te_value: 3.56
+  te_period: "2023-12"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 services-inflation:
-  te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/services-inflation"
   te_value: 3.4
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
+  current_source: "fred"
+  conform: false
   verified: false
-
 social-security-rate:
-  te_label: "Internal Revenue Service"
-  te_url: "https://www.taxpolicycenter.org/"
+  te_label: "Social Security Administration"
+  te_url: "https://www.ssa.gov/"
   te_page: "https://tradingeconomics.com/united-states/social-security-rate"
   te_value: 15.3
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-
+  current_source: "curated"
+  conform: false
+  verified: true
 social-security-rate-companies:
-  te_label: "Internal Revenue Service"
-  te_url: "https://www.taxpolicycenter.org/"
-  te_page: "https://tradingeconomics.com/united-states/social-security-rate-for-companies"
-  te_value: 7.65
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/social-security-rate-companies"
+  current_source: "curated"
+  conform: false
   verified: false
-
 social-security-rate-employees:
-  te_label: "Internal Revenue Service"
-  te_url: "https://www.taxpolicycenter.org/"
-  te_page: "https://tradingeconomics.com/united-states/social-security-rate-for-employees"
-  te_value: 7.65
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/social-security-rate-employees"
+  current_source: "curated"
+  conform: false
   verified: false
-
 steel-production:
   te_label: "World Steel Association"
-  te_url: "https://worldsteel.org"
+  te_url: "https://www.worldsteel.org/"
   te_page: "https://tradingeconomics.com/united-states/steel-production"
-  te_value: 7200
-  te_period: "2026-04"
-  suggested_source: fred   # FRED has IP-Steel via Federal Reserve mirror; TE shows worldsteel — mismatch
-  current_source: fred
-  conform: false   # TE source = World Steel Association, our FRED series is Federal Reserve IP component
-  verified: false
-
+  te_period: "March"
+  current_source: "fred"
+  conform: false
+  verified: true
 strategic-petroleum-reserve:
-  te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
-  te_page: "https://tradingeconomics.com/united-states/strategic-petroleum-reserve-crude-oil-stocks"
-  te_value: 384095
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
-  conform: true
+  te_page: "https://tradingeconomics.com/united-states/strategic-petroleum-reserve"
+  current_source: "eia"
+  conform: false
   verified: false
-
 terrorism-index:
   te_label: "Institute for Economics and Peace"
   te_url: "https://www.economicsandpeace.org"
   te_page: "https://tradingeconomics.com/united-states/terrorism-index"
   te_value: 4.52
   te_period: "2025"
-  suggested_source: curated
-  current_source: curated
+  suggested_source: "curated"
+  current_source: "curated"
   conform: true
   verified: true
-
 total-housing-inventory:
   te_label: "National Association of Realtors"
   te_url: "https://www.nar.realtor"
   te_page: "https://tradingeconomics.com/united-states/total-housing-inventory"
-  te_value: 1470
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  te_period: "April"
+  current_source: "fred"
+  conform: false
+  verified: true
 total-vehicle-sales:
-  te_label: "U.S. Bureau of Economic Analysis"
-  te_url: "https://www.bea.gov"
+  te_label: "Wards Intelligence"
+  te_url: "https://wardsintelligence.informa.com/"
   te_page: "https://tradingeconomics.com/united-states/total-vehicle-sales"
   te_value: 15.9
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
-  conform: true
-  verified: false
-
+  current_source: "fred"
+  conform: false
+  verified: true
 trade-balance:
   te_label: "U.S. Bureau of Economic Analysis (BEA)"
   te_url: "https://www.bea.gov"
   te_page: "https://tradingeconomics.com/united-states/balance-of-trade"
   te_value: -60.31
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 transportation-and-warehousing-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/transportation-and-warehousing-payrolls"
-  te_value: 30.3
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 u6-unemployment-rate:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/u6-unemployment-rate"
   te_value: 8.2
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 unemployed-persons:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/unemployed-persons"
-  te_value: 7373
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 unemployment:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/unemployment-rate"
   te_value: 4.3
   te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
   verified: true
-
 unit-labour-costs-qoq:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/unit-labour-costs-qoq"
-  te_value: 2.3
-  te_period: "2026-Q1"
-  suggested_source: fred
-  current_source: fred
+  te_value: 2.6
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 wages:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/wages"
-  te_value: 32.23
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 wages-in-manufacturing:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/wages-in-manufacturing"
-  te_value: 30.1
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 weapons-sales:
   te_label: "SIPRI"
   te_url: "https://www.sipri.org"
   te_page: "https://tradingeconomics.com/united-states/weapons-sales"
-  te_value: 13512
-  te_period: "2024"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-
+  current_source: "curated"
+  conform: false
+  verified: true
 weekly-crude-oil-production:
   te_label: "U.S. Energy Information Administration"
-  te_url: "http://www.eia.gov"
+  te_url: "https://www.eia.gov/"
   te_page: "https://tradingeconomics.com/united-states/weekly-crude-oil-production"
-  te_value: 13710
-  te_period: "2026-05"
-  suggested_source: eia
-  current_source: eia
+  te_period: "May"
+  suggested_source: "eia"
+  current_source: "eia"
   conform: true
-  verified: false
-
+  verified: true
 weekly-economic-index:
-  te_label: "Federal Reserve Bank of New York"
-  te_url: "https://www.newyorkfed.org"
+  te_label: "Federal Reserve Bank of Dallas"
+  te_url: "https://www.dallasfed.org/"
   te_page: "https://tradingeconomics.com/united-states/weekly-economic-index"
-  te_value: 2.68
-  te_period: "2026-05"
-  suggested_source: fred
-  current_source: fred
+  te_value: 2.71
+  te_period: "May"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 wholesale-inventories:
   te_label: "U.S. Census Bureau"
   te_url: "https://www.census.gov/"
   te_page: "https://tradingeconomics.com/united-states/wholesale-inventories"
-  te_value: 1.3
+  te_value: 1.4
   te_period: "2026-03"
-  suggested_source: fred
-  current_source: fred
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 wholesale-trade-payrolls:
   te_label: "U.S. Bureau of Labor Statistics"
   te_url: "http://www.bls.gov/"
   te_page: "https://tradingeconomics.com/united-states/wholesale-trade-payrolls"
-  te_value: 6
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
-
+  verified: true
 withholding-tax-rate:
   te_label: "Internal Revenue Service"
-  te_url: "https://www.taxpolicycenter.org/"
+  te_url: "https://www.irs.gov/"
   te_page: "https://tradingeconomics.com/united-states/withholding-tax-rate"
-  te_value: 30
-  te_period: "2026"
-  suggested_source: curated
-  current_source: curated
-  conform: true
-  verified: false
-
+  te_value: 30.0
+  current_source: "curated"
+  conform: false
+  verified: true
 youth-unemployment-rate:
   te_label: "U.S. Bureau of Labor Statistics"
-  te_url: "http://www.bls.gov/"
+  te_url: "https://www.bls.gov"
   te_page: "https://tradingeconomics.com/united-states/youth-unemployment-rate"
   te_value: 9.5
-  te_period: "2026-04"
-  suggested_source: fred
-  current_source: fred
+  te_period: "April"
+  suggested_source: "fred"
+  current_source: "fred"
   conform: true
-  verified: false
+  verified: true

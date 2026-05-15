@@ -1,11 +1,7 @@
 budget-deficit:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/latvia/budget-deficit"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/latvia/government-budget"
+  te_value: 2.5
+  current_source: "eurostat"
   conform: false
   verified: false
 business-confidence:
@@ -14,8 +10,8 @@ business-confidence:
   te_page: "https://tradingeconomics.com/latvia/business-confidence"
   te_value: -0.3
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 capacity-utilization:
@@ -23,9 +19,8 @@ capacity-utilization:
   te_url: "https://ec.europa.eu/eurostat/en/"
   te_page: "https://tradingeconomics.com/latvia/capacity-utilization"
   te_value: 74.3
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 changes-in-inventories:
@@ -33,9 +28,8 @@ changes-in-inventories:
   te_url: "https://stat.gov.lv/en"
   te_page: "https://tradingeconomics.com/latvia/changes-in-inventories"
   te_value: 390317.0
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-confidence:
@@ -44,8 +38,8 @@ consumer-confidence:
   te_page: "https://tradingeconomics.com/latvia/consumer-confidence"
   te_value: -16.1
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 consumer-spending:
@@ -53,49 +47,35 @@ consumer-spending:
   te_url: "https://stat.gov.lv/en"
   te_page: "https://tradingeconomics.com/latvia/consumer-spending"
   te_value: 4622174.0
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 core-cpi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/latvia/core-cpi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
+  te_page: "https://tradingeconomics.com/latvia/core-inflation-rate"
+  te_value: 14.3
+  te_period: "2026-04"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 corporate-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/corporate-tax-rate"
   te_value: 20.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/corruption-index"
   te_value: 60.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/corruption-rank"
-  te_value: 37.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
@@ -104,8 +84,8 @@ cpi-clothing:
   te_page: "https://tradingeconomics.com/latvia/cpi-clothing"
   te_value: 106.9
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-education:
@@ -114,8 +94,8 @@ cpi-education:
   te_page: "https://tradingeconomics.com/latvia/cpi-education"
   te_value: 101.9
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-food:
@@ -124,8 +104,8 @@ cpi-food:
   te_page: "https://tradingeconomics.com/latvia/cpi-food"
   te_value: 100.2
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-housing-utilities:
@@ -134,8 +114,8 @@ cpi-housing-utilities:
   te_page: "https://tradingeconomics.com/latvia/cpi-housing-utilities"
   te_value: 103.8
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-recreation-and-culture:
@@ -144,8 +124,8 @@ cpi-recreation-and-culture:
   te_page: "https://tradingeconomics.com/latvia/cpi-recreation-and-culture"
   te_value: 101.4
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 cpi-transportation:
@@ -154,18 +134,13 @@ cpi-transportation:
   te_page: "https://tradingeconomics.com/latvia/cpi-transportation"
   te_value: 109.9
   te_period: "2026-04"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 credit-rating:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/credit-rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
@@ -174,8 +149,8 @@ current-account:
   te_page: "https://tradingeconomics.com/latvia/current-account"
   te_value: 23.0
   te_period: "2026-02"
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 current-account-to-gdp:
@@ -183,19 +158,13 @@ current-account-to-gdp:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/latvia/current-account-to-gdp"
   te_value: 3.4
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 employed-persons:
@@ -203,9 +172,8 @@ employed-persons:
   te_url: "https://stat.gov.lv/en"
   te_page: "https://tradingeconomics.com/latvia/employed-persons"
   te_value: 883.0
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 employment-rate:
@@ -213,19 +181,13 @@ employment-rate:
   te_url: "https://www.csb.gov.lv/"
   te_page: "https://tradingeconomics.com/latvia/employment-rate"
   te_value: 64.8
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
@@ -234,8 +196,8 @@ exports:
   te_page: "https://tradingeconomics.com/latvia/exports"
   te_value: 1847.07
   te_period: "1550-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 food-inflation:
@@ -244,8 +206,8 @@ food-inflation:
   te_page: "https://tradingeconomics.com/latvia/food-inflation"
   te_value: 0.3
   te_period: "2026-04"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 gdp:
@@ -253,9 +215,8 @@ gdp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/latvia/gdp"
   te_value: 43.52
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
@@ -263,9 +224,8 @@ gdp-per-capita:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/latvia/gdp-per-capita"
   te_value: 16951.36
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita-ppp:
@@ -273,59 +233,49 @@ gdp-per-capita-ppp:
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/latvia/gdp-per-capita-ppp"
   te_value: 38936.05
-  te_period: null
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-real:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/latvia/gdp-real"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_label: "Central Statistical Bureau of Latvia"
+  te_url: "https://stat.gov.lv/en"
+  te_page: "https://tradingeconomics.com/latvia/gdp-growth-annual"
+  te_period: "2025-Q4"
+  suggested_source: "csp_lv"
+  current_source: "csp_lv"
+  conform: true
+  verified: true
 government-debt:
   te_label: "Central Statistical Bureau of Latvia"
   te_url: "https://data1.csb.gov.lv"
   te_page: "https://tradingeconomics.com/latvia/government-debt"
   te_value: 20173.9
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/latvia/government-debt-total"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Central Statistical Bureau of Latvia"
+  te_url: "https://data1.csb.gov.lv"
+  te_page: "https://tradingeconomics.com/latvia/government-debt"
+  te_period: "2025-Q4"
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-spending:
   te_label: "Central Statistical Bureau of Latvia"
   te_url: "https://stat.gov.lv/en"
   te_page: "https://tradingeconomics.com/latvia/government-spending"
   te_value: 1857520.0
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/government-spending-eur"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
@@ -333,29 +283,18 @@ gross-fixed-capital-formation:
   te_url: "https://stat.gov.lv/en"
   te_page: "https://tradingeconomics.com/latvia/gross-fixed-capital-formation"
   te_value: 2150599.0
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/hospital-beds"
-  te_value: 4.96
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/house-price-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
@@ -364,8 +303,8 @@ imports:
   te_page: "https://tradingeconomics.com/latvia/imports"
   te_value: 2241.68
   te_period: "1884-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 industrial-production:
@@ -374,8 +313,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/latvia/industrial-production"
   te_value: 9.5
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,18 +323,15 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/latvia/inflation-cpi"
   te_value: 2.9
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: csp_lv
+  suggested_source: "csp_lv"
+  current_source: "csp_lv"
   conform: true
   verified: true
 interest-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/interest-rate"
-  te_value: 2.15
-  te_period: null
-  suggested_source: null
-  current_source: ecb
+  te_value: 4.75
+  te_period: "2000-10"
+  current_source: "ecb"
   conform: false
   verified: false
 job-vacancies:
@@ -403,9 +339,8 @@ job-vacancies:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/latvia/job-vacancies"
   te_value: 18592.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 labor-force-participation-rate:
@@ -413,9 +348,8 @@ labor-force-participation-rate:
   te_url: "http://data1.csb.gov.lv"
   te_page: "https://tradingeconomics.com/latvia/labor-force-participation-rate"
   te_value: 69.4
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 labour-costs:
@@ -423,9 +357,8 @@ labour-costs:
   te_url: "http://sdw.ecb.europa.eu"
   te_page: "https://tradingeconomics.com/latvia/labour-costs"
   te_value: 140.97
-  te_period: null
-  suggested_source: ecb
-  current_source: eurostat
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
   verified: true
 long-term-unemployment-rate:
@@ -433,9 +366,8 @@ long-term-unemployment-rate:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/latvia/long-term-unemployment-rate"
   te_value: 1.9
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 manufacturing-production:
@@ -444,8 +376,8 @@ manufacturing-production:
   te_page: "https://tradingeconomics.com/latvia/manufacturing-production"
   te_value: 4.4
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 medical-doctors:
@@ -453,9 +385,7 @@ medical-doctors:
   te_url: "https://www.oecd.org/"
   te_page: "https://tradingeconomics.com/latvia/medical-doctors"
   te_value: 3.36
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 minimum-wages:
@@ -463,9 +393,8 @@ minimum-wages:
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/latvia/minimum-wages"
   te_value: 780.0
-  te_period: null
-  suggested_source: eurostat
-  current_source: curated
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
   verified: true
 mining-production:
@@ -474,18 +403,13 @@ mining-production:
   te_page: "https://tradingeconomics.com/latvia/mining-production"
   te_value: 21.5
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/nurses"
-  te_value: 4.18
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
@@ -493,9 +417,7 @@ personal-income-tax-rate:
   te_url: "https://home.kpmg.com"
   te_page: "https://tradingeconomics.com/latvia/personal-income-tax-rate"
   te_value: 36.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 population:
@@ -503,29 +425,27 @@ population:
   te_url: "http://data1.csb.gov.lv"
   te_page: "https://tradingeconomics.com/latvia/population"
   te_value: 1.9
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 ppi:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/latvia/ppi"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "Central Statistical Bureau of Latvia"
+  te_url: "https://www.csb.gov.lv"
+  te_page: "https://tradingeconomics.com/latvia/producer-prices"
+  te_value: 129.2
+  te_period: "March"
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 productivity:
   te_label: "EUROSTAT"
   te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/latvia/productivity"
   te_value: 119.75
-  te_period: null
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true
 retail-sales:
@@ -534,8 +454,8 @@ retail-sales:
   te_page: "https://tradingeconomics.com/latvia/retail-sales"
   te_value: 0.1
   te_period: "2026-03"
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
@@ -543,9 +463,7 @@ retirement-age-men:
   te_url: "http://www.vsaa.gov.lv"
   te_page: "https://tradingeconomics.com/latvia/retirement-age-men"
   te_value: 65.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 retirement-age-women:
@@ -553,9 +471,7 @@ retirement-age-women:
   te_url: "http://www.vsaa.gov.lv"
   te_page: "https://tradingeconomics.com/latvia/retirement-age-women"
   te_value: 65.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 sales-tax-rate:
@@ -563,79 +479,58 @@ sales-tax-rate:
   te_url: "https://www.vatlive.com"
   te_page: "https://tradingeconomics.com/latvia/sales-tax-rate"
   te_value: 21.0
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: true
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/social-security-rate"
   te_value: 34.09
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/social-security-rate-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/social-security-rate-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/latvia/terrorism-index"
   te_value: 0.23
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
+trade-balance:
+  te_label: "Central Statistical Bureau of Latvia"
+  te_url: "http://www.csb.gov.lv"
+  te_page: "https://tradingeconomics.com/latvia/balance-of-trade"
+  te_value: 6.0
+  te_period: "2026-03"
+  suggested_source: "csp_lv"
+  current_source: "csp_lv"
+  conform: true
+  verified: true
 unemployed-persons:
   te_label: "State Employment Agency, Latvia"
   te_url: "https://www.nva.gov.lv/en"
   te_page: "https://tradingeconomics.com/latvia/unemployed-persons"
   te_value: 43909.0
   te_period: "2026-03"
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: true
 unemployment:
@@ -643,9 +538,8 @@ unemployment:
   te_url: "https://www.csb.gov.lv"
   te_page: "https://tradingeconomics.com/latvia/unemployment-rate"
   te_value: 6.7
-  te_period: null
-  suggested_source: csp_lv
-  current_source: eurostat
+  suggested_source: "csp_lv"
+  current_source: "eurostat"
   conform: false
   verified: true
 youth-unemployment-rate:
@@ -654,7 +548,7 @@ youth-unemployment-rate:
   te_page: "https://tradingeconomics.com/latvia/youth-unemployment-rate"
   te_value: 13.6
   te_period: "2026-02"
-  suggested_source: eurostat
-  current_source: eurostat
+  suggested_source: "eurostat"
+  current_source: "eurostat"
   conform: true
   verified: true

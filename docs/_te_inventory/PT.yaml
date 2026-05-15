@@ -1,371 +1,281 @@
 budget-deficit:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/government-budget"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 0.7
+  current_source: "eurostat"
   conform: false
   verified: false
 business-confidence:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "http://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/business-confidence"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-04"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 capacity-utilization:
-  te_label: null
-  te_url: null
+  te_label: "European Commission"
+  te_url: "https://commission.europa.eu/index_en"
   te_page: "https://tradingeconomics.com/portugal/capacity-utilization"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 83.3
+  te_period: "2026-Q1"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 changes-in-inventories:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main"
   te_page: "https://tradingeconomics.com/portugal/changes-in-inventories"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 consumer-confidence:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/consumer-confidence"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-04"
+  current_source: "eurostat"
   conform: false
   verified: false
 consumer-spending:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/consumer-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 core-cpi:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/core-inflation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 31.27
+  te_period: "2026-04"
+  current_source: "eurostat"
   conform: false
   verified: false
 corporate-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 19.0
+  current_source: "curated"
   conform: false
   verified: false
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 69.7
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
   te_page: "https://tradingeconomics.com/portugal/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 105.38
+  te_period: "2026-04"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-education:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
   te_page: "https://tradingeconomics.com/portugal/cpi-education"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 103.27
+  te_period: "April"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-food:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
   te_page: "https://tradingeconomics.com/portugal/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 102.92
+  te_period: "April"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-housing-utilities:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
   te_page: "https://tradingeconomics.com/portugal/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 102.92
+  te_period: "April"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-recreation-and-culture:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
   te_page: "https://tradingeconomics.com/portugal/cpi-recreation-and-culture"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 100.49
+  te_period: "April"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-transportation:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
   te_page: "https://tradingeconomics.com/portugal/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 105.38
+  te_period: "2026-04"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 credit-rating:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/portugal/rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/portugal/credit-rating"
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
-  te_label: null
-  te_url: null
+  te_label: "Banco de Portugal"
+  te_url: "https://www.bportugal.pt/"
   te_page: "https://tradingeconomics.com/portugal/current-account"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-02"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 current-account-to-gdp:
-  te_label: null
-  te_url: null
+  te_label: "Banco de Portugal"
+  te_url: "https://www.bportugal.pt"
   te_page: "https://tradingeconomics.com/portugal/current-account-to-gdp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 1.2
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 disposable-personal-income:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main"
   te_page: "https://tradingeconomics.com/portugal/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 employed-persons:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "http://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/employed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 employment-rate:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main"
   te_page: "https://tradingeconomics.com/portugal/employment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 65.7
+  te_period: "March"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/exports"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
   verified: false
 food-inflation:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "http://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/food-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 50.8
+  te_period: "2026-04"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 gdp:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/portugal/gdp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-per-capita:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/portugal/gdp-per-capita"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  te_value: 178.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-per-capita-ppp:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/portugal/gdp-per-capita-ppp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  te_value: 236.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-real:
   te_label: "Statistics Portugal"
   te_url: "https://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/gdp-growth-annual"
   te_value: 2.3
   te_period: "2026-Q1"
-  suggested_source: ine_pt
-  current_source: eurostat
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
   verified: true
 government-debt:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-Q1"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/portugal/government-debt-to-gdp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/portugal/government-debt"
+  te_period: "2026-Q1"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-spending:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/government-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 government-spending-eur:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/portugal/government-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/portugal/government-spending-eur"
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/gross-fixed-capital-formation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/portugal/housing-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/portugal/house-price-index"
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/imports"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
   verified: false
 industrial-production:
@@ -374,8 +284,8 @@ industrial-production:
   te_page: "https://tradingeconomics.com/portugal/industrial-production"
   te_value: 3.2
   te_period: "2026-03"
-  suggested_source: ine_pt
-  current_source: eurostat
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,277 +294,209 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/portugal/inflation-cpi"
   te_value: 3.3
   te_period: "2026-04"
-  suggested_source: ine_pt
-  current_source: eurostat
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
   verified: true
 interest-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/interest-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: ecb
+  te_value: 4.75
+  te_period: "2000-10"
+  current_source: "ecb"
   conform: false
   verified: false
 job-vacancies:
-  te_label: null
-  te_url: null
+  te_label: "IEFP - Institute of Employment and Professional Formation, Portugal"
+  te_url: "https://www.iefp.pt"
   te_page: "https://tradingeconomics.com/portugal/job-vacancies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 labor-force-participation-rate:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main"
   te_page: "https://tradingeconomics.com/portugal/labor-force-participation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 69.7
+  te_period: "March"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 labour-costs:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/labour-costs"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 163.78
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 long-term-unemployment-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/long-term-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 2.1
+  te_period: "2025-Q4"
+  current_source: "eurostat"
   conform: false
   verified: false
 manufacturing-production:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/manufacturing-production"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 49.5
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
   verified: false
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/portugal/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_period: "2026-Q2"
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 mining-production:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/mining-production"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 80.8
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
   verified: false
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Autoridade Tributária e Aduaneira"
+  te_url: "http://info.portaldasfinancas.gov.pt"
   te_page: "https://tradingeconomics.com/portugal/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 48.0
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 population:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/portugal/population"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 10.8
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 ppi:
   te_label: "Statistics Portugal"
   te_url: "https://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/producer-prices"
   te_value: 116.8
   te_period: "2026-03"
-  suggested_source: ine_pt
-  current_source: eurostat
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
   verified: true
 productivity:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/portugal/productivity"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 103.55
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 retail-sales:
   te_label: "Statistics Portugal"
   te_url: "https://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/retail-sales"
   te_value: 1.8
   te_period: "2026-03"
-  suggested_source: ine_pt
-  current_source: eurostat
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
   verified: true
 retirement-age-men:
-  te_label: null
-  te_url: null
+  te_label: "Instituto da Segurança Social"
+  te_url: "https://en.seg-social.pt/homepage"
   te_page: "https://tradingeconomics.com/portugal/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 retirement-age-women:
-  te_label: null
-  te_url: null
+  te_label: "Instituto da Segurança Social"
+  te_url: "https://en.seg-social.pt/homepage"
   te_page: "https://tradingeconomics.com/portugal/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 sales-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 23.0
+  current_source: "curated"
   conform: false
   verified: false
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
+  te_label: "Instituto da Segurança Social"
+  te_url: "http://www.seg-social.pt"
   te_page: "https://tradingeconomics.com/portugal/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 34.75
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 social-security-rate-companies:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/portugal/social-security-rate-for-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/portugal/social-security-rate-companies"
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/portugal/social-security-rate-for-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/portugal/social-security-rate-employees"
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/portugal/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 0.42
+  current_source: "curated"
   conform: false
   verified: false
 unemployed-persons:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Portugal"
+  te_url: "http://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/unemployed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 unemployment:
   te_label: "Statistics Portugal"
   te_url: "http://www.ine.pt"
   te_page: "https://tradingeconomics.com/portugal/unemployment-rate"
   te_value: 5.8
   te_period: "2026-03"
-  suggested_source: ine_pt
-  current_source: eurostat
+  suggested_source: "ine_pt"
+  current_source: "eurostat"
   conform: false
   verified: true
 youth-unemployment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/portugal/youth-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 18.1
+  te_period: "March"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true

@@ -1,381 +1,310 @@
 budget-deficit:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/government-budget"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 5.2
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 business-confidence:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/business-confidence"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: -14.2
+  te_period: "2026-04"
+  suggested_source: "nbb"
+  current_source: "nbb"
+  conform: true
+  verified: true
 capacity-utilization:
-  te_label: null
-  te_url: null
+  te_label: "European Commission"
+  te_url: "https://commission.europa.eu/index_en"
   te_page: "https://tradingeconomics.com/belgium/capacity-utilization"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 76.9
+  te_period: "2026-Q1"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 changes-in-inventories:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/changes-in-inventories"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 consumer-confidence:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/consumer-confidence"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_period: "2026-04"
+  suggested_source: "nbb"
+  current_source: "nbb"
+  conform: true
+  verified: true
 consumer-spending:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/consumer-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 core-cpi:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/core-inflation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 8.7
+  te_period: "2026-03"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 corporate-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Service Public Fédéral Finances"
+  te_url: "https://finances.belgium.be/fr"
   te_page: "https://tradingeconomics.com/belgium/corporate-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 25.0
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 corruption-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/corruption-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 77.0
+  current_source: "curated"
   conform: false
   verified: false
 corruption-rank:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/corruption-rank"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 cpi-clothing:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 103.93
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-education:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "http://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/cpi-education"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 101.79
+  te_period: "March"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-food:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 99.93
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-housing-utilities:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/cpi-housing-utilities"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 99.93
+  te_period: "March"
+  current_source: "eurostat"
   conform: false
   verified: false
 cpi-recreation-and-culture:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "http://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/cpi-recreation-and-culture"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 105.33
+  te_period: "March"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 cpi-transportation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/cpi-transportation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 103.93
+  te_period: "2026-03"
+  current_source: "eurostat"
   conform: false
   verified: false
 credit-rating:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/rating"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/belgium/credit-rating"
+  current_source: "curated"
   conform: false
   verified: false
 current-account:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/current-account"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 current-account-to-gdp:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/current-account-to-gdp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 1.9
+  current_source: "eurostat"
   conform: false
   verified: false
 disposable-personal-income:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/disposable-personal-income"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 employed-persons:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/employed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 employment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/employment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 67.3
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 energy-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/energy-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 exports:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/exports"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 food-inflation:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/food-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 18.02
+  te_period: "2026-04"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 gdp:
   te_label: "World Bank"
   te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/belgium/gdp"
   te_value: 664.56
   te_period: "2024"
-  suggested_source: worldbank
-  current_source: worldbank
+  suggested_source: "worldbank"
+  current_source: "worldbank"
   conform: true
   verified: true
 gdp-per-capita:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/belgium/gdp-per-capita"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  te_value: 355.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-per-capita-ppp:
-  te_label: null
-  te_url: null
+  te_label: "World Bank"
+  te_url: "https://www.worldbank.org/"
   te_page: "https://tradingeconomics.com/belgium/gdp-per-capita-ppp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: worldbank
-  conform: false
-  verified: false
+  te_value: 355.0
+  suggested_source: "worldbank"
+  current_source: "worldbank"
+  conform: true
+  verified: true
 gdp-real:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/gdp-growth-annual"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  suggested_source: "nbb"
+  current_source: "nbb"
+  conform: true
+  verified: true
 government-debt:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/government-debt"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-debt-total:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/government-debt-to-gdp"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
+  te_page: "https://tradingeconomics.com/belgium/government-debt"
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-spending:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/government-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 government-spending-eur:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/government-spending"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/belgium/government-spending-eur"
+  current_source: "eurostat"
   conform: false
   verified: false
 gross-fixed-capital-formation:
-  te_label: null
-  te_url: null
+  te_label: "National Bank Of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/gross-fixed-capital-formation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2025-Q4"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 hospital-beds:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/hospital-beds"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 house-price-index:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/housing-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/belgium/house-price-index"
+  current_source: "eurostat"
   conform: false
   verified: false
 imports:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/imports"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 industrial-production:
   te_label: "Statistics Belgium"
   te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/industrial-production"
   te_value: 0.3
   te_period: "2026-03"
-  suggested_source: statbel
-  current_source: eurostat
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
   verified: true
 inflation-cpi:
@@ -384,277 +313,224 @@ inflation-cpi:
   te_page: "https://tradingeconomics.com/belgium/inflation-cpi"
   te_value: 4.07
   te_period: "2026-04"
-  suggested_source: statbel
-  current_source: statbel
+  suggested_source: "statbel"
+  current_source: "statbel"
   conform: true
   verified: true
 interest-rate:
-  te_label: null
-  te_url: null
+  te_label: "European Central Bank"
+  te_url: "https://www.ecb.europa.eu/"
   te_page: "https://tradingeconomics.com/belgium/interest-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: ecb
-  conform: false
-  verified: false
+  te_value: 4.75
+  te_period: "2000-10"
+  suggested_source: "ecb"
+  current_source: "ecb"
+  conform: true
+  verified: true
 job-vacancies:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/job-vacancies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 labor-force-participation-rate:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/labor-force-participation-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 71.9
+  te_period: "2025-Q4"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 labour-costs:
-  te_label: null
-  te_url: null
+  te_label: "European Central Bank"
+  te_url: "http://ecb.europa.eu"
   te_page: "https://tradingeconomics.com/belgium/labour-costs"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 119.32
+  te_period: "2025-Q4"
+  suggested_source: "ecb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 long-term-unemployment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/long-term-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 2.0
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 manufacturing-production:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/manufacturing-production"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 62.1
+  te_period: "2026-03"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 medical-doctors:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/medical-doctors"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 minimum-wages:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/minimum-wages"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_period: "2026-Q2"
+  suggested_source: "eurostat"
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 mining-production:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/mining-production"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 68.6
+  te_period: "2026-03"
+  suggested_source: "statbel"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 nurses:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/nurses"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
   verified: false
 personal-income-tax-rate:
-  te_label: null
-  te_url: null
+  te_label: "Service Public Fédéral Finances"
+  te_url: "http://ec.europa.eu"
   te_page: "https://tradingeconomics.com/belgium/personal-income-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 50.0
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 population:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/population"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_value: 11.9
+  current_source: "eurostat"
   conform: false
   verified: false
 ppi:
-  te_label: null
-  te_url: null
+  te_label: "Statistics Belgium"
+  te_url: "https://statbel.fgov.be"
   te_page: "https://tradingeconomics.com/belgium/producer-prices"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 124.4
+  te_period: "March"
+  suggested_source: "statbel"
+  current_source: "statbel"
+  conform: true
+  verified: true
 productivity:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/productivity"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 105.18
+  te_period: "2025-Q4"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true
 retail-sales:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/retail-sales"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_page: "https://tradingeconomics.com/belgium/retail-sales-yoy"
+  current_source: "statbel"
   conform: false
   verified: false
 retirement-age-men:
-  te_label: null
-  te_url: null
+  te_label: "Commission Bancaire, Financière et des Assurances"
+  te_url: "https://www.expatica.com"
   te_page: "https://tradingeconomics.com/belgium/retirement-age-men"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 retirement-age-women:
-  te_label: null
-  te_url: null
+  te_label: "Commission Bancaire, Financière et des Assurances"
+  te_url: "https://www.expatica.com"
   te_page: "https://tradingeconomics.com/belgium/retirement-age-women"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  current_source: "curated"
   conform: false
-  verified: false
+  verified: true
 sales-tax-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/sales-tax-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 21.0
+  current_source: "curated"
   conform: false
   verified: false
 services-inflation:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/services-inflation"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 services-sentiment:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/services-sentiment"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  current_source: "eurostat"
   conform: false
   verified: false
 social-security-rate:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/social-security-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 48.07
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-companies:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/social-security-rate-for-companies"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/belgium/social-security-rate-companies"
+  current_source: "curated"
   conform: false
   verified: false
 social-security-rate-employees:
-  te_label: null
-  te_url: null
-  te_page: "https://tradingeconomics.com/belgium/social-security-rate-for-employees"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_page: "https://tradingeconomics.com/belgium/social-security-rate-employees"
+  current_source: "curated"
   conform: false
   verified: false
 terrorism-index:
-  te_label: null
-  te_url: null
   te_page: "https://tradingeconomics.com/belgium/terrorism-index"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: curated
+  te_value: 1.2
+  current_source: "curated"
   conform: false
   verified: false
+trade-balance:
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
+  te_page: "https://tradingeconomics.com/belgium/balance-of-trade"
+  te_period: "2026-03"
+  suggested_source: "nbb"
+  current_source: "nbb"
+  conform: true
+  verified: true
 unemployed-persons:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "https://www.nbb.be/en"
   te_page: "https://tradingeconomics.com/belgium/unemployed-persons"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
+  te_period: "2026-03"
+  suggested_source: "nbb"
+  current_source: "eurostat"
   conform: false
-  verified: false
+  verified: true
 unemployment:
-  te_label: null
-  te_url: null
+  te_label: "National Bank of Belgium"
+  te_url: "http://www.nbb.be"
   te_page: "https://tradingeconomics.com/belgium/unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 6.3
+  te_period: "March"
+  suggested_source: "nbb"
+  current_source: "nbb"
+  conform: true
+  verified: true
 youth-unemployment-rate:
-  te_label: null
-  te_url: null
+  te_label: "EUROSTAT"
+  te_url: "https://ec.europa.eu/eurostat/"
   te_page: "https://tradingeconomics.com/belgium/youth-unemployment-rate"
-  te_value: null
-  te_period: null
-  suggested_source: null
-  current_source: eurostat
-  conform: false
-  verified: false
+  te_value: 17.8
+  te_period: "March"
+  suggested_source: "eurostat"
+  current_source: "eurostat"
+  conform: true
+  verified: true

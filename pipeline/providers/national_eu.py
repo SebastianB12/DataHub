@@ -227,6 +227,76 @@ DK_SERIES = [
      "filters": {"BESKSTATUS": "BFK", "OMRÅDE": "000"},
      "freq": "Q", "unit": "%", "adjustment": "SA", "conversion": 1.0,
      "note": "DK Statbank AKU121K LFS employment rate (BFK), All DK, SA, quarterly"},
+
+    # === Migration 071 (2026-05-15): TE-conformity gap-fill — DST national sources ===
+    # core-cpi: PRIS04 VAREGR=151N (Net price excl. energy and unprocessed food),
+    # ENHED=300 (YoY %). Verified 2026-05-15: 2026-04 = 1.6% (TE: 1.6% exact match).
+    {"slug": "core-cpi", "table": "PRIS04", "series_id": "DST/PRIS04/core-yoy",
+     "filters": {"VAREGR": "151N", "ENHED": "300"},
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS04 Net price index excl. energy and unprocessed food YoY % (151N)"},
+    # services-inflation: PRIS04 VAREGR=142 (Services total), ENHED=300 YoY %.
+    # Verified 2026-05-15: 2026-04 = 2.2% (TE: 2.2% for 2026-03 exact-ish match).
+    {"slug": "services-inflation", "table": "PRIS04", "series_id": "DST/PRIS04/services-yoy",
+     "filters": {"VAREGR": "142", "ENHED": "300"},
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank PRIS04 Services (142) YoY % inflation"},
+    # budget-deficit: EDP1 LAND=DK, FUNKTION=SALDO, ENHED=PCT (% of GDP, annual).
+    # Verified 2026-05-15: 2025 = 2.9 (TE: 2.9 exact match).
+    {"slug": "budget-deficit", "table": "EDP1", "series_id": "DST/EDP1/deficit-pct-gdp",
+     "filters": {"LAND": "DK", "FUNKTION": "SALDO", "ENHED": "PCT"},
+     "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank EDP1 Government EMU surplus/deficit, % of GDP (annual)"},
+    # current-account: BBM POST=1 (Current Account), INDUDBOP=N (Net), LAND=W1, ENHED=93 (mil DKK), SA.
+    # Verified 2026-05-15: 2026-03 = 38,339.6 mil DKK SA.
+    {"slug": "current-account", "table": "BBM", "series_id": "DST/BBM/current-account",
+     "filters": {"POST": "1", "INDUDBOP": "N", "LAND": "W1", "ENHED": "93", "SÆSON": "2"},
+     "freq": "M", "unit": "Million DKK", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank BBM Current account net, vs World, SA, mio DKK monthly"},
+    # disposable-personal-income: INDKP106 ENHED=110 (Amount DKK 1.000), KOEN=MOK, ALDER1=00, INDKINTB=000.
+    # Verified 2026-05-15: 2024 = 1,431,342,035 (units of 1000 DKK = 1,431,342 mil DKK).
+    {"slug": "disposable-personal-income", "table": "INDKP106", "series_id": "DST/INDKP106",
+     "filters": {"ENHED": "110", "KOEN": "MOK", "ALDER1": "00", "INDKINTB": "000"},
+     "freq": "A", "unit": "Million DKK", "adjustment": "NSA", "conversion": 0.001,
+     "note": "DK Statbank INDKP106 Disposable income, total, all ages, both sexes (DKK 1000 -> mio DKK)"},
+    # job-vacancies: LSK03 ENHED=LS (number), SÆSON=20 (actual figures, NSA).
+    # Verified 2026-05-15: 2025Q4 = 45,766 (TE: 45,766 exact match).
+    {"slug": "job-vacancies", "table": "LSK03", "series_id": "DST/LSK03",
+     "filters": {"ENHED": "LS", "SÆSON": "20"},
+     "freq": "Q", "unit": "Number", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank LSK03 Job vacancies (number), NSA, quarterly"},
+    # labor-force-participation-rate: AKU121K BESKSTATUS=EFK (Economic activity rate).
+    # Verified 2026-05-15: 2025Q4 = 81.5% (TE: 81.9% for 2025Q4, ~0.4pp vintage diff).
+    {"slug": "labor-force-participation-rate", "table": "AKU121K", "series_id": "DST/AKU121K/EFK",
+     "filters": {"BESKSTATUS": "EFK", "OMRÅDE": "000"},
+     "freq": "Q", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank AKU121K LFS Economic activity rate (EFK) = labour force participation rate"},
+    # manufacturing-production: IPOP21 BRANCHEDB25UDVALG=C (Manufacturing), SA.
+    # Verified 2026-05-15: 2026-03 = 154.5 (Index 2021=100, SA).
+    {"slug": "manufacturing-production", "table": "IPOP21", "series_id": "DST/IPOP21/C",
+     "filters": {"SÆSON": "SÆSON", "BRANCHEDB25UDVALG": "C"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank IPOP21 Manufacturing production index (NACE C), SA"},
+    # mining-production: IPOP21 BRANCHEDB25UDVALG=B (Mining and quarrying), SA.
+    # Verified 2026-05-15: 2026-03 = 164.9.
+    {"slug": "mining-production", "table": "IPOP21", "series_id": "DST/IPOP21/B",
+     "filters": {"SÆSON": "SÆSON", "BRANCHEDB25UDVALG": "B"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "DK Statbank IPOP21 Mining and quarrying production index (NACE B), SA"},
+    # population: FOLK1A KØN=TOT, ALDER=IALT, CIVILSTAND=TOT, OMRÅDE=000 (All Denmark), quarterly thousands.
+    # Verified 2026-05-15: 2026Q2 = 6,031,247 persons -> 6.031 million.
+    {"slug": "population", "table": "FOLK1A", "series_id": "DST/FOLK1A",
+     "filters": {"KØN": "TOT", "ALDER": "IALT", "CIVILSTAND": "TOT", "OMRÅDE": "000"},
+     "freq": "Q", "unit": "Million", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "DK Statbank FOLK1A Population at first day of quarter, total (persons -> million)"},
+    # productivity: NP23 BRANCHE=PIALT (Total), PRISENHED=LPR_I (Index 2020=100, annual).
+    # Verified 2026-05-15: 2025 = 105.09 (TE shows 119.31 for 2025Q4 — different base/freq).
+    # We publish the annual DST series for source-conformity; consumers can compare to
+    # Eurostat quarterly. NOTE: TE value mismatch logged — different methodology.
+    {"slug": "productivity", "table": "NP23", "series_id": "DST/NP23/PIALT",
+     "filters": {"BRANCHE": "PIALT", "PRISENHED": "LPR_I"},
+     "freq": "A", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank NP23 Labour productivity index, total economy (PIALT), 2020=100, annual"},
 ]
 
 
@@ -433,6 +503,65 @@ FI_SERIES = [
      "series_id": "STATFI/kbar/11cc/CCI_A1",
      "freq": "M", "unit": "Balance (%)", "adjustment": "NSA", "conversion": 1.0,
      "note": "FI Tilastokeskus 11cc Consumer Confidence Indicator A1 (composite balance %)"},
+
+    # === Migration 073 (2026-05-15): TE-conformity gap-fill — stat_fi national sources ===
+    # budget-deficit: vtp 129d Sektori=S13 (General gov), Taloustoimi=B9 (Net lending), Tiedot=bkt_suhde (% GDP).
+    # Verified 2026-05-15: 2025 = -3.4% (TE: 3.4% absolute value, exact match).
+    # Conversion -1.0: TE displays deficit as positive percentage (absolute value).
+    {"slug": "budget-deficit", "path": "StatFin/vtp/statfin_vtp_pxt_129d.px",
+     "query": {"Sektori": "S13", "Taloustoimi": "B9", "Tiedot": "bkt_suhde"},
+     "series_id": "STATFI/vtp/129d/budget-deficit",
+     "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": -1.0,
+     "note": "FI Tilastokeskus 129d General government B.9 net lending/borrowing, % of GDP (sign-flipped to deficit)"},
+    # current-account: mata 12gf Maksutase-erä=CA, Tiedot=B (net), monthly EUR mn.
+    # Verified 2026-05-15: 2026-03 = 250 EUR mn (net CA balance).
+    {"slug": "current-account", "path": "StatFin/mata/statfin_mata_pxt_12gf.px",
+     "query": {"Maksutase-erä": "CA", "Tiedot": "B"},
+     "series_id": "STATFI/mata/12gf/current-account",
+     "freq": "M", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 12gf Current account net (Maksutase-erä CA, Tiedot B), monthly EUR mn"},
+    # labor-force-participation-rate: tyti 135y Sukupuoli=SSS, Ikäluokka=15-74, Tiedot=Tyovoimaosuus.
+    # Verified 2026-05-15: 2026-03 = 68.0% (TE: 68.0% for 2026-02 exact match).
+    {"slug": "labor-force-participation-rate", "path": "StatFin/tyti/statfin_tyti_pxt_135y.px",
+     "query": {"Sukupuoli": "SSS", "Ikäluokka": "15-74", "Tiedot": "Tyovoimaosuus"},
+     "series_id": "STATFI/tyti/135y/lfp-rate",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 135y LFS labour-force participation rate 15-74 (Tyovoimaosuus)"},
+    # manufacturing-production: ttvi 14mh Toimiala=C (Manufacturing), Tiedot=Alkuperainen (NSA original).
+    # Verified 2026-05-15: 2026-03 = 114.0 (Index 2021=100, NSA).
+    {"slug": "manufacturing-production", "path": "StatFin/ttvi/statfin_ttvi_pxt_14mh.px",
+     "query": {"Toimiala (TOL 2008)": "C", "Tiedot": "Alkuperainen"},
+     "series_id": "STATFI/ttvi/14mh/manufacturing",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 14mh Industrial Output, Manufacturing (TOL 2008 C), NSA"},
+    # mining-production: ttvi 14mh Toimiala=B (Mining and quarrying).
+    # Verified 2026-05-15: 2026-03 = 102.6.
+    {"slug": "mining-production", "path": "StatFin/ttvi/statfin_ttvi_pxt_14mh.px",
+     "query": {"Toimiala (TOL 2008)": "B", "Tiedot": "Alkuperainen"},
+     "series_id": "STATFI/ttvi/14mh/mining",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 14mh Industrial Output, Mining and quarrying (TOL 2008 B), NSA"},
+    # population: vaerak 11ra Alue=SSS (Whole country), Tiedot=vaesto (Pop 31 Dec), annual.
+    # Verified 2026-05-15: 2025 = 5,652,881 persons -> 5.653 million.
+    {"slug": "population", "path": "StatFin/vaerak/statfin_vaerak_pxt_11ra.px",
+     "query": {"Alue": "SSS", "Tiedot": "vaesto"},
+     "series_id": "STATFI/vaerak/11ra/population",
+     "freq": "A", "unit": "Million", "adjustment": "NSA", "conversion": 1e-6,
+     "note": "FI Tilastokeskus 11ra Population 31 Dec, whole country (persons -> million)"},
+    # unemployed-persons: tyti 135y Tiedot=Tyottomat (Unemployed, 1000 persons).
+    # Verified 2026-05-15: 2026-03 = 315 thousand (TE: 315 exact match).
+    {"slug": "unemployed-persons", "path": "StatFin/tyti/statfin_tyti_pxt_135y.px",
+     "query": {"Sukupuoli": "SSS", "Ikäluokka": "15-74", "Tiedot": "Tyottomat"},
+     "series_id": "STATFI/tyti/135y/unemp-persons",
+     "freq": "M", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 135y LFS Unemployed persons 15-74 (Tyottomat), thousands NSA"},
+    # youth-unemployment-rate: tyti 135y Tiedot=Tyottomyysaste, Ikäluokka=15-24.
+    # Verified 2026-05-15: 2026-03 = 24.3% (TE: 24.3% for 2026-02 exact match).
+    {"slug": "youth-unemployment-rate", "path": "StatFin/tyti/statfin_tyti_pxt_135y.px",
+     "query": {"Sukupuoli": "SSS", "Ikäluokka": "15-24", "Tiedot": "Tyottomyysaste"},
+     "series_id": "STATFI/tyti/135y/youth-unemp",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 135y LFS Youth unemployment rate 15-24, NSA"},
 ]
 
 
@@ -630,6 +759,64 @@ SE_SERIES = [
      "series_id": "SCB/AM0301A/AKITM07/labour-costs",
      "freq": "M", "unit": "Index (2008M01=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "SE SCB AKITM07 LCI for salaried employees, all industry B-S exkl.O, preliminary"},
+
+    # === Migration 074 (2026-05-15): TE-conformity gap-fill — SCB national sources ===
+    # capacity-utilization: NV0701A IndKaputnBCKv, ContentsCode=000001H6 (NSA actual %).
+    # Verified 2026-05-15: 2025Q4 = 87.7% (SCB actual; TE 20.0 is EC survey balance — different metric).
+    {"slug": "capacity-utilization", "path": "NV/NV0701/NV0701A/IndKaputnBCKv",
+     "query": {"ContentsCode": "000001H6"},
+     "series_id": "SCB/NV0701A/capacity-util",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB NV0701A Industrial capacity utilisation, NACE B+C, not calendar adjusted %"},
+    # core-cpi: PR0101J KPIFXE2020, ContentsCode=000007ZV (annual changes, CPIF-XE).
+    # Verified 2026-05-15: 2026-04 = 0.0% YoY (CPIF-XE).
+    {"slug": "core-cpi", "path": "PR/PR0101/PR0101J/KPIFXE2020",
+     "query": {"ContentsCode": "000007ZV"},
+     "series_id": "SCB/PR0101J/core-cpi-yoy",
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB PR0101J CPIF exclusive energy (core-CPI) annual change %"},
+    # current-account: FM0001BetBalKv, Kontopost=A1 (Current account net), SEK billions.
+    {"slug": "current-account", "path": "FM/FM0001/FM0001A/FM0001BetBalKv",
+     "query": {"Kontopost": "A1", "ContentsCode": "FM0001AQ"},
+     "series_id": "SCB/FM0001A/current-account",
+     "freq": "Q", "unit": "SEK billion", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB FM0001BetBalKv BoP current account net, SEK billions, quarterly"},
+    # disposable-personal-income: NR0103C HusDispInkENS2010Kv, S14 B6n, NR0103DV.
+    # Verified 2026-05-15: 2025Q4 = 773,762 SEK mn (TE: 773,762 exact match).
+    {"slug": "disposable-personal-income", "path": "NR/NR0103/NR0103C/HusDispInkENS2010Kv",
+     "query": {"Transaktionspost": "B6n", "ContentsCode": "NR0103DV"},
+     "series_id": "SCB/NR0103C/disposable-S14",
+     "freq": "Q", "unit": "SEK million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB NR0103C Household (S14) disposable income net, SEK mn, quarterly"},
+    # house-price-index: BO0501A FastpiPSRegKv, Region=00 (Sweden).
+    # Verified 2026-05-15: 2026Q1 = 953.0 (TE: 953 exact match).
+    {"slug": "house-price-index", "path": "BO/BO0501/BO0501A/FastpiPSRegKv",
+     "query": {"Region": "00", "ContentsCode": "BO0501K2"},
+     "series_id": "SCB/BO0501A/house-price",
+     "freq": "Q", "unit": "Index (1981=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB BO0501A Real estate price index, one- and two-dwelling buildings, Sweden"},
+    # labor-force-participation-rate: AKURLBefM Arbetskraftstillh=IAKRP.
+    # Verified 2026-05-15: 2026-03 = 75.9% (TE: 75.9 exact match for 2026-02).
+    {"slug": "labor-force-participation-rate", "path": "AM/AM0401/AM0401A/AKURLBefM",
+     "query": {"Arbetskraftstillh": "IAKRP", "TypData": "O_DATA",
+               "Kon": "1+2", "Alder": "tot15-74", "ContentsCode": "000007L9"},
+     "series_id": "SCB/AM0401A/lfp-rate",
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB AM0401A LFS labour-force participation rate 15-74 NSA (IAKRP/O_DATA)"},
+    # manufacturing-production: IPI2010KedjM, SNI2007=C, calendar adjusted.
+    # Verified 2026-05-15: 2026-03 = 122.5 (Index 2021=100).
+    {"slug": "manufacturing-production", "path": "NV/NV0402/NV0402A/IPI2010KedjM",
+     "query": {"SNI2007": "C", "ContentsCode": "NV0402AJ"},
+     "series_id": "SCB/NV0402A/manufacturing",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SE SCB NV0402A IPI Manufacturing index level (SNI C), WDA"},
+    # mining-production: IPI2010KedjM, SNI2007=B.
+    # Verified 2026-05-15: 2026-03 = 96.3.
+    {"slug": "mining-production", "path": "NV/NV0402/NV0402A/IPI2010KedjM",
+     "query": {"SNI2007": "B", "ContentsCode": "NV0402AJ"},
+     "series_id": "SCB/NV0402A/mining",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "SE SCB NV0402A IPI Mining and quarrying index level (SNI B), WDA"},
 ]
 
 
@@ -780,6 +967,14 @@ PT_SERIES = [
      "unit": "% YoY", "adjustment": "SA+CDA", "conversion": 1.0,
      "row_filter": {"geocod": "PT"}, "op2_only": True,
      "note": "INE PT 0013431 GDP chain-linked YoY%, Base 2021, quarterly (op=2 latest-only; op=1 broken upstream)"},
+
+    # Labour-force participation rate (Taxa de atividade 16-74), monthly, %.
+    # dim_3='T' is both sexes (HM). TE quotes this exact series.
+    # Verified 2026-05-15: 2026-03 = 69.7 % (TE: 69.7 %).
+    {"slug": "labor-force-participation-rate", "varcd": "0010060", "freq": "M",
+     "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "row_filter": {"geocod": "PT", "dim_3": "T"},
+     "note": "INE PT 0010060 Taxa de atividade da populacao residente 16-74 (both sexes), monthly"},
 ]
 
 
@@ -993,6 +1188,126 @@ IE_SERIES = [
      "filters": {"STATISTIC": "NAQ03S04", "C02196V02652": "-"},
      "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
      "note": "CSO Ireland NAQ03 GDP at Constant Market Prices SA, chain-linked"},
+    # ---- TE-conformity gap-fill (added 2026-05-15) -------------------------------
+    # CPI sub-aggregates — CPM01 by COICOP, STATISTIC=CPM01C08 = Index Base Dec2023=100.
+    # COICOP codes: 01=Food, 03=Clothing, 04=Housing/utilities, 07=Transport,
+    # 09=Recreation, 10=Education.
+    {"slug": "cpi-food", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "01"},
+     "series_id": "CSO/CPM01/01",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI Food & non-alc bev (COICOP 01)"},
+    {"slug": "cpi-clothing", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "03"},
+     "series_id": "CSO/CPM01/03",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI Clothing & footwear (COICOP 03)"},
+    {"slug": "cpi-housing-utilities", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "04"},
+     "series_id": "CSO/CPM01/04",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI Housing/water/energy (COICOP 04)"},
+    {"slug": "cpi-transportation", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "07"},
+     "series_id": "CSO/CPM01/07",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI Transport (COICOP 07)"},
+    {"slug": "cpi-recreation-and-culture", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "09"},
+     "series_id": "CSO/CPM01/09",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI Recreation & culture (COICOP 09)"},
+    {"slug": "cpi-education", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "10"},
+     "series_id": "CSO/CPM01/10",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI Education (COICOP 10)"},
+    # Core CPI — STATISTIC CPM01C08 on all items (-). CSO does not publish a true
+    # core (ex-food/energy) series; we use overall CPI index from CSO as source
+    # attribution proxy. TE attributes "core inflation" to CSO too.
+    {"slug": "core-cpi", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C08", "C01779V03424": "-"},
+     "series_id": "CSO/CPM01/core",
+     "freq": "M", "unit": "Index (Dec 2023=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 CPI all-items (core proxy; CSO does not publish core)"},
+    # Food inflation YoY — CPM01C07 (12-month % change) for COICOP=01.
+    {"slug": "food-inflation", "table": "CPM01",
+     "filters": {"STATISTIC": "CPM01C07", "C01779V03424": "01"},
+     "series_id": "CSO/CPM01/food-yoy",
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland CPM01 Food & non-alc bev YoY%"},
+    # Labour Force Survey — QLF18, both sexes ('-').
+    # Employment rate 15-64 (C04, age=315).
+    {"slug": "employment-rate", "table": "QLF18",
+     "filters": {"STATISTIC": "QLF18C04", "C02076V02508": "315", "C02199V02655": "-"},
+     "series_id": "CSO/QLF18/empr-15-64",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland QLF18 ILO Employment Rate 15-64 both sexes"},
+    # Labor force participation rate 15+ (C02, age=320). 15-64 isn't published here.
+    {"slug": "labor-force-participation-rate", "table": "QLF18",
+     "filters": {"STATISTIC": "QLF18C02", "C02076V02508": "320", "C02199V02655": "-"},
+     "series_id": "CSO/QLF18/lfpr-15plus",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland QLF18 ILO Participation Rate 15+ both sexes"},
+    # Youth unemployment 15-24 (C06, age=310).
+    {"slug": "youth-unemployment-rate", "table": "QLF18",
+     "filters": {"STATISTIC": "QLF18C06", "C02076V02508": "310", "C02199V02655": "-"},
+     "series_id": "CSO/QLF18/yuneml-15-24",
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland QLF18 Youth Unemployment Rate 15-24 both sexes"},
+    # Unemployed persons 15+ (C05, age=320).
+    {"slug": "unemployed-persons", "table": "QLF18",
+     "filters": {"STATISTIC": "QLF18C05", "C02076V02508": "320", "C02199V02655": "-"},
+     "series_id": "CSO/QLF18/unemp-15plus",
+     "freq": "Q", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland QLF18 LFS unemployed persons 15+ both sexes"},
+    # Manufacturing-production — MIM05C03 SA Industrial Production NACE V2100 (mfg 10-33).
+    {"slug": "manufacturing-production", "table": "MIM05",
+     "filters": {"STATISTIC": "MIM05C03", "C02576V03125": "V2100"},
+     "series_id": "CSO/MIM05/manuf",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland MIM05 SA Industrial Production NACE V2100 (Manufacturing 10-33)"},
+    # National Accounts components — NAQ04, SA constant prices (S02), by C03331V04018:
+    #   001 = Personal Consumption (consumer-spending)
+    #   002 = Government Final Consumption (government-spending)
+    #   003 = Gross Domestic Fixed Capital Formation
+    #   004 = Value of Physical Changes in Stocks (changes-in-inventories)
+    {"slug": "consumer-spending", "table": "NAQ04",
+     "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "001"},
+     "series_id": "CSO/NAQ04/consumer",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland NAQ04 Personal Consumption SA constant prices"},
+    {"slug": "government-spending", "table": "NAQ04",
+     "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "002"},
+     "series_id": "CSO/NAQ04/gov",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland NAQ04 Government Final Consumption SA constant prices"},
+    {"slug": "gross-fixed-capital-formation", "table": "NAQ04",
+     "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "003"},
+     "series_id": "CSO/NAQ04/gfcf",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland NAQ04 Gross Domestic Fixed Capital Formation SA constant"},
+    {"slug": "changes-in-inventories", "table": "NAQ04",
+     "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "004"},
+     "series_id": "CSO/NAQ04/inv",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland NAQ04 Value of Physical Changes in Stocks SA"},
+    # Government finance — GFA02 annual: Gross GG Debt (code 26), Net lending/B9 (code 18).
+    {"slug": "government-debt", "table": "GFA02",
+     "filters": {"STATISTIC": "GFA02", "C03145V03797": "26"},
+     "series_id": "CSO/GFA02/debt",
+     "freq": "A", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland GFA02 Gross General Government Debt (EDP face value)"},
+    {"slug": "government-debt-total", "table": "GFA02",
+     "filters": {"STATISTIC": "GFA02", "C03145V03797": "26"},
+     "series_id": "CSO/GFA02/debt-total",
+     "freq": "A", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland GFA02 Gross General Government Debt (EDP face value)"},
+    {"slug": "budget-deficit", "table": "GFA02",
+     "filters": {"STATISTIC": "GFA02", "C03145V03797": "18"},
+     "series_id": "CSO/GFA02/b9",
+     "freq": "A", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "CSO Ireland GFA02 General Government Net Lending/Borrowing B9 (ESA2010)"},
 ]
 
 
@@ -1157,6 +1472,131 @@ BE_SERIES = [
      "dataflow": "DF_BUSSURVM", "key": "M.SYNC.BE.A999.X",
      "freq": "M", "unit": "Balance", "adjustment": "SA", "conversion": 1.0,
      "note": "NBB monthly business survey synthetic curve, Belgium total, SA+smoothed"},
+
+    # === Migration 075 (2026-05-15): TE-conformity gap-fill — BE Statbel + NBB SDMX ===
+    # --- Statbel CPI by COICOP (dfc2ab6f: CPI 13 groups ECOICOP V2, last 13 months) ---
+    # cpi-education: COICOP "10 Education services". Verified 2026-05-15: April 2026 = 101.79 (TE: 101.79 exact match).
+    {"kind": "statbel", "slug": "cpi-education",
+     "view_id": "dfc2ab6f-b5bf-4520-9645-31a5dbb2be06",
+     "value_col": "Consumer price index",
+     "row_filter": {"Level 1": "10 Education services"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI by ECOICOP V2 13 groups — Education services (10), last 13 months window"},
+    # cpi-recreation-and-culture: COICOP "09 Recreation, sport and culture". Verified 2026-05-15: April 2026 = 105.54 (TE 105.33 close).
+    {"kind": "statbel", "slug": "cpi-recreation-and-culture",
+     "view_id": "dfc2ab6f-b5bf-4520-9645-31a5dbb2be06",
+     "value_col": "Consumer price index",
+     "row_filter": {"Level 1": "09 Recreation, sport and culture"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI by ECOICOP V2 — Recreation, sport and culture (09)"},
+    # core-cpi: 30778b36 HICP aggregates, Special aggregates="HICP excluding energy and unprocessed food".
+    # Verified 2026-05-15: April 2026 = ~134.5 index. TE 8.7 appears to be old YoY%.
+    {"kind": "statbel", "slug": "core-cpi",
+     "view_id": "30778b36-87b4-44e7-bb37-d36adbebb2bc",
+     "value_col": "HICP Index",
+     "row_filter": {"Special aggregates": "HICP excluding energy and unprocessed food"},
+     "freq": "M", "unit": "HICP Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel HICP excluding energy and unprocessed food (core HICP), last 12 months"},
+    # food-inflation YoY %: 70adacda Inflation by COICOP group. Level 1 = "01 Food and non-alcoholic beverages".
+    # Statbel publishes as decimal (0.024 = 2.4%); convert to percentage.
+    {"kind": "statbel", "slug": "food-inflation",
+     "view_id": "70adacda-3a56-4bf9-bd59-6c241d4398db",
+     "value_col": "Inflation (HICP)",
+     "row_filter": {"Level 1": "01 Food and non-alcoholic beverages"},
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 100.0,
+     "note": "Statbel HICP inflation by COICOP — Food YoY % (decimal -> %)"},
+    # labor-force-participation-rate (statbel 7d30d7ff quarterly Activity rate, Belgium total).
+    # Verified 2026-05-15: 2025Q4 = 0.719 -> 71.9% (TE: 71.9 exact match).
+    {"kind": "statbel", "slug": "labor-force-participation-rate",
+     "view_id": "7d30d7ff-ab74-4047-b2af-2a0bff250647",
+     "value_col": "Activity rate",
+     "row_filter": {"Region": "", "Gender": "", "Total": "Total"},
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 100.0,
+     "note": "Statbel LFS Activity rate, Belgium total both sexes (decimal -> %), 2025 quarterly"},
+
+    # --- NBB SDMX REST v2: National accounts, BoP, government, employment ---
+    # consumer-spending: DF_QNA_DISS, Q.2.P31_S14_S15.VZ.V.Y (Private final consumption, total economy, current EUR mn, SA+WDA).
+    # Verified 2026-05-15: 2025Q4 = 84,503 EUR mn.
+    {"kind": "nbb", "slug": "consumer-spending",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.P31_S14_S15.VZ.V.Y",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_QNA_DISS Private final consumption (P.31 S14+S15), VZ total economy, current EUR mn, SA+WDA"},
+    # changes-in-inventories: P52 (Changes in stocks + Acquisitions less disposals of valuables).
+    # Verified 2026-05-15: 2025Q4 = 3,780 EUR mn.
+    {"kind": "nbb", "slug": "changes-in-inventories",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.P52.VZ.V.Y",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_QNA_DISS P.52 Changes in stocks + acquisitions, total economy, current EUR mn, SA+WDA"},
+    # gross-fixed-capital-formation: P51 total GFCF, EUR mn SA+WDA.
+    # Verified 2026-05-15: 2025Q4 = 39,142 EUR mn.
+    {"kind": "nbb", "slug": "gross-fixed-capital-formation",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.P51.VZ.V.Y",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_QNA_DISS P.51 Gross fixed capital formation, total economy, current EUR mn, SA+WDA"},
+    # government-spending: P3_S13 (Final consumption expenditure of general government).
+    # Verified 2026-05-15: 2025Q4 = 39,161 EUR mn.
+    {"kind": "nbb", "slug": "government-spending",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.P3_S13.VZ.V.Y",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_QNA_DISS P.3 Final consumption of general government (S.13), current EUR mn, SA+WDA"},
+    # current-account: DF_NFQADISPINC_DISS B9 (Net lending/borrowing of nation = current account proxy), Y.
+    # Verified 2026-05-15: 2025Q4 = -4,452 EUR mn.
+    {"kind": "nbb", "slug": "current-account",
+     "dataflow": "DF_NFQADISPINC_DISS", "key": "Q.B9.V.Y",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_NFQADISPINC_DISS B.9 Net lending/borrowing (current+capital account, ROW), EUR mn SA+WDA"},
+    # disposable-personal-income: DF_NASECDETQ_DISS sector S1M (households+NPISH), II2U_B6G (gross disposable income).
+    # Verified 2026-05-15: 2025Q4 = 96,445 EUR mn.
+    {"kind": "nbb", "slug": "disposable-personal-income",
+     "dataflow": "DF_NASECDETQ_DISS", "key": "Q.II2U_B6G.S1M",
+     "freq": "Q", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB DF_NASECDETQ_DISS Gross disposable income (B.6g), Households+NPISH (S1M), quarterly EUR mn"},
+    # employed-persons: DF_EMPLOY_DISS, INDICATOR=EMPLOY (employees), BRANCH=VZ, CONCEPT=D (domestic), ADJUSTMENT=Y.
+    # Verified 2026-05-15: 2025Q4 = 4,210 thousand employees.
+    {"kind": "nbb", "slug": "employed-persons",
+     "dataflow": "DF_EMPLOY_DISS", "key": "Q.EMPLOY.VZ.D.Y",
+     "freq": "Q", "unit": "Thousand", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_EMPLOY_DISS Number of employees, total economy domestic, thousands SA+WDA quarterly"},
+    # exports: DF_EXTERNAL_TRADE_OVERVIEW, M.NBB_A1.X.NAT.VAL.M (World, exports, national concept, value, monthly).
+    # Verified 2026-05-15: 2026-03 = 33,100 EUR mn.
+    {"kind": "nbb", "slug": "exports",
+     "dataflow": "DF_EXTERNAL_TRADE_OVERVIEW", "key": "M.NBB_A1.X.NAT.VAL.M",
+     "freq": "M", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB DF_EXTERNAL_TRADE_OVERVIEW exports of goods vs World, national concept, value, monthly"},
+    # imports: same DF, FLOW=I.
+    # Verified 2026-05-15: 2026-03 = 29,816 EUR mn.
+    {"kind": "nbb", "slug": "imports",
+     "dataflow": "DF_EXTERNAL_TRADE_OVERVIEW", "key": "M.NBB_A1.I.NAT.VAL.M",
+     "freq": "M", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB DF_EXTERNAL_TRADE_OVERVIEW imports of goods vs World, national concept, value, monthly"},
+    # government-debt: DF_CGD Q.CGD.S1300.F (consolidated gross debt, general government, total instruments).
+    # Verified 2026-05-15: 2025Q4 = 692,461 EUR mn (~ TE: gov debt EUR mn).
+    {"kind": "nbb", "slug": "government-debt",
+     "dataflow": "DF_CGD", "key": "Q.CGD.S1300.F",
+     "freq": "Q", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB DF_CGD Consolidated gross debt of general government (S.1300), total instruments, quarterly EUR mn"},
+    # government-debt-total: alias of government-debt (TE uses both slugs).
+    {"kind": "nbb", "slug": "government-debt-total",
+     "dataflow": "DF_CGD", "key": "Q.CGD.S1300.F",
+     "freq": "Q", "unit": "EUR million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB DF_CGD Consolidated gross debt (alias of government-debt)"},
+    # unemployed-persons: DF_UNEMPLOY_RATE is rate only; use DF_UNEMPLOYMENT (count) — full 14-dim key.
+    # Verified 2026-05-15: 2026-03 = 564,477 unemployed.
+    {"kind": "nbb", "slug": "unemployed-persons",
+     "dataflow": "DF_UNEMPLOYMENT", "key": "M.BE.AA.A0000.Z0000.999.BR00.000.0000.N.00.99.NHU._Z",
+     "freq": "M", "unit": "Number", "adjustment": "NSA", "conversion": 1.0,
+     "note": "NBB DF_UNEMPLOYMENT Belgium total all ages, persons (NHU non-harmonised), monthly NSA"},
+    # manufacturing-production: DF_INDPROD NACE C (Manufacturing), WDA, base 2021=100.
+    # Verified 2026-05-15: 2026-03 = 101.2 (NBB redistributes Statbel IPI; aggregation may differ from TE 62.1).
+    {"kind": "nbb", "slug": "manufacturing-production",
+     "dataflow": "DF_INDPROD", "key": "M.2021.INDPROD.W.C.BE",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "NBB DF_INDPROD Industrial production index, Manufacturing (NACE C), Belgium, WDA"},
+    # mining-production: DF_INDPROD NACE B (Mining and quarrying).
+    {"kind": "nbb", "slug": "mining-production",
+     "dataflow": "DF_INDPROD", "key": "M.2021.INDPROD.W.B.BE",
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "NBB DF_INDPROD Industrial production index, Mining and quarrying (NACE B), Belgium, WDA"},
 ]
 
 
@@ -1172,7 +1612,7 @@ def fetch_be_statbel_csv(view_id: str, value_col: str, freq: str = "M",
     every key are kept. Empty string ("") matches blank cells (used to pick
     grand totals in views with aggregate breakdowns).
     """
-    import csv as csvm, io as iom
+    import csv as csvm, io as iom, re as rem
     url = f"https://bestat.statbel.fgov.be/bestat/api/views/{view_id}/result/CSV"
     r = requests.get(url, timeout=30)
     r.raise_for_status()
@@ -1187,14 +1627,30 @@ def fetch_be_statbel_csv(view_id: str, value_col: str, freq: str = "M",
                     break
             if skip:
                 continue
-        # Some views use "Month" = "January 2025", others split Year/Month
-        month_text = (row.get("Month") or row.get("Reference month") or "").strip()
-        try:
-            mname, ystr = month_text.rsplit(" ", 1)
-            yy = int(ystr)
-            mm = _BE_MONTHS[mname]
-            dt = date(yy, mm, 1)
-        except Exception:
+        dt = None
+        if freq == "M":
+            month_text = (row.get("Month") or row.get("Reference month") or "").strip()
+            try:
+                mname, ystr = month_text.rsplit(" ", 1)
+                yy = int(ystr)
+                mm = _BE_MONTHS[mname]
+                dt = date(yy, mm, 1)
+            except Exception:
+                continue
+        elif freq == "Q":
+            q_text = (row.get("Quarter") or row.get("Trimester") or "").strip().lower()
+            m = rem.match(r"(\d)(?:st|nd|rd|th)\s+(?:quarter|trimester)\s+(\d{4})", q_text)
+            if not m:
+                continue
+            q = int(m.group(1)); yy = int(m.group(2))
+            dt = date(yy, {1: 1, 2: 4, 3: 7, 4: 10}[q], 1)
+        elif freq == "A":
+            ystr = (row.get("Year") or "").strip()
+            try:
+                dt = date(int(ystr), 1, 1)
+            except ValueError:
+                continue
+        if dt is None:
             continue
         val_str = (row.get(value_col) or "").replace(",", "")
         try:
@@ -1422,6 +1878,83 @@ AT_SERIES = [
      "time_col": "C-A10-0", "value_col": "F-TKL101",
      "freq": "A", "unit": "Bn EUR", "adjustment": "NSA", "conversion": 0.001,
      "note": "Statistik Austria Konsolidierte Bruttoverschuldung Maastricht jährlich, Mio→Bn EUR"},
+
+    # === AT gap-fill (C9, 2026-05-15) — TE-source-conformity expansion ===
+    # CPI sub-indices via OGD_vpi20_VPI_2020_1 (base 2020=100). COICOP at C-VPI5NEU-0.
+    # F-VPIMZBM = Messzahl Berichtsmonat (level index). Coverage through 2025-12 (OGD lag).
+    {"slug": "cpi-food", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-01"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZBM",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-01 Food & non-alc beverages (level)"},
+    {"slug": "cpi-clothing", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-03"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZBM",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-03 Clothing & footwear (level)"},
+    {"slug": "cpi-housing-utilities", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-04"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZBM",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-04 Housing, water, electricity (level)"},
+    {"slug": "cpi-transportation", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-07"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZBM",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-07 Transport (level)"},
+    {"slug": "cpi-recreation-and-culture", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-09"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZBM",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-09 Recreation & culture (level)"},
+    {"slug": "cpi-education", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-10"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIMZBM",
+     "freq": "M", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-10 Education (level)"},
+    # food-inflation: VPI-01 YoY rate column (F-VPIPZVJM = % vs. prev year same month)
+    {"slug": "food-inflation", "ogd": "OGD_vpi20_VPI_2020_1",
+     "filters": {"C-VPI5NEU-0": "VPI-01"},
+     "time_col": "C-VPIZR-0", "value_col": "F-VPIPZVJM",
+     "freq": "M", "unit": "% YoY", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statistik Austria VPI 2020 COICOP-01 Food YoY (% vs prev. year)"},
+
+    # === VGR108 quarterly national accounts components (Mio EUR -> Bn EUR) ===
+    # Real, seasonally and working-day adjusted: F-RSAIB. Mapping via C-VGRHAG79-0.
+    {"slug": "consumer-spending", "ogd": "OGD_vgr108_VGR_HA_vj_1",
+     "filters": {"C-VGRHAG79-0": "VGRHAG-16"},
+     "time_col": "C-A10-0", "value_col": "F-RSAIB",
+     "freq": "Q", "unit": "Bn EUR (real, SA)", "adjustment": "SA", "conversion": 0.001,
+     "note": "Statistik Austria VGR108 VGRHAG-16 HH final consumption, real SA, Mio→Bn EUR"},
+    {"slug": "government-spending", "ogd": "OGD_vgr108_VGR_HA_vj_1",
+     "filters": {"C-VGRHAG79-0": "VGRHAG-18"},
+     "time_col": "C-A10-0", "value_col": "F-RSAIB",
+     "freq": "Q", "unit": "Bn EUR (real, SA)", "adjustment": "SA", "conversion": 0.001,
+     "note": "Statistik Austria VGR108 VGRHAG-18 Government final consumption, real SA"},
+    {"slug": "gross-fixed-capital-formation", "ogd": "OGD_vgr108_VGR_HA_vj_1",
+     "filters": {"C-VGRHAG79-0": "VGRHAG-23"},
+     "time_col": "C-A10-0", "value_col": "F-RSAIB",
+     "freq": "Q", "unit": "Bn EUR (real, SA)", "adjustment": "SA", "conversion": 0.001,
+     "note": "Statistik Austria VGR108 VGRHAG-23 Total gross fixed capital formation, real SA"},
+    {"slug": "changes-in-inventories", "ogd": "OGD_vgr108_VGR_HA_vj_1",
+     "filters": {"C-VGRHAG79-0": "VGRHAG-32"},
+     "time_col": "C-A10-0", "value_col": "F-NSAIB",
+     "freq": "Q", "unit": "Bn EUR (nominal, SA)", "adjustment": "SA", "conversion": 0.001,
+     "note": "Statistik Austria VGR108 VGRHAG-32 Changes in inventories, nominal SA (F-NSAIB)"},
+
+    # === Industrial production sub-breakdowns (same OGD_kjiprodindex2021) ===
+    # Use KJIB00-10 (Industrie gesamt, the same slice as industrial-production) but pick
+    # a NACE-specific value column: F-KJIP_NAC_B = Mining, F-KJIP_NAC_C = Manufacturing.
+    {"slug": "mining-production", "ogd": "OGD_kjiprodindex2021_KJID2021_PI_1",
+     "filters": {"C-X93-0": "X93-2", "C-KJIB00-0": "KJIB00-10"},
+     "time_col": "C-A10-0", "value_col": "F-KJIP_NAC_B",
+     "freq": "M", "unit": "Index (2021=100, WDA)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "Statistik Austria Produktionsindex NACE B Bergbau (column F-KJIP_NAC_B), WDA"},
+    {"slug": "manufacturing-production", "ogd": "OGD_kjiprodindex2021_KJID2021_PI_1",
+     "filters": {"C-X93-0": "X93-2", "C-KJIB00-0": "KJIB00-10"},
+     "time_col": "C-A10-0", "value_col": "F-KJIP_NAC_C",
+     "freq": "M", "unit": "Index (2021=100, WDA)", "adjustment": "WDA", "conversion": 1.0,
+     "note": "Statistik Austria Produktionsindex NACE C Verarbeitung (col F-KJIP_NAC_C), WDA"},
 ]
 
 
@@ -2465,8 +2998,9 @@ HU_SERIES = [
      "value_col_index": 19,
      "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "WDA", "conversion": 1.0,
      "note": "KSH STADAT 13.2.3.1 ipa0072 IPI Hungary WDA, YoY index"},
-    # mun0098 col 8 = "Unemployment rate" %, LFS aged 15-64, Total section (first occurrence)
-    {"slug": "unemployment-rate", "section": "mun", "table": "mun0098",
+    # mun0098 col 8 = "Unemployment rate" %, LFS aged 15-64, Total section (first occurrence).
+    # Canonical slug is `unemployment` (no -rate suffix); FK enforces.
+    {"slug": "unemployment", "section": "mun", "table": "mun0098",
      "value_col_index": 8,
      "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "KSH STADAT 20.2.1.3 mun0098 LFS unemployment rate 15-64 Total %"},
@@ -2881,7 +3415,7 @@ SK_SERIES = [
     # rok, vek, vzdel03, poh, stv (quarter), mj, ukaz.
     # all years × VEK_Y15-74 × TOTAL education × TOTAL sex × all quarters × MJ_VPC (in %)
     # × U_PR_0003 (Unemployment rate).
-    {"slug": "unemployment-rate", "dataset_id": "pr1802qs",
+    {"slug": "unemployment", "dataset_id": "pr1802qs",
      "segments": ["all", "VEK_Y15-74", "TOTAL", "TOTAL", "all", "MJ_VPC", "U_PR_0003"],
      "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "SUSR pr1802qs LFS unemployment rate 15-74 Total %"},
