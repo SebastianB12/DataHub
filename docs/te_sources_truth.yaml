@@ -1,4 +1,4 @@
-# TE-Source-Truth — synced after Phase C7.
+# TE-Source-Truth — synced after Phase C8.
 
 AT:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/austria/government-budget" }
@@ -267,41 +267,41 @@ CY:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/budget-deficit" }
   business-confidence: { source: eurostat, verified: true, te_label: "European Commission", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/cyprus/business-confidence" }
   capacity-utilization: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/capacity-utilization" }
-  changes-in-inventories: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/changes-in-inventories" }
+  changes-in-inventories: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/changes-in-inventories" }
   consumer-confidence: { source: eurostat, verified: true, te_label: "European Commission", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/cyprus/consumer-confidence" }
-  consumer-spending: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/consumer-spending" }
+  consumer-spending: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/core-cpi" }
   corporate-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/corporate-tax-rate" }
   corruption-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/corruption-index" }
   corruption-rank: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/corruption-rank" }
-  cpi-clothing: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-clothing" }
-  cpi-education: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-education" }
-  cpi-food: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-food" }
-  cpi-housing-utilities: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-housing-utilities" }
-  cpi-recreation-and-culture: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-recreation-and-culture" }
-  cpi-transportation: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-transportation" }
+  cpi-clothing: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-clothing" }
+  cpi-education: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-education" }
+  cpi-food: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-food" }
+  cpi-housing-utilities: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-housing-utilities" }
+  cpi-recreation-and-culture: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-recreation-and-culture" }
+  cpi-transportation: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/cpi-transportation" }
   credit-rating: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/credit-rating" }
   current-account: { source: eurostat, verified: true, te_label: "Central Bank of Cyprus", te_url: "https://www.centralbank.cy", te_page: "https://tradingeconomics.com/cyprus/current-account" }
   current-account-to-gdp: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/cyprus/current-account-to-gdp" }
   disposable-personal-income: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/disposable-personal-income" }
-  employed-persons: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/employed-persons" }
+  employed-persons: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/employed-persons" }
   employment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/cyprus/employment-rate" }
   energy-inflation: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/energy-inflation" }
-  exports: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/exports" }
+  exports: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/exports" }
   food-inflation: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/food-inflation" }
   gdp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/cyprus/gdp" }
   gdp-per-capita: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/cyprus/gdp-per-capita" }
   gdp-per-capita-ppp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/cyprus/gdp-per-capita-ppp" }
-  gdp-real: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/gdp-real" }
+  gdp-real: { source: cystat_cy, verified: false, te_page: "https://tradingeconomics.com/cyprus/gdp-real" }
   government-debt: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/government-debt" }
   government-debt-total: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/government-debt" }
-  government-spending: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/government-spending" }
+  government-spending: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/government-spending" }
   government-spending-eur: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/government-spending-eur" }
-  gross-fixed-capital-formation: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/gross-fixed-capital-formation" }
+  gross-fixed-capital-formation: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/gross-fixed-capital-formation" }
   hospital-beds: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/hospital-beds" }
   house-price-index: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/default", te_page: "https://tradingeconomics.com/cyprus/housing-index" }
-  imports: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/imports" }
-  industrial-production: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/default", te_page: "https://tradingeconomics.com/cyprus/industrial-production" }
+  imports: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/imports" }
+  industrial-production: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/default", te_page: "https://tradingeconomics.com/cyprus/industrial-production" }
   inflation-cpi: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/default", te_page: "https://tradingeconomics.com/cyprus/inflation-cpi" }
   interest-rate: { source: ecb, verified: true, te_label: "European Central Bank", te_url: "https://www.ecb.europa.eu/", te_page: "https://tradingeconomics.com/cyprus/interest-rate" }
   job-vacancies: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/job-vacancies" }
@@ -315,7 +315,7 @@ CY:
   nurses: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/nurses" }
   personal-income-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/personal-income-tax-rate" }
   population: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/cyprus/population" }
-  ppi: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/default", te_page: "https://tradingeconomics.com/cyprus/producer-prices" }
+  ppi: { source: cystat_cy, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/default", te_page: "https://tradingeconomics.com/cyprus/producer-prices" }
   productivity: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/cyprus/productivity" }
   retail-sales: { source: eurostat, verified: true, te_label: "Ministry of Finance, Cyprus", te_url: "http://www.mof.gov.cy", te_page: "https://tradingeconomics.com/cyprus/retail-sales", note: "no internal source code — likely licensed or unmapped provider" }
   retirement-age-men: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/retirement-age-men" }
@@ -327,8 +327,9 @@ CY:
   social-security-rate-companies: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/social-security-rate-companies" }
   social-security-rate-employees: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/social-security-rate-employees" }
   terrorism-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/cyprus/terrorism-index" }
+  trade-balance: { source: cystat_cy, verified: false, note: "auto-added by Phase C8" }
   unemployed-persons: { source: eurostat, verified: true, te_label: "Statistical Service of the Republic of Cyprus", te_url: "https://www.cystat.gov.cy/en/", te_page: "https://tradingeconomics.com/cyprus/unemployed-persons" }
-  unemployment: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/cyprus/unemployment" }
+  unemployment: { source: cystat_cy, verified: false, te_page: "https://tradingeconomics.com/cyprus/unemployment" }
   youth-unemployment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/cyprus/youth-unemployment-rate" }
 
 CZ:
@@ -745,7 +746,7 @@ FI:
   business-confidence: { source: eurostat, verified: true, te_label: "Confederation of Finnish Industries (EK)", te_url: "https://ek.fi/", te_page: "https://tradingeconomics.com/finland/business-confidence", note: "no internal source code — likely licensed or unmapped provider" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "European Commission", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/finland/capacity-utilization" }
   changes-in-inventories: { source: stat_fi, verified: true, te_label: "Statistics Finland", te_url: "https://www.stat.fi", te_page: "https://tradingeconomics.com/finland/changes-in-inventories" }
-  consumer-confidence: { source: eurostat, verified: true, te_label: "Statistics Finland", te_url: "https://www.stat.fi", te_page: "https://tradingeconomics.com/finland/consumer-confidence" }
+  consumer-confidence: { source: stat_fi, verified: true, te_label: "Statistics Finland", te_url: "https://www.stat.fi", te_page: "https://tradingeconomics.com/finland/consumer-confidence" }
   consumer-spending: { source: stat_fi, verified: true, te_label: "Statistics Finland", te_url: "https://www.stat.fi", te_page: "https://tradingeconomics.com/finland/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/finland/core-cpi" }
   corporate-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/finland/corporate-tax-rate" }
@@ -1068,9 +1069,9 @@ HU:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/budget-deficit" }
   business-confidence: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/business-confidence" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/hungary/capacity-utilization" }
-  changes-in-inventories: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/changes-in-inventories" }
+  changes-in-inventories: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/changes-in-inventories" }
   consumer-confidence: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/consumer-confidence" }
-  consumer-spending: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/consumer-spending" }
+  consumer-spending: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/core-cpi" }
   corporate-tax-rate: { source: curated, verified: true, te_label: "National Tax and Customs Administration of Hungary", te_url: "https://nav.gov.hu/", te_page: "https://tradingeconomics.com/hungary/corporate-tax-rate" }
   corruption-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/hungary/corruption-index" }
@@ -1085,36 +1086,36 @@ HU:
   current-account: { source: ecb, verified: true, te_label: "National Bank of Hungary", te_url: "http://english.mnb.hu", te_page: "https://tradingeconomics.com/hungary/current-account" }
   current-account-to-gdp: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/hungary/current-account-to-gdp" }
   disposable-personal-income: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/disposable-personal-income" }
-  employed-persons: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/employed-persons" }
-  employment-rate: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "https://www.ksh.hu/?lang=en", te_page: "https://tradingeconomics.com/hungary/employment-rate" }
+  employed-persons: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/employed-persons" }
+  employment-rate: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "https://www.ksh.hu/?lang=en", te_page: "https://tradingeconomics.com/hungary/employment-rate" }
   energy-inflation: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/energy-inflation" }
   exports: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/exports" }
-  food-inflation: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu/", te_page: "https://tradingeconomics.com/hungary/food-inflation" }
+  food-inflation: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu/", te_page: "https://tradingeconomics.com/hungary/food-inflation" }
   gdp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/hungary/gdp" }
   gdp-per-capita: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/hungary/gdp-per-capita" }
   gdp-per-capita-ppp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/hungary/gdp-per-capita-ppp" }
   gdp-real: { source: ksh_hu, verified: false, te_page: "https://tradingeconomics.com/hungary/gdp-real" }
   government-debt: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/government-debt" }
   government-debt-total: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/government-debt-total" }
-  government-spending: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/government-spending" }
+  government-spending: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/government-spending" }
   government-spending-eur: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/government-spending-eur" }
-  gross-fixed-capital-formation: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/gross-fixed-capital-formation" }
+  gross-fixed-capital-formation: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/gross-fixed-capital-formation" }
   hospital-beds: { source: curated, verified: false, te_page: "https://tradingeconomics.com/hungary/hospital-beds" }
   house-price-index: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/hungary/house-price-index" }
   imports: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "https://www.ksh.hu/", te_page: "https://tradingeconomics.com/hungary/imports" }
   industrial-production: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu/", te_page: "https://tradingeconomics.com/hungary/industrial-production" }
   inflation-cpi: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu/", te_page: "https://tradingeconomics.com/hungary/inflation-cpi" }
-  job-vacancies: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "https://www.ksh.hu/?lang=en", te_page: "https://tradingeconomics.com/hungary/job-vacancies" }
-  labor-force-participation-rate: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/labor-force-participation-rate" }
+  job-vacancies: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "https://www.ksh.hu/?lang=en", te_page: "https://tradingeconomics.com/hungary/job-vacancies" }
+  labor-force-participation-rate: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/labor-force-participation-rate" }
   labour-costs: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/hungary/labour-costs" }
   long-term-unemployment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/hungary/long-term-unemployment-rate" }
-  manufacturing-production: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/manufacturing-production" }
+  manufacturing-production: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/manufacturing-production" }
   medical-doctors: { source: curated, verified: false, te_page: "https://tradingeconomics.com/hungary/medical-doctors" }
   minimum-wages: { source: curated, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/hungary/minimum-wages" }
   mining-production: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/mining-production" }
   nurses: { source: curated, verified: false, te_page: "https://tradingeconomics.com/hungary/nurses" }
   personal-income-tax-rate: { source: curated, verified: true, te_label: "National Tax and Customs Administration of Hungary", te_url: "https://nav.gov.hu/", te_page: "https://tradingeconomics.com/hungary/personal-income-tax-rate" }
-  population: { source: eurostat, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/population" }
+  population: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/population" }
   ppi: { source: ksh_hu, verified: false, te_page: "https://tradingeconomics.com/hungary/ppi" }
   productivity: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/hungary/productivity" }
   retail-sales: { source: ksh_hu, verified: true, te_label: "Hungarian Central Statistical Office", te_url: "http://www.ksh.hu", te_page: "https://tradingeconomics.com/hungary/retail-sales" }
@@ -1273,10 +1274,10 @@ IT:
 
 LT:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/lithuania/budget-deficit" }
-  business-confidence: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/business-confidence" }
+  business-confidence: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/business-confidence" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "European Commission", te_url: "https://ec.europa.eu/eurostat/en/", te_page: "https://tradingeconomics.com/lithuania/capacity-utilization" }
   changes-in-inventories: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/", te_page: "https://tradingeconomics.com/lithuania/changes-in-inventories" }
-  consumer-confidence: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/consumer-confidence" }
+  consumer-confidence: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/consumer-confidence" }
   consumer-spending: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/", te_page: "https://tradingeconomics.com/lithuania/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/lithuania/core-cpi" }
   corporate-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/lithuania/corporate-tax-rate" }
@@ -1296,7 +1297,7 @@ LT:
   employment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/lithuania/employment-rate" }
   energy-inflation: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/lithuania/energy-inflation" }
   exports: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://www.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/exports" }
-  food-inflation: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/food-inflation" }
+  food-inflation: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/food-inflation" }
   gdp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/lithuania/gdp" }
   gdp-per-capita: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/lithuania/gdp-per-capita" }
   gdp-per-capita-ppp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/lithuania/gdp-per-capita-ppp" }
@@ -1309,17 +1310,17 @@ LT:
   hospital-beds: { source: curated, verified: false, te_page: "https://tradingeconomics.com/lithuania/hospital-beds" }
   house-price-index: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/lithuania/house-price-index" }
   imports: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/", te_page: "https://tradingeconomics.com/lithuania/imports" }
-  industrial-production: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/industrial-production" }
+  industrial-production: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/industrial-production" }
   inflation-cpi: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/", te_page: "https://tradingeconomics.com/lithuania/inflation-cpi" }
   interest-rate: { source: ecb, verified: true, te_label: "Bank of Lithuania", te_url: "http://www.lb.lt", te_page: "https://tradingeconomics.com/lithuania/interest-rate" }
-  job-vacancies: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/en/", te_page: "https://tradingeconomics.com/lithuania/job-vacancies" }
-  labor-force-participation-rate: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/labor-force-participation-rate" }
-  labour-costs: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/en/", te_page: "https://tradingeconomics.com/lithuania/labour-costs" }
-  long-term-unemployment-rate: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/long-term-unemployment-rate" }
-  manufacturing-production: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/en/", te_page: "https://tradingeconomics.com/lithuania/manufacturing-production" }
+  job-vacancies: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/en/", te_page: "https://tradingeconomics.com/lithuania/job-vacancies" }
+  labor-force-participation-rate: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/labor-force-participation-rate" }
+  labour-costs: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/en/", te_page: "https://tradingeconomics.com/lithuania/labour-costs" }
+  long-term-unemployment-rate: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/long-term-unemployment-rate" }
+  manufacturing-production: { source: lsd_lt, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/en/", te_page: "https://tradingeconomics.com/lithuania/manufacturing-production" }
   medical-doctors: { source: curated, verified: true, te_label: "OECD", te_url: "https://www.oecd.org/", te_page: "https://tradingeconomics.com/lithuania/medical-doctors", note: "no internal source code — likely licensed or unmapped provider" }
   minimum-wages: { source: curated, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/lithuania/minimum-wages" }
-  mining-production: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/mining-production" }
+  mining-production: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "http://osp.stat.gov.lt", te_page: "https://tradingeconomics.com/lithuania/mining-production" }
   nurses: { source: curated, verified: false, te_page: "https://tradingeconomics.com/lithuania/nurses" }
   personal-income-tax-rate: { source: curated, verified: true, te_label: "State Tax Inspectorate", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/lithuania/personal-income-tax-rate", note: "no internal source code — likely licensed or unmapped provider" }
   population: { source: lsd_lt, verified: false, te_page: "https://tradingeconomics.com/lithuania/population" }
@@ -1335,7 +1336,7 @@ LT:
   social-security-rate-companies: { source: curated, verified: false, te_page: "https://tradingeconomics.com/lithuania/social-security-rate-companies" }
   social-security-rate-employees: { source: curated, verified: false, te_page: "https://tradingeconomics.com/lithuania/social-security-rate-employees" }
   terrorism-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/lithuania/terrorism-index" }
-  unemployed-persons: { source: eurostat, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/en/", te_page: "https://tradingeconomics.com/lithuania/unemployed-persons" }
+  unemployed-persons: { source: lsd_lt, verified: true, te_label: "Statistics Lithuania", te_url: "https://osp.stat.gov.lt/en/", te_page: "https://tradingeconomics.com/lithuania/unemployed-persons" }
   unemployment: { source: lsd_lt, verified: true, te_label: "Lithuanian Labour Exchange", te_url: "http://www.ldb.lt", te_page: "https://tradingeconomics.com/lithuania/unemployment-rate", note: "no internal source code — likely licensed or unmapped provider" }
   youth-unemployment-rate: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/lithuania/youth-unemployment-rate" }
 
@@ -1411,7 +1412,7 @@ LV:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/latvia/budget-deficit" }
   business-confidence: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "http://data1.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/business-confidence" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "European Commission", te_url: "https://ec.europa.eu/eurostat/en/", te_page: "https://tradingeconomics.com/latvia/capacity-utilization" }
-  changes-in-inventories: { source: eurostat, verified: true, te_label: "Central Statistical Bureau Of Latvia", te_url: "https://stat.gov.lv/en", te_page: "https://tradingeconomics.com/latvia/changes-in-inventories" }
+  changes-in-inventories: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau Of Latvia", te_url: "https://stat.gov.lv/en", te_page: "https://tradingeconomics.com/latvia/changes-in-inventories" }
   consumer-confidence: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "http://data1.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/consumer-confidence" }
   consumer-spending: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://stat.gov.lv/en", te_page: "https://tradingeconomics.com/latvia/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/latvia/core-cpi" }
@@ -1445,17 +1446,17 @@ LV:
   hospital-beds: { source: curated, verified: false, te_page: "https://tradingeconomics.com/latvia/hospital-beds" }
   house-price-index: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/latvia/house-price-index" }
   imports: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "http://www.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/imports" }
-  industrial-production: { source: eurostat, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://www.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/industrial-production" }
+  industrial-production: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://www.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/industrial-production" }
   inflation-cpi: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://www.csp.gov.lv/lv", te_page: "https://tradingeconomics.com/latvia/inflation-cpi" }
   interest-rate: { source: ecb, verified: false, te_page: "https://tradingeconomics.com/latvia/interest-rate", note: "ECB Main Refinancing Rate (Fixed). LV is in EA, shares ECB rate." }
   job-vacancies: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/latvia/job-vacancies" }
   labor-force-participation-rate: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "http://data1.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/labor-force-participation-rate" }
   labour-costs: { source: eurostat, verified: true, te_label: "European Central Bank", te_url: "http://sdw.ecb.europa.eu", te_page: "https://tradingeconomics.com/latvia/labour-costs" }
   long-term-unemployment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/latvia/long-term-unemployment-rate" }
-  manufacturing-production: { source: eurostat, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://stat.gov.lv/lv", te_page: "https://tradingeconomics.com/latvia/manufacturing-production" }
+  manufacturing-production: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://stat.gov.lv/lv", te_page: "https://tradingeconomics.com/latvia/manufacturing-production" }
   medical-doctors: { source: curated, verified: true, te_label: "OECD", te_url: "https://www.oecd.org/", te_page: "https://tradingeconomics.com/latvia/medical-doctors", note: "no internal source code — likely licensed or unmapped provider" }
   minimum-wages: { source: curated, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/latvia/minimum-wages" }
-  mining-production: { source: eurostat, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://stat.gov.lv/lv", te_page: "https://tradingeconomics.com/latvia/mining-production" }
+  mining-production: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "https://stat.gov.lv/lv", te_page: "https://tradingeconomics.com/latvia/mining-production" }
   nurses: { source: curated, verified: false, te_page: "https://tradingeconomics.com/latvia/nurses" }
   personal-income-tax-rate: { source: curated, verified: true, te_label: "State Revenue Service, Latvia", te_url: "https://home.kpmg.com", te_page: "https://tradingeconomics.com/latvia/personal-income-tax-rate", note: "no internal source code — likely licensed or unmapped provider" }
   population: { source: csp_lv, verified: true, te_label: "Central Statistical Bureau of Latvia", te_url: "http://data1.csb.gov.lv", te_page: "https://tradingeconomics.com/latvia/population" }
@@ -1480,40 +1481,40 @@ MT:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/budget-deficit" }
   business-confidence: { source: eurostat, verified: true, te_label: "European Commission", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/malta/business-confidence" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "European Commission", te_url: "https://ec.europa.eu/eurostat/en/", te_page: "https://tradingeconomics.com/malta/capacity-utilization" }
-  changes-in-inventories: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://nso.gov.mt", te_page: "https://tradingeconomics.com/malta/changes-in-inventories" }
+  changes-in-inventories: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://nso.gov.mt", te_page: "https://tradingeconomics.com/malta/changes-in-inventories" }
   consumer-confidence: { source: eurostat, verified: true, te_label: "European Commission", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/malta/consumer-confidence" }
-  consumer-spending: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/consumer-spending" }
+  consumer-spending: { source: nso_mt, verified: false, te_page: "https://tradingeconomics.com/malta/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/core-cpi" }
   corporate-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/corporate-tax-rate" }
   corruption-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/corruption-index" }
   corruption-rank: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/corruption-rank" }
-  cpi-clothing: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-clothing" }
-  cpi-education: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-education" }
-  cpi-food: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-food" }
-  cpi-housing-utilities: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/en/", te_page: "https://tradingeconomics.com/malta/cpi-housing-utilities" }
-  cpi-recreation-and-culture: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-recreation-and-culture" }
-  cpi-transportation: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/en/", te_page: "https://tradingeconomics.com/malta/cpi-transportation" }
+  cpi-clothing: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-clothing" }
+  cpi-education: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-education" }
+  cpi-food: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-food" }
+  cpi-housing-utilities: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/en/", te_page: "https://tradingeconomics.com/malta/cpi-housing-utilities" }
+  cpi-recreation-and-culture: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/cpi-recreation-and-culture" }
+  cpi-transportation: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/en/", te_page: "https://tradingeconomics.com/malta/cpi-transportation" }
   credit-rating: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/credit-rating" }
   current-account: { source: eurostat, verified: true, te_label: "Central Bank of Malta", te_url: "http://www.centralbankmalta.org", te_page: "https://tradingeconomics.com/malta/current-account" }
   current-account-to-gdp: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/current-account-to-gdp" }
   disposable-personal-income: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/disposable-personal-income" }
-  employed-persons: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/employed-persons" }
+  employed-persons: { source: nso_mt, verified: false, te_page: "https://tradingeconomics.com/malta/employed-persons" }
   employment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/employment-rate" }
   energy-inflation: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/energy-inflation" }
-  exports: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/exports" }
+  exports: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/exports" }
   food-inflation: { source: eurostat, verified: true, te_label: "Malta National Statistics Office", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/food-inflation" }
   gdp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/malta/gdp" }
   gdp-per-capita: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/malta/gdp-per-capita" }
   gdp-per-capita-ppp: { source: worldbank, verified: true, te_label: "World Bank", te_url: "https://www.worldbank.org/", te_page: "https://tradingeconomics.com/malta/gdp-per-capita-ppp" }
-  gdp-real: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/gdp-real" }
+  gdp-real: { source: nso_mt, verified: false, te_page: "https://tradingeconomics.com/malta/gdp-real" }
   government-debt: { source: eurostat, verified: true, te_label: "Central Bank of Malta", te_url: "http://www.centralbankmalta.org", te_page: "https://tradingeconomics.com/malta/government-debt" }
   government-debt-total: { source: eurostat, verified: true, te_label: "Central Bank of Malta", te_url: "http://www.centralbankmalta.org", te_page: "https://tradingeconomics.com/malta/government-debt" }
-  government-spending: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/government-spending" }
+  government-spending: { source: nso_mt, verified: false, te_page: "https://tradingeconomics.com/malta/government-spending" }
   government-spending-eur: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/government-spending-eur" }
-  gross-fixed-capital-formation: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/gross-fixed-capital-formation" }
+  gross-fixed-capital-formation: { source: nso_mt, verified: false, te_page: "https://tradingeconomics.com/malta/gross-fixed-capital-formation" }
   hospital-beds: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/hospital-beds" }
   house-price-index: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/housing-index" }
-  imports: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/imports" }
+  imports: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/imports" }
   industrial-production: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/industrial-production" }
   inflation-cpi: { source: nso_mt, verified: true, te_label: "National Statistics Office, Malta", te_url: "http://www.nso.gov.mt", te_page: "https://tradingeconomics.com/malta/inflation-cpi" }
   interest-rate: { source: ecb, verified: false, te_page: "https://tradingeconomics.com/malta/interest-rate", note: "ECB Main Refinancing Rate (Fixed). MT is in EA, shares ECB rate." }
@@ -1527,7 +1528,7 @@ MT:
   mining-production: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/mining-production" }
   nurses: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/nurses" }
   personal-income-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/personal-income-tax-rate" }
-  population: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/population" }
+  population: { source: nso_mt, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/population" }
   ppi: { source: eurostat, verified: true, te_label: "National Statistics Office, Malta", te_url: "https://nso.gov.mt/", te_page: "https://tradingeconomics.com/malta/producer-prices" }
   productivity: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/malta/productivity" }
   retail-sales: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/retail-sales" }
@@ -1540,8 +1541,9 @@ MT:
   social-security-rate-companies: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/social-security-rate-companies" }
   social-security-rate-employees: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/social-security-rate-employees" }
   terrorism-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/malta/terrorism-index" }
+  trade-balance: { source: nso_mt, verified: false, note: "auto-added by Phase C8" }
   unemployed-persons: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/unemployed-persons" }
-  unemployment: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/unemployment" }
+  unemployment: { source: nso_mt, verified: false, te_page: "https://tradingeconomics.com/malta/unemployment" }
   youth-unemployment-rate: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/malta/youth-unemployment-rate" }
 
 NL:
@@ -1820,10 +1822,10 @@ RO:
 
 SE:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/sweden/budget-deficit" }
-  business-confidence: { source: eurostat, verified: true, te_label: "National Institute of Economic Research, Sweden", te_url: "https://www.konj.se/", te_page: "https://tradingeconomics.com/sweden/business-confidence", note: "no internal source code — likely licensed or unmapped provider" }
+  business-confidence: { source: konj_se, verified: true, te_label: "National Institute of Economic Research, Sweden", te_url: "https://www.konj.se/", te_page: "https://tradingeconomics.com/sweden/business-confidence", note: "no internal source code — likely licensed or unmapped provider" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "Statistics Sweden", te_url: "https://www.scb.se/", te_page: "https://tradingeconomics.com/sweden/capacity-utilization" }
   changes-in-inventories: { source: scb_se, verified: true, te_label: "Statistics Sweden", te_url: "https://www.scb.se/", te_page: "https://tradingeconomics.com/sweden/changes-in-inventories" }
-  consumer-confidence: { source: eurostat, verified: true, te_label: "National Institute of Economic Research, Sweden", te_url: "https://www.konj.se/", te_page: "https://tradingeconomics.com/sweden/consumer-confidence", note: "no internal source code — likely licensed or unmapped provider" }
+  consumer-confidence: { source: konj_se, verified: true, te_label: "National Institute of Economic Research, Sweden", te_url: "https://www.konj.se/", te_page: "https://tradingeconomics.com/sweden/consumer-confidence", note: "no internal source code — likely licensed or unmapped provider" }
   consumer-spending: { source: scb_se, verified: true, te_label: "Statistics Sweden", te_url: "https://www.scb.se/", te_page: "https://tradingeconomics.com/sweden/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/sweden/core-cpi" }
   corporate-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/sweden/corporate-tax-rate" }
@@ -1961,11 +1963,11 @@ SI:
 
 SK:
   budget-deficit: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/budget-deficit" }
-  business-confidence: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/business-confidence" }
+  business-confidence: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/business-confidence" }
   capacity-utilization: { source: eurostat, verified: true, te_label: "National Bank of Slovakia", te_url: "https://nbs.sk/en/", te_page: "https://tradingeconomics.com/slovakia/capacity-utilization" }
-  changes-in-inventories: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/changes-in-inventories" }
-  consumer-confidence: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/consumer-confidence" }
-  consumer-spending: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/consumer-spending" }
+  changes-in-inventories: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/changes-in-inventories" }
+  consumer-confidence: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/consumer-confidence" }
+  consumer-spending: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/consumer-spending" }
   core-cpi: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/core-cpi" }
   corporate-tax-rate: { source: curated, verified: false, te_page: "https://tradingeconomics.com/slovakia/corporate-tax-rate" }
   corruption-index: { source: curated, verified: false, te_page: "https://tradingeconomics.com/slovakia/corruption-index" }
@@ -1980,7 +1982,7 @@ SK:
   current-account: { source: ecb, verified: true, te_label: "National Bank of Slovakia", te_url: "http://www.nbs.sk", te_page: "https://tradingeconomics.com/slovakia/current-account" }
   current-account-to-gdp: { source: eurostat, verified: true, te_label: "National Bank of Slovakia", te_url: "http://www.nbs.sk", te_page: "https://tradingeconomics.com/slovakia/current-account-to-gdp" }
   disposable-personal-income: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/disposable-personal-income" }
-  employed-persons: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/employed-persons" }
+  employed-persons: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/employed-persons" }
   employment-rate: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/slovakia/employment-rate" }
   energy-inflation: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/energy-inflation" }
   exports: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/exports" }
@@ -1991,17 +1993,17 @@ SK:
   gdp-real: { source: susr_sk, verified: false, te_page: "https://tradingeconomics.com/slovakia/gdp-real" }
   government-debt: { source: eurostat, verified: true, te_label: "Ministry of Finance of the Slovak Republic", te_url: "https://www.finance.gov.sk", te_page: "https://tradingeconomics.com/slovakia/government-debt", note: "no internal source code — likely licensed or unmapped provider" }
   government-debt-total: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/government-debt-total" }
-  government-spending: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/government-spending" }
+  government-spending: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/government-spending" }
   government-spending-eur: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/government-spending-eur" }
-  gross-fixed-capital-formation: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/gross-fixed-capital-formation" }
+  gross-fixed-capital-formation: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/gross-fixed-capital-formation" }
   hospital-beds: { source: curated, verified: false, te_page: "https://tradingeconomics.com/slovakia/hospital-beds" }
   house-price-index: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/house-price-index" }
-  imports: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/imports" }
+  imports: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/imports" }
   industrial-production: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/industrial-production" }
   inflation-cpi: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/inflation-cpi" }
   interest-rate: { source: ecb, verified: false, te_page: "https://tradingeconomics.com/slovakia/interest-rate", note: "ECB Main Refinancing Rate (Fixed). SK is in EA, shares ECB rate." }
   job-vacancies: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/job-vacancies" }
-  labor-force-participation-rate: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/labor-force-participation-rate" }
+  labor-force-participation-rate: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/labor-force-participation-rate" }
   labour-costs: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/slovakia/labour-costs" }
   long-term-unemployment-rate: { source: eurostat, verified: false, te_page: "https://tradingeconomics.com/slovakia/long-term-unemployment-rate" }
   manufacturing-production: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://www.statistics.sk", te_page: "https://tradingeconomics.com/slovakia/manufacturing-production" }
@@ -2010,7 +2012,7 @@ SK:
   mining-production: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://www.statistics.sk", te_page: "https://tradingeconomics.com/slovakia/mining-production" }
   nurses: { source: curated, verified: false, te_page: "https://tradingeconomics.com/slovakia/nurses" }
   personal-income-tax-rate: { source: curated, verified: true, te_label: "Tax Directorate, Slovakia", te_url: "http://ec.europa.eu", te_page: "https://tradingeconomics.com/slovakia/personal-income-tax-rate", note: "no internal source code — likely licensed or unmapped provider" }
-  population: { source: eurostat, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/population" }
+  population: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://slovak.statistics.sk/", te_page: "https://tradingeconomics.com/slovakia/population" }
   ppi: { source: susr_sk, verified: false, te_page: "https://tradingeconomics.com/slovakia/ppi" }
   productivity: { source: eurostat, verified: true, te_label: "EUROSTAT", te_url: "https://ec.europa.eu/eurostat/", te_page: "https://tradingeconomics.com/slovakia/productivity" }
   retail-sales: { source: susr_sk, verified: true, te_label: "Statistical Office of the Slovak Republic", te_url: "https://www.statistics.sk", te_page: "https://tradingeconomics.com/slovakia/retail-sales" }

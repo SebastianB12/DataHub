@@ -38,6 +38,7 @@ const STATIC_LABELS: Record<string, SourceInfo> = {
   elstat: { label: "ELSTAT (Greece)", url: "https://www.statistics.gr/en/home/" },
   scb:    { label: "Statistics Sweden (SCB)", url: "https://www.scb.se/" },
   scb_se: { label: "Statistics Sweden (SCB)", url: "https://www.scb.se/" },
+  konj_se: { label: "National Institute of Economic Research (NIER)", url: "https://www.konj.se/" },
   statpol:{ label: "Statistics Poland (GUS)", url: "https://stat.gov.pl/en/" },
   gus_pl: { label: "Statistics Poland (GUS DBW)", url: "https://dbw.stat.gov.pl/en" },
   dst:    { label: "Statistics Denmark", url: "https://www.dst.dk/en" },

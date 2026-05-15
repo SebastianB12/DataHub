@@ -591,3 +591,35 @@ gaps:
     source: Banque de France / ECB BSI
     note: "ECB BSI-Reihe ist EA-Aggregat. Für FR-spezifischen M2/M3-Anteil bräuchte man BdF Webstat SDMX (eigener Provider)."
 
+
+  - country: FI
+    indicator_name: "Business Confidence (Suhdannebarometri)"
+    te_category: Business
+    reason: no-free-source
+    source: Confederation of Finnish Industries (EK)
+    note: "EK publishes the monthly business-tendency survey only as PDF / XLSX reports (https://ek.fi/suhdannebarometri/). No JSON/SDMX/PxWeb endpoint exists, and Tilastokeskus does not republish the EK series. Migration 061 keeps FI/business-confidence on the Eurostat ei_bsin_m_r2 BCI fallback."
+    possible_workaround: "Eurostat ei_bsin_m_r2:BCI (DG-ECFIN harmonised industrial confidence indicator) — already the active fallback."
+
+  - country: MT
+    indicator_name: "Industrial Production (monthly index)"
+    te_category: Production
+    reason: source-stale
+    source: NSO Malta (DF_STBS_INDUSTRIAL_INDICATORS_MONTHLY)
+    note: "NSO Malta's STBS Industrial Indicators dataflow (DF_STBS_INDUSTRIAL_INDICATORS_MONTHLY) on the SDMX API ends 2019-06 — stale by ~7 years. No other NSO dataflow exposes a current monthly IP index. Migration 063 keeps MT/industrial-production on eurostat (sts_inpr_m)."
+    possible_workaround: "Eurostat sts_inpr_m (already active default). Re-investigate quarterly when NSO updates the API release of STBS."
+
+  - country: MT
+    indicator_name: "Retail Sales (monthly index)"
+    te_category: Trade
+    reason: no-free-source
+    source: NSO Malta
+    note: "NSO Malta SDMX catalog has no monthly retail-trade turnover index dataflow. Eurostat sts_trtu_m carries an MT series; migration 063 keeps MT/retail-sales on eurostat."
+    possible_workaround: "Eurostat sts_trtu_m fallback."
+
+  - country: CY
+    indicator_name: "Retail Sales (monthly index)"
+    te_category: Trade
+    reason: no-free-source
+    source: Ministry of Finance, Cyprus
+    note: "TE attributes CY retail-sales to mof.gov.cy press releases (XLS/PDF). CYSTAT PxWeb has no clean monthly retail-trade turnover table (8.CYSTAT-DB / Trade). Migration 062 keeps CY/retail-sales on eurostat sts_trtu_m."
+    possible_workaround: "Eurostat sts_trtu_m fallback; or write a Vercel-proxy scraper for the mof.gov.cy XLS release."

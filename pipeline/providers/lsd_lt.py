@@ -25,6 +25,7 @@ TE shows YoY rates for both; the frontend computes those from the index.
 from __future__ import annotations
 
 import os
+import re
 import time
 from datetime import date
 from typing import Any
@@ -43,6 +44,19 @@ GET_BASE = "https://get.data.gov.lt/datasets/gov/lsd/statistika"
 HTTP_HEADERS = {
     "User-Agent": "EconPulse/1.0 (data.gov.lt official open-data API)",
     "Accept": "application/json",
+}
+
+# Official LSD SDMX REST v2.1 endpoint (no Cloudflare unlike osp.stat.gov.lt).
+# Sample: https://osp-rs.stat.gov.lt/rest_xml/data/<DATAFLOW_ID>
+# Dataflow IDs (S<NNN>R<NNN>_M<digits>) discovered via
+# /rest_xml/dataflow/LSD/all/latest. Used here for indicators the
+# data.gov.lt /datasets endpoint does NOT republish (industrial production
+# index, labour cost index, DG-ECFIN confidence, monthly food-CPI YoY,
+# quarterly LFS unemployed-persons / LFP / long-term unemp-rate).
+SDMX_BASE = "https://osp-rs.stat.gov.lt/rest_xml/data"
+SDMX_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; EconPulse/1.0)",
+    "Accept": "application/xml",
 }
 
 
@@ -184,6 +198,90 @@ LT_SERIES: list[dict[str, Any]] = [
 ]
 
 
+# === Stage-3 SDMX series ===
+# Series fetched via SDMX REST (osp-rs.stat.gov.lt) for indicators not exposed
+# through data.gov.lt. Filter dict pins all non-time dimensions to a single
+# code; the SDMX parser keeps observations matching every (dim, value) pair.
+LT_SDMX_SERIES: list[dict[str, Any]] = [
+    # Industrial production index 2021=100, SA (seasonally adjusted).
+    # Dataflow S8R918_M4050113_5: "Indexes of industrial production (VAT and excises excluded) (2021 - 100)".
+    # EVRKM4050107=B_TO_E_NOT_C19 -> total industry excl. refined petroleum (TE/Eurostat convention),
+    # LYGINIMAS=palyg_2021 (index 2021=100), Islyginimas_indeksai=sezon (SA).
+    {"slug": "industrial-production", "flow": "S8R918_M4050113_5",
+     "filter": {"EVRKM4050107": "B_TO_E_NOT_C19", "LYGINIMAS": "palyg_2021",
+                "Islyginimas_indeksai": "sezon"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "LSD S8R918 IP index total industry excl. refined petroleum, 2021=100, SA"},
+    # Manufacturing (NACE C) IP index 2021=100, SA
+    {"slug": "manufacturing-production", "flow": "S8R918_M4050113_5",
+     "filter": {"EVRKM4050107": "C", "LYGINIMAS": "palyg_2021",
+                "Islyginimas_indeksai": "sezon"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "LSD S8R918 manufacturing (C) IP index, 2021=100, SA"},
+    # Mining and quarrying (NACE B) IP index 2021=100, SA
+    {"slug": "mining-production", "flow": "S8R918_M4050113_5",
+     "filter": {"EVRKM4050107": "B", "LYGINIMAS": "palyg_2021",
+                "Islyginimas_indeksai": "sezon"},
+     "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
+     "note": "LSD S8R918 mining and quarrying (B) IP index, 2021=100, SA"},
+    # Food inflation YoY %: S7R250_M2020120 "Changes in prices of food and non-alcoholic beverages".
+    # maistasM2020120=01 (COICOP CP01 food & non-alcoholic beverages aggregate),
+    # LYGINIMAS=palyg_pm (vs corresponding month prev year, YoY %).
+    {"slug": "food-inflation", "flow": "S7R250_M2020120",
+     "filter": {"maistasM2020120": "01", "LYGINIMAS": "palyg_pm"},
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "LSD S7R250 food & non-alcoholic beverages YoY % (COICOP 01)"},
+    # Labour cost index 2020=100, NSA, total industry (B_TO_S, all costs).
+    # S3R0452_M3060508_1: "Indexes of labour costs per hour worked (2020 = 100)"
+    # IslyginimasM3060501=NSA, darboM2040601=TOT (total labour cost), EVRK2M3060503=B_TO_S (private+public total).
+    # Returns quarterly (Lithuanian "K" = ketvirtis).
+    {"slug": "labour-costs", "flow": "S3R0452_M3060508_1",
+     "filter": {"IslyginimasM3060501": "NSA", "darboM2040601": "TOT",
+                "EVRK2M3060503": "B_TO_S"},
+     "freq": "Q", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "LSD S3R0452 LCI total labour cost per hour worked, B-S total, 2020=100, NSA"},
+    # Job vacancies (quarterly), total economy, NSA. S3R275_M3040102_1.
+    # darbuotojuSKM2020201=total, EVRK2M3140605=TOTAL (sum across all NACE incl. T,U missing),
+    # Islyginimas_indeksai=bendras (NSA — TE reports unadjusted value 30528 for 2025Q4).
+    {"slug": "job-vacancies", "flow": "S3R275_M3040102_1",
+     "filter": {"darbuotojuSKM2020201": "total", "EVRK2M3140605": "TOTAL",
+                "Islyginimas_indeksai": "bendras"},
+     "freq": "Q", "unit": "Number of vacancies", "adjustment": "NSA", "conversion": 1.0,
+     "note": "LSD S3R275 total job vacancies all NACE TOTAL, NSA, quarterly"},
+    # Long-term unemployment rate (12+ months), LFS, total persons.
+    # S3R196_M3030102: "Long-term unemployment rate". lytis=0 (Both sexes), vietove=0 (Total).
+    {"slug": "long-term-unemployment-rate", "flow": "S3R196_M3030102",
+     "filter": {"lytis": "0", "vietove": "0"},
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "LSD S3R196 LFS long-term unemployment rate (>=12mo) total, quarterly"},
+    # Labor force participation rate (LFS activity rate), total population 15+.
+    # S3R003_M3030101_1: "Activity rate". AmziusM2111=0 -> all ages 15+ (matches TE 62.6).
+    # (Codes: 0=15+, 1=15-24, 2=25-54, 3=15-64, 4=55-64, 1g/2g/3g auxiliary aggregates).
+    {"slug": "labor-force-participation-rate", "flow": "S3R003_M3030101_1",
+     "filter": {"AmziusM2111": "0", "Vietove": "0", "Lytis": "0"},
+     "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "LSD S3R003 LFS activity rate 15+ total, quarterly"},
+    # Unemployed persons (LFS, thousands), total 15+, quarterly. S3R050_M3030101_2.
+    # AmziusM2111=0 (Total), Vietove=0, Lytis=0; MATVNT=tukst (thousand persons).
+    {"slug": "unemployed-persons", "flow": "S3R050_M3030101_2",
+     "filter": {"AmziusM2111": "0", "Vietove": "0", "Lytis": "0"},
+     "freq": "Q", "unit": "Thousand persons", "adjustment": "NSA", "conversion": 1.0,
+     "note": "LSD S3R050 LFS unemployed persons 15+ total, thousand, quarterly"},
+    # DG-ECFIN BCS consumer confidence balance, monthly. S3R0180_M3230101.
+    # Vietove=0 (national total). Balance, percentage points.
+    {"slug": "consumer-confidence", "flow": "S3R0180_M3230101",
+     "filter": {"Vietove": "0"},
+     "freq": "M", "unit": "Net balance, %", "adjustment": "SA", "conversion": 1.0,
+     "note": "LSD S3R0180 DG-ECFIN BCS consumer confidence indicator (balance)"},
+    # DG-ECFIN BCS industrial confidence indicator, monthly. S8R394_M4020216.
+    # Single dim only (MATVNT=procentai). No filter beyond pinning of nothing.
+    {"slug": "business-confidence", "flow": "S8R394_M4020216",
+     "filter": {},
+     "freq": "M", "unit": "Net balance, %", "adjustment": "SA", "conversion": 1.0,
+     "note": "LSD S8R394 DG-ECFIN BCS industrial confidence indicator (balance)"},
+]
+
+
 def _build_query(filter_: dict[str, str], limit: int = 5000) -> str:
     """Build the data.gov.lt RQL-style query string.
 
@@ -195,6 +293,66 @@ def _build_query(filter_: dict[str, str], limit: int = 5000) -> str:
     parts.append("sort(laikotarpis)")
     parts.append(f"limit({limit})")
     return "?" + "&".join(parts)
+
+
+_SDMX_OBS_RE = re.compile(
+    r"<g:ObsKey>(.*?)</g:ObsKey>\s*<g:ObsValue value=\"([^\"]+)\"", re.S
+)
+_SDMX_DIM_RE = re.compile(r"id=\"([^\"]+)\" value=\"([^\"]+)\"")
+
+
+def _parse_sdmx_period(p: str, freq: str) -> date | None:
+    """LSD SDMX uses YYYYMm (monthly) and YYYYKn (quarterly, K=ketvirtis), YYYY annual."""
+    try:
+        if freq == "M" and "M" in p:
+            yy, mm = p.split("M")
+            return date(int(yy), int(mm), 1)
+        if freq == "Q":
+            if "K" in p:
+                yy, q = p.split("K")
+                m = {"1": 1, "2": 4, "3": 7, "4": 10}[q]
+                return date(int(yy), m, 1)
+            if "Q" in p:
+                yy, q = p.split("Q")
+                m = {"1": 1, "2": 4, "3": 7, "4": 10}[q]
+                return date(int(yy), m, 1)
+        if freq == "A" and len(p) == 4:
+            return date(int(p), 1, 1)
+    except Exception:
+        return None
+    return None
+
+
+def fetch_sdmx_series(flow: str, filter_: dict[str, str], freq: str) -> list[tuple[date, float]]:
+    """Fetch an LSD SDMX 2.1 dataflow and filter observations client-side.
+
+    LSD does not support partial-key filtering in the URL; the full dataset
+    is returned and we filter (dim_id, value) tuples in Python.  Each <g:Obs>
+    block has flat <g:ObsKey><g:Value id=... value=.../>...</g:ObsKey> and a
+    sibling <g:ObsValue value=.../>. We keep observations whose dim values
+    match every key in `filter_` (plus a freq-aware LAIKOTARPIS parse).
+    """
+    url = f"{SDMX_BASE}/{flow}"
+    r = requests.get(url, headers=SDMX_HEADERS, timeout=60)
+    r.raise_for_status()
+    text = r.text
+    out: list[tuple[date, float]] = []
+    for ok_inner, val_s in _SDMX_OBS_RE.findall(text):
+        dims = dict(_SDMX_DIM_RE.findall(ok_inner))
+        # apply user filter
+        if not all(dims.get(k) == v for k, v in filter_.items()):
+            continue
+        period = dims.get("LAIKOTARPIS")
+        if not period:
+            continue
+        dt = _parse_sdmx_period(period, freq)
+        if dt is None:
+            continue
+        try:
+            out.append((dt, float(val_s)))
+        except ValueError:
+            continue
+    return sorted(out)
 
 
 def fetch_lsd_series(ns: str, table_id: str, filter_: dict[str, str], limit: int = 5000) -> list[tuple[date, float]]:
@@ -245,6 +403,27 @@ class LsdLtProvider(BaseProvider):
                 print(f"  OK {cfg['slug']}/LT ({cfg['ns'][:30]}): {len(pairs)} pts")
             except Exception as e:
                 print(f"  FAIL {cfg['slug']}/LT ({cfg['ns']}): {e}")
+            time.sleep(0.3)
+        # SDMX REST series (osp-rs.stat.gov.lt) — IP, LCI, confidence, LFS, food-inflation
+        for cfg in LT_SDMX_SERIES:
+            try:
+                pairs = fetch_sdmx_series(cfg["flow"], cfg["filter"], cfg["freq"])
+                sid_filter = "/".join(f"{k}={v}" for k, v in cfg["filter"].items()) or "TOTAL"
+                series_id = f"LSD/SDMX/{cfg['flow']}/{sid_filter}"
+                for dt, v in pairs:
+                    out.append(DataPoint(
+                        indicator=cfg["slug"],
+                        country="LT",
+                        date=normalize_date(dt, cfg["freq"]),
+                        value=round(v * cfg["conversion"], 4),
+                        source="lsd_lt",
+                        unit=cfg["unit"],
+                        series_id=series_id,
+                        adjustment=cfg["adjustment"],
+                    ))
+                print(f"  OK {cfg['slug']}/LT (SDMX {cfg['flow']}): {len(pairs)} pts")
+            except Exception as e:
+                print(f"  FAIL {cfg['slug']}/LT (SDMX {cfg['flow']}): {e}")
             time.sleep(0.3)
         return out
 

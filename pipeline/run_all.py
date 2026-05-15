@@ -28,6 +28,7 @@ PROVIDERS = [
     "pipeline.providers.elstat",      # GR (TE-source-conform via ELSTAT XLS publication portal)
     "pipeline.providers.dbnomics",    # legacy gateway — kept for transition; reduced usage
     "pipeline.providers.national_eu", # DK/FI/SE/IE/PT direct national APIs
+    "pipeline.providers.konj_se",     # SE NIER/Konjunkturinstitutet (CCI/BCI)
     "pipeline.providers.lsd_lt",      # LT (LSD Lithuania via data.gov.lt)
     "pipeline.providers.nsi_bg",      # BG (NSI via BNB SDDS Plus SDMX)
     "pipeline.providers.gus_pl",      # PL (GUS DBW via dbw.stat.gov.pl/api_app)
