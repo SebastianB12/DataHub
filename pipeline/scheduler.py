@@ -1,130 +1,123 @@
-"""
-Dynamic scheduler for EconPulse data pipeline.
-Reads data_sources table from Supabase, registers APScheduler jobs.
-Each job runs the corresponding provider's run() function.
+"""V2 dynamic scheduler — Cron-based pro indicator_family.
+
+Liest active data_series (valid_to IS NULL AND activated_at IS NOT NULL),
+gruppiert nach (family_id, instance_id.refresh_cron_override OR family.default_refresh_cron).
+Schedules pro Cron-Expression einen Job der `dispatch()` mit dem Series-pk-Set ausfuehrt.
+
+Vorteile gegenueber V1 (data_sources-Tabelle):
+  - Cron-Expression kommt aus indicator_families.default_refresh_cron (monatlich/quartal/jaehrlich).
+  - Per-Instance-Override via indicator_instances.refresh_cron_override (z.B. EIA weekly).
+  - Provider-Rate-Limits werden im dispatch() durchgesetzt.
+  - Pre-Activation-Guard verhindert dass falsche Series gefetched werden.
 
 Usage: python -m pipeline.scheduler
 """
+from __future__ import annotations
 
 import signal
 import sys
+from collections import defaultdict
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
-from apscheduler.triggers.interval import IntervalTrigger
 
-from pipeline.db import supabase, log_pipeline_run
-
-# Lazy imports to avoid loading all providers at startup
-PROVIDER_MAP = {
-    "fred": "pipeline.providers.fred",
-    "eurostat": "pipeline.providers.eurostat",
-    "insee": "pipeline.providers.insee",
-    "bdf": "pipeline.providers.bdf",
-    "ecb": "pipeline.providers.ecb",
-    "ons": "pipeline.providers.ons",
-    "worldbank": "pipeline.providers.worldbank",
-    "destatis": "pipeline.providers.destatis",
-    "bundesbank": "pipeline.providers.bundesbank",
-    "curated": "pipeline.providers.curated",
-    "eia": "pipeline.providers.eia",
-    "gacc": "pipeline.providers.gacc",
-    "akshare_cn": "pipeline.providers.akshare_cn",
-    "ine_es": "pipeline.providers.ine_es",
-    "dbnomics": "pipeline.providers.dbnomics",
-    "national_eu": "pipeline.providers.national_eu",
-    "nsi_bg": "pipeline.providers.nsi_bg",
-    "gus_pl": "pipeline.providers.gus_pl",
-}
+from pipeline.db import supabase
+from pipeline.dispatcher import dispatch
 
 
-def _run_provider(source_slug: str):
-    """Run a provider by slug, importing it lazily."""
-    import importlib
-    module_path = PROVIDER_MAP.get(source_slug)
-    if not module_path:
-        print(f"Unknown provider: {source_slug}")
-        return
-
+def _run_series_batch(series_pks: list[int]):
+    """Fetch + upsert eine Gruppe von Series via Dispatcher."""
+    print(f"\n>>> Scheduler-Job: dispatch {len(series_pks)} series ...")
     try:
-        module = importlib.import_module(module_path)
-        module.run()
+        stats = dispatch(series_pks=series_pks)
+        print(f"<<< done. stats: {dict(stats)}")
     except Exception as e:
-        print(f"Provider {source_slug} failed: {e}")
+        print(f"<<< failed: {e}")
 
 
-def _build_trigger(schedule_str: str):
-    """Parse schedule string into an APScheduler trigger.
-
-    Supported forms:
-      interval:15m / 1h / 30s      → IntervalTrigger
-      cron:<crontab>               → CronTrigger from a 5-field crontab
-                                      (e.g. 'cron:0 7 * * 1-5' = Mon-Fri 07:00)
-    Returns None for unsupported strings.
-    """
-    if not schedule_str or ":" not in schedule_str:
+def _build_cron_trigger(cron_str: str) -> CronTrigger | None:
+    """Cron-Expression (5-field) -> CronTrigger. Returns None bei Parse-Fehler."""
+    if not cron_str:
+        return None
+    try:
+        return CronTrigger.from_crontab(cron_str)
+    except (ValueError, KeyError):
         return None
 
-    kind, value = schedule_str.split(":", 1)
 
-    if kind == "interval":
-        if value.endswith("m"):
-            return IntervalTrigger(minutes=int(value[:-1]))
-        if value.endswith("h"):
-            return IntervalTrigger(hours=int(value[:-1]))
-        if value.endswith("s"):
-            return IntervalTrigger(seconds=int(value[:-1]))
-        return None
-
-    if kind == "cron":
-        try:
-            return CronTrigger.from_crontab(value)
-        except (ValueError, KeyError):
-            return None
-
-    return None
+def _load_active_series_with_cron() -> list[dict]:
+    """Aktive data_series + zugehoeriger Cron (Instance-Override > Family-Default)."""
+    rows = (
+        supabase.table("data_series")
+          .select(
+              "series_pk,instance_id,fetch_provider,"
+              "indicator_instances!inner("
+              " instance_id,refresh_cron_override,family_id,"
+              " indicator_families!inner(family_code,default_refresh_cron)"
+              ")"
+          )
+          .is_("valid_to", "null")
+          .not_.is_("activated_at", "null")
+          .execute()
+          .data or []
+    )
+    out: list[dict] = []
+    for r in rows:
+        inst = r.get("indicator_instances") or {}
+        fam = inst.get("indicator_families") or {}
+        cron = inst.get("refresh_cron_override") or fam.get("default_refresh_cron")
+        if not cron:
+            continue
+        out.append({
+            "series_pk": r["series_pk"],
+            "cron": cron,
+            "family_code": fam.get("family_code"),
+            "fetch_provider": r["fetch_provider"],
+        })
+    return out
 
 
 def main():
-    """Load data sources and start the scheduler."""
-    print("Loading data sources from Supabase...")
+    """Loop: laden + scheduling pro Cron-Gruppe."""
+    sys.stdout.reconfigure(encoding="utf-8")
+    print("Loading active data_series + cron schedules from V2 schema ...")
 
-    result = supabase.table("data_sources").select("*").eq("enabled", True).execute()
-    sources = result.data or []
+    # Provider-Module importieren -> Registry fuellt sich
+    from pipeline import providers  # noqa: F401
 
-    if not sources:
-        print("No enabled data sources found.")
+    series = _load_active_series_with_cron()
+    if not series:
+        print("No active data_series with cron-Expression found.")
         return
 
+    # Gruppiere series_pks pro Cron-Expression (1 APScheduler-Job pro Cron-Gruppe)
+    by_cron: dict[str, list[int]] = defaultdict(list)
+    for s in series:
+        by_cron[s["cron"]].append(s["series_pk"])
+
     scheduler = BlockingScheduler()
-
-    for source in sources:
-        slug = source["slug"]
-        schedule = source.get("schedule", "")
-
-        if slug not in PROVIDER_MAP:
-            print(f"  SKIP {slug}: no provider implementation")
-            continue
-
-        trigger = _build_trigger(schedule)
+    registered = 0
+    for cron_str, pks in sorted(by_cron.items()):
+        trigger = _build_cron_trigger(cron_str)
         if trigger is None:
-            print(f"  SKIP {slug}: invalid schedule '{schedule}'")
+            print(f"  SKIP cron='{cron_str}': invalid expression ({len(pks)} series)")
             continue
-
+        job_id = f"cron_{cron_str.replace(' ', '_')}"
         scheduler.add_job(
-            _run_provider,
+            _run_series_batch,
             trigger=trigger,
-            args=[slug],
-            id=slug,
-            name=f"{source['name']} ({schedule})",
+            args=[pks],
+            id=job_id,
+            name=f"{cron_str} ({len(pks)} series)",
             max_instances=1,
+            coalesce=True,
         )
-        print(f"  Registered {slug}: {schedule}")
+        registered += 1
+        print(f"  Registered {job_id}: {cron_str} -> {len(pks)} series")
 
-    print(f"\n{len(scheduler.get_jobs())} jobs registered. Starting scheduler...")
+    print(f"\n{registered} cron-Gruppen registriert. Starting scheduler ...")
     print("Press Ctrl+C to stop.\n")
 
-    # Graceful shutdown
     def shutdown(signum, frame):
         print("\nShutting down scheduler...")
         scheduler.shutdown(wait=False)

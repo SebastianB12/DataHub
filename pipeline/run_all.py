@@ -1,85 +1,75 @@
-"""One-shot manual full refresh — runs every EconPulse provider sequentially.
+"""V2 one-shot manual full refresh — fetches alle aktiven data_series via Dispatcher.
 
-Sequential (not parallel) because:
-- Destatis has a 3-parallel-call limit per token (Code 6 + 15-min lockout).
-- ONS has Cloudflare 1015 throttling on rapid requests.
-- Sequential makes per-provider failure diagnosis simple.
+Sequential pro Provider (intern Rate-Limit-controlled durch PROVIDER_RATE_LIMITS).
+Falls --only-default gesetzt: nur is_default=true Reihen (Standard fuer Frontend).
 
-Usage from repo root: pipeline/.venv/Scripts/python -m pipeline.run_all
+Usage from repo root:
+  pipeline/.venv/Scripts/python -m pipeline.run_all
+  pipeline/.venv/Scripts/python -m pipeline.run_all --providers fred,eurostat
+  pipeline/.venv/Scripts/python -m pipeline.run_all --only-default
 """
+from __future__ import annotations
 
-import importlib
-import subprocess
+import argparse
 import sys
 import time
 import traceback
-
-PROVIDERS = [
-    "pipeline.providers.curated",     # local YAML, no network
-    "pipeline.providers.fred",        # US, well-behaved
-    "pipeline.providers.worldbank",   # GDP, GDP-PPP, military
-    "pipeline.providers.eurostat",    # DE/EA/GB
-    "pipeline.providers.insee",       # FR (TE-source-conform via pynsee)
-    "pipeline.providers.bdf",         # FR Banque de France (via DBnomics)
-    "pipeline.providers.ine_es",      # ES (TE-source-conform via INE Tempus3 JSON API)
-    "pipeline.providers.istat",       # IT (TE-source-conform via Esploradati SDMX REST)
-    "pipeline.providers.statec",      # LU (TE-source-conform via lustat.statec.lu .Stat Suite)
-    "pipeline.providers.czso",        # CZ (TE-source-conform via CZSO open-data CSV)
-    "pipeline.providers.elstat",      # GR (TE-source-conform via ELSTAT XLS publication portal)
-    "pipeline.providers.dbnomics",    # legacy gateway — kept for transition; reduced usage
-    "pipeline.providers.national_eu", # DK/FI/SE/IE/PT direct national APIs
-    "pipeline.providers.konj_se",     # SE NIER/Konjunkturinstitutet (CCI/BCI)
-    "pipeline.providers.lsd_lt",      # LT (LSD Lithuania via data.gov.lt)
-    "pipeline.providers.nsi_bg",      # BG (NSI via BNB SDDS Plus SDMX)
-    "pipeline.providers.gus_pl",      # PL (GUS DBW via dbw.stat.gov.pl/api_app)
-    "pipeline.providers.ecb",         # EA money/rates
-    "pipeline.providers.ons",         # GB (slow due to anti-bot sleeps)
-    "pipeline.providers.bundesbank",  # DE money/banking
-    "pipeline.providers.destatis",    # DE — slowest, run last on the data side
-    "pipeline.providers.eia",         # US energy
-    "pipeline.providers.gacc",        # CN trade (Customs)
-    "pipeline.providers.akshare_cn",  # CN macro (NBS/PBoC/SAFE via akshare)
-]
-
-
-def _preflight_te_conformity():
-    """Block run_all on TE-source-conformity violations. See docs/te_sources_truth.yaml."""
-    print("Pre-flight: TE-source-conformity check...")
-    r = subprocess.run([sys.executable, "-m", "pipeline.validate_te_conformity"])
-    if r.returncode != 0:
-        print("ABORT: TE-conformity violations block run_all. Fix truth.yaml or DB rows.")
-        sys.exit(1)
+from collections import defaultdict
 
 
 def main():
-    _preflight_te_conformity()
-    results: list[tuple[str, str, float]] = []
+    sys.stdout.reconfigure(encoding="utf-8")
+    p = argparse.ArgumentParser()
+    p.add_argument("--providers", help="Comma-separated provider names; default: alle registrierten")
+    p.add_argument("--only-default", action="store_true",
+                   help="Nur is_default=true Reihen")
+    p.add_argument("--dry-run", action="store_true",
+                   help="Fetch ohne Upsert")
+    args = p.parse_args()
+
+    # Provider laden -> Registry fuellt sich
+    from pipeline import providers           # noqa: F401
+    from pipeline.dispatcher import dispatch, list_providers
+
+    registered = list_providers()
+    targets = args.providers.split(",") if args.providers else registered
+    targets = [t for t in targets if t in registered or t in (None,)]
+    print(f"Registered providers ({len(registered)}): {registered}")
+    print(f"Target providers ({len(targets)}): {targets}")
+
+    grand_stats = defaultdict(int)
+    results: list[tuple[str, dict, float]] = []
     overall_start = time.time()
-    for mod_path in PROVIDERS:
-        name = mod_path.rsplit(".", 1)[-1]
+
+    for prov in targets:
         bar = "=" * 60
-        print(f"\n{bar}\n{name.upper()}\n{bar}")
+        print(f"\n{bar}\n{prov.upper()}\n{bar}")
         t0 = time.time()
         try:
-            mod = importlib.import_module(mod_path)
-            mod.run()
-            results.append((name, "ok", time.time() - t0))
+            stats = dispatch(provider_filter=prov,
+                             only_default=args.only_default,
+                             dry_run=args.dry_run)
+            results.append((prov, stats, time.time() - t0))
+            for k, v in stats.items():
+                grand_stats[k] += v
         except Exception as exc:
-            print(f"\n>>> {name} FAILED: {exc}")
+            print(f"\n>>> {prov} FAILED: {exc}")
             traceback.print_exc()
-            results.append((name, f"fail: {exc}", time.time() - t0))
+            results.append((prov, {"crashed": str(exc)}, time.time() - t0))
 
     total_dt = time.time() - overall_start
     bar = "=" * 60
     print(f"\n{bar}\nSUMMARY ({total_dt:.0f}s total)\n{bar}")
-    for name, status, dt in results:
-        print(f"  {name:14}  {status:50}  {dt:6.0f}s")
+    for prov, stats, dt in results:
+        nice = ", ".join(f"{k}={v}" for k, v in stats.items())
+        print(f"  {prov:14}  {nice:60}  {dt:6.0f}s")
 
-    failed = [r for r in results if not r[1].startswith("ok")]
-    if failed:
-        print(f"\n{len(failed)}/{len(results)} providers failed.")
+    crashed = [r for r in results if "crashed" in r[1]]
+    if crashed:
+        print(f"\n{len(crashed)}/{len(results)} provider crashes.")
         raise SystemExit(1)
-    print(f"\nAll {len(results)} providers completed successfully.")
+    print(f"\nGRAND TOTAL: {dict(grand_stats)}")
+    print(f"All {len(results)} provider runs completed.")
 
 
 if __name__ == "__main__":
