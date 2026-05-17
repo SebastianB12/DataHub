@@ -1,47 +1,69 @@
-"""
-WorldBankProvider — World Bank Open Data API
-Reads series config from the DB table `indicator_sources` (source='worldbank').
-Each row's extra_params.wb_country holds the World Bank country code
-(which may differ from our internal code, e.g. EA -> EMU).
+"""WorldBankProvider — World Bank Open Data API (V2 stateless).
 
-API: https://api.worldbank.org/v2/country/{iso2}/indicator/{code}?format=json
-No API key required.
+Dispatcher ruft fetch_series(spec) pro data_series-Row. Kein API-Key noetig.
+
+API: https://api.worldbank.org/v2/country/{country}/indicator/{code}?format=json
+
+country_hint ist ISO-2 (US, DE, ...) — die WB-API akzeptiert beide (ISO-2 und ISO-3),
+aber fuer einige Aggregate (Euroraum etc.) brauchen wir Special-Mapping. Optional kann
+extra_params.wb_country den Code ueberschreiben (z.B. EA -> EMU).
 """
+from __future__ import annotations
 
 import time
 from datetime import date
 
 import requests
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows, load_series_config
+from pipeline.dispatcher import register_provider
 
 BASE_URL = "https://api.worldbank.org/v2/country"
 
+# Mapping unserer internen Country-Codes -> World-Bank-Code, wenn abweichend.
+# Die WB-API versteht ISO-2 nativ; nur Aggregate brauchen WB-spezifische Codes.
+COUNTRY_TO_WB: dict[str, str] = {
+    "EA": "EMU",     # Euro area
+    "EU": "EUU",     # European Union
+    "GB": "GB",
+    "GR": "GR",
+}
+
 
 def _get_with_retry(url: str, params: dict, retries: int = 3, base_delay: float = 5.0):
-    """GET with retry on connection/read-timeout/5xx — World Bank's API is occasionally slow."""
+    """GET with retry on connection/timeout/5xx. WB API is occasionally slow."""
     last_exc: BaseException | None = None
     for attempt in range(retries):
         try:
             resp = requests.get(url, params=params, timeout=30)
-            if resp.status_code in (502, 503, 504):
-                last_exc = RuntimeError(f"HTTP {resp.status_code}")
-                time.sleep(base_delay * (attempt + 1))
-                continue
-            resp.raise_for_status()
-            return resp
         except (requests.ConnectionError, requests.Timeout) as exc:
             last_exc = exc
             if attempt == retries - 1:
-                raise
+                raise TransientProviderError(f"network: {exc}") from exc
             time.sleep(base_delay * (attempt + 1))
+            continue
+        if resp.status_code in (502, 503, 504):
+            last_exc = TransientProviderError(f"HTTP {resp.status_code}")
+            if attempt == retries - 1:
+                raise last_exc
+            time.sleep(base_delay * (attempt + 1))
+            continue
+        if resp.status_code >= 500:
+            raise TransientProviderError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+        if resp.status_code == 404:
+            raise ProviderError(f"HTTP 404: {resp.text[:200]}")
+        if resp.status_code >= 400:
+            raise ProviderError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+        return resp
     raise last_exc  # unreachable
 
 
 def _fetch_indicator(wb_country: str, wb_code: str) -> list[tuple[int, float]]:
-    """Fetch a World Bank indicator. Returns (year, value) pairs."""
+    """Fetch a World Bank indicator over all pages. Returns (year, value) pairs."""
     results: list[tuple[int, float]] = []
     page = 1
     while True:
@@ -49,15 +71,24 @@ def _fetch_indicator(wb_country: str, wb_code: str) -> list[tuple[int, float]]:
             f"{BASE_URL}/{wb_country}/indicator/{wb_code}",
             params={"format": "json", "per_page": 500, "page": page},
         )
-        data = resp.json()
-        if len(data) < 2 or not data[1]:
+        try:
+            data = resp.json()
+        except ValueError as e:
+            raise ProviderError(f"non-JSON response: {e}") from e
+        # WB-API liefert bei Fehlern ein dict mit 'message'; Erfolg ist eine Liste.
+        if isinstance(data, dict):
+            raise ProviderError(f"WB error: {str(data)[:200]}")
+        if not isinstance(data, list) or len(data) < 2 or not data[1]:
             break
         for item in data[1]:
             year_str = item.get("date", "")
             value = item.get("value")
-            if value is not None and year_str.isdigit():
-                results.append((int(year_str), float(value)))
-        total_pages = data[0].get("pages", 1)
+            if value is not None and isinstance(year_str, str) and year_str.isdigit():
+                try:
+                    results.append((int(year_str), float(value)))
+                except (TypeError, ValueError):
+                    continue
+        total_pages = data[0].get("pages", 1) if isinstance(data[0], dict) else 1
         if page >= total_pages:
             break
         page += 1
@@ -68,66 +99,37 @@ class WorldBankProvider(BaseProvider):
     name = "worldbank"
     display_name = "World Bank"
 
-    def fetch(self) -> list[DataPoint]:
-        configs = load_series_config("worldbank")
-        all_points: list[DataPoint] = []
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        wb_code = spec.series_id
+        if not wb_code:
+            raise ProviderError("worldbank: series_id missing")
 
-        for cfg in configs:
-            indicator = cfg["indicator"]
-            country = cfg["country"]
-            wb_code = cfg["series_id"]
-            conversion = float(cfg.get("conversion") or 1)
-            unit = cfg.get("unit") or ""
-            adjustment = cfg.get("adjustment") or ""
+        # Country-Resolution: extra_params.wb_country > Mapping > country_hint as-is.
+        ep = spec.extra_params or {}
+        wb_country = ep.get("wb_country")
+        if not wb_country and spec.country_hint:
+            wb_country = COUNTRY_TO_WB.get(spec.country_hint, spec.country_hint)
+        if not wb_country:
+            raise ProviderError("worldbank: country missing (need country_hint or extra_params.wb_country)")
 
-            wb_country = (cfg.get("extra_params") or {}).get("wb_country") or country
+        raw = _fetch_indicator(wb_country, wb_code)
 
+        freq = spec.freq_hint or "A"
+        conv = spec.conversion or 1.0
+        out: list[Observation] = []
+        for year, value in raw:
             try:
-                raw = _fetch_indicator(wb_country, wb_code)
-                points = [
-                    DataPoint(
-                        indicator=indicator,
-                        country=country,
-                        date=normalize_date(date(year, 1, 1), "A"),
-                        value=round(value * conversion, 2),
-                        source="worldbank",
-                        unit=unit,
-                        series_id=wb_code,
-                        adjustment=adjustment,
-                    )
-                    for year, value in raw
-                ]
-                all_points.extend(points)
-                years = [y for y, _ in raw]
-                earliest = min(years) if years else "?"
-                print(f"  OK {indicator} ({country}): {len(points)} points, from {earliest}")
-            except Exception as e:
-                print(f"  FAIL {indicator} ({country}, {wb_code}): {e}")
-
-        return all_points
+                v = round(float(value) * conv, 6)
+            except (TypeError, ValueError):
+                continue
+            out.append(Observation(
+                date=normalize_date(date(year, 1, 1), freq),
+                value=v,
+            ))
+        return out
 
 
-def run():
-    provider = WorldBankProvider()
-    print(f"Fetching data from {provider.display_name}...")
-    try:
-        points = provider.fetch()
-        print(f"\nTotal: {len(points)} data points")
-        rows = datapoints_to_rows(points)
-        total = 0
-        batch_size = 500
-        for i in range(0, len(rows), batch_size):
-            batch = rows[i : i + batch_size]
-            count = upsert_data_points(batch)
-            total += count
-            print(f"  Upserted batch {i // batch_size + 1}: {count} rows")
-        log_pipeline_run("worldbank", "success", total)
-        print(f"\nDone. {total} rows upserted.")
-    except Exception as e:
-        log_pipeline_run("worldbank", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    run()
+try:
+    register_provider(WorldBankProvider())
+except ProviderError as e:
+    print(f"[warn] WorldBankProvider not registered: {e}")

@@ -141,7 +141,9 @@ def load_active_series(provider: str | None = None,
 
 def series_row_to_spec(row: dict) -> SeriesSpec:
     """data_series-Row -> SeriesSpec (Provider-Input)."""
-    fam = (row.get("indicator_instances") or {}).get("indicator_families") or {}
+    inst = row.get("indicator_instances") or {}
+    fam  = inst.get("indicator_families") or {}
+    cc   = (inst.get("countries") or {}).get("code")
     return SeriesSpec(
         series_id=row["fetch_series_id"],
         extra_params=row.get("fetch_extra_params"),
@@ -149,6 +151,7 @@ def series_row_to_spec(row: dict) -> SeriesSpec:
         conversion=1.0,    # die data_series fuehrt keine getrennte conversion; Provider liefert raw
         unit=row.get("fetch_unit") or "",
         adjustment=row.get("fetch_adjustment") or "",
+        country_hint=cc,
     )
 
 

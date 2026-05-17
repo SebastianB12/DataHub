@@ -1,98 +1,136 @@
-"""
-CuratedProvider — liest pipeline/curated/<country>.yaml und schreibt deren Werte
-als data_points. Für Indikatoren die selten aktualisiert werden und keine
-brauchbare freie API haben (Taxes, Credit Rating, Corruption Index, etc.).
+"""CuratedProvider — V2 stateless.
 
-Pflegen = YAML editieren, dann `python -m pipeline.providers.curated` laufen lassen.
-Idempotent: upsert schreibt bei gleichem (indicator, country, date, source) nur
-einmal.
-"""
+Liest pro Aufruf die curated YAML-Datei des Landes (pipeline/curated/<iso2>.yaml)
+und gibt fuer einen bestimmten Slug die enthaltenen Observations zurueck.
 
-import os
+YAML-Form (typisch):
+    country: US
+    <slug>:
+      value: 21
+      date: "2026-12-31"
+      unit: "%"
+      ...
+
+Optional history-Form (mehrere Datenpunkte pro Slug):
+    <slug>:
+      history:
+        - { date: "2017-12-31", value: 35 }
+        - { date: "2018-12-31", value: 21 }
+
+KEIN Network. KEINE indicator-/country-/source-Knowledge ueber den
+SeriesSpec hinaus. Datums-Normalisierung via transforms.normalize_date.
+
+series_id-Konvention: "{COUNTRY}:{slug}" (z.B. "US:corporate-tax-rate").
+Falls kein ":" vorhanden ist, wird series_id als Slug interpretiert und
+country_hint genutzt, um die YAML zu finden.
+"""
+from __future__ import annotations
+
 from datetime import date, datetime
 from pathlib import Path
 
 import yaml
-from dotenv import load_dotenv
 
-from pipeline.base_provider import BaseProvider, DataPoint
-from pipeline.db import datapoints_to_rows, upsert_data_points, log_pipeline_run
-
-load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError,
+)
+from pipeline.transforms import normalize_date
+from pipeline.dispatcher import register_provider
 
 CURATED_DIR = Path(__file__).parent.parent / "curated"
 
 
 def _parse_date(raw) -> date:
+    if isinstance(raw, datetime):
+        return raw.date()
     if isinstance(raw, date):
         return raw
     if isinstance(raw, str):
         return datetime.strptime(raw, "%Y-%m-%d").date()
-    raise ValueError(f"Unsupported date type: {type(raw)} -> {raw!r}")
+    raise ValueError(f"unsupported date type: {type(raw).__name__} -> {raw!r}")
+
+
+def _load_country_yaml(country: str) -> dict:
+    """Parse pipeline/curated/<iso2>.yaml. Raises ProviderError on YAML errors."""
+    path = CURATED_DIR / f"{country.lower()}.yaml"
+    if not path.exists():
+        return {}
+    try:
+        with path.open(encoding="utf-8") as fh:
+            return yaml.safe_load(fh) or {}
+    except yaml.YAMLError as e:
+        raise ProviderError(f"curated YAML parse error {path.name}: {e}") from e
+    except OSError as e:
+        raise ProviderError(f"curated YAML read error {path.name}: {e}") from e
+
+
+def _entry_to_observations(entry: dict, freq: str, conversion: float) -> list[Observation]:
+    """Convert one slug entry (dict) into a list of Observations.
+
+    Supports two shapes:
+      single:  {value, date, ...}
+      history: {history: [{value, date}, ...]}
+    """
+    out: list[Observation] = []
+
+    history = entry.get("history")
+    if isinstance(history, list):
+        items = history
+    else:
+        items = [entry]
+
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        if "value" not in item or "date" not in item:
+            continue
+        try:
+            dt = _parse_date(item["date"])
+            v = float(item["value"]) * conversion
+        except (KeyError, ValueError, TypeError):
+            continue
+        out.append(Observation(date=normalize_date(dt, freq), value=round(v, 6)))
+    return out
 
 
 class CuratedProvider(BaseProvider):
     name = "curated"
-    display_name = "Curated (hand-maintained YAML)"
+    display_name = "Curated"
 
-    def fetch(self) -> list[DataPoint]:
-        points: list[DataPoint] = []
-        if not CURATED_DIR.exists():
-            print(f"  (no curated directory at {CURATED_DIR})")
-            return points
-
-        for yaml_file in sorted(CURATED_DIR.glob("*.yaml")):
-            with yaml_file.open(encoding="utf-8") as fh:
-                doc = yaml.safe_load(fh) or {}
-
-            country = doc.get("country")
-            if not country:
-                print(f"  SKIP {yaml_file.name}: missing 'country' key")
-                continue
-
-            for key, entry in doc.items():
-                if key == "country" or not isinstance(entry, dict):
-                    continue
-                try:
-                    src = entry.get("source") or "curated"
-                    points.append(
-                        DataPoint(
-                            indicator=key,
-                            country=country,
-                            date=_parse_date(entry["date"]),
-                            value=float(entry["value"]),
-                            source=src,
-                            unit=entry.get("unit") or "",
-                            series_id=entry.get("series_id") or f"{country}:{key}",
-                            adjustment="",
-                        )
-                    )
-                except (KeyError, ValueError, TypeError) as exc:
-                    print(f"  FAIL {yaml_file.name}:{key}: {exc}")
-
-            print(f"  OK {yaml_file.name}: {country}")
-
-        return points
-
-
-def run():
-    provider = CuratedProvider()
-    print(f"Fetching data from {provider.display_name}...")
-    try:
-        points = provider.fetch()
-        print(f"\nTotal: {len(points)} data points")
-        if points:
-            rows = datapoints_to_rows(points)
-            count = upsert_data_points(rows)
-            log_pipeline_run("curated", "success", count)
-            print(f"Done. {count} rows upserted.")
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        # series_id-Parsing: "{COUNTRY}:{slug}" bevorzugt; sonst country_hint + series_id.
+        sid = (spec.series_id or "").strip()
+        country: str | None
+        slug: str
+        if ":" in sid:
+            head, tail = sid.split(":", 1)
+            country = head.strip() or spec.country_hint
+            slug = tail.strip()
         else:
-            log_pipeline_run("curated", "success", 0)
-    except Exception as e:
-        log_pipeline_run("curated", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
+            country = spec.country_hint
+            slug = sid
+
+        if not country:
+            raise ProviderError(
+                f"curated: country missing (use 'CC:slug' series_id or country_hint). spec={spec}"
+            )
+        if not slug:
+            raise ProviderError(f"curated: slug missing in series_id={spec.series_id!r}")
+
+        doc = _load_country_yaml(country)
+        if not doc:
+            return []
+
+        entry = doc.get(slug)
+        if not isinstance(entry, dict):
+            return []
+
+        return _entry_to_observations(
+            entry,
+            freq=spec.freq_hint or "A",
+            conversion=spec.conversion or 1.0,
+        )
 
 
-if __name__ == "__main__":
-    run()
+register_provider(CuratedProvider())

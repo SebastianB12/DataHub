@@ -38,6 +38,10 @@ class SeriesSpec:
 
     Wird vom Dispatcher aus data_series + indicator_families gebaut und an
     provider.fetch_series() uebergeben.
+
+    country_hint ist KEIN „indicator knowledge" — viele Sources (Eurostat,
+    World Bank) brauchen einen Geo-Filter; der Hint ist eine Quellen-Koordinate
+    wie series_id. Provider die Geo nicht brauchen ignorieren ihn.
     """
     series_id:     str                 # provider-spezifische Series-ID
     extra_params:  dict | None = None  # JSONB-Bag fuer Eurostat-Filter, SDMX-Keys etc.
@@ -45,6 +49,7 @@ class SeriesSpec:
     conversion:    float = 1.0         # Skalierungs-Faktor (z.B. 1/1000 fuer M->B)
     unit:          str = ""            # Optional, fuer Provider die Unit umrechnen
     adjustment:    str = ""             # 'SA' | 'NSA' | 'CA' | ''
+    country_hint:  str | None = None   # ISO-2 fuer Geo-Filter (Eurostat, World Bank)
 
 
 @dataclass(frozen=True)

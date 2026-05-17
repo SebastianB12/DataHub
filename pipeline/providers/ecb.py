@@ -1,157 +1,114 @@
-"""
-EcbProvider — European Central Bank Data API
-Fetches: interest-rate, central-bank-balance, money-supply-m2 for Euro Area (EA).
-Also inserts for DE (same monetary policy).
+"""EcbProvider — European Central Bank Statistical Data Warehouse (V2 stateless).
+
+Dispatcher ruft fetch_series(spec) pro data_series-Row.
 
 API: https://data-api.ecb.europa.eu/service/data/{dataflow}/{key}?format=csvdata
-No API key required.
+Kein API-Key.
+
+SeriesSpec-Konventionen:
+  - spec.series_id: voller SDMX-Key inkl. Dataflow, z.B. "FM.B.U2.EUR.4F.KR.MRR_FR.LEV".
+    Erstes Token (vor erstem '.') = dataflow; Rest = key.
+    Alternativ: explizit "DATAFLOW/KEY" via Slash.
+    Zusaetzlich: spec.extra_params kann {'dataflow': 'FM', 'key': '...'} ueberschreiben.
+  - spec.extra_params optional: {'dataflow': str, 'key': str, 'params': {...}}
+  - spec.freq_hint: 'D'|'W'|'M'|'Q'|'A'. Wenn leer, abgeleitet aus erstem Key-Token
+    (B/D->D, W->W, M->M, Q->Q, A->A).
+  - spec.conversion: Skalierungsfaktor (z.B. 1/1000 fuer Mio->Mrd EUR).
 """
+from __future__ import annotations
 
 import csv
 import io
-from datetime import date
+from datetime import date, datetime
 
 import requests
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
+from pipeline.dispatcher import register_provider
 
 BASE_URL = "https://data-api.ecb.europa.eu/service/data"
 
-# EA member states that share ECB monetary policy. interest-rate is replicated
-# for each (it's the same policy rate). Aggregate-only indicators like
-# central-bank-balance and money-supply-m2 are NOT replicated — they describe
-# the Eurosystem / EA aggregate, not any single member.
-EA_MEMBERS = ["DE", "FR", "AT", "BE", "CY", "EE", "FI", "GR", "IE", "IT",
-              "LV", "LT", "LU", "MT", "NL", "PT", "SK", "SI", "ES", "HR"]
-# HR (Croatia) joined the EA on 2023-01-01. All 20 current EA members share ECB rate.
-
-# Indicators where the ECB value applies to every EA member (shared policy).
-SHARED_POLICY_INDICATORS = {"interest-rate"}
-
-# ECB series: (dataflow, key, indicator_slug, unit_conversion)
-# unit_conversion: multiply ECB value by this factor
-SERIES = [
-    {
-        "dataflow": "FM",
-        "key": "B.U2.EUR.4F.KR.MRR_FR.LEV",  # B = business day (sparse, only change dates)
-        "indicator": "interest-rate",
-        "conversion": 1,  # already in %
-        "unit": "%",
-        "adjustment": "",
-    },
-    {
-        "dataflow": "ILM",
-        "key": "W.U2.C.T000000.Z5.Z01",  # W = weekly
-        "indicator": "central-bank-balance",
-        "conversion": 1 / 1000,  # millions EUR -> billions EUR
-        "unit": "Billion EUR",
-        "adjustment": "NSA",
-    },
-    {
-        "dataflow": "BSI",
-        "key": "M.U2.Y.V.M20.X.1.U2.2300.Z01.E",  # M = monthly
-        "indicator": "money-supply-m2",
-        "conversion": 1 / 1000,  # millions EUR -> billions EUR
-        "unit": "Billion EUR",
-        "adjustment": "NSA",
-    },
-    {
-        "dataflow": "BSI",
-        "key": "M.U2.Y.V.M10.X.1.U2.2300.Z01.E",
-        "indicator": "money-supply-m1",
-        "conversion": 1 / 1000,
-        "unit": "Billion EUR",
-        "adjustment": "NSA",
-    },
-    {
-        "dataflow": "BSI",
-        "key": "M.U2.Y.V.M30.X.1.U2.2300.Z01.E",
-        "indicator": "money-supply-m3",
-        "conversion": 1 / 1000,
-        "unit": "Billion EUR",
-        "adjustment": "NSA",
-    },
-    {
-        # Adjusted loans to euro area NFCs (S.11) granted by MFIs, total maturity, EUR.
-        "dataflow": "BSI",
-        "key": "M.U2.Y.U.A20T.A.1.U2.2240.Z01.E",
-        "indicator": "loans-to-private-sector",
-        "conversion": 1 / 1000,
-        "unit": "Billion EUR",
-        "adjustment": "SA",
-    },
-]
+# Erstes Key-Token -> Frequenz (ECB SDMX-Konvention)
+_FREQ_FROM_KEY = {"B": "D", "D": "D", "W": "W", "M": "M", "Q": "Q", "A": "A", "S": "S"}
 
 
-# Country-specific Balance of Payments — current account (BPS dataflow).
-# Key structure: M.{ADJUSTMENT=N}.{REF_AREA}.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL
-# Returns NSA monthly net current account in mill EUR; matches the value reported
-# by the respective national central bank (TE 'current-account' for HU/SK/RO uses
-# national CB figures, which are sourced from this ECB BPS dataflow).
-COUNTRY_CA_SERIES = [
-    ("HU", "M.N.HU.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"),
-    ("SK", "M.N.SK.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"),
-    ("RO", "M.N.RO.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"),
-]
-
-
-# Country-specific labour-cost series (TE attributes "European Central Bank" for
-# French labour-costs). ECB LCI dataflow carries only EA/EU aggregates, so the
-# only ECB-published national-level labour cost index is in MNA (Main aggregates).
-# Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N — Unit Labour Cost (persons), SA, IX 2020=100.
-# Verified 2026-05-16: Q4 2025 ≈ 114.0 vs TE 113.8 (revision lag).
-COUNTRY_LC_SERIES = [
-    ("FR", "Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N"),
-    # IE: ECB MNA only publishes ULC NSA for Ireland; SA variant 404s.
-    # Verified 2026-05-17: Q4 2025 ≈ 108.4 vs TE 109.16 (matches ±5%).
-    ("IE", "Q.N.IE.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N"),
-]
+def _split_dataflow_key(series_id: str) -> tuple[str, str]:
+    """Split 'FM.B.U2.EUR.4F.KR.MRR_FR.LEV' or 'FM/B.U2....' into (dataflow, key)."""
+    sid = series_id.strip()
+    if "/" in sid:
+        df, key = sid.split("/", 1)
+        return df, key
+    if "." in sid:
+        df, _, key = sid.partition(".")
+        return df, key
+    raise ProviderError(f"ecb: cannot parse series_id '{series_id}' (need DATAFLOW.KEY or DATAFLOW/KEY)")
 
 
 def _parse_period(period_str: str) -> date | None:
     """Parse ECB time period to date.
+
     Formats: '2024-03-15' (daily/business), '2026-W15' (weekly),
-             '2024-03' (monthly), '2024-Q1' (quarterly), '2024' (annual).
+             '2024-03' (monthly), '2024-Q1' (quarterly), '2024' (annual),
+             '2024-S1' (semi-annual).
     """
-    from datetime import datetime
+    s = (period_str or "").strip()
+    if not s:
+        return None
     try:
-        if "-W" in period_str:
-            # Weekly: use Friday of that ISO week
-            return datetime.strptime(period_str + "-5", "%G-W%V-%u").date()
-        if "-Q" in period_str:
-            year, q = period_str.split("-Q")
+        if "-W" in s:
+            return datetime.strptime(s + "-5", "%G-W%V-%u").date()
+        if "-Q" in s:
+            year, q = s.split("-Q")
             month = {"1": 1, "2": 4, "3": 7, "4": 10}[q]
             return date(int(year), month, 1)
-        if len(period_str) == 10:  # YYYY-MM-DD (daily/business)
-            return date.fromisoformat(period_str)
-        if len(period_str) == 7:  # YYYY-MM
-            year, month = period_str.split("-")
+        if "-S" in s:
+            year, sem = s.split("-S")
+            month = {"1": 1, "2": 7}[sem]
+            return date(int(year), month, 1)
+        if len(s) == 10:  # YYYY-MM-DD
+            return date.fromisoformat(s)
+        if len(s) == 7:   # YYYY-MM
+            year, month = s.split("-")
             return date(int(year), int(month), 1)
-        if len(period_str) == 4:  # YYYY
-            return date(int(period_str), 1, 1)
+        if len(s) == 4:   # YYYY
+            return date(int(s), 1, 1)
     except (ValueError, KeyError):
         pass
     return None
 
 
-def _fetch_series(dataflow: str, key: str) -> list[tuple[date, float]]:
-    """Fetch a single ECB series as CSV and return (date, value) pairs."""
+def _fetch_csv(dataflow: str, key: str, params: dict | None = None) -> list[tuple[date, float]]:
+    """GET ECB CSV-data. Returns (date, value) pairs."""
     url = f"{BASE_URL}/{dataflow}/{key}"
-    resp = requests.get(url, params={"format": "csvdata"}, timeout=30)
-    resp.raise_for_status()
+    query = {"format": "csvdata"}
+    if params:
+        query.update(params)
+    try:
+        resp = requests.get(url, params=query, timeout=60)
+    except (requests.ConnectionError, requests.Timeout) as e:
+        raise TransientProviderError(f"ecb network: {e}") from e
+    if resp.status_code >= 500:
+        raise TransientProviderError(f"ecb HTTP {resp.status_code}")
+    if resp.status_code == 404:
+        raise ProviderError(f"ecb 404: {dataflow}/{key}")
+    if resp.status_code != 200:
+        raise ProviderError(f"ecb HTTP {resp.status_code}: {resp.text[:200]}")
 
     reader = csv.DictReader(io.StringIO(resp.text))
-    results = []
+    results: list[tuple[date, float]] = []
     for row in reader:
         period = _parse_period(row.get("TIME_PERIOD", ""))
         value_str = row.get("OBS_VALUE", "")
-        if period and value_str:
-            try:
-                results.append((period, float(value_str)))
-            except ValueError:
-                continue
+        if period is None or value_str in ("", None):
+            continue
+        try:
+            results.append((period, float(value_str)))
+        except (ValueError, TypeError):
+            continue
     return results
 
 
@@ -159,113 +116,38 @@ class EcbProvider(BaseProvider):
     name = "ecb"
     display_name = "European Central Bank"
 
-    def fetch(self) -> list[DataPoint]:
-        all_points: list[DataPoint] = []
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        ep = spec.extra_params or {}
 
-        for series in SERIES:
+        # Dataflow + Key auflösen
+        dataflow = ep.get("dataflow")
+        key = ep.get("key")
+        if not (dataflow and key):
+            if not spec.series_id:
+                raise ProviderError("ecb: series_id (DATAFLOW.KEY) required")
+            df_parsed, key_parsed = _split_dataflow_key(spec.series_id)
+            dataflow = dataflow or df_parsed
+            key = key or key_parsed
+
+        params = ep.get("params") or None
+
+        raw = _fetch_csv(dataflow, key, params=params)
+
+        # Frequenz: spec.freq_hint > erstes Key-Token
+        freq = spec.freq_hint or _FREQ_FROM_KEY.get(key[:1], "M")
+        conv = spec.conversion or 1.0
+
+        out: list[Observation] = []
+        for dt, value in raw:
             try:
-                raw = _fetch_series(series["dataflow"], series["key"])
-                conversion = series["conversion"]
-
-                # Determine frequency from key prefix
-                freq_char = series["key"][0]
-                freq = {"B": "D", "D": "D", "W": "W", "M": "M", "Q": "Q", "A": "A"}.get(freq_char, "M")
-
-                # Shared-policy indicators (interest-rate) get replicated for each
-                # EA member. Aggregate indicators (central-bank-balance, M2) stay
-                # EA-only — they describe the Eurosystem, not any single member.
-                replicate_to = EA_MEMBERS if series["indicator"] in SHARED_POLICY_INDICATORS else []
-                targets = ["EA", *replicate_to]
-
-                for dt, value in raw:
-                    converted = round(value * conversion, 2)
-                    norm_dt = normalize_date(dt, freq)
-                    for country in targets:
-                        all_points.append(DataPoint(
-                            indicator=series["indicator"],
-                            country=country,
-                            date=norm_dt,
-                            value=converted,
-                            source="ecb",
-                            unit=series["unit"],
-                            adjustment=series.get("adjustment", ""),
-                        ))
-
-                print(f"  OK {series['indicator']}: {len(raw)} periods x {len(targets)} countries")
-            except Exception as e:
-                print(f"  FAIL {series['indicator']}: {e}")
-
-        # Country-specific MNA labour-cost (quarterly index 2020=100, SA).
-        for cc, key in COUNTRY_LC_SERIES:
-            try:
-                raw = _fetch_series("MNA", key)
-                sid = f"MNA/{key}"
-                for dt, value in raw:
-                    norm_dt = normalize_date(dt, "Q")
-                    all_points.append(DataPoint(
-                        indicator="labour-costs",
-                        country=cc,
-                        date=norm_dt,
-                        value=round(value, 2),
-                        source="ecb",
-                        unit="Index (2020=100)",
-                        series_id=sid,
-                        adjustment="SA",
-                    ))
-                print(f"  OK labour-costs/{cc}: {len(raw)} periods (MNA {key})")
-            except Exception as e:
-                print(f"  FAIL labour-costs/{cc}: {e}")
-
-        # Country-specific BPS current-account (monthly, NSA, mill EUR).
-        for cc, key in COUNTRY_CA_SERIES:
-            try:
-                raw = _fetch_series("BPS", key)
-                sid = f"BPS/{key}"
-                for dt, value in raw:
-                    all_points.append(DataPoint(
-                        indicator="current-account",
-                        country=cc,
-                        date=dt,
-                        value=round(value, 2),
-                        source="ecb",
-                        unit="Million EUR",
-                        series_id=sid,
-                        adjustment="NSA",
-                    ))
-                print(f"  OK current-account/{cc}: {len(raw)} periods (BPS {key})")
-            except Exception as e:
-                print(f"  FAIL current-account/{cc}: {e}")
-
-        return all_points
+                v = round(float(value) * conv, 6)
+            except (ValueError, TypeError):
+                continue
+            out.append(Observation(date=normalize_date(dt, freq), value=v))
+        return out
 
 
-def run():
-    """Run the ECB provider and write to Supabase."""
-    provider = EcbProvider()
-    print(f"Fetching data from {provider.display_name}...")
-
-    try:
-        points = provider.fetch()
-        print(f"\nTotal: {len(points)} data points")
-
-        rows = datapoints_to_rows(points)
-
-        total_upserted = 0
-        batch_size = 500
-        for i in range(0, len(rows), batch_size):
-            batch = rows[i : i + batch_size]
-            count = upsert_data_points(batch)
-            total_upserted += count
-            print(f"  Upserted batch {i // batch_size + 1}: {count} rows")
-
-        log_pipeline_run("ecb", "success", total_upserted)
-        print(f"\nDone. {total_upserted} rows upserted to Supabase.")
-
-    except Exception as e:
-        log_pipeline_run("ecb", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    run()
+try:
+    register_provider(EcbProvider())
+except ProviderError as e:
+    print(f"[warn] EcbProvider not registered: {e}")
