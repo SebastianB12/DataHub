@@ -14,7 +14,7 @@ supabase = create_client(
 import math
 
 
-def datapoints_to_rows(points: list) -> list[dict]:
+def datapoints_to_rows(points: list, series_pk: int | None = None) -> list[dict]:
     """Convert DataPoint objects to dicts for Supabase upsert.
 
     adjustment is always stored as a non-null string ("" for unspecified).
@@ -23,6 +23,8 @@ def datapoints_to_rows(points: list) -> list[dict]:
 
     NaN/inf values are skipped (some upstream APIs publish these as placeholders
     for missing observations; PostgREST rejects them as JSON-non-compliant).
+
+    Wenn series_pk gesetzt ist (V2), wird die FK in jede Row geschrieben.
     """
     rows: list[dict] = []
     for p in points:
@@ -35,7 +37,7 @@ def datapoints_to_rows(points: list) -> list[dict]:
             continue
         if not math.isfinite(fv):
             continue
-        rows.append({
+        row = {
             "indicator": p.indicator,
             "country": p.country,
             "date": p.date.isoformat(),
@@ -44,7 +46,10 @@ def datapoints_to_rows(points: list) -> list[dict]:
             "unit": p.unit or None,
             "series_id": p.series_id or None,
             "adjustment": p.adjustment or "",
-        })
+        }
+        if series_pk is not None:
+            row["series_pk"] = series_pk
+        rows.append(row)
     return rows
 
 
@@ -73,9 +78,8 @@ def upsert_data_points(points: list[dict]) -> int:
 def load_series_config(source: str) -> list[dict]:
     """Load active series configuration for a provider from indicator_sources.
 
-    Replaces hardcoded Python dicts in pipeline/providers/*.py.
-    Each row has: indicator, country, series_id, conversion, unit, adjustment,
-    freq_hint, extra_params (jsonb), is_default, transform, note.
+    LEGACY — V1-Lesepfad. Wird in Phase 7 entfernt sobald alle Provider
+    auf den V2-stateless-Pfad (BaseProvider.fetch_series) umgestellt sind.
     """
     result = (
         supabase.table("indicator_sources")
