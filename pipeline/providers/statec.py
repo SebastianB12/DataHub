@@ -1,456 +1,282 @@
-"""STATEC direct provider — Luxembourg national statistics office.
+"""StatecProvider — STATEC Luxembourg national statistics (V2 stateless).
 
-Uses lustat.statec.lu/rest — STATEC's NSI Web Service v8.x (.Stat Suite SDMX REST,
-same platform that ISTAT uses on esploradati.istat.it). All public dataflows under
-the LU1 agency.
+Dispatcher ruft fetch_series(spec) pro data_series-Row.
 
-Original (2026-05-09) wired only CPI + PPI + LFS + IP + population.
-Expansion (2026-05-15) adds CPI sub-indices, special CPI aggregates, quarterly NA,
-retail-sales, and government deficit/debt — closing the LU TE-source mismatches.
+API: https://lustat.statec.lu/rest/data/LU1,{DATAFLOW},{VERSION}/all/ALL
+(SDMX REST v8.x, .Stat Suite — same platform that ISTAT uses on esploradati.istat.it)
+Accept: application/vnd.sdmx.data+csv;version=1.0.0
+Kein API-Key.
 
-Verified 2026-05-15 against TE inventory:
-  inflation-cpi          DSD_ECOICOP_PRIX@DF_E5405 CP00 -> 2026-04 = 102.65
-  ppi                    DSD_PRIX_PPI@DF_D3202 _T base2021 -> 2026-03 = 121.48
-  unemployment           DF_B3019 C11 -> 2026-03 = 6.35%
-  unemployed-persons     DF_B3019 C09 -> persons -> thousands
-  employed-persons       DF_B3019 C08 -> persons -> thousands
-  industrial-production  DF_D5110 PROD/BTD/W base2021 -> 2026-02 = 78.26
-  population             DF_B1100 C01 annual -> millions
-  CPI sub (CP01..CP12)   DSD_ECOICOP_PRIX@DF_E5405 ECOICOP_2018=CP0n -> 2026-04
-                         cpi-food=102.07  cpi-clothing=102.85
-                         cpi-housing=103.91 cpi-transportation=106.05
-                         cpi-recreation=101.87 cpi-education=104.03
-  CPI special aggs       DSD_ECOICOP_PRIX@DF_E5409 (NCPI special aggregates)
-                         core-cpi (TOT_X_NRG_FOOD)=101.35
-                         food-inflation (FOOD)=102.26 — LEVEL not YoY
-                         energy-inflation (NRG)=116.65 — LEVEL not YoY
-                         services-inflation (SERV)=101.43 — LEVEL not YoY
-  Quarterly NA (DF_E2504, chain-linked vol 2015, SA):
-                         gdp-real (r33) 2025Q4 = 16,105.6 mln EUR
-                         consumer-spending (r13) = 5,576.4
-                         government-spending (r15) = 3,242.4
-                         gross-fixed-capital-formation (r16) = 2,248.1
-  Government finance (DF_E3101 annual, EDP):
-                         budget-deficit (L03) 2025 = -1.96 % of GDP
-                         government-debt-total (L12) 2025 = 23,695 mln EUR
-                         (also expose as government-debt for the % series shown by TE)
-  Retail-sales           DF_D5108 v1.1 G47 TOVV (turnover value), seasonally adj. Y, base 2021
-                         -> 2026-03 = 143.66 (Y), 147.54 (W)
-
-URL pattern (CSV):
-  https://lustat.statec.lu/rest/data/LU1,{DATAFLOW},{VERSION}/all/ALL
-  Accept: application/vnd.sdmx.data+csv;version=1.0.0
+SeriesSpec-Konventionen:
+  - spec.series_id: STATEC SDMX-Key in einer der folgenden Formen:
+      "STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#FREQ=M,ECOICOP_2018=CP00"
+      "STATEC/LU1,DF_E4202,1.0#B-CA"   (Kurzform: '-'-separated key)
+      "LU1,DF_E4202,1.0"                (ohne Filter)
+      "DF_E4202,1.0"                     (Agency LU1 angenommen)
+    Filter werden hinter '#' angegeben — entweder
+       - 'DIM=VAL,DIM=VAL,...'  (explizite Filter), oder
+       - 'TOKEN-TOKEN-...'      (Positions-Key wie in SDMX-URLs)
+    Die explizite Form wird bevorzugt. Beide Formen filtern client-side die CSV.
+  - spec.extra_params optional:
+      {'dataflow': str, 'version': str, 'agency': str,
+       'filter': {DIM: VAL, ...},     # explizite Filter (ueberschreiben series_id)
+       'params': {...}}               # ggf. URL-Query-Params
+  - spec.freq_hint: 'M' | 'Q' | 'A'.
+  - spec.conversion: Skalierungsfaktor.
 """
-import os
+from __future__ import annotations
+
 import csv
 import io
-import time
 from datetime import date
 
 import requests
-from dotenv import load_dotenv
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
+from pipeline.dispatcher import register_provider
 
-load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
-
-BASE = "https://lustat.statec.lu/rest/data"
+BASE_URL = "https://lustat.statec.lu/rest/data"
 
 HDR = {
     "Accept": "application/vnd.sdmx.data+csv;version=1.0.0",
     "User-Agent": "EconPulse/0.1 (Sebastian/SVM-AG)",
 }
 
-# Each series spec describes:
-#  - dataflow: the SDMX dataflow id (with optional DSD@ prefix)
-#  - version: dataflow version
-#  - filter: dict {column: required_value} applied row-by-row to pick the correct slice
-#  - freq: M / Q / A
-#  - other metadata for DataPoint
-SERIES = [
-    # === Original (locked-in) ===
-    {
-        "slug": "inflation-cpi",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP00"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 all-items (CP00), base 2025=100",
-    },
-    {
-        "slug": "ppi",
-        "dataflow": "DSD_PRIX_PPI@DF_D3202",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ACTIVITY": "_T", "BASE_PERIOD": "2021"},
-        "freq": "M", "unit": "Index (2021=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC Industrial Producer Prices total (_T), base 2021=100",
-    },
-    {
-        "slug": "unemployment",
-        "dataflow": "DF_B3019",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "SPECIFICATION": "C11"},
-        "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
-        "note": "STATEC unemployment rate, seasonally adjusted (B3019/C11)",
-    },
-    {
-        "slug": "unemployed-persons",
-        "dataflow": "DF_B3019",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "SPECIFICATION": "C09"},
-        "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 1e-3,
-        "note": "STATEC number of unemployed SA (B3019/C09), persons -> thousands",
-    },
-    {
-        "slug": "employed-persons",
-        "dataflow": "DF_B3019",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "SPECIFICATION": "C08"},
-        "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 1e-3,
-        "note": "STATEC domestic employment SA (B3019/C08), persons -> thousands",
-    },
-    {
-        "slug": "industrial-production",
-        "dataflow": "DF_D5110",
-        "version": "1.1",
-        "filter": {"FREQ": "M", "MEASURE": "PROD", "ACTIVITY": "BTD",
-                   "SEASONAL_ADJUST": "W", "BASE_PER": "2021"},
-        "freq": "M", "unit": "Index (2021=100)", "adjustment": "WDA", "conversion": 1.0,
-        "note": "STATEC Industrial Production index, total industry BTD, working-day adj.",
-    },
-    {
-        "slug": "population",
-        "dataflow": "DF_B1100",
-        "version": "1.0",
-        "filter": {"FREQ": "A", "SPECIFICATION": "C01"},
-        "freq": "A", "unit": "Million", "adjustment": "NSA", "conversion": 1e-6,
-        "note": "STATEC total resident population (B1100/C01), annual -> millions",
-    },
 
-    # === CPI sub-indices (ECOICOP v.2, NCPI base 2025=100) ===
-    # All from DSD_ECOICOP_PRIX@DF_E5405 v1.0 — same dataflow as inflation-cpi.
-    {
-        "slug": "cpi-food",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP01"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 CP01 Food & non-alcoholic beverages",
-    },
-    {
-        "slug": "cpi-clothing",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP03"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 CP03 Clothing & footwear",
-    },
-    {
-        "slug": "cpi-housing-utilities",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP04"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 CP04 Housing/water/electricity/gas",
-    },
-    {
-        "slug": "cpi-transportation",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP07"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 CP07 Transport",
-    },
-    {
-        "slug": "cpi-recreation-and-culture",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP09"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 CP09 Recreation & culture",
-    },
-    {
-        "slug": "cpi-education",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5405",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "CP10"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI ECOICOP v.2 CP10 Education",
-    },
+def _parse_series_id(series_id: str) -> tuple[str, str, str, dict | None, list[str] | None]:
+    """Parse STATEC series_id forms -> (agency, dataflow, version, filter_dict, key_tokens).
 
-    # === CPI special aggregates (DF_E5409, NCPI base 2025=100) — LEVEL indices ===
-    # The TE-page values for these slugs are YoY %; we publish levels and
-    # let the frontend compute YoY on the fly (per project convention).
-    {
-        "slug": "core-cpi",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "TOT_X_NRG_FOOD"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI special agg TOT_X_NRG_FOOD (excl. energy & food)",
-    },
-    {
-        "slug": "food-inflation",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "FOOD"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI special agg FOOD (level); frontend computes YoY",
-    },
-    {
-        "slug": "energy-inflation",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "NRG"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI special agg NRG (energy, level)",
-    },
-    {
-        "slug": "services-inflation",
-        "dataflow": "DSD_ECOICOP_PRIX@DF_E5409",
-        "version": "1.0",
-        "filter": {"FREQ": "M", "ECOICOP_2018": "SERV"},
-        "freq": "M", "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC NCPI special agg SERV (services, level)",
-    },
+    Forms accepted:
+      - 'STATEC/LU1,DF_E4202,1.0#B-CA'
+      - 'STATEC/LU1,DSD_X@DF_E5405,1.0#FREQ=M,ECOICOP_2018=CP00'
+      - 'LU1,DF_E4202,1.0#...'
+      - 'DF_E4202,1.0'                  (agency=LU1 default)
 
-    # === Quarterly National Accounts — DF_E2504 v1.0 ===
-    # Main aggregates, chain-linked volumes (ref 2015), seasonally adjusted, mln EUR.
-    # LABELS coded r01..r33 (see codelist; mapping in module docstring).
-    {
-        "slug": "gdp-real",
-        "dataflow": "DF_E2504",
-        "version": "1.0",
-        "filter": {"FREQ": "Q", "LABELS": "r33"},
-        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "STATEC E2504 r33 GDP at market prices (B1*G), chain-linked vol SA",
-    },
-    {
-        "slug": "consumer-spending",
-        "dataflow": "DF_E2504",
-        "version": "1.0",
-        "filter": {"FREQ": "Q", "LABELS": "r13"},
-        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "STATEC E2504 r13 Final consumption expenditure of households",
-    },
-    {
-        "slug": "government-spending",
-        "dataflow": "DF_E2504",
-        "version": "1.0",
-        "filter": {"FREQ": "Q", "LABELS": "r15"},
-        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "STATEC E2504 r15 Final consumption of general government",
-    },
-    {
-        "slug": "gross-fixed-capital-formation",
-        "dataflow": "DF_E2504",
-        "version": "1.0",
-        "filter": {"FREQ": "Q", "LABELS": "r16"},
-        "freq": "Q", "unit": "Million EUR (chain-linked, SA)", "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "STATEC E2504 r16 Gross capital formation (P5) chain-linked vol SA",
-    },
+    Returns:
+        agency, dataflow, version, filter_dict (or None), key_tokens (or None).
+    """
+    sid = (series_id or "").strip()
+    if not sid:
+        raise ProviderError("statec: empty series_id")
 
-    # === Government finance — DF_E3101 v1.0 (annual EDP report) ===
-    # L03 = net lending/borrowing in % of GDP  -> budget-deficit (sign: TE uses absolute,
-    #       L03 carries sign — we keep STATEC sign; frontend can flip if needed).
-    # L12 = General government consolidated gross debt at nominal value (mln EUR).
-    {
-        "slug": "budget-deficit",
-        "dataflow": "DF_E3101",
-        "version": "1.0",
-        "filter": {"FREQ": "A", "LABELS": "L03"},
-        "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC E3101 L03 General government net lending/borrowing % of GDP",
-    },
-    {
-        "slug": "government-debt-total",
-        "dataflow": "DF_E3101",
-        "version": "1.0",
-        "filter": {"FREQ": "A", "LABELS": "L12"},
-        "freq": "A", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC E3101 L12 Consolidated gross general government debt (mln EUR)",
-    },
+    head, _, tail = sid.partition("#")
+    # Strip leading 'STATEC/' prefix if present
+    if head.upper().startswith("STATEC/"):
+        head = head[len("STATEC/"):]
 
-    # === Balance of Payments — DF_E4202 v1.0 (quarterly, BPM6) ===
-    # DIRECTION B=Balance, C=Credit (exports), D=Debit (imports)
-    # COMPONENT CA=current account, G=goods, S=services
-    {
-        "slug": "current-account",
-        "dataflow": "DF_E4202",
-        "version": "1.0",
-        "filter": {"FREQ": "Q", "DIRECTION": "B", "COMPONENT": "CA"},
-        "freq": "Q", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC E4202 BPM6 quarterly Current Account balance (mln EUR)",
-    },
+    parts = [p.strip() for p in head.split(",")]
+    if len(parts) == 3:
+        agency, dataflow, version = parts
+    elif len(parts) == 2:
+        agency = "LU1"
+        dataflow, version = parts
+    else:
+        raise ProviderError(f"statec: cannot parse series_id head '{head}'")
 
-    # === Government finance % of GDP — DF_E3101 v1.0 ===
-    # L14 = General government consolidated gross debt in % of GDP (annual EDP)
-    {
-        "slug": "government-debt",
-        "dataflow": "DF_E3101",
-        "version": "1.0",
-        "filter": {"FREQ": "A", "LABELS": "L14"},
-        "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
-        "note": "STATEC E3101 L14 General government consolidated gross debt % of GDP",
-    },
+    if not agency:
+        agency = "LU1"
 
-    # === Retail sales — DF_D5108 v1.1 ===
-    # G47 retail trade, MEASURE=TOVV (turnover value), SEASONAL_ADJUST=Y (seasonally adj),
-    # BASE_PER=2021. Reported as an index (UNIT_MEASURE=IX).
-    {
-        "slug": "retail-sales",
-        "dataflow": "DF_D5108",
-        "version": "1.1",
-        "filter": {"FREQ": "M", "MEASURE": "TOVV", "SEASONAL_ADJUST": "Y",
-                   "ACTIVITY": "G47", "BASE_PER": "2021"},
-        "freq": "M", "unit": "Index (2021=100, SA)", "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "STATEC D5108 G47 retail trade turnover-value index, SA, base 2021",
-    },
-]
+    filter_dict: dict | None = None
+    key_tokens: list[str] | None = None
+    if tail:
+        if "=" in tail:
+            filter_dict = {}
+            for kv in tail.split(","):
+                kv = kv.strip()
+                if not kv or "=" not in kv:
+                    continue
+                k, _, v = kv.partition("=")
+                filter_dict[k.strip()] = v.strip()
+        else:
+            # Positions-Key: 'B-CA' oder 'M.CP00' -> Tokens
+            key_tokens = [t for t in tail.replace(".", "-").split("-") if t != ""]
+
+    return agency, dataflow, version, filter_dict, key_tokens
 
 
 def _parse_period(p: str, freq: str) -> date | None:
-    """Parse SDMX TIME_PERIOD strings to a date.
-
-    Handles:
-      monthly: 2026-04
-      quarterly: 2026-Q1
-      annual: 2026 OR 2025-12-31 (B1100 emits ISO end-of-year)
-    """
+    """SDMX TIME_PERIOD parser. Supports M/Q/A and ISO (YYYY-MM-DD)."""
+    s = (p or "").strip()
+    if not s:
+        return None
     try:
-        if freq == "M" and "-" in p and len(p) == 7:
-            yy, mm = p.split("-")
+        if freq == "M" and "-" in s and len(s) == 7:
+            yy, mm = s.split("-")
             return date(int(yy), int(mm), 1)
-        if freq == "Q" and "-Q" in p:
-            yy, q = p.split("-Q")
+        if freq == "Q" and "-Q" in s:
+            yy, q = s.split("-Q")
             return date(int(yy), {"1": 1, "2": 4, "3": 7, "4": 10}[q], 1)
         if freq == "A":
-            # Either a 4-digit year or full ISO date YYYY-MM-DD
-            if len(p) == 4 and p.isdigit():
-                return date(int(p), 1, 1)
-            if len(p) == 10 and p[4] == "-":
-                yy, mm, dd = p.split("-")
+            if len(s) == 4 and s.isdigit():
+                return date(int(s), 1, 1)
+            if len(s) == 10 and s[4] == "-":
+                yy, mm, dd = s.split("-")
                 return date(int(yy), int(mm), int(dd))
-    except Exception:
+        # generic fallbacks
+        if len(s) == 7 and "-" in s:
+            yy, mm = s.split("-")
+            return date(int(yy), int(mm), 1)
+        if "-Q" in s:
+            yy, q = s.split("-Q")
+            return date(int(yy), {"1": 1, "2": 4, "3": 7, "4": 10}[q], 1)
+        if len(s) == 4 and s.isdigit():
+            return date(int(s), 1, 1)
+        if len(s) == 10 and s[4] == "-":
+            return date.fromisoformat(s)
+    except (ValueError, KeyError, IndexError):
         return None
     return None
 
 
-def _fetch_series(cfg: dict, retries: int = 3) -> list[tuple[date, float]]:
-    url = f"{BASE}/LU1,{cfg['dataflow']},{cfg['version']}/all/ALL"
-    last_exc = None
-    for attempt in range(retries):
-        if attempt:
-            time.sleep(5 * attempt)
-        try:
-            r = requests.get(url, headers=HDR, timeout=180)
-            r.raise_for_status()
-            break
-        except requests.RequestException as e:
-            last_exc = e
-    else:
-        raise last_exc  # type: ignore
-    reader = csv.DictReader(io.StringIO(r.text))
-    out = []
-    flt = cfg["filter"]
-    for row in reader:
-        # Apply all filter conditions; reject row if any mismatch.
-        match = True
-        for k, v in flt.items():
-            if row.get(k) != v:
-                match = False
-                break
-        if not match:
+def _fetch_csv(agency: str, dataflow: str, version: str,
+               params: dict | None = None) -> list[dict]:
+    """GET STATEC SDMX-CSV. Returns list of DictReader-Rows."""
+    url = f"{BASE_URL}/{agency},{dataflow},{version}/all/ALL"
+    query = dict(params or {})
+    try:
+        resp = requests.get(url, headers=HDR, params=query, timeout=180)
+    except (requests.ConnectionError, requests.Timeout) as e:
+        raise TransientProviderError(f"statec network: {e}") from e
+    if resp.status_code >= 500:
+        raise TransientProviderError(f"statec HTTP {resp.status_code}")
+    if resp.status_code == 404:
+        raise ProviderError(f"statec 404: {agency},{dataflow},{version}")
+    if resp.status_code != 200:
+        raise ProviderError(f"statec HTTP {resp.status_code}: {resp.text[:200]}")
+
+    reader = csv.DictReader(io.StringIO(resp.text))
+    return list(reader)
+
+
+def _row_matches_filter(row: dict, flt: dict) -> bool:
+    for k, v in flt.items():
+        if row.get(k) != v:
+            return False
+    return True
+
+
+def _dim_cols(fieldnames: list[str], freq_hint: str | None = None) -> list[str]:
+    """Return SDMX dimension columns from a CSV header.
+
+    Skips structural metadata (DATAFLOW, STRUCTURE*, ACTION),
+    measure columns (TIME_PERIOD, OBS_VALUE, OBS_STATUS, OBS_*, DECIMALS,
+    UNIT_MULT, UNIT_MEASURE), and any NOTE_* attribute columns.
+    """
+    skip = {"DATAFLOW", "STRUCTURE", "STRUCTURE_ID", "STRUCTURE_NAME", "ACTION",
+            "TIME_PERIOD", "OBS_VALUE", "OBS_STATUS", "UNIT_MULT",
+            "DECIMALS", "UNIT_MEASURE", "CONF_STATUS", "OBS_COMMENT"}
+    cols = []
+    for c in fieldnames:
+        if not c:
             continue
-        per = row.get("TIME_PERIOD", "")
-        val = row.get("OBS_VALUE", "")
-        if not per or val in ("", None):
+        if c in skip:
             continue
-        try:
-            v = float(val)
-        except ValueError:
+        if c.startswith("NOTE_") or c.startswith("OBS_"):
             continue
-        dt = _parse_period(per, cfg["freq"])
-        if dt:
-            out.append((dt, v))
-    out.sort()
-    return out
+        cols.append(c)
+    return cols
+
+
+def _row_matches_key_tokens(row: dict, tokens: list[str], dim_cols: list[str]) -> bool:
+    """Match by ordered token list against the SDMX dimension columns.
+
+    Supports two alignments:
+      1. Tokens map 1:1 to dim_cols starting at index 0 (covers FREQ).
+      2. Tokens map starting after FREQ (i.e. dim_cols[1:]), which is the
+         conventional SDMX positional key form (FREQ separately specified).
+    """
+    if not tokens or not dim_cols:
+        return False
+    # Try alignment WITHOUT FREQ (most common — key is DIM2.DIM3...)
+    if "FREQ" in dim_cols:
+        after_freq = [c for c in dim_cols if c != "FREQ"]
+        if len(tokens) == len(after_freq):
+            return all(row.get(col) == tok for tok, col in zip(tokens, after_freq))
+    # Fall back: full alignment from position 0
+    if len(tokens) == len(dim_cols):
+        return all(row.get(col) == tok for tok, col in zip(tokens, dim_cols))
+    # Prefix alignment (tokens cover the first N dims)
+    if len(tokens) < len(dim_cols):
+        return all(row.get(col) == tok for tok, col in zip(tokens, dim_cols))
+    return False
 
 
 class StatecProvider(BaseProvider):
     name = "statec_lu"
-    display_name = "STATEC (Luxembourg)"
+    display_name = "STATEC Luxembourg"
 
-    def fetch(self) -> list[DataPoint]:
-        out: list[DataPoint] = []
-        # Cache dataflow CSV once per (dataflow,version) to avoid duplicate fetches —
-        # many slugs share DSD_ECOICOP_PRIX@DF_E5405 and DF_E2504/E3101.
-        cache: dict[tuple[str, str], list[dict]] = {}
-        for cfg in SERIES:
-            key = (cfg["dataflow"], cfg["version"])
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        ep = spec.extra_params or {}
+
+        # Auflösung der SDMX-Koordinaten: extra_params überschreibt series_id
+        agency = ep.get("agency")
+        dataflow = ep.get("dataflow")
+        version = ep.get("version")
+        filter_dict = ep.get("filter")
+        key_tokens: list[str] | None = None
+
+        if not (dataflow and version):
+            a, df, ver, flt, toks = _parse_series_id(spec.series_id or "")
+            agency = agency or a
+            dataflow = dataflow or df
+            version = version or ver
+            if filter_dict is None and flt:
+                filter_dict = flt
+            if toks:
+                key_tokens = toks
+
+        if not agency:
+            agency = "LU1"
+        if not (dataflow and version):
+            raise ProviderError(f"statec: dataflow/version missing (series_id='{spec.series_id}')")
+
+        params = ep.get("params") or None
+        rows = _fetch_csv(agency, dataflow, version, params=params)
+        if not rows:
+            return []
+
+        fieldnames = list(rows[0].keys())
+        dim_cols = _dim_cols(fieldnames)
+
+        # Filter-Pfad bestimmen
+        use_filter = bool(filter_dict)
+        use_key = bool(key_tokens) and not use_filter
+
+        freq = spec.freq_hint or (filter_dict or {}).get("FREQ") or "M"
+        conv = spec.conversion or 1.0
+
+        out: list[Observation] = []
+        for row in rows:
+            if use_filter and not _row_matches_filter(row, filter_dict):
+                continue
+            if use_key:
+                if not _row_matches_key_tokens(row, key_tokens, dim_cols):
+                    continue
+                # Also enforce FREQ when freq_hint set & FREQ column exists
+                if "FREQ" in dim_cols and spec.freq_hint and row.get("FREQ") != spec.freq_hint:
+                    continue
+            per = row.get("TIME_PERIOD", "")
+            val = row.get("OBS_VALUE", "")
+            if not per or val in ("", None):
+                continue
             try:
-                if key not in cache:
-                    url = f"{BASE}/{cfg['dataflow']},LU1," if False else None  # placeholder
-                    # Just fetch via _fetch_series; we re-run filter inline below.
-                    # Simpler: call full helper.
-                    pairs = _fetch_series(cfg)
-                else:
-                    # use cached rows
-                    pairs = []
-                    flt = cfg["filter"]
-                    for row in cache[key]:
-                        if all(row.get(k) == v for k, v in flt.items()):
-                            per = row.get("TIME_PERIOD", "")
-                            val = row.get("OBS_VALUE", "")
-                            if per and val:
-                                try:
-                                    dt = _parse_period(per, cfg["freq"])
-                                    if dt:
-                                        pairs.append((dt, float(val)))
-                                except ValueError:
-                                    pass
-                    pairs.sort()
-                for dt, v in pairs:
-                    out.append(DataPoint(
-                        indicator=cfg["slug"], country="LU",
-                        date=normalize_date(dt, cfg["freq"]),
-                        value=round(v * cfg["conversion"], 4),
-                        source="statec_lu",
-                        unit=cfg["unit"],
-                        series_id=f"STATEC/LU1,{cfg['dataflow']},{cfg['version']}",
-                        adjustment=cfg["adjustment"],
-                    ))
-                print(f"  OK {cfg['slug']}/LU (STATEC {cfg['dataflow']}): {len(pairs)} pts")
-            except Exception as e:
-                print(f"  FAIL {cfg['slug']}/LU (STATEC {cfg['dataflow']}): {e}")
+                v = float(val)
+            except (ValueError, TypeError):
+                continue
+            dt = _parse_period(per, freq)
+            if not dt:
+                continue
+            out.append(Observation(date=normalize_date(dt, freq),
+                                   value=round(v * conv, 6)))
+        out.sort(key=lambda o: o.date)
         return out
 
 
-def run():
-    p = StatecProvider()
-    print(f"Fetching from {p.display_name} (lustat.statec.lu)...")
-    try:
-        pts = p.fetch()
-        print(f"\nTotal: {len(pts)} data points")
-        rows = datapoints_to_rows(pts)
-        total = 0
-        for i in range(0, len(rows), 500):
-            count = upsert_data_points(rows[i:i + 500])
-            total += count
-        log_pipeline_run("statec_lu", "success", total)
-        print(f"\nDone. {total} rows upserted.")
-    except Exception as e:
-        log_pipeline_run("statec_lu", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    run()
+try:
+    register_provider(StatecProvider())
+except ProviderError as e:
+    print(f"[warn] StatecProvider not registered: {e}")

@@ -1,447 +1,121 @@
-"""INE-ES Provider — Spain primary source via INE Tempus3 JSON API.
-TE-Source-First: für ES-Reihen wo TE „Source: INE" zeigt.
+"""INE-ES Provider — Instituto Nacional de Estadistica (Spain), V2 stateless.
 
 API: https://servicios.ine.es/wstempus/js/EN/{endpoint}
-- DATOS_SERIE/<COD> — fetch a single series with optional ?nult=N
-- SERIES_TABLA/<TABLE_ID>?det=1 — list series in a table
+- DATOS_SERIE/<COD>?nult=N — fetch one series, last N observations.
 
-Strategy: hardcoded SERIES list mapping our slug -> INE COD. Each series identified
-during probe-phase by checking the COD against TE values.
+Dispatcher ruft fetch_series(spec) pro data_series-Row. Provider hat keine
+indicator/country/source-Knowledge. spec.series_id ist der INE COD (z.B.
+"IPC290751"). spec.freq_hint bestimmt die FK_Periodo-Interpretation.
+
+Optional extra_params:
+  - nult: int (default 400) — wie viele Observations holen
 """
-import os
+from __future__ import annotations
+
 from datetime import date
-from calendar import monthrange
 
 import requests
-from dotenv import load_dotenv
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
-
-load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+from pipeline.dispatcher import register_provider
 
 BASE_URL = "https://servicios.ine.es/wstempus/js/EN"
 
-# INE returns FK_Periodo as month-of-year (1-12) for monthly, quarter (1-4) for
-# quarterly. We need to detect periodicity from the series metadata. For now
-# we hardcode it per series.
-SERIES = [
-    # Inflation CPI — IPC table 76125. IPC290751 = National Overall Index (level).
-    # YoY change in TE matches our Eurostat HICP within 0.3%, and INE-direct gives
-    # exactly the value TE shows.
-    {
-        "indicator": "inflation-cpi",
-        "cod": "IPC290751",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC base 2026=100, monthly index, all-items, national",
-    },
-    # Core CPI — IPC292511 = National "Subyacente: General sin alimentos no elaborados
-    # ni productos energéticos" — index level from table 76130 (special groups).
-    # YoY of this series for Apr-2026 = 2.8% (matches TE te_value=2.8). Previous COD
-    # IPC290851 was incorrect (it was "Bienes y servicios mantenimiento del hogar").
-    {
-        "indicator": "core-cpi",
-        "cod": "IPC292511",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC Subyacente (ex unprocessed food + energy), Index level base 2025=100",
-    },
-    # Food inflation — IPC290755 (Food and non-alcoholic beverages, base 2025 ECOICOP v2 group 01)
-    {
-        "indicator": "food-inflation",
-        "cod": "IPC290755",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 01 Food, base 2025=100 (frontend computes YoY for display)",
-    },
-    # Unemployment rate quarterly EPA — both genders, national total, all ages
-    {
-        "indicator": "unemployment",
-        "cod": "EPA452434",
-        "freq": "Q",
-        "unit": "%",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE EPA Tasa de paro total (both genders, national, 16+)",
-    },
-    # PPI Industrial producer prices — Industry total, Index level
-    {
-        "indicator": "ppi",
-        "cod": "IPR34522",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPRI Industria total (Index level, base 2025=100)",
-    },
-    # Industrial Production Index — total industry, index level
-    {
-        "indicator": "industrial-production",
-        "cod": "IPI13491",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPI National Total Industry total (index level)",
-    },
-    # Retail sales index — constant prices, national total, headline
-    {
-        "indicator": "retail-sales",
-        "cod": "ICM4147",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE ICM Volume index commercial retail trade (constant prices, no service stations)",
-    },
-    # GDP YoY growth rate — CNTR2010 table 67822, SA + chain-linked
-    # CNTR6654 = National Total, SA, GDP at market prices, Annual variation, chain-linked.
-    # TE „Spain GDP Growth Rate" matches this exactly (TE: 2.7%, INE Q1-2026: 2.7192%).
-    {
-        "indicator": "gdp-growth-rate",
-        "cod": "CNTR6654",
-        "freq": "Q",
-        "unit": "% YoY",
-        "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "INE CNTR2010 GDP at market prices YoY growth, SA, chain-linked",
-    },
-    # Employed persons — EPA table 65109. EPA387796 = National total, both genders,
-    # 16+, employed persons absolute (in thousands). TE shows ~22.29M (Q1-2026), match.
-    {
-        "indicator": "employed-persons",
-        "cod": "EPA387796",
-        "freq": "Q",
-        "unit": "Thousand",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE EPA Employed persons absolute (thousands), both genders, 16+",
-    },
-    # Unemployed persons — EPA table 65218. EPA387800 = absolute thousands, total.
-    # TE shows ~2.71M (Q1-2026), match.
-    {
-        "indicator": "unemployed-persons",
-        "cod": "EPA387800",
-        "freq": "Q",
-        "unit": "Thousand",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE EPA Unemployed persons absolute (thousands), both genders, 16+",
-    },
-    # Youth unemployment rate — EPA table 14506. EPA452436 = under 25, both genders, %.
-    # TE shows 24.5% (Q1-2026), INE 24.54%. Match.
-    {
-        "indicator": "youth-unemployment-rate",
-        "cod": "EPA452436",
-        "freq": "Q",
-        "unit": "%",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE EPA Unemployment rate, both genders, under 25, national",
-    },
-    # Wages — ETCL table 6030. ETCL67 = Sections B-S total wage cost per worker EUR/month.
-    # TE Spain Wages aligns with this series (~2300-2500 EUR/month).
-    {
-        "indicator": "wages",
-        "cod": "ETCL67",
-        "freq": "Q",
-        "unit": "EUR/Month",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE ETCL Total wage cost per worker, sections B-S, EUR/month",
-    },
-    # Business Confidence — ICE table 8027. ICE1 = National total Index (base 2013).
-    # TE Spain Business Confidence ~133-138, matches.
-    {
-        "indicator": "business-confidence",
-        "cod": "ICE1",
-        "freq": "Q",
-        "unit": "Points",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE ICE Business Confidence Index, national, base 2013=100",
-    },
-    # House Price Index — IPV table 76201. IPV769 = National total, general HPI.
-    # Quarterly. TE Spain Housing Index level matches (~186 Q4-2025).
-    {
-        "indicator": "house-price-index",
-        "cod": "IPV769",
-        "freq": "Q",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPV House Price Index, national general, base 2007=100",
-    },
-    # Construction production index — IPCO table 75486. IPCO3 = monthly index, base 2021=100.
-    # TE Spain Construction Output uses YoY of this; we store the level (frontend computes YoY).
-    {
-        "indicator": "construction-output",
-        "cod": "IPCO3",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPCO Construction production index, base 2021=100, NSA",
-    },
-    # === Stage-2 (2026-05-14): CPI sub-components + national-accounts demand-side ===
-    # Services inflation — IPC292495 = National Servicios Index level (special groups).
-    {
-        "indicator": "services-inflation",
-        "cod": "IPC292495",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC Servicios Index level (special groups), base 2025=100",
-    },
-    # Energy inflation — IPC292459 = National Productos energéticos Index level.
-    {
-        "indicator": "energy-inflation",
-        "cod": "IPC292459",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC Productos energéticos Index level (special groups), base 2025=100",
-    },
-    # Consumer spending — CNTR6845 = Gasto en consumo final de los hogares, SA,
-    # current prices, quarterly (table 67823 demand-side). Q1-2026 = 239302 EUR Mn.
-    # TE 2025 value 235827 matches Q4-2025 SA level (~235221).
-    {
-        "indicator": "consumer-spending",
-        "cod": "CNTR6845",
-        "freq": "Q",
-        "unit": "EUR Million",
-        "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "INE CNTR Household final consumption (SA, current prices), EUR Mn",
-    },
-    # Government spending — CNTR6860 = Gasto en consumo final de las AAPP, SA.
-    # Q4-2025 SA = 84496 vs TE 84039. Match.
-    {
-        "indicator": "government-spending",
-        "cod": "CNTR6860",
-        "freq": "Q",
-        "unit": "EUR Million",
-        "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "INE CNTR General-government final consumption (SA, current prices), EUR Mn",
-    },
-    # Gross fixed capital formation — CNTR6875 FBCF SA, current prices, quarterly.
-    {
-        "indicator": "gross-fixed-capital-formation",
-        "cod": "CNTR6875",
-        "freq": "Q",
-        "unit": "EUR Million",
-        "adjustment": "SA",
-        "conversion": 1.0,
-        "note": "INE CNTR Gross fixed capital formation (FBCF, SA, current prices), EUR Mn",
-    },
-    # Manufacturing production — IPI13870 = Industria manufacturera Index level (NSA).
-    {
-        "indicator": "manufacturing-production",
-        "cod": "IPI13870",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPI Manufacturing index level (CNAE Section C), base 2021=100, NSA",
-    },
-    # === Stage-3 (2026-05-16): CPI sub-components by ECOICOP v2 group, IPC base 2025 ===
-    # Table 76125. TE attributes these to INE directly; switching from Eurostat ei_cphi_m.
-    {
-        "indicator": "cpi-clothing",
-        "cod": "IPC290759",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 03 Clothing & footwear, base 2025=100",
-    },
-    {
-        "indicator": "cpi-education",
-        "cod": "IPC290791",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 11 Education services, base 2025=100",
-    },
-    {
-        "indicator": "cpi-food",
-        "cod": "IPC290755",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 01 Food & non-alcoholic beverages, base 2025=100",
-    },
-    {
-        "indicator": "cpi-housing-utilities",
-        "cod": "IPC290763",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 04 Housing, water, electricity, gas & other fuels, base 2025=100",
-    },
-    {
-        "indicator": "cpi-recreation-and-culture",
-        "cod": "IPC290787",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 10 Recreational activities, sport & culture, base 2025=100",
-    },
-    {
-        "indicator": "cpi-transportation",
-        "cod": "IPC290775",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE IPC ECOICOP v2 group 08 Transport, base 2025=100",
-    },
-    # === Stage-3b (2026-05-16): EPA labor-market totals (16+) + Households disposable income ===
-    # EPA388079 = activity rate both genders 16+ (table 65081). Matches TE 58.86% Q1-2026 exactly.
-    {
-        "indicator": "labor-force-participation-rate",
-        "cod": "EPA388079",
-        "freq": "Q",
-        "unit": "%",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE EPA Activity rate (16+, both genders, national total), table 65081",
-    },
-    # EPA441060 = employment rate both genders total (table 14508). Matches TE 52.48% Q1-2026 exactly.
-    {
-        "indicator": "employment-rate",
-        "cod": "EPA441060",
-        "freq": "Q",
-        "unit": "%",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE EPA Employment rate (both genders, total, national), table 14508",
-    },
-    # CTNFSI10778 = Households + NPISH Gross adjusted disposable income (table 67204).
-    # Q4-2025 = 345039 EUR Mn → matches TE exactly.
-    {
-        "indicator": "disposable-personal-income",
-        "cod": "CTNFSI10778",
-        "freq": "Q",
-        "unit": "Million EUR",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE CTNFSI Households+NPISH Gross adjusted disposable income (NSA current prices), table 67204",
-    },
-    # ICLA2379 = Labour Cost Index (ICLA), Total cost per hour ex-extra pays, sections B-S, NSA.
-    # Q4-2025 = 118.85 → matches TE exactly.
-    {
-        "indicator": "labour-costs",
-        "cod": "ICLA2379",
-        "freq": "Q",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "INE ICLA Labour Cost Index per hour ex-extra pays, sections B-S, NSA (table 79663)",
-    },
-]
-
 
 def _parse_period_to_date(year: int, fk_periodo: int, freq: str) -> date | None:
-    """INE periodo codes:
-    - monthly: 1-12 (matches calendar months)
-    - quarterly EPA: 19, 20, 21, 22 → Q1, Q2, Q3, Q4 (INE-specific)
+    """INE FK_Periodo codes:
+    - monthly: 1-12 (calendar months)
+    - quarterly EPA: 19, 20, 21, 22 -> Q1, Q2, Q3, Q4 (INE-specific)
     - quarterly other: 1-4
     - annual: 1
     """
     try:
         if freq == "M":
-            month = fk_periodo
-            return date(year, month, 1)
+            return date(int(year), int(fk_periodo), 1)
         if freq == "Q":
             quarter_map = {1: 1, 2: 4, 3: 7, 4: 10,
                            19: 1, 20: 4, 21: 7, 22: 10}
-            month = quarter_map[fk_periodo]
-            return date(year, month, 1)
+            month = quarter_map[int(fk_periodo)]
+            return date(int(year), month, 1)
         if freq == "A":
-            return date(year, 1, 1)
-    except (ValueError, KeyError):
+            return date(int(year), 1, 1)
+        if freq == "S":
+            sem_map = {1: 1, 2: 7}
+            return date(int(year), sem_map[int(fk_periodo)], 1)
+    except (ValueError, KeyError, TypeError):
         pass
     return None
 
 
-def _fetch_serie(cod: str, n_last: int = 200) -> list[tuple[date, float, int, int]]:
-    """Returns list of (date_from_year_periodo, value, year, fk_periodo)."""
-    url = f"{BASE_URL}/DATOS_SERIE/{cod}?nult={n_last}"
-    resp = requests.get(url, timeout=30)
-    resp.raise_for_status()
-    return resp.json()
+def _fetch_serie(cod: str, n_last: int) -> dict:
+    url = f"{BASE_URL}/DATOS_SERIE/{cod}"
+    params = {"nult": n_last}
+    try:
+        resp = requests.get(url, params=params, timeout=60)
+    except (requests.ConnectionError, requests.Timeout) as e:
+        raise TransientProviderError(f"network: {e}") from e
+    if resp.status_code >= 500:
+        raise TransientProviderError(f"HTTP {resp.status_code}")
+    if resp.status_code == 404:
+        raise ProviderError(f"INE series {cod} not found (404)")
+    if resp.status_code != 200:
+        raise ProviderError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+    try:
+        return resp.json()
+    except ValueError as e:
+        raise ProviderError(f"INE JSON decode error: {e}") from e
 
 
 class IneEsProvider(BaseProvider):
     name = "ine_es"
-    display_name = "INE Spain"
+    display_name = "Instituto Nacional de Estadistica (Spain)"
 
-    def fetch(self) -> list[DataPoint]:
-        out: list[DataPoint] = []
-        for cfg in SERIES:
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        cod = (spec.series_id or "").strip()
+        if not cod:
+            raise ProviderError("ine_es: empty series_id")
+        # Accept "INE:<COD>" prefix from legacy V1 series_ids.
+        if cod.upper().startswith("INE:"):
+            cod = cod.split(":", 1)[1]
+
+        ep = spec.extra_params or {}
+        n_last = int(ep.get("nult", 400))
+
+        data = _fetch_serie(cod, n_last=n_last)
+
+        # Spec contract: list[Observation] or empty list. Dispatcher tolerates [].
+        if not isinstance(data, dict):
+            raise ProviderError(f"INE unexpected payload type: {type(data).__name__}")
+
+        obs_list = data.get("Data") or []
+        freq = spec.freq_hint or "M"
+        conv = spec.conversion or 1.0
+
+        out: list[Observation] = []
+        for obs in obs_list:
+            val = obs.get("Valor")
+            if val is None:
+                continue
+            year = obs.get("Anyo")
+            periodo = obs.get("FK_Periodo")
+            if year is None or periodo is None:
+                continue
+            dt = _parse_period_to_date(year, periodo, freq)
+            if not dt:
+                continue
             try:
-                data = _fetch_serie(cfg["cod"], n_last=400)
-                obs_list = data.get("Data", [])
-                for obs in obs_list:
-                    val = obs.get("Valor")
-                    if val is None:
-                        continue
-                    year = obs.get("Anyo")
-                    periodo = obs.get("FK_Periodo")
-                    dt = _parse_period_to_date(year, periodo, cfg["freq"])
-                    if not dt:
-                        continue
-                    norm = normalize_date(dt, cfg["freq"])
-                    out.append(DataPoint(
-                        indicator=cfg["indicator"],
-                        country="ES",
-                        date=norm,
-                        value=float(val) * cfg["conversion"],
-                        source="ine_es",
-                        unit=cfg["unit"],
-                        series_id=f"INE:{cfg['cod']}",
-                        adjustment=cfg["adjustment"],
-                    ))
-                print(f"  OK {cfg['indicator']}/ES (COD {cfg['cod']}): {len(obs_list)} pts")
-            except Exception as e:
-                print(f"  FAIL {cfg['indicator']}/ES (COD {cfg['cod']}): {e}")
+                v = round(float(val) * conv, 6)
+            except (TypeError, ValueError):
+                continue
+            out.append(Observation(date=normalize_date(dt, freq), value=v))
         return out
 
 
-def run():
-    p = IneEsProvider()
-    print(f"Fetching from {p.display_name}...")
-    try:
-        pts = p.fetch()
-        print(f"\nTotal: {len(pts)} data points")
-        rows = datapoints_to_rows(pts)
-        total = 0
-        for i in range(0, len(rows), 500):
-            count = upsert_data_points(rows[i:i+500])
-            total += count
-        log_pipeline_run("ine_es", "success", total)
-        print(f"\nDone. {total} rows upserted.")
-    except Exception as e:
-        log_pipeline_run("ine_es", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    run()
+try:
+    register_provider(IneEsProvider())
+except ProviderError as e:
+    print(f"[warn] IneEsProvider not registered: {e}")

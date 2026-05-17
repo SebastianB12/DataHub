@@ -11,13 +11,13 @@ Migrations-Status (V2-stateless via fetch_series):
   [x] bundesbank
   [x] destatis
   [x] insee
-  [ ] istat          (Welle 3)
-  [ ] ine_es         (Welle 3)
-  [ ] gus_pl         (Welle 3)
-  [ ] akshare_cn     (pending)
-  [ ] gacc           (pending)
-  [ ] bdf            (pending)
-  [ ] statec         (Welle 3)
+  [x] istat
+  [x] ine_es
+  [x] gus_pl
+  [ ] akshare_cn     (Welle 4)
+  [ ] gacc           (Welle 4)
+  [ ] bdf            (Welle 4)
+  [x] statec_lu
   [ ] elstat         (pending)
   [ ] nsi_bg         (pending)
   [ ] czso           (pending)
@@ -39,3 +39,7 @@ from pipeline.providers import ons          # noqa: F401
 from pipeline.providers import bundesbank   # noqa: F401
 from pipeline.providers import destatis     # noqa: F401
 from pipeline.providers import insee        # noqa: F401
+from pipeline.providers import istat        # noqa: F401
+from pipeline.providers import ine_es       # noqa: F401
+from pipeline.providers import gus_pl       # noqa: F401
+from pipeline.providers import statec       # noqa: F401
