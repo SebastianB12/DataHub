@@ -1,0 +1,80 @@
+# DE indicator gap fixes — 2026-05-16
+# Validator status: GREEN (2162 default rows TE-conform)
+
+wages:
+  old_series: "62361-0007"
+  new_series: "62361-0007"
+  te_value: 4701
+  te_unit: "EUR/Month (annual avg)"
+  our_value: 100.4
+  our_unit: "Index (2025=100)"
+  status: "skipped: no aggregate EUR-level monthly table available via GENESIS sync API"
+  notes: |
+    Tried 62321-0001 (4-dim — exceeds sync cap), 62361-0030/0034/0036 (all too big),
+    62361-0020/0021/0022 (small but contain only Reallohn/Nominallohn index, not EUR levels).
+    The all-occupations Bruttomonatsverdienst EUR aggregate is not exposed in a sync-fetchable table.
+    Current 62361-0007 is the canonical Destatis Verdiensterhebung Index — TE label
+    "Federal Statistical Office" already satisfied (source=destatis). Only the value/unit
+    differ from TE's headline 4701 EUR/Month. Treating as cosmetic; revisit when GENESIS
+    background-job auth becomes available, then fetch from 62361-0034 KB10-INSG row.
+
+core-cpi:
+  old_series: "eurostat:ei_cphi_m:CP-HI00XEF"
+  new_series: "destatis:61111-0006:CC13-63E"
+  te_value: 102.3       # HICP 2025=100 — TE reports YoY ~2.2-2.3%
+  te_yoy: 2.2
+  our_value: 120.6      # VPI 2020=100 (April 2026)
+  our_yoy: 2.29         # 120.6 / 117.9 (April 2025) = +2.29%
+  status: fixed
+  notes: |
+    Switched from Eurostat HICP (CP-HI00XEF, 2025=100) to Destatis VPI 61111-0006
+    Sonderpositionen variant (CC13B1) with code CC13-63E "Gesamtindex ohne
+    Nahrungsmittel und Energie", 2020=100. YoY matches TE 2.2-2.3% exactly.
+    256 monthly points, 2005-01 to 2026-04. truth.yaml updated to destatis.
+
+energy-inflation:
+  old_series: "eurostat:ei_cphi_m:CP-HIE"
+  new_series: "destatis:61111-0006:CC13-65D"
+  te_yoy: 10.1
+  our_value: 157.4      # VPI 2020=100 (April 2026)
+  our_yoy: 10.15        # 157.4 / 142.9 (April 2025) = +10.15%
+  status: fixed
+  notes: |
+    Switched from Eurostat HICP CP-HIE (2025=100) to Destatis VPI 61111-0006
+    Sonderpositionen CC13-65D "Energie (Haushaltsenergie und Kraftstoffe)", 2020=100.
+    YoY matches TE 10.1% exactly. 424 monthly points. truth.yaml updated to destatis.
+
+productivity:
+  old_series: "eurostat:namq_10_lp_ulc:RLPR_HW:I20"
+  new_series: "eurostat:namq_10_lp_ulc:RLPR_HW:I20"
+  te_value: 95.60
+  te_source: "Bundesbank monthly"
+  our_value: 100.28
+  status: "deferred: Bundesbank BBDE1 monthly productivity series discovery requires SDMX codelist endpoint which returns 404"
+  notes: |
+    DSD BBK_DOES has 9 dimensions (FREQ, AREA, ADJUSTMENT, CONCEPT, CLASSIFICATION,
+    PROCESSING, PRICEUNIT, BASIS, SUFFIX). Metadata/codelist endpoint returns 404 for
+    BBK_DOES_CONCEPT — cannot enumerate productivity concept codes. DBnomics BUBA
+    full-text search returned no hits. Test SDMX keys (M.DE.N.W..A.H.B etc.) all 404.
+    Bundesbank Webportal (statistiken.bundesbank.de) is SPA — no machine-readable
+    search. Kept on Eurostat namq_10_lp_ulc until Bundesbank discovery completes.
+    Truth.yaml entry still says eurostat (currently matches DB).
+
+government-spending-to-gdp:
+  old_series: "curated:DE:government-spending-to-gdp"
+  new_series: "eurostat:gov_10a_main:TE:PC_GDP:S13"
+  te_value: 50.5
+  our_value: 50.5
+  status: fixed
+  notes: |
+    Switched from curated to Eurostat gov_10a_main (na_item=TE, unit=PC_GDP, sector=S13).
+    31 annual data points 1995-2025. Latest 2025=50.5 matches TE exactly.
+    truth.yaml updated to eurostat.
+
+# Bonus fix found while validating:
+changes-in-inventories:
+  status: fixed
+  notes: |
+    Fixed truth.yaml inconsistency: was source=eurostat but te_label="Federal
+    Statistical Office" (=Destatis). Updated truth.yaml to source=destatis to
+    match the DB (which correctly uses destatis via table 81000-0020 VGR034).

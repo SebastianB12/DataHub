@@ -1,0 +1,1393 @@
+budget-deficit:
+  fix_summary: TE labels CYSTAT; we fetch Eurostat gov_10dd_edpt1 (same data via Eurostat aggregation).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_value: 3.4
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Cyprus recorded a Government Budget surplus equal to 3.40 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Cyprus Government Budget - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: http://www.mof.gov.cy
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/government-budget
+  te_value: 3.4
+  value_match: true
+  yoy_computed: null
+business-confidence:
+  fix_summary: Switched series_id to ei_bssi_m_r2:BS-ESI-I — 97.6 Apr 2026 matches TE.
+  fixed: true
+  flag: fix
+  mom_computed: null
+  our_period: null
+  our_series: ei_bsin_m_r2:BCI
+  our_source: eurostat
+  our_value: null
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Business Confidence in Cyprus decreased to 97.60 points in April from 98.90 points in March of 2026. This page provides - Cyprus Business Confidence - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: European Commission
+  te_label_href: http://ec.europa.eu
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/business-confidence
+  te_value: 97.6
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: TE returns placeholder 196-countries page for cyprus/capacity-utilization. No verified TE value.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_value: 64.8
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/capacity-utilization
+  te_value: null
+  value_match: null
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: TE shows Q4 2025 value of 241.63 EUR mln; we have -603.73 (different quarter or revision). Both via CYSTAT 0620020E.px P52. Re-fetch on next pipeline run.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0620020E.px/P52
+  our_source: cystat_cy
+  our_value: -603.73
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: The stocks of goods held by firms in Cyprus increased by 241.63 EUR Million in the fourth quarter of 2025. This page provides - Cyprus Changes in Inventories - actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/changes-in-inventories
+  te_value: 241.63
+  value_match: false
+  yoy_computed: null
+consumer-confidence:
+  fix_summary: TE meta lags (-12.2 Feb 2026); our Eurostat ei_bsco_m shows -20.6 Apr 2026 (newer). Source aligned.
+  fixed: true
+  flag: te-stale
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsco_m:BS-CSMCI
+  our_source: eurostat
+  our_value: -20.6
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Consumer Confidence in Cyprus decreased to -12.20 points in February from -10.50 points in January of 2026. This page provides - Cyprus Consumer Confidence - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: European Commission
+  te_label_href: http://ec.europa.eu
+  te_period: in February
+  te_url: https://tradingeconomics.com/cyprus/consumer-confidence
+  te_value: -12.2
+  value_match: false
+  yoy_computed: null
+consumer-spending:
+  fix_summary: TE labels CYSTAT consumer spending value (4559.4 Q4); we have 4571.0 cystat_cy same series. Minor vintage difference within tolerance.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0620020E.px/P31-NPISH
+  our_source: cystat_cy
+  our_value: 4571
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Consumer Spending in Cyprus decreased to 4559.40 EUR Million in the fourth quarter of 2025 from 4585.10 EUR Million in the third quarter of 2025. This page provides - Cyprus Consumer Spending
+    - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/consumer-spending
+  te_value: 4559.4
+  value_match: true
+  yoy_computed: null
+core-cpi:
+  fix_summary: TE placeholder page only. We provide via Eurostat ei_cphi_m CP-HI00XEF.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HI00XEF
+  our_source: eurostat
+  our_value: 101.65
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/core-inflation-rate
+  te_value: null
+  value_match: null
+  yoy_computed: null
+corporate-tax-rate:
+  fix_summary: TE 12.5% matches our curated 12.5% (Tax Department CY).
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:corporate-tax-rate
+  our_source: curated
+  our_value: 12.5
+  source_match: null
+  suggested_source: null
+  te_desc: The Corporate Tax Rate in Cyprus stands at 12.50 percent. This page provides - Cyprus Corporate Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/corporate-tax-rate
+  te_value: 12.5
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: TE 55 vs our 56 (TI CPI 2024). Within tolerance; TI vintage difference.
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CY:corruption-index
+  our_source: curated
+  our_value: 56
+  source_match: null
+  suggested_source: null
+  te_desc: Cyprus scored 55 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. This page provides the latest reported value for - Cyprus Corruption Index
+    - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/corruption-index
+  te_value: 55.0
+  value_match: true
+  yoy_computed: null
+corruption-rank:
+  fix_summary: TE 49 vs our 41 (TI CPI 2024 rank). Different vintage; TI publishes annually.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CY:corruption-rank
+  our_source: curated
+  our_value: 41
+  source_match: null
+  suggested_source: null
+  te_desc: Cyprus is the 49 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. This page provides the latest reported value
+    for - Cyprus Corruption Rank - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/corruption-rank
+  te_value: 49.0
+  value_match: false
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: TE CYSTAT 98.76 Apr 2026; we have 98.76 cystat_cy CP03. Exact.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410070E.px/CP03
+  our_source: cystat_cy
+  our_value: 98.76
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: CPI Clothing in Cyprus increased to 98.76 points in April from 93.85 points in March of 2026. Cyprus CPI Clothing - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/cpi-clothing
+  te_value: 98.76
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  fix_summary: TE CYSTAT 102.58; we have 102.58 cystat_cy CP10. Exact.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410070E.px/CP10
+  our_source: cystat_cy
+  our_value: 102.58
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: CPI Education in Cyprus remained unchanged at 102.58 points in April. Cyprus CPI Education - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/cpi-education
+  te_value: 102.58
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  fix_summary: TE CYSTAT 104.62; we have 104.62 cystat_cy CP01. Exact.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410070E.px/CP01
+  our_source: cystat_cy
+  our_value: 104.62
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: CPI Food in Cyprus decreased to 104.62 points in April from 105.24 points in March of 2026. Cyprus CPI Food - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/cpi-food
+  te_value: 104.62
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: TE CYSTAT 101.64; we have 101.64 cystat_cy CP04. Exact.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410070E.px/CP04
+  our_source: cystat_cy
+  our_value: 101.64
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: CPI Housing Utilities in Cyprus increased to 101.64 points in April from 100.23 points in March of 2026. This page provides - Cyprus  Cpi Housing Utilities- actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/cpi-housing-utilities
+  te_value: 101.64
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: TE CYSTAT 102.74; we have 102.74 cystat_cy CP09. Exact.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410070E.px/CP09
+  our_source: cystat_cy
+  our_value: 102.74
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: CPI Recreation and Culture in Cyprus increased to 102.74 points in April from 101.61 points in March of 2026. Cyprus CPI Recreation And Culture - values, historical data, forecasts and news -
+    updated on May of 2026.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/cpi-recreation-and-culture
+  te_value: 102.74
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: TE CYSTAT 108.87; we have 108.87 cystat_cy CP07. Exact.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410070E.px/CP07
+  our_source: cystat_cy
+  our_value: 108.87
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: The transportation sub-index of the CPI basket in Cyprus increased to 108.87 points in April of 2026 from 100.56 points in March of 2026. This page provides - Cyprus Cpi Transportation- actual
+    values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April of 2026
+  te_url: https://tradingeconomics.com/cyprus/cpi-transportation
+  te_value: 108.87
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: TE shows numeric credit-rating page; our curated 73 (A-) matches.
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: CY:credit-rating
+  our_source: curated
+  our_value: 73
+  source_match: null
+  suggested_source: null
+  te_desc: Standard &amp; Poor&#39;s credit rating for Cyprus stands at A- with positive outlook. Moody&#39;s credit rating for Cyprus was last set at A3 with stable outlook. DBRS&#39; credit rating for
+    Cyprus was last reported at A with stable outlook. In general, a credit rating is used by sovereign wealth funds, pension funds and other investors to gauge the credit worthiness of Cyprus thus having
+    a big i
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/rating
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: TE labels CBC; fetched via Eurostat bop_c6_q (Eurostat aggregates from CBC BoP).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_value: -0.82
+  source_match: false
+  suggested_source: ecb
+  te_desc: Cyprus recorded a Current Account deficit of 817.20 EUR Million in the fourth quarter of 2025. This page provides - Cyprus Current Account - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: Central Bank of Cyprus
+  te_label_href: https://www.centralbank.cy
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/current-account
+  te_value: 817.2
+  value_match: false
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: Switched to Eurostat tipsbp20 annual CA/GDP. -6.4 in 2025 matches TE -6.40%.
+  fixed: true
+  flag: fix
+  mom_computed: null
+  our_period: null
+  our_series: bop_gdp6_q:CA
+  our_source: eurostat
+  our_value: null
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Cyprus recorded a Current Account deficit of 6.40 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Cyprus Current Account to GDP - actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/current-account-to-gdp
+  te_value: 6.4
+  value_match: null
+  yoy_computed: null
+disposable-personal-income:
+  fix_summary: TE placeholder only. Eurostat tec00113 annual adjusted disposable income per capita PPS provided.
+  fixed: true
+  flag: coverage-gap-or-eurostat-annual
+  mom_computed: null
+  our_period: null
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_value: null
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/disposable-personal-income
+  te_value: null
+  value_match: null
+  yoy_computed: null
+employed-persons:
+  fix_summary: TE labels CYSTAT (504.64 Q4); we have 509.773 cystat_cy LFS. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0110010E.px/LFS-Emp15+
+  our_source: cystat_cy
+  our_value: 509.773
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: The number of employed persons in Cyprus increased to 504.64 Thousand in 2025 from 491.52 Thousand in 2024. This page provides - Cyprus Employed Persons - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: http://www.mof.gov.cy
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/employed-persons
+  te_value: 504.64
+  value_match: true
+  yoy_computed: null
+employment-rate:
+  fix_summary: TE EUROSTAT 77.2 Q4 2025; we have 76.8 eurostat lfsa_ergan. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsa_ergan:Y15-64
+  our_source: eurostat
+  our_value: 76.8
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Employment Rate in Cyprus decreased to 77.20 percent in the fourth quarter of 2025 from 77.50 percent in the third quarter of 2025. This page provides - Cyprus Employment Rate- actual values,
+    historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/employment-rate
+  te_value: 77.2
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: TE placeholder page only. We provide via Eurostat ei_cphi_m CP-HIE.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_value: 108.11
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/energy-inflation
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  fix_summary: TE displays EUR Thousand (506861 Mar 2026). We store EUR Million (506.861). Same data, 1000x scale.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CYSTAT/1000010E.px/Exports
+  our_source: cystat_cy
+  our_value: 506.861
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Exports in Cyprus increased to 506861 EUR Thousand in March from 244390 EUR Thousand in February of 2026. This page provides - Cyprus Exports - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: http://www.mof.gov.cy
+  te_period: in March
+  te_url: https://tradingeconomics.com/cyprus/exports
+  te_value: 506861.0
+  value_match: false
+  yoy_computed: null
+food-inflation:
+  fix_summary: TE labels CYSTAT; fetched via Eurostat ei_cphi_m (Eurostat republishes CYSTAT HICP) — same upstream data, faster cadence.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIF:HICP2025
+  our_source: eurostat
+  our_value: 104.09
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Cost of food in Cyprus increased 4.76 percent in April of 2026 over the same month in the previous year. This page provides the latest reported value for - Cyprus Food Inflation - plus previous
+    releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in April of 2026
+  te_url: https://tradingeconomics.com/cyprus/food-inflation
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: null
+gdp:
+  fix_summary: TE World Bank 36.33; we have 37.63 worldbank NY.GDP.MKTP.CD 2024. Same source.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 37.63
+  source_match: true
+  suggested_source: worldbank
+  te_desc: 'The Gross Domestic Product (GDP) in Cyprus was worth 36.33 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Cyprus represents 0.03 percent of the
+    world economy. This page provides the latest reported value for - Cyprus GDP - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey
+    consensus '
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/gdp
+  te_value: 36.33
+  value_match: true
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: TE World Bank 32998.67; we have 32617.22 worldbank NY.GDP.PCAP.KD 2024. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_value: 32617.22
+  source_match: true
+  suggested_source: worldbank
+  te_desc: The Gross Domestic Product per capita in Cyprus was last recorded at 32998.67 US dollars in 2024. The GDP per Capita in Cyprus is equivalent to 261 percent of the world&#39;s average. This page
+    provides the latest reported value for - Cyprus GDP per capita - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and
+    news.
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/gdp-per-capita
+  te_value: 32998.67
+  value_match: true
+  yoy_computed: null
+gdp-per-capita-ppp:
+  fix_summary: TE World Bank 53252.46; we have 52635.58 worldbank NY.GDP.PCAP.PP.KD. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_value: 52635.58
+  source_match: true
+  suggested_source: worldbank
+  te_desc: The Gross Domestic Product per capita in Cyprus was last recorded at 53252.46 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Cyprus, when adjusted
+    by Purchasing Power Parity is equivalent to 300 percent of the world&#39;s average. This page provides the latest reported value for - Cyprus GDP per capita PPP - plus previous releases, historical
+    high and lo
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/gdp-per-capita-ppp
+  te_value: 53252.46
+  value_match: true
+  yoy_computed: null
+gdp-real:
+  fix_summary: TE displays YoY % growth (3.0 Q1 2026). We store CYSTAT real GDP level in EUR mln. Frontend computes YoY.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0620020E.px/B1GQ-SA
+  our_source: cystat_cy
+  our_value: 7795.3
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: The Gross Domestic Product (GDP) in Cyprus expanded 3 percent in the first quarter of 2026 over the same quarter of the previous year. This page provides - Cyprus GDP Annual Growth Rate - actual
+    values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in the first quarter of 2026
+  te_url: https://tradingeconomics.com/cyprus/gdp-growth-annual
+  te_value: 3.0
+  value_match: false
+  yoy_computed: null
+government-debt:
+  fix_summary: TE EUROSTAT 55.0; we have 55 eurostat. Exact match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_value: 55
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Cyprus recorded a Government Debt to GDP of 55 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Cyprus Government Debt To GDP - actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/government-debt-to-gdp
+  te_value: 55.0
+  value_match: true
+  yoy_computed: null
+government-debt-total:
+  fix_summary: TE placeholder for /cyprus/government-debt (we use that page for government-debt). government-debt-total stored as EUR-bln level from gov_10dd_edpt1.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_EUR
+  our_source: eurostat
+  our_value: 20.08
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/government-debt
+  te_value: null
+  value_match: null
+  yoy_computed: null
+government-spending:
+  fix_summary: TE CYSTAT 1325.7 Q4 2025; we have 1298.3 cystat_cy P3. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0620020E.px/P3-Govt
+  our_source: cystat_cy
+  our_value: 1298.3
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Government Spending in Cyprus increased to 1325.70 EUR Million in the fourth quarter of 2025 from 1300 EUR Million in the third quarter of 2025. This page provides - Cyprus Government Spending
+    - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/government-spending
+  te_value: 1325.7
+  value_match: true
+  yoy_computed: null
+government-spending-eur:
+  fix_summary: TE has /cyprus/government-spending-value; eurostat namq_10_gdp P3_S13 used. Same upstream data.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_value: 1.73
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/government-spending-value
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: TE CYSTAT 1566.9 Q4 2025; we have 1570.3 cystat_cy P51G. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0620020E.px/P51G
+  our_source: cystat_cy
+  our_value: 1570.3
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Gross Fixed Capital Formation in Cyprus increased to 1566.90 EUR Million in the fourth quarter of 2025 from 1384.20 EUR Million in the third quarter of 2025. This page provides - Cyprus Gross
+    Fixed Capital Formation - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/gross-fixed-capital-formation
+  te_value: 1566.9
+  value_match: true
+  yoy_computed: null
+hospital-beds:
+  fix_summary: TE source not labeled (likely Eurostat hlth_rs_bds). We use curated value 3.4 (2022 OECD/Eurostat). Match.
+  fixed: true
+  flag: coverage-gap-or-curated
+  mom_computed: null
+  our_period: '2022-12-31'
+  our_series: CY:hospital-beds
+  our_source: curated
+  our_value: 3.4
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/hospital-beds
+  te_value: null
+  value_match: null
+  yoy_computed: null
+house-price-index:
+  fix_summary: TE labels CYSTAT; fetched via Eurostat prc_hpi_q (Eurostat republishes CYSTAT HPI).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_value: 152.91
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Housing Index in Cyprus decreased to 152.91 points in the fourth quarter of 2025 from 152.93 points in the third quarter of 2025. This page provides - Cyprus House Price Index - actual values,
+    historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/housing-index
+  te_value: 152.91
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: TE displays EUR Thousand (1210707 Mar 2026). We store EUR Million (1210.707). Same data, 1000x scale.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CYSTAT/1000010E.px/Imports
+  our_source: cystat_cy
+  our_value: 1210.707
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Imports in Cyprus increased to 1210707 EUR Thousand in March from 1120515 EUR Thousand in February of 2026. This page provides - Cyprus Imports - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: http://www.mof.gov.cy
+  te_period: in March
+  te_url: https://tradingeconomics.com/cyprus/imports
+  te_value: 1210707.0
+  value_match: false
+  yoy_computed: null
+industrial-production:
+  fix_summary: TE displays YoY % (-2.4 Feb 2026). We store CYSTAT index level (base 2021=100). Frontend computes YoY.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2026-02-28'
+  our_series: CYSTAT/0210045E.px/INDEX
+  our_source: cystat_cy
+  our_value: 108.4
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Industrial Production in Cyprus decreased 2.40 percent in February of 2026 over the same month in the previous year. This page provides the latest reported value for - Cyprus Industrial Production
+    - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in February of 2026
+  te_url: https://tradingeconomics.com/cyprus/industrial-production
+  te_value: 2.4
+  value_match: false
+  yoy_computed: null
+inflation-cpi:
+  fix_summary: TE displays YoY % (2.83 Apr 2026). We store CYSTAT base-1986 CPI index. Frontend computes YoY.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CYSTAT/0410055E.px/B1986
+  our_source: cystat_cy
+  our_value: 266.01
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Inflation Rate in Cyprus increased to 2.83 percent in April from 1.15 percent in March of 2026. This page provides the latest reported value for - Cyprus Inflation Rate - plus previous releases,
+    historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in April
+  te_url: https://tradingeconomics.com/cyprus/inflation-cpi
+  te_value: 2.83
+  value_match: true
+  yoy_computed: 2.8296416560361797
+interest-rate:
+  fix_summary: TE meta shows 4.5% (stale 2023 ECB MRO); our ECB rate 2.15% is current. Same source ECB.
+  fixed: true
+  flag: te-stale
+  mom_computed: null
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_desc: The benchmark interest rate in Cyprus was last recorded at 4.50 percent. This page provides - Cyprus Interest Rate - actual values, historical data, forecast, chart, statistics, economic calendar
+    and news.
+  te_http: 200
+  te_label: European Central Bank
+  te_label_href: https://www.ecb.europa.eu/
+  te_period: in October of 2000
+  te_url: https://tradingeconomics.com/cyprus/interest-rate
+  te_value: 4.5
+  value_match: false
+  yoy_computed: null
+job-vacancies:
+  fix_summary: TE labels CYSTAT; fetched via Eurostat jvs_q_nace2 (Eurostat republishes CYSTAT JVS).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_value: 3
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Job Vacancies in Cyprus decreased to 13538 in the fourth quarter of 2025 from 14573 in the third quarter of 2025. This page provides - Cyprus Job Vacancies - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: http://www.mof.gov.cy
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/job-vacancies
+  te_value: 13538.0
+  value_match: false
+  yoy_computed: null
+labor-force-participation-rate:
+  fix_summary: TE labels CYSTAT (TE shows 15-64 rate 65.2%); we use Eurostat lfsi_emp_q activity-rate (Eurostat republishes CYSTAT LFS).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsi_emp_q:ACT
+  our_source: eurostat
+  our_value: 80.5
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Labor Force Participation Rate in Cyprus decreased to 65.20 percent in the fourth quarter of 2025 from 65.60 percent in the third quarter of 2025. This page provides - Cyprus Labor Force Participation
+    Rate- actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/labor-force-participation-rate
+  te_value: 65.2
+  value_match: false
+  yoy_computed: null
+labour-costs:
+  fix_summary: TE labels ECB (ECB SDW publishes the Eurostat Labour Cost Index); we use Eurostat lc_lci_r2_q directly — same data.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lc_lci_r2_q:I20
+  our_source: eurostat
+  our_value: 126.6
+  source_match: false
+  suggested_source: ecb
+  te_desc: Labour Costs in Cyprus increased to 112.88 points in the fourth quarter of 2025 from 112.40 points in the third quarter of 2025. This page provides - Cyprus Labour Costs - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: European Central Bank
+  te_label_href: https://www.ecb.europa.eu/home/html/index.en.html
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/labour-costs
+  te_value: 112.88
+  value_match: false
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: TE EUROSTAT 0.7 Q4 2025; we have 0.7 eurostat une_ltu_q. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_value: 0.7
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Long Term Unemployment Rate in Cyprus decreased to 0.70 percent in the fourth quarter of 2025 from 0.80 percent in the third quarter of 2025. This page provides - Cyprus Long Term Unemployment
+    Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/long-term-unemployment-rate
+  te_value: 0.7
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: TE labels CYSTAT; fetched via Eurostat sts_inpr_m C (Eurostat republishes CYSTAT industry).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: sts_inpr_m:C:I21
+  our_source: eurostat
+  our_value: 113.5
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Manufacturing Production in Cyprus decreased 1.20 percent in February of 2026 over the same month in the previous year. This page provides - Cyprus Manufacturing Production - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in February of 2026
+  te_url: https://tradingeconomics.com/cyprus/manufacturing-production
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: null
+medical-doctors:
+  fix_summary: TE no source label. We use curated 4.2 (2021 OECD/WHO).
+  fixed: true
+  flag: coverage-gap-or-curated
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: CY:medical-doctors
+  our_source: curated
+  our_value: 4.2
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/medical-doctors
+  te_value: null
+  value_match: null
+  yoy_computed: null
+minimum-wages:
+  fix_summary: TE no clear source (CY introduced national minimum 2023). We use curated EUR 1000/month (gov decree).
+  fixed: true
+  flag: coverage-gap-or-curated
+  mom_computed: null
+  our_period: '2026-01-31'
+  our_series: CY:minimum-wages
+  our_source: curated
+  our_value: 1000
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/minimum-wages
+  te_value: null
+  value_match: null
+  yoy_computed: null
+mining-production:
+  fix_summary: TE labels CYSTAT; fetched via Eurostat sts_inpr_m B (Eurostat republishes CYSTAT mining).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: sts_inpr_m:B:I21
+  our_source: eurostat
+  our_value: 127.7
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: Mining production in Cyprus decreased 2.10 percent in February of 2026 over the same month in the previous year. This page provides the latest reported value for - Cyprus Mining Production -
+    plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: http://www.cystat.gov.cy
+  te_period: in February of 2026
+  te_url: https://tradingeconomics.com/cyprus/mining-production
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: null
+nurses:
+  fix_summary: TE no source label. We use curated 5.1 (2021 OECD/WHO).
+  fixed: true
+  flag: coverage-gap-or-curated
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: CY:nurses
+  our_source: curated
+  our_value: 5.1
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/nurses
+  te_value: null
+  value_match: null
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: TE 35% (Inland Revenue Department) matches our curated 35%.
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:personal-income-tax-rate
+  our_source: curated
+  our_value: 35
+  source_match: null
+  suggested_source: null
+  te_desc: The Personal Income Tax Rate in Cyprus stands at 35 percent. This page provides - Cyprus Personal Income Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar
+    and news.
+  te_http: 200
+  te_label: Inland Revenue Department of the Republic of Cyprus
+  te_label_href: http://ec.europa.eu
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/personal-income-tax-rate
+  te_value: 35.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: TE EUROSTAT 1.0M 2025; we have 0.98M eurostat demo_pjan. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_value: 0.98
+  source_match: true
+  suggested_source: eurostat
+  te_desc: The total population in Cyprus was estimated at 1.0 million people in 2025, according to the latest census figures and projections from Trading Economics. This page provides - Cyprus Population
+    - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/population
+  te_value: 1.0
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: TE CYSTAT 121.0; we have 121 cystat_cy 0230015E base 2021=100. Match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CYSTAT/0230015E.px/INDEX
+  our_source: cystat_cy
+  our_value: 121
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Producer Prices in Cyprus decreased to 121 points in March from 122.90 points in February of 2026. This page provides - Cyprus Producer Prices - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in March
+  te_url: https://tradingeconomics.com/cyprus/producer-prices
+  te_value: 121.0
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: Switched 2020=100→2015=100 base (I15). Q4 2025 = 116.76 matches TE.
+  fixed: true
+  flag: fix
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_value: 109.77
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Productivity in Cyprus decreased to 116.76 points in the fourth quarter of 2025 from 116.96 points in the third quarter of 2025. This page provides - Cyprus Productivity- actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/productivity
+  te_value: 116.76
+  value_match: false
+  yoy_computed: null
+retail-sales:
+  fix_summary: TE labels Ministry of Finance CY; fetched via Eurostat sts_trtu_m G47 (which aggregates from same MoF/CYSTAT source).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: sts_trtu_m:G47:I21
+  our_source: eurostat
+  our_value: 129
+  source_match: false
+  suggested_source: curated
+  te_desc: Retail Sales in Cyprus decreased 3.60 percent in February of 2026 over the previous month. This page provides the latest reported value for - Cyprus Retail Sales MoM - plus previous releases,
+    historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Ministry of Finance, Cyprus
+  te_label_href: http://www.mof.gov.cy
+  te_period: in February of 2026
+  te_url: https://tradingeconomics.com/cyprus/retail-sales
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: null
+retirement-age-men:
+  fix_summary: TE no label; CY retirement age 65 (Social Insurance Law). Our curated value 65 matches policy.
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:retirement-age-men
+  our_source: curated
+  our_value: 65
+  source_match: null
+  suggested_source: null
+  te_desc: Retirement Age Men in Cyprus increased to 66.50 Years in 2026 from 66 Years in 2025. This page provides - Cyprus Retirement Age Men - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/retirement-age-men
+  te_value: 66.5
+  value_match: true
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: TE no label; CY retirement age 65. Our curated value 65.
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:retirement-age-women
+  our_source: curated
+  our_value: 65
+  source_match: null
+  suggested_source: null
+  te_desc: Retirement Age Women in Cyprus increased to 66.50 Years in 2026 from 66 Years in 2025. This page provides - Cyprus Retirement Age Women - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/retirement-age-women
+  te_value: 66.5
+  value_match: true
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: TE 19% (Tax Department CY VAT standard rate) matches our curated 19%.
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:sales-tax-rate
+  our_source: curated
+  our_value: 19
+  source_match: null
+  suggested_source: null
+  te_desc: The Sales Tax Rate in Cyprus stands at 19 percent. This page provides - Cyprus Sales Tax Rate | VAT - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/sales-tax-rate
+  te_value: 19.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: TE placeholder page only. We provide via Eurostat ei_cphi_m CP-HIS.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_value: 102.89
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/services-inflation
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  fix_summary: TE placeholder page only. We provide via Eurostat ei_bsse_m_r2 SCI.
+  fixed: true
+  flag: coverage-gap
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_value: -1.1
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/services-sentiment
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: TE 17.6% matches our curated 17.6% (Social Insurance Services).
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:social-security-rate
+  our_source: curated
+  our_value: 17.6
+  source_match: null
+  suggested_source: null
+  te_desc: The Social Security Rate in Cyprus stands at 17.60 percent. This page provides - Cyprus Social Security Rate - actual values, historical data, forecast, chart, statistics, economic calendar and
+    news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/social-security-rate
+  te_value: 17.6
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: TE 8.8% matches our curated 8.8% (Social Insurance Services).
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:social-security-rate-companies
+  our_source: curated
+  our_value: 8.8
+  source_match: null
+  suggested_source: null
+  te_desc: The Social Security Rate For Companies in Cyprus stands at 8.80 percent. This page provides - Cyprus Social Security Rate For Companies - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/social-security-rate-for-companies
+  te_value: 8.8
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: TE 8.8% matches our curated 8.8% (Social Insurance Services).
+  fixed: true
+  flag: curated-confirmed
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: CY:social-security-rate-employees
+  our_source: curated
+  our_value: 8.8
+  source_match: null
+  suggested_source: null
+  te_desc: The Social Security Rate For Employees in Cyprus stands at 8.80 percent. This page provides - Cyprus Social Security Rate For Employees - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/social-security-rate-for-employees
+  te_value: 8.8
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  fix_summary: TE 0.18 vs our 0 (Global Terrorism Index 2024). Different vintage from IEP.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CY:terrorism-index
+  our_source: curated
+  our_value: 0
+  source_match: null
+  suggested_source: null
+  te_desc: Terrorism Index in Cyprus decreased to 0.18 Points in 2025 from 0.35 Points in 2024. Cyprus Terrorism Index - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/cyprus/terrorism-index
+  te_value: 0.18
+  value_match: false
+  yoy_computed: null
+trade-balance:
+  fix_summary: TE displays EUR Thousand deficit (703846 Mar 2026). We store EUR Million signed (-703.846). Same data, 1000x scale.
+  fixed: true
+  flag: frontend-only
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CYSTAT/1000010E.px/Balance
+  our_source: cystat_cy
+  our_value: -703.846
+  source_match: true
+  suggested_source: cystat_cy
+  te_desc: Cyprus recorded a trade deficit of 703846 EUR Thousand in March of 2026. This page provides - Cyprus Balance of Trade - actual values, historical data, forecast, chart, statistics, economic calendar
+    and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/default
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/cyprus/balance-of-trade
+  te_value: 703846.0
+  value_match: false
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: TE labels CYSTAT (Q4 21289); fetched via Eurostat une_rt_m monthly (Eurostat republishes CYSTAT LFS).
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:TOTAL:THS_PER
+  our_source: eurostat
+  our_value: 23
+  source_match: false
+  suggested_source: cystat_cy
+  te_desc: The number of unemployed persons in Cyprus decreased to 21289 in the fourth quarter of 2025 from 21781 in the third quarter of 2025. This page provides - Cyprus Unemployed Persons - actual values,
+    historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistical Service of the Republic of Cyprus
+  te_label_href: https://www.cystat.gov.cy/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/cyprus/unemployed-persons
+  te_value: 21289.0
+  value_match: false
+  yoy_computed: null
+unemployment:
+  fix_summary: TE attributes EUROSTAT; switched from CYSTAT LFS quarterly to Eurostat une_rt_m monthly (Cyprus rate 4.3% Mar 2026 matches).
+  fixed: true
+  flag: source-switch
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CYSTAT/0110010E.px/LFS-Unemp15+
+  our_source: cystat_cy
+  our_value: 4
+  source_match: false
+  suggested_source: eurostat
+  te_desc: Unemployment Rate in Cyprus increased to 4.30 percent in March from 4.20 percent in February of 2026. This page provides the latest reported value for - Cyprus Unemployment Rate - plus previous
+    releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in March
+  te_url: https://tradingeconomics.com/cyprus/unemployment-rate
+  te_value: 4.3
+  value_match: false
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: TE EUROSTAT 17.3 Mar 2026; we have 17.3 eurostat une_rt_m Y_LT25. Exact match.
+  fixed: true
+  flag: truth-note
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_value: 17.3
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Youth Unemployment Rate in Cyprus remained unchanged at 17.30 percent in March. This page provides the latest reported value for - Cyprus Youth Unemployment Rate - plus previous releases, historical
+    high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in March
+  te_url: https://tradingeconomics.com/cyprus/youth-unemployment-rate
+  te_value: 17.3
+  value_match: true
+  yoy_computed: null

@@ -1,0 +1,441 @@
+{
+  "budget-deficit": {
+    "size": 261597
+  },
+  "business-confidence": {
+    "size": 280008,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Business Confidence in Lithuania decreased to -2 points in April from -1 points in March of 2026. Business Confidence in Lithuania averaged -6.75 points from 2003 until 2026, reaching an all time high of 14.00 points in April of 2007 and a record low of -38.00 points in December of 2008. source: Statistics Lithuania",
+    "h1": "Lithuania Business Confidence",
+    "last_value_text": "Business Confidence in Lithuania decreased to -2 points in April from -1 points in March of 2026. Business Confidence in Lithuania averaged -6.75 points from 2003 until 2026, reaching an all time high of 14.00 points in April of 2007 and a record low of -38.00 points in December of 2008."
+  },
+  "capacity-utilization": {
+    "size": 283391,
+    "source_url": "https://ec.europa.eu/eurostat/en/",
+    "source_name": "European Commission",
+    "description": "Capacity Utilization in Lithuania decreased to 69.10 percent in the first quarter of 2026 from 71.20 percent in the fourth quarter of 2025. Capacity Utilization in Lithuania averaged 66.23 percent from 1993 until 2026, reaching an all time high of 78.70 percent in the fourth quarter of 2021 and a record low of 43.80 percent in the first quarter of 1995. source: European Commission",
+    "h1": "Lithuania Capacity Utilization",
+    "last_value_text": "Capacity Utilization in Lithuania decreased to 69.10 percent in the first quarter of 2026 from 71.20 percent in the fourth quarter of 2025. Capacity Utilization in Lithuania averaged 66.23 percent from 1993 until 2026, reaching an all time high of 78.70 percent in the fourth quarter of 2021 and a record low of 43.80 percent in the first quarter of 1995."
+  },
+  "changes-in-inventories": {
+    "size": 278825,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "The stocks of goods held by firms in Lithuania decreased by 829.50 EUR Million in the fourth quarter of 2025. Changes in Inventories in Lithuania averaged 26.12 EUR Million from 1995 until 2025, reaching an all time high of 1751.90 EUR Million in the third quarter of 2022 and a record low of -1182.70 EUR Million in the fourth quarter of 2020. source: Statistics Lithuania",
+    "h1": "Lithuania Changes in Inventories",
+    "last_value_text": "The stocks of goods held by firms in Lithuania decreased by 829.50 EUR Million in the fourth quarter of 2025. Changes in Inventories in Lithuania averaged 26.12 EUR Million from 1995 until 2025, reaching an all time high of 1751.90 EUR Million in the third quarter of 2022 and a record low of -1182.70 EUR Million in the fourth quarter of 2020."
+  },
+  "consumer-confidence": {
+    "size": 277852,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Consumer Confidence in Lithuania remained unchanged at -3 points in April. Consumer Confidence in Lithuania averaged -10.23 points from 2001 until 2026, reaching an all time high of 9.00 points in March of 2007 and a record low of -56.00 points in January of 2009. source: Statistics Lithuania",
+    "h1": "Lithuania Consumer Confidence",
+    "last_value_text": "Consumer Confidence in Lithuania remained unchanged at -3 points in April. Consumer Confidence in Lithuania averaged -10.23 points from 2001 until 2026, reaching an all time high of 9.00 points in March of 2007 and a record low of -56.00 points in January of 2009."
+  },
+  "consumer-spending": {
+    "size": 277741,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "Consumer Spending in Lithuania increased to 8860 EUR Million in the fourth quarter of 2025 from 8843.10 EUR Million in the third quarter of 2025. Consumer Spending in Lithuania averaged 5853.41 EUR Million from 1995 until 2025, reaching an all time high of 8860.00 EUR Million in the fourth quarter of 2025 and a record low of 2390.80 EUR Million in the first quarter of 1995. source: Statistics Lithuania",
+    "h1": "Lithuania Consumer Spending",
+    "last_value_text": "Consumer Spending in Lithuania increased to 8860 EUR Million in the fourth quarter of 2025 from 8843.10 EUR Million in the third quarter of 2025. Consumer Spending in Lithuania averaged 5853.41 EUR Million from 1995 until 2025, reaching an all time high of 8860.00 EUR Million in the fourth quarter of 2025 and a record low of 2390.80 EUR Million in the first quarter of 1995."
+  },
+  "core-cpi": {
+    "size": 261495
+  },
+  "corporate-tax-rate": {
+    "size": 279082,
+    "source_name": "State Tax Inspectorate",
+    "description": "The Corporate Tax Rate in Lithuania stands at 17 percent. Corporate Tax Rate in Lithuania averaged 15.38 percent from 2006 until 2026, reaching an all time high of 20.00 percent in 2009 and a record low of 15.00 percent in 2007. source: State Tax Inspectorate",
+    "h1": "Lithuania Corporate Tax Rate",
+    "last_value_text": "The Corporate Tax Rate in Lithuania stands at 17 percent. Corporate Tax Rate in Lithuania averaged 15.38 percent from 2006 until 2026, reaching an all time high of 20.00 percent in 2009 and a record low of 15.00 percent in 2007."
+  },
+  "corruption-index": {
+    "size": 283482,
+    "source_name": "Transparency International",
+    "description": "Lithuania scored 65 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Lithuania averaged 53.48 Points from 1999 until 2025, reaching an all time high of 65.00 Points in 2025 and a record low of 38.00 Points in 1999. source: Transparency International",
+    "h1": "Lithuania Corruption Index",
+    "last_value_text": "Lithuania scored 65 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Lithuania averaged 53.48 Points from 1999 until 2025, reaching an all time high of 65.00 Points in 2025 and a record low of 38.00 Points in 1999."
+  },
+  "corruption-rank": {
+    "size": 283493,
+    "source_name": "Transparency International",
+    "description": "Lithuania is the 28 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Lithuania averaged 40.96 from 1999 until 2025, reaching an all time high of 58.00 in 2008 and a record low of 28.00 in 2025. source: Transparency International",
+    "h1": "Lithuania Corruption Rank",
+    "last_value_text": "Lithuania is the 28 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Lithuania averaged 40.96 from 1999 until 2025, reaching an all time high of 58.00 in 2008 and a record low of 28.00 in 2025."
+  },
+  "cpi-clothing": {
+    "size": 272157,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "CPI Clothing in Lithuania increased to 102.75 points in April from 99.81 points in March of 2026. CPI Clothing in Lithuania averaged 107.63 points from 1997 until 2026, reaching an all time high of 139.46 points in November of 1999 and a record low of 85.10 points in February of 2012. source: Statistics Lithuania",
+    "h1": "Lithuania CPI Clothing",
+    "last_value_text": "CPI Clothing in Lithuania increased to 102.75 points in April from 99.81 points in March of 2026. CPI Clothing in Lithuania averaged 107.63 points from 1997 until 2026, reaching an all time high of 139.46 points in November of 1999 and a record low of 85.10 points in February of 2012."
+  },
+  "cpi-education": {
+    "size": 272196,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "CPI Education in Lithuania increased to 102.82 points in April from 102.60 points in March of 2026. CPI Education in Lithuania averaged 57.24 points from 1997 until 2026, reaching an all time high of 102.82 points in April of 2026 and a record low of 28.23 points in January of 1997. source: Statistics Lithuania",
+    "h1": "Lithuania CPI Education",
+    "last_value_text": "CPI Education in Lithuania increased to 102.82 points in April from 102.60 points in March of 2026. CPI Education in Lithuania averaged 57.24 points from 1997 until 2026, reaching an all time high of 102.82 points in April of 2026 and a record low of 28.23 points in January of 1997."
+  },
+  "cpi-food": {
+    "size": 272000,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "CPI Food in Lithuania decreased to 100.99 points in April from 101.80 points in March of 2026. CPI Food in Lithuania averaged 55.64 points from 1997 until 2026, reaching an all time high of 102.58 points in January of 2026 and a record low of 33.95 points in September of 2003. source: Statistics Lithuania",
+    "h1": "Lithuania CPI Food",
+    "last_value_text": "CPI Food in Lithuania decreased to 100.99 points in April from 101.80 points in March of 2026. CPI Food in Lithuania averaged 55.64 points from 1997 until 2026, reaching an all time high of 102.58 points in January of 2026 and a record low of 33.95 points in September of 2003."
+  },
+  "cpi-housing-utilities": {
+    "size": 281815,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "CPI Housing Utilities in Lithuania decreased to 107.82 points in April from 110.36 points in March of 2026. CPI Housing Utilities in Lithuania averaged 56.15 points from 1997 until 2026, reaching an all time high of 119.83 points in February of 2023 and a record low of 20.26 points in January of 1997. source: Statistics Lithuania",
+    "h1": "Lithuania CPI Housing Utilities",
+    "last_value_text": "CPI Housing Utilities in Lithuania decreased to 107.82 points in April from 110.36 points in March of 2026. CPI Housing Utilities in Lithuania averaged 56.15 points from 1997 until 2026, reaching an all time high of 119.83 points in February of 2023 and a record low of 20.26 points in January of 1997."
+  },
+  "cpi-recreation-and-culture": {
+    "size": 272711,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "CPI Recreation and Culture in Lithuania increased to 106.07 points in April from 104.18 points in March of 2026. CPI Recreation and Culture in Lithuania averaged 59.75 points from 1997 until 2026, reaching an all time high of 106.07 points in April of 2026 and a record low of 39.51 points in August of 1997. source: Statistics Lithuania",
+    "h1": "Lithuania CPI Recreation And Culture",
+    "last_value_text": "CPI Recreation and Culture in Lithuania increased to 106.07 points in April from 104.18 points in March of 2026. CPI Recreation and Culture in Lithuania averaged 59.75 points from 1997 until 2026, reaching an all time high of 106.07 points in April of 2026 and a record low of 39.51 points in August of 1997."
+  },
+  "cpi-transportation": {
+    "size": 282951,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "The transportation sub-index of the CPI basket in Lithuania increased to 114.55 points in April of 2026 from 109.80 points in March of 2026. CPI Transportation in Lithuania averaged 67.10 points from 1997 until 2026, reaching an all time high of 114.55 points in April of 2026 and a record low of 37.85 points in January of 1997. source: Statistics Lithuania",
+    "h1": "Lithuania CPI Transportation",
+    "last_value_text": "The transportation sub-index of the CPI basket in Lithuania increased to 114.55 points in April of 2026 from 109.80 points in March of 2026. CPI Transportation in Lithuania averaged 67.10 points from 1997 until 2026, reaching an all time high of 114.55 points in April of 2026 and a record low of 37.85 points in January of 1997."
+  },
+  "credit-rating": {
+    "size": 243059
+  },
+  "current-account": {
+    "size": 290866,
+    "source_url": "http://www.lb.lt",
+    "source_name": "Bank of Lithuania",
+    "description": "Lithuania’s current account surplus widened sharply to EUR 497.20 million in March 2026, up from EUR 62.01 million in the same month of the previous year. This marked the largest surplus since September 2024, driven by an expansion in the services account surplus, which rose to EUR 967.42 million from EUR 916.29 million, and an increase in the secondary income surplus to EUR 169.96 million from EUR 40.11 million in March 2025. Additionally, the goods account deficit narrowed to EUR 562.20 million from EUR 755.88 million, while the primary income deficit also decreased significantly to EUR 77.9",
+    "h1": "Lithuania Current Account",
+    "last_value_text": "Lithuania’s current account surplus widened sharply to EUR 497.20 million in March 2026, up from EUR 62.01 million in the same month of the previous year. This marked the largest surplus since September 2024, driven by an expansion in the services account surplus, which rose to EUR 967.42 million from EUR 916.29 million, and an increase in the secondary income surplus to EUR 169.96 million from EUR 40.11 million in March 2025. Additionally, the goods account deficit narrowed to EUR 562.20 million from EUR 755.88 million, while the primary income deficit also decreased significantly to EUR 77.98 million from EUR 138.51 million."
+  },
+  "current-account-to-gdp": {
+    "size": 278898,
+    "source_url": "http://www.lb.lt",
+    "source_name": "Bank of Lithuania",
+    "description": "Lithuania recorded a Current Account surplus of 0.90 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Lithuania averaged -3.74 percent of GDP from 1995 until 2025, reaching an all time high of 7.20 percent of GDP in 2020 and a record low of -15.50 percent of GDP in 2007. source: Bank of Lithuania",
+    "h1": "Lithuania Current Account to GDP",
+    "last_value_text": "Lithuania recorded a Current Account surplus of 0.90 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Lithuania averaged -3.74 percent of GDP from 1995 until 2025, reaching an all time high of 7.20 percent of GDP in 2020 and a record low of -15.50 percent of GDP in 2007."
+  },
+  "disposable-personal-income": {
+    "size": 261801
+  },
+  "employed-persons": {
+    "size": 279374,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "The number of employed persons in Lithuania increased to 1460.90 Thousand in the first quarter of 2026 from 1457.90 Thousand in the fourth quarter of 2025. Employed Persons in Lithuania averaged 1380.52 Thousand from 1998 until 2026, reaching an all time high of 1497.40 Thousand in the fourth quarter of 1998 and a record low of 1221.90 Thousand in the first quarter of 2010. source: Statistics Lithuania",
+    "h1": "Lithuania Employed Persons",
+    "last_value_text": "The number of employed persons in Lithuania increased to 1460.90 Thousand in the first quarter of 2026 from 1457.90 Thousand in the fourth quarter of 2025. Employed Persons in Lithuania averaged 1380.52 Thousand from 1998 until 2026, reaching an all time high of 1497.40 Thousand in the fourth quarter of 1998 and a record low of 1221.90 Thousand in the first quarter of 2010."
+  },
+  "employment-rate": {
+    "size": 279204,
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Employment Rate in Lithuania decreased to 73.80 percent in the fourth quarter of 2025 from 75.10 percent in the third quarter of 2025. Employment Rate in Lithuania averaged 66.09 percent from 1998 until 2025, reaching an all time high of 75.20 percent in the third quarter of 2022 and a record low of 56.30 percent in the first quarter of 2010. source: EUROSTAT",
+    "h1": "Lithuania Employment Rate",
+    "last_value_text": "Employment Rate in Lithuania decreased to 73.80 percent in the fourth quarter of 2025 from 75.10 percent in the third quarter of 2025. Employment Rate in Lithuania averaged 66.09 percent from 1998 until 2025, reaching an all time high of 75.20 percent in the third quarter of 2022 and a record low of 56.30 percent in the first quarter of 2010."
+  },
+  "energy-inflation": {
+    "size": 261631
+  },
+  "exports": {
+    "size": 283282,
+    "source_url": "http://www.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Exports from Lithuania increased by 2.7% year-on-year to EUR 3,352.5 million in March 2026, driven by higher sales of fertilizers (26.7%), optical, photographic, cinematographic, measuring, checking, precision, medical or surgical instruments and apparatus (29.2%), and electrical machinery and equipment (9.1%). source: Statistics Lithuania",
+    "h1": "Lithuania Exports",
+    "last_value_text": "Exports from Lithuania increased by 2.7% year-on-year to EUR 3,352.5 million in March 2026, driven by higher sales of fertilizers (26.7%), optical, photographic, cinematographic, measuring, checking, precision, medical or surgical instruments and apparatus (29.2%), and electrical machinery and equipment (9.1%)."
+  },
+  "food-inflation": {
+    "size": 282707,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Cost of food in Lithuania increased 0.90 percent in April of 2026 over the same month in the previous year. Food Inflation in Lithuania averaged 17.26 percent from 1993 until 2026, reaching an all time high of 910.70 percent in May of 1993 and a record low of -7.30 percent in February of 2003. source: Statistics Lithuania",
+    "h1": "Lithuania Food Inflation",
+    "last_value_text": "Cost of food in Lithuania increased 0.90 percent in April of 2026 over the same month in the previous year. Food Inflation in Lithuania averaged 17.26 percent from 1993 until 2026, reaching an all time high of 910.70 percent in May of 1993 and a record low of -7.30 percent in February of 2003."
+  },
+  "gdp": {
+    "size": 281981,
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "description": "The Gross Domestic Product (GDP) in Lithuania was worth 84.87 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Lithuania represents 0.08 percent of the world economy. source: World Bank",
+    "h1": "Lithuania GDP",
+    "last_value_text": "The Gross Domestic Product (GDP) in Lithuania was worth 84.87 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Lithuania represents 0.08 percent of the world economy."
+  },
+  "gdp-per-capita": {
+    "size": 281269,
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "description": "The Gross Domestic Product per capita in Lithuania was last recorded at 19094.12 US dollars in 2024. The GDP per Capita in Lithuania is equivalent to 151 percent of the world's average. GDP per Capita in Lithuania averaged 11052.22 USD from 1990 until 2024, reaching an all time high of 19094.12 USD in 2024 and a record low of 4730.70 USD in 1994. source: World Bank",
+    "h1": "Lithuania GDP per capita",
+    "last_value_text": "The Gross Domestic Product per capita in Lithuania was last recorded at 19094.12 US dollars in 2024. The GDP per Capita in Lithuania is equivalent to 151 percent of the world's average. GDP per Capita in Lithuania averaged 11052.22 USD from 1990 until 2024, reaching an all time high of 19094.12 USD in 2024 and a record low of 4730.70 USD in 1994."
+  },
+  "gdp-per-capita-ppp": {
+    "size": 282719,
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "description": "The Gross Domestic Product per capita in Lithuania was last recorded at 47169.01 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Lithuania, when adjusted by Purchasing Power Parity is equivalent to 266 percent of the world's average. source: World Bank",
+    "h1": "Lithuania GDP per capita PPP",
+    "last_value_text": "The Gross Domestic Product per capita in Lithuania was last recorded at 47169.01 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Lithuania, when adjusted by Purchasing Power Parity is equivalent to 266 percent of the world's average."
+  },
+  "gdp-real": {
+    "size": 261495
+  },
+  "government-debt": {
+    "size": 281997,
+    "source_url": "https://osp.stat.gov.lt/en/",
+    "source_name": "Statistics Lithuania",
+    "description": "Government Debt in Lithuania increased to 36186.80 EUR Million in March from 35872.50 EUR Million in February of 2026. Government Debt in Lithuania averaged 14280.92 EUR Million from 2003 until 2026, reaching an all time high of 36186.80 EUR Million in March of 2026 and a record low of 3249.10 EUR Million in February of 2004. source: Statistics Lithuania",
+    "h1": "Lithuania Central Government Debt",
+    "last_value_text": "Government Debt in Lithuania increased to 36186.80 EUR Million in March from 35872.50 EUR Million in February of 2026. Government Debt in Lithuania averaged 14280.92 EUR Million from 2003 until 2026, reaching an all time high of 36186.80 EUR Million in March of 2026 and a record low of 3249.10 EUR Million in February of 2004."
+  },
+  "government-debt-total": {
+    "size": 261716
+  },
+  "government-spending": {
+    "size": 278218,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "Government Spending in Lithuania increased to 2551.60 EUR Million in the fourth quarter of 2025 from 2431.60 EUR Million in the third quarter of 2025. Government Spending in Lithuania averaged 2393.57 EUR Million from 1995 until 2025, reaching an all time high of 2744.00 EUR Million in the first quarter of 2025 and a record low of 1687.70 EUR Million in the first quarter of 1995. source: Statistics Lithuania",
+    "h1": "Lithuania Government Spending",
+    "last_value_text": "Government Spending in Lithuania increased to 2551.60 EUR Million in the fourth quarter of 2025 from 2431.60 EUR Million in the third quarter of 2025. Government Spending in Lithuania averaged 2393.57 EUR Million from 1995 until 2025, reaching an all time high of 2744.00 EUR Million in the first quarter of 2025 and a record low of 1687.70 EUR Million in the first quarter of 1995."
+  },
+  "government-spending-eur": {
+    "size": 261750
+  },
+  "gross-fixed-capital-formation": {
+    "size": 279677,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "Gross Fixed Capital Formation in Lithuania increased to 4442.70 EUR Million in the fourth quarter of 2025 from 4116.90 EUR Million in the third quarter of 2025. Gross Fixed Capital Formation in Lithuania averaged 2003.94 EUR Million from 1995 until 2025, reaching an all time high of 4442.70 EUR Million in the fourth quarter of 2025 and a record low of 392.00 EUR Million in the first quarter of 1995. source: Statistics Lithuania",
+    "h1": "Lithuania Gross Fixed Capital Formation",
+    "last_value_text": "Gross Fixed Capital Formation in Lithuania increased to 4442.70 EUR Million in the fourth quarter of 2025 from 4116.90 EUR Million in the third quarter of 2025. Gross Fixed Capital Formation in Lithuania averaged 2003.94 EUR Million from 1995 until 2025, reaching an all time high of 4442.70 EUR Million in the fourth quarter of 2025 and a record low of 392.00 EUR Million in the first quarter of 1995."
+  },
+  "hospital-beds": {
+    "size": 277475,
+    "source_name": "OECD",
+    "description": "Hospital Beds in Lithuania decreased to 5.48 per 1000 people in 2023 from 5.68 per 1000 people in 2022. Hospital Beds in Lithuania averaged 9.42 per 1000 people from 1960 until 2023, reaching an all time high of 12.81 per 1000 people in 1988 and a record low of 5.48 per 1000 people in 2023. source: OECD",
+    "h1": "Lithuania Hospital Beds",
+    "last_value_text": "Hospital Beds in Lithuania decreased to 5.48 per 1000 people in 2023 from 5.68 per 1000 people in 2022. Hospital Beds in Lithuania averaged 9.42 per 1000 people from 1960 until 2023, reaching an all time high of 12.81 per 1000 people in 1988 and a record low of 5.48 per 1000 people in 2023."
+  },
+  "house-price-index": {
+    "size": 261648
+  },
+  "imports": {
+    "size": 283217,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "Imports to Lithuania fell by 2.5% year-on-year to EUR 3,900.8 million in March 2026, amid reduced purchases of mineral fuels, mineral oils and products of their distillation (-27%) and articles of iron or steel (-25.7%). source: Statistics Lithuania",
+    "h1": "Lithuania Imports",
+    "last_value_text": "Imports to Lithuania fell by 2.5% year-on-year to EUR 3,900.8 million in March 2026, amid reduced purchases of mineral fuels, mineral oils and products of their distillation (-27%) and articles of iron or steel (-25.7%)."
+  },
+  "industrial-production": {
+    "size": 290528,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Industrial Production in Lithuania increased 4.80 percent in March of 2026 over the same month in the previous year. Industrial Production in Lithuania averaged 4.06 percent from 1999 until 2026, reaching an all time high of 40.50 percent in February of 2003 and a record low of -25.80 percent in April of 2009. source: Statistics Lithuania",
+    "h1": "Lithuania Industrial Production",
+    "last_value_text": "Industrial Production in Lithuania increased 4.80 percent in March of 2026 over the same month in the previous year. Industrial Production in Lithuania averaged 4.06 percent from 1999 until 2026, reaching an all time high of 40.50 percent in February of 2003 and a record low of -25.80 percent in April of 2009."
+  },
+  "inflation-cpi": {
+    "size": 296404,
+    "source_url": "https://osp.stat.gov.lt/",
+    "source_name": "Statistics Lithuania",
+    "description": "Lithuania’s annual inflation rate rose to 5.3% in April 2026 from 4.8% in the previous month, marking the highest level since August 2023. Prices climbed for transport (14.2% vs 8.3% in March), while continuing to rise for housing and utilities (7.1% vs 6.5%), restaurants and accommodation services (6.3% vs 6%), information and communication (2.8% vs 1.7%), and education (3.5% vs 3.4%). Price growth also rebounded in furnishings, household equipment, and routine household maintenance (2% vs -0.5%). In contrast, price increases slowed for food and non-alcoholic beverages (0.9% vs 2.4%), alcohol",
+    "h1": "Lithuania Inflation Rate"
+  },
+  "interest-rate": {
+    "size": 281884,
+    "source_url": "http://www.lb.lt",
+    "source_name": "Bank of Lithuania",
+    "description": "The benchmark interest rate in Lithuania is set by the European Central Bank. Interest Rate in Lithuania averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of 0.00 percent in March of 2016. source: Bank of Lithuania",
+    "h1": "Lithuania Interest Rate",
+    "last_value_text": "The benchmark interest rate in Lithuania is set by the European Central Bank. Interest Rate in Lithuania averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of 0.00 percent in March of 2016."
+  },
+  "job-vacancies": {
+    "size": 279620,
+    "source_url": "https://osp.stat.gov.lt/en/",
+    "source_name": "Statistics Lithuania",
+    "description": "Job Vacancies in Lithuania decreased to 30528 in the fourth quarter of 2025 from 31965 in the third quarter of 2025. Job Vacancies in Lithuania averaged 17592.67 from 2008 until 2025, reaching an all time high of 31965.00 in the third quarter of 2025 and a record low of 4157.00 in the fourth quarter of 2009. source: Statistics Lithuania",
+    "h1": "Lithuania Job Vacancies"
+  },
+  "labor-force-participation-rate": {
+    "size": 280083,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Labor Force Participation Rate in Lithuania decreased to 62.60 percent in the fourth quarter of 2025 from 63.80 percent in the third quarter of 2025. Labor Force Participation Rate in Lithuania averaged 59.32 percent from 1998 until 2025, reaching an all time high of 64.00 percent in the third quarter of 2024 and a record low of 54.70 percent in the fourth quarter of 2006. source: Statistics Lithuania",
+    "h1": "Lithuania Labor Force Participation Rate",
+    "last_value_text": "Labor Force Participation Rate in Lithuania decreased to 62.60 percent in the fourth quarter of 2025 from 63.80 percent in the third quarter of 2025. Labor Force Participation Rate in Lithuania averaged 59.32 percent from 1998 until 2025, reaching an all time high of 64.00 percent in the third quarter of 2024 and a record low of 54.70 percent in the fourth quarter of 2006."
+  },
+  "labour-costs": {
+    "size": 278982,
+    "source_url": "https://osp.stat.gov.lt/en/",
+    "source_name": "Statistics Lithuania",
+    "description": "Labour Costs in Lithuania decreased to 170.40 points in the fourth quarter of 2025 from 171.30 points in the third quarter of 2025. Labour Costs in Lithuania averaged 72.57 points from 2000 until 2025, reaching an all time high of 171.30 points in the third quarter of 2025 and a record low of 27.30 points in the second quarter of 2000. source: Statistics Lithuania",
+    "h1": "Lithuania Labour Costs",
+    "last_value_text": "Labour Costs in Lithuania decreased to 170.40 points in the fourth quarter of 2025 from 171.30 points in the third quarter of 2025. Labour Costs in Lithuania averaged 72.57 points from 2000 until 2025, reaching an all time high of 171.30 points in the third quarter of 2025 and a record low of 27.30 points in the second quarter of 2000."
+  },
+  "long-term-unemployment-rate": {
+    "size": 280324,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Long Term Unemployment Rate in Lithuania increased to 2.40 percent in the first quarter of 2026 from 2.10 percent in the fourth quarter of 2025. Long Term Unemployment Rate in Lithuania averaged 4.15 percent from 1998 until 2026, reaching an all time high of 10.80 percent in the fourth quarter of 2001 and a record low of 0.80 percent in the second quarter of 2008. source: Statistics Lithuania",
+    "h1": "Lithuania Long Term Unemployment Rate",
+    "last_value_text": "Long Term Unemployment Rate in Lithuania increased to 2.40 percent in the first quarter of 2026 from 2.10 percent in the fourth quarter of 2025. Long Term Unemployment Rate in Lithuania averaged 4.15 percent from 1998 until 2026, reaching an all time high of 10.80 percent in the fourth quarter of 2001 and a record low of 0.80 percent in the second quarter of 2008."
+  },
+  "manufacturing-production": {
+    "size": 279407,
+    "source_url": "https://ec.europa.eu/eurostat/en/",
+    "source_name": "EUROSTAT",
+    "description": "Manufacturing Production in Lithuania increased 5.10 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Lithuania averaged 4.77 percent from 1999 until 2026, reaching an all time high of 37.90 percent in April of 2004 and a record low of -32.80 percent in November of 1999. source: EUROSTAT",
+    "h1": "Lithuania Manufacturing Production",
+    "last_value_text": "Manufacturing Production in Lithuania increased 5.10 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Lithuania averaged 4.77 percent from 1999 until 2026, reaching an all time high of 37.90 percent in April of 2004 and a record low of -32.80 percent in November of 1999."
+  },
+  "medical-doctors": {
+    "size": 277622,
+    "source_url": "https://www.oecd.org/",
+    "source_name": "OECD",
+    "description": "Medical Doctors in Lithuania decreased to 4.47 per 1000 people in 2021 from 4.48 per 1000 people in 2020. Medical Doctors in Lithuania averaged 3.82 per 1000 people from 1965 until 2021, reaching an all time high of 4.60 per 1000 people in 2018 and a record low of 1.77 per 1000 people in 1965. source: OECD",
+    "h1": "Lithuania Medical Doctors",
+    "last_value_text": "Medical Doctors in Lithuania decreased to 4.47 per 1000 people in 2021 from 4.48 per 1000 people in 2020. Medical Doctors in Lithuania averaged 3.82 per 1000 people from 1965 until 2021, reaching an all time high of 4.60 per 1000 people in 2018 and a record low of 1.77 per 1000 people in 1965."
+  },
+  "minimum-wages": {
+    "size": 280196,
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Minimum Wages in Lithuania increased to 1153 EUR/Month in the second quarter of 2026 from 1038 EUR/Month in the fourth quarter of 2025. Minimum Wages in Lithuania averaged 375.73 EUR/Month from 1999 until 2026, reaching an all time high of 1153.00 EUR/Month in June of 2026 and a record low of 92.00 EUR/Month in June of 1999. source: EUROSTAT",
+    "h1": "Lithuania Gross Minimum Monthly Wage",
+    "last_value_text": "Minimum Wages in Lithuania increased to 1153 EUR/Month in the second quarter of 2026 from 1038 EUR/Month in the fourth quarter of 2025. Minimum Wages in Lithuania averaged 375.73 EUR/Month from 1999 until 2026, reaching an all time high of 1153.00 EUR/Month in June of 2026 and a record low of 92.00 EUR/Month in June of 1999."
+  },
+  "mining-production": {
+    "size": 279116,
+    "source_url": "http://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Mining production in Lithuania decreased 4.40 percent in March of 2026 over the same month in the previous year. Mining Production in Lithuania averaged 1.79 percent from 1999 until 2026, reaching an all time high of 56.40 percent in January of 2001 and a record low of -47.90 percent in January of 2009. source: Statistics Lithuania",
+    "h1": "Lithuania Mining Production",
+    "last_value_text": "Mining production in Lithuania decreased 4.40 percent in March of 2026 over the same month in the previous year. Mining Production in Lithuania averaged 1.79 percent from 1999 until 2026, reaching an all time high of 56.40 percent in January of 2001 and a record low of -47.90 percent in January of 2009."
+  },
+  "nurses": {
+    "size": 277207,
+    "source_name": "OECD",
+    "description": "Nurses in Lithuania decreased to 7.50 per 1000 people in 2023 from 7.53 per 1000 people in 2022. Nurses in Lithuania averaged 8.19 per 1000 people from 1981 until 2023, reaching an all time high of 9.94 per 1000 people in 1989 and a record low of 7.27 per 1000 people in 2004. source: OECD",
+    "h1": "Lithuania Nurses",
+    "last_value_text": "Nurses in Lithuania decreased to 7.50 per 1000 people in 2023 from 7.53 per 1000 people in 2022. Nurses in Lithuania averaged 8.19 per 1000 people from 1981 until 2023, reaching an all time high of 9.94 per 1000 people in 1989 and a record low of 7.27 per 1000 people in 2004."
+  },
+  "personal-income-tax-rate": {
+    "size": 279391,
+    "source_url": "http://ec.europa.eu",
+    "source_name": "State Tax Inspectorate",
+    "description": "The Personal Income Tax Rate in Lithuania stands at 32 percent. Personal Income Tax Rate in Lithuania averaged 24.85 percent from 1994 until 2026, reaching an all time high of 33.00 percent in 1995 and a record low of 15.00 percent in 2009. source: State Tax Inspectorate",
+    "h1": "Lithuania Personal Income Tax Rate",
+    "last_value_text": "The Personal Income Tax Rate in Lithuania stands at 32 percent. Personal Income Tax Rate in Lithuania averaged 24.85 percent from 1994 until 2026, reaching an all time high of 33.00 percent in 1995 and a record low of 15.00 percent in 2009."
+  },
+  "population": {
+    "size": 280012,
+    "source_name": "EUROSTAT",
+    "description": "The total population in Lithuania was estimated at 2.9 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Lithuania had a population of 2.8 million people. source: EUROSTAT",
+    "h1": "Lithuania Population",
+    "last_value_text": "The total population in Lithuania was estimated at 2.9 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Lithuania had a population of 2.8 million people."
+  },
+  "ppi": {
+    "size": 261410
+  },
+  "productivity": {
+    "size": 279034,
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Productivity in Lithuania increased to 126.23 points in the fourth quarter of 2025 from 124.02 points in the third quarter of 2025. Productivity in Lithuania averaged 86.46 points from 1995 until 2025, reaching an all time high of 126.25 points in the first quarter of 2021 and a record low of 41.23 points in the first quarter of 1995. source: EUROSTAT",
+    "h1": "Lithuania Productivity",
+    "last_value_text": "Productivity in Lithuania increased to 126.23 points in the fourth quarter of 2025 from 124.02 points in the third quarter of 2025. Productivity in Lithuania averaged 86.46 points from 1995 until 2025, reaching an all time high of 126.25 points in the first quarter of 2021 and a record low of 41.23 points in the first quarter of 1995."
+  },
+  "retail-sales": {
+    "size": 276757,
+    "source_url": "https://osp.stat.gov.lt",
+    "source_name": "Statistics Lithuania",
+    "description": "Retail activity in Lithuania rose 2.3% month-on-month in March 2026, rebounding from a revised 2% decline in February. Retail Sales MoM in Lithuania averaged 0.37 percent from 1998 until 2026, reaching an all time high of 14.50 percent in May of 2020 and a record low of -14.20 percent in January of 2009. source: Statistics Lithuania",
+    "h1": "Lithuania Retail Sales MoM",
+    "last_value_text": "Retail activity in Lithuania rose 2.3% month-on-month in March 2026, rebounding from a revised 2% decline in February. Retail Sales MoM in Lithuania averaged 0.37 percent from 1998 until 2026, reaching an all time high of 14.50 percent in May of 2020 and a record low of -14.20 percent in January of 2009."
+  },
+  "retirement-age-men": {
+    "size": 286334,
+    "source_name": "State Social Insurance Fund Board",
+    "description": "Retirement Age Men in Lithuania remained unchanged at 64.83 Years in 2026 from 64.83 Years in 2025. Retirement Age Men in Lithuania averaged 63.36 Years from 2004 until 2026, reaching an all time high of 64.83 Years in 2025 and a record low of 62.50 Years in 2005. source: State Social Insurance Fund Board",
+    "h1": "Lithuania Retirement Age - Men",
+    "last_value_text": "Retirement Age Men in Lithuania remained unchanged at 64.83 Years in 2026 from 64.83 Years in 2025. Retirement Age Men in Lithuania averaged 63.36 Years from 2004 until 2026, reaching an all time high of 64.83 Years in 2025 and a record low of 62.50 Years in 2005."
+  },
+  "retirement-age-women": {
+    "size": 286418,
+    "source_name": "State Social Insurance Fund Board",
+    "description": "Retirement Age Women in Lithuania remained unchanged at 64.67 Years in 2026 from 64.67 Years in 2025. Retirement Age Women in Lithuania averaged 61.64 Years from 2004 until 2026, reaching an all time high of 64.67 Years in 2025 and a record low of 59.00 Years in 2005. source: State Social Insurance Fund Board",
+    "h1": "Lithuania Retirement Age - Women",
+    "last_value_text": "Retirement Age Women in Lithuania remained unchanged at 64.67 Years in 2026 from 64.67 Years in 2025. Retirement Age Women in Lithuania averaged 61.64 Years from 2004 until 2026, reaching an all time high of 64.67 Years in 2025 and a record low of 59.00 Years in 2005."
+  },
+  "sales-tax-rate": {
+    "size": 278855,
+    "source_name": "State Tax Inspectorate",
+    "description": "The Sales Tax Rate in Lithuania stands at 21 percent. Sales Tax Rate in Lithuania averaged 19.93 percent from 2000 until 2026, reaching an all time high of 21.00 percent in 2010 and a record low of 18.00 percent in 2001. source: State Tax Inspectorate",
+    "h1": "Lithuania Sales Tax Rate - VAT",
+    "last_value_text": "The Sales Tax Rate in Lithuania stands at 21 percent. Sales Tax Rate in Lithuania averaged 19.93 percent from 2000 until 2026, reaching an all time high of 21.00 percent in 2010 and a record low of 18.00 percent in 2001."
+  },
+  "services-inflation": {
+    "size": 261665
+  },
+  "services-sentiment": {
+    "size": 261665
+  },
+  "social-security-rate": {
+    "size": 279126,
+    "source_name": "State Tax Inspectorate (STI)",
+    "description": "The Social Security Rate in Lithuania stands at 21.27 percent. Social Security Rate in Lithuania averaged 32.18 percent from 2004 until 2026, reaching an all time high of 41.98 percent in 2016 and a record low of 21.27 percent in 2019. source: State Tax Inspectorate (STI)",
+    "h1": "Lithuania Social Security Rate",
+    "last_value_text": "The Social Security Rate in Lithuania stands at 21.27 percent. Social Security Rate in Lithuania averaged 32.18 percent from 2004 until 2026, reaching an all time high of 41.98 percent in 2016 and a record low of 21.27 percent in 2019."
+  },
+  "social-security-rate-companies": {
+    "size": 261869
+  },
+  "social-security-rate-employees": {
+    "size": 261869
+  },
+  "terrorism-index": {
+    "size": 286342,
+    "source_name": "Institute for Economics and Peace",
+    "description": "Terrorism Index in Lithuania remained unchanged at 0.42 Points in 2025 from 0.42 Points in 2024. Terrorism Index in Lithuania averaged 0.22 Points from 2002 until 2025, reaching an all time high of 1.73 Points in 2019 and a record low of 0.00 Points in 2003. source: Institute for Economics and Peace",
+    "h1": "Lithuania Terrorism Index",
+    "last_value_text": "Terrorism Index in Lithuania remained unchanged at 0.42 Points in 2025 from 0.42 Points in 2024. Terrorism Index in Lithuania averaged 0.22 Points from 2002 until 2025, reaching an all time high of 1.73 Points in 2019 and a record low of 0.00 Points in 2003."
+  },
+  "unemployed-persons": {
+    "size": 279483,
+    "source_url": "https://osp.stat.gov.lt/en/",
+    "source_name": "Statistics Lithuania",
+    "description": "The number of unemployed persons in Lithuania decreased to 146.87 Thousand in April of 2026 from 155.27 Thousand in March of 2026. Unemployed Persons in Lithuania averaged 159.76 Thousand from 1994 until 2026, reaching an all time high of 330.58 Thousand in July of 2010 and a record low of 58.20 Thousand in July of 1994. source: Statistics Lithuania",
+    "h1": "Lithuania Unemployed Persons",
+    "last_value_text": "The number of unemployed persons in Lithuania decreased to 146.87 Thousand in April of 2026 from 155.27 Thousand in March of 2026. Unemployed Persons in Lithuania averaged 159.76 Thousand from 1994 until 2026, reaching an all time high of 330.58 Thousand in July of 2010 and a record low of 58.20 Thousand in July of 1994."
+  },
+  "unemployment": {
+    "size": 261563
+  },
+  "youth-unemployment-rate": {
+    "size": 279831,
+    "source_name": "EUROSTAT",
+    "description": "Youth Unemployment Rate in Lithuania increased to 16 percent in March from 15.80 percent in February of 2026. Youth Unemployment Rate in Lithuania averaged 19.63 percent from 1998 until 2026, reaching an all time high of 36.20 percent in February of 2010 and a record low of 7.60 percent in June of 2007. source: EUROSTAT",
+    "h1": "Lithuania Youth Unemployment Rate",
+    "last_value_text": "Youth Unemployment Rate in Lithuania increased to 16 percent in March from 15.80 percent in February of 2026. Youth Unemployment Rate in Lithuania averaged 19.63 percent from 1998 until 2026, reaching an all time high of 36.20 percent in February of 2010 and a record low of 7.60 percent in June of 2007."
+  }
+}

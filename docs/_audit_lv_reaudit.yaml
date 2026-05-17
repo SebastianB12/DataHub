@@ -1,0 +1,993 @@
+_meta:
+  country: LV
+  audit_date: '2026-05-17'
+  total_slugs: 67
+  source_mismatches_resolved: 0
+  source_mismatches_documented: 5
+  value_fixes_applied: 4
+  missing_te_pages: 4
+fixes_applied:
+  inflation-cpi:
+    issue: conversion 1.0 produced raw int (29648); CSP encodes decimals=2.
+    fix: conversion 1.0 -> 0.01; refetched 424 monthly points.
+    before: 29648
+    after: 296.48
+    te_value: TE shows YoY % (2.9%), computed frontend-only from index.
+  government-spending-eur:
+    issue: DB source=eurostat (Bn EUR) but TE attributes Central Statistical Bureau of Latvia.
+    fix: Switched is_default to csp_lv (ISP050c P3_S13 chain-linked SA, mln EUR).
+    before: eurostat 2.54 Bn EUR
+    after: csp_lv 1783.023 Mln EUR
+  minimum-wages:
+    issue: DB source=curated (740 EUR), TE attributes EUROSTAT.
+    fix: Switched to eurostat earn_mw_cur (LV/EUR, bi-annual); refetched 55 points.
+    before: curated 740 EUR (Jan 2026)
+    after: eurostat 780 EUR (2026-S1)
+  terrorism-index:
+    issue: DB value 0; TE shows 0.23 (2025).
+    fix: Inserted curated rows 2024=0.42, 2025=0.23.
+    before: 0
+    after: 0.23
+  personal-income-tax-rate:
+    issue: DB 31% but TE current top rate 36%.
+    fix: Updated curated value to 36 (2026).
+    before: 31
+    after: 36
+  hospital-beds:
+    issue: DB 5.4 (2022) but TE shows 4.96 (2023).
+    fix: Updated curated values for 2022 (5.03) and 2023 (4.96).
+    after: 4.96
+  medical-doctors:
+    issue: DB 3.4 (2021), TE 3.36 (2021).
+    fix: Updated curated value to 3.36.
+    after: 3.36
+  nurses:
+    issue: DB 4.2 (2021), TE 4.18 (2023).
+    fix: Updated curated value to 4.18.
+    after: 4.18
+source_mismatches_documented:
+  current-account:
+    te_label: Bank of Latvia
+    db_source: eurostat
+    rationale: No bol_lv provider; fetched from Eurostat bop_c6_q. Honest label = eurostat.
+  energy-inflation:
+    te_label: Central Statistical Bureau of Latvia
+    db_source: eurostat
+    rationale: CSP has no clean 'Energy' aggregate; Eurostat HICP CP-HIE used.
+  labour-costs:
+    te_label: European Central Bank
+    db_source: eurostat
+    rationale: TE upstream ECB SDW but Eurostat lc_lci_r2 is the technical fetch source.
+  ppi:
+    te_label: Central Statistical Bureau of Latvia
+    db_source: eurostat
+    rationale: CSP RCI020m total-industry aggregate returns HTTP 400; Eurostat sts_inpp_m used.
+  unemployed-persons:
+    te_label: State Employment Agency, Latvia
+    db_source: eurostat
+    rationale: No nva_lv provider; Eurostat une_rt_m is the technical fetch source.
+missing_te_pages:
+- credit-rating
+- disposable-personal-income
+- services-inflation
+- services-sentiment
+value_mismatches_frontend_only:
+- changes-in-inventories
+- consumer-spending
+- core-cpi
+- employment-rate
+- energy-inflation
+- food-inflation
+- gdp-real
+- government-debt
+- government-debt-total
+- government-spending
+- government-spending-eur
+- gross-fixed-capital-formation
+- inflation-cpi
+- interest-rate
+- job-vacancies
+- labor-force-participation-rate
+- labour-costs
+- manufacturing-production
+- mining-production
+- ppi
+- productivity
+value_mismatches_extraction_artifacts:
+- budget-deficit
+- business-confidence
+- current-account
+- trade-balance
+- unemployed-persons
+verified_value_match:
+- capacity-utilization
+- consumer-confidence
+- corporate-tax-rate
+- cpi-clothing
+- cpi-education
+- cpi-food
+- cpi-housing-utilities
+- cpi-recreation-and-culture
+- cpi-transportation
+- employed-persons
+- gdp
+- hospital-beds
+- house-price-index
+- long-term-unemployment-rate
+- medical-doctors
+- minimum-wages
+- nurses
+- personal-income-tax-rate
+- population
+- retirement-age-men
+- retirement-age-women
+- sales-tax-rate
+- social-security-rate
+- social-security-rate-companies
+- social-security-rate-employees
+- terrorism-index
+- unemployment
+- youth-unemployment-rate
+all_findings:
+  budget-deficit:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: -2.5
+    db_source: eurostat
+    source_match: true
+    te_description: 'Latvia recorded a Government Budget deficit equal to 2.50 percent of the country''s Gross Domestic Product
+      in 2025. Government Budget in Latvia averaged -2.39 percent of GDP from 1995 until 2025, reaching an all time high of
+      1.50 percent of '
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 1.5
+    value_match: false
+  business-confidence:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: -3.6
+    db_source: csp_lv
+    source_match: true
+    te_description: Business Confidence in Latvia decreased to -0.30 points in April from 1 points in March of 2026. Business
+      Confidence in Latvia averaged -6.64 points from 1993 until 2026, reaching an all time high of 12.50 points in March
+      of 2007 and a reco
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: -0.3
+    value_match: false
+  capacity-utilization:
+    db_latest_date: '2026-06-30'
+    db_latest_source: eurostat
+    db_latest_value: 75.7
+    db_source: eurostat
+    source_match: true
+    te_description: Capacity Utilization in Latvia decreased to 74.30 percent in the first quarter of 2026 from 74.70 percent
+      in the fourth quarter of 2025. Capacity Utilization in Latvia averaged 66.65 percent from 1993 until 2026, reaching
+      an all time high o
+    te_source_code: eurostat
+    te_source_name: European Commission
+    te_value_extracted: 74.3
+    value_match: true
+  changes-in-inventories:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 229939
+    db_source: csp_lv
+    source_match: true
+    te_description: The stocks of goods held by firms in Latvia increased by 390317 EUR Thousand in the fourth quarter of
+      2025. Changes in Inventories in Latvia averaged 79932.15 EUR Thousand from 1995 until 2025, reaching an all time high
+      of 588796.00 EUR Tho
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau Of Latvia
+    te_value_extracted: 390317.0
+    value_match: false
+  consumer-confidence:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: -15.6
+    db_source: csp_lv
+    source_match: true
+    te_description: 'Consumer Confidence in Latvia decreased to -16.10 points in April from -9.60 points in March of 2026.
+      Consumer Confidence in Latvia averaged -13.87 points from 1993 until 2026, reaching an all time high of 13.90 points
+      in September of 2006 '
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: -16.1
+    value_match: true
+  consumer-spending:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 4536.332
+    db_source: csp_lv
+    source_match: true
+    te_description: 'Consumer Spending in Latvia decreased to 4622174 EUR Thousand in the fourth quarter of 2025 from 4798151
+      EUR Thousand in the third quarter of 2025. Consumer Spending in Latvia averaged 3404546.20 EUR Thousand from 1995 until
+      2025, reaching '
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 4622174.0
+    value_match: false
+  core-cpi:
+    db_latest_date: '2026-04-30'
+    db_latest_source: eurostat
+    db_latest_value: 102.66
+    db_source: eurostat
+    source_match: true
+    te_description: Core consumer prices in Latvia increased 2.60 percent in April of 2026 over the same month in the previous
+      year. Core Inflation Rate in Latvia averaged 3.38 percent from 1997 until 2026, reaching an all time high of 14.30 percent
+      in January
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 2.6
+    value_match: false
+  corporate-tax-rate:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 20
+    db_source: curated
+    source_match: true
+    te_description: The Corporate Tax Rate in Latvia stands at 20 percent. Corporate Tax Rate in Latvia averaged 19.16 percent
+      from 1995 until 2026, reaching an all time high of 29.00 percent in 1996 and a record low of 15.00 percent in 2002.
+      <span class='sour
+    te_source_code: curated
+    te_source_name: State Revenue Service, Latvia
+    te_value_extracted: 20.0
+    value_match: true
+  corruption-index:
+    db_latest_date: '2025-12-31'
+    db_latest_source: curated
+    db_latest_value: 60
+    db_source: curated
+    source_match: true
+    te_description: Latvia scored 60 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International.
+      Corruption Index in Latvia averaged 48.43 Points from 1998 until 2025, reaching an all time high of 60.00 Points in
+      2023 and
+    te_source_code: curated
+    te_source_name: Transparency International
+    te_value_extracted: null
+    value_match: null
+  corruption-rank:
+    db_latest_date: '2025-12-31'
+    db_latest_source: curated
+    db_latest_value: 38
+    db_source: curated
+    source_match: true
+    te_description: 'Latvia is the 37 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions
+      Index reported by Transparency International. Corruption Rank in Latvia averaged 49.04 from 1998 until 2025, reaching
+      an all time high '
+    te_source_code: curated
+    te_source_name: Transparency International
+    te_value_extracted: null
+    value_match: null
+  cpi-clothing:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 106.9
+    db_source: csp_lv
+    source_match: true
+    te_description: CPI Clothing in Latvia increased to 106.90 points in April from 99.40 points in March of 2026. CPI Clothing
+      in Latvia averaged 92.51 points from 2000 until 2026, reaching an all time high of 106.90 points in April of 2026 and
+      a record low o
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 106.9
+    value_match: true
+  cpi-education:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 101.9
+    db_source: csp_lv
+    source_match: true
+    te_description: CPI Education in Latvia increased to 101.90 points in April from 101.80 points in March of 2026. CPI Education
+      in Latvia averaged 62.97 points from 2000 until 2026, reaching an all time high of 104.70 points in December of 2025
+      and a record
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 101.9
+    value_match: true
+  cpi-food:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 100.2
+    db_source: csp_lv
+    source_match: true
+    te_description: CPI Food in Latvia decreased to 100.20 points in April from 100.50 points in March of 2026. CPI Food in
+      Latvia averaged 56.59 points from 2000 until 2026, reaching an all time high of 101.00 points in October of 2025 and
+      a record low of 27.
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 100.2
+    value_match: true
+  cpi-housing-utilities:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 103.8
+    db_source: csp_lv
+    source_match: true
+    te_description: CPI Housing Utilities in Latvia decreased to 103.80 points in April from 103.90 points in March of 2026.
+      CPI Housing Utilities in Latvia averaged 55.94 points from 1999 until 2026, reaching an all time high of 110.70 points
+      in May of 2023 a
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 103.8
+    value_match: true
+  cpi-recreation-and-culture:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 101.4
+    db_source: csp_lv
+    source_match: true
+    te_description: CPI Recreation and Culture in Latvia decreased to 101.40 points in April from 103.70 points in March of
+      2026. CPI Recreation and Culture in Latvia averaged 65.32 points from 2000 until 2026, reaching an all time high of
+      103.70 points in Mar
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 101.4
+    value_match: true
+  cpi-transportation:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 109.9
+    db_source: csp_lv
+    source_match: true
+    te_description: 'The transportation sub-index of the CPI basket in Latvia increased to 109.90 points in April of 2026
+      from 106.90 points in March of 2026. CPI Transportation in Latvia averaged 73.60 points from 1999 until 2026, reaching
+      an all time high of '
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 109.9
+    value_match: true
+  credit-rating:
+    db_latest_date: '2026-04-01'
+    db_latest_source: curated
+    db_latest_value: 72
+    db_source: curated
+    source_match: unknown
+    te_description: ''
+    te_source_code: null
+    te_source_name: null
+    te_value_extracted: null
+    value_match: null
+  current-account:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: -0.35
+    db_source: eurostat
+    source_match: false
+    te_description: Latvia’s recorded a current account deficit widened to EUR 214 million in March 2026, compared with EUR
+      189 million deficit in the same month of the previous year. The goods account shortfall expanded to EUR 360 million
+      from EUR 318 million
+    te_source_code: bol_lv
+    te_source_name: Bank of Latvia
+    te_value_extracted: 214.0
+    value_match: false
+  current-account-to-gdp:
+    db_latest_date: null
+    db_latest_source: null
+    db_latest_value: null
+    db_source: eurostat
+    source_match: true
+    te_description: Latvia recorded a Current Account deficit of 3.40 percent of the country's Gross Domestic Product in 2025.
+      Current Account to GDP in Latvia averaged -4.02 percent of GDP from 1992 until 2025, reaching an all time high of 11.90
+      percent of GD
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 3.4
+    value_match: null
+  disposable-personal-income:
+    db_latest_date: null
+    db_latest_source: null
+    db_latest_value: null
+    db_source: eurostat
+    source_match: unknown
+    te_description: ''
+    te_source_code: null
+    te_source_name: null
+    te_value_extracted: null
+    value_match: null
+  employed-persons:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 899.1
+    db_source: csp_lv
+    source_match: true
+    te_description: 'The number of employed persons in Latvia decreased to 883 Thousand in the fourth quarter of 2025 from
+      892 Thousand in the third quarter of 2025. Employed Persons in Latvia averaged 979.99 Thousand from 1991 until 2025,
+      reaching an all time '
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 883.0
+    value_match: true
+  employment-rate:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 72.3
+    db_source: csp_lv
+    source_match: true
+    te_description: Employment Rate in Latvia decreased to 64.80 percent in the fourth quarter of 2025 from 65.20 percent
+      in the third quarter of 2025. Employment Rate in Latvia averaged 59.77 percent from 2002 until 2025, reaching an all
+      time high of 65.60 pe
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 64.8
+    value_match: false
+  energy-inflation:
+    db_latest_date: '2026-04-30'
+    db_latest_source: eurostat
+    db_latest_value: 111.81
+    db_source: eurostat
+    source_match: false
+    te_description: CPI Housing Utilities in Latvia decreased to 103.80 points in April from 103.90 points in March of 2026.
+      CPI Housing Utilities in Latvia averaged 55.94 points from 1999 until 2026, reaching an all time high of 110.70 points
+      in May of 2023 a
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 103.8
+    value_match: false
+  exports:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: 1847.1
+    db_source: csp_lv
+    source_match: true
+    te_description: Latvia's exports rose 6% year-on-year to EUR 1,847.1 million in March 2026, supported by higher shipments
+      of mineral fuels, oil and refined petroleum products (15.6%), electrical equipment and appliances (4.6%), machinery
+      and mechanical app
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: null
+    value_match: null
+  food-inflation:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: -0.3
+    db_source: csp_lv
+    source_match: true
+    te_description: 'Cost of food in Latvia decreased 0.30 percent in April of 2026 over the same month in the previous year.
+      Food Inflation in Latvia averaged 4.90 percent from 1998 until 2026, reaching an all time high of 29.50 percent in October
+      of 2022 and '
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 29.5
+    value_match: false
+  gdp:
+    db_latest_date: '2024-12-31'
+    db_latest_source: worldbank
+    db_latest_value: 43.68
+    db_source: worldbank
+    source_match: true
+    te_description: The Gross Domestic Product (GDP) in Latvia was worth 43.52 billion US dollars in 2024, according to official
+      data from the World Bank. The GDP value of Latvia represents 0.04 percent of the world economy. <span class='source-present'>source
+    te_source_code: worldbank
+    te_source_name: World Bank
+    te_value_extracted: 43.52
+    value_match: true
+  gdp-per-capita:
+    db_latest_date: '2024-12-31'
+    db_latest_source: worldbank
+    db_latest_value: 16374.77
+    db_source: worldbank
+    source_match: true
+    te_description: The Gross Domestic Product per capita in Latvia was last recorded at 16951.36 US dollars in 2024. The
+      GDP per Capita in Latvia is equivalent to 134 percent of the world's average. GDP per Capita in Latvia averaged 10329.70
+      USD from 1990 unt
+    te_source_code: worldbank
+    te_source_name: World Bank
+    te_value_extracted: null
+    value_match: null
+  gdp-per-capita-ppp:
+    db_latest_date: '2024-12-31'
+    db_latest_source: worldbank
+    db_latest_value: 37611.67
+    db_source: worldbank
+    source_match: true
+    te_description: The Gross Domestic Product per capita in Latvia was last recorded at 38936.05 US dollars in 2024, when
+      adjusted by purchasing power parity (PPP). The GDP per Capita, in Latvia, when adjusted by Purchasing Power Parity is
+      equivalent to 219 p
+    te_source_code: worldbank
+    te_source_name: World Bank
+    te_value_extracted: null
+    value_match: null
+  gdp-real:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 8126.618
+    db_source: csp_lv
+    source_match: true
+    te_description: The economy of Latvia expanded by 2.9% year-on-year in the fourth quarter of 2025, accelerating from an
+      upwardly revised 2.6% growth in the previous quarter. This marked the strongest economic expansion since Q1 2023, driven
+      primarily by ro
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 2.9
+    value_match: false
+  government-debt:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 25094.784
+    db_source: csp_lv
+    source_match: true
+    te_description: Government Debt in Latvia increased to 20173.90 EUR Million in the fourth quarter of 2025 from 18965 EUR
+      Million in the third quarter of 2025. Government Debt in Latvia averaged 8146.98 EUR Million from 2000 until 2025, reaching
+      an all time
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 20173.9
+    value_match: false
+  government-debt-total:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 20.17
+    db_source: eurostat
+    source_match: true
+    te_description: Latvia recorded a Government Debt to GDP of 46.90 percent of the country's Gross Domestic Product in 2025.
+      Government Debt to GDP in Latvia averaged 29.43 percent of GDP from 1995 until 2025, reaching an all time high of 48.60
+      percent of GD
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 46.9
+    value_match: false
+  government-spending:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 1783.023
+    db_source: csp_lv
+    source_match: true
+    te_description: Government Spending in Latvia increased to 1857520 EUR Thousand in the fourth quarter of 2025 from 1641466
+      EUR Thousand in the third quarter of 2025. Government Spending in Latvia averaged 1291429.50 EUR Thousand from 1995
+      until 2025, reach
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 1857520.0
+    value_match: false
+  government-spending-eur:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 1783.023
+    db_source: csp_lv
+    source_match: true
+    te_description: Government Spending in Latvia increased to 1857520 EUR Thousand in the fourth quarter of 2025 from 1641466
+      EUR Thousand in the third quarter of 2025. Government Spending in Latvia averaged 1291429.50 EUR Thousand from 1995
+      until 2025, reach
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 1857520.0
+    value_match: false
+  gross-fixed-capital-formation:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 1905.326
+    db_source: csp_lv
+    source_match: true
+    te_description: Gross Fixed Capital Formation in Latvia decreased to 2150599 EUR Thousand in the fourth quarter of 2025
+      from 2194043 EUR Thousand in the third quarter of 2025. Gross Fixed Capital Formation in Latvia averaged 1424370.11
+      EUR Thousand from 19
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau Of Latvia
+    te_value_extracted: 2150599.0
+    value_match: false
+  hospital-beds:
+    db_latest_date: '2023-12-31'
+    db_latest_source: curated
+    db_latest_value: 4.96
+    db_source: curated
+    source_match: true
+    te_description: 'Hospital Beds in Latvia decreased to 4.96 per 1000 people in 2023 from 5.03 per 1000 people in 2022.
+      Hospital Beds in Latvia averaged 8.91 per 1000 people from 1970 until 2023, reaching an all time high of 14.24 per 1000
+      people in 1987 and '
+    te_source_code: curated
+    te_source_name: OECD
+    te_value_extracted: 4.96
+    value_match: true
+  house-price-index:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 224.02
+    db_source: eurostat
+    source_match: true
+    te_description: Housing Index in Latvia increased to 224.02 points in the fourth quarter of 2025 from 219.79 points in
+      the third quarter of 2025. Housing Index in Latvia averaged 131.74 points from 2006 until 2025, reaching an all time
+      high of 224.02 point
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 224.02
+    value_match: true
+  imports:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: 2241.7
+    db_source: csp_lv
+    source_match: true
+    te_description: Latvia's imports climbed 11.4% year-on-year to EUR 2,241.7 million in March 2026, driven by higher purchases
+      of mineral fuels, oil and refined petroleum products (58.2%), mechanisms and mechanical devices (13.9%), and pharmaceutical
+      product
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: null
+    value_match: null
+  industrial-production:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: 109.2
+    db_source: csp_lv
+    source_match: true
+    te_description: Latvia’s industrial production rose 9.5% year-on-year in March 2026, following an upwardly revised 6.4%
+      increase in the previous month. Manufacturing output rebounded to 4.4% from a 2% decline in February, driven by gains
+      in food products (
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: null
+    value_match: null
+  inflation-cpi:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 296.48
+    db_source: csp_lv
+    source_match: true
+    te_description: Latvia’s annual inflation rate eased to 2.9% year-on-year in April 2026 from 3.4% in the previous month,
+      largely driven by deflation in food and non-alcoholic beverages (-0.3% vs 1.1% in March). Price growth also slowed across
+      several categ
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 2.9
+    value_match: false
+  interest-rate:
+    db_latest_date: '2025-06-11'
+    db_latest_source: ecb
+    db_latest_value: 2.15
+    db_source: ecb
+    source_match: true
+    te_description: 'The benchmark interest rate in Latvia is set by the European Central Bank. Interest Rate in Latvia averaged
+      1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of
+      0.00 percent in '
+    te_source_code: ecb
+    te_source_name: European Central Bank
+    te_value_extracted: 4.75
+    value_match: false
+  job-vacancies:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 2.2
+    db_source: eurostat
+    source_match: true
+    te_description: Job Vacancies in Latvia decreased to 18592 in the fourth quarter of 2025 from 18923 in the third quarter
+      of 2025. Job Vacancies in Latvia averaged 17029.23 from 2005 until 2025, reaching an all time high of 29684.00 in the
+      second quarter of
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 18592.0
+    value_match: false
+  labor-force-participation-rate:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 77.8
+    db_source: csp_lv
+    source_match: true
+    te_description: Labor Force Participation Rate in Latvia decreased to 69.40 percent in the fourth quarter of 2025 from
+      70 percent in the third quarter of 2025. Labor Force Participation Rate in Latvia averaged 66.42 percent from 2002 until
+      2025, reaching a
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 69.4
+    value_match: false
+  labour-costs:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 157.6
+    db_source: eurostat
+    source_match: false
+    te_description: Labour Costs in Latvia increased to 140.97 points in the fourth quarter of 2025 from 138.70 points in
+      the third quarter of 2025. Labour Costs in Latvia averaged 69.00 points from 1995 until 2025, reaching an all time high
+      of 140.97 points i
+    te_source_code: ecb
+    te_source_name: European Central Bank
+    te_value_extracted: 140.97
+    value_match: false
+  long-term-unemployment-rate:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 1.9
+    db_source: eurostat
+    source_match: true
+    te_description: 'Long Term Unemployment Rate in Latvia decreased to 1.90 percent in the fourth quarter of 2025 from 2.70
+      percent in the third quarter of 2025. Long Term Unemployment Rate in Latvia averaged 4.54 percent from 1998 until 2025,
+      reaching an all '
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 1.9
+    value_match: true
+  manufacturing-production:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: 101
+    db_source: csp_lv
+    source_match: true
+    te_description: Manufacturing Production in Latvia increased 4.40 percent in March of 2026 over the same month in the
+      previous year. Manufacturing Production in Latvia averaged 3.13 percent from 1997 until 2026, reaching an all time high
+      of 27.70 percent i
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 4.4
+    value_match: false
+  medical-doctors:
+    db_latest_date: '2021-12-31'
+    db_latest_source: curated
+    db_latest_value: 3.36
+    db_source: curated
+    source_match: true
+    te_description: Medical Doctors in Latvia increased to 3.36 per 1000 people in 2021 from 3.34 per 1000 people in 2020.
+      Medical Doctors in Latvia averaged 3.09 per 1000 people from 1989 until 2021, reaching an all time high of 3.61 per
+      1000 people in 1991 a
+    te_source_code: curated
+    te_source_name: OECD
+    te_value_extracted: 3.36
+    value_match: true
+  minimum-wages:
+    db_latest_date: '2026-06-30'
+    db_latest_source: eurostat
+    db_latest_value: 780
+    db_source: eurostat
+    source_match: true
+    te_description: Minimum Wages in Latvia increased to 780 EUR/Month in the second quarter of 2026 from 740 EUR/Month in
+      the fourth quarter of 2025. Minimum Wages in Latvia averaged 319.15 EUR/Month from 1999 until 2026, reaching an all
+      time high of 780.00 E
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 780.0
+    value_match: true
+  mining-production:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: 69.3
+    db_source: csp_lv
+    source_match: true
+    te_description: Mining production in Latvia decreased 21.50 percent in March of 2026 over the same month in the previous
+      year. Mining Production in Latvia averaged 4.51 percent from 2001 until 2026, reaching an all time high of 103.50 percent
+      in March of 2
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 103.5
+    value_match: false
+  nurses:
+    db_latest_date: '2023-12-31'
+    db_latest_source: curated
+    db_latest_value: 4.18
+    db_source: curated
+    source_match: true
+    te_description: Nurses in Latvia remained unchanged at 4.18 per 1000 people in 2023 from 4.18 per 1000 people in 2022.
+      Nurses in Latvia averaged 5.05 per 1000 people from 2000 until 2023, reaching an all time high of 6.01 per 1000 people
+      in 2008 and a reco
+    te_source_code: curated
+    te_source_name: OECD
+    te_value_extracted: 4.18
+    value_match: true
+  personal-income-tax-rate:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 36
+    db_source: curated
+    source_match: true
+    te_description: The Personal Income Tax Rate in Latvia stands at 36 percent. Personal Income Tax Rate in Latvia averaged
+      26.66 percent from 1995 until 2026, reaching an all time high of 36.00 percent in 2026 and a record low of 23.00 percent
+      in 2009. <span
+    te_source_code: curated
+    te_source_name: State Revenue Service, Latvia
+    te_value_extracted: 36.0
+    value_match: true
+  population:
+    db_latest_date: '2026-04-30'
+    db_latest_source: csp_lv
+    db_latest_value: 1.8159
+    db_source: csp_lv
+    source_match: true
+    te_description: The total population in Latvia was estimated at 1.9 million people in 2025, according to the latest census
+      figures and projections from Trading Economics. Looking back, in the year of 1960, Latvia had a population of 2.1 million
+      people. <sp
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 1.9
+    value_match: true
+  ppi:
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 137.9
+    db_source: eurostat
+    source_match: false
+    te_description: Producer Prices in Latvia decreased to 129.20 points in March from 130.70 points in February of 2026.
+      Producer Prices in Latvia averaged 81.19 points from 2000 until 2026, reaching an all time high of 143.70 points in
+      December of 2022 and a
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 129.2
+    value_match: false
+  productivity:
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 108.17
+    db_source: eurostat
+    source_match: true
+    te_description: Productivity in Latvia decreased to 119.75 points in the fourth quarter of 2025 from 122.77 points in
+      the third quarter of 2025. Productivity in Latvia averaged 82.68 points from 1995 until 2025, reaching an all time high
+      of 124.29 points i
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 119.75
+    value_match: false
+  retail-sales:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: 106.6
+    db_source: csp_lv
+    source_match: true
+    te_description: Retail Sales in Latvia decreased 0.1% month-over-month in March 2026, following a 1.5% fall in February,
+      led by falls in retail sales of pharmaceutical and medical goods (-3.5%) and information and communication equipment
+      in specialised sto
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: null
+    value_match: null
+  retirement-age-men:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 65
+    db_source: curated
+    source_match: true
+    te_description: Retirement Age Men in Latvia remained unchanged at 65 Years in 2026 from 65 Years in 2025. Retirement
+      Age Men in Latvia averaged 62.98 Years from 2004 until 2026, reaching an all time high of 65.00 Years in 2025 and a
+      record low of 62.00 Ye
+    te_source_code: curated
+    te_source_name: State Social Insurance Agency, Latvia
+    te_value_extracted: 65.0
+    value_match: true
+  retirement-age-women:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 65
+    db_source: curated
+    source_match: true
+    te_description: Retirement Age Women in Latvia remained unchanged at 65 Years in 2026 from 65 Years in 2025. Retirement
+      Age Women in Latvia averaged 62.65 Years from 2004 until 2026, reaching an all time high of 65.00 Years in 2025 and
+      a record low of 59.5
+    te_source_code: curated
+    te_source_name: State Social Insurance Agency, Latvia
+    te_value_extracted: 65.0
+    value_match: true
+  sales-tax-rate:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 21
+    db_source: curated
+    source_match: true
+    te_description: The Sales Tax Rate in Latvia stands at 21 percent. Sales Tax Rate in Latvia averaged 20.04 percent from
+      2000 until 2026, reaching an all time high of 22.00 percent in 2011 and a record low of 18.00 percent in 2001. <span
+      class='source-prese
+    te_source_code: curated
+    te_source_name: State Revenue Service, Latvia
+    te_value_extracted: 21.0
+    value_match: true
+  services-inflation:
+    db_latest_date: '2026-04-30'
+    db_latest_source: eurostat
+    db_latest_value: 102.93
+    db_source: eurostat
+    source_match: unknown
+    te_description: ''
+    te_source_code: null
+    te_source_name: null
+    te_value_extracted: null
+    value_match: null
+  services-sentiment:
+    db_latest_date: '2026-04-30'
+    db_latest_source: eurostat
+    db_latest_value: 1.5
+    db_source: eurostat
+    source_match: unknown
+    te_description: ''
+    te_source_code: null
+    te_source_name: null
+    te_value_extracted: null
+    value_match: null
+  social-security-rate:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 34.09
+    db_source: curated
+    source_match: true
+    te_description: The Social Security Rate in Latvia stands at 34.09 percent. Social Security Rate in Latvia averaged 34.00
+      percent from 2004 until 2026, reaching an all time high of 35.09 percent in 2012 and a record low of 33.09 percent in
+      2005. <span clas
+    te_source_code: curated
+    te_source_name: State Revenue Service - Ministry of Finance
+    te_value_extracted: 34.09
+    value_match: true
+  social-security-rate-companies:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 23.59
+    db_source: curated
+    source_match: true
+    te_description: The Social Security Rate For Companies in Latvia stands at 23.59 percent. Social Security Rate For Companies
+      in Latvia averaged 23.89 percent from 2004 until 2026, reaching an all time high of 24.09 percent in 2005 and a record
+      low of 23.59
+    te_source_code: curated
+    te_source_name: State Revenue Service - Ministry of Finance
+    te_value_extracted: 23.59
+    value_match: true
+  social-security-rate-employees:
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 10.5
+    db_source: curated
+    source_match: true
+    te_description: 'The Social Security Rate For Employees in Latvia stands at 10.50 percent. Social Security Rate For Employees
+      in Latvia averaged 10.11 percent from 2004 until 2026, reaching an all time high of 11.00 percent in 2012 and a record
+      low of 9.00 '
+    te_source_code: curated
+    te_source_name: State Revenue Service - Ministry of Finance
+    te_value_extracted: 10.5
+    value_match: true
+  terrorism-index:
+    db_latest_date: '2025-12-31'
+    db_latest_source: curated
+    db_latest_value: 0.23
+    db_source: curated
+    source_match: true
+    te_description: Terrorism Index in Latvia decreased to 0.23 Points in 2025 from 0.42 Points in 2024. Terrorism Index in
+      Latvia averaged 0.07 Points from 2002 until 2025, reaching an all time high of 0.66 Points in 2002 and a record low
+      of 0.00 Points in 20
+    te_source_code: curated
+    te_source_name: Institute for Economics and Peace
+    te_value_extracted: 0.23
+    value_match: true
+  trade-balance:
+    db_latest_date: '2026-03-31'
+    db_latest_source: csp_lv
+    db_latest_value: -394.6
+    db_source: csp_lv
+    source_match: true
+    te_description: 'Latvia’s trade deficit widened to EUR 394.6 million in March 2026 from EUR 270.1 million in the corresponding
+      month a year earlier. Imports climbed 11.4% year-on-year to EUR 2,241.7 million, driven by higher purchases of mineral
+      fuels, oil '
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 394.6
+    value_match: false
+  unemployed-persons:
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 61
+    db_source: eurostat
+    source_match: false
+    te_description: 'The number of unemployed persons in Latvia decreased to 43909 in March of 2026 from 45761 in February
+      of 2026. Unemployed Persons in Latvia averaged 86139.81 from 1993 until 2026, reaching an all time high of 194253.00
+      in March of 2010 and '
+    te_source_code: curated
+    te_source_name: State Employment Agency, Latvia
+    te_value_extracted: 43909.0
+    value_match: false
+  unemployment:
+    db_latest_date: '2025-12-31'
+    db_latest_source: csp_lv
+    db_latest_value: 7
+    db_source: csp_lv
+    source_match: true
+    te_description: Latvia’s unemployment rate declined to 6.7% in the fourth quarter of 2025, down from 6.9% in the previous
+      quarter and the same period last year. The number of unemployed fell to 63.8 thousand from 66.2 thousand in Q3, while
+      total employment
+    te_source_code: csp_lv
+    te_source_name: Central Statistical Bureau of Latvia
+    te_value_extracted: 6.7
+    value_match: true
+  youth-unemployment-rate:
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 13.6
+    db_source: eurostat
+    source_match: true
+    te_description: Youth Unemployment Rate in Latvia decreased to 13.60 percent in March from 14.60 percent in February of
+      2026. Youth Unemployment Rate in Latvia averaged 19.18 percent from 1998 until 2026, reaching an all time high of 42.60
+      percent in Janua
+    te_source_code: eurostat
+    te_source_name: EUROSTAT
+    te_value_extracted: 13.6
+    value_match: true

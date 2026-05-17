@@ -1,0 +1,82 @@
+{
+  "gdp-real": {
+    "desc": "GDP Constant Prices in the United Kingdom increased to 710896 GBP Million in the first quarter of 2026 from 706453 GBP Million in the fourth quarter of 2025. GDP Constant Prices in the United Kingdom averaged 397252.51 GBP Million from 1955 until 2026, reaching an all time high of 710896.00 GBP Million in the first quarter of 2026 and a record low of 145457.00 GBP Million in the first quarter of 1955. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "government-debt": {
+    "desc": "Government Debt in the United Kingdom increased to 2910.80 GBP Billion in March from 2881.90 GBP Billion in February of 2026. Government Debt in the United Kingdom averaged 1087.55 GBP Billion from 1975 until 2026, reaching an all time high of 2927.00 GBP Billion in November of 2025 and a record low of 52.10 GBP Billion in March of 1975. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "hospital-beds": {
+    "desc": "Hospital Beds in the United Kingdom remained unchanged at 2.44 per 1000 people in 2023 from 2.44 per 1000 people in 2022. Hospital Beds in the United Kingdom averaged 3.07 per 1000 people from 2000 until 2023, reaching an all time high of 4.08 per 1000 people in 2000 and a record low of 2.43 per 1000 people in 2021. source: OECD",
+    "og": "",
+    "big": null
+  },
+  "hospitals": {
+    "desc": "Hospitals in the United Kingdom decreased to 29.73 per one million people in 2022 from 29.78 per one million people in 2021. Hospitals in the United Kingdom averaged 28.28 per one million people from 2012 until 2022, reaching an all time high of 29.78 per one million people in 2021 and a record low of 24.27 per one million people in 2014. source: OECD",
+    "og": "",
+    "big": null
+  },
+  "imports": {
+    "desc": "Imports to the UK rose 5.3% month-on-month to \u00a388.78 billion in March 2026. Goods imports inched up 0.1% to \u00a359.57 billion, with imports from the EU rising 2.7%, mainly driven by a \u00a30.5 billion increase in fuel imports. Imports from non-EU countries rose 7.5%, supported by higher imports of machinery and transport equipment, along with fuel. Meanwhile, services imports were unchanged at \u00a329.21 billion. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "industrial-production": {
+    "desc": "Industrial Production in the United Kingdom stalled year-on-year in March 2026, missing market expectations of 0.2% and compared with an upwardly revised 0.5% fall in the previous month. Industrial Production in the United Kingdom averaged 1.71 percent from 1949 until 2026, reaching an all time high of 26.70 percent in April of 2021 and a record low of -15.90 percent in April of 2020. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "inflation-cpi": {
+    "desc": "The annual inflation rate in the UK rose to 3.3% in March 2026, up from 3% in each of the previous two months and in line with expectations. This marks the highest reading in three months. The increase was driven in part by transport costs, which rose by 4.7%, the fastest pace since December 2022. Motor fuels, in particular, climbed by 4.9%, making the largest upward contribution, largely due to the impact of the war with Iran. The average price of petrol increased by 8.6 pence per litre between",
+    "og": "",
+    "big": null
+  },
+  "interest-rate": {
+    "desc": "The Bank of England voted 8\u20131 to keep Bank Rate unchanged at 3.75% in April 2026, with one member preferring an increase to 4% and several policymakers indicating they could consider additional rate increases in the future. Policymakers highlighted that the conflict in the Middle East has created significant uncertainty for global energy prices. While monetary policy cannot directly influence them, the Committee aims to ensure any inflationary impact feeds through in a way consistent with the 2%",
+    "og": "",
+    "big": null
+  },
+  "labor-force-participation-rate": {
+    "desc": "Labor Force Participation Rate in the United Kingdom decreased to 79 percent in February from 79.30 percent in January of 2026. Labor Force Participation Rate in the United Kingdom averaged 76.87 percent from 1971 until 2026, reaching an all time high of 79.70 percent in February of 2020 and a record low of 74.10 percent in April of 1983. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "manufacturing-production": {
+    "desc": "Manufacturing production in the UK increased by 1.2% year-on-year in March 2026, against expectations of stagnation, recovering from a revised 0.8% decline in the preceding period. Manufacturing Production in the United Kingdom averaged 2.06 percent from 1949 until 2026, reaching an all time high of 41.90 percent in April of 2021 and a record low of -23.30 percent in April of 2020. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "medical-doctors": {
+    "desc": "",
+    "og": "",
+    "big": null
+  },
+  "military-expenditure": {
+    "desc": "Military Expenditure in the United Kingdom decreased to 88977.50 USD Million in 2025 from 89814.60 USD Million in 2024. Military Expenditure in the United Kingdom averaged 33599.00 USD Million from 1950 until 2025, reaching an all time high of 89814.60 USD Million in 2024 and a record low of 2603.30 USD Million in 1950. source: SIPRI",
+    "og": "",
+    "big": null
+  },
+  "minimum-wages": {
+    "desc": "Minimum Wages in the United Kingdom increased to 12.71 GBP/Hour in 2026 from 12.21 GBP/Hour in 2025. Minimum Wages in the United Kingdom averaged 7.72 GBP/Hour from 2005 until 2026, reaching an all time high of 12.71 GBP/Hour in 2026 and a record low of 5.05 GBP/Hour in 2005. source: Department for Work and Pensions, UK",
+    "og": "",
+    "big": null
+  },
+  "mining-production": {
+    "desc": "Mining production in the United Kingdom decreased 3.90 percent in March of 2026 over the same month in the previous year. Mining Production in the United Kingdom averaged -1.25 percent from 1949 until 2026, reaching an all time high of 854.30 percent in February of 1973 and a record low of -90.50 percent in February of 1972. source: Office for National Statistics",
+    "og": "",
+    "big": null
+  },
+  "money-supply-m2": {
+    "desc": "Money Supply M2 in the United Kingdom increased to 3199976 GBP Million in March from 3198023 GBP Million in February of 2026. Money Supply M2 in the United Kingdom averaged 1503043.39 GBP Million from 1986 until 2026, reaching an all time high of 3199976.00 GBP Million in March of 2026 and a record low of 167298.00 GBP Million in December of 1986. source: Bank of England",
+    "og": "",
+    "big": null
+  },
+  "mortgage-approvals": {
+    "desc": "Net mortgage approvals for house purchases in the UK rose to 63,531 in March 2026, up from a revised 62,708 in February and surpassing market expectations of 60,000. This marked the highest level since November 2025, exceeding the six-month average of around 63,200, supported by declining borrowing costs. Remortgaging approvals, which only account for switches to a different lender, also climbed to 51,300 in March from 41,200 in February. The effective interest rate on newly drawn mortgages fell",
+    "og": "",
+    "big": null
+  }
+}

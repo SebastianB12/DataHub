@@ -1,0 +1,488 @@
+{
+  "business-confidence": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina NBS Manufacturing PMI\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "cash-reserve-ratio": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Reserve Requirement Ratio for Large Banks\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "central-bank-balance": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "corporate-tax-rate": {
+    "src_name": "State Administration of Taxation",
+    "src_url": "http://www.chinatax.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Corporate Tax Rate\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "corruption-index": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Corruption Index\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "corruption-rank": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Corruption Rank\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "credit-rating": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "exports": {
+    "src_name": "General Administration of Customs",
+    "src_url": "http://www.customs.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Exports\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "exports-yoy": {
+    "src_name": "General Administration of Customs",
+    "src_url": "http://www.customs.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Exports YoY\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "fixed-asset-investment": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Fixed Asset Investment\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "foreign-exchange-reserves": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Foreign Exchange Reserves\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "gdp": {
+    "src_name": "World Bank",
+    "src_url": "https://www.worldbank.org/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina GDP\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "gdp-growth-rate": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "gdp-per-capita": {
+    "src_name": "World Bank",
+    "src_url": "https://www.worldbank.org/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina GDP per capita\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "gdp-per-capita-ppp": {
+    "src_name": "World Bank",
+    "src_url": "https://www.worldbank.org/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina GDP per capita PPP\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "gdp-real": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "gold-reserves": {
+    "src_name": "World Gold Council",
+    "src_url": "http://www.gold.org",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Gold Reserves\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "hospital-beds": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "hospitals": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "households-debt-to-gdp": {
+    "src_name": "Bank for International Settlements",
+    "src_url": "https://www.bis.org/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Households Debt To GDP\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "housing-index": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Newly Built House Prices YoY Change\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "imports": {
+    "src_name": "General Administration of Customs",
+    "src_url": "http://www.customs.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Imports\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "imports-yoy": {
+    "src_name": "General Administration of Customs",
+    "src_url": "http://www.customs.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Imports YoY\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "industrial-production-yoy": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "inflation-cpi": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Inflation Rate\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "interbank-rate": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Three Month Interbank Rate (Shibor)\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "interest-rate": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Loan Prime Rate\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "loan-prime-rate-5y": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Loan Prime Rate 5Y\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "manufacturing-pmi": {
+    "src_name": "S&P Global",
+    "src_url": "https://www.pmi.spglobal.com/public",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina RatingDog Manufacturing PMI\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "medical-doctors": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "military-expenditure": {
+    "src_name": "SIPRI",
+    "src_url": "https://www.sipri.org",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Military Expenditure\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "money-supply-m0": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Money Supply M0\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "money-supply-m1": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Money Supply M1\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "money-supply-m2": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Money Supply M2\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "new-bank-loans": {
+    "src_name": "People's Bank of China",
+    "src_url": "http://www.pbc.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina New Bank Loans\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "non-manufacturing-pmi": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Non Manufacturing PMI\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "nurses": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "personal-income-tax-rate": {
+    "src_name": "State Administration of Taxation",
+    "src_url": "http://www.chinatax.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Personal Income Tax Rate\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "population": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Population\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "ppi-yoy": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "private-debt-to-gdp": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "retail-sales": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Retail Sales MoM\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "retirement-age-men": {
+    "src_name": "State Administration of Taxation",
+    "src_url": "http://www.chinatax.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Retirement Age - Men\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "retirement-age-women": {
+    "src_name": "State Administration of Taxation",
+    "src_url": "http://www.chinatax.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Retirement Age - Women\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "sales-tax-rate": {
+    "src_name": "State Administration of Taxation",
+    "src_url": "http://www.chinatax.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Sales Tax Rate - VAT\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "social-security-rate": {
+    "src_name": "State Administration of Taxation",
+    "src_url": "http://www.chinatax.gov.cn",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Social Security Rate\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "social-security-rate-companies": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "social-security-rate-employees": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "terrorism-index": {
+    "src_name": "Institute for Economics and Peace",
+    "src_url": "http://economicsandpeace.org",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Terrorism Index\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "total-debt-to-gdp": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "trade-balance": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "unemployment": {
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tTRADING ECONOMICS | 20 Million Indicators for 196 Countries\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "weapons-sales": {
+    "src_name": "SIPRI",
+    "src_url": "https://www.sipri.org",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Weapons Sales\n",
+    "hero_val": null,
+    "teh1_val": null
+  },
+  "youth-unemployment-rate": {
+    "src_name": "National Bureau of Statistics of China",
+    "src_url": "http://www.stats.gov.cn/",
+    "meta_desc": null,
+    "og_desc": null,
+    "title": "\n\tChina Youth Unemployment Rate\n",
+    "hero_val": null,
+    "teh1_val": null
+  }
+}

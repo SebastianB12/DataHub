@@ -1,0 +1,392 @@
+{
+  "budget-deficit": {
+    "slug": "budget-deficit",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "business-confidence": {
+    "slug": "business-confidence",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "capacity-utilization": {
+    "slug": "capacity-utilization",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "changes-in-inventories": {
+    "slug": "changes-in-inventories",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en",
+    "meta_desc": ""
+  },
+  "consumer-confidence": {
+    "slug": "consumer-confidence",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "consumer-spending": {
+    "slug": "consumer-spending",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en",
+    "meta_desc": ""
+  },
+  "core-cpi": {
+    "slug": "core-cpi",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "corporate-tax-rate": {
+    "slug": "corporate-tax-rate",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "corruption-index": {
+    "slug": "corruption-index",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "corruption-rank": {
+    "slug": "corruption-rank",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "cpi-clothing": {
+    "slug": "cpi-clothing",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "cpi-education": {
+    "slug": "cpi-education",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "cpi-food": {
+    "slug": "cpi-food",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "cpi-housing-utilities": {
+    "slug": "cpi-housing-utilities",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "cpi-recreation-and-culture": {
+    "slug": "cpi-recreation-and-culture",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "cpi-transportation": {
+    "slug": "cpi-transportation",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "credit-rating": {
+    "slug": "credit-rating",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "current-account": {
+    "slug": "current-account",
+    "te_source_name": "Bulgarian National Bank",
+    "te_source_url": "http://www.bnb.bg",
+    "meta_desc": ""
+  },
+  "current-account-to-gdp": {
+    "slug": "current-account-to-gdp",
+    "te_source_name": "Bulgarian National Bank",
+    "te_source_url": "http://www.bnb.bg",
+    "meta_desc": ""
+  },
+  "disposable-personal-income": {
+    "slug": "disposable-personal-income",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "employed-persons": {
+    "slug": "employed-persons",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "employment-rate": {
+    "slug": "employment-rate",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "energy-inflation": {
+    "slug": "energy-inflation",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "exports": {
+    "slug": "exports",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/",
+    "meta_desc": ""
+  },
+  "food-inflation": {
+    "slug": "food-inflation",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "gdp": {
+    "slug": "gdp",
+    "te_source_name": "World Bank",
+    "te_source_url": "https://www.worldbank.org/",
+    "meta_desc": ""
+  },
+  "gdp-per-capita": {
+    "slug": "gdp-per-capita",
+    "te_source_name": "World Bank",
+    "te_source_url": "https://www.worldbank.org/",
+    "meta_desc": ""
+  },
+  "gdp-per-capita-ppp": {
+    "slug": "gdp-per-capita-ppp",
+    "te_source_name": "World Bank",
+    "te_source_url": "https://www.worldbank.org/",
+    "meta_desc": ""
+  },
+  "gdp-real": {
+    "slug": "gdp-real",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "government-debt": {
+    "slug": "government-debt",
+    "te_source_name": "Ministry of Finance of the Republic of Bulgaria",
+    "te_source_url": "https://www.minfin.bg",
+    "meta_desc": ""
+  },
+  "government-debt-total": {
+    "slug": "government-debt-total",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "government-spending": {
+    "slug": "government-spending",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en",
+    "meta_desc": ""
+  },
+  "government-spending-eur": {
+    "slug": "government-spending-eur",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "gross-fixed-capital-formation": {
+    "slug": "gross-fixed-capital-formation",
+    "te_source_name": "National statistical institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/en/",
+    "meta_desc": ""
+  },
+  "hospital-beds": {
+    "slug": "hospital-beds",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "house-price-index": {
+    "slug": "house-price-index",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "imports": {
+    "slug": "imports",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg/",
+    "meta_desc": ""
+  },
+  "industrial-production": {
+    "slug": "industrial-production",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "inflation-cpi": {
+    "slug": "inflation-cpi",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "job-vacancies": {
+    "slug": "job-vacancies",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "labor-force-participation-rate": {
+    "slug": "labor-force-participation-rate",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "labour-costs": {
+    "slug": "labour-costs",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "long-term-unemployment-rate": {
+    "slug": "long-term-unemployment-rate",
+    "te_source_name": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": ""
+  },
+  "manufacturing-production": {
+    "slug": "manufacturing-production",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "medical-doctors": {
+    "slug": "medical-doctors",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "minimum-wages": {
+    "slug": "minimum-wages",
+    "te_source_name": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": ""
+  },
+  "mining-production": {
+    "slug": "mining-production",
+    "te_source_name": "National Statistical Institute of Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "nurses": {
+    "slug": "nurses",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "personal-income-tax-rate": {
+    "slug": "personal-income-tax-rate",
+    "te_source_name": "National Revenue Agency, Bulgaria",
+    "te_source_url": "http://ec.europa.eu",
+    "meta_desc": ""
+  },
+  "population": {
+    "slug": "population",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "https://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "ppi": {
+    "slug": "ppi",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "productivity": {
+    "slug": "productivity",
+    "te_source_name": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": ""
+  },
+  "retail-sales": {
+    "slug": "retail-sales",
+    "te_source_name": "National Statistical Institute, Bulgaria",
+    "te_source_url": "http://www.nsi.bg",
+    "meta_desc": ""
+  },
+  "retirement-age-men": {
+    "slug": "retirement-age-men",
+    "te_source_name": "National Revenue Agency",
+    "te_source_url": "http://www.noi.bg",
+    "meta_desc": ""
+  },
+  "retirement-age-women": {
+    "slug": "retirement-age-women",
+    "te_source_name": "National Revenue Agency",
+    "te_source_url": "http://www.noi.bg",
+    "meta_desc": ""
+  },
+  "sales-tax-rate": {
+    "slug": "sales-tax-rate",
+    "te_source_name": "National Revenue Agency, Bulgaria",
+    "te_source_url": "https://www.vatlive.com",
+    "meta_desc": ""
+  },
+  "services-inflation": {
+    "slug": "services-inflation",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "services-sentiment": {
+    "slug": "services-sentiment",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "social-security-rate": {
+    "slug": "social-security-rate",
+    "te_source_name": "National Revenue Agency, Bulgaria",
+    "te_source_url": "http://www.ey.com",
+    "meta_desc": ""
+  },
+  "social-security-rate-companies": {
+    "slug": "social-security-rate-companies",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "social-security-rate-employees": {
+    "slug": "social-security-rate-employees",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "terrorism-index": {
+    "slug": "terrorism-index",
+    "te_source_name": "Institute for Economics and Peace",
+    "te_source_url": "http://economicsandpeace.org",
+    "meta_desc": ""
+  },
+  "unemployed-persons": {
+    "slug": "unemployed-persons",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "unemployment": {
+    "slug": "unemployment",
+    "te_source_name": null,
+    "te_source_url": null,
+    "meta_desc": ""
+  },
+  "youth-unemployment-rate": {
+    "slug": "youth-unemployment-rate",
+    "te_source_name": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": ""
+  }
+}

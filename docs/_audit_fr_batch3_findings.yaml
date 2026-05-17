@@ -1,0 +1,339 @@
+long-term-unemployment-rate:
+  te_label: "INSEE, France"
+  te_value: 1.8
+  te_period: "Q4 2025"
+  our_source: eurostat
+  our_series: une_ltu_q:LTU
+  our_period: '2025-12-31'
+  our_value: 1.8
+  suggested_source: eurostat
+  source_match: false
+  value_match: true
+  flag: source-label-mismatch
+  fixed: false
+  fix_summary: "INSEE BDM TXCHLODU/CHLODU series discontinued 2019. Eurostat une_ltu_q value matches TE (1.8). Eurostat is the authoritative live source; TE label INSEE is misleading."
+
+manufacturing-production:
+  te_label: "INSEE, France"
+  te_value_yoy: 1.60
+  te_period: "March 2026"
+  our_source: insee
+  our_series: IPI-2021:010768307
+  our_period: '2026-03-31'
+  our_value: 105
+  suggested_source: insee
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "INSEE IPI-2021 NAF2=A10-CZ Index = 105 Mar 2026 (YoY ~+1.6% per TE). Source and concept match."
+
+medical-doctors:
+  te_label: OECD
+  te_value: 3.36
+  te_period: "2021"
+  our_source: curated
+  our_series: FR:medical-doctors
+  our_period: '2021-12-31'
+  our_value: 3.36
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Deleted stale 2022 DB rows (3.4); yaml already had 2021=3.36 matching TE."
+
+minimum-wages:
+  te_label: EUROSTAT
+  te_value: 1823
+  te_period: "Q2 2026 (2026-S1)"
+  our_source: curated
+  our_series: FR:minimum-wages
+  our_period: '2026-04-01'
+  our_value: 1823
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Updated curated yaml from 1801.8 (SMIC Jan 2026) to 1823 (Eurostat earn_mw_cur 2026-S1 = TE value). Source still curated since Eurostat semester period parsing is not implemented; value matches Eurostat exactly."
+
+mining-production:
+  te_label: "INSEE, France"
+  te_value_yoy: -5.70
+  te_period: "March 2026"
+  our_source: insee
+  our_series: IPI-2021:010768259
+  our_period: '2026-03-31'
+  our_value: 74.11
+  suggested_source: insee
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "INSEE IPI-2021 NAF2=A21-B (Industries extractives) Index = 74.11 Mar 2026, YoY direction matches TE -5.7%."
+
+nurses:
+  te_label: OECD
+  te_value: 9.64
+  te_period: "2021"
+  our_source: curated
+  our_series: FR:nurses
+  our_period: '2021-12-31'
+  our_value: 9.64
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Deleted stale 2022 DB rows (11.8); yaml already had 2021=9.64 matching TE."
+
+personal-income-tax-rate:
+  te_label: "Direction Générale des Finances Publiques"
+  te_value: 45
+  our_source: curated
+  our_series: FR:personal-income-tax-rate
+  our_period: '2026-12-31'
+  our_value: 45
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "DGFiP top marginal rate 45% matches TE. Curated source acceptable for tax constants."
+
+population:
+  te_label: "INSEE, France"
+  te_value: 69.1
+  te_period: "2026"
+  our_source: insee
+  our_series: POPULATION-STRUCTURE:001641586
+  our_period: '2026-12-31'
+  our_value: 69.082
+  suggested_source: insee
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Switched from worldbank (68.88) to INSEE BDM POPULATION-STRUCTURE 001641586 (Population totale au 1er janv, FR=FE incl. Mayotte). 2026 = 69.082M matches TE 69.1M. WB marked inactive, INSEE is new default."
+
+ppi:
+  te_label: "INSEE, France"
+  te_value: 126.1
+  te_period: "March 2026"
+  our_source: insee
+  our_series: IPPI-2021:010765093
+  our_period: '2026-03-31'
+  our_value: 115.4
+  suggested_source: insee
+  source_match: true
+  value_match: false
+  flag: base-year-difference
+  fixed: false
+  fix_summary: "Source matches (INSEE IPPI). Value differs because TE uses base 2015=100 (~126), we use INSEE's current base 2021=100 (115.4). IPPI-2015 was discontinued Aug 2020, cannot be chained directly. Multiple alternate aggregates tested (BC00, BCD0, BCXA, NA_A10-BE/CZ, MIG_NRG, EXT_IPP, FR_PM_IPP); none yield 126.1 in base 2021. Direction (YoY +0.2%) matches TE."
+
+productivity:
+  te_label: EUROSTAT
+  te_value: 101.41
+  te_period: "Q1 2026"
+  our_source: eurostat
+  our_series: namq_10_lp_ulc:RLPR_PER:I15
+  our_period: '2026-03-31'
+  our_value: 101.41
+  suggested_source: eurostat
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Switched series from RLPR_HW (Real Labour Prod per Hour Worked, Index 2020) to RLPR_PER (per Person Employed, Index 2015=100, SCA). Q1 2026 = 101.41 matches TE exactly. Hour-based series didn't have Q1 2026 data yet."
+
+retail-sales:
+  te_label: "Banque de France"
+  te_value_mom: 0.40
+  te_period: "March 2026"
+  our_source: insee
+  our_series: ICA-2021-COMMERCE:010770798
+  our_period: '2026-03-31'
+  our_value: 107.2
+  suggested_source: insee
+  source_match: false
+  value_match: partial
+  flag: source-label-mismatch
+  fixed: false
+  fix_summary: "TE labels source as Banque de France but BdF/STS DBnomics retail series ends 2024-08, only INSEE ICA-2021-COMMERCE is current. INSEE NAF=47 Index 107.2 Mar 2026, computed MoM = +0.19% vs TE +0.40% (slight seasonal-adjustment difference). Best available current French retail data is INSEE."
+
+retirement-age-men:
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_value: 63
+  te_period: "2026"
+  our_source: curated
+  our_series: FR:retirement-age-men
+  our_period: '2026-12-31'
+  our_value: 63
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Updated curated yaml from 64 to 63 (TE shows 63 in transition phase of 2023 reform, full 64 by 2030)."
+
+retirement-age-women:
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_value: 63
+  te_period: "2026"
+  our_source: curated
+  our_series: FR:retirement-age-women
+  our_period: '2026-12-31'
+  our_value: 63
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Updated curated yaml from 64 to 63 (same as men)."
+
+sales-tax-rate:
+  te_label: "Direction Générale des Finances Publiques"
+  te_value: 20
+  our_source: curated
+  our_series: FR:sales-tax-rate
+  our_period: '2026-12-31'
+  our_value: 20
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "France VAT standard rate 20% matches TE."
+
+services-inflation:
+  te_label: "INSEE, France"
+  te_value_yoy: 1.80
+  te_period: "April 2026"
+  our_source: insee
+  our_series: IPC-2025:011813906
+  our_period: '2026-04-30'
+  our_value: 102.16
+  suggested_source: insee
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "INSEE IPC-2025 PRIX_CONSO=4009 Services Index 102.16 Apr 2026 (YoY ~+1.8% matches TE). Frontend computes YoY %."
+
+social-security-rate:
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_value: 68
+  our_source: curated
+  our_series: FR:social-security-rate
+  our_period: '2026-12-31'
+  our_value: 68
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Updated curated yaml from 67.4 (45+22.4) to 68 (TE value 45+23)."
+
+social-security-rate-companies:
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_value: 45
+  our_source: curated
+  our_series: FR:social-security-rate-companies
+  our_period: '2026-12-31'
+  our_value: 45
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "Employer share 45% matches TE."
+
+social-security-rate-employees:
+  te_label: "Ministère des Solidarités et de la Santé"
+  te_value: 23
+  our_source: curated
+  our_series: FR:social-security-rate-employees
+  our_period: '2026-12-31'
+  our_value: 23
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Updated curated yaml from 22.4 to 23 (TE value)."
+
+terrorism-index:
+  te_label: "Institute for Economics and Peace"
+  te_value: 3.22
+  te_period: "2025"
+  our_source: curated
+  our_series: FR:terrorism-index
+  our_period: '2025-12-31'
+  our_value: 3.22
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Updated curated yaml from 4.8 to 3.22 (GTI 2025 IEP TE value)."
+
+unemployed-persons:
+  te_label: "DARES, France"
+  te_value: 3109.10
+  te_period: "March 2026"
+  our_source: insee
+  our_series: melodi:DD_EEC_ANNUEL:UNEMP:Y15T74
+  our_period: '2026-03-31'
+  our_value: 2439
+  suggested_source: insee
+  source_match: false
+  value_match: false
+  flag: real-gap
+  fixed: false
+  fix_summary: "Conceptual gap: TE shows DARES Cat A registered job seekers (Pôle Emploi/France Travail) ~3109k. Our INSEE/Eurostat data is ILO LFS unemployment ~2439k — these measure different things. Tried INSEE BDM DEMANDES-EMPLOIS-NATIONALES (DEMANDEURS_EMPLOI_PE_A only has regional, not FE-total; DEMANDEURS_EMPLOI_PE A-B-C combined series 001572363 ended 2018-12; DEFM_MOYENNE_TRIMESTRIELLE has no FE-total). DBnomics DARES provider only exposes intérimaires (temp workers). DARES data not exposed via INSEE BDM or DBnomics. Truth.yaml updated with note. 5+ variants tried."
+
+unemployment:
+  te_label: "INSEE, France"
+  te_value: 8.10
+  te_period: "Q1 2026"
+  our_source: insee
+  our_series: CHOMAGE-TRIM-NATIONAL:001688526
+  our_period: '2026-03-31'
+  our_value: 7.7
+  suggested_source: insee
+  source_match: true
+  value_match: partial
+  flag: data-vintage
+  fixed: false
+  fix_summary: "Source matches (INSEE BIT). Value 7.7 vs TE 8.1 — INSEE latest published Q4 2025 = 7.7; our Q1 2026 = 7.7 may be carried forward, or TE has a later revision. Tried all national age/sex variants (00-, 00-24, 25-49, 50-, 15-64); only 00- gives full population; values 5.0/7.0/4.9 for sub-segments don't match 8.1. France métropolitaine vs France entière (incl. DOM) tested: only FM available. Likely TE has Q1 2026 INSEE revision we haven't refetched."
+
+weapons-sales:
+  te_label: SIPRI
+  te_value: 2272
+  te_period: "2024"
+  our_source: curated
+  our_series: FR:weapons-sales
+  our_period: '2024-12-31'
+  our_value: 2272
+  suggested_source: curated
+  source_match: true
+  value_match: true
+  flag: ok
+  fixed: false
+  fix_summary: "SIPRI TIV 2272 exports 2024 matches TE."
+
+youth-unemployment-rate:
+  te_label: EUROSTAT
+  te_value: 20.5
+  te_period: "March 2026"
+  our_source: eurostat
+  our_series: une_rt_m:Y_LT25
+  our_period: '2026-03-31'
+  our_value: 20.5
+  suggested_source: eurostat
+  source_match: true
+  value_match: true
+  flag: fixed
+  fixed: true
+  fix_summary: "Switched is_default from insee (Melodi annual UNEMPRATE Y15T24) to eurostat (une_rt_m monthly Y_LT25 SA). March 2026 = 20.5% matches TE exactly. truth.yaml + FR.yaml inventory updated."

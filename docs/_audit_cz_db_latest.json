@@ -1,0 +1,451 @@
+{
+  "retirement-age-women": {
+    "date": "2026-12-31",
+    "value": 65,
+    "source": "curated",
+    "unit": "Years",
+    "adjustment": ""
+  },
+  "gdp": {
+    "date": "2024-12-31",
+    "value": 347.03,
+    "source": "worldbank",
+    "unit": "Billion USD",
+    "adjustment": "NSA"
+  },
+  "gdp-per-capita": {
+    "date": "2024-12-31",
+    "value": 20445.43,
+    "source": "worldbank",
+    "unit": "USD (constant 2015)",
+    "adjustment": "NSA"
+  },
+  "gdp-per-capita-ppp": {
+    "date": "2024-12-31",
+    "value": 47963.9,
+    "source": "worldbank",
+    "unit": "Int. USD (PPP constant 2021)",
+    "adjustment": "NSA"
+  },
+  "budget-deficit": {
+    "date": "2025-12-31",
+    "value": -2.1,
+    "source": "eurostat",
+    "unit": "% of GDP",
+    "adjustment": ""
+  },
+  "capacity-utilization": {
+    "date": "2026-06-30",
+    "value": 80.6,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": "SA"
+  },
+  "changes-in-inventories": {
+    "date": "2025-12-31",
+    "value": -0.2,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": "SA"
+  },
+  "core-cpi": {
+    "date": "2026-03-31",
+    "value": 102.07,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": "NSA"
+  },
+  "current-account": {
+    "date": "2025-12-31",
+    "value": 0.56,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": ""
+  },
+  "current-account-to-gdp": null,
+  "disposable-personal-income": {
+    "date": "2025-12-31",
+    "value": 52297,
+    "source": "eurostat",
+    "unit": "Million EUR",
+    "adjustment": "SA"
+  },
+  "employment-rate": {
+    "date": "2025-12-31",
+    "value": 75.7,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "energy-inflation": {
+    "date": "2026-03-31",
+    "value": 99.35,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": "NSA"
+  },
+  "exports": {
+    "date": "2025-12-31",
+    "value": 232.02,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": ""
+  },
+  "minimum-wages": {
+    "date": "2026-01-31",
+    "value": 20800,
+    "source": "curated",
+    "unit": "CZK/Month",
+    "adjustment": ""
+  },
+  "corruption-index": {
+    "date": "2025-12-31",
+    "value": 54,
+    "source": "curated",
+    "unit": "Points",
+    "adjustment": ""
+  },
+  "government-spending": {
+    "date": "2025-12-31",
+    "value": 18.15,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": "SA"
+  },
+  "government-spending-eur": {
+    "date": "2025-12-31",
+    "value": 18.15,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": "SA"
+  },
+  "house-price-index": {
+    "date": "2025-12-31",
+    "value": 254.1,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": ""
+  },
+  "imports": {
+    "date": "2025-12-31",
+    "value": 211.74,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": ""
+  },
+  "job-vacancies": {
+    "date": "2025-12-31",
+    "value": 1.9,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": "SA"
+  },
+  "labor-force-participation-rate": {
+    "date": "2025-12-31",
+    "value": 77.7,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": "SA"
+  },
+  "labour-costs": {
+    "date": "2025-12-31",
+    "value": 129.9,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": "SA"
+  },
+  "long-term-unemployment-rate": {
+    "date": "2025-12-31",
+    "value": 1,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": "SA"
+  },
+  "population": {
+    "date": "2025-12-31",
+    "value": 10.91,
+    "source": "eurostat",
+    "unit": "Millions",
+    "adjustment": ""
+  },
+  "productivity": {
+    "date": "2025-12-31",
+    "value": 96.2,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": "SCA"
+  },
+  "services-inflation": {
+    "date": "2026-03-31",
+    "value": 103.16,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": "NSA"
+  },
+  "services-sentiment": {
+    "date": "2026-04-30",
+    "value": 31.6,
+    "source": "eurostat",
+    "unit": "Points",
+    "adjustment": "SA"
+  },
+  "youth-unemployment-rate": {
+    "date": "2026-03-31",
+    "value": 10,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": "SA"
+  },
+  "corporate-tax-rate": {
+    "date": "2026-12-31",
+    "value": 21,
+    "source": "curated",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "personal-income-tax-rate": {
+    "date": "2026-12-31",
+    "value": 23,
+    "source": "curated",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "sales-tax-rate": {
+    "date": "2026-12-31",
+    "value": 21,
+    "source": "curated",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "social-security-rate": {
+    "date": "2026-12-31",
+    "value": 45,
+    "source": "curated",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "social-security-rate-companies": {
+    "date": "2026-12-31",
+    "value": 33.8,
+    "source": "curated",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "social-security-rate-employees": {
+    "date": "2026-12-31",
+    "value": 11.2,
+    "source": "curated",
+    "unit": "%",
+    "adjustment": ""
+  },
+  "retirement-age-men": {
+    "date": "2026-12-31",
+    "value": 65,
+    "source": "curated",
+    "unit": "Years",
+    "adjustment": ""
+  },
+  "corruption-rank": {
+    "date": "2025-12-31",
+    "value": 49,
+    "source": "curated",
+    "unit": "Rank",
+    "adjustment": ""
+  },
+  "credit-rating": {
+    "date": "2026-04-01",
+    "value": 80,
+    "source": "curated",
+    "unit": "Rating",
+    "adjustment": ""
+  },
+  "hospital-beds": {
+    "date": "2022-12-31",
+    "value": 6.5,
+    "source": "curated",
+    "unit": "per 1000 people",
+    "adjustment": ""
+  },
+  "medical-doctors": {
+    "date": "2021-12-31",
+    "value": 4.2,
+    "source": "curated",
+    "unit": "per 1000 people",
+    "adjustment": ""
+  },
+  "nurses": {
+    "date": "2021-12-31",
+    "value": 8,
+    "source": "curated",
+    "unit": "per 1000 people",
+    "adjustment": ""
+  },
+  "terrorism-index": {
+    "date": "2025-12-31",
+    "value": 0,
+    "source": "curated",
+    "unit": "Points",
+    "adjustment": ""
+  },
+  "inflation-cpi": {
+    "date": "2026-04-30",
+    "value": 101.9,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "ppi": {
+    "date": "2026-03-31",
+    "value": 130.3,
+    "source": "eurostat",
+    "unit": "Index",
+    "adjustment": "NSA"
+  },
+  "industrial-production": {
+    "date": "2026-03-31",
+    "value": 112.6955,
+    "source": "czso",
+    "unit": "Index (2021=100)",
+    "adjustment": "NSA"
+  },
+  "unemployment": {
+    "date": "2026-03-31",
+    "value": 3.1,
+    "source": "eurostat",
+    "unit": "%",
+    "adjustment": "SA"
+  },
+  "business-confidence": {
+    "date": "2026-03-31",
+    "value": 100.4,
+    "source": "czso",
+    "unit": "Index (2005=100)",
+    "adjustment": "SA"
+  },
+  "consumer-confidence": {
+    "date": "2026-04-30",
+    "value": -20.6,
+    "source": "eurostat",
+    "unit": "Points",
+    "adjustment": "SA"
+  },
+  "consumer-spending": {
+    "date": "2025-12-31",
+    "value": 41.71,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": "SA"
+  },
+  "gross-fixed-capital-formation": {
+    "date": "2025-12-31",
+    "value": 24.17,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": "SA"
+  },
+  "unemployed-persons": {
+    "date": "2026-03-31",
+    "value": 168,
+    "source": "eurostat",
+    "unit": "Thousand",
+    "adjustment": "SA"
+  },
+  "retail-sales": {
+    "date": "2026-03-31",
+    "value": 105.9144,
+    "source": "czso",
+    "unit": "Index (previous year=100, constant prices)",
+    "adjustment": "NSA"
+  },
+  "mining-production": {
+    "date": "2026-03-31",
+    "value": 76.0194,
+    "source": "czso",
+    "unit": "Index (2021=100)",
+    "adjustment": "NSA"
+  },
+  "manufacturing-production": {
+    "date": "2026-03-31",
+    "value": 115.2715,
+    "source": "czso",
+    "unit": "Index (2021=100)",
+    "adjustment": "NSA"
+  },
+  "government-debt": {
+    "date": "2025-12-31",
+    "value": 44.3,
+    "source": "eurostat",
+    "unit": "% of GDP",
+    "adjustment": ""
+  },
+  "cpi-food": {
+    "date": "2026-04-30",
+    "value": 98.5,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "cpi-clothing": {
+    "date": "2026-04-30",
+    "value": 97.8,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "cpi-housing-utilities": {
+    "date": "2026-04-30",
+    "value": 100.6,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "cpi-transportation": {
+    "date": "2026-04-30",
+    "value": 108.6,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "cpi-recreation-and-culture": {
+    "date": "2026-04-30",
+    "value": 101.2,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "cpi-education": {
+    "date": "2026-04-30",
+    "value": 102.7,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "food-inflation": {
+    "date": "2026-04-30",
+    "value": 98.5,
+    "source": "czso",
+    "unit": "Index (2025=100)",
+    "adjustment": "NSA"
+  },
+  "employed-persons": {
+    "date": "2025-12-31",
+    "value": 5032,
+    "source": "eurostat",
+    "unit": "Thousand",
+    "adjustment": "NSA"
+  },
+  "gdp-real": {
+    "date": "2026-03-31",
+    "value": 2.1,
+    "source": "czso",
+    "unit": "% YoY",
+    "adjustment": "SA"
+  },
+  "government-debt-total": {
+    "date": "2025-12-31",
+    "value": 156.22,
+    "source": "eurostat",
+    "unit": "Billion EUR",
+    "adjustment": ""
+  }
+}

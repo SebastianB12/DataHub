@@ -1,0 +1,751 @@
+budget-deficit:
+  conform: true
+  current_series_id: gov_10dd_edpt1:B9
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 0.7
+  slug: budget-deficit
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+business-confidence:
+  conform: false
+  current_series_id: ei_bsin_m_r2:BCI
+  current_source: eurostat
+  expected_source: ine_pt
+  slug: business-confidence
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: http://www.ine.pt
+capacity-utilization:
+  conform: true
+  current_series_id: ei_bsin_q_r2:BS-ICU-PC
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2026-06-30'
+  latest_dp_source: eurostat
+  latest_value: 83
+  slug: capacity-utilization
+  te_meta_desc: ''
+  te_source_label: European Commission
+  te_source_url: https://commission.europa.eu/index_en
+changes-in-inventories:
+  conform: false
+  current_series_id: namq_10_gdp:P52
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: -0.4
+  slug: changes-in-inventories
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main
+consumer-confidence:
+  conform: false
+  current_series_id: ei_bsco_m:BS-CSMCI
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: -20.6
+  slug: consumer-confidence
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+consumer-spending:
+  conform: false
+  current_series_id: namq_10_gdp:P31_S14
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 46.56
+  slug: consumer-spending
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+core-cpi:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI00XEF
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: 102.87
+  slug: core-cpi
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+corporate-tax-rate:
+  conform: true
+  current_series_id: PT:corporate-tax-rate
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 21
+  slug: corporate-tax-rate
+  te_meta_desc: ''
+  te_source_label: Autoridade Tributária e Aduaneira
+corruption-index:
+  conform: true
+  current_series_id: PT:corruption-index
+  current_source: curated
+  expected_source: curated
+  latest_date: '2025-12-31'
+  latest_dp_source: curated
+  latest_value: 57
+  slug: corruption-index
+  te_meta_desc: ''
+  te_source_label: Transparency International
+corruption-rank:
+  conform: true
+  current_series_id: PT:corruption-rank
+  current_source: curated
+  expected_source: curated
+  latest_date: '2025-12-31'
+  latest_dp_source: curated
+  latest_value: 35
+  slug: corruption-rank
+  te_meta_desc: ''
+  te_source_label: Transparency International
+cpi-clothing:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI03
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 103.52
+  slug: cpi-clothing
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE
+cpi-education:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI10
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 103.16
+  slug: cpi-education
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE
+cpi-food:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI01
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 102.26
+  slug: cpi-food
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE
+cpi-housing-utilities:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI04
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 102.23
+  slug: cpi-housing-utilities
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE
+cpi-recreation-and-culture:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI09
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 100.1
+  slug: cpi-recreation-and-culture
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE
+cpi-transportation:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HI07
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 101.95
+  slug: cpi-transportation
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE
+credit-rating:
+  conform: unknown
+  current_series_id: PT:credit-rating
+  current_source: curated
+  expected_source: ''
+  latest_date: '2026-04-01'
+  latest_dp_source: curated
+  latest_value: 73
+  slug: credit-rating
+  te_meta_desc: ''
+current-account:
+  conform: false
+  current_series_id: bop_c6_q:CA
+  current_source: eurostat
+  expected_source: bdp_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 0.38
+  slug: current-account
+  te_meta_desc: ''
+  te_source_label: Banco de Portugal
+  te_source_url: https://www.bportugal.pt/
+current-account-to-gdp:
+  conform: false
+  current_series_id: bop_gdp6_q:CA
+  current_source: eurostat
+  expected_source: bdp_pt
+  slug: current-account-to-gdp
+  te_meta_desc: ''
+  te_source_label: Banco de Portugal
+  te_source_url: https://www.bportugal.pt
+disposable-personal-income:
+  conform: false
+  current_series_id: nasq_10_nf_tr:B6G
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 54373
+  slug: disposable-personal-income
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main
+employed-persons:
+  conform: false
+  current_series_id: lfsi_emp_a:EMP_LFS:Y20-64
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 4998
+  slug: employed-persons
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: http://www.ine.pt
+employment-rate:
+  conform: false
+  current_series_id: lfsa_ergan:Y15-64
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 73.9
+  slug: employment-rate
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main
+energy-inflation:
+  conform: unknown
+  current_series_id: ei_cphi_m:CP-HIE:HICP2025
+  current_source: eurostat
+  expected_source: ''
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: 113.1
+  slug: energy-inflation
+  te_meta_desc: ''
+exports:
+  conform: false
+  current_series_id: nama_10_exi:P6
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 133.93
+  slug: exports
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+food-inflation:
+  conform: false
+  current_series_id: ei_cphi_m:CP-HIF:HICP2025
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: 103.31
+  slug: food-inflation
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: http://www.ine.pt
+gdp:
+  conform: true
+  current_series_id: NY.GDP.MKTP.CD
+  current_source: worldbank
+  expected_source: worldbank
+  latest_date: '2024-12-31'
+  latest_dp_source: worldbank
+  latest_value: 313.27
+  slug: gdp
+  te_meta_desc: ''
+  te_source_label: World Bank
+  te_source_url: https://www.worldbank.org/
+gdp-per-capita:
+  conform: true
+  current_series_id: NY.GDP.PCAP.KD
+  current_source: worldbank
+  expected_source: worldbank
+  latest_date: '2024-12-31'
+  latest_dp_source: worldbank
+  latest_value: 22647.38
+  slug: gdp-per-capita
+  te_meta_desc: ''
+  te_source_label: World Bank
+  te_source_url: https://www.worldbank.org/
+gdp-per-capita-ppp:
+  conform: true
+  current_series_id: NY.GDP.PCAP.PP.KD
+  current_source: worldbank
+  expected_source: worldbank
+  latest_date: '2024-12-31'
+  latest_dp_source: worldbank
+  latest_value: 42197.2
+  slug: gdp-per-capita-ppp
+  te_meta_desc: ''
+  te_source_label: World Bank
+  te_source_url: https://www.worldbank.org/
+gdp-real:
+  conform: true
+  current_series_id: INE/0013431
+  current_source: ine_pt
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: ine_pt
+  latest_value: 2.3
+  slug: gdp-real
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+government-debt:
+  conform: false
+  current_series_id: gov_10dd_edpt1:GD
+  current_source: eurostat
+  expected_source: bdp_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 89.7
+  slug: government-debt
+  te_meta_desc: ''
+  te_source_label: Banco de Portugal
+government-debt-total:
+  conform: false
+  current_series_id: gov_10dd_edpt1:GD:MIO_EUR
+  current_source: eurostat
+  expected_source: bdp_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 275.06
+  slug: government-debt-total
+  te_meta_desc: ''
+  te_source_label: Banco de Portugal
+government-spending:
+  conform: false
+  current_series_id: namq_10_gdp:P3_S13
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 13.4
+  slug: government-spending
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+government-spending-eur:
+  conform: false
+  current_series_id: namq_10_gdp:P3_S13
+  current_source: eurostat
+  expected_source: dgo_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 13.4
+  slug: government-spending-eur
+  te_meta_desc: ''
+  te_source_label: DGO - Direccao Geral do Orcamento, Portugal
+  te_source_url: https://www.dgo.gov.pt/Paginas/default.aspx
+gross-fixed-capital-formation:
+  conform: false
+  current_series_id: namq_10_gdp:P51G
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 16.55
+  slug: gross-fixed-capital-formation
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+hospital-beds:
+  conform: true
+  current_series_id: PT:hospital-beds
+  current_source: curated
+  expected_source: curated
+  latest_date: '2022-12-31'
+  latest_dp_source: curated
+  latest_value: 3.51
+  slug: hospital-beds
+  te_meta_desc: ''
+  te_source_label: OECD
+house-price-index:
+  conform: false
+  current_series_id: prc_hpi_q:INX
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 280.21
+  slug: house-price-index
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/
+imports:
+  conform: false
+  current_series_id: nama_10_exi:P7
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 131.11
+  slug: imports
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+industrial-production:
+  conform: true
+  current_series_id: INE/0011900
+  current_source: ine_pt
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 101.1
+  slug: industrial-production
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+inflation-cpi:
+  conform: false
+  current_series_id: ei_cphi_m:TOTAL
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: 103.6
+  slug: inflation-cpi
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: http://www.ine.pt
+interest-rate:
+  conform: true
+  current_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+  current_source: ecb
+  expected_source: ecb
+  latest_date: '2025-06-11'
+  latest_dp_source: ecb
+  latest_value: 2.15
+  slug: interest-rate
+  te_meta_desc: ''
+  te_source_label: European Central Bank
+job-vacancies:
+  conform: false
+  current_series_id: jvs_q_nace2:JVR
+  current_source: eurostat
+  expected_source: iefp_pt
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 1.5
+  slug: job-vacancies
+  te_meta_desc: ''
+  te_source_label: IEFP - Institute of Employment and Professional Formation, Portugal
+  te_source_url: https://www.iefp.pt
+labor-force-participation-rate:
+  conform: true
+  current_series_id: INE-PT/0010060
+  current_source: ine_pt
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: ine_pt
+  latest_value: 69.7
+  slug: labor-force-participation-rate
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main
+labour-costs:
+  conform: true
+  current_series_id: lc_lci_r2_q:I20
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 130.2
+  slug: labour-costs
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+long-term-unemployment-rate:
+  conform: true
+  current_series_id: une_ltu_q:LTU
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 2
+  slug: long-term-unemployment-rate
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+manufacturing-production:
+  conform: false
+  current_series_id: sts_inpr_m:C:I21
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 98.5
+  slug: manufacturing-production
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+medical-doctors:
+  conform: unknown
+  current_series_id: PT:medical-doctors
+  current_source: curated
+  expected_source: ''
+  latest_date: '2021-12-31'
+  latest_dp_source: curated
+  latest_value: 5.46
+  slug: medical-doctors
+  te_meta_desc: ''
+minimum-wages:
+  conform: true
+  current_series_id: earn_mw_cur:PT:EUR
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2026-01-01'
+  latest_dp_source: eurostat
+  latest_value: 1073
+  slug: minimum-wages
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+mining-production:
+  conform: false
+  current_series_id: sts_inpr_m:B:I21
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 124.7
+  slug: mining-production
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+nurses:
+  conform: true
+  current_series_id: PT:nurses
+  current_source: curated
+  expected_source: curated
+  latest_date: '2021-12-31'
+  latest_dp_source: curated
+  latest_value: 7.43
+  slug: nurses
+  te_meta_desc: ''
+  te_source_label: OECD
+personal-income-tax-rate:
+  conform: true
+  current_series_id: PT:personal-income-tax-rate
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 48
+  slug: personal-income-tax-rate
+  te_meta_desc: ''
+  te_source_label: Autoridade Tributária e Aduaneira
+  te_source_url: http://info.portaldasfinancas.gov.pt
+population:
+  conform: true
+  current_series_id: demo_pjan:TOTAL
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 10.75
+  slug: population
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+ppi:
+  conform: true
+  current_series_id: INE/0012002
+  current_source: ine_pt
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: ine_pt
+  latest_value: 0
+  slug: ppi
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: https://www.ine.pt/
+productivity:
+  conform: true
+  current_series_id: namq_10_lp_ulc:RLPR_HW:I20
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2025-12-31'
+  latest_dp_source: eurostat
+  latest_value: 101.19
+  slug: productivity
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+retail-sales:
+  conform: true
+  current_series_id: INE/0012019
+  current_source: ine_pt
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: ine_pt
+  latest_value: 2.8
+  slug: retail-sales
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+retirement-age-men:
+  conform: true
+  current_series_id: PT:retirement-age-men
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 66
+  slug: retirement-age-men
+  te_meta_desc: ''
+  te_source_label: Instituto da Segurança Social
+  te_source_url: https://en.seg-social.pt/homepage
+retirement-age-women:
+  conform: true
+  current_series_id: PT:retirement-age-women
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 66
+  slug: retirement-age-women
+  te_meta_desc: ''
+  te_source_label: Instituto da Segurança Social
+  te_source_url: https://en.seg-social.pt/homepage
+sales-tax-rate:
+  conform: true
+  current_series_id: PT:sales-tax-rate
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 23
+  slug: sales-tax-rate
+  te_meta_desc: ''
+  te_source_label: Autoridade Tributária e Aduaneira
+services-inflation:
+  conform: unknown
+  current_series_id: ei_cphi_m:CP-HIS:HICP2025
+  current_source: eurostat
+  expected_source: ''
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: 103.21
+  slug: services-inflation
+  te_meta_desc: ''
+services-sentiment:
+  conform: unknown
+  current_series_id: ei_bsse_m_r2:SCI
+  current_source: eurostat
+  expected_source: ''
+  latest_date: '2026-04-30'
+  latest_dp_source: eurostat
+  latest_value: 7
+  slug: services-sentiment
+  te_meta_desc: ''
+social-security-rate:
+  conform: true
+  current_series_id: PT:social-security-rate
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 34.75
+  slug: social-security-rate
+  te_meta_desc: ''
+  te_source_label: Instituto da Segurança Social
+  te_source_url: http://www.seg-social.pt
+social-security-rate-companies:
+  conform: true
+  current_series_id: PT:social-security-rate-companies
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 23.75
+  slug: social-security-rate-companies
+  te_meta_desc: ''
+  te_source_label: Instituto da Segurança Social
+  te_source_url: http://www.seg-social.pt
+social-security-rate-employees:
+  conform: true
+  current_series_id: PT:social-security-rate-employees
+  current_source: curated
+  expected_source: curated
+  latest_date: '2026-12-31'
+  latest_dp_source: curated
+  latest_value: 11
+  slug: social-security-rate-employees
+  te_meta_desc: ''
+  te_source_label: Instituto da Segurança Social
+  te_source_url: http://www.seg-social.pt
+terrorism-index:
+  conform: true
+  current_series_id: PT:terrorism-index
+  current_source: curated
+  expected_source: curated
+  latest_date: '2025-12-31'
+  latest_dp_source: curated
+  latest_value: 0
+  slug: terrorism-index
+  te_meta_desc: ''
+  te_source_label: Institute for Economics and Peace
+unemployed-persons:
+  conform: false
+  current_series_id: une_rt_m:TOTAL:THS_PER
+  current_source: eurostat
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 328
+  slug: unemployed-persons
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: http://www.ine.pt
+unemployment:
+  conform: true
+  current_series_id: INE/0012136
+  current_source: ine_pt
+  expected_source: ine_pt
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 5.8
+  slug: unemployment
+  te_meta_desc: ''
+  te_source_label: Statistics Portugal
+  te_source_url: http://www.ine.pt
+youth-unemployment-rate:
+  conform: true
+  current_series_id: une_rt_m:Y_LT25
+  current_source: eurostat
+  expected_source: eurostat
+  latest_date: '2026-03-31'
+  latest_dp_source: eurostat
+  latest_value: 18.1
+  slug: youth-unemployment-rate
+  te_meta_desc: ''
+  te_source_label: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/

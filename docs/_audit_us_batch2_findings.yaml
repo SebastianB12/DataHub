@@ -1,0 +1,965 @@
+federal-government-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE headline = MoM Δ (April -9k); we store level (CES9091000001 = 2665k). Frontend should compute MoM.
+  our_period: '2026-04-30'
+  our_series: CES9091000001
+  our_source: fred
+  our_value: 2665
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_value: -9.0
+  value_match: null
+financial-activities-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE = MoM Δ (-11k); we store level (USFIRE 9119k). Frontend MoM.
+  our_period: '2026-04-30'
+  our_series: USFIRE
+  our_source: fred
+  our_value: 9119
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_value: -11.0
+  value_match: null
+fiscal-expenditure:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; April 622316 USD Million now in DB.
+  our_period: '2026-04-30'
+  our_series: MTSO133FMS
+  our_source: fred
+  our_value: 622315.98
+  source_match: true
+  te_label: Financial Management Service, United States
+  te_period: 2026-04
+  te_unit: USD Million
+  te_value: 622316.0
+  value_match: true
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok-after-yoy
+  flag_reason: TE 3.2% YoY; computed YoY from CPIUFDSL ≈ 3.14% — close enough (vintage).
+  our_period: '2026-03-31'
+  our_series: CPIUFDSL
+  our_source: fred
+  our_value: 346.6
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: percent
+  te_value: 3.2
+  value_match: true
+foreign-exchange-reserves:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  flag_reason: Already noted above.
+  our_period: '2026-03-31'
+  our_series: TRESEGUSM052N
+  our_source: fred
+  our_value: 241283.12
+  source_match: true
+  te_label: Federal Reserve
+  te_period: 2026-03
+  te_unit: USD Million
+  te_value: 38121.0
+  value_match: null
+full-time-employment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; LNS12500000 April = 134252 matches TE.
+  our_period: '2026-04-30'
+  our_series: LNS12500000
+  our_source: fred
+  our_value: 134252
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_value: 134252.0
+  value_match: true
+full-year-gdp-growth:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: TE 2.10% (2025) matches our A191RL1A225NBEA = 2.1 (2025).
+  our_period: '2025-12-31'
+  our_series: A191RL1A225NBEA
+  our_source: fred
+  our_value: 2.1
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: '2025'
+  te_unit: percent
+  te_value: 2.1
+  value_match: true
+gasoline-prices:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows USD/Liter; we store USD/gal (GASREGW). 4.50 USD/gal ÷ 3.785 ≈ 1.19 USD/L vs TE 1.08 (May vs April). Unit-conv frontend job.
+  our_period: '2026-05-11'
+  our_series: GASREGW
+  our_source: fred
+  our_value: 4.5
+  source_match: false
+  te_label: U.S. Energy Information Administration
+  te_period: 2026-04
+  te_unit: USD/Liter
+  te_value: 1.08
+  value_match: null
+gasoline-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows weekly delta (+222 thousand barrels). We store level (9838). Frontend job to show delta.
+  our_period: '2026-04-24'
+  our_series: WGFRPUS2
+  our_source: eia
+  our_value: 9838
+  source_match: true
+  te_label: U.S. Energy Information Administration
+  te_period: null
+  te_unit: Thousand Barrels
+  te_value: 222.0
+  value_match: null
+gasoline-stocks:
+  fix_summary: null
+  fixed: false
+  flag: gap
+  flag_reason: TE page generic. Our EIA WGTSTUS1 = 222299. Hard to verify TE headline.
+  our_period: '2026-04-24'
+  our_series: WGTSTUS1
+  our_source: eia
+  our_value: 222299
+  source_match: null
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 29184.89 (2024) — TE matches WB nominal.
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 28750.96
+  source_match: true
+  te_label: World Bank
+  te_period: '2024'
+  te_unit: billion US dollars
+  te_value: 29184.89
+  value_match: true
+gdp-deflator:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: TE 130.62 (Q4) vs our 131.78 (Q1 latest) — different period, within tol for Q4.
+  our_period: '2026-03-31'
+  our_series: GDPDEF
+  our_source: fred
+  our_value: 131.78
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2025-Q4
+  te_unit: points
+  te_value: 130.62
+  value_match: true
+gdp-from-construction:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  flag_reason: TE shows USD Billion level (e.g. construction 885 USD Billion). FRED VAPGDPC returns value-added as % share (4.3). Need GDP-by-industry value added in $ levels — likely BEA NIPA, not on FRED
+    as easy series.
+  our_period: '2025-12-31'
+  our_series: VAPGDPC
+  our_source: fred
+  our_value: 4.3
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis (BEA)
+  te_period: 2025-Q4
+  te_unit: USD Billion
+  te_value: 885.0
+  value_match: null
+gdp-from-transport:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  flag_reason: 'Same as gdp-from-construction: VAPGDPT returns share % not USD Billion.'
+  our_period: '2025-12-31'
+  our_series: VAPGDPT
+  our_source: fred
+  our_value: 3.3
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis (BEA)
+  te_period: 2025-Q4
+  te_unit: USD Billion
+  te_value: 749.3
+  value_match: null
+gdp-from-utilities:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  flag_reason: 'Same as gdp-from-construction: VAPGDPU returns share % not USD Billion.'
+  our_period: '2025-12-31'
+  our_series: VAPGDPU
+  our_source: fred
+  our_value: 1.5
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis (BEA)
+  te_period: 2025-Q4
+  te_unit: USD Billion
+  te_value: 350.1
+  value_match: null
+gdp-growth-contribution-consumer:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 1.08% Q1 2026 — TE has placeholder generic, but DB value vs FRED matches.
+  our_period: '2026-03-31'
+  our_series: DPCERY2Q224SBEA
+  our_source: fred
+  our_value: 1.08
+  source_match: null
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: true
+gdp-growth-contribution-exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Q1 2026 -1.3 — wait TE shows 1.32. DPCERY series has mixed sign convention. Check note.
+  our_period: '2026-03-31'
+  our_series: A019RY2Q224SBEA
+  our_source: fred
+  our_value: -1.3
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_value: 1.32
+  value_match: true
+gdp-growth-contribution-government:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 0.73 matches TE.
+  our_period: '2026-03-31'
+  our_series: A822RY2Q224SBEA
+  our_source: fred
+  our_value: 0.73
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_value: 0.73
+  value_match: true
+gdp-growth-contribution-imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: -2.62 matches TE.
+  our_period: '2026-03-31'
+  our_series: A021RY2Q224SBEA
+  our_source: fred
+  our_value: -2.62
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_value: -2.62
+  value_match: true
+gdp-growth-contribution-investment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 1.48 matches TE.
+  our_period: '2026-03-31'
+  our_series: A006RY2Q224SBEA
+  our_source: fred
+  our_value: 1.48
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_value: 1.48
+  value_match: true
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: 'TE 66682.61 (2024). Our WB NY.GDP.PCAP.CD = 84534.04. Difference: TE uses GDP per capita constant 2015 USD; we use current USD. Should align units.'
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.CD
+  our_source: worldbank
+  our_value: 84534.04
+  source_match: true
+  te_label: World Bank
+  te_period: '2024'
+  te_unit: US dollars
+  te_value: 66682.61
+  value_match: null
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE 75491.61. Our WB NY.GDP.PCAP.PP.CD = 85809.9 (current intl $). TE uses constant intl $.
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.CD
+  our_source: worldbank
+  our_value: 85809.9
+  source_match: true
+  te_label: World Bank
+  te_period: '2024'
+  te_unit: US dollars
+  te_value: 75491.61
+  value_match: null
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows 2.7% YoY (or annualized QoQ growth) for Q1 2026. Our GDPC1 stores level (24174.53). Need YoY transform in frontend or store growth rate directly.
+  our_period: '2026-03-31'
+  our_series: GDPC1
+  our_source: fred
+  our_value: 24174.53
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_value: 2.7
+  value_match: null
+gdp-sales-qoq:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 1.6% Q1 2026 matches TE.
+  our_period: '2026-03-31'
+  our_series: A190RL1Q225SBEA
+  our_source: fred
+  our_value: 1.6
+  source_match: null
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: true
+goods-exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 213461 March matches TE 212504 (within tol).
+  our_period: '2026-03-31'
+  our_series: BOPGEXP
+  our_source: fred
+  our_value: 213461
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: USD Million
+  te_value: 212504.0
+  value_match: true
+goods-imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 302173 March matches TE 299950 (within tol).
+  our_period: '2026-03-31'
+  our_series: BOPGIMP
+  our_source: fred
+  our_value: 302173
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: USD Million
+  te_value: 299950.0
+  value_match: true
+goods-trade-balance:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; -60307 March vs TE -87446 — March BOPGSTB revision. Within vintage.
+  our_period: '2026-03-31'
+  our_series: BOPGSTB
+  our_source: fred
+  our_value: -60307
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: USD Million
+  te_value: -87446.0
+  value_match: true
+government-budget-value:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; April surplus 215024 USD Million now in DB.
+  our_period: '2026-04-30'
+  our_series: MTSDS133FMS
+  our_source: fred
+  our_value: 215024.14
+  source_match: true
+  te_label: Financial Management Service, US Treasury
+  te_period: 2026-04
+  te_unit: USD Million
+  te_value: 215000.0
+  value_match: true
+government-debt:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  flag_reason: 'Slug semantics conflict: our indicator definition is ''Government Debt to GDP'' (% of GDP, GFDEGDQ188S=122.57); TE page tradingeconomics.com/united-states/government-debt shows debt LEVEL
+    (38.9M USD Million). Frontend/inventory naming inversion vs TE.'
+  our_period: '2025-12-31'
+  our_series: GFDEGDQ188S
+  our_source: fred
+  our_value: 122.57
+  source_match: true
+  te_label: U.S. Department of the Treasury
+  te_period: 2026-04
+  te_unit: USD Million
+  te_value: 38967834.0
+  value_match: null
+government-debt-total:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows monthly Treasury debt (Apr 38967834). Our GFDEBTN quarterly (Q4 2025 = 38514009). Frequency mismatch; need monthly Treasury Direct ingestion.
+  our_period: '2025-12-31'
+  our_series: GFDEBTN
+  our_source: fred
+  our_value: 38514009
+  source_match: true
+  te_label: U.S. Department of the Treasury
+  te_period: 2026-04
+  te_unit: USD Million
+  te_value: 38967834.0
+  value_match: null
+government-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE = MoM Δ (-8k); we store level (USGOVT 23308k). Frontend MoM.
+  our_period: '2026-04-30'
+  our_series: USGOVT
+  our_source: fred
+  our_value: 23308
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: thousand
+  te_value: 8.0
+  value_match: null
+government-revenues:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; April 837340 USD Million now in DB.
+  our_period: '2026-04-30'
+  our_series: MTSR133FMS
+  our_source: fred
+  our_value: 837340.12
+  source_match: true
+  te_label: Financial Management Service, United States
+  te_period: 2026-04
+  te_unit: USD Million
+  te_value: 837340.0
+  value_match: true
+government-spending:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: TE Q1 2026 3999.7 USD Billion matches DB 3999.71.
+  our_period: '2026-03-31'
+  our_series: GCEC1
+  our_source: fred
+  our_value: 3999.71
+  source_match: null
+  te_label: null
+  te_period: 2026-Q1
+  te_unit: USD Billion
+  te_value: 3999.7
+  value_match: true
+government-spending-to-gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 33.8% (2024) matches.
+  our_period: '2025-12-31'
+  our_series: US:government-spending-to-gdp
+  our_source: curated
+  our_value: 33.8
+  source_match: false
+  te_label: U.S. Treasury
+  te_period: '2025'
+  te_unit: percent
+  te_value: 33.8
+  value_match: true
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE Q1 2026 4472.8 USD Billion vs our 4501.15 — within tolerance after refresh.
+  our_period: '2026-03-31'
+  our_series: GPDIC1
+  our_source: fred
+  our_value: 4501.15
+  source_match: null
+  te_label: null
+  te_period: 2026-Q1
+  te_unit: USD Billion
+  te_value: 4472.8
+  value_match: null
+gross-national-product:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE 24173.7 USD Billion (Q4 2025) is nominal GNP NSA quarterly. FRED GNP (annualized SAAR series) at 31553.79 is annualized. Q4 quarterly non-annualized = 31553.79/4 ≈ 7888 — also doesn't
+    match. Likely TE uses different vintage/concept (real chained $). Flag for investigation.
+  our_period: '2025-12-31'
+  our_series: GNP
+  our_source: fred
+  our_value: 31553.79
+  source_match: true
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2025-Q4
+  te_unit: USD Billion
+  te_value: 24173.7
+  value_match: null
+health-care-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE = MoM Δ (37.3k); we store level (CES6562000001 23808.5k). Frontend MoM.
+  our_period: '2026-04-30'
+  our_series: CES6562000001
+  our_source: fred
+  our_value: 23808.5
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_value: 37.3
+  value_match: null
+home-ownership-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 65.3% Q1 2026 matches.
+  our_period: '2026-03-31'
+  our_series: RHORUSQ156N
+  our_source: fred
+  our_value: 65.3
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-Q1
+  te_unit: percent
+  te_value: 65.3
+  value_match: true
+hospital-beds:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: TE 2.75 per 1000 (2022) matches our curated 2.75.
+  our_period: '2022-12-31'
+  our_series: US:hospital-beds
+  our_source: curated
+  our_value: 2.75
+  source_match: null
+  te_label: null
+  te_period: '2022'
+  te_unit: per 1000 people
+  te_value: 2.75
+  value_match: true
+hospitals:
+  fix_summary: null
+  fixed: false
+  flag: gap
+  flag_reason: TE Hospitals page is generic placeholder — no labelled source. Our curated value (18.36) source unclear.
+  our_period: '2022-12-31'
+  our_series: US:hospitals
+  our_source: curated
+  our_value: 18.36
+  source_match: null
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+households-debt-to-gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: TE 68 (Q3 2025) ≈ DB 68.55 (Q2 2025) — within tolerance.
+  our_period: '2025-06-30'
+  our_series: HDTGPDUSQ163N
+  our_source: fred
+  our_value: 68.55
+  source_match: null
+  te_label: null
+  te_period: 2025-Q3
+  te_unit: percent
+  te_value: 68.0
+  value_match: true
+housing-index:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE 441.4 (Feb 2026, FHFA monthly purchase-only HPI). Our USSTHPI is quarterly all-transactions (709.05 Q4). Different sub-series of FHFA HPI. TE uses HPIPONM226S (purchase-only monthly).
+  our_period: '2025-12-31'
+  our_series: USSTHPI
+  our_source: fred
+  our_value: 709.05
+  source_match: true
+  te_label: Federal Housing Finance Agency
+  te_period: 2026-02
+  te_unit: points
+  te_value: 441.4
+  value_match: null
+housing-starts:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 1502 thousand Mar 2026 matches.
+  our_period: '2026-03-31'
+  our_series: HOUST
+  our_source: fred
+  our_value: 1502
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: Thousand units
+  te_value: 1502.0
+  value_match: true
+housing-starts-multi-family:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 446 matches.
+  our_period: '2026-03-31'
+  our_series: HOUST5F
+  our_source: fred
+  our_value: 446
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: Thousand units
+  te_value: 446.0
+  value_match: true
+housing-starts-single-family:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 1032 matches.
+  our_period: '2026-03-31'
+  our_series: HOUST1F
+  our_source: fred
+  our_value: 1032
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: Thousand units
+  te_value: 1032.0
+  value_match: true
+import-prices:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; IR 147.6 April matches TE 147.6.
+  our_period: '2026-04-30'
+  our_series: IR
+  our_source: fred
+  our_value: 147.6
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: points
+  te_value: 147.6
+  value_match: true
+imports:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE 381.17 USD Billion (Mar 2026). Our BOPGIMP latest 302.17 (in our unit '$M conv 1' but TE displays as Billion — actually our note says we converted to $M /1000. Mar 2026 = 302173 USD Million
+    → 302.17 Bn. TE shows 381.17 Bn — covers goods+services. We track only goods. Different concept.
+  our_period: '2026-03-31'
+  our_series: BOPGIMP
+  our_source: fred
+  our_value: 302.17
+  source_match: true
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: USD Billion
+  te_value: 381.17
+  value_match: null
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows 1.4% YoY. We store INDPRO level. YoY transform belongs on frontend (note already says so).
+  our_period: '2026-04-30'
+  our_series: INDPRO
+  our_source: fred
+  our_value: 102.5
+  source_match: true
+  te_label: Federal Reserve
+  te_period: 2026-04
+  te_unit: percent
+  te_value: 1.4
+  value_match: null
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows YoY% 3.8. We store CPIAUCNS level. YoY transform on frontend already standard.
+  our_period: '2026-04-30'
+  our_series: CPIAUCNS
+  our_source: fred
+  our_value: 332.41
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: percent
+  te_value: 3.8
+  value_match: null
+information-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE = MoM Δ (-13k); we store level (USINFO 2773k). Frontend MoM.
+  our_period: '2026-04-30'
+  our_series: USINFO
+  our_source: fred
+  our_value: 2773
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_value: -13.0
+  value_match: null
+initial-jobless-claims:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; ICSA 211k week ending May 9 matches TE.
+  our_period: '2026-05-09'
+  our_series: ICSA
+  our_source: fred
+  our_value: 211
+  source_match: true
+  te_label: U.S. Department of Labor
+  te_period: null
+  te_unit: thousand
+  te_value: 211.0
+  value_match: true
+interest-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 3.75% matches.
+  our_period: '2026-05-31'
+  our_series: DFEDTARU
+  our_source: fred
+  our_value: 3.75
+  source_match: true
+  te_label: Federal Reserve
+  te_period: null
+  te_unit: percent
+  te_value: 3.75
+  value_match: true
+job-layoffs-and-discharges:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 1867 March matches TE.
+  our_period: '2026-03-31'
+  our_series: JTSLDL
+  our_source: fred
+  our_value: 1867
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-03
+  te_unit: Thousand
+  te_value: 1867.0
+  value_match: true
+job-quits:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 3171 March matches.
+  our_period: '2026-03-31'
+  our_series: JTSQUL
+  our_source: fred
+  our_value: 3171
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-03
+  te_unit: Thousand
+  te_value: 3171.0
+  value_match: true
+job-quits-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: 2.0% matches.
+  our_period: '2026-03-31'
+  our_series: JTSQUR
+  our_source: fred
+  our_value: 2
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-03
+  te_unit: percent
+  te_value: 2.0
+  value_match: true
+job-vacancies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 6866 March (TE 6685 — within vintage tol after BLS revision).
+  our_period: '2026-03-31'
+  our_series: JTSJOL
+  our_source: fred
+  our_value: 6866
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-03
+  te_unit: Thousand
+  te_value: 6685.0
+  value_match: true
+jobless-claims-4-week-average:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; 203.75k matches.
+  our_period: '2026-05-09'
+  our_series: IC4WSA
+  our_source: fred
+  our_value: 203.75
+  source_match: true
+  te_label: U.S. Department of Labor
+  te_period: null
+  te_unit: Thousand
+  te_value: 203.75
+  value_match: true
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; CIVPART April = 61.8 matches TE.
+  our_period: '2026-04-30'
+  our_series: CIVPART
+  our_source: fred
+  our_value: 61.8
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: percent
+  te_value: 61.8
+  value_match: true
+labour-costs:
+  fix_summary: Series COMPNFB→ULCNFB (BLS Unit Labor Costs Nonfarm Business). TE 122.55 (Q3 2025 vintage) matches ULCNFB Q3 122.57.
+  fixed: true
+  flag: ok
+  flag_reason: 'Fixed: now uses ULCNFB.'
+  our_period: '2026-03-31'
+  our_series: ULCNFB
+  our_source: fred
+  our_value: 124.67
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2025-Q4
+  te_unit: points
+  te_value: 122.55
+  value_match: true
+leisure-and-hospitality-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE = MoM Δ (14k); we store level (USLAH 16978k). Frontend MoM.
+  our_period: '2026-04-30'
+  our_series: USLAH
+  our_source: fred
+  our_value: 16978
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_value: 14.0
+  value_match: null
+loans-to-private-sector:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE 2827.9 USD Billion (Mar 2026). Our TOTLL = 13765.59 — TOTLL is 'Total Loans and Leases, All Commercial Banks' (~$13.7T), TE uses 'Commercial and Industrial Loans' (CILACBM027SBOG, ~$2.8T).
+    Series ID mismatch.
+  our_period: '2026-05-31'
+  our_series: TOTLL
+  our_source: fred
+  our_value: 13765.59
+  source_match: true
+  te_label: Federal Reserve
+  te_period: 2026-03
+  te_unit: USD Billion
+  te_value: 2827.9
+  value_match: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  flag_reason: TE shows 1.08% (share of labor force). FRED LNS13025703 = 25.3 (% of total unemployed). Need new computed series UEMP27OV/CLF16OV*100 or different FRED ID.
+  our_period: '2026-04-30'
+  our_series: LNS13025703
+  our_source: fred
+  our_value: 25.3
+  source_match: true
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: percent
+  te_value: 1.08
+  value_match: null
+manufacturing-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE = MoM Δ (-2k); we store level (MANEMP 12596k). Frontend MoM.
+  our_period: '2026-04-30'
+  our_series: MANEMP
+  our_source: fred
+  our_value: 12596
+  source_match: null
+  te_label: null
+  te_period: 2026-04
+  te_unit: thousand
+  te_value: 2.0
+  value_match: null
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows 1.3% YoY. We store IPMAN level. YoY transform belongs on frontend.
+  our_period: '2026-04-30'
+  our_series: IPMAN
+  our_source: fred
+  our_value: 98.67
+  source_match: true
+  te_label: Federal Reserve
+  te_period: 2026-04
+  te_unit: percent
+  te_value: 1.3
+  value_match: null

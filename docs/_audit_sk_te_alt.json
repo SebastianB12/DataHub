@@ -1,0 +1,140 @@
+{
+  "budget-deficit": [
+    {
+      "alt": "government-budget",
+      "url": "https://tradingeconomics.com/slovakia/government-budget",
+      "src": null,
+      "desc": "Slovakia recorded a Government Budget deficit equal to 4.50 percent of the country's Gross Domestic Product in 2025. Government Budget in Slovakia averaged -4.61 percent of GDP from 1995 until 2025, reaching an all time high of -1.00 percent of GDP in 2017 and a record low of -12.70 percent of GDP i"
+    },
+    {
+      "alt": "government-budget-value",
+      "url": "https://tradingeconomics.com/slovakia/government-budget-value",
+      "src": "Ministry Of Finance Of Slovak Republic",
+      "desc": "Slovakia recorded a government budget deficit of -1868 EUR Million in March of 2026. Government Budget Value in Slovakia averaged -1317.47 EUR Million from 2003 until 2026, reaching an all time high of 432.63 EUR Million in January of 2008 and a record low of -7675.30 EUR Million in December of 2023"
+    }
+  ],
+  "energy-inflation": [
+    {
+      "alt": "cpi-housing-utilities",
+      "url": "https://tradingeconomics.com/slovakia/cpi-housing-utilities",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "CPI Housing Utilities in Slovakia increased to 106.20 points in April from 106 points in March of 2026. CPI Housing Utilities in Slovakia averaged 92.84 points from 2021 until 2026, reaching an all time high of 106.20 points in April of 2026 and a record low of 74.70 points in January of 2021. <span"
+    }
+  ],
+  "government-debt-total": [
+    {
+      "alt": "government-debt",
+      "url": "https://tradingeconomics.com/slovakia/government-debt",
+      "src": "Ministry of Finance of the Slovak Republic",
+      "desc": "Government Debt in Slovakia decreased to 81510 EUR Million in the fourth quarter of 2025 from 81620 EUR Million in the third quarter of 2025. Government Debt in Slovakia averaged 38020.57 EUR Million from 2002 until 2025, reaching an all time high of 81620.00 EUR Million in the third quarter of 2025"
+    },
+    {
+      "alt": "external-debt",
+      "url": "https://tradingeconomics.com/slovakia/external-debt",
+      "src": "Národná banka Slovenska",
+      "desc": "External Debt in Slovakia decreased to 137.89 EUR Billion in the fourth quarter of 2025 from 139.76 EUR Billion in the third quarter of 2025. External Debt in Slovakia averaged 85.77 EUR Billion from 2008 until 2025, reaching an all time high of 142.91 EUR Billion in the first quarter of 2022 and a "
+    }
+  ],
+  "core-cpi": [
+    {
+      "alt": "core-consumer-prices",
+      "url": "https://tradingeconomics.com/slovakia/core-consumer-prices",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "Core Consumer Prices in Slovakia increased to 178 points in April from 177 points in March of 2026. Core Consumer Prices in Slovakia averaged 127.24 points from 2007 until 2026, reaching an all time high of 178.00 points in April of 2026 and a record low of 101.30 points in January of 2007. <span cl"
+    },
+    {
+      "alt": "core-inflation-rate",
+      "url": "https://tradingeconomics.com/slovakia/core-inflation-rate",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "The annual core inflation in Slovakia, which excludes goods with regulated prices, edged up to 2.4% in April 2026, above the expected 2.3%, and up from 1.9% increase in the previous month. Core Inflation Rate in Slovakia averaged 2.45 percent from 1987 until 2026, reaching an all time high of 16.60 "
+    }
+  ],
+  "government-spending-eur": [
+    {
+      "alt": "government-spending",
+      "url": "https://tradingeconomics.com/slovakia/government-spending",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "Government Spending in Slovakia increased to 6.27 EUR Billion in the fourth quarter of 2025 from 4.96 EUR Billion in the third quarter of 2025. Government Spending in Slovakia averaged 4.12 EUR Billion from 1995 until 2025, reaching an all time high of 6.27 EUR Billion in the fourth quarter of 2025 "
+    },
+    {
+      "alt": "government-spending-to-gdp",
+      "url": "https://tradingeconomics.com/slovakia/government-spending-to-gdp",
+      "src": null,
+      "desc": "Government spending in Slovakia was last recorded at 47.9 percent of GDP in 2025 . Government Spending to GDP in Slovakia averaged 44.95 percent of GDP from 1993 until 2025, reaching an all time high of 78.80 percent of GDP in 1993 and a record low of 35.90 percent of GDP in 2007. <span class='sourc"
+    }
+  ],
+  "gdp-real": [
+    {
+      "alt": "full-year-gdp-growth",
+      "url": "https://tradingeconomics.com/slovakia/full-year-gdp-growth",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "The economy of the Slovak Republic grew by 0.8% in 2025, easing from a downwardly revised 1.9% rise in 2024 and marking the weakest expansion since 2022. Full Year GDP Growth in Slovakia averaged 3.33 percent from 1996 until 2025, reaching an all time high of 10.80 percent in 2007 and a record low o"
+    },
+    {
+      "alt": "gdp-growth-annual",
+      "url": "https://tradingeconomics.com/slovakia/gdp-growth-annual",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "Slovakia’s economy expanded 0.9% year-on-year in the first quarter of 2026, matching market expectations and easing slightly from a one-year high of 1.0% in the previous three-month period, preliminary estimates showed. Weaker investment activity weighed on overall expansion, although economic activ"
+    },
+    {
+      "alt": "gdp-constant-prices",
+      "url": "https://tradingeconomics.com/slovakia/gdp-constant-prices",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "GDP Constant Prices in Slovakia decreased to 27.32 EUR Billion in the fourth quarter of 2025 from 27.46 EUR Billion in the third quarter of 2025. GDP Constant Prices in Slovakia averaged 18.40 EUR Billion from 1995 until 2025, reaching an all time high of 27.46 EUR Billion in the third quarter of 20"
+    }
+  ],
+  "house-price-index": [
+    {
+      "alt": "housing-index",
+      "url": "https://tradingeconomics.com/slovakia/housing-index",
+      "src": "EUROSTAT",
+      "desc": "Housing Index in Slovakia increased to 214.92 points in the fourth quarter of 2025 from 208.52 points in the third quarter of 2025. Housing Index in Slovakia averaged 123.68 points from 2006 until 2025, reaching an all time high of 214.92 points in the fourth quarter of 2025 and a record low of 71.7"
+    }
+  ],
+  "ppi": [
+    {
+      "alt": "producer-prices-change",
+      "url": "https://tradingeconomics.com/slovakia/producer-prices-change",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "Producer Prices in Slovakia decreased 1.20 percent in March of 2026 over the same month in the previous year. Producer Prices Change in Slovakia averaged 4.28 percent from 2011 until 2026, reaching an all time high of 61.80 percent in September of 2022 and a record low of -15.80 percent in February "
+    },
+    {
+      "alt": "producer-prices",
+      "url": "https://tradingeconomics.com/slovakia/producer-prices",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "Producer Prices in Slovakia decreased to 116.50 points in March from 116.60 points in February of 2026. Producer Prices in Slovakia averaged 113.07 points from 2010 until 2026, reaching an all time high of 161.30 points in October of 2022 and a record low of 99.40 points in March of 2016. <span clas"
+    }
+  ],
+  "unemployment": [
+    {
+      "alt": "unemployed-persons",
+      "url": "https://tradingeconomics.com/slovakia/unemployed-persons",
+      "src": "Ministry of Labour, Social Affairs and Family of the Slovak Republic",
+      "desc": "The number of unemployed persons in Slovakia decreased to 145413 in March of 2026 from 150022 in February of 2026. Unemployed Persons in Slovakia averaged 297890.01 from 1993 until 2026, reaching an all time high of 533676.00 in January of 2001 and a record low of 134124.00 in May of 2019. <span cla"
+    }
+  ],
+  "social-security-rate-employees": [
+    {
+      "alt": "social-security-rate-for-employees",
+      "url": "https://tradingeconomics.com/slovakia/social-security-rate-for-employees",
+      "src": null,
+      "desc": "The Social Security Rate For Employees in Slovakia stands at 14.40 percent. Social Security Rate For Employees in Slovakia averaged 13.32 percent from 2000 until 2026, reaching an all time high of 14.40 percent in 2026 and a record low of 12.00 percent in 2000. <span class='source-present'>source: T"
+    }
+  ],
+  "social-security-rate-companies": [
+    {
+      "alt": "social-security-rate-for-companies",
+      "url": "https://tradingeconomics.com/slovakia/social-security-rate-for-companies",
+      "src": null,
+      "desc": "The Social Security Rate For Companies in Slovakia stands at 36.20 percent. Social Security Rate For Companies in Slovakia averaged 35.64 percent from 2000 until 2026, reaching an all time high of 38.00 percent in 2000 and a record low of 35.20 percent in 2005. <span class='source-present'>source: T"
+    }
+  ],
+  "trade-balance": [
+    {
+      "alt": "balance-of-trade",
+      "url": "https://tradingeconomics.com/slovakia/balance-of-trade",
+      "src": "Statistical Office of the Slovak Republic",
+      "desc": "Slovakia posted a trade surplus of EUR 591.5 million in March 2026, widening from EUR 386.5 million in the same month last year. This also marked the largest surplus since June 2023, as exports rose while imports fell. Exports increased by 0.5% year-on-year to EUR 10.1 billion, driven largely by an "
+    }
+  ]
+}

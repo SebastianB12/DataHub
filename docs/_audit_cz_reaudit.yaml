@@ -1,0 +1,950 @@
+audit_date: '2026-05-17'
+by_action:
+  curated-no-change:
+  - corporate-tax-rate
+  - credit-rating
+  - hospital-beds
+  - medical-doctors
+  - nurses
+  - personal-income-tax-rate
+  - retirement-age-men
+  - retirement-age-women
+  - sales-tax-rate
+  - social-security-rate-companies
+  - social-security-rate-employees
+  curated-value-update:
+  - corruption-index
+  - corruption-rank
+  - social-security-rate
+  - terrorism-index
+  czso-canonical:
+  - business-confidence
+  - consumer-confidence
+  - consumer-spending
+  - cpi-clothing
+  - cpi-education
+  - cpi-food
+  - cpi-housing-utilities
+  - cpi-recreation-and-culture
+  - cpi-transportation
+  - employed-persons
+  - food-inflation
+  - gdp-real
+  - government-debt
+  - government-debt-total
+  - gross-fixed-capital-formation
+  - industrial-production
+  - inflation-cpi
+  - manufacturing-production
+  - mining-production
+  - ppi
+  - retail-sales
+  - unemployed-persons
+  eurostat-fallback-for-cnb-ecb:
+  - core-cpi
+  - current-account
+  - labour-costs
+  eurostat-fallback-for-czso:
+  - budget-deficit
+  - changes-in-inventories
+  - current-account-to-gdp
+  - exports
+  - government-spending
+  - government-spending-eur
+  - imports
+  - job-vacancies
+  - population
+  - unemployment
+  eurostat-no-change:
+  - capacity-utilization
+  - disposable-personal-income
+  - employment-rate
+  - energy-inflation
+  - house-price-index
+  - labor-force-participation-rate
+  - long-term-unemployment-rate
+  - productivity
+  - services-inflation
+  - services-sentiment
+  - youth-unemployment-rate
+  switch-curated-to-eurostat:
+  - minimum-wages
+  worldbank-no-change:
+  - gdp
+  - gdp-per-capita
+  - gdp-per-capita-ppp
+by_action_count:
+  curated-no-change: 11
+  curated-value-update: 4
+  czso-canonical: 22
+  eurostat-fallback-for-cnb-ecb: 3
+  eurostat-fallback-for-czso: 10
+  eurostat-no-change: 11
+  switch-curated-to-eurostat: 1
+  worldbank-no-change: 3
+country: CZ
+note: 'CZ re-audit 2026-05-17: Source-label honesty + curated value updates. Source-label
+  = technical fetch quelle (never upstream attribution). Validator pipeline.validate_te_conformity
+  is green (0 violations).'
+slugs:
+  budget-deficit:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: -2.1
+    db_note: TE attributes CZSO; using Eurostat gov_10dd_edpt1 (B.9, % of GDP). Honest
+      label = eurostat.
+    db_series_id: gov_10dd_edpt1:B9
+    db_source: eurostat
+    db_unit: '% of GDP'
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '2.10'
+    verdict: OK
+  business-confidence:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: czso
+    db_latest_value: 100.4
+    db_note: CZSO KPR1 Business confidence (Podnikatelé) bazický indeks
+    db_series_id: CZSO/KPR1/5865
+    db_source: czso
+    db_unit: Index (2005=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: null
+    verdict: OK
+  capacity-utilization:
+    action: eurostat-no-change
+    db_latest_date: '2026-06-30'
+    db_latest_source: eurostat
+    db_latest_value: 80.6
+    db_note: null
+    db_series_id: ei_bsin_q_r2:BS-ICU-PC
+    db_source: eurostat
+    db_unit: '%'
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  changes-in-inventories:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: -0.2
+    db_note: TE attributes CZSO; using Eurostat namq_10_gdp (P52, CZK billion equivalent).
+      Honest label = eurostat.
+    db_series_id: namq_10_gdp:P52
+    db_source: eurostat
+    db_unit: Billion EUR
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '62.33'
+    verdict: OK
+  consumer-confidence:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: eurostat
+    db_latest_value: -20.6
+    db_note: CZSO KPR1 Consumer confidence (Spotřebitelé) bazický indeks
+    db_series_id: CZSO/KPR1/5866
+    db_source: czso
+    db_unit: Points
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: null
+    verdict: CHECK
+  consumer-spending:
+    action: czso-canonical
+    db_latest_date: '2025-12-31'
+    db_latest_source: czso
+    db_latest_value: 1027710
+    db_note: CZSO NUC06Q Final consumption of households, current prices, mil. Kc,
+      quarterly
+    db_series_id: CZSO/NUC06Q/10000DOM
+    db_source: czso
+    db_unit: mil Kc
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '729.82'
+    verdict: OK
+  core-cpi:
+    action: eurostat-fallback-for-cnb-ecb
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 102.07
+    db_note: TE attributes Czech National Bank; using Eurostat ei_cphi_m (HICP core
+      ex food/energy). Honest label = eurostat.
+    db_series_id: ei_cphi_m:CP-HI00XEF
+    db_source: eurostat
+    db_unit: Index
+    te_label: Czech National Bank
+    te_url: https://www.cnb.cz/en/index.html
+    te_value: '14.75'
+    verdict: OK
+  corporate-tax-rate:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 21
+    db_note: null
+    db_series_id: CZ:corporate-tax-rate
+    db_source: curated
+    db_unit: '%'
+    te_label: Financial Administration of the Czech Republic
+    te_url: https://taxsummaries.pwc.com/
+    te_value: '21'
+    verdict: OK
+  corruption-index:
+    action: curated-value-update
+    db_latest_date: '2025-12-31'
+    db_latest_source: curated
+    db_latest_value: 59
+    db_note: TE 2025 Corruption Perceptions Index = 59 (Transparency International)
+    db_series_id: CZ:corruption-index
+    db_source: curated
+    db_unit: Points
+    te_label: Transparency International
+    te_url: null
+    te_value: '59.00'
+    verdict: OK
+  corruption-rank:
+    action: curated-value-update
+    db_latest_date: '2025-12-31'
+    db_latest_source: curated
+    db_latest_value: 39
+    db_note: TE 2025 CPI rank = 39 of 180 (Transparency International)
+    db_series_id: CZ:corruption-rank
+    db_source: curated
+    db_unit: Rank
+    te_label: Transparency International
+    te_url: null
+    te_value: null
+    verdict: OK
+  cpi-clothing:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 97.8
+    db_note: CZSO CEN0101E CPI COICOP-2018 03 Clothing and footwear, base 2025=100
+    db_series_id: CZSO/CEN0101E/COICOP=03
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '97.80'
+    verdict: OK
+  cpi-education:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 102.7
+    db_note: CZSO CEN0101E CPI COICOP-2018 10 Education, base 2025=100
+    db_series_id: CZSO/CEN0101E/COICOP=10
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '102.70'
+    verdict: OK
+  cpi-food:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 98.5
+    db_note: CZSO CEN0101E CPI COICOP-2018 01 Food and non-alcoholic beverages, base
+      2025=100
+    db_series_id: CZSO/CEN0101E/COICOP=01
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '98.50'
+    verdict: OK
+  cpi-housing-utilities:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 100.6
+    db_note: CZSO CEN0101E CPI COICOP-2018 04 Housing, water, electricity, gas and
+      other fuels, base 2025=100
+    db_series_id: CZSO/CEN0101E/COICOP=04
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '100.60'
+    verdict: OK
+  cpi-recreation-and-culture:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 101.2
+    db_note: CZSO CEN0101E CPI COICOP-2018 09 Recreation and culture, base 2025=100
+    db_series_id: CZSO/CEN0101E/COICOP=09
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '101.20'
+    verdict: OK
+  cpi-transportation:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 108.6
+    db_note: CZSO CEN0101E CPI COICOP-2018 07 Transport, base 2025=100
+    db_series_id: CZSO/CEN0101E/COICOP=07
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '108.60'
+    verdict: OK
+  credit-rating:
+    action: curated-no-change
+    db_latest_date: '2026-04-01'
+    db_latest_source: curated
+    db_latest_value: 80
+    db_note: null
+    db_series_id: CZ:credit-rating
+    db_source: curated
+    db_unit: Rating
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  current-account:
+    action: eurostat-fallback-for-cnb-ecb
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 0.56
+    db_note: TE attributes Czech National Bank; using Eurostat bop_c6_q (CA). Honest
+      label = eurostat.
+    db_series_id: bop_c6_q:CA
+    db_source: eurostat
+    db_unit: Billion EUR
+    te_label: Czech National Bank
+    te_url: http://www.cnb.cz
+    te_value: null
+    verdict: OK
+  current-account-to-gdp:
+    action: eurostat-fallback-for-czso
+    db_latest_date: null
+    db_latest_source: null
+    db_latest_value: null
+    db_note: TE attributes CZSO; using Eurostat bop_gdp6_q. Honest label = eurostat.
+    db_series_id: bop_gdp6_q:CA
+    db_source: eurostat
+    db_unit: null
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '0.70'
+    verdict: CHECK
+  disposable-personal-income:
+    action: eurostat-no-change
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 52297
+    db_note: null
+    db_series_id: nasq_10_nf_tr:B6G
+    db_source: eurostat
+    db_unit: Million EUR
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  employed-persons:
+    action: czso-canonical
+    db_latest_date: '2025-12-31'
+    db_latest_source: czso
+    db_latest_value: 5272.2165
+    db_note: CZSO ZAM01 Employed persons (Zaměstnaní), tis. osob, quarterly
+    db_series_id: CZSO/ZAM01/6285Z
+    db_source: czso
+    db_unit: thousand persons
+    te_label: Czech Statistical Office (CSU)
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: null
+    verdict: OK
+  employment-rate:
+    action: eurostat-no-change
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 75.7
+    db_note: null
+    db_series_id: lfsa_ergan:Y15-64
+    db_source: eurostat
+    db_unit: '%'
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: '75.70'
+    verdict: OK
+  energy-inflation:
+    action: eurostat-no-change
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 99.35
+    db_note: null
+    db_series_id: ei_cphi_m:CP-HIE:HICP2025
+    db_source: eurostat
+    db_unit: Index
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  exports:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 232.02
+    db_note: TE attributes CZSO; using Eurostat nama_10_exi (P6). Honest label = eurostat.
+    db_series_id: nama_10_exi:P6
+    db_source: eurostat
+    db_unit: Billion EUR
+    te_label: Czech Statistical Office
+    te_url: http://www.czso.cz
+    te_value: null
+    verdict: OK
+  food-inflation:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 98.5
+    db_note: CZSO CEN0101E CPI COICOP-2018 01 Food index (level; frontend derives
+      YoY)
+    db_series_id: CZSO/CEN0101E/COICOP=01:food-inflation
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: http://www.czso.cz
+    te_value: '26.00'
+    verdict: OK
+  gdp:
+    action: worldbank-no-change
+    db_latest_date: '2024-12-31'
+    db_latest_source: worldbank
+    db_latest_value: 347.03
+    db_note: null
+    db_series_id: NY.GDP.MKTP.CD
+    db_source: worldbank
+    db_unit: Billion USD
+    te_label: World Bank
+    te_url: https://www.worldbank.org/
+    te_value: null
+    verdict: OK
+  gdp-per-capita:
+    action: worldbank-no-change
+    db_latest_date: '2024-12-31'
+    db_latest_source: worldbank
+    db_latest_value: 20445.43
+    db_note: null
+    db_series_id: NY.GDP.PCAP.KD
+    db_source: worldbank
+    db_unit: USD (constant 2015)
+    te_label: World Bank
+    te_url: https://www.worldbank.org/
+    te_value: '162'
+    verdict: OK
+  gdp-per-capita-ppp:
+    action: worldbank-no-change
+    db_latest_date: '2024-12-31'
+    db_latest_source: worldbank
+    db_latest_value: 47963.9
+    db_note: null
+    db_series_id: NY.GDP.PCAP.PP.KD
+    db_source: worldbank
+    db_unit: Int. USD (PPP constant 2021)
+    te_label: World Bank
+    te_url: https://www.worldbank.org/
+    te_value: '270'
+    verdict: OK
+  gdp-real:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: czso
+    db_latest_value: 2.1
+    db_note: CZSO WNUC01D Quarterly real GDP, YoY % SA
+    db_series_id: CZSO/WNUC01D/9988J10
+    db_source: czso
+    db_unit: '% YoY'
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '2.5'
+    verdict: OK
+  government-debt:
+    action: czso-canonical
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 44.3
+    db_note: CZSO WNUC05D General government gross consolidated debt, mil. Kc, annual
+    db_series_id: CZSO/WNUC05D/600602
+    db_source: czso
+    db_unit: '% of GDP'
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '3786250'
+    verdict: CHECK
+  government-debt-total:
+    action: czso-canonical
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 156.22
+    db_note: CZSO WNUC05D General government gross consolidated debt (alias of government-debt)
+    db_series_id: CZSO/WNUC05D/600602:total
+    db_source: czso
+    db_unit: Billion EUR
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '44.30'
+    verdict: CHECK
+  government-spending:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 18.15
+    db_note: TE attributes CZSO; using Eurostat namq_10_gdp (P3_S13). Honest label
+      = eurostat.
+    db_series_id: namq_10_gdp:P3_S13
+    db_source: eurostat
+    db_unit: Billion EUR
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '348.30'
+    verdict: OK
+  government-spending-eur:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 18.15
+    db_note: TE attributes CZSO; using Eurostat namq_10_gdp (P3_S13). Honest label
+      = eurostat.
+    db_series_id: namq_10_gdp:P3_S13
+    db_source: eurostat
+    db_unit: Billion EUR
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '348.30'
+    verdict: OK
+  gross-fixed-capital-formation:
+    action: czso-canonical
+    db_latest_date: '2025-12-31'
+    db_latest_source: czso
+    db_latest_value: 651243
+    db_note: CZSO NUC06Q Gross fixed capital formation, current prices, mil. Kc, quarterly
+    db_series_id: CZSO/NUC06Q/9991BC
+    db_source: czso
+    db_unit: mil Kc
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '451.73'
+    verdict: OK
+  hospital-beds:
+    action: curated-no-change
+    db_latest_date: '2022-12-31'
+    db_latest_source: curated
+    db_latest_value: 6.5
+    db_note: null
+    db_series_id: CZ:hospital-beds
+    db_source: curated
+    db_unit: per 1000 people
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  house-price-index:
+    action: eurostat-no-change
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 254.1
+    db_note: null
+    db_series_id: prc_hpi_q:INX
+    db_source: eurostat
+    db_unit: Index
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: '254.10'
+    verdict: OK
+  imports:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 211.74
+    db_note: TE attributes CZSO; using Eurostat nama_10_exi (P7). Honest label = eurostat.
+    db_series_id: nama_10_exi:P7
+    db_source: eurostat
+    db_unit: Billion EUR
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: null
+    verdict: OK
+  industrial-production:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: czso
+    db_latest_value: 112.6955
+    db_note: CZSO PRU01D Industrial Production total industry, base 2021=100, monthly
+    db_series_id: CZSO/PRU01D
+    db_source: czso
+    db_unit: Index (2021=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '1.9'
+    verdict: OK
+  inflation-cpi:
+    action: czso-canonical
+    db_latest_date: '2026-04-30'
+    db_latest_source: czso
+    db_latest_value: 101.9
+    db_note: CZSO CEN0101E CPI total all-items, base 2025=100, monthly
+    db_series_id: CZSO/CEN0101E
+    db_source: czso
+    db_unit: Index (2025=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/
+    te_value: '2.5'
+    verdict: OK
+  job-vacancies:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 1.9
+    db_note: TE attributes Labor Office of the Czech Republic; using Eurostat jvs_q_nace2
+      (JVR). Honest label = eurostat.
+    db_series_id: jvs_q_nace2:JVR
+    db_source: eurostat
+    db_unit: '%'
+    te_label: Labor Office of the Czech Republic
+    te_url: https://www.uradprace.cz/uvod
+    te_value: null
+    verdict: OK
+  labor-force-participation-rate:
+    action: eurostat-no-change
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 77.7
+    db_note: null
+    db_series_id: lfsi_emp_q:ACT
+    db_source: eurostat
+    db_unit: '%'
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: '78.10'
+    verdict: OK
+  labour-costs:
+    action: eurostat-fallback-for-cnb-ecb
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 129.9
+    db_note: TE attributes European Central Bank; using Eurostat lc_lci_r2_q (I20).
+      Honest label = eurostat.
+    db_series_id: lc_lci_r2_q:I20
+    db_source: eurostat
+    db_unit: Index
+    te_label: European Central Bank
+    te_url: https://www.ecb.europa.eu/home/html/index.en.html
+    te_value: '134.97'
+    verdict: OK
+  long-term-unemployment-rate:
+    action: eurostat-no-change
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 1
+    db_note: null
+    db_series_id: une_ltu_q:LTU
+    db_source: eurostat
+    db_unit: '%'
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: '1'
+    verdict: OK
+  manufacturing-production:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: czso
+    db_latest_value: 115.2715
+    db_note: CZSO PRU01D Manufacturing (NACE C), base 2021=100
+    db_series_id: CZSO/PRU01D/C
+    db_source: czso
+    db_unit: Index (2021=100)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '54.10'
+    verdict: OK
+  medical-doctors:
+    action: curated-no-change
+    db_latest_date: '2021-12-31'
+    db_latest_source: curated
+    db_latest_value: 4.2
+    db_note: null
+    db_series_id: CZ:medical-doctors
+    db_source: curated
+    db_unit: per 1000 people
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  minimum-wages:
+    action: switch-curated-to-eurostat
+    db_latest_date: '2026-01-01'
+    db_latest_source: eurostat
+    db_latest_value: 924
+    db_note: TE attributes EUROSTAT minimum wage EUR/month (earn_mw_cur). Honest label
+      = eurostat.
+    db_series_id: earn_mw_cur:EUR
+    db_source: eurostat
+    db_unit: EUR/Month
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: null
+    verdict: OK
+  mining-production:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: czso
+    db_latest_value: 76.0194
+    db_note: CZSO PRU01D Mining and quarrying (NACE B), base 2021=100
+    db_series_id: CZSO/PRU01D/B
+    db_source: czso
+    db_unit: Index (2021=100)
+    te_label: CSU - Czech Statistical Office
+    te_url: http://www.czso.cz
+    te_value: '31.90'
+    verdict: OK
+  nurses:
+    action: curated-no-change
+    db_latest_date: '2021-12-31'
+    db_latest_source: curated
+    db_latest_value: 8
+    db_note: null
+    db_series_id: CZ:nurses
+    db_source: curated
+    db_unit: per 1000 people
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  personal-income-tax-rate:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 23
+    db_note: null
+    db_series_id: CZ:personal-income-tax-rate
+    db_source: curated
+    db_unit: '%'
+    te_label: Financial Administration of the Czech Republic
+    te_url: http://ec.europa.eu
+    te_value: '23'
+    verdict: OK
+  population:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 10.91
+    db_note: TE attributes CZSO; using Eurostat demo_pjan (TOTAL). Honest label =
+      eurostat.
+    db_series_id: demo_pjan:TOTAL
+    db_source: eurostat
+    db_unit: Millions
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '10.9'
+    verdict: OK
+  ppi:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 130.3
+    db_note: CZSO CEN0201A PPI total industry (BTE36), base 2015=100, monthly
+    db_series_id: CZSO/CEN0201A
+    db_source: czso
+    db_unit: Index
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz/csu/czso/home
+    te_value: '144.30'
+    verdict: CHECK
+  productivity:
+    action: eurostat-no-change
+    db_latest_date: '2025-12-31'
+    db_latest_source: eurostat
+    db_latest_value: 96.2
+    db_note: null
+    db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+    db_source: eurostat
+    db_unit: Index
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: '108.39'
+    verdict: OK
+  retail-sales:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: czso
+    db_latest_value: 105.9144
+    db_note: CZSO OBC01 Retail sales NACE 47, constant prices, YoY index, NSA
+    db_series_id: CZSO/OBC01/47
+    db_source: czso
+    db_unit: Index (previous year=100, constant prices)
+    te_label: Czech Statistical Office
+    te_url: https://www.czso.cz
+    te_value: '9.40'
+    verdict: OK
+  retirement-age-men:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 65
+    db_note: null
+    db_series_id: CZ:retirement-age-men
+    db_source: curated
+    db_unit: Years
+    te_label: Czech Social Security Administration
+    te_url: https://www.duchodovareforma.cz
+    te_value: null
+    verdict: OK
+  retirement-age-women:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 65
+    db_note: null
+    db_series_id: CZ:retirement-age-women
+    db_source: curated
+    db_unit: Years
+    te_label: Czech Social Security Administration
+    te_url: https://www.duchodovareforma.cz
+    te_value: null
+    verdict: OK
+  sales-tax-rate:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 21
+    db_note: null
+    db_series_id: CZ:sales-tax-rate
+    db_source: curated
+    db_unit: '%'
+    te_label: Financial Administration of the Czech Republic
+    te_url: null
+    te_value: '21'
+    verdict: OK
+  services-inflation:
+    action: eurostat-no-change
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 103.16
+    db_note: null
+    db_series_id: ei_cphi_m:CP-HIS:HICP2025
+    db_source: eurostat
+    db_unit: Index
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  services-sentiment:
+    action: eurostat-no-change
+    db_latest_date: '2026-04-30'
+    db_latest_source: eurostat
+    db_latest_value: 31.6
+    db_note: null
+    db_series_id: ei_bsse_m_r2:SCI
+    db_source: eurostat
+    db_unit: Points
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  social-security-rate:
+    action: curated-value-update
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 45.4
+    db_note: TE Social Security Rate = 45.40% (Czech Social Security Administration)
+    db_series_id: CZ:social-security-rate
+    db_source: curated
+    db_unit: '%'
+    te_label: Czech Social Security Administration
+    te_url: null
+    te_value: '45.40'
+    verdict: OK
+  social-security-rate-companies:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 33.8
+    db_note: null
+    db_series_id: CZ:social-security-rate-companies
+    db_source: curated
+    db_unit: '%'
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  social-security-rate-employees:
+    action: curated-no-change
+    db_latest_date: '2026-12-31'
+    db_latest_source: curated
+    db_latest_value: 11.2
+    db_note: null
+    db_series_id: CZ:social-security-rate-employees
+    db_source: curated
+    db_unit: '%'
+    te_label: null
+    te_url: null
+    te_value: null
+    verdict: OK
+  terrorism-index:
+    action: curated-value-update
+    db_latest_date: '2025-12-31'
+    db_latest_source: curated
+    db_latest_value: 2.26
+    db_note: TE 2025 Global Terrorism Index = 2.26 (Institute for Economics and Peace)
+    db_series_id: CZ:terrorism-index
+    db_source: curated
+    db_unit: Points
+    te_label: Institute for Economics and Peace
+    te_url: null
+    te_value: '2.26'
+    verdict: OK
+  unemployed-persons:
+    action: czso-canonical
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 168
+    db_note: CZSO ZAM01 Unemployed persons (Nezaměstnaní), tis. osob, quarterly
+    db_series_id: CZSO/ZAM01/6284
+    db_source: czso
+    db_unit: Thousand
+    te_label: Labor Office of the Czech Republic
+    te_url: https://www.uradprace.cz/uvod
+    te_value: null
+    verdict: CHECK
+  unemployment:
+    action: eurostat-fallback-for-czso
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 3.1
+    db_note: TE attributes Labor Office of CZ (registered rate). DB stores Eurostat
+      ILO unemployment rate (ei_lmhr_m). Honest label = eurostat.
+    db_series_id: ei_lmhr_m:LM-UN-T-TOT
+    db_source: eurostat
+    db_unit: '%'
+    te_label: Labor Office of the Czech Republic
+    te_url: https://www.uradprace.cz/uvod
+    te_value: '4.9'
+    verdict: OK
+  youth-unemployment-rate:
+    action: eurostat-no-change
+    db_latest_date: '2026-03-31'
+    db_latest_source: eurostat
+    db_latest_value: 10
+    db_note: null
+    db_series_id: une_rt_m:Y_LT25
+    db_source: eurostat
+    db_unit: '%'
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: '10'
+    verdict: OK
+total_slugs: 65

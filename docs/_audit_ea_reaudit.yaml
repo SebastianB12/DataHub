@@ -1,0 +1,692 @@
+# EA (Euro Area) fresh re-audit — 2026-05-16
+# All 52 slugs verified against fresh TE fetches; sources cross-checked vs internal mapping
+# (Eurostat -> eurostat, ECB -> ecb, World Bank -> worldbank, EC -> eurostat (DG ECFIN sentiment) or curated (tax aggregates))
+#
+# Counts: processed=52 ok=44 fixed=4 (this run) flagged=4
+
+budget-deficit:
+  te_label: EUROSTAT
+  te_value: -2.9
+  te_period: 2025
+  db_source: eurostat
+  db_series: gov_10dd_edpt1:B9
+  db_value: -2.9
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true
+  status: ok
+
+business-confidence:
+  te_label: European Commission
+  te_value: -0.28
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_bsin_m_r2:BCI
+  db_value: -0.28
+  db_period: 2026-04-30
+  source_match: true   # EC DG ECFIN sentiment delivered via Eurostat
+  value_match: true
+  status: ok
+
+capacity-utilization:
+  te_label: European Commission
+  te_value: 77.6
+  te_period: 2026-Q1
+  db_source: eurostat
+  db_series: ei_bsin_q_r2:BS-ICU-PC
+  db_value: 78.5      # DB has Q2 2026 (78.5); Q1 2026 = 77.8
+  db_period: 2026-06-30
+  source_match: true
+  value_match: true
+  status: ok
+
+changes-in-inventories:
+  te_label: EUROSTAT
+  te_value: 26.52
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: namq_10_gdp:P52
+  db_value: 20.52    # SCA CP_MEUR EA20 = 20.32 bn; EA21 = 20.52 bn
+  db_period: 2025-12-31
+  source_match: true
+  value_match: false
+  status: flagged
+  flag_reason: |
+    Source is correct (Eurostat namq_10_gdp P52). All current vintages
+    EA20/EA21/EA across SCA/NSA/CA give 20.32 / 20.52 / -3.02. TE's
+    26.52 is not reproducible from any Eurostat API vintage today.
+    Treat as TE vintage drift on a historically volatile series.
+
+consumer-confidence:
+  te_label: European Commission
+  te_value: -20.6
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_bsco_m:BS-CSMCI
+  db_value: -20.6
+  db_period: 2026-04-30
+  source_match: true
+  value_match: true
+  status: ok
+
+consumer-spending:
+  te_label: EUROSTAT
+  te_value: 1647.11
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: namq_10_gdp:P31_S14:CLV20_MEUR
+  db_value: 1678.74
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # ~1.9% vintage diff (chain-linked 2020 prices SCA)
+  status: ok
+  prior_fix: switched from CP_MEUR (nominal) to CLV20_MEUR (chain-linked 2020)
+
+core-cpi:
+  te_label: EUROSTAT
+  te_value_yoy: 2.2
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HI00XEF
+  db_value: 102.34   # index level; YoY = 2.21% (102.34/100.13)
+  db_period: 2026-04-30
+  source_match: true
+  value_match: true   # frontend YoY transform from level
+  status: ok
+
+corporate-tax-rate:
+  te_label: European Commission
+  te_value: 22.2
+  te_period: 2025
+  db_source: curated
+  db_series: EA:corporate-tax-rate
+  db_value: 22.2
+  db_period: 2025-12-31
+  source_match: true   # EA tax aggregates have no SDMX feed; curated row sourced from EC
+  value_match: true
+  status: ok
+
+cpi-clothing:
+  te_label: EUROSTAT
+  te_value: 102.62        # TE description erroneously shows transportation copy; cpi-clothing TE actual label still EUROSTAT
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HI03:HICP2025
+  db_value: 102.61
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+cpi-education:
+  te_label: EUROSTAT
+  te_value: 102.85
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HI10:HICP2025
+  db_value: 102.88
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+cpi-housing-utilities:
+  te_label: EUROSTAT
+  te_value: 101.91
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HI04:HICP2025
+  db_value: 101.91
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+cpi-recreation-and-culture:
+  te_label: EUROSTAT
+  te_value: 100.23
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HI09:HICP2025
+  db_value: 100.26
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+cpi-transportation:
+  te_label: EUROSTAT
+  te_value: 104.49
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HI07:HICP2025
+  db_value: 104.49
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+current-account:
+  te_label: European Central Bank
+  te_value: 21.09        # EUR Billion Feb 2026
+  te_period: 2026-02
+  db_source: ecb
+  db_series: BPS/M.N.U2.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL
+  db_value: 21092.04     # EUR Million == 21.09 bn
+  db_period: 2026-02-28
+  source_match: true
+  value_match: true
+  status: ok
+
+current-account-to-gdp:
+  te_label: EUROSTAT
+  te_value: 1.7
+  te_period: 2025
+  db_source: eurostat
+  db_series: tipsbp20:CA:PC_GDP:EXT_EA20
+  db_value: 1.7
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true
+  status: ok
+
+disposable-personal-income:
+  te_label: EUROSTAT
+  te_value: 2451271     # EUR Million Q4 2025
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: nasq_10_nf_tr:B6G
+  db_value: 2450613
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true     # 0.03% vintage diff
+  status: ok
+
+employment-rate:
+  te_label: EUROSTAT
+  te_value: 70.9
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series_before: lfsa_ergan:Y15-64    # annual
+  db_series: lfsi_emp_q:Y15-64:EMP_LFS   # NEW quarterly
+  db_value: 70.8
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # 70.8 vs TE 70.9 within rounding
+  status: fixed
+  fix_summary: |
+    Switched from annual lfsa_ergan to quarterly lfsi_emp_q (EMP_LFS SA Y15-64 EA20).
+    Matches TE quarterly cadence; backfilled 68 quarters.
+
+energy-inflation:
+  te_label: Eurostat
+  te_value_yoy: 10.9
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HIE:HICP2025
+  db_value: 110.41   # index 2025=100; YoY = +10.91% (110.41/99.55)
+  db_period: 2026-04-30
+  source_match: true
+  value_match: true
+  status: ok
+
+exports:
+  te_label: EUROSTAT
+  te_value: 232408.7    # EUR Million Feb 2026 (monthly external trade)
+  te_period: 2026-02
+  db_source: eurostat
+  db_series_before: nama_10_exi:P6       # annual national accounts
+  db_series: ei_etea_m:EXP:MIO_EUR_NSA:EXT_EA21:EA21   # NEW monthly trade
+  db_value: 232408.7
+  db_period: 2026-02-28
+  source_match: true
+  value_match: true     # exact
+  status: fixed
+  fix_summary: |
+    Switched from annual nama_10_exi to monthly ei_etea_m (extra-EA21
+    exports, MIO_EUR_NSA, geo=EA21 — Bulgaria joined Euro 2026-01-01).
+    290 monthly rows backfilled; Feb 2026 matches TE exactly.
+
+food-inflation:
+  te_label: EUROSTAT
+  te_value_yoy: 2.2
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HIF:HICP2025
+  db_value: 102.2   # index level; YoY ~2.2
+  db_period: 2026-04-30
+  source_match: true
+  value_match: true
+  status: ok
+
+gdp:
+  te_label: World Bank
+  te_value: 16406.13
+  te_period: 2024
+  db_source: worldbank
+  db_series: NY.GDP.MKTP.CD
+  db_value: 16485.44
+  db_period: 2024-12-31
+  source_match: true
+  value_match: true   # 0.48% vintage diff
+  status: ok
+
+gdp-per-capita:
+  te_label: World Bank
+  te_value: 38145.12
+  te_period: 2024
+  db_source: worldbank
+  db_series: NY.GDP.PCAP.KD     # constant 2015 USD per capita
+  db_value: 38254.42
+  db_period: 2024-12-31
+  source_match: true
+  value_match: true   # 0.29%
+  status: ok
+  prior_fix: switched from .CD to .KD to match TE constant-USD methodology
+
+gdp-per-capita-ppp:
+  te_label: World Bank
+  te_value: 56326.23
+  te_period: 2024
+  db_source: worldbank
+  db_series: NY.GDP.PCAP.PP.KD   # constant 2021 intl $
+  db_value: 56432.31
+  db_period: 2024-12-31
+  source_match: true
+  value_match: true
+  status: ok
+  prior_fix: switched from .PP.CD to .PP.KD
+
+gdp-real:
+  te_label: EUROSTAT
+  te_value_yoy: 0.8
+  te_period: 2026-Q1
+  db_source: eurostat
+  db_series: namq_10_gdp:CLV10_MEUR
+  db_value: 2920.95   # Q1 2026 chain-linked; YoY = +0.80% vs Q1 2025 2897.6
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+government-debt:
+  te_label: EUROSTAT
+  te_value: 87.8   # %GDP 2025 (TE government-debt-to-gdp shown on the page)
+  te_period: 2025
+  db_source: eurostat
+  db_series: gov_10dd_edpt1:GD:PC_GDP
+  db_value: 87.4
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # 0.46% vintage diff
+  status: ok
+  note: |
+    Our slug "government-debt" stores debt-to-GDP %, sibling slug
+    "government-debt-total" stores level in EUR Million.
+
+government-debt-total:
+  te_label: EUROSTAT
+  te_value: 13911079    # EUR Million 2025
+  te_period: 2025
+  db_source: eurostat
+  db_series: gov_10dd_edpt1:GD:MIO_EUR
+  db_value: 13945.71    # bn EUR -> 13,945,710 M
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # 0.25% vintage diff
+  status: ok
+
+government-spending:
+  te_label: EUROSTAT
+  te_value: 673.65     # EUR Billion Q4 2025
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: namq_10_gdp:P3_S13:CLV15_MEUR
+  db_value: 673.65
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # exact
+  status: ok
+  prior_fix: switched from annual gov_10a_main to quarterly chain-linked volumes
+
+government-spending-eur:
+  te_label: null   # no TE page (returns homepage)
+  te_value: null
+  db_source: eurostat
+  db_series: namq_10_gdp:P3_S13
+  db_value: 878.4
+  db_period: 2025-12-31
+  source_match: n/a
+  value_match: n/a
+  status: flagged
+  flag_reason: TE has no page for this slug; we keep nominal EUR sibling alongside the volume series
+
+gross-fixed-capital-formation:
+  te_label: EUROSTAT
+  te_value: 650.90
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: namq_10_gdp:P51G:CLV15_MEUR
+  db_value: 650.9
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # exact
+  status: ok
+  prior_fix: switched to chain-linked volumes 2015=100
+
+house-price-index:
+  te_label: EUROSTAT
+  te_value: 157.06
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: prc_hpi_q:INX
+  db_value: 157.06
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # exact
+  status: ok
+
+imports:
+  te_label: EUROSTAT
+  te_value: 220896.8    # EUR Million Feb 2026
+  te_period: 2026-02
+  db_source: eurostat
+  db_series_before: nama_10_exi:P7
+  db_series: ei_etea_m:IMP:MIO_EUR_NSA:EXT_EA21:EA21
+  db_value: 220896.8
+  db_period: 2026-02-28
+  source_match: true
+  value_match: true   # exact
+  status: fixed
+  fix_summary: |
+    Switched from annual nama_10_exi to monthly ei_etea_m extra-EA21 imports
+    (geo=EA21 — current Euro composition from 2026). 290 rows backfilled.
+
+industrial-production:
+  te_label: EUROSTAT
+  te_value_yoy: -2.1
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: sts_inpr_m:B-D:I21:CA
+  db_value: 105.6
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # YoY -2.13% (105.6 vs 107.9)
+  status: ok
+  prior_fix: switched to calendar-adjusted (CA) volume index to match TE methodology
+
+inflation-cpi:
+  te_label: EUROSTAT
+  te_value_yoy: 3.0
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_cphi_m:TOTAL
+  db_value: 103.06     # index level 2025=100; YoY = +3.06%
+  db_period: 2026-04-30
+  source_match: true
+  value_match: true
+  status: ok
+
+job-vacancies:
+  te_label: null    # TE page returns homepage
+  te_value: null
+  db_source: eurostat
+  db_series: jvs_q_nace2:B-S:JOBVAC
+  db_value: null    # Eurostat API returns empty for absolute JOBVAC count at EA aggregate
+  db_period: null
+  source_match: n/a
+  value_match: n/a
+  status: flagged
+  flag_reason: |
+    TE has no Euro Area job vacancies page (homepage fallback). Eurostat
+    aggregate jvs_q_nace2 publishes JOBVAC rates (JVR) and Q4 2025 = 2.2
+    but the absolute count for EA aggregate is null. Use JVR if frontend
+    needs the rate; otherwise treat as coverage gap.
+
+labor-force-participation-rate:
+  te_label: EUROSTAT
+  te_value: 75.6
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: lfsi_emp_q:ACT
+  db_value: 75.6
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true
+  status: ok
+
+loans-to-private-sector:
+  te_label: European Central Bank
+  te_value: 5383072    # EUR Million March 2026 (TE description says March)
+  te_period: 2026-03
+  db_source: ecb
+  db_series: M.U2.Y.U.A20T.A.1.U2.2240.Z01.E
+  db_value: 5383.07    # EUR Billion -> 5,383,070 EUR Million
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # 0.00%
+  status: ok
+
+long-term-unemployment-rate:
+  te_label: EUROSTAT
+  te_value: 2.0
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series: une_ltu_q:LTU
+  db_value: 2
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true
+  status: ok
+
+manufacturing-production:
+  te_label: EUROSTAT
+  te_value_yoy: -2.4
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: sts_inpr_m:C:I21
+  db_value: 98.7
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # YoY ~-2.4% from index level vs Mar 2025
+  status: ok
+
+mining-production:
+  te_label: EUROSTAT
+  te_value_yoy: -1.0
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: sts_inpr_m:B:I21
+  db_value: 82.2
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+money-supply-m1:
+  te_label: European Central Bank
+  te_value: 11279794    # EUR Million March 2026
+  te_period: 2026-03
+  db_source: ecb
+  db_series: M.U2.Y.V.M10.X.1.U2.2300.Z01.E
+  db_value: 11279.79    # EUR Billion -> 11,279,790 EUR Million
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # 0.00%
+  status: ok
+
+money-supply-m3:
+  te_label: European Central Bank
+  te_value: 17344679    # EUR Million January 2026 (TE)
+  te_period: 2026-01
+  db_source: ecb
+  db_series: M.U2.Y.V.M30.X.1.U2.2300.Z01.E
+  db_value: 17446.55   # EUR Billion March 2026 (DB has fresher)
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+personal-income-tax-rate:
+  te_label: European Commission
+  te_value: 41.3
+  te_period: 2025
+  db_source: curated
+  db_series: EA:personal-income-tax-rate
+  db_value: 41.3
+  db_period: 2025-12-31
+  source_match: true   # tax aggregates have no SDMX feed; curated derived from EC
+  value_match: true
+  status: ok
+
+population:
+  te_label: EUROSTAT
+  te_value: 351.6      # millions
+  te_period: 2025
+  db_source: eurostat
+  db_series: demo_pjan:TOTAL
+  db_value: 351.64
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true
+  status: ok
+  prior_fix: added geo_override=[EA20] to avoid EA21 (BG-joined) inflation
+
+ppi:
+  te_label: EUROSTAT
+  te_value: 129.10
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: sts_inppd_m:B-D
+  db_value: 129
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true
+  status: ok
+
+productivity:
+  te_label: EUROSTAT
+  te_value: 104.07
+  te_period: 2025-Q4
+  db_source: eurostat
+  db_series_before: namq_10_lp_ulc:RLPR_HW:I20   # 2020=100
+  db_series: namq_10_lp_ulc:RLPR_HW:I15          # 2015=100 (TE base)
+  db_value: 103.80
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true   # 0.26% diff; matches TE base year now
+  status: fixed
+  fix_summary: |
+    Switched index base from 2020=100 (I20) to 2015=100 (I15) — TE's base year.
+    Backfilled 124 quarters from Eurostat namq_10_lp_ulc Real Labour Productivity
+    per Hour Worked, EA20.
+
+retail-sales:
+  te_label: null   # TE page returns homepage at this slug (TE uses retail-sales-yoy elsewhere)
+  te_value: null
+  db_source: eurostat
+  db_series: sts_trtu_m:G47:I21
+  db_value: 103.6
+  db_period: 2026-03-31
+  source_match: true   # Eurostat retail trade volume index G47
+  value_match: true    # YoY ~1.07% vs TE 1.2 (retail-sales-yoy page); within tolerance
+  status: ok
+  note: slug name retail-sales; TE shows YoY at /retail-sales-yoy page. Index level stored, frontend computes YoY.
+
+sales-tax-rate:
+  te_label: European Commission
+  te_value: 21.2
+  te_period: 2025
+  db_source: curated
+  db_series: EA:sales-tax-rate
+  db_value: 21.2
+  db_period: 2025-12-31
+  source_match: true
+  value_match: true
+  status: ok
+
+services-inflation:
+  te_label: EUROSTAT
+  te_value_yoy: 3.0
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_cphi_m:CP-HIS:HICP2025
+  db_value: 102.75     # index level; YoY = +2.98% (within tolerance)
+  db_period: 2026-04-30
+  source_match: true
+  value_match: true
+  status: ok
+
+services-sentiment:
+  te_label: European Commission
+  te_value: 0.9
+  te_period: 2026-04
+  db_source: eurostat
+  db_series: ei_bsse_m_r2:SCI
+  db_value: 0.9
+  db_period: 2026-04-30
+  source_match: true   # EC DG ECFIN sentiment delivered via Eurostat
+  value_match: true
+  status: ok
+
+unemployed-persons:
+  te_label: EUROSTAT
+  te_value: 10984
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: une_rt_m:TOTAL:THS_PER
+  db_value: 10984
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # exact
+  status: ok
+
+unemployment:
+  te_label: EUROSTAT
+  te_value: 6.2
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: ei_lmhr_m:LM-UN-T-TOT
+  db_value: 6.2
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # exact
+  status: ok
+
+youth-unemployment-rate:
+  te_label: EUROSTAT
+  te_value: 14.9
+  te_period: 2026-03
+  db_source: eurostat
+  db_series: une_rt_m:Y_LT25
+  db_value: 14.9
+  db_period: 2026-03-31
+  source_match: true
+  value_match: true   # exact
+  status: ok
+
+_summary:
+  total: 52
+  ok: 44
+  fixed: 4              # this audit run
+  flagged: 4
+  fixed_this_run:
+    - employment-rate   # annual lfsa_ergan -> quarterly lfsi_emp_q
+    - exports           # annual nama_10_exi -> monthly ei_etea_m (EA21)
+    - imports           # annual nama_10_exi -> monthly ei_etea_m (EA21)
+    - productivity      # I20 -> I15 base year (TE)
+  flagged_slugs:
+    - changes-in-inventories   # TE 26.52 not reproducible from any Eurostat vintage
+    - government-spending-eur  # no TE page; sibling indicator
+    - job-vacancies            # no TE page; Eurostat aggregate JOBVAC empty
+    - retail-sales             # TE redirects to retail-sales-yoy; YoY-vs-level handling ok
+  prior_fixes_carried_over:
+    - consumer-spending        # CP_MEUR -> CLV20_MEUR
+    - current-account          # Eurostat quarterly -> ECB monthly
+    - current-account-to-gdp   # bop_eu6_q -> tipsbp20 annual
+    - gdp-per-capita           # .CD -> .KD constant USD
+    - gdp-per-capita-ppp       # .PP.CD -> .PP.KD constant intl$
+    - government-spending      # annual -> quarterly chain-linked
+    - gross-fixed-capital-formation  # nominal -> chain-linked 2015
+    - industrial-production    # SCA -> CA
+    - population               # geo_override EA20 to avoid EA21 inflation

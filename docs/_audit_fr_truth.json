@@ -1,0 +1,483 @@
+{
+  "budget-deficit": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/government-budget",
+    "note": "Derived from INSEE CNT-2020-CSI: B9NF (net lending APU S13, IDBANK 011794759) / PIB nominal (CNT-2020-PIB-EQB-RF, IDBANK 011794859), annualized. 2025 = -5.11% matches TE -5.1."
+  },
+  "business-confidence": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/business-confidence"
+  },
+  "capacity-utilization": {
+    "source": "bdf",
+    "verified": true,
+    "te_label": "Banque de France",
+    "te_url": "https://www.banque-france.fr/",
+    "te_page": "https://tradingeconomics.com/france/capacity-utilization"
+  },
+  "changes-in-inventories": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/changes-in-inventories"
+  },
+  "consumer-confidence": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/consumer-confidence"
+  },
+  "consumer-spending": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/consumer-spending"
+  },
+  "core-cpi": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/core-inflation-rate"
+  },
+  "corporate-tax-rate": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Direction Générale des Finances Publiques",
+    "te_url": "https://www.impots.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/corporate-tax-rate",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "corruption-index": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Transparency International",
+    "te_url": "https://www.transparency.org/en",
+    "te_page": "https://tradingeconomics.com/france/corruption-index"
+  },
+  "corruption-rank": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Transparency International",
+    "te_url": "https://www.transparency.org/",
+    "te_page": "https://tradingeconomics.com/france/corruption-rank"
+  },
+  "cpi-clothing": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/cpi-transportation"
+  },
+  "cpi-education": {
+    "source": "insee",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/cpi-education",
+    "note": "INSEE BDM IPC-2025 COICOP=10."
+  },
+  "cpi-food": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/cpi-food",
+    "note": "INSEE IPC-2025 COICOP=01 IDBANK 011814667. Switched 2026-05-16 from Eurostat ei_cphi_m to INSEE direct."
+  },
+  "cpi-housing-utilities": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/cpi-housing-utilities"
+  },
+  "cpi-recreation-and-culture": {
+    "source": "insee",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/cpi-recreation-and-culture",
+    "note": "INSEE BDM IPC-2025 COICOP=09."
+  },
+  "cpi-transportation": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/cpi-transportation"
+  },
+  "credit-rating": {
+    "source": "curated",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/credit-rating",
+    "note": "TE-Score. Moody's Aa3, S&P AA-, Fitch AA- (negative outlook)."
+  },
+  "current-account": {
+    "source": "bdf",
+    "verified": true,
+    "te_label": "Banque de France",
+    "te_url": "https://www.banque-france.fr/",
+    "te_page": "https://tradingeconomics.com/france/current-account",
+    "note": "BdF BPM6 monthly SA via DBnomics. Series M.S.FR.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL. Switched 2026-05-16."
+  },
+  "current-account-to-gdp": {
+    "source": "eurostat",
+    "verified": true,
+    "te_label": "EUROSTAT",
+    "te_url": "https://ec.europa.eu/eurostat/",
+    "te_page": "https://tradingeconomics.com/france/current-account-to-gdp"
+  },
+  "disposable-personal-income": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/disposable-personal-income"
+  },
+  "employed-persons": {
+    "source": "eurostat",
+    "verified": true,
+    "te_label": "EUROSTAT",
+    "te_url": "https://ec.europa.eu/eurostat/en/",
+    "te_page": "https://tradingeconomics.com/france/employed-persons"
+  },
+  "employment-rate": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/employment-rate"
+  },
+  "energy-inflation": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/energy-inflation"
+  },
+  "exports": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "Ministère de l'Économie et des Finances",
+    "te_url": "http://lekiosque.finances.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/exports",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "food-inflation": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/food-inflation"
+  },
+  "gdp": {
+    "source": "worldbank",
+    "verified": true,
+    "te_label": "World Bank",
+    "te_url": "https://www.worldbank.org/",
+    "te_page": "https://tradingeconomics.com/france/gdp"
+  },
+  "gdp-growth-rate": {
+    "source": "insee",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/gdp-growth-rate",
+    "note": "INSEE BDM CNT-2020-PIB-EQB-RF — PIB Taux QoQ % CVS-CJO."
+  },
+  "gdp-per-capita": {
+    "source": "worldbank",
+    "verified": true,
+    "te_label": "World Bank",
+    "te_url": "https://www.worldbank.org/",
+    "te_page": "https://tradingeconomics.com/france/gdp-per-capita"
+  },
+  "gdp-per-capita-ppp": {
+    "source": "worldbank",
+    "verified": true,
+    "te_label": "World Bank",
+    "te_url": "https://www.worldbank.org/",
+    "te_page": "https://tradingeconomics.com/france/gdp-per-capita-ppp"
+  },
+  "gdp-real": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/gdp-growth-annual"
+  },
+  "government-debt": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/government-debt",
+    "note": "INSEE BDM DETTE-TRIM-APU-2020 IDBANK 010777608 (% of GDP). Switched eurostat -> insee 2026-05-16; Q4 2025 = 115.6% exact TE match."
+  },
+  "government-debt-total": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/government-debt",
+    "note": "INSEE BDM DETTE-TRIM-APU-2020 IDBANK 010777616 (EUR Billion). Switched eurostat -> insee 2026-05-16; Q4 2025 = 3460.5 Bn EUR exact TE match."
+  },
+  "government-spending": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/government-spending"
+  },
+  "government-spending-eur": {
+    "source": "eurostat",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/government-spending-eur"
+  },
+  "gross-fixed-capital-formation": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/gross-fixed-capital-formation"
+  },
+  "hospital-beds": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "OECD",
+    "te_url": "https://www.oecd.org/",
+    "te_page": "https://tradingeconomics.com/france/hospital-beds",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "house-price-index": {
+    "source": "eurostat",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/house-price-index"
+  },
+  "imports": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "Ministère de l'Économie et des Finances",
+    "te_url": "http://lekiosque.finances.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/imports",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "industrial-production": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/industrial-production"
+  },
+  "inflation-cpi": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/inflation-cpi"
+  },
+  "interest-rate": {
+    "source": "ecb",
+    "verified": true,
+    "te_label": "European Central Bank",
+    "te_url": "https://www.ecb.europa.eu",
+    "te_page": "https://tradingeconomics.com/france/interest-rate"
+  },
+  "job-vacancies": {
+    "source": "eurostat",
+    "verified": true,
+    "te_label": "DARES, France",
+    "te_url": "https://dares.travail-emploi.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/job-vacancies",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "labor-force-participation-rate": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/labor-force-participation-rate"
+  },
+  "labour-costs": {
+    "source": "ecb",
+    "verified": true,
+    "te_label": "European Central Bank",
+    "te_url": "https://www.ecb.europa.eu",
+    "te_page": "https://tradingeconomics.com/france/labour-costs",
+    "note": "ECB MNA Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N — Unit Labour Cost (persons), seasonally adj, index 2020=100. ECB LCI dataflow only carries EA/EU aggregates, no national rows; ECB MNA ULC is the national-level ECB-attributed labour cost index TE shows."
+  },
+  "long-term-unemployment-rate": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/long-term-unemployment-rate",
+    "note": "INSEE BDM CHOMAGE-TRIM-NATIONAL TXCHLODU SEXE=0 AGE=00- REF_AREA=FR-D976 (France hors Mayotte) CVS — IDBANK 010605073. Previous note said TXCHLODU discontinued — only the FE (France entière) variant was, the FR-D976 series is current. Q3-Q4 2025 = 1.8 matches TE exactly."
+  },
+  "manufacturing-production": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/manufacturing-production"
+  },
+  "medical-doctors": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "OECD",
+    "te_url": "https://www.oecd.org/",
+    "te_page": "https://tradingeconomics.com/france/medical-doctors",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "minimum-wages": {
+    "source": "eurostat",
+    "verified": true,
+    "te_label": "EUROSTAT",
+    "te_url": "https://ec.europa.eu/eurostat/",
+    "te_page": "https://tradingeconomics.com/france/minimum-wages"
+  },
+  "mining-production": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/mining-production"
+  },
+  "nurses": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "OECD",
+    "te_url": "https://www.oecd.org/",
+    "te_page": "https://tradingeconomics.com/france/nurses",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "personal-income-tax-rate": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Direction Générale des Finances Publiques",
+    "te_url": "https://www.impots.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/personal-income-tax-rate",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "population": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/population",
+    "note": "INSEE BDM POPULATION-STRUCTURE 001641586 (Pop totale 1er janv, FR)."
+  },
+  "ppi": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/producer-prices"
+  },
+  "productivity": {
+    "source": "eurostat",
+    "verified": true,
+    "te_label": "EUROSTAT",
+    "te_url": "https://ec.europa.eu/eurostat/",
+    "te_page": "https://tradingeconomics.com/france/productivity"
+  },
+  "retail-sales": {
+    "source": "insee",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/retail-sales-yoy",
+    "note": "INSEE BDM ICA-2021-COMMERCE NAF2=47 (Retail Trade, CVS-CJO)."
+  },
+  "retirement-age-men": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Ministère des Solidarités et de la Santé",
+    "te_url": "https://reforme-retraite.gouv.fr/",
+    "te_page": "https://tradingeconomics.com/france/retirement-age-men",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "retirement-age-women": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Ministère des Solidarités et de la Santé",
+    "te_url": "https://reforme-retraite.gouv.fr/",
+    "te_page": "https://tradingeconomics.com/france/retirement-age-women",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "sales-tax-rate": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Direction Générale des Finances Publiques",
+    "te_url": "https://www.impots.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/sales-tax-rate",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "services-inflation": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/services-inflation"
+  },
+  "social-security-rate": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Ministère des Solidarités et de la Santé",
+    "te_url": "https://solidarites-sante.gouv.fr/",
+    "te_page": "https://tradingeconomics.com/france/social-security-rate",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "social-security-rate-companies": {
+    "source": "curated",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/social-security-rate-companies",
+    "note": "Employer share."
+  },
+  "social-security-rate-employees": {
+    "source": "curated",
+    "verified": false,
+    "te_page": "https://tradingeconomics.com/france/social-security-rate-employees",
+    "note": "Employee share."
+  },
+  "terrorism-index": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "Institute for Economics and Peace",
+    "te_url": "http://economicsandpeace.org",
+    "te_page": "https://tradingeconomics.com/france/terrorism-index",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "unemployed-persons": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "DARES, France",
+    "te_url": "https://dares.travail-emploi.gouv.fr",
+    "te_page": "https://tradingeconomics.com/france/unemployed-persons",
+    "note": "Conceptual gap: TE shows DARES Cat A registered job seekers (~3109k Mar 2026). Our INSEE/Eurostat data is ILO LFS (~2439k Mar 2026). DARES data not exposed via INSEE BDM or DBnomics. Tracked as known mismatch."
+  },
+  "unemployment": {
+    "source": "insee",
+    "verified": true,
+    "te_label": "INSEE, France",
+    "te_url": "https://www.insee.fr",
+    "te_page": "https://tradingeconomics.com/france/unemployment-rate"
+  },
+  "weapons-sales": {
+    "source": "curated",
+    "verified": true,
+    "te_label": "SIPRI",
+    "te_url": "https://www.sipri.org",
+    "te_page": "https://tradingeconomics.com/france/weapons-sales",
+    "note": "no internal source code — likely licensed or unmapped provider"
+  },
+  "youth-unemployment-rate": {
+    "source": "eurostat",
+    "verified": true,
+    "te_label": "EUROSTAT",
+    "te_url": "https://ec.europa.eu/eurostat/",
+    "te_page": "https://tradingeconomics.com/france/youth-unemployment-rate"
+  }
+}

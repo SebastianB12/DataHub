@@ -1,0 +1,1386 @@
+budget-deficit:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: -128.5714285714286
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: -1.6
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/government-budget
+  te_period: null
+  te_value: 1.6
+  value_match: false
+  yoy_computed: 44.82758620689655
+business-confidence:
+  decision: level-vs-ratio
+  decision_reason: TE attributes CBS, value differs (unit/aggregate). Keep eurostat label (honest).
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: null
+  our_series: ei_bsin_m_r2:BCI
+  our_source: eurostat
+  our_unit: null
+  our_value: null
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/business-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 78.6
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: European Commission
+  te_page: https://tradingeconomics.com/netherlands/capacity-utilization
+  te_period: in the first quarter of 2026
+  te_value: 78.3
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 111.11111111111111
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P52
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 0.16
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/changes-in-inventories
+  te_period: in the fourth quarter of 2025
+  te_value: 1031.0
+  value_match: false
+  yoy_computed: -89.26174496644296
+consumer-confidence:
+  decision: level-vs-ratio
+  decision_reason: TE attributes CBS, value differs (unit/aggregate). Keep eurostat label (honest).
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsco_m:BS-CSMCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: -20.6
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/consumer-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-spending:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 0.76746578052061
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P31_S14
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 127.36
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/consumer-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 105502.0
+  value_match: false
+  yoy_computed: 11.416324031143379
+core-cpi:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 2.1659578676688733
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HI00XEF
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.3
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/core-inflation-rate
+  te_period: in March of 2026
+  te_value: 6.9
+  value_match: false
+  yoy_computed: 2.115460656385924
+corporate-tax-rate:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 25.8
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Tax and Customs Administration - Belastingdienst
+  te_page: https://tradingeconomics.com/netherlands/corporate-tax-rate
+  te_period: null
+  te_value: 25.8
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  decision: te-parser-noise
+  decision_reason: 'Audit script extracted wrong number from TE description (e.g., all-time-high). Manual verification: our value matches TE last-recorded.'
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: NL:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 78
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/netherlands/corruption-index
+  te_period: null
+  te_value: 90.3
+  value_match: false
+  yoy_computed: null
+corruption-rank:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: NL:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 8
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/netherlands/corruption-rank
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI03
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.55
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/cpi-transportation
+  te_period: in March of 2026
+  te_value: 103.84
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI10
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.19
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/cpi-education
+  te_period: in March
+  te_value: 102.18
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI01
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.04
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/cpi-housing-utilities
+  te_period: in March
+  te_value: 101.88
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI04
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.55
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/cpi-housing-utilities
+  te_period: in March
+  te_value: 101.88
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI09
+  our_source: eurostat
+  our_unit: Index
+  our_value: 100.7
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/cpi-recreation-and-culture
+  te_period: in March
+  te_value: 100.88
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI07
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.57
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/cpi-transportation
+  te_period: in March of 2026
+  te_value: 103.84
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  decision: ok
+  decision_reason: TE source label not parseable (rendering quirk); our data point present and aligns where TE value also present.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: NL:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 96
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/credit-rating
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  decision: keep-eurostat-honest
+  decision_reason: TE attributes 'De Nederlandsche Bank' (Dutch central bank); we fetch Eurostat (which aggregates BoP). Note added.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 34.53
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: De Nederlandsche Bank
+  te_page: https://tradingeconomics.com/netherlands/current-account
+  te_period: in the fourth quarter of 2025
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: null
+  our_series: bop_gdp6_q:CA
+  our_source: eurostat
+  our_unit: null
+  our_value: null
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/current-account-to-gdp
+  te_period: null
+  te_value: 7.9
+  value_match: null
+  yoy_computed: null
+disposable-personal-income:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 2.2421030140536367
+  our_period: '2025-12-31'
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_unit: Million EUR
+  our_value: 148340
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/disposable-personal-income
+  te_period: null
+  te_value: 487078.0
+  value_match: false
+  yoy_computed: 17.56407614639636
+employed-persons:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 0.057444852941176475
+  our_period: '2025-12-31'
+  our_series: lfsi_emp_a:EMP_LFS:Y20-64
+  our_source: eurostat
+  our_unit: Thousand
+  our_value: 8709
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/employed-persons
+  te_period: in March of 2026
+  te_value: 9850.0
+  value_match: false
+  yoy_computed: 13.265704252828717
+employment-rate:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsa_ergan:Y15-64
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 82.3
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/employment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 82.4
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 108.02
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/energy-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  decision: level-vs-ratio
+  decision_reason: TE attributes CBS, value differs (unit/aggregate). Keep eurostat label (honest).
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: nama_10_exi:P6
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 951.46
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/exports
+  te_period: in February 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+food-inflation:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: -0.23734177215190772
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIF:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 100.88
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/food-inflation
+  te_period: in April of 2026
+  te_value: 17.9
+  value_match: false
+  yoy_computed: 1.4583123805692333
+gdp:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 1214.93
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/netherlands/gdp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  decision: te-parser-noise
+  decision_reason: TE attributes World Bank (matches our source); value mismatch is from regex parsing wrong number in description (e.g., 'reached high of X'). World Bank API value is authoritative.
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.42730908500794246
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_unit: USD (constant 2015)
+  our_value: 51178.53
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/netherlands/gdp-per-capita
+  te_period: null
+  te_value: 408.0
+  value_match: false
+  yoy_computed: 14.668128402417366
+gdp-per-capita-ppp:
+  decision: te-parser-noise
+  decision_reason: TE attributes World Bank (matches our source); value mismatch is from regex parsing wrong number in description (e.g., 'reached high of X'). World Bank API value is authoritative.
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.42728571503869317
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_unit: Int. USD (PPP constant 2021)
+  our_value: 70498.88
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/netherlands/gdp-per-capita-ppp
+  te_period: null
+  te_value: 399.0
+  value_match: false
+  yoy_computed: 14.668105381175048
+gdp-real:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 0.05386875612145624
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:CLV10_MEUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 204.31
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/gdp-growth-annual
+  te_period: in Q1 2026
+  te_value: 1.2
+  value_match: false
+  yoy_computed: 3.0359574360784762
+government-debt:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 1.3698630136986336
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 44.4
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/government-debt
+  te_period: in the fourth quarter of 2025
+  te_value: 523541.0
+  value_match: false
+  yoy_computed: -33.92857142857144
+government-debt-total:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 6.614263022848524
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_EUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 523.54
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/government-debt-to-gdp
+  te_period: null
+  te_value: 44.4
+  value_match: false
+  yoy_computed: 17.05757406372274
+government-spending:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 1.1025641025641018
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 78.86
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 62787.0
+  value_match: false
+  yoy_computed: 23.81849583922123
+government-spending-eur:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 1.1025641025641018
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 78.86
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 62787.0
+  value_match: false
+  yoy_computed: 23.81849583922123
+gross-fixed-capital-formation:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 2.300016911889057
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P51G
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 60.49
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/gross-fixed-capital-formation
+  te_period: in the fourth quarter of 2025
+  te_value: 48533.0
+  value_match: false
+  yoy_computed: 12.226345083487947
+hospital-beds:
+  decision: curated-vintage
+  decision_reason: Curated value from older OECD/WHO vintage; TE has newer year. Update on next curated refresh.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2022-12-31'
+  our_series: NL:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 2.92
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/hospital-beds
+  te_period: null
+  te_value: 2.31
+  value_match: false
+  yoy_computed: null
+house-price-index:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 0.6433527870961708
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_unit: Index
+  our_value: 219.01
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/housing-index
+  te_period: in March
+  te_value: 154.0
+  value_match: false
+  yoy_computed: 17.816988541610634
+imports:
+  decision: level-vs-ratio
+  decision_reason: TE attributes CBS, value differs (unit/aggregate). Keep eurostat label (honest).
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: nama_10_exi:P7
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 819.14
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/imports
+  te_period: in February 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+industrial-production:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: -1.365853658536591
+  our_period: '2026-02-28'
+  our_series: sts_inpr_m:B-D:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.1
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/industrial-production
+  te_period: in February of 2026
+  te_value: 13.9
+  value_match: false
+  yoy_computed: 0.0
+inflation-cpi:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: 1.674217057317302
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:TOTAL
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.24
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/inflation-cpi
+  te_period: in April 2026
+  te_value: 2.8
+  value_match: false
+  yoy_computed: 2.4612941643509227
+interest-rate:
+  decision: te-parser-noise
+  decision_reason: 'Audit script extracted wrong number from TE description (e.g., all-time-high). Manual verification: our value matches TE last-recorded.'
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -10.416666666666668
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_unit: '%'
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/netherlands/interest-rate
+  te_period: in October of 2000
+  te_value: 4.75
+  value_match: false
+  yoy_computed: -38.57142857142858
+job-vacancies:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 4
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/job-vacancy-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 3.9
+  value_match: true
+  yoy_computed: null
+labor-force-participation-rate:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: -0.11655011655010994
+  our_period: '2025-12-31'
+  our_series: lfsi_emp_q:ACT
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 85.7
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/labor-force-participation-rate
+  te_period: in March
+  te_value: 76.2
+  value_match: false
+  yoy_computed: 0.8235294117647093
+labour-costs:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: 1.2509773260359611
+  our_period: '2025-12-31'
+  our_series: lc_lci_r2_q:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 129.5
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/netherlands/labour-costs
+  te_period: in the fourth quarter of 2025
+  te_value: 121.2
+  value_match: false
+  yoy_computed: 18.2648401826484
+long-term-unemployment-rate:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 0.6
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/long-term-unemployment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 0.6
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: -1.2499999999999973
+  our_period: '2026-02-28'
+  our_series: sts_inpr_m:C:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.7
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/manufacturing-production
+  te_period: in February of 2026
+  te_value: 13.4
+  value_match: false
+  yoy_computed: -0.772946859903379
+medical-doctors:
+  decision: curated-vintage
+  decision_reason: Curated value from older OECD/WHO vintage; TE has newer year. Update on next curated refresh.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: NL:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 3.74
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/netherlands/medical-doctors
+  te_period: null
+  te_value: 3.31
+  value_match: false
+  yoy_computed: null
+minimum-wages:
+  decision: curated-unit-difference
+  decision_reason: TE shows monthly minimum wage (EUR/Month), we store hourly (EUR/Hour). Both legitimate, different presentation.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2026-01-31'
+  our_series: NL:minimum-wages
+  our_source: curated
+  our_unit: EUR/Hour
+  our_value: 14.4
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: CPB Netherlands Bureau for Economic Policy Analysis
+  te_page: https://tradingeconomics.com/netherlands/wages
+  te_period: null
+  te_value: 3875.0
+  value_match: false
+  yoy_computed: null
+mining-production:
+  decision: level-vs-ratio
+  decision_reason: TE shows nominal monetary level (mio EUR) or rate (%GDP), our Eurostat series uses different aggregate/unit. Keep eurostat label (honest); document CBS dataset hint.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: -4.104477611940303
+  our_period: '2026-02-28'
+  our_series: sts_inpr_m:B:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 51.4
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/mining-production
+  te_period: in February of 2026
+  te_value: 56.6
+  value_match: false
+  yoy_computed: -1.9083969465648856
+nurses:
+  decision: curated-vintage
+  decision_reason: Curated value from older OECD/WHO vintage; TE has newer year. Update on next curated refresh.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: NL:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 11.4
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/nurses
+  te_period: null
+  te_value: 12.23
+  value_match: false
+  yoy_computed: null
+personal-income-tax-rate:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 49.5
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Tax and Customs Administration - Belastingdienst
+  te_page: https://tradingeconomics.com/netherlands/personal-income-tax-rate
+  te_period: null
+  te_value: 49.5
+  value_match: true
+  yoy_computed: null
+population:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_unit: Millions
+  our_value: 18.04
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/population
+  te_period: null
+  te_value: 18.0
+  value_match: true
+  yoy_computed: null
+ppi:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2023-12-31'
+  our_series: sts_inppd_m:B-D
+  our_source: eurostat
+  our_unit: Index
+  our_value: 123.3
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/producer-prices
+  te_period: in March
+  te_value: 121.7
+  value_match: true
+  yoy_computed: null
+productivity:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 104.03
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/productivity
+  te_period: in the fourth quarter of 2025
+  te_value: 104.28
+  value_match: true
+  yoy_computed: null
+retail-sales:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: sts_trtu_m:G47:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.5
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/retail-sales-yoy
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-men:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 67
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Tax and Customs Administration
+  te_page: https://tradingeconomics.com/netherlands/retirement-age-men
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 67
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Tax and Customs Administration
+  te_page: https://tradingeconomics.com/netherlands/retirement-age-women
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 21
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Tax and Customs Administration - Belastingdienst
+  te_page: https://tradingeconomics.com/netherlands/sales-tax-rate
+  te_period: null
+  te_value: 21.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  decision: frontend-transform
+  decision_reason: Eurostat gives index (HICP/PPI/IPI base=2015 or 2021), TE shows YoY rate. Frontend computes transform on render. Honest label = eurostat.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 104.38
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/services-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  decision: ok
+  decision_reason: TE source label not parseable (rendering quirk); our data point present and aligns where TE value also present.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: -0.2
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/services-pmi
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  decision: ok
+  decision_reason: Curated value matches TE; TE source label not parseable from page (TE quirk).
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 51.24
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/social-security-rate
+  te_period: null
+  te_value: 51.24
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  decision: ok
+  decision_reason: Curated value matches TE; TE source label not parseable from page (TE quirk).
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 23.59
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/social-security-rate-for-companies
+  te_period: null
+  te_value: 23.59
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  decision: ok
+  decision_reason: Curated value matches TE; TE source label not parseable from page (TE quirk).
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: NL:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 27.65
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/netherlands/social-security-rate-for-employees
+  te_period: null
+  te_value: 27.65
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  decision: curated-vintage
+  decision_reason: Curated GTI 2024 score; TE has GTI 2025. Update on next curated refresh.
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: NL:terrorism-index
+  our_source: curated
+  our_unit: Points
+  our_value: 1.6
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Institute for Economics and Peace
+  te_page: https://tradingeconomics.com/netherlands/terrorism-index
+  te_period: null
+  te_value: 1.48
+  value_match: false
+  yoy_computed: null
+unemployed-persons:
+  decision: keep-eurostat-honest
+  decision_reason: 'TE attributes CBS upstream, but we technically fetch from Eurostat (which aggregates CBS NSI data). Value aligns within 5%. Hard rule: label = fetch source = eurostat.'
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:TOTAL:THS_PER
+  our_source: eurostat
+  our_unit: Thousand
+  our_value: 407
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/unemployed-persons
+  te_period: in March of 2026
+  te_value: 407.0
+  value_match: true
+  yoy_computed: null
+unemployment:
+  decision: keep-eurostat-honest
+  decision_reason: 'TE attributes CBS upstream, but we technically fetch from Eurostat (which aggregates CBS NSI data). Value aligns within 5%. Hard rule: label = fetch source = eurostat.'
+  fix_summary: null
+  fixed: false
+  flag: needs-cbs-fetch
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_lmhr_m:LM-UN-T-TOT
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 4
+  source_match: false
+  suggested_source: cbs_nl
+  te_http: 200
+  te_label: Statistics Netherlands
+  te_page: https://tradingeconomics.com/netherlands/unemployment-rate
+  te_period: in March 2026
+  te_value: 4.0
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  decision: ok
+  decision_reason: Source matches TE attribution; value aligns or no TE value parseable.
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 8.9
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/netherlands/youth-unemployment-rate
+  te_period: in March
+  te_value: 8.9
+  value_match: true
+  yoy_computed: null

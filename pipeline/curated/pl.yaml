@@ -1,86 +1,73 @@
-# Polen — kuratierte Indikatoren
 country: PL
-
 corporate-tax-rate:
   value: 19
-  date: "2026-12-31"
-  unit: "%"
-  note: "CIT Standard Rate. Reduced 9% for small businesses."
-
+  date: '2026-12-31'
+  unit: '%'
+  note: CIT Standard Rate. Reduced 9% for small businesses.
 personal-income-tax-rate:
   value: 32
-  date: "2026-12-31"
-  unit: "%"
-  note: "Top marginal PIT rate (>120k PLN)."
-
+  date: '2026-12-31'
+  unit: '%'
+  note: Top marginal PIT rate (>120k PLN).
 sales-tax-rate:
   value: 23
-  date: "2026-12-31"
-  unit: "%"
-  note: "VAT Standard Rate."
-
+  date: '2026-12-31'
+  unit: '%'
+  note: VAT Standard Rate.
 social-security-rate:
-  value: 35.65
-  date: "2026-12-31"
-  unit: "%"
-
+  value: 34.19
+  date: '2026-12-31'
+  unit: '%'
+  note: Total social-security contributions PL 2026 (per TE).
 social-security-rate-companies:
-  value: 19.21
-  date: "2026-12-31"
-  unit: "%"
-
+  value: 20.48
+  date: '2026-12-31'
+  unit: '%'
+  note: Employer SS share 2026 (per TE).
 social-security-rate-employees:
   value: 13.71
-  date: "2026-12-31"
-  unit: "%"
-
+  date: '2026-12-31'
+  unit: '%'
 retirement-age-men:
   value: 65
-  date: "2026-12-31"
-  unit: "Years"
-
+  date: '2026-12-31'
+  unit: Years
 retirement-age-women:
   value: 60
-  date: "2026-12-31"
-  unit: "Years"
-
+  date: '2026-12-31'
+  unit: Years
 minimum-wages:
   value: 4666
-  date: "2026-01-31"
-  unit: "PLN/Month"
-  note: "Płaca minimalna 2026."
-
+  date: '2026-01-31'
+  unit: PLN/Month
+  note: Płaca minimalna 2026.
 corruption-index:
   value: 53
-  date: "2025-12-31"
-  unit: "Points"
-
+  date: '2025-12-31'
+  unit: Points
 corruption-rank:
-  value: 53
-  date: "2025-12-31"
-  unit: "Rank"
-
+  value: 52
+  date: '2025-12-31'
+  unit: Rank
+  note: CPI 2025 Transparency International (per TE).
 credit-rating:
   value: 64
-  date: "2026-04-01"
-  unit: "Rating"
-
+  date: '2026-04-01'
+  unit: Rating
 hospital-beds:
-  value: 6.30
-  date: "2022-12-31"
-  unit: "per 1000 people"
-
+  value: 6.3
+  date: '2022-12-31'
+  unit: per 1000 people
 medical-doctors:
-  value: 3.40
-  date: "2021-12-31"
-  unit: "per 1000 people"
-
+  value: 3.4
+  date: '2021-12-31'
+  unit: per 1000 people
 nurses:
   value: 5.74
-  date: "2021-12-31"
-  unit: "per 1000 people"
-
+  date: '2021-12-31'
+  unit: per 1000 people
 terrorism-index:
-  value: 0
-  date: "2025-12-31"
-  unit: "Points"
+  value: 1.68
+  date: '2025-12-31'
+  unit: Points
+  note: Global Terrorism Index 2025 (Institute for Economics and Peace via TE).

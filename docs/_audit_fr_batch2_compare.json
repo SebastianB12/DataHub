@@ -1,0 +1,350 @@
+{
+  "energy-inflation": {
+    "te_label": "INSEE, France",
+    "te_value": 14.3,
+    "te_period": "2026-04",
+    "te_unit": "%",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "IPC-2025:011813864",
+    "db_extra_params": null,
+    "db_latest_value": 113.3,
+    "db_latest_date": "2026-04-30",
+    "db_count": 5
+  },
+  "exports": {
+    "te_label": "Minist\u00e8re de l'\u00c9conomie et des Finances",
+    "te_value": 52.5,
+    "te_period": "2026-03",
+    "te_unit": "Billion EUR",
+    "expected_source_code": "curated",
+    "db_source": "insee",
+    "db_series_id": "COM-EXT:total(EU+Third+Misc)",
+    "db_extra_params": {
+      "naf2": "SO",
+      "zones": [
+        "Z7712 EU-27",
+        "Z7711 Third countries",
+        "Z6600 Misc overseas"
+      ],
+      "method": "sum_zones",
+      "dataset": "COM-EXT",
+      "correction": "CVS-CJO",
+      "indicateur": "E"
+    },
+    "db_latest_value": 51.567,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "food-inflation": {
+    "te_label": "INSEE, France",
+    "te_value": 1.2,
+    "te_period": "2026-04",
+    "te_unit": "%",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "IPC-2025:011814667",
+    "db_extra_params": null,
+    "db_latest_value": 101.39,
+    "db_latest_date": "2026-04-30",
+    "db_count": 5
+  },
+  "gdp": {
+    "te_label": "World Bank",
+    "te_value": 3162.08,
+    "te_period": "2024",
+    "te_unit": "USD Billion",
+    "expected_source_code": "worldbank",
+    "db_source": "worldbank",
+    "db_series_id": "NY.GDP.MKTP.CD",
+    "db_extra_params": {},
+    "db_latest_value": 3160.44,
+    "db_latest_date": "2024-12-31",
+    "db_count": 5
+  },
+  "gdp-growth-rate": {
+    "te_label": "INSEE, France",
+    "te_value": 0.0,
+    "te_period": "2026-Q1",
+    "te_unit": "%",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "CNT-2020-PIB-EQB-RF:011794844",
+    "db_extra_params": null,
+    "db_latest_value": 0,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "gdp-per-capita": {
+    "te_label": "World Bank",
+    "te_value": 39441.26,
+    "te_period": "2024",
+    "te_unit": "USD",
+    "expected_source_code": "worldbank",
+    "db_source": "worldbank",
+    "db_series_id": "NY.GDP.PCAP.KD",
+    "db_extra_params": {},
+    "db_latest_value": 39683.4,
+    "db_latest_date": "2024-12-31",
+    "db_count": 5
+  },
+  "gdp-per-capita-ppp": {
+    "te_label": "World Bank",
+    "te_value": 54464.98,
+    "te_period": "2024",
+    "te_unit": "USD",
+    "expected_source_code": "worldbank",
+    "db_source": "worldbank",
+    "db_series_id": "NY.GDP.PCAP.PP.KD",
+    "db_extra_params": {},
+    "db_latest_value": 54799.35,
+    "db_latest_date": "2024-12-31",
+    "db_count": 5
+  },
+  "gdp-real": {
+    "te_label": "INSEE, France",
+    "te_value": 1.1,
+    "te_period": "2026-Q1",
+    "te_unit": "% YoY",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "CNT-2020-PIB-EQB-RF:011794860",
+    "db_extra_params": null,
+    "db_latest_value": 662.981,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "government-debt": {
+    "te_label": "INSEE, France",
+    "te_value": 3460.5,
+    "te_period": "2025-Q4",
+    "te_unit": "EUR Billion",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "DETTE-TRIM-APU-2020:010777608",
+    "db_extra_params": {
+      "idbank": "010777608",
+      "dataset": "DETTE-TRIM-APU-2020",
+      "filters": {
+        "NATURE": "PROPORTION",
+        "SECT_INST": "S13",
+        "DETTE_MAASTRICHT_INTRUMENTS": "F"
+      }
+    },
+    "db_latest_value": 115.6,
+    "db_latest_date": "2025-12-31",
+    "db_count": 5
+  },
+  "government-debt-total": {
+    "te_label": "INSEE, France",
+    "te_value": 115.6,
+    "te_period": "2025",
+    "te_unit": "% of GDP",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "DETTE-TRIM-APU-2020:010777616",
+    "db_extra_params": {
+      "idbank": "010777616",
+      "dataset": "DETTE-TRIM-APU-2020",
+      "filters": {
+        "NATURE": "VALEUR_ABSOLUE",
+        "SECT_INST": "S13",
+        "DETTE_MAASTRICHT_INTRUMENTS": "F"
+      }
+    },
+    "db_latest_value": 3460.5,
+    "db_latest_date": "2025-12-31",
+    "db_count": 5
+  },
+  "government-spending": {
+    "te_label": "INSEE, France",
+    "te_value": 169953,
+    "te_period": "2026-Q1",
+    "te_unit": "EUR Million",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "CNT-2020-PIB-EQB-RF:011794862",
+    "db_extra_params": null,
+    "db_latest_value": 184.1,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "government-spending-eur": {
+    "te_label": "INSEE/Minist\u00e8re",
+    "te_value": null,
+    "te_period": null,
+    "te_unit": "EUR Million",
+    "expected_source_code": "curated",
+    "db_source": "eurostat",
+    "db_series_id": "namq_10_gdp:P3_S13",
+    "db_extra_params": {
+      "params": {
+        "unit": "CP_MEUR",
+        "s_adj": "SCA",
+        "na_item": "P3_S13"
+      },
+      "dataset": "namq_10_gdp"
+    },
+    "db_latest_value": 184.1,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "gross-fixed-capital-formation": {
+    "te_label": "INSEE, France",
+    "te_value": 142928,
+    "te_period": "2026-Q1",
+    "te_unit": "EUR Million",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "CNT-2020-PIB-EQB-RF:011794888",
+    "db_extra_params": null,
+    "db_latest_value": 166.31,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "hospital-beds": {
+    "te_label": "OECD",
+    "te_value": 5.4,
+    "te_period": "2023",
+    "te_unit": "per 1000",
+    "expected_source_code": "curated",
+    "db_source": "curated",
+    "db_series_id": "FR:hospital-beds",
+    "db_extra_params": null,
+    "db_latest_value": 5.4,
+    "db_latest_date": "2023-12-31",
+    "db_count": 2
+  },
+  "house-price-index": {
+    "te_label": "EUROSTAT",
+    "te_value": 127.56,
+    "te_period": "2025-Q4",
+    "te_unit": "points",
+    "expected_source_code": "eurostat",
+    "db_source": "eurostat",
+    "db_series_id": "prc_hpi_q:INX",
+    "db_extra_params": {
+      "params": {
+        "unit": "I15_Q",
+        "purchase": "TOTAL"
+      },
+      "dataset": "prc_hpi_q"
+    },
+    "db_latest_value": 127.56,
+    "db_latest_date": "2025-12-31",
+    "db_count": 5
+  },
+  "imports": {
+    "te_label": "Minist\u00e8re de l'\u00c9conomie et des Finances",
+    "te_value": 59.3,
+    "te_period": "2026-03",
+    "te_unit": "Billion EUR",
+    "expected_source_code": "curated",
+    "db_source": "insee",
+    "db_series_id": "COM-EXT:total(EU+Third+Misc)",
+    "db_extra_params": {
+      "naf2": "SO",
+      "zones": [
+        "Z7712 EU-27",
+        "Z7711 Third countries",
+        "Z6600 Misc overseas"
+      ],
+      "method": "sum_zones",
+      "dataset": "COM-EXT",
+      "correction": "CVS-CJO",
+      "indicateur": "I"
+    },
+    "db_latest_value": 61.763,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "industrial-production": {
+    "te_label": "INSEE, France",
+    "te_value": 0.9,
+    "te_period": "2026-03",
+    "te_unit": "% YoY",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "IPI-2021:010768261",
+    "db_extra_params": null,
+    "db_latest_value": 103.3,
+    "db_latest_date": "2026-03-31",
+    "db_count": 5
+  },
+  "inflation-cpi": {
+    "te_label": "INSEE, France",
+    "te_value": 2.2,
+    "te_period": "2026-04",
+    "te_unit": "% YoY",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "IPC-2025:011814630",
+    "db_extra_params": null,
+    "db_latest_value": 102.26,
+    "db_latest_date": "2026-04-30",
+    "db_count": 5
+  },
+  "interest-rate": {
+    "te_label": "European Central Bank",
+    "te_value": null,
+    "te_period": null,
+    "te_unit": "%",
+    "expected_source_code": "ecb",
+    "db_source": "ecb",
+    "db_series_id": "D.U2.EUR.4F.KR.MRR_FR.LEV",
+    "db_extra_params": {
+      "dataset": "FM",
+      "series_key": "D.U2.EUR.4F.KR.MRR_FR.LEV"
+    },
+    "db_latest_value": 2.15,
+    "db_latest_date": "2025-06-11",
+    "db_count": 5
+  },
+  "job-vacancies": {
+    "te_label": "DARES, France",
+    "te_value": 295.2,
+    "te_period": "2026-03",
+    "te_unit": "Thousand",
+    "expected_source_code": "curated",
+    "db_source": "eurostat",
+    "db_series_id": "jvs_q_nace2:JVR",
+    "db_extra_params": {
+      "params": {
+        "s_adj": "SA",
+        "nace_r2": "B-S",
+        "indic_em": "JVR",
+        "sizeclas": "TOTAL"
+      },
+      "dataset": "jvs_q_nace2"
+    },
+    "db_latest_value": 2.3,
+    "db_latest_date": "2025-12-31",
+    "db_count": 5
+  },
+  "labor-force-participation-rate": {
+    "te_label": "INSEE, France",
+    "te_value": 75.6,
+    "te_period": "2026-Q1",
+    "te_unit": "%",
+    "expected_source_code": "insee",
+    "db_source": "insee",
+    "db_series_id": "melodi:DD_EEC_ANNUEL:ACTRATE:Y15T64",
+    "db_extra_params": null,
+    "db_latest_value": 75.5,
+    "db_latest_date": "2025-12-31",
+    "db_count": 5
+  },
+  "labour-costs": {
+    "te_label": "European Central Bank",
+    "te_value": 113.8,
+    "te_period": "2025-Q4",
+    "te_unit": "points",
+    "expected_source_code": "ecb",
+    "db_source": "insee",
+    "db_series_id": "ICT-2020:010761999",
+    "db_extra_params": null,
+    "db_latest_value": 114.1,
+    "db_latest_date": "2025-12-31",
+    "db_count": 5
+  }
+}

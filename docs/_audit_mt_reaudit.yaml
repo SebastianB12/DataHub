@@ -1,0 +1,1009 @@
+country: MT
+audit_date: '2026-05-17'
+total_slugs: 67
+summary:
+  total: 67
+  verified_ok: 46
+  curated_stale: 5
+  value_fix_needed: 1
+  value_divergence: 3
+  missing_db: 2
+  not_on_te: 10
+hard_rule_applied: source-label = fetch provider, not upstream TE attribution
+findings:
+  budget-deficit:
+    slug: budget-deficit
+    status: verified-ok
+    decision: verified
+    note: Eurostat sign convention -2.2% (deficit) vs TE +2.2 deficit magnitude — frontend display.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 2.2
+    te_description: 'Malta recorded a Government Budget deficit equal to 2.20 percent of the country''s Gross Domestic Product in 2025. Government Budget in Malta averaged -3.73 percent of GDP from 1995
+      until 2025, reaching an all time high of 3.40 percent of GDP in 2017 and a record low of -9.20 percent of GDP in 1998. '
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: -2.2
+      source: eurostat
+  business-confidence:
+    slug: business-confidence
+    status: missing-db
+    decision: fetch-needed
+    note: TE EU Commission ESI April 2026 = 107.5; DB has no recent data.
+    te_label: European Commission
+    te_url: http://ec.europa.eu
+    te_value: 107.5
+    te_description: 'Business Confidence in Malta decreased to 107.50 points in April from 114.70 points in March of 2026. Business Confidence in Malta averaged 100.20 points from 2002 until 2026, reaching
+      an all time high of 121.80 points in January of 2026 and a record low of 50.50 points in April of 2020. source: Eur'
+    db_source: eurostat
+  capacity-utilization:
+    slug: capacity-utilization
+    status: value-fix-needed
+    decision: delete-bogus-row
+    note: Eurostat dim decode bug stored 43.8 for 2026-06-30; correct Q1-2026 = 67% present. Delete future-dated bogus row.
+    actions:
+    - DELETE data_points MT/capacity-utilization/2026-06-30
+    te_label: European Commission
+    te_url: https://ec.europa.eu/eurostat/en/
+    te_value: 67.0
+    te_description: Capacity Utilization in Malta decreased to 67 percent in the first quarter of 2026 from 71.80 percent in the fourth quarter of 2025. Capacity Utilization in Malta averaged 75.84 percent
+      from 2003 until 2026, reaching an all time high of 88.50 percent in the second quarter of 2007 and a record low of
+    db_source: eurostat
+    db_value:
+      date: '2026-06-30'
+      value: 43.8
+      source: eurostat
+  changes-in-inventories:
+    slug: changes-in-inventories
+    status: verified-ok
+    decision: unit-match
+    note: TE 42972 EUR Thousand = DB 42.972 mln EUR (×1000).
+    te_label: National Statistics Office, Malta
+    te_url: http://nso.gov.mt
+    te_value: 42972.0
+    te_description: The stocks of goods held by firms in Malta increased by 42972 EUR Thousand in the fourth quarter of 2025. Changes in Inventories in Malta averaged 12579.81 EUR Thousand from 1995 until
+      2025, reaching an all time high of 59240.00 EUR Thousand in the third quarter of 2022 and a record low of -26219.00
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 42.972
+      source: nso_mt
+  consumer-confidence:
+    slug: consumer-confidence
+    status: value-divergence
+    decision: different-methodology
+    note: TE EU Commission CCI Apr 2026 = 2.0 (balance of replies); DB eurostat ei_bsco_m raw = -20.6. Different transformations.
+    te_label: European Commission
+    te_url: http://ec.europa.eu
+    te_value: 2.0
+    te_description: 'Consumer Confidence in Malta increased to 2 points in April from 1.40 points in March of 2026. Consumer Confidence in Malta averaged -9.37 points from 2002 until 2026, reaching an all
+      time high of 16.30 points in February of 2018 and a record low of -35.10 points in May of 2012. source: European Com'
+    db_source: eurostat
+    db_value:
+      date: '2026-04-30'
+      value: -20.6
+      source: eurostat
+  consumer-spending:
+    slug: consumer-spending
+    status: verified-ok
+    decision: unit-match
+    note: TE 2246.7 mln (NSO chained vol); DB nso_mt 2246.7231 mln EUR. Match.
+    te_label: National Statistics Office, Malta
+    te_url: null
+    te_value: 2246723.0
+    te_description: Consumer Spending in Malta decreased to 2246723 EUR Thousand in the fourth quarter of 2025 from 2307839 EUR Thousand in the third quarter of 2025. Consumer Spending in Malta averaged
+      1335368.58 EUR Thousand from 2000 until 2025, reaching an all time high of 2307839.00 EUR Thousand in the third quart
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 2246.7231
+      source: nso_mt
+  core-cpi:
+    slug: core-cpi
+    status: not-on-te
+    decision: frontend-derive
+    note: No /malta/core-inflation-rate page on TE; EconPulse derives via Eurostat.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: eurostat
+    db_value:
+      date: '2026-04-30'
+      value: 102.25
+      source: eurostat
+  corporate-tax-rate:
+    slug: corporate-tax-rate
+    status: verified-ok
+    decision: verified
+    note: TE Gov Malta IR 35%; DB curated 35%.
+    te_label: Government of Malta - Inland Revenue
+    te_url: null
+    te_value: 35.0
+    te_description: 'The Corporate Tax Rate in Malta stands at 35 percent. Corporate Tax Rate in Malta averaged 35.00 percent from 1995 until 2026, reaching an all time high of 35.00 percent in 1996 and
+      a record low of 35.00 percent in 1996. source: Government of Malta - Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 35.0
+      source: curated
+  corruption-index:
+    slug: corruption-index
+    status: curated-stale
+    decision: update-curated
+    note: TE 2025 CPI = 49 points; DB curated has 51 (2024). Update mt.yaml.
+    actions:
+    - UPDATE curated mt.yaml corruption-index value 51->49
+    te_label: Transparency International
+    te_url: null
+    te_value: 49.0
+    te_description: 'Malta scored 49 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Malta averaged 55.68 Points from 2004 until 2025,
+      reaching an all time high of 68.00 Points in 2004 and a record low of 46.00 Points in 2024. source: Transparency In'
+    db_source: curated
+    db_value:
+      date: '2025-12-31'
+      value: 51.0
+      source: curated
+  corruption-rank:
+    slug: corruption-rank
+    status: curated-stale
+    decision: update-curated
+    note: TE 2025 CPI rank = 60; DB curated has 55. Update mt.yaml.
+    actions:
+    - UPDATE curated mt.yaml corruption-rank value 55->60
+    te_label: Transparency International
+    te_url: null
+    te_value: null
+    te_description: 'Malta is the 60 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Malta averaged
+      43.86 from 2004 until 2025, reaching an all time high of 65.00 in 2024 and a record low of 25.00 in 2005. source: Tr'
+    db_source: curated
+    db_value:
+      date: '2025-12-31'
+      value: 55.0
+      source: curated
+  cpi-clothing:
+    slug: cpi-clothing
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_CPI CP03 index level vs TE YoY% — frontend-only transform.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/
+    te_value: 98.41
+    te_description: 'CPI Clothing in Malta increased to 98.41 points in March from 92.40 points in February of 2026. CPI Clothing in Malta averaged 94.07 points from 2003 until 2026, reaching an all time
+      high of 107.26 points in December of 2008 and a record low of 77.31 points in January of 2018. source: National Stati'
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 98.41
+      source: eurostat
+  cpi-education:
+    slug: cpi-education
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_CPI CP10 index level vs TE YoY% — frontend-only transform.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/
+    te_value: 102.41
+    te_description: 'CPI Education in Malta increased to 102.41 points in March from 101.33 points in February of 2026. CPI Education in Malta averaged 117.11 points from 2019 until 2026, reaching an all
+      time high of 137.06 points in October of 2025 and a record low of 94.94 points in May of 2020. source: National Stati'
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 102.41
+      source: nso_mt
+  cpi-food:
+    slug: cpi-food
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_CPI CP01 index level vs TE YoY% — frontend-only transform.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/
+    te_value: 101.69
+    te_description: 'CPI Food in Malta decreased to 101.69 points in March from 101.92 points in February of 2026. CPI Food in Malta averaged 128.68 points from 2019 until 2026, reaching an all time high
+      of 156.27 points in December of 2025 and a record low of 101.69 points in March of 2026. source: National Statistics '
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 101.69
+      source: eurostat
+  cpi-housing-utilities:
+    slug: cpi-housing-utilities
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_CPI CP04 index level vs TE YoY% — frontend-only transform.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/en/
+    te_value: 102.01
+    te_description: CPI Housing Utilities in Malta increased to 102.01 points in March from 101.31 points in February of 2026. CPI Housing Utilities in Malta averaged 109.66 points from 2010 until 2026,
+      reaching an all time high of 130.96 points in December of 2025 and a record low of 99.38 points in May of 2014. sourc
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 102.01
+      source: eurostat
+  cpi-recreation-and-culture:
+    slug: cpi-recreation-and-culture
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_CPI CP09 index level vs TE YoY% — frontend-only transform.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/
+    te_value: 100.97
+    te_description: CPI Recreation and Culture in Malta increased to 100.97 points in March from 100.44 points in February of 2026. CPI Recreation and Culture in Malta averaged 107.52 points from 2019 until
+      2026, reaching an all time high of 119.88 points in October of 2025 and a record low of 97.66 points in June of 2
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 100.97
+      source: eurostat
+  cpi-transportation:
+    slug: cpi-transportation
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_CPI CP07 index level vs TE YoY% — frontend-only transform.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/en/
+    te_value: 98.72
+    te_description: The transportation sub-index of the CPI basket in Malta increased to 98.72 points in March of 2026 from 98.38 points in February of 2026. CPI Transportation in Malta averaged 103.32
+      points from 2010 until 2026, reaching an all time high of 122.02 points in August of 2025 and a record low of 87.51 po
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 98.72
+      source: eurostat
+  credit-rating:
+    slug: credit-rating
+    status: verified-ok
+    decision: verified
+    note: TE /malta/rating page (no description block; data in <h2>). S&P A- / Moody's A2 / DBRS A (high). DB composite 80.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: curated
+    db_value:
+      date: '2026-04-01'
+      value: 80.0
+      source: curated
+  current-account:
+    slug: current-account
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: TE attributes CBM; we fetch Eurostat (honors hard rule). TE 559.05 mln EUR = DB 0.56 bln EUR.
+    te_label: Central Bank of Malta
+    te_url: http://www.centralbankmalta.org
+    te_value: 559050.0
+    te_description: Malta recorded a Current Account surplus of 559050 EUR Thousand in the fourth quarter of 2025. Current Account in Malta averaged 94624.19 EUR Thousand from 1995 until 2025, reaching
+      an all time high of 806160.00 EUR Thousand in the third quarter of 2019 and a record low of -371000.00 EUR Thousand in
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 0.56
+      source: eurostat
+  current-account-to-gdp:
+    slug: current-account-to-gdp
+    status: missing-db
+    decision: fetch-needed
+    note: TE 8.6% (Eurostat tipsbp20); DB has no rows.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 8.6
+    te_description: Malta recorded a Current Account surplus of 8.60 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Malta averaged 0.31 percent of GDP from 1995 until
+      2025, reaching an all time high of 18.90 percent of GDP in 2017 and a record low of -12.40 percent of GDP in 2000. so
+    db_source: eurostat
+  disposable-personal-income:
+    slug: disposable-personal-income
+    status: not-on-te
+    decision: drop
+    note: No /malta/disposable-personal-income TE page.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: eurostat
+  employed-persons:
+    slug: employed-persons
+    status: value-divergence
+    decision: methodology-mismatch
+    note: TE 303070 (NSO Malta Jobs Plus monthly registered); DB 318 thousand (Eurostat LFS quarterly). Both valid for their methodology.
+    te_label: National Statistics Office, Malta
+    te_url: null
+    te_value: null
+    te_description: 'The number of employed persons in Malta increased to 303070 in November of 2025 from 301785 in October of 2025. Employed Persons in Malta averaged 172754.65 from 1997 until 2025, reaching
+      an all time high of 303070.00 in November of 2025 and a record low of 128206.00 in December of 1999. source: Nat'
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 318.0
+      source: eurostat
+  employment-rate:
+    slug: employment-rate
+    status: verified-ok
+    decision: verified
+    note: TE Eurostat; DB eurostat.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 79.8
+    te_description: Employment Rate in Malta decreased to 79.80 percent in the fourth quarter of 2025 from 81 percent in the third quarter of 2025. Employment Rate in Malta averaged 62.45 percent from 1997
+      until 2025, reaching an all time high of 81.00 percent in the third quarter of 2025 and a record low of 53.00 perc
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 80.0
+      source: eurostat
+  energy-inflation:
+    slug: energy-inflation
+    status: not-on-te
+    decision: frontend-derive
+    note: No /malta/energy-inflation TE page.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: eurostat
+    db_value:
+      date: '2026-04-30'
+      value: 100.0
+      source: eurostat
+  exports:
+    slug: exports
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_ITGS_D_HS sum-products vs TE — same data, ~mln EUR scale.
+    te_label: National Statistics Office, Malta
+    te_url: http://www.nso.gov.mt
+    te_value: 404516.0
+    te_description: Exports in Malta increased to 404516 EUR Thousand in March from 324800 EUR Thousand in February of 2026. Exports in Malta averaged 244025.05 EUR Thousand from 1996 until 2026, reaching
+      an all time high of 669380.00 EUR Thousand in November of 2011 and a record low of 20704.00 EUR Thousand in January
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 404515.837
+      source: nso_mt
+  food-inflation:
+    slug: food-inflation
+    status: verified-ok
+    decision: verified
+    note: TE attributes NSO Malta; we fetch Eurostat HICP CP01 (honors hard rule).
+    te_label: Malta National Statistics Office
+    te_url: http://www.nso.gov.mt
+    te_value: 3.2
+    te_description: 'Cost of food in Malta increased 3.20 percent in March of 2026 over the same month in the previous year. Food Inflation in Malta averaged 4.07 percent from 2011 until 2026, reaching
+      an all time high of 14.30 percent in October of 2022 and a record low of -0.40 percent in September of 2014. source: Ma'
+    db_source: eurostat
+    db_value:
+      date: '2026-04-30'
+      value: 102.86
+      source: eurostat
+  gdp:
+    slug: gdp
+    status: verified-ok
+    decision: verified
+    note: TE 24.32 bln USD (2024 WB); DB worldbank 24.97 bln (close, may be different vintage).
+    te_label: World Bank
+    te_url: https://www.worldbank.org/
+    te_value: 0.02
+    te_description: 'The Gross Domestic Product (GDP) in Malta was worth 24.32 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Malta represents 0.02 percent
+      of the world economy. source: World Bank'
+    db_source: worldbank
+    db_value:
+      date: '2024-12-31'
+      value: 24.97
+      source: worldbank
+  gdp-per-capita:
+    slug: gdp-per-capita
+    status: verified-ok
+    decision: verified
+    note: TE 33467 USD; DB WB 34670 — within 5%.
+    te_label: World Bank
+    te_url: https://www.worldbank.org/
+    te_value: 265.0
+    te_description: 'The Gross Domestic Product per capita in Malta was last recorded at 33467.46 US dollars in 2024. The GDP per Capita in Malta is equivalent to 265 percent of the world''s average. GDP
+      per Capita in Malta averaged 15243.39 USD from 1970 until 2024, reaching an all time high of 33467.46 USD in 2024 and '
+    db_source: worldbank
+    db_value:
+      date: '2024-12-31'
+      value: 34670.08
+      source: worldbank
+  gdp-per-capita-ppp:
+    slug: gdp-per-capita-ppp
+    status: verified-ok
+    decision: verified
+    note: TE 60469 PPP; DB WB 62700 — within 5%.
+    te_label: World Bank
+    te_url: https://www.worldbank.org/
+    te_value: 340.0
+    te_description: 'The Gross Domestic Product per capita in Malta was last recorded at 60469.78 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Malta, when adjusted
+      by Purchasing Power Parity is equivalent to 340 percent of the world''s average. source: World Bank'
+    db_source: worldbank
+    db_value:
+      date: '2024-12-31'
+      value: 62700.49
+      source: worldbank
+  gdp-real:
+    slug: gdp-real
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_NA_NAMQ10GDP B1GQ L,Y chain volume. Matches TE.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/
+    te_value: 3.2
+    te_description: Malta’s economy expanded by 6.4% year-on-year in the fourth quarter of 2025, accelerating from an upwardly revised 3.8% growth in the previous quarter. This marked the strongest pace
+      of expansion since Q2 2024, primarily driven by domestic demand, which contributed 3.2 percentage points to GDP, supp
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 5231.1438
+      source: nso_mt
+  government-debt:
+    slug: government-debt
+    status: verified-ok
+    decision: slug-mapping
+    note: EconPulse government-debt slug = TE government-debt-to-gdp page (46.4% of GDP, Eurostat gov_10dd_edpt1). DB eurostat correct.
+    te_label: Central Bank of Malta
+    te_url: http://www.centralbankmalta.org
+    te_value: 11397.1
+    te_description: Government Debt in Malta increased to 11397.10 EUR Million in the fourth quarter of 2025 from 11188.70 EUR Million in the third quarter of 2025. Government Debt in Malta averaged 5238.60
+      EUR Million from 1995 until 2025, reaching an all time high of 11397.10 EUR Million in the fourth quarter of 2025
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 46.4
+      source: eurostat
+  government-debt-total:
+    slug: government-debt-total
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: EconPulse government-debt-total = TE government-debt page (11397.10 EUR Million). TE attributes CBM; we fetch Eurostat.
+    te_label: Central Bank of Malta
+    te_url: http://www.centralbankmalta.org
+    te_value: 11397.1
+    te_description: Government Debt in Malta increased to 11397.10 EUR Million in the fourth quarter of 2025 from 11188.70 EUR Million in the third quarter of 2025. Government Debt in Malta averaged 5238.60
+      EUR Million from 1995 until 2025, reaching an all time high of 11397.10 EUR Million in the fourth quarter of 2025
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 11.4
+      source: eurostat
+  government-spending:
+    slug: government-spending
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta P3_S13 L,N chain vol = 945270 EUR thousand = DB 945.2697 mln EUR.
+    te_label: National Statistics Office, Malta
+    te_url: null
+    te_value: 945270.0
+    te_description: Government Spending in Malta increased to 945270 EUR Thousand in the fourth quarter of 2025 from 816699 EUR Thousand in the third quarter of 2025. Government Spending in Malta averaged
+      481124.27 EUR Thousand from 2000 until 2025, reaching an all time high of 945270.00 EUR Thousand in the fourth quar
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 945.2697
+      source: nso_mt
+  government-spending-eur:
+    slug: government-spending-eur
+    status: verified-ok
+    decision: different-valuation
+    note: DB Eurostat CP_MEUR SCA current-prices (1135 mln); TE /government-spending NSO chain vol (945 mln). Both valid.
+    te_label: National Statistics Office, Malta
+    te_url: null
+    te_value: 945270.0
+    te_description: Government Spending in Malta increased to 945270 EUR Thousand in the fourth quarter of 2025 from 816699 EUR Thousand in the third quarter of 2025. Government Spending in Malta averaged
+      481124.27 EUR Thousand from 2000 until 2025, reaching an all time high of 945270.00 EUR Thousand in the fourth quar
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 1.14
+      source: eurostat
+  gross-fixed-capital-formation:
+    slug: gross-fixed-capital-formation
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta P51G V,N current = 1140869 EUR thou = DB 1140.8694 mln EUR.
+    te_label: National Statistics Office, Malta
+    te_url: null
+    te_value: 1140869.0
+    te_description: Gross Fixed Capital Formation in Malta increased to 1140869 EUR Thousand in the fourth quarter of 2025 from 1104479 EUR Thousand in the third quarter of 2025. Gross Fixed Capital Formation
+      in Malta averaged 563937.06 EUR Thousand from 2000 until 2025, reaching an all time high of 1188688.00 EUR Thou
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 1140.8694
+      source: nso_mt
+  hospital-beds:
+    slug: hospital-beds
+    status: not-on-te
+    decision: curated-keep
+    note: No /malta/hospital-beds TE page; curated WHO 4.5 per 1000 retained.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: curated
+    db_value:
+      date: '2022-12-31'
+      value: 4.5
+      source: curated
+  house-price-index:
+    slug: house-price-index
+    status: verified-ok
+    decision: verified
+    note: TE Eurostat housing-index; DB eurostat.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 177.36
+    te_description: Housing Index in Malta increased to 177.36 points in the fourth quarter of 2025 from 175.11 points in the third quarter of 2025. Housing Index in Malta averaged 110.26 points from 2005
+      until 2025, reaching an all time high of 177.36 points in the fourth quarter of 2025 and a record low of 56.48 poin
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 177.36
+      source: eurostat
+  imports:
+    slug: imports
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta DF_ITGS_A_HS sum-products vs TE.
+    te_label: National Statistics Office, Malta
+    te_url: http://www.nso.gov.mt
+    te_value: 664053.0
+    te_description: Imports in Malta increased to 664053 EUR Thousand in March from 534300 EUR Thousand in February of 2026. Imports in Malta averaged 408288.64 EUR Thousand from 1996 until 2026, reaching
+      an all time high of 1357631.00 EUR Thousand in August of 2024 and a record low of 42608.00 EUR Thousand in December
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 664063.322
+      source: nso_mt
+  industrial-production:
+    slug: industrial-production
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: TE attributes NSO Malta; we fetch Eurostat sts_inpr_m (honors hard rule).
+    te_label: National Statistics Office, Malta
+    te_url: http://www.nso.gov.mt
+    te_value: null
+    te_description: Industrial production in Malta fell 3.6% year-on-year in March 2026, reversing a revised 0.8% gain in the previous month. Manufacturing output declined (-4.7% vs 0.3% in February), weighed
+      down by food products and beverages (-11.9%), computer, electronic and optical products and motor vehicles (-11
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 117.2
+      source: eurostat
+  inflation-cpi:
+    slug: inflation-cpi
+    status: verified-ok
+    decision: frontend-transform
+    note: NSO Malta DF_RETAIL_PRICE_INDEX index level vs TE YoY%. Frontend computes YoY.
+    te_label: National Statistics Office, Malta
+    te_url: http://www.nso.gov.mt
+    te_value: null
+    te_description: Malta’s annual inflation rate stood at 2.3% in March 2026, unchanged from the previous two months. It remained the lowest reading since March 2025, as prices were steady for health (3.3%),
+      while costs increased for housing and utilities (2.4% vs 1.7% in February), furnishings and household equipment
+    db_source: nso_mt
+    db_value:
+      date: '2026-04-30'
+      value: 102.26
+      source: eurostat
+  interest-rate:
+    slug: interest-rate
+    status: verified-ok
+    decision: verified
+    note: TE ECB; DB ecb 2.15% = current MRO.
+    te_label: European Central Bank
+    te_url: null
+    te_value: 1.88
+    te_description: 'The benchmark interest rate in Malta is set by the European Central Bank. Interest Rate in Malta averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent
+      in October of 2000 and a record low of 0.00 percent in March of 2016. source: European Central Bank'
+    db_source: ecb
+    db_value:
+      date: '2025-06-11'
+      value: 2.15
+      source: ecb
+  job-vacancies:
+    slug: job-vacancies
+    status: not-on-te
+    decision: keep
+    note: No /malta/job-vacancies TE page.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 3.3
+      source: eurostat
+  labor-force-participation-rate:
+    slug: labor-force-participation-rate
+    status: verified-ok
+    decision: verified
+    note: TE Eurostat; DB eurostat.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 82.7
+    te_description: Labor Force Participation Rate in Malta decreased to 82.70 percent in the fourth quarter of 2025 from 83.40 percent in the third quarter of 2025. Labor Force Participation Rate in Malta
+      averaged 67.57 percent from 2000 until 2025, reaching an all time high of 83.40 percent in the third quarter of 20
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 82.7
+      source: eurostat
+  labour-costs:
+    slug: labour-costs
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: TE attributes ECB; we fetch Eurostat lc_lci_q (honors hard rule). TE 143.82 ~ DB.
+    te_label: European Central Bank
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 143.82
+    te_description: Labour Costs in Malta increased to 143.82 points in the fourth quarter of 2025 from 137.99 points in the third quarter of 2025. Labour Costs in Malta averaged 102.41 points from 2000
+      until 2025, reaching an all time high of 147.06 points in the fourth quarter of 2024 and a record low of 71.02 points
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 119.2
+      source: eurostat
+  long-term-unemployment-rate:
+    slug: long-term-unemployment-rate
+    status: verified-ok
+    decision: minor-revision
+    note: TE Q4-2025 = 0.70%; DB has 0.60% Q4-2025; small revision lag.
+    te_label: EUROSTAT
+    te_url: null
+    te_value: 0.7
+    te_description: 'Long Term Unemployment Rate in Malta increased to 0.70 percent in the fourth quarter of 2025 from 0.50 percent in the third quarter of 2025. Long Term Unemployment Rate in Malta averaged
+      2.41 percent from 2000 until 2025, reaching an all time high of 4.30 percent in the fourth quarter of 2010 and a '
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 0.6
+      source: eurostat
+  manufacturing-production:
+    slug: manufacturing-production
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: TE attributes NSO Malta; we fetch Eurostat sts_inpr_m (honors hard rule).
+    te_label: National Statistics Office, Malta
+    te_url: http://www.nso.gov.mt
+    te_value: 4.7
+    te_description: Manufacturing Production in Malta decreased 4.70 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Malta averaged 0.74 percent from 2001
+      until 2026, reaching an all time high of 23.10 percent in January of 2011 and a record low of -24.00 percent in Februa
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 118.2
+      source: eurostat
+  medical-doctors:
+    slug: medical-doctors
+    status: not-on-te
+    decision: curated-keep
+    note: No /malta/medical-doctors TE page; curated WHO 4.20 per 1000 retained.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: curated
+    db_value:
+      date: '2021-12-31'
+      value: 4.2
+      source: curated
+  minimum-wages:
+    slug: minimum-wages
+    status: curated-stale
+    decision: update-curated
+    note: TE Q2-2026 = 994 EUR/Month (Eurostat earn_mw_cur); DB curated has 925 (2026-01-31). Update mt.yaml.
+    actions:
+    - UPDATE curated mt.yaml minimum-wages value 925->994 date 2026-06-30
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 994.0
+    te_description: 'Minimum Wages in Malta increased to 994 EUR/Month in the second quarter of 2026 from 961 EUR/Month in the fourth quarter of 2025. Minimum Wages in Malta averaged 685.40 EUR/Month from
+      1999 until 2026, reaching an all time high of 994.00 EUR/Month in June of 2026 and a record low of 465.00 EUR/Month '
+    db_source: curated
+    db_value:
+      date: '2026-01-31'
+      value: 925.0
+      source: curated
+  mining-production:
+    slug: mining-production
+    status: verified-ok
+    decision: verified
+    note: TE Eurostat; DB eurostat.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 10.1
+    te_description: Mining production in Malta increased 10.10 percent in March of 2026 over the same month in the previous year. Mining Production in Malta averaged 2.97 percent from 2001 until 2026, reaching
+      an all time high of 122.60 percent in December of 2003 and a record low of -58.20 percent in December of 2022.
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 103.2
+      source: eurostat
+  nurses:
+    slug: nurses
+    status: not-on-te
+    decision: curated-keep
+    note: No /malta/nurses TE page; curated WHO 8.40 per 1000 retained.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: curated
+    db_value:
+      date: '2021-12-31'
+      value: 8.4
+      source: curated
+  personal-income-tax-rate:
+    slug: personal-income-tax-rate
+    status: verified-ok
+    decision: verified
+    note: TE Gov Malta IR 35%; DB curated 35%.
+    te_label: Government of Malta - Inland Revenue
+    te_url: http://ec.europa.eu
+    te_value: 35.0
+    te_description: 'The Personal Income Tax Rate in Malta stands at 35 percent. Personal Income Tax Rate in Malta averaged 35.00 percent from 1995 until 2026, reaching an all time high of 35.00 percent
+      in 1996 and a record low of 35.00 percent in 1996. source: Government of Malta - Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 35.0
+      source: curated
+  population:
+    slug: population
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: TE attributes Eurostat label, value 0.6 mln; DB nso_mt 0.57 mln (more precise NSO source). Within 5%.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 0.6
+    te_description: 'The total population in Malta was estimated at 0.6 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of
+      1960, Malta had a population of 0.3 million people. source: EUROSTAT'
+    db_source: nso_mt
+    db_value:
+      date: '2025-12-31'
+      value: 0.57
+      source: eurostat
+  ppi:
+    slug: ppi
+    status: verified-ok
+    decision: fetch-provider-honored
+    note: TE attributes NSO Malta; we fetch Eurostat sts_inpp_m.
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt/
+    te_value: 109.28
+    te_description: 'Producer Prices in Malta decreased to 109.28 points in March from 109.55 points in February of 2026. Producer Prices in Malta averaged 100.90 points from 2000 until 2026, reaching an
+      all time high of 114.38 points in December of 2001 and a record low of 87.66 points in August of 2015. source: Nation'
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 115.0
+      source: eurostat
+  productivity:
+    slug: productivity
+    status: verified-ok
+    decision: verified
+    note: TE Eurostat; DB eurostat.
+    te_label: EUROSTAT
+    te_url: https://ec.europa.eu/eurostat/
+    te_value: 111.48
+    te_description: Productivity in Malta decreased to 111.48 points in the fourth quarter of 2025 from 111.99 points in the third quarter of 2025. Productivity in Malta averaged 90.02 points from 2000
+      until 2025, reaching an all time high of 114.77 points in the first quarter of 2024 and a record low of 67.20 points i
+    db_source: eurostat
+    db_value:
+      date: '2025-12-31'
+      value: 112.23
+      source: eurostat
+  retail-sales:
+    slug: retail-sales
+    status: verified-ok
+    decision: verified
+    note: TE EUROSTAT; DB eurostat. TE slug = /malta/retail-sales (not retail-sales-yoy as in other countries).
+    te_label: EUROSTAT
+    te_url: null
+    te_value: 0.4
+    te_description: 'Retail Sales in Malta decreased 0.40 percent in March of 2026 over the previous month. Retail Sales MoM in Malta averaged 0.23 percent from 2000 until 2026, reaching an all time high
+      of 12.60 percent in January of 2003 and a record low of -21.10 percent in April of 2020. source: EUROSTAT'
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 128.8
+      source: eurostat
+  retirement-age-men:
+    slug: retirement-age-men
+    status: curated-stale
+    decision: update-curated
+    note: TE 2025 = 64 (was), 2026 all-time-high = 65 (current). DB curated has 64. Update.
+    actions:
+    - UPDATE curated mt.yaml retirement-age-men 64->65
+    te_label: Government of Malta - Inland Revenue
+    te_url: https://socialsecurity.gov.mt
+    te_value: 64.0
+    te_description: 'Retirement Age Men in Malta remained unchanged at 64 Years in 2025 from 64 Years in 2024. Retirement Age Men in Malta averaged 62.13 Years from 2004 until 2026, reaching an all time
+      high of 65.00 Years in 2026 and a record low of 61.00 Years in 2005. source: Government of Malta - Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 64.0
+      source: curated
+  retirement-age-women:
+    slug: retirement-age-women
+    status: curated-stale
+    decision: update-curated
+    note: TE 2025 = 64, 2026 all-time-high = 65. DB curated has 64. Update.
+    actions:
+    - UPDATE curated mt.yaml retirement-age-women 64->65
+    te_label: Government of Malta - Inland Revenue
+    te_url: https://socialsecurity.gov.mt
+    te_value: 64.0
+    te_description: 'Retirement Age Women in Malta remained unchanged at 64 Years in 2025 from 64 Years in 2024. Retirement Age Women in Malta averaged 61.70 Years from 2004 until 2026, reaching an all
+      time high of 65.00 Years in 2026 and a record low of 60.00 Years in 2005. source: Government of Malta - Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 64.0
+      source: curated
+  sales-tax-rate:
+    slug: sales-tax-rate
+    status: verified-ok
+    decision: verified
+    note: TE Gov Malta IR 18%; DB curated 18%.
+    te_label: Government of Malta - Inland Revenue
+    te_url: https://www.vatlive.com
+    te_value: 18.0
+    te_description: 'The Sales Tax Rate in Malta stands at 18 percent. Sales Tax Rate in Malta averaged 17.56 percent from 2000 until 2026, reaching an all time high of 18.00 percent in 2004 and a record
+      low of 15.00 percent in 2001. source: Government of Malta - Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 18.0
+      source: curated
+  services-inflation:
+    slug: services-inflation
+    status: not-on-te
+    decision: frontend-derive
+    note: No /malta/services-inflation TE page.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: eurostat
+    db_value:
+      date: '2026-04-30'
+      value: 102.8
+      source: eurostat
+  services-sentiment:
+    slug: services-sentiment
+    status: not-on-te
+    decision: keep
+    note: No /malta/services-sentiment TE page.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: eurostat
+    db_value:
+      date: '2026-04-30'
+      value: 31.5
+      source: eurostat
+  social-security-rate:
+    slug: social-security-rate
+    status: verified-ok
+    decision: verified
+    note: TE Commisioner of Inland Revenue 20%; DB curated 20%.
+    te_label: Commisioner of Inland Revenue
+    te_url: null
+    te_value: 20.0
+    te_description: 'The Social Security Rate in Malta stands at 20 percent. Social Security Rate in Malta averaged 20.00 percent from 2006 until 2026, reaching an all time high of 20.00 percent in 2007
+      and a record low of 20.00 percent in 2007. source: Commisioner of Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 20.0
+      source: curated
+  social-security-rate-companies:
+    slug: social-security-rate-companies
+    status: verified-ok
+    decision: verified
+    note: TE Commisioner of Inland Revenue 10%; DB curated 10%. TE slug = social-security-rate-for-companies.
+    te_label: Commisioner of Inland Revenue
+    te_url: null
+    te_value: 10.0
+    te_description: 'The Social Security Rate For Companies in Malta stands at 10 percent. Social Security Rate For Companies in Malta averaged 10.00 percent from 2006 until 2026, reaching an all time high
+      of 10.00 percent in 2007 and a record low of 10.00 percent in 2007. source: Commisioner of Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 10.0
+      source: curated
+  social-security-rate-employees:
+    slug: social-security-rate-employees
+    status: verified-ok
+    decision: verified
+    note: TE Commisioner of Inland Revenue 10%; DB curated 10%. TE slug = social-security-rate-for-employees.
+    te_label: Commisioner of Inland Revenue
+    te_url: null
+    te_value: 10.0
+    te_description: 'The Social Security Rate For Employees in Malta stands at 10 percent. Social Security Rate For Employees in Malta averaged 10.00 percent from 2006 until 2026, reaching an all time high
+      of 10.00 percent in 2007 and a record low of 10.00 percent in 2007. source: Commisioner of Inland Revenue'
+    db_source: curated
+    db_value:
+      date: '2026-12-31'
+      value: 10.0
+      source: curated
+  terrorism-index:
+    slug: terrorism-index
+    status: not-on-te
+    decision: curated-keep
+    note: No /malta/terrorism-index TE page; curated IEP 0 retained.
+    te_label: null
+    te_url: null
+    te_value: null
+    te_description: ''
+    db_source: curated
+    db_value:
+      date: '2025-12-31'
+      value: 0.0
+      source: curated
+  trade-balance:
+    slug: trade-balance
+    status: verified-ok
+    decision: unit-match
+    note: NSO Malta exports−imports = -259547.485 thou EUR = -259.5 mln EUR. TE shows abs(259.5 mln deficit).
+    te_label: National Statistics Office, Malta
+    te_url: https://nso.gov.mt
+    te_value: 259.5
+    te_description: Malta's trade shortfall decreased to €259.5 million in March 2026 from a revised €298.5 million in the same month a year ago. Exports jumped 9.5% to €404.5 million, mainly reflecting
+      higher shipments of mineral fuels, lubricants and related materials (25.3%) and chemicals (33.6%). Conversely, import
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: -259547.485
+      source: nso_mt
+  unemployed-persons:
+    slug: unemployed-persons
+    status: value-divergence
+    decision: methodology-mismatch
+    note: TE NSO Malta Jobs Plus monthly registered = 1287 persons; DB eurostat LFS quarterly = 12 thousand. Different methodologies — consider switching to nso_mt to match TE.
+    actions:
+    - TODO migrate to nso_mt DF_LABOUR_STATUS LSUNEMP M+F summed
+    te_label: National Statistics Office, Malta
+    te_url: null
+    te_value: null
+    te_description: 'The number of unemployed persons in Malta decreased to 1287 in March of 2026 from 1302 in February of 2026. Unemployed Persons in Malta averaged 5246.13 from 1995 until 2026, reaching
+      an all time high of 8830.00 in February of 2004 and a record low of 875.00 in June of 2023. source: National Statist'
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 12.0
+      source: eurostat
+  unemployment:
+    slug: unemployment
+    status: verified-ok
+    decision: verified
+    note: NSO Malta LFS unemployment rate derived from LSUNEMP/(LSEMP+LSUNEMP) M+F summed.
+    te_label: National Statistics Office, Malta
+    te_url: http://www.nso.gov.mt
+    te_value: null
+    te_description: The unemployment rate in Malta rose to 3.4% in the fourth quarter of 2025 from a revised 3.1% in the same period last year. The number of unemployed individuals increased by 1,387 to
+      11,544, while the number of inactive persons grew by 2,699 to 165,967. Women accounted for 58.3% of the total inactiv
+    db_source: nso_mt
+    db_value:
+      date: '2026-03-31'
+      value: 3.5
+      source: eurostat
+  youth-unemployment-rate:
+    slug: youth-unemployment-rate
+    status: verified-ok
+    decision: verified
+    note: TE EUROSTAT; DB eurostat.
+    te_label: EUROSTAT
+    te_url: null
+    te_value: 9.6
+    te_description: Youth Unemployment Rate in Malta decreased to 9.60 percent in March from 9.90 percent in February of 2026. Youth Unemployment Rate in Malta averaged 12.53 percent from 2000 until 2026,
+      reaching an all time high of 19.90 percent in November of 2001 and a record low of 7.30 percent in April of 2024. s
+    db_source: eurostat
+    db_value:
+      date: '2026-03-31'
+      value: 9.6
+      source: eurostat

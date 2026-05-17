@@ -1,0 +1,1311 @@
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 13.33333333333333
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: -1.3
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/sweden/government-budget
+  te_period: null
+  te_value: 1.3
+  value_match: false
+  yoy_computed: 18.750000000000004
+business-confidence:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: KONJ/indikatorer/Indikatorm/BTOT
+  our_source: konj_se
+  our_unit: Index (2000-2024=100)
+  our_value: 103.3
+  source_match: true
+  suggested_source: konj_se
+  te_http: 200
+  te_label: National Institute of Economic Research, Sweden
+  te_page: https://tradingeconomics.com/sweden/business-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.48309178743962045
+  our_period: '2026-06-30'
+  our_series: SCB/NV0701A/capacity-util
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 83.2
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/capacity-utilization
+  te_period: in the fourth quarter of 2025
+  te_value: 88.2
+  value_match: false
+  yoy_computed: -4.1474654377880125
+changes-in-inventories:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 99.9690615331729
+  our_period: '2025-12-31'
+  our_series: SCB/NR0103B/inventories
+  our_source: scb_se
+  our_unit: Billion EUR
+  our_value: -0.9
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/changes-in-inventories
+  te_period: in the fourth quarter of 2025
+  te_value: 28672.0
+  value_match: false
+  yoy_computed: 9.090909090909088
+consumer-confidence:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: KONJ/hushall/indikatorhus/bhuscon
+  our_source: konj_se
+  our_unit: Index (2000-2024=100)
+  our_value: 91.5
+  source_match: true
+  suggested_source: konj_se
+  te_http: 200
+  te_label: National Institute of Economic Research, Sweden
+  te_page: https://tradingeconomics.com/sweden/consumer-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-spending:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SCB/NR0103B/consumer-spending
+  our_source: scb_se
+  our_unit: SEK million (ref 2024)
+  our_value: 744967
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/consumer-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 744967.0
+  value_match: true
+  yoy_computed: null
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101J/core-cpi-yoy
+  our_source: scb_se
+  our_unit: '% YoY'
+  our_value: 0
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/core-inflation-rate
+  te_period: in April of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 20.6
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Skatteverket
+  te_page: https://tradingeconomics.com/sweden/corporate-tax-rate
+  te_period: null
+  te_value: 20.6
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SE:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 80
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/sweden/corruption-index
+  te_period: null
+  te_value: 80.0
+  value_match: true
+  yoy_computed: null
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SE:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 6
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/sweden/corruption-rank
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/cpi-clothing
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 124.95
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/cpi-clothing
+  te_period: in April
+  te_value: 124.95
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/cpi-education
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 125.47
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/cpi-education
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-food:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/cpi-food
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 125.14
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/cpi-food
+  te_period: in April
+  te_value: 125.14
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/cpi-housing
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 134.93
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/cpi-housing-utilities
+  te_period: in April
+  te_value: 134.93
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/cpi-recreation
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 119.51
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/cpi-recreation-and-culture
+  te_period: in April
+  te_value: 119.51
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/cpi-transport
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 124.89
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/cpi-transportation
+  te_period: in April of 2026
+  te_value: 124.89
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: SE:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 96
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/credit-rating
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SCB/FM0001A/current-account
+  our_source: scb_se
+  our_unit: Billion EUR
+  our_value: 7.13
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/current-account
+  te_period: in the fourth quarter of 2025
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -23.728813559322038
+  our_period: '2025-12-31'
+  our_series: bop_gdp6_q:CA
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 4.5
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/sweden/current-account-to-gdp
+  te_period: null
+  te_value: 6.1
+  value_match: false
+  yoy_computed: 0.0
+disposable-personal-income:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SCB/NR0103C/disposable-S14
+  our_source: scb_se
+  our_unit: SEK million
+  our_value: 773762
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/disposable-personal-income
+  te_period: in the fourth quarter of 2025
+  te_value: 773762.0
+  value_match: true
+  yoy_computed: null
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.37906928014933494
+  our_period: '2026-03-31'
+  our_series: SCB/AM/AM0401/AM0401A/AKURLBefM
+  our_source: scb_se
+  our_unit: Thousand
+  our_value: 5229.8
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/employed-persons
+  te_period: in March 2026
+  te_value: 5.23
+  value_match: false
+  yoy_computed: -0.5930431476905497
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/AM0401A/empl-rate
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 68.5
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/employment-rate
+  te_period: in March
+  te_value: 68.5
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 108.89
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/energy-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/HA/HA0201/HA0201A/ImportExportSnabbM
+  our_source: scb_se
+  our_unit: SEK million
+  our_value: 195100
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/exports
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020COICOP2M/food-yoy
+  our_source: scb_se
+  our_unit: '% YoY'
+  our_value: -5.7
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/food-inflation
+  te_period: in April of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 603.72
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/sweden/gdp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-growth-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SCB/NR0103B/T10SKv
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 0.5
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/gdp-growth-rate
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_unit: USD (constant 2015)
+  our_value: 54209.95
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/sweden/gdp-per-capita
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_unit: Int. USD (PPP constant 2021)
+  our_value: 62978.94
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/sweden/gdp-per-capita-ppp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.2059817088242564
+  our_period: '2026-03-31'
+  our_series: SCB/NR/NR0103/NR0103B/NR0103ENS2010T10SKv
+  our_source: scb_se
+  our_unit: Billion EUR
+  our_value: 121.12
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/gdp-growth-annual
+  te_period: in Q1 2026
+  te_value: 1.6
+  value_match: false
+  yoy_computed: -99.9924086065042
+government-debt:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 2.631578947368417
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 35.1
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Swedish National Debt Office
+  te_page: https://tradingeconomics.com/sweden/government-debt
+  te_period: in April
+  te_value: 1212851.0
+  value_match: false
+  yoy_computed: -14.805825242718448
+government-debt-total:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 11.638631242467106
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_EUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 213.04
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Swedish National Debt Office
+  te_page: https://tradingeconomics.com/sweden/government-debt
+  te_period: in April
+  te_value: 1212851.0
+  value_match: false
+  yoy_computed: 20.47048179144989
+government-spending:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -99.99070306499397
+  our_period: '2025-12-31'
+  our_series: SCB/NR0103B/gov-spending
+  our_source: scb_se
+  our_unit: Billion EUR
+  our_value: 40.67
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 437456.0
+  value_match: false
+  yoy_computed: 10.847642409375863
+government-spending-eur:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 40.67
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/government-spending-value
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SCB/NR0103B/gfcf
+  our_source: scb_se
+  our_unit: SEK million (ref 2024)
+  our_value: 421627
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/gross-fixed-capital-formation
+  te_period: in the fourth quarter of 2025
+  te_value: 421627.0
+  value_match: true
+  yoy_computed: null
+hospital-beds:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2023-12-31'
+  our_series: SE:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 1.87
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/sweden/hospital-beds
+  te_period: null
+  te_value: 1.87
+  value_match: true
+  yoy_computed: null
+house-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/BO0501A/house-price
+  our_source: scb_se
+  our_unit: Index (1981=100)
+  our_value: 953
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/housing-index
+  te_period: in the first quarter of 2026
+  te_value: 953.0
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/HA/HA0201/HA0201A/ImportExportSnabbM
+  our_source: scb_se
+  our_unit: SEK million
+  our_value: 185800
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/imports
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/NV/NV0402/NV0402A/IPI2010KedjM
+  our_source: scb_se
+  our_unit: Index
+  our_value: 106.5
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/industrial-production
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+industrial-production-yoy:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/NV0402A/IPI2010KedjM
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 2.8
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/industrial-production
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.5779418847327009
+  our_period: '2026-04-30'
+  our_series: SCB/PR0101A/KPI2020M
+  our_source: scb_se
+  our_unit: Index
+  our_value: 123.86
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/inflation-cpi
+  te_period: in April 2026
+  te_value: 0.1
+  value_match: false
+  yoy_computed: 22.864795159210395
+job-vacancies:
+  fix_summary: null
+  fixed: false
+  flag: needs-scb-fetch
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 2
+  source_match: false
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Swedish Public Employment Service
+  te_page: https://tradingeconomics.com/sweden/job-vacancies
+  te_period: in March
+  te_value: null
+  value_match: null
+  yoy_computed: null
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/AM0401A/lfp-rate
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 75.9
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/labor-force-participation-rate
+  te_period: in March
+  te_value: 75.9
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-02-28'
+  our_series: SCB/AM0301A/AKITM07/labour-costs
+  our_source: scb_se
+  our_unit: Index (2008M01=100)
+  our_value: 169.2
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/labour-costs
+  te_period: in February
+  te_value: 169.2
+  value_match: true
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 1.9
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/sweden/long-term-unemployment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 1.9
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/NV0402A/manufacturing
+  our_source: scb_se
+  our_unit: Index (2021=100)
+  our_value: 122.5
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/manufacturing-production
+  te_period: in March of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+medical-doctors:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: SE:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 4.31
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/sweden/medical-doctors
+  te_period: null
+  te_value: 4.29
+  value_match: true
+  yoy_computed: null
+minimum-wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:minimum-wages
+  our_source: curated
+  our_unit: SEK/Month
+  our_value: 0
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/minimum-wages
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/NV0402A/mining
+  our_source: scb_se
+  our_unit: Index (2021=100)
+  our_value: 96.3
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/mining-production
+  te_period: in March of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+nurses:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2022-12-31'
+  our_series: SE:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 11.64
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/sweden/nurses
+  te_period: null
+  te_value: 11.64
+  value_match: true
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 52.3
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Skatteverket
+  te_page: https://tradingeconomics.com/sweden/personal-income-tax-rate
+  te_period: null
+  te_value: 52.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_unit: Millions
+  our_value: 10.59
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/sweden/population
+  te_period: null
+  te_value: 10.6
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/PR0301G/PPI2020M
+  our_source: scb_se
+  our_unit: Index (2020=100)
+  our_value: 135.8
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/producer-prices
+  te_period: in March
+  te_value: 135.8
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.79
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/sweden/productivity
+  te_period: in the fourth quarter of 2025
+  te_value: 108.32
+  value_match: true
+  yoy_computed: null
+retail-sales:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/HA/HA0101/HA0101B/DetOms07N
+  our_source: scb_se
+  our_unit: Index
+  our_value: 100.4
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/retail-sales-mom
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retail-sales-yoy:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/HA0101B/DetOms07N
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 6.2
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/retail-sales-yoy
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 63
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministry of Health and Social Affairs, Sweden
+  te_page: https://tradingeconomics.com/sweden/retirement-age-men
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 66
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministry of Health and Social Affairs, Sweden
+  te_page: https://tradingeconomics.com/sweden/retirement-age-women
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 25
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Skatteverket
+  te_page: https://tradingeconomics.com/sweden/sales-tax-rate
+  te_period: null
+  te_value: 25.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 99.95
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/sweden/services-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: 22.7
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Swedbank
+  te_page: https://tradingeconomics.com/sweden/services-pmi
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 31.42
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Skatteverket
+  te_page: https://tradingeconomics.com/sweden/social-security-rate
+  te_period: null
+  te_value: 31.42
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 31.42
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Skatteverket
+  te_page: https://tradingeconomics.com/sweden/social-security-rate-for-companies
+  te_period: null
+  te_value: 31.42
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: SE:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 7
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Skatteverket
+  te_page: https://tradingeconomics.com/sweden/social-security-rate-for-employees
+  te_period: null
+  te_value: 7.0
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: SE:terrorism-index
+  our_source: curated
+  our_unit: Points
+  our_value: 1.84
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Institute for Economics and Peace
+  te_page: https://tradingeconomics.com/sweden/terrorism-index
+  te_period: null
+  te_value: 1.84
+  value_match: true
+  yoy_computed: null
+trade-balance:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/HA0201A/ImportExportSnabbM
+  our_source: scb_se
+  our_unit: SEK million
+  our_value: 9300
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/balance-of-trade
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/AM/AM0401/AM0401A/AKURLBefM
+  our_source: scb_se
+  our_unit: Thousand
+  our_value: 538
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/unemployed-persons
+  te_period: in March of 2026
+  te_value: 564.9
+  value_match: true
+  yoy_computed: null
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: SCB/AM0401A/AKURLBefM
+  our_source: scb_se
+  our_unit: '%'
+  our_value: 9.7
+  source_match: true
+  suggested_source: scb_se
+  te_http: 200
+  te_label: Statistics Sweden
+  te_page: https://tradingeconomics.com/sweden/unemployment-rate
+  te_period: in March 2026
+  te_value: 9.7
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 26.6
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/sweden/youth-unemployment-rate
+  te_period: in March
+  te_value: 26.6
+  value_match: true
+  yoy_computed: null

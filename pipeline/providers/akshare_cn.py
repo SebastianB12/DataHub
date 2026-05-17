@@ -85,6 +85,15 @@ def _parse_cn_full_date(s) -> date | None:
     return date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
 
 
+def _parse_yyyy_dash_m(s) -> date | None:
+    """'2026-04' → date(2026, 4, 1)."""
+    s = str(s).strip()
+    m = re.match(r"^(\d{4})-(\d{1,2})$", s)
+    if not m:
+        return None
+    return date(int(m.group(1)), int(m.group(2)), 1)
+
+
 # Per-slug config:
 # func          → akshare function name (string)
 # value_col     → column name with the published value
@@ -107,17 +116,17 @@ CN_SERIES: list[dict] = [
         "unit": "% YoY",
         "adjustment": "NSA",
     },
-    # CPI Index level (Same period last year = 100), so this is an Index series
+    # Inflation Rate headline (NBS CPI YoY % — what TE shows as 'China Inflation Rate')
     {
         "indicator": "inflation-cpi",
         "func": "macro_china_cpi",
-        "value_col": "全国-当月",  # National monthly index (same-period-prior-year=100)
+        "value_col": "全国-同比增长",  # National YoY %
         "date_col": "月份",
         "date_parser": "cn_month",
         "freq": "M",
-        "unit": "Index",
+        "unit": "% YoY",
         "adjustment": "NSA",
-        "note": "NBS CPI: same-period-prior-year=100. Frontend display=yoy computes (val-100) for headline.",
+        "note": "NBS National CPI YoY % — matches TE 'China Inflation Rate'.",
     },
     # PPI YoY
     {
@@ -162,7 +171,9 @@ CN_SERIES: list[dict] = [
         "unit": "Billion USD",
         "conversion": 0.1,
     },
-    # Gold Reserves (Million Troy Ounces) — 万盎司 = 10,000 ounces, so × 0.01 → million ounces
+    # Gold Reserves — TE shows in Tonnes (WGC-labelled but PBoC data).
+    # akshare raw is 万盎司 (10,000 troy oz). 1 troy oz = 0.0311034768 kg = 3.11034768e-5 Tonnes.
+    # 万盎司 → Tonnes: × 10000 × 3.11034768e-5 = × 0.311034768
     {
         "indicator": "gold-reserves",
         "func": "macro_china_foreign_exchange_gold",
@@ -170,8 +181,9 @@ CN_SERIES: list[dict] = [
         "date_col": "统计时间",
         "date_parser": "iso",
         "freq": "M",
-        "unit": "Million Troy Ounces",
-        "conversion": 0.01,
+        "unit": "Tonnes",
+        "conversion": 0.311034768,
+        "note": "PBoC monthly gold reserves in Tonnes (TE labels WGC but underlying is PBoC).",
     },
     # Money Supply M2 - 100 million yuan
     {
@@ -322,16 +334,19 @@ CN_SERIES: list[dict] = [
         "freq": "M",
         "unit": "% YoY",
     },
-    # New Bank Loans (PBoC, monthly, 亿元)
+    # New Bank Loans (PBoC, monthly new RMB loans 新增人民币贷款 in 亿元).
+    # Note: macro_china_new_financial_credit reports a different aggregate that does
+    # NOT match TE; macro_rmb_loan tracks the exact PBoC headline figure.
     {
         "indicator": "new-bank-loans",
-        "func": "macro_china_new_financial_credit",
-        "value_col": "当月",
+        "func": "macro_rmb_loan",
+        "value_col": "新增人民币贷款-总额",
         "date_col": "月份",
-        "date_parser": "cn_month",
+        "date_parser": "yyyy_dash_m",
         "freq": "M",
         "unit": "Billion CNY",
         "conversion": 0.1,
+        "note": "PBoC monthly new RMB loans (matches TE 'China New Loans').",
     },
     # Cash Reserve Ratio (RRR) — adjustment events; we take 大型金融机构-调整后
     {
@@ -364,15 +379,17 @@ CN_SERIES: list[dict] = [
         "freq": "M",
         "unit": "Index",
     },
-    # Business Confidence — NBS Enterprise Boom Index (企业景气指数)
+    # Business Confidence — TE reuses NBS Manufacturing PMI series here (e.g.,
+    # April 2026 = 50.30 matches NBS PMI exactly). Honor TE convention.
     {
         "indicator": "business-confidence",
-        "func": "macro_china_enterprise_boom_index",
-        "value_col": "企业景气指数-指数",
-        "date_col": "季度",
-        "date_parser": "cn_quarter",
-        "freq": "Q",
+        "func": "macro_china_pmi",
+        "value_col": "制造业-指数",
+        "date_col": "月份",
+        "date_parser": "cn_month",
+        "freq": "M",
         "unit": "Points",
+        "note": "Mirrors NBS Manufacturing PMI (TE convention for China Business Confidence).",
     },
 ]
 
@@ -392,6 +409,8 @@ def _resolve_date(label, parser):
         return _parse_yyyy_m_dot(label)
     if parser == "cn_full_date":
         return _parse_cn_full_date(label)
+    if parser == "yyyy_dash_m":
+        return _parse_yyyy_dash_m(label)
     return None
 
 

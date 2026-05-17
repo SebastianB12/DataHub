@@ -43,11 +43,8 @@ retirement-age-women:
   date: "2026-12-31"
   unit: "Years"
 
-minimum-wages:
-  value: 4050
-  date: "2026-01-31"
-  unit: "RON/Month"
-  note: "Salariul minim 2026."
+# minimum-wages: migrated to Eurostat (earn_mw_cur, geo=RO, EUR, bi-annual)
+# per migration 078_ro_reaudit — siehe indicator_sources Row.
 
 corruption-index:
   value: 46

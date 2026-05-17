@@ -1,0 +1,388 @@
+{
+  "budget-deficit": {
+    "value": -1.8,
+    "date": "2025-12-31",
+    "unit": "% of GDP",
+    "source": "eurostat"
+  },
+  "business-confidence": {
+    "value": -2,
+    "date": "2026-04-30",
+    "unit": "Net balance, %",
+    "source": "lsd_lt"
+  },
+  "capacity-utilization": {
+    "value": 71.5,
+    "date": "2026-06-30",
+    "unit": "%",
+    "source": "eurostat"
+  },
+  "changes-in-inventories": {
+    "value": -376.4,
+    "date": "2025-12-31",
+    "unit": "Million EUR (current prices)",
+    "source": "lsd_lt"
+  },
+  "consumer-confidence": {
+    "value": -3,
+    "date": "2026-04-30",
+    "unit": "Net balance, %",
+    "source": "lsd_lt"
+  },
+  "consumer-spending": {
+    "value": 8564,
+    "date": "2025-12-31",
+    "unit": "Million EUR (2020 chain-linked)",
+    "source": "lsd_lt"
+  },
+  "core-cpi": {
+    "value": 103.05,
+    "date": "2026-04-30",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "corporate-tax-rate": {
+    "value": 16,
+    "date": "2026-12-31",
+    "unit": "%",
+    "source": "curated"
+  },
+  "corruption-index": {
+    "value": 61,
+    "date": "2025-12-31",
+    "unit": "Points",
+    "source": "curated"
+  },
+  "corruption-rank": {
+    "value": 32,
+    "date": "2025-12-31",
+    "unit": "Rank",
+    "source": "curated"
+  },
+  "cpi-clothing": {
+    "value": 99.78,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "cpi-education": {
+    "value": 102.82,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "cpi-food": {
+    "value": 102.1,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "cpi-housing-utilities": {
+    "value": 109.85,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "cpi-recreation-and-culture": {
+    "value": 103.68,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "cpi-transportation": {
+    "value": 108.44,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "credit-rating": {
+    "value": 75,
+    "date": "2026-04-01",
+    "unit": "Rating",
+    "source": "curated"
+  },
+  "current-account": {
+    "value": 0.59,
+    "date": "2025-12-31",
+    "unit": "Billion EUR",
+    "source": "eurostat"
+  },
+  "current-account-to-gdp": null,
+  "disposable-personal-income": null,
+  "employed-persons": {
+    "value": 1464.5,
+    "date": "2025-12-31",
+    "unit": "Thousand persons",
+    "source": "lsd_lt"
+  },
+  "employment-rate": {
+    "value": 74.1,
+    "date": "2025-12-31",
+    "unit": "%",
+    "source": "eurostat"
+  },
+  "energy-inflation": {
+    "value": 119.91,
+    "date": "2026-04-30",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "exports": {
+    "value": 13338.5,
+    "date": "2025-12-31",
+    "unit": "Million EUR (2020 chain-linked)",
+    "source": "lsd_lt"
+  },
+  "food-inflation": {
+    "value": 103.02,
+    "date": "2026-04-30",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "gdp": {
+    "value": 84.87,
+    "date": "2024-12-31",
+    "unit": "Billion USD",
+    "source": "worldbank"
+  },
+  "gdp-per-capita": {
+    "value": 19092.65,
+    "date": "2024-12-31",
+    "unit": "USD (constant 2015)",
+    "source": "worldbank"
+  },
+  "gdp-per-capita-ppp": {
+    "value": 47165.37,
+    "date": "2024-12-31",
+    "unit": "Int. USD (PPP constant 2021)",
+    "source": "worldbank"
+  },
+  "gdp-real": {
+    "value": 14577.3,
+    "date": "2026-03-31",
+    "unit": "Million EUR (chain-linked)",
+    "source": "lsd_lt"
+  },
+  "government-debt": {
+    "value": 39.5,
+    "date": "2025-12-31",
+    "unit": "% of GDP",
+    "source": "eurostat"
+  },
+  "government-debt-total": {
+    "value": 33.26,
+    "date": "2025-12-31",
+    "unit": "Billion EUR",
+    "source": "eurostat"
+  },
+  "government-spending": {
+    "value": 2598.8,
+    "date": "2025-12-31",
+    "unit": "Million EUR (2020 chain-linked)",
+    "source": "lsd_lt"
+  },
+  "government-spending-eur": {
+    "value": 4.16,
+    "date": "2025-12-31",
+    "unit": "Billion EUR",
+    "source": "eurostat"
+  },
+  "gross-fixed-capital-formation": {
+    "value": 4070.9,
+    "date": "2025-12-31",
+    "unit": "Million EUR (2020 chain-linked)",
+    "source": "lsd_lt"
+  },
+  "hospital-beds": {
+    "value": 6.4,
+    "date": "2022-12-31",
+    "unit": "per 1000 people",
+    "source": "curated"
+  },
+  "house-price-index": {
+    "value": 268.22,
+    "date": "2025-12-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "imports": {
+    "value": 12821,
+    "date": "2025-12-31",
+    "unit": "Million EUR (2020 chain-linked)",
+    "source": "lsd_lt"
+  },
+  "industrial-production": {
+    "value": 116,
+    "date": "2026-03-31",
+    "unit": "Index (2021=100)",
+    "source": "lsd_lt"
+  },
+  "inflation-cpi": {
+    "value": 104.95,
+    "date": "2026-04-30",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "interest-rate": {
+    "value": 2.15,
+    "date": "2025-06-11",
+    "unit": "%",
+    "source": "ecb"
+  },
+  "job-vacancies": {
+    "value": 30528,
+    "date": "2025-12-31",
+    "unit": "Number of vacancies",
+    "source": "lsd_lt"
+  },
+  "labor-force-participation-rate": {
+    "value": 63.4,
+    "date": "2026-03-31",
+    "unit": "%",
+    "source": "lsd_lt"
+  },
+  "labour-costs": {
+    "value": 176.7,
+    "date": "2025-12-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "long-term-unemployment-rate": {
+    "value": 2.4,
+    "date": "2026-03-31",
+    "unit": "%",
+    "source": "lsd_lt"
+  },
+  "manufacturing-production": {
+    "value": 119.2,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "medical-doctors": {
+    "value": 5.4,
+    "date": "2021-12-31",
+    "unit": "per 1000 people",
+    "source": "curated"
+  },
+  "minimum-wages": {
+    "value": 1038,
+    "date": "2026-01-31",
+    "unit": "EUR/Month",
+    "source": "curated"
+  },
+  "mining-production": {
+    "value": 90,
+    "date": "2026-03-31",
+    "unit": "Index (2021=100)",
+    "source": "lsd_lt"
+  },
+  "nurses": {
+    "value": 7.7,
+    "date": "2021-12-31",
+    "unit": "per 1000 people",
+    "source": "curated"
+  },
+  "personal-income-tax-rate": {
+    "value": 32,
+    "date": "2026-12-31",
+    "unit": "%",
+    "source": "curated"
+  },
+  "population": {
+    "value": 2.8902,
+    "date": "2025-12-31",
+    "unit": "Million persons",
+    "source": "lsd_lt"
+  },
+  "ppi": {
+    "value": 150.3,
+    "date": "2026-04-30",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "productivity": {
+    "value": 103.81,
+    "date": "2025-12-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "retail-sales": {
+    "value": 111,
+    "date": "2026-03-31",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "retirement-age-men": {
+    "value": 64.5,
+    "date": "2026-12-31",
+    "unit": "Years",
+    "source": "curated"
+  },
+  "retirement-age-women": {
+    "value": 63.83,
+    "date": "2026-12-31",
+    "unit": "Years",
+    "source": "curated"
+  },
+  "sales-tax-rate": {
+    "value": 21,
+    "date": "2026-12-31",
+    "unit": "%",
+    "source": "curated"
+  },
+  "services-inflation": {
+    "value": 105.58,
+    "date": "2026-04-30",
+    "unit": "Index",
+    "source": "eurostat"
+  },
+  "services-sentiment": {
+    "value": 4.8,
+    "date": "2026-04-30",
+    "unit": "Points",
+    "source": "eurostat"
+  },
+  "social-security-rate": {
+    "value": 21.27,
+    "date": "2026-12-31",
+    "unit": "%",
+    "source": "curated"
+  },
+  "social-security-rate-companies": {
+    "value": 1.77,
+    "date": "2026-12-31",
+    "unit": "%",
+    "source": "curated"
+  },
+  "social-security-rate-employees": {
+    "value": 19.5,
+    "date": "2026-12-31",
+    "unit": "%",
+    "source": "curated"
+  },
+  "terrorism-index": {
+    "value": 0,
+    "date": "2025-12-31",
+    "unit": "Points",
+    "source": "curated"
+  },
+  "unemployed-persons": {
+    "value": 117.1,
+    "date": "2026-03-31",
+    "unit": "Thousand persons",
+    "source": "lsd_lt"
+  },
+  "unemployment": {
+    "value": 6.5,
+    "date": "2026-03-31",
+    "unit": "%",
+    "source": "eurostat"
+  },
+  "youth-unemployment-rate": {
+    "value": 16,
+    "date": "2026-03-31",
+    "unit": "%",
+    "source": "eurostat"
+  }
+}

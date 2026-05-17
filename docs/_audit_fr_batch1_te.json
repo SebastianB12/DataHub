@@ -1,0 +1,214 @@
+{
+  "budget-deficit": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "5.10",
+    "period": null,
+    "desc": "France recorded a Government Budget deficit equal to 5.10 percent of the country's Gross Domestic Product in 2025. Government Budget in France averaged -2.66 percent of GDP from 1959 until 2025, reaching an all time high of 1.50 percent of GDP in 1959 and a record low of -8.90 percent of GDP in 2020"
+  },
+  "business-confidence": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "100",
+    "period": [
+      "April",
+      "2026"
+    ],
+    "desc": "France’s overall manufacturing business climate index edged up to 100 in April 2026 from 99 in March, slightly improving but still around its long-term average. Past production rebounded to 3 (vs –2 in March), while overall order books improved to –16 (vs –18), and foreign order books were stable at"
+  },
+  "capacity-utilization": {
+    "src_url": "https://www.banque-france.fr/",
+    "src_label": "Banque de France",
+    "rating_val": null,
+    "desc_val": "76.95",
+    "period": [
+      "April",
+      null
+    ],
+    "desc": "Capacity Utilization in France increased to 76.95 percent in April from 76.89 percent in March of 2026. Capacity Utilization in France averaged 80.24 percent from 1981 until 2026, reaching an all time high of 88.03 percent in January of 1989 and a record low of 45.60 percent in April of 2020. source"
+  },
+  "changes-in-inventories": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "2026.",
+    "period": [
+      "the first quarter",
+      "2026"
+    ],
+    "desc": "The stocks of goods held by firms in France increased by 148 EUR Million in the first quarter of 2026. Changes in Inventories in France averaged 963.55 EUR Million from 1949 until 2026, reaching an all time high of 8147.00 EUR Million in the second quarter of 2020 and a record low of -6451.00 EUR Mi"
+  },
+  "consumer-confidence": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "84",
+    "period": [
+      "April",
+      "2026"
+    ],
+    "desc": "The consumer confidence indicator in France fell to 84 in April 2026 from 89 in March, below the expected 88. This marks the lowest reading since May 2023 and the largest monthly decline since early 2022. Inflation expectations increased sharply, with past price perceptions turning notably positive "
+  },
+  "consumer-spending": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "345945",
+    "period": [
+      "the first quarter",
+      "2026"
+    ],
+    "desc": "Consumer Spending in France decreased to 345945 EUR Million in the first quarter of 2026 from 346345 EUR Million in the fourth quarter of 2025. Consumer Spending in France averaged 189422.61 EUR Million from 1949 until 2026, reaching an all time high of 346345.00 EUR Million in the fourth quarter of"
+  },
+  "core-cpi": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "2026",
+    "period": [
+      "April",
+      "2026"
+    ],
+    "desc": "Core consumer prices in France increased 1.20 percent in April of 2026 over the same month in the previous year. Core Inflation Rate in France averaged 1.48 percent from 1991 until 2026, reaching an all time high of 6.20 percent in April of 2023 and a record low of -0.20 percent in November of 2014."
+  },
+  "corporate-tax-rate": {
+    "src_url": "https://www.impots.gouv.fr",
+    "src_label": "Direction Générale des Finances Publiques",
+    "rating_val": null,
+    "desc_val": "25",
+    "period": null,
+    "desc": "The Corporate Tax Rate in France stands at 25 percent. Corporate Tax Rate in France averaged 36.10 percent from 1981 until 2026, reaching an all time high of 50.00 percent in 1982 and a record low of 25.00 percent in 2022. source: Direction Générale des Finances Publiques"
+  },
+  "corruption-index": {
+    "src_url": "https://www.transparency.org/en",
+    "src_label": "Transparency International",
+    "rating_val": null,
+    "desc_val": "100",
+    "period": null,
+    "desc": "France scored 66 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in France averaged 69.39 Points from 1995 until 2025, reaching an all time high of 75.00 Points in 2005 and a record low of 63.00 Points in 2002. source: Transparency "
+  },
+  "corruption-rank": {
+    "src_url": "https://www.transparency.org/",
+    "src_label": "Transparency International",
+    "rating_val": null,
+    "desc_val": "180",
+    "period": null,
+    "desc": "France is the 27 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in France averaged 22.16 from 1995 until 2025, reaching an all time high of 27.00 in 2025 and a record low of 18.00 in 1995. source: "
+  },
+  "cpi-clothing": {
+    "src_url": null,
+    "src_label": null,
+    "rating_val": null,
+    "desc_val": null,
+    "period": null,
+    "desc": ""
+  },
+  "cpi-education": {
+    "src_url": null,
+    "src_label": null,
+    "rating_val": null,
+    "desc_val": null,
+    "period": null,
+    "desc": ""
+  },
+  "cpi-food": {
+    "src_url": null,
+    "src_label": null,
+    "rating_val": null,
+    "desc_val": null,
+    "period": null,
+    "desc": ""
+  },
+  "cpi-housing-utilities": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "101.60",
+    "period": [
+      "April",
+      null
+    ],
+    "desc": "CPI Housing Utilities in France increased to 101.60 points in April from 101.18 points in March of 2026. CPI Housing Utilities in France averaged 85.84 points from 2015 until 2026, reaching an all time high of 101.74 points in January of 2025 and a record low of 75.68 points in April of 2016. source"
+  },
+  "cpi-recreation-and-culture": {
+    "src_url": null,
+    "src_label": null,
+    "rating_val": null,
+    "desc_val": null,
+    "period": null,
+    "desc": ""
+  },
+  "cpi-transportation": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "108.46",
+    "period": [
+      "April",
+      "2026"
+    ],
+    "desc": "The transportation sub-index of the CPI basket in France increased to 108.46 points in April of 2026 from 104.22 points in March of 2026. CPI Transportation in France averaged 88.59 points from 2015 until 2026, reaching an all time high of 108.46 points in April of 2026 and a record low of 76.73 poi"
+  },
+  "credit-rating": {
+    "src_url": null,
+    "src_label": null,
+    "rating_val": null,
+    "desc_val": null,
+    "period": null,
+    "desc": ""
+  },
+  "current-account-to-gdp": {
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "src_label": "EUROSTAT",
+    "rating_val": null,
+    "desc_val": "0.30",
+    "period": null,
+    "desc": "France recorded a Current Account deficit of 0.30 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in France averaged -0.02 percent of GDP from 1980 until 2025, reaching an all time high of 3.40 percent of GDP in 1999 and a record low of -2.10 percent of GDP in 1982. s"
+  },
+  "current-account": {
+    "src_url": "https://www.banque-france.fr/",
+    "src_label": "Banque de France",
+    "rating_val": null,
+    "desc_val": null,
+    "period": [
+      "March",
+      "2026"
+    ],
+    "desc": "France's current account deficit narrowed to EUR 1.2 billion in March 2026 from a downwardly revised EUR 1.5 billion in the previous month. The goods account deficit narrowed to EUR 4.5 billion from EUR 4.8 billion in February, while the services account surplus edged up to EUR 3.8 billion from EUR "
+  },
+  "disposable-personal-income": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "471367",
+    "period": [
+      "the fourth quarter",
+      "2025"
+    ],
+    "desc": "Disposable Personal Income in France increased to 471367 EUR Million in the fourth quarter of 2025 from 471167 EUR Million in the third quarter of 2025. Disposable Personal Income in France averaged 156801.96 EUR Million from 1949 until 2025, reaching an all time high of 471367.00 EUR Million in the"
+  },
+  "employed-persons": {
+    "src_url": "https://ec.europa.eu/eurostat/en/",
+    "src_label": "EUROSTAT",
+    "rating_val": null,
+    "desc_val": "28177",
+    "period": [
+      "the fourth quarter",
+      "2025"
+    ],
+    "desc": "The number of employed persons in France increased to 28177 Thousand in the fourth quarter of 2025 from 28114 Thousand in the third quarter of 2025. Employed Persons in France averaged 26197.79 Thousand from 2003 until 2025, reaching an all time high of 28177.00 Thousand in the fourth quarter of 202"
+  },
+  "employment-rate": {
+    "src_url": "https://www.insee.fr",
+    "src_label": "INSEE, France",
+    "rating_val": null,
+    "desc_val": "69.50",
+    "period": [
+      "the first quarter",
+      "2026"
+    ],
+    "desc": "Employment Rate in France increased to 69.50 percent in the first quarter of 2026 from 69.40 percent in the fourth quarter of 2025. Employment Rate in France averaged 65.70 percent from 2003 until 2026, reaching an all time high of 69.60 percent in the first quarter of 2025 and a record low of 63.90"
+  }
+}

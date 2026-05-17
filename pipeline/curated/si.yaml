@@ -34,19 +34,17 @@ social-security-rate-employees:
   unit: "%"
 
 retirement-age-men:
-  value: 65
-  date: "2026-12-31"
+  value: 60
+  date: "2025-12-31"
   unit: "Years"
 
 retirement-age-women:
-  value: 65
-  date: "2026-12-31"
+  value: 60
+  date: "2025-12-31"
   unit: "Years"
 
-minimum-wages:
-  value: 1278
-  date: "2026-01-31"
-  unit: "EUR/Month"
+# minimum-wages: migrated to Eurostat (earn_mw_cur, geo=SI, EUR, bi-annual)
+# TE attributes "EUROSTAT" — see indicator_sources Row in DB.
 
 corruption-index:
   value: 56

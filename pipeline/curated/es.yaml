@@ -45,15 +45,16 @@ retirement-age-women:
   unit: "Years"
 
 minimum-wages:
-  value: 1184
-  date: "2026-01-31"
+  value: 1381
+  date: "2026-04-30"
   unit: "EUR/Month"
-  note: "SMI (Salario Mínimo Interprofesional) 2026, 14 monthly payments."
+  note: "Eurostat-style 12-month equivalent (SMI 1184 EUR/mo × 14 / 12). Matches TE EUROSTAT value."
 
 corruption-index:
-  value: 56
+  value: 55
   date: "2025-12-31"
   unit: "Points"
+  note: "Transparency International CPI 2025"
 
 corruption-rank:
   value: 46
@@ -71,9 +72,10 @@ hospital-beds:
   unit: "per 1000 people"
 
 medical-doctors:
-  value: 4.50
-  date: "2021-12-31"
+  value: 4.8
+  date: "2022-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics 2022 (matches TE)"
 
 nurses:
   value: 6.31
@@ -81,6 +83,13 @@ nurses:
   unit: "per 1000 people"
 
 terrorism-index:
-  value: 2.0
+  value: 0.79
   date: "2025-12-31"
   unit: "Points"
+  note: "Global Terrorism Index 2025 (IEP)"
+
+current-account-to-gdp:
+  value: 2.9
+  date: "2025-12-31"
+  unit: "% of GDP"
+  note: "Eurostat-derived value as published by TE for 2025"

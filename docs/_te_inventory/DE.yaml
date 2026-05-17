@@ -72,8 +72,8 @@ core-cpi:
   te_value: 2.3
   te_period: "2026-04"
   suggested_source: "destatis"
-  current_source: "eurostat"
-  conform: false
+  current_source: "destatis"
+  conform: true
   verified: true
   note: "TE attributes core CPI YoY to Destatis"
 corporate-tax-rate:
@@ -224,8 +224,8 @@ energy-inflation:
   te_value: 36.54
   te_period: "2026-04"
   suggested_source: "destatis"
-  current_source: "eurostat"
-  conform: false
+  current_source: "destatis"
+  conform: true
   verified: true
 export-prices:
   te_label: "Federal Statistical Office"
@@ -356,8 +356,8 @@ government-spending-to-gdp:
   te_page: "https://tradingeconomics.com/germany/government-spending-to-gdp"
   te_value: 50.5
   suggested_source: "eurostat"
-  current_source: "curated"
-  conform: false
+  current_source: "eurostat"
+  conform: true
   verified: true
 gross-fixed-capital-formation:
   te_label: "Federal Statistical Office"

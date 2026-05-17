@@ -1,0 +1,1116 @@
+budget-deficit:
+  action: regex_false_positive_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: -2
+  db_series_id: gov_10dd_edpt1:B9
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_mismatch:200.0%
+  te_meta: Estonia recorded a Government Budget deficit equal to 2 percent of the
+    country&#39;s Gross Domestic Product in 2025. This page provides - Estonia Government
+    Budget - actual values, historical data, fo
+  te_period: in 2025
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: percent
+  te_value: '2'
+business-confidence:
+  action: verified_ok
+  db_latest_date: ''
+  db_latest_value: null
+  db_series_id: ei_bsin_m_r2:BCI
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  te_meta: Business Confidence in Estonia decreased to 89.70 points in April from
+    91 points in March of 2026. This page provides - Estonia Business Confidence -
+    actual values, historical data, forecast, chart, s
+  te_period: in March of 2026
+  te_source_name: Estonian Institute of Economic Research
+  te_status: ok
+  te_unit: points
+  te_value: '89.70'
+capacity-utilization:
+  action: verified_ok
+  db_latest_date: '2026-06-30'
+  db_latest_value: 71.1
+  db_series_id: ei_bsin_q_r2:BS-ICU-PC
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Capacity Utilization in Estonia increased to 68.10 percent in the first
+    quarter of 2026 from 67.50 percent in the fourth quarter of 2025. This page provides
+    - Estonia Capacity Utilization - actual val
+  te_period: in the first quarter of 2026
+  te_source_name: European Commission
+  te_status: ok
+  te_unit: percent
+  te_value: '68.10'
+changes-in-inventories:
+  action: unit_difference_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: -0.32
+  db_series_id: STATEE/RAA0061/K5
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:100.1%
+  te_meta: The stocks of goods held by firms in Estonia decreased by 409.20 EUR Million
+    in the fourth quarter of 2025. This page provides - Estonia Changes in Inventories
+    - actual values, historical data, foreca
+  te_period: in the fourth quarter of 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '409.20'
+consumer-confidence:
+  action: different_survey_methodology
+  db_latest_date: '2026-04-30'
+  db_latest_value: -20.6
+  db_series_id: ei_bsco_m:BS-CSMCI
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_mismatch:36.6%
+  te_meta: Consumer Confidence in Estonia decreased to -32.50 points in April from
+    -29.70 points in March of 2026. This page provides - Estonia Consumer Confidence
+    - actual values, historical data, forecast, cha
+  te_period: in March of 2026
+  te_source_name: Estonian Institute of Economic Research
+  te_status: ok
+  te_unit: points
+  te_value: '-32.50'
+consumer-spending:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 3912.3
+  db_series_id: STATEE/RAA0061/K1
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Consumer Spending in Estonia increased to 3912.30 EUR Million in the fourth
+    quarter of 2025 from 3680.20 EUR Million in the third quarter of 2025. This page
+    provides - Estonia Consumer Spending - actu
+  te_period: in the fourth quarter of 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '3912.30'
+core-cpi:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-04-30'
+  db_latest_value: 101.27
+  db_series_id: ei_cphi_m:CP-HI00XEF
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_mismatch:3516.8%
+  te_meta: Core consumer prices in Estonia increased 2.80 percent in March of 2026
+    over the same month in the previous year. This page provides - Estonia Core Inflation
+    Rate- actual values, historical data, fore
+  te_period: in March of 2026
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: percent
+  te_value: '2.80'
+corporate-tax-rate:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 22
+  db_series_id: EE:corporate-tax-rate
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Corporate Tax Rate in Estonia stands at 22 percent. This page provides
+    - Estonia Corporate Tax Rate - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_period: null
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: percent
+  te_value: '22'
+corruption-index:
+  action: regex_false_positive_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 76
+  db_series_id: EE:corruption-index
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_mismatch:24.0%
+  te_meta: 'Estonia scored 76 points out of 100 on the 2025 Corruption Perceptions
+    Index reported by Transparency International. This page provides the latest reported
+    value for - Estonia Corruption Index - plus '
+  te_period: null
+  te_source_name: Transparency International
+  te_status: ok
+  te_unit: null
+  te_value: '100'
+corruption-rank:
+  action: regex_false_positive_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 12
+  db_series_id: EE:corruption-rank
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_mismatch:93.3%
+  te_meta: Estonia is the 12 least corrupt nation out of 180 countries, according
+    to the 2025 Corruption Perceptions Index reported by Transparency International.
+    This page provides the latest reported value for
+  te_period: null
+  te_source_name: Transparency International
+  te_status: ok
+  te_unit: null
+  te_value: '180'
+cpi-clothing:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-04-30'
+  db_latest_value: 218.98
+  db_series_id: STATEE/IA002/K4
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:32.4%
+  te_meta: CPI Clothing in Estonia increased to 323.80 points in April from 216.80
+    points in March of 2026. This page includes a chart with historical data for Estonia
+    CPI Clothing.
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '323.80'
+cpi-education:
+  action: verified_ok
+  db_latest_date: '2026-04-30'
+  db_latest_value: 206.79
+  db_series_id: STATEE/IA002/K11
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: CPI Education in Estonia increased to 206.79 points in April from 206.57
+    points in March of 2026. This page includes a chart with historical data for Estonia
+    CPI Education.
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '206.79'
+cpi-food:
+  action: verified_ok
+  db_latest_date: '2026-04-30'
+  db_latest_value: 342.16
+  db_series_id: STATEE/IA002/K2
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: CPI Food in Estonia increased to 342.16 points in April from 341.15 points
+    in March of 2026. This page includes a chart with historical data for Estonia
+    CPI Food.
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '342.16'
+cpi-housing-utilities:
+  action: verified_ok
+  db_latest_date: '2026-04-30'
+  db_latest_value: 634.02
+  db_series_id: STATEE/IA002/K5
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: CPI Housing Utilities in Estonia decreased to 634.02 points in April from
+    637.77 points in March of 2026. This page provides - Estonia  Cpi Housing Utilities-
+    actual values, historical data, forecast,
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '634.02'
+cpi-recreation-and-culture:
+  action: verified_ok
+  db_latest_date: '2026-04-30'
+  db_latest_value: 373.34
+  db_series_id: STATEE/IA002/K10
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: CPI Recreation and Culture in Estonia increased to 373.34 points in April
+    from 364.41 points in March of 2026. This page includes a chart with historical
+    data for Estonia CPI Recreation And Culture.
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '373.34'
+cpi-transportation:
+  action: verified_ok
+  db_latest_date: '2026-04-30'
+  db_latest_value: 291.44
+  db_series_id: STATEE/IA002/K8
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The transportation sub-index of the CPI basket in Estonia increased to
+    291.44 points in April of 2026 from 282.63 points in March of 2026. This page
+    provides - Estonia Cpi Transportation- actual value
+  te_period: in April of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '291.44'
+credit-rating:
+  action: keep_as_gap
+  db_latest_date: '2026-04-01'
+  db_latest_value: 80
+  db_source: curated
+  te_size: 206675
+  te_status: no_te_page
+  te_title: Estonia - Credit Rating
+current-account:
+  action: acceptable_with_note_eurostat_upstream
+  db_latest_date: '2025-12-31'
+  db_latest_value: 0.22
+  db_series_id: bop_c6_q:CA
+  db_source: eurostat
+  expected_internal_source: ecb
+  status:
+  - source_mismatch:eurostat->ecb
+  - value_mismatch:99.9%
+  te_meta: Estonia recorded a Current Account surplus of 215.60 EUR Million in the
+    fourth quarter of 2025. This page provides - Estonia Current Account - actual
+    values, historical data, forecast, chart, statisti
+  te_period: in the fourth quarter of 2025
+  te_source_name: Bank of Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '215.60'
+current-account-to-gdp:
+  action: acceptable_with_note_eurostat_upstream
+  db_latest_date: ''
+  db_latest_value: null
+  db_series_id: bop_gdp6_q:CA
+  db_source: eurostat
+  expected_internal_source: ecb
+  status:
+  - source_mismatch:eurostat->ecb
+  te_meta: Estonia recorded a Current Account deficit of 0.20 percent of the country&#39;s
+    Gross Domestic Product in 2025. This page provides - Estonia Current Account to
+    GDP - actual values, historical data, fo
+  te_period: in 2025
+  te_source_name: Bank of Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '0.20'
+disposable-personal-income:
+  action: keep_as_gap
+  db_latest_date: ''
+  db_latest_value: null
+  db_source: eurostat
+  te_size: 257469
+  te_status: no_te_page
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+employed-persons:
+  action: verified_ok
+  db_latest_date: '2026-03-31'
+  db_latest_value: 686.3
+  db_series_id: STATEE/TT0130
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: 'The number of employed persons in Estonia decreased to 686.30 Thousand
+    in the first quarter of 2026 from 688.60 Thousand in the fourth quarter of 2025.
+    This page provides - Estonia Employed Persons - '
+  te_period: in the first quarter of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: Thousand
+  te_value: '686.30'
+employment-rate:
+  action: minor_value_drift_ok
+  db_latest_date: '2026-03-31'
+  db_latest_value: 81.4
+  db_series_id: STATEE/TT0160/EMPRATE
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_drift:19.7%
+  te_meta: Employment Rate in Estonia decreased to 68 percent in the first quarter
+    of 2026 from 68.10 percent in the fourth quarter of 2025. This page provides -
+    Estonia Employment Rate- actual values, historica
+  te_period: in the first quarter of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '68'
+energy-inflation:
+  action: keep_as_gap
+  db_latest_date: '2026-04-30'
+  db_latest_value: 107.51
+  db_source: eurostat
+  te_size: 257299
+  te_status: no_te_page
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+exports:
+  action: unit_difference_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 32.62
+  db_series_id: STATEE/RAA0061/K7
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:98.2%
+  te_meta: Exports in Estonia increased to 1849 EUR Million in March from 1448 EUR
+    Million in February of 2026. This page provides - Estonia Exports - actual values,
+    historical data, forecast, chart, statistics,
+  te_period: in February of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '1849'
+food-inflation:
+  action: acceptable_with_note_eurostat_upstream
+  db_latest_date: '2026-04-30'
+  db_latest_value: 103.42
+  db_series_id: ei_cphi_m:CP-HIF:HICP2025
+  db_source: eurostat
+  expected_internal_source: stat_ee
+  status:
+  - source_mismatch:eurostat->stat_ee
+  - value_mismatch:3877.7%
+  te_meta: Cost of food in Estonia increased 2.60 percent in April of 2026 over the
+    same month in the previous year. This page provides the latest reported value
+    for - Estonia Food Inflation - plus previous rele
+  te_period: in April of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '2.60'
+gdp:
+  action: verified_ok
+  db_latest_date: '2024-12-31'
+  db_latest_value: 43.13
+  db_series_id: NY.GDP.MKTP.CD
+  db_source: worldbank
+  expected_internal_source: worldbank
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Gross Domestic Product (GDP) in Estonia was worth 42.76 billion US
+    dollars in 2024, according to official data from the World Bank. The GDP value
+    of Estonia represents 0.04 percent of the world ec
+  te_period: in 2024
+  te_source_name: World Bank
+  te_status: ok
+  te_unit: billion
+  te_value: '42.76'
+gdp-per-capita:
+  action: verified_ok
+  db_latest_date: '2024-12-31'
+  db_latest_value: 20078.14
+  db_series_id: NY.GDP.PCAP.KD
+  db_source: worldbank
+  expected_internal_source: worldbank
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Gross Domestic Product per capita in Estonia was last recorded at 20046.03
+    US dollars in 2024. The GDP per Capita in Estonia is equivalent to 159 percent
+    of the world&#39;s average. This page prov
+  te_period: in 2024
+  te_source_name: World Bank
+  te_status: ok
+  te_unit: null
+  te_value: '20046.03'
+gdp-per-capita-ppp:
+  action: verified_ok
+  db_latest_date: '2024-12-31'
+  db_latest_value: 41189.67
+  db_series_id: NY.GDP.PCAP.PP.KD
+  db_source: worldbank
+  expected_internal_source: worldbank
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Gross Domestic Product per capita in Estonia was last recorded at 41546.12
+    US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per
+    Capita, in Estonia, when adjusted by Purc
+  te_period: in 2024
+  te_source_name: World Bank
+  te_status: ok
+  te_unit: null
+  te_value: '41546.12'
+gdp-real:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-03-31'
+  db_latest_value: 5.25
+  db_series_id: STATEE/RAA0012
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:650.0%
+  te_meta: The Gross Domestic Product (GDP) in Estonia expanded 0.70 percent in the
+    fourth quarter of 2025 over the same quarter of the previous year. This page provides
+    - Estonia GDP Annual Growth Rate - actual
+  te_period: in the fourth quarter of 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '0.70'
+government-debt:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 24.1
+  db_series_id: gov_10dd_edpt1:GD
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Estonia recorded a Government Debt to GDP of 24.10 percent of the country&#39;s
+    Gross Domestic Product in 2025. This page provides - Estonia Government Debt To
+    GDP - actual values, historical data, fo
+  te_period: in 2025
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: percent
+  te_value: '24.10'
+government-debt-total:
+  action: unit_difference_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 10.04
+  db_series_id: gov_10dd_edpt1:GD:MIO_EUR
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_mismatch:58.3%
+  te_meta: Estonia recorded a Government Debt to GDP of 24.10 percent of the country&#39;s
+    Gross Domestic Product in 2025. This page provides - Estonia Government Debt To
+    GDP - actual values, historical data, fo
+  te_period: in 2025
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: percent
+  te_value: '24.10'
+government-spending:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 1741
+  db_series_id: STATEE/RAA0061/K2
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Government Spending in Estonia increased to 1741 EUR Million in the fourth
+    quarter of 2025 from 1451.50 EUR Million in the third quarter of 2025. This page
+    provides - Estonia Government Spending - act
+  te_period: in the fourth quarter of 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '1741'
+government-spending-eur:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 1741
+  db_series_id: STATEE/RAA0061/K2
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Government Spending in Estonia increased to 1741 EUR Million in the fourth
+    quarter of 2025 from 1451.50 EUR Million in the third quarter of 2025. This page
+    provides - Estonia Government Spending - act
+  te_period: in the fourth quarter of 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '1741'
+gross-fixed-capital-formation:
+  action: unit_difference_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 2.61
+  db_series_id: STATEE/RAA0061/K4
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:99.9%
+  te_meta: 'Gross Fixed Capital Formation in Estonia increased to 2273.60 EUR Million
+    in the fourth quarter of 2025 from 1775.30 EUR Million in the third quarter of
+    2025. This page provides - Estonia Gross Fixed '
+  te_period: in the fourth quarter of 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '2273.60'
+hospital-beds:
+  action: verified_ok
+  db_latest_date: '2023-12-31'
+  db_latest_value: 4.12
+  db_series_id: EE:hospital-beds
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Hospital Beds in Estonia decreased to 4.12 per 1000 people in 2023 from
+    4.19 per 1000 people in 2022. This page includes a chart with historical data
+    for Estonia Hospital Beds.
+  te_period: in 2023
+  te_source_name: OECD
+  te_status: ok
+  te_unit: null
+  te_value: '4.12'
+house-price-index:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 221.27
+  db_series_id: prc_hpi_q:INX
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Housing Index in Estonia decreased to 221.27 points in the fourth quarter
+    of 2025 from 221.98 points in the third quarter of 2025. This page provides -
+    Estonia House Price Index - actual values, histo
+  te_period: in the fourth quarter of 2025
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: points
+  te_value: '221.27'
+imports:
+  action: unit_difference_value_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 6342.9
+  db_series_id: STATEE/RAA0061/K10
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:204.5%
+  te_meta: Imports in Estonia increased to 2083 EUR Million in March from 1888 EUR
+    Million in February of 2026. This page provides - Estonia Imports - actual values,
+    historical data, forecast, chart, statistics,
+  te_period: in February of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: EUR
+  te_value: '2083'
+industrial-production:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-03-31'
+  db_latest_value: 89.5
+  db_series_id: STATEE/TO0053
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:2787.1%
+  te_meta: 'Industrial Production in Estonia decreased 3.10 percent in March of 2026
+    over the same month in the previous year. This page provides - Estonia Industrial
+    Production - actual values, historical data, '
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '3.10'
+inflation-cpi:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-04-30'
+  db_latest_value: 102.65
+  db_series_id: STATEE/IA002.px
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:2919.1%
+  te_meta: Inflation Rate in Estonia decreased to 3.40 percent in April from 3.60
+    percent in March of 2026. This page provides - Estonia Inflation Rate - actual
+    values, historical data, forecast, chart, statisti
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '3.40'
+interest-rate:
+  action: minor_value_drift_ok
+  db_latest_date: '2025-06-11'
+  db_latest_value: 2.15
+  db_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+  db_source: ecb
+  expected_internal_source: ecb
+  status:
+  - source_ok
+  - value_drift:10.4%
+  te_meta: The benchmark interest rate in Estonia was last recorded at 2.40 percent.
+    This page provides - Estonia Interest Rate - actual values, historical data, forecast,
+    chart, statistics, economic calendar an
+  te_period: null
+  te_source_name: European Central Bank
+  te_status: ok
+  te_unit: percent
+  te_value: '2.40'
+job-vacancies:
+  action: acceptable_with_note_eurostat_upstream
+  db_latest_date: '2025-12-31'
+  db_latest_value: 1.6
+  db_series_id: jvs_q_nace2:JVR
+  db_source: eurostat
+  expected_internal_source: stat_ee
+  status:
+  - source_mismatch:eurostat->stat_ee
+  - value_mismatch:69.2%
+  te_meta: Job Vacancies in Estonia decreased to 5.20 Thousand in April from 5.39
+    Thousand in March of 2026. This page provides - Estonia Job Vacancies - actual
+    values, historical data, forecast, chart, statisti
+  te_period: in March of 2026
+  te_source_name: Estonian Unemployment Insurance Fund
+  te_status: ok
+  te_unit: Thousand
+  te_value: '5.20'
+labor-force-participation-rate:
+  action: verified_ok
+  db_latest_date: '2026-03-31'
+  db_latest_value: 73.2
+  db_series_id: STATEE/TT0160/LABOUR_RATE
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Labor Force Participation Rate in Estonia increased to 73.20 percent in
+    the first quarter of 2026 from 72.70 percent in the fourth quarter of 2025. This
+    page provides - Estonia Labor Force Participati
+  te_period: in the first quarter of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '73.20'
+labour-costs:
+  action: acceptable_with_note_eurostat_upstream
+  db_latest_date: '2025-12-31'
+  db_latest_value: 151.4
+  db_series_id: lc_lci_r2_q:I20
+  db_source: eurostat
+  expected_internal_source: ecb
+  status:
+  - source_mismatch:eurostat->ecb
+  - value_ok
+  te_meta: 'Labour Costs in Estonia increased to 153.56 points in the fourth quarter
+    of 2025 from 149.66 points in the third quarter of 2025. This page provides -
+    Estonia Labour Costs - actual values, historical '
+  te_period: in the fourth quarter of 2025
+  te_source_name: European Central Bank
+  te_status: ok
+  te_unit: points
+  te_value: '153.56'
+long-term-unemployment-rate:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 1.7
+  db_series_id: une_ltu_q:LTU
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_ok
+  te_meta: 'Long Term Unemployment Rate in Estonia decreased to 1.70 percent in the
+    fourth quarter of 2025 from 1.80 percent in the third quarter of 2025. This page
+    provides - Estonia Long Term Unemployment Rate '
+  te_period: in the fourth quarter of 2025
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: percent
+  te_value: '1.70'
+manufacturing-production:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-03-31'
+  db_latest_value: 92.1
+  db_series_id: STATEE/TO0053/C
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:7575.0%
+  te_meta: 'Manufacturing Production in Estonia decreased 1.20 percent in March of
+    2026 over the same month in the previous year. This page provides - Estonia Manufacturing
+    Production - actual values, historical '
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '1.20'
+medical-doctors:
+  action: keep_as_gap
+  db_latest_date: '2021-12-31'
+  db_latest_value: 3.5
+  db_source: curated
+  te_size: 257282
+  te_status: no_te_page
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+minimum-wages:
+  action: verified_ok
+  db_latest_date: '2026-01-01'
+  db_latest_value: 886
+  db_series_id: earn_mw_cur:EE:EUR
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Minimum Wages in Estonia remained unchanged at 886 EUR/Month in the second
+    quarter of 2026 from 886 EUR/Month in the fourth quarter of 2025. This page provides
+    - Estonia Minimum Wages - actual values,
+  te_period: in the second quarter of 2026
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: EUR
+  te_value: '886'
+mining-production:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-03-31'
+  db_latest_value: 84.7
+  db_series_id: STATEE/TO0053/B
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:1335.6%
+  te_meta: Mining production in Estonia increased 5.90 percent in March of 2026 over
+    the same month in the previous year. This page provides - Estonia Mining Production-
+    actual values, historical data, forecast,
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '5.90'
+nurses:
+  action: keep_as_gap
+  db_latest_date: '2021-12-31'
+  db_latest_value: 5.8
+  db_source: curated
+  te_size: 257129
+  te_status: no_te_page
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+personal-income-tax-rate:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 22
+  db_series_id: EE:personal-income-tax-rate
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Personal Income Tax Rate in Estonia stands at 22 percent. This page
+    provides - Estonia Personal Income Tax Rate - actual values, historical data,
+    forecast, chart, statistics, economic calendar and
+  te_period: null
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: percent
+  te_value: '22'
+population:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 1.3607
+  db_series_id: STATEE/RV021
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The total population in Estonia was estimated at 1.4 million people in
+    2025, according to the latest census figures and projections from Trading Economics.
+    This page provides - Estonia Population - ac
+  te_period: in 2025
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: million
+  te_value: '1.4'
+ppi:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-03-31'
+  db_latest_value: 124
+  db_series_id: STATEE/IA039
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:22.5%
+  te_meta: Producer Prices in Estonia decreased to 159.92 points in March from 165.87
+    points in February of 2026. This page provides the latest reported value for -
+    Estonia Producer Prices - plus previous releas
+  te_period: in February of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: points
+  te_value: '159.92'
+productivity:
+  action: minor_value_drift_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 98.64
+  db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_drift:16.4%
+  te_meta: Productivity in Estonia increased to 118.03 points in the fourth quarter
+    of 2025 from 116.30 points in the third quarter of 2025. This page provides -
+    Estonia Productivity- actual values, historical d
+  te_period: in the fourth quarter of 2025
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: points
+  te_value: '118.03'
+retail-sales:
+  action: frontend_only_yoy_mom
+  db_latest_date: '2026-03-31'
+  db_latest_value: 98.8
+  db_series_id: STATEE/KM00338
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_mismatch:1331.9%
+  te_meta: Retail Sales in Estonia increased 6.90 percent in March of 2026 over the
+    same month in the previous year. This page provides - Estonia Retail Sales YoY
+    - actual values, historical data, forecast, char
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '6.90'
+retirement-age-men:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 64.75
+  db_series_id: EE:retirement-age-men
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Retirement Age Men in Estonia remained unchanged at 64.75 Years in 2026
+    from 64.75 Years in 2025. This page provides - Estonia Retirement Age Men - actual
+    values, historical data, forecast, chart, sta
+  te_period: in 2026
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: Years
+  te_value: '64.75'
+retirement-age-women:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 64.75
+  db_series_id: EE:retirement-age-women
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Retirement Age Women in Estonia remained unchanged at 64.75 Years in 2026
+    from 64.75 Years in 2025. This page provides - Estonia Retirement Age Women -
+    actual values, historical data, forecast, chart,
+  te_period: in 2026
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: Years
+  te_value: '64.75'
+sales-tax-rate:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 24
+  db_series_id: EE:sales-tax-rate
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Sales Tax Rate in Estonia stands at 24 percent. This page provides
+    - Estonia Sales Tax Rate | VAT - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_period: null
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: percent
+  te_value: '24'
+services-inflation:
+  action: keep_as_gap
+  db_latest_date: '2026-04-30'
+  db_latest_value: 101.53
+  db_source: eurostat
+  te_size: 257333
+  te_status: no_te_page
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+services-sentiment:
+  action: keep_as_gap
+  db_latest_date: '2026-04-30'
+  db_latest_value: -4.9
+  db_source: eurostat
+  te_size: 257333
+  te_status: no_te_page
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+social-security-rate:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 37.4
+  db_series_id: EE:social-security-rate
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Social Security Rate in Estonia stands at 37.40 percent. This page
+    provides - Estonia Social Security Rate - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news
+  te_period: null
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: percent
+  te_value: '37.40'
+social-security-rate-companies:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 33.8
+  db_series_id: EE:social-security-rate-companies
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Social Security Rate For Companies in Estonia stands at 33.80 percent.
+    This page provides - Estonia Social Security Rate For Companies - actual values,
+    historical data, forecast, chart, statistics
+  te_period: null
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: percent
+  te_value: '33.80'
+social-security-rate-employees:
+  action: verified_ok
+  db_latest_date: '2026-12-31'
+  db_latest_value: 3.6
+  db_series_id: EE:social-security-rate-employees
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: The Social Security Rate For Employees in Estonia stands at 3.60 percent.
+    This page provides - Estonia Social Security Rate For Employees - actual values,
+    historical data, forecast, chart, statistics,
+  te_period: null
+  te_source_name: Estonian Tax and Customs Board
+  te_status: ok
+  te_unit: percent
+  te_value: '3.60'
+terrorism-index:
+  action: verified_ok
+  db_latest_date: '2025-12-31'
+  db_latest_value: 0
+  db_series_id: EE:terrorism-index
+  db_source: curated
+  expected_internal_source: curated
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Terrorism Index in Estonia remained unchanged at 0 Points in 2025 from
+    0 Points in 2024. Estonia Terrorism Index - values, historical data, forecasts
+    and news - updated on May of 2026.
+  te_period: in 2025
+  te_source_name: Institute for Economics and Peace
+  te_status: ok
+  te_unit: Points
+  te_value: '0'
+unemployed-persons:
+  action: acceptable_with_note_eurostat_upstream
+  db_latest_date: '2026-03-31'
+  db_latest_value: 52
+  db_series_id: une_rt_m:TOTAL:THS_PER
+  db_source: eurostat
+  expected_internal_source: stat_ee
+  status:
+  - source_mismatch:eurostat->stat_ee
+  - value_drift:17.3%
+  te_meta: The number of unemployed persons in Estonia decreased to 44.32 Thousand
+    in March of 2026 from 46.07 Thousand in February of 2026. This page provides -
+    Estonia Unemployed Persons - actual values, histo
+  te_period: in March of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: Thousand
+  te_value: '44.32'
+unemployment:
+  action: verified_ok
+  db_latest_date: '2026-03-31'
+  db_latest_value: 7.1
+  db_series_id: STATEE/TT0160
+  db_source: stat_ee
+  expected_internal_source: stat_ee
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Unemployment Rate in Estonia increased to 7.10 percent in the first quarter
+    of 2026 from 6.40 percent in the fourth quarter of 2025. This page provides -
+    Estonia Unemployment Rate - actual values, his
+  te_period: in the first quarter of 2026
+  te_source_name: Statistics Estonia
+  te_status: ok
+  te_unit: percent
+  te_value: '7.10'
+youth-unemployment-rate:
+  action: verified_ok
+  db_latest_date: '2026-03-31'
+  db_latest_value: 21.7
+  db_series_id: une_rt_m:Y_LT25
+  db_source: eurostat
+  expected_internal_source: eurostat
+  status:
+  - source_ok
+  - value_ok
+  te_meta: Youth Unemployment Rate in Estonia increased to 21.70 percent in March
+    from 21.60 percent in February of 2026. This page provides the latest reported
+    value for - Estonia Youth Unemployment Rate - plus
+  te_period: in February of 2026
+  te_source_name: EUROSTAT
+  te_status: ok
+  te_unit: percent
+  te_value: '21.70'

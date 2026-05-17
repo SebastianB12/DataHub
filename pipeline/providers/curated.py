@@ -54,15 +54,16 @@ class CuratedProvider(BaseProvider):
                 if key == "country" or not isinstance(entry, dict):
                     continue
                 try:
+                    src = entry.get("source") or "curated"
                     points.append(
                         DataPoint(
                             indicator=key,
                             country=country,
                             date=_parse_date(entry["date"]),
                             value=float(entry["value"]),
-                            source="curated",
+                            source=src,
                             unit=entry.get("unit") or "",
-                            series_id=f"{country}:{key}",
+                            series_id=entry.get("series_id") or f"{country}:{key}",
                             adjustment="",
                         )
                     )

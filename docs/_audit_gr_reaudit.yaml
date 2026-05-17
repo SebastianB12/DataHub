@@ -1,0 +1,646 @@
+country: GR
+audit_date: '2026-05-17'
+summary:
+  total_slugs: 67
+  ok: 34
+  fixed: 8
+  honest_label_documented: 18
+  frontend_only: 0
+  te_no_source: 7
+slugs:
+  budget-deficit:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '1.70'
+    db_source: eurostat
+    db_series_id: gov_10dd_edpt1:B9
+    te_url: https://tradingeconomics.com/greece/budget-deficit
+    note: TE=ELSTAT, we=Eurostat gov_10dd_edpt1 (already documented in truth.yaml).
+    status: honest_label_documented
+  business-confidence:
+    te_source_text: European Commission
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '105.70'
+    db_source: eurostat
+    db_series_id: ei_bsin_m_r2:BCI
+    te_url: https://tradingeconomics.com/greece/business-confidence
+    status: ok
+  capacity-utilization:
+    te_source_text: European Commission
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '77.20'
+    db_source: eurostat
+    db_series_id: ei_bsin_q_r2:BS-ICU-PC
+    te_url: https://tradingeconomics.com/greece/capacity-utilization
+    status: ok
+  changes-in-inventories:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2025'
+    db_source: eurostat
+    db_series_id: namq_10_gdp:P52
+    te_url: https://tradingeconomics.com/greece/changes-in-inventories
+    note: TE=ELSTAT, we=Eurostat namq_10_gdp P52.
+    status: honest_label_documented
+  consumer-confidence:
+    te_source_text: European Commission
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '-54.70'
+    db_source: eurostat
+    db_series_id: ei_bsco_m:BS-CSMCI
+    te_url: https://tradingeconomics.com/greece/consumer-confidence
+    status: ok
+  consumer-spending:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '37201.79'
+    db_source: eurostat
+    db_series_id: namq_10_gdp:P31_S14
+    te_url: https://tradingeconomics.com/greece/consumer-spending
+    note: TE=ELSTAT, we=Eurostat namq_10_gdp P31_S14.
+    status: honest_label_documented
+  core-cpi:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2026'
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HI00XEF
+    te_url: https://tradingeconomics.com/greece/core-cpi
+    note: TE=ELSTAT, we=Eurostat ei_cphi_m CP-HI00XEF (HICP excl. energy & food).
+    status: honest_label_documented
+  corporate-tax-rate:
+    te_source_text: GSIS, Greece
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '22'
+    db_source: curated
+    db_series_id: GR:corporate-tax-rate
+    te_url: https://tradingeconomics.com/greece/corporate-tax-rate
+    status: ok
+  corruption-index:
+    te_source_text: Transparency International
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '100'
+    db_source: curated
+    db_series_id: GR:corruption-index
+    te_url: https://tradingeconomics.com/greece/corruption-index
+    fix: curated value 49->50 (2025 TI CPI)
+    status: fixed
+  corruption-rank:
+    te_source_text: Transparency International
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '180'
+    db_source: curated
+    db_series_id: GR:corruption-rank
+    te_url: https://tradingeconomics.com/greece/corruption-rank
+    fix: curated value 59->56 (2025 TI CPI)
+    status: fixed
+  cpi-clothing:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '132.64'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114839/G03
+    te_url: https://tradingeconomics.com/greece/cpi-clothing
+    status: ok
+  cpi-education:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '112.55'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114839/G10
+    te_url: https://tradingeconomics.com/greece/cpi-education
+    status: ok
+  cpi-food:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '138.07'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114839/G01
+    te_url: https://tradingeconomics.com/greece/cpi-food
+    status: ok
+  cpi-housing-utilities:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '139.52'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114839/G04
+    te_url: https://tradingeconomics.com/greece/cpi-housing-utilities
+    status: ok
+  cpi-recreation-and-culture:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '112.94'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114839/G09
+    te_url: https://tradingeconomics.com/greece/cpi-recreation-and-culture
+    status: ok
+  cpi-transportation:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '135.73'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114839/G07
+    te_url: https://tradingeconomics.com/greece/cpi-transportation
+    status: ok
+  credit-rating:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: curated
+    db_series_id: GR:credit-rating
+    te_url: https://tradingeconomics.com/greece/credit-rating
+    note: TE page has no description; kept curated (60 = Investment Grade).
+    status: te_no_source
+  current-account:
+    te_source_text: Bank of Greece
+    te_source_url: null
+    te_provider_mapped: bog
+    te_value_latest: ''
+    db_source: eurostat
+    db_series_id: bop_c6_q:CA
+    te_url: https://tradingeconomics.com/greece/current-account
+    note: TE=Bank of Greece, we=Eurostat bop_c6_q (already documented).
+    status: honest_label_documented
+  current-account-to-gdp:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '5.70'
+    db_source: eurostat
+    db_series_id: bop_gdp6_q:CA
+    te_url: https://tradingeconomics.com/greece/current-account-to-gdp
+    status: ok
+  disposable-personal-income:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: eurostat
+    db_series_id: nasq_10_nf_tr:B6G
+    te_url: https://tradingeconomics.com/greece/disposable-personal-income
+    note: TE page empty; kept eurostat nasq_10_nf_tr B6G.
+    status: te_no_source
+  employed-persons:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '4412.40'
+    db_source: elstat
+    db_series_id: ELSTAT/SJO01/115983
+    te_url: https://tradingeconomics.com/greece/employed-persons
+    status: ok
+  employment-rate:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '91.70'
+    db_source: eurostat
+    db_series_id: lfsa_ergan:Y15-64
+    te_url: https://tradingeconomics.com/greece/employment-rate
+    note: 'TE=ELSTAT, we=Eurostat lfsa_ergan Y15-64 — note: different age cohort vs TE''s 15-74.'
+    status: honest_label_documented
+  energy-inflation:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HIE:HICP2025
+    te_url: https://tradingeconomics.com/greece/energy-inflation
+    note: TE page empty; kept eurostat ei_cphi_m CP-HIE.
+    status: te_no_source
+  exports:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '5480.60'
+    db_source: elstat
+    db_series_id: ELSTAT/SFC02/115720
+    te_url: https://tradingeconomics.com/greece/exports
+    status: ok
+  food-inflation:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2026'
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HIF:HICP2025
+    te_url: https://tradingeconomics.com/greece/food-inflation
+    note: TE=ELSTAT, we=Eurostat ei_cphi_m CP-HIF YoY.
+    status: honest_label_documented
+  gdp:
+    te_source_text: World Bank
+    te_source_url: null
+    te_provider_mapped: worldbank
+    te_value_latest: ''
+    db_source: worldbank
+    db_series_id: NY.GDP.MKTP.CD
+    te_url: https://tradingeconomics.com/greece/gdp
+    status: ok
+  gdp-per-capita:
+    te_source_text: World Bank
+    te_source_url: null
+    te_provider_mapped: worldbank
+    te_value_latest: '21654.34'
+    db_source: worldbank
+    db_series_id: NY.GDP.PCAP.KD
+    te_url: https://tradingeconomics.com/greece/gdp-per-capita
+    status: ok
+  gdp-per-capita-ppp:
+    te_source_text: World Bank
+    te_source_url: null
+    te_provider_mapped: worldbank
+    te_value_latest: '37752.63'
+    db_source: worldbank
+    db_series_id: NY.GDP.PCAP.PP.KD
+    te_url: https://tradingeconomics.com/greece/gdp-per-capita-ppp
+    status: ok
+  gdp-real:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '52589.60'
+    db_source: elstat
+    db_series_id: ELSTAT/SEL84/115384
+    te_url: https://tradingeconomics.com/greece/gdp-real
+    status: ok
+  government-debt:
+    te_source_text: Ministry of Economy and Finance
+    te_source_url: null
+    te_provider_mapped: curated_or_bog
+    te_value_latest: '406181.06'
+    db_source: eurostat
+    db_series_id: gov_10dd_edpt1:GD
+    te_url: https://tradingeconomics.com/greece/government-debt
+    note: TE=Ministry of Finance, we=Eurostat gov_10dd_edpt1 (general govt).
+    status: honest_label_documented
+  government-debt-total:
+    te_source_text: Ministry of Economy and Finance
+    te_source_url: null
+    te_provider_mapped: curated_or_bog
+    te_value_latest: '406181.06'
+    db_source: eurostat
+    db_series_id: gov_10dd_edpt1:GD:MIO_EUR
+    te_url: https://tradingeconomics.com/greece/government-debt-total
+    note: 'TE=Ministry of Finance, we=Eurostat (different scope: general vs central).'
+    status: honest_label_documented
+  government-spending:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '10652.10'
+    db_source: eurostat
+    db_series_id: namq_10_gdp:P3_S13
+    te_url: https://tradingeconomics.com/greece/government-spending
+    note: TE=ELSTAT, we=Eurostat namq_10_gdp P3_S13.
+    status: honest_label_documented
+  government-spending-eur:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '10652.10'
+    db_source: eurostat
+    db_series_id: namq_10_gdp:P3_S13
+    te_url: https://tradingeconomics.com/greece/government-spending-eur
+    note: TE=ELSTAT, we=Eurostat namq_10_gdp P3_S13.
+    status: honest_label_documented
+  gross-fixed-capital-formation:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '9866.90'
+    db_source: eurostat
+    db_series_id: namq_10_gdp:P51G
+    te_url: https://tradingeconomics.com/greece/gross-fixed-capital-formation
+    note: TE=ELSTAT, we=Eurostat namq_10_gdp P51G.
+    status: honest_label_documented
+  hospital-beds:
+    te_source_text: OECD
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '4.24'
+    db_source: curated
+    db_series_id: GR:hospital-beds
+    te_url: https://tradingeconomics.com/greece/hospital-beds
+    fix: curated value 4.21 (2022)->4.24 (2023)
+    status: fixed
+  house-price-index:
+    te_source_text: Bank of Greece
+    te_source_url: null
+    te_provider_mapped: bog
+    te_value_latest: '110.50'
+    db_source: eurostat
+    db_series_id: prc_hpi_q:INX
+    te_url: https://tradingeconomics.com/greece/house-price-index
+    note: TE=Bank of Greece, we=Eurostat prc_hpi_q (already documented).
+    status: honest_label_documented
+  imports:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '8953.80'
+    db_source: elstat
+    db_series_id: ELSTAT/SFC02/115720
+    te_url: https://tradingeconomics.com/greece/imports
+    status: ok
+  industrial-production:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: ''
+    db_source: elstat
+    db_series_id: ELSTAT/DKT21/114474
+    te_url: https://tradingeconomics.com/greece/industrial-production
+    status: ok
+  inflation-cpi:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '5.4'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT87/114838
+    te_url: https://tradingeconomics.com/greece/inflation-cpi
+    status: ok
+  interest-rate:
+    te_source_text: European Central Bank
+    te_source_url: null
+    te_provider_mapped: ecb
+    te_value_latest: '4.75'
+    db_source: ecb
+    db_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+    te_url: https://tradingeconomics.com/greece/interest-rate
+    status: ok
+  job-vacancies:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '31059'
+    db_source: eurostat
+    db_series_id: jvs_q_nace2:JVR
+    te_url: https://tradingeconomics.com/greece/job-vacancies
+    note: TE=ELSTAT, we=Eurostat jvs_q_nace2.
+    status: honest_label_documented
+  labor-force-participation-rate:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '52.80'
+    db_source: eurostat
+    db_series_id: lfsi_emp_q:ACT
+    te_url: https://tradingeconomics.com/greece/labor-force-participation-rate
+    note: TE=ELSTAT, we=Eurostat lfsi_emp_q ACT 15-64 — different age cohort vs TE 15+.
+    status: honest_label_documented
+  labour-costs:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '118.26'
+    db_source: eurostat
+    db_series_id: lc_lci_r2_q:I20
+    te_url: https://tradingeconomics.com/greece/labour-costs
+    status: ok
+  long-term-unemployment-rate:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '4.80'
+    db_source: eurostat
+    db_series_id: une_ltu_q:LTU
+    te_url: https://tradingeconomics.com/greece/long-term-unemployment-rate
+    status: ok
+  manufacturing-production:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2026'
+    db_source: eurostat
+    db_series_id: sts_inpr_m:C:I21
+    te_url: https://tradingeconomics.com/greece/manufacturing-production
+    note: TE=ELSTAT, we=Eurostat sts_inpr_m C I21.
+    status: honest_label_documented
+  medical-doctors:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: curated
+    db_series_id: GR:medical-doctors
+    te_url: https://tradingeconomics.com/greece/medical-doctors
+    note: TE page empty; kept curated (6.30 per 1000, 2021 OECD).
+    status: te_no_source
+  minimum-wages:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '1027'
+    db_source: eurostat
+    db_series_id: earn_mw_cur:EL:EUR
+    te_url: https://tradingeconomics.com/greece/minimum-wages
+    fix: Switched curated->eurostat earn_mw_cur (geo=EL, currency=EUR); new latest 1027 EUR/Month matches TE.
+    status: fixed
+  mining-production:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2026'
+    db_source: eurostat
+    db_series_id: sts_inpr_m:B:I21
+    te_url: https://tradingeconomics.com/greece/mining-production
+    note: TE=ELSTAT, we=Eurostat sts_inpr_m B I21.
+    status: honest_label_documented
+  nurses:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: curated
+    db_series_id: GR:nurses
+    te_url: https://tradingeconomics.com/greece/nurses
+    note: TE page empty; kept curated (3.59 per 1000, 2021 OECD).
+    status: te_no_source
+  personal-income-tax-rate:
+    te_source_text: GSIS, Greece
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '44'
+    db_source: curated
+    db_series_id: GR:personal-income-tax-rate
+    te_url: https://tradingeconomics.com/greece/personal-income-tax-rate
+    status: ok
+  population:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '10.4'
+    db_source: eurostat
+    db_series_id: demo_pjan:TOTAL
+    te_url: https://tradingeconomics.com/greece/population
+    status: ok
+  ppi:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '136.25'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT15/587776
+    te_url: https://tradingeconomics.com/greece/ppi
+    status: ok
+  productivity:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '99.60'
+    db_source: eurostat
+    db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+    te_url: https://tradingeconomics.com/greece/productivity
+    status: ok
+  retail-sales:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2026'
+    db_source: elstat
+    db_series_id: ELSTAT/DKT39/500036
+    te_url: https://tradingeconomics.com/greece/retail-sales
+    status: ok
+  retirement-age-men:
+    te_source_text: Hellenic Ministry of Labour, Social Insurance and Social Solidarity
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '67'
+    db_source: curated
+    db_series_id: GR:retirement-age-men
+    te_url: https://tradingeconomics.com/greece/retirement-age-men
+    status: ok
+  retirement-age-women:
+    te_source_text: Hellenic Ministry of Labour, Social Insurance and Social Solidarity
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '67'
+    db_source: curated
+    db_series_id: GR:retirement-age-women
+    te_url: https://tradingeconomics.com/greece/retirement-age-women
+    status: ok
+  sales-tax-rate:
+    te_source_text: GSIS, Greece
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '24'
+    db_source: curated
+    db_series_id: GR:sales-tax-rate
+    te_url: https://tradingeconomics.com/greece/sales-tax-rate
+    status: ok
+  services-inflation:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HIS:HICP2025
+    te_url: https://tradingeconomics.com/greece/services-inflation
+    note: TE page empty; kept eurostat ei_cphi_m CP-HIS.
+    status: te_no_source
+  services-sentiment:
+    te_source_text: ''
+    te_source_url: null
+    te_provider_mapped: ''
+    te_value_latest: ''
+    db_source: eurostat
+    db_series_id: ei_bsse_m_r2:SCI
+    te_url: https://tradingeconomics.com/greece/services-sentiment
+    note: TE page empty; kept eurostat ei_bsse_m_r2 SCI.
+    status: te_no_source
+  social-security-rate:
+    te_source_text: Hellenic Ministry of Labour, Social Insurance and Social Solidarity
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '35.16'
+    db_source: curated
+    db_series_id: GR:social-security-rate
+    te_url: https://tradingeconomics.com/greece/social-security-rate
+    fix: curated value 36.16->35.16
+    status: fixed
+  social-security-rate-companies:
+    te_source_text: Hellenic Ministry of Labour, Social Insurance and Social Solidarity
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '21.79'
+    db_source: curated
+    db_series_id: GR:social-security-rate-companies
+    te_url: https://tradingeconomics.com/greece/social-security-rate-companies
+    fix: curated value 22.29->21.79
+    status: fixed
+  social-security-rate-employees:
+    te_source_text: Hellenic Ministry of Labour, Social Insurance and Social Solidarity
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '13.37'
+    db_source: curated
+    db_series_id: GR:social-security-rate-employees
+    te_url: https://tradingeconomics.com/greece/social-security-rate-employees
+    fix: curated value 13.87->13.37
+    status: fixed
+  terrorism-index:
+    te_source_text: Institute for Economics and Peace
+    te_source_url: null
+    te_provider_mapped: curated
+    te_value_latest: '2.79'
+    db_source: curated
+    db_series_id: GR:terrorism-index
+    te_url: https://tradingeconomics.com/greece/terrorism-index
+    fix: curated value 4.5->2.79 (2025 IEP GTI)
+    status: fixed
+  trade-balance:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '2026'
+    db_source: elstat
+    db_series_id: ELSTAT/SFC02/115720
+    te_url: https://tradingeconomics.com/greece/trade-balance
+    status: ok
+  unemployed-persons:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '436.10'
+    db_source: eurostat
+    db_series_id: une_rt_m:TOTAL:THS_PER
+    te_url: https://tradingeconomics.com/greece/unemployed-persons
+    note: TE=ELSTAT, we=Eurostat une_rt_m TOTAL THS_PER.
+    status: honest_label_documented
+  unemployment:
+    te_source_text: National Statistical Service of Greece
+    te_source_url: null
+    te_provider_mapped: elstat
+    te_value_latest: '9'
+    db_source: elstat
+    db_series_id: ELSTAT/SJO02/116021
+    te_url: https://tradingeconomics.com/greece/unemployment
+    status: ok
+  youth-unemployment-rate:
+    te_source_text: EUROSTAT
+    te_source_url: null
+    te_provider_mapped: eurostat
+    te_value_latest: '21'
+    db_source: eurostat
+    db_series_id: une_rt_m:Y_LT25
+    te_url: https://tradingeconomics.com/greece/youth-unemployment-rate
+    status: ok

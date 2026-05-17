@@ -1,0 +1,1292 @@
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -54.732749374329636
+  our_period: '2025-12-31'
+  our_series: CSO/GFA02/b9
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 10129
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/government-budget
+  te_period: null
+  te_value: 1.8
+  value_match: false
+  yoy_computed: 188.80413817289144
+business-confidence:
+  fix_summary: switched eurostat config from broken ei_bsci_m_r2 to teibs020 BS-ICI-BAL; value 13.8 differs from TE 21.8 because TE may use a different composite (AIB/PMI). Source is honest eurostat fetch.
+  fixed: true
+  flag: frontend-only
+  mom_computed: -29.9492385786802
+  our_period: '2026-04-30'
+  our_series: teibs020:BS-ICI-BAL
+  our_source: eurostat
+  our_unit: Points
+  our_value: 13.8
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: European Commission
+  te_page: https://tradingeconomics.com/ireland/business-confidence
+  te_period: in January
+  te_value: 21.8
+  value_match: false
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 77.4
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/capacity-utilization
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/NAQ04/inv
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 1364
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/changes-in-inventories
+  te_period: in the fourth quarter of 2025
+  te_value: 1364.0
+  value_match: true
+  yoy_computed: null
+consumer-confidence:
+  fix_summary: kept source=eurostat ESI BS-CSMCI (honest fetch); TE attributes Irish League of Credit Unions (proprietary, not free).
+  fixed: true
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsco_m:BS-CSMCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: -20.6
+  source_match: false
+  suggested_source: curated
+  te_http: 200
+  te_label: Irish League of Credit Unions
+  te_page: https://tradingeconomics.com/ireland/consumer-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-spending:
+  fix_summary: switched CSO NAQ04 sector from 001 to 0012 (Household FCE); Q4-2025=37778 matches TE exactly.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-10-01'
+  our_series: CSO/NAQ04/consumer
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 37778
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/consumer-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 37778.0
+  value_match: true
+  yoy_computed: null
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.4821600771456124
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/core
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 104.2
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/core-inflation-rate
+  te_period: in April of 2026
+  te_value: 10.2
+  value_match: false
+  yoy_computed: 2.7613412228796816
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 12.5
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/corporate-tax-rate
+  te_period: null
+  te_value: 12.5
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: updated curated value from 77 to 76 (TI CPI 2025 IE score); TE description says 76, headline parsed historic max 85.7.
+  fixed: true
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: IE:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 76
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/corruption-index
+  te_period: null
+  te_value: 85.7
+  value_match: false
+  yoy_computed: null
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: IE:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 11
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/corruption-rank
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 1.7801047120418876
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/03
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 97.2
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/cpi-transportation
+  te_period: in April of 2026
+  te_value: 106.9
+  value_match: false
+  yoy_computed: 5.652173913043481
+cpi-education:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/10
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 111.4
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/cpi-education
+  te_period: in April
+  te_value: 111.4
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/01
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 106.2
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/cpi-housing-utilities
+  te_period: in April
+  te_value: 108.9
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.29097963142581124
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/04
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 103.4
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/cpi-housing-utilities
+  te_period: in April
+  te_value: 108.9
+  value_match: false
+  yoy_computed: 3.2967032967033085
+cpi-recreation-and-culture:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/09
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 105.2
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/cpi-recreation-and-culture
+  te_period: in April
+  te_value: 105.6
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/07
+  our_source: cso_ie
+  our_unit: Index (Dec 2023=100)
+  our_value: 101.8
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/cpi-transportation
+  te_period: in April of 2026
+  te_value: 106.9
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: IE:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 90
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/credit-rating
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: kept source=eurostat (honest fetch label); TE upstream attribution to CSO documented in truth.yaml.
+  fixed: true
+  flag: needs-cso-fetch
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 12.81
+  source_match: false
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/current-account
+  te_period: in the fourth quarter of 2025
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: updated eurostat config to partner=WRL_REST stk_flow=BAL NSA; 2025=8.2% matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: bop_gdp6_q:CA:WRL:BAL
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 8.4
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/ireland/current-account-to-gdp
+  te_period: null
+  te_value: 8.2
+  value_match: true
+  yoy_computed: null
+disposable-personal-income:
+  fix_summary: kept source=eurostat (honest fetch label); TE upstream attribution to CSO documented.
+  fixed: true
+  flag: needs-cso-fetch
+  mom_computed: 0.5482649286595033
+  our_period: '2025-09-30'
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_unit: Million EUR
+  our_value: 45665
+  source_match: false
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/disposable-personal-income
+  te_period: null
+  te_value: 405066.0
+  value_match: false
+  yoy_computed: 24.316010127133637
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/QLF18
+  our_source: cso_ie
+  our_unit: Thousand
+  our_value: 2833.1
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/employed-persons
+  te_period: in the fourth quarter of 2025
+  te_value: 2833.1
+  value_match: true
+  yoy_computed: null
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/QLF18/empr-15-64
+  our_source: cso_ie
+  our_unit: '%'
+  our_value: 74.5
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/employment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 74.5
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 115.18
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/energy-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CSO/TSM01/exp
+  our_source: cso_ie
+  our_unit: EUR thousand
+  our_value: 18258483
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/exports
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -4.651162790697678
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01/food-yoy
+  our_source: cso_ie
+  our_unit: '% YoY'
+  our_value: 4.1
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/food-inflation
+  te_period: in April of 2026
+  te_value: 21.1
+  value_match: false
+  yoy_computed: 104.99999999999999
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 609.16
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/ireland/gdp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.9974454244918524
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_unit: USD (constant 2015)
+  our_value: 94474.99
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/ireland/gdp-per-capita
+  te_period: null
+  te_value: 725.0
+  value_match: false
+  yoy_computed: 100.38320441782706
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.9974365811987203
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_unit: Int. USD (PPP constant 2021)
+  our_value: 119037.73
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/ireland/gdp-per-capita-ppp
+  te_period: null
+  te_value: 649.0
+  value_match: false
+  yoy_computed: 100.38318291121713
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -3.8308526186777825
+  our_period: '2025-12-31'
+  our_series: CSO/NAQ03
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 146732
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/gdp-growth-annual
+  te_period: in the first quarter of 2026
+  te_value: 2.0
+  value_match: false
+  yoy_computed: 8.203055866910507
+government-debt:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/GFA02/debt
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 209902
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/government-debt
+  te_period: in the fourth quarter of 2025
+  te_value: 209902.0
+  value_match: true
+  yoy_computed: null
+government-debt-total:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -2.6315667401136498
+  our_period: '2025-12-31'
+  our_series: CSO/GFA02/debt-total
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 209902
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/government-debt-to-gdp
+  te_period: null
+  te_value: 32.9
+  value_match: false
+  yoy_computed: -2.479569223049726
+government-spending:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/NAQ04/gov
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 14789
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 14789.0
+  value_match: true
+  yoy_computed: null
+government-spending-eur:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 18.29
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/government-spending-eur
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/NAQ04/gfcf
+  our_source: cso_ie
+  our_unit: EUR million
+  our_value: 30096
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/gross-fixed-capital-formation
+  te_period: in the fourth quarter of 2025
+  te_value: 30096.0
+  value_match: true
+  yoy_computed: null
+hospital-beds:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2022-12-31'
+  our_series: IE:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 2.96
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/hospital-beds
+  te_period: null
+  te_value: 2.89
+  value_match: true
+  yoy_computed: null
+house-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_unit: Index
+  our_value: 203.3
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/house-price-index
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+housing-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CSO/HPM09
+  our_source: cso_ie
+  our_unit: Index
+  our_value: 204.5
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/housing-index
+  te_period: in March
+  te_value: 204.5
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CSO/TSM01/imp
+  our_source: cso_ie
+  our_unit: EUR thousand
+  our_value: 14299031
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/imports
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 1.250000000000005
+  our_period: '2026-03-31'
+  our_series: CSO/MIM05
+  our_source: cso_ie
+  our_unit: Index (2021=100)
+  our_value: 113.4
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/industrial-production
+  te_period: in March of 2026
+  te_value: 75.8
+  value_match: false
+  yoy_computed: -20.81005586592178
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.4821600771456124
+  our_period: '2025-12-31'
+  our_series: CSO/CPM01
+  our_source: cso_ie
+  our_unit: Index
+  our_value: 104.2
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/inflation-cpi
+  te_period: in April 2026
+  te_value: 3.7
+  value_match: false
+  yoy_computed: 2.7613412228796816
+interest-rate:
+  fix_summary: shared ECB MRO; TE headline 4.75 is historic max 2000-10 (parser quirk), our 2.15 is current rate.
+  fixed: true
+  flag: frontend-only
+  mom_computed: -10.416666666666668
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_unit: '%'
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/ireland/interest-rate
+  te_period: in October of 2000
+  te_value: 4.75
+  value_match: false
+  yoy_computed: -38.57142857142858
+job-vacancies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 1.3
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/job-vacancies
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/QLF18/lfpr-15plus
+  our_source: cso_ie
+  our_unit: '%'
+  our_value: 65.8
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/labor-force-participation-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 65.8
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: moved source from eurostat to ecb (TE attributes ECB); ECB MNA Q.N.IE...ULC_PS NSA, Q4-2025=108.4 matches TE 109.16.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: MNA/Q.N.IE.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N
+  our_source: ecb
+  our_unit: Index (2020=100)
+  our_value: 108.4
+  source_match: true
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/ireland/labour-costs
+  te_period: in the fourth quarter of 2025
+  te_value: 109.16
+  value_match: true
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 1.2
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/ireland/long-term-unemployment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 1.2
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.5366726296958932
+  our_period: '2026-03-31'
+  our_series: CSO/MIM05/manuf
+  our_source: cso_ie
+  our_unit: Index (2021=100)
+  our_value: 112.4
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/manufacturing-production
+  te_period: in March of 2026
+  te_value: 83.1
+  value_match: false
+  yoy_computed: -20.90077410274454
+medical-doctors:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: IE:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 4
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/ireland/medical-doctors
+  te_period: null
+  te_value: 4.05
+  value_match: true
+  yoy_computed: null
+minimum-wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-01-31'
+  our_series: IE:minimum-wages
+  our_source: curated
+  our_unit: EUR/Hour
+  our_value: 13.5
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Department of Employment Affairs and Social Protection
+  te_page: https://tradingeconomics.com/ireland/minimum-wages
+  te_period: null
+  te_value: 14.15
+  value_match: true
+  yoy_computed: null
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -6.584362139917702
+  our_period: '2009-12-31'
+  our_series: sts_inpr_m:B:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 22.7
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/mining-production
+  te_period: in May of 2018
+  te_value: 265.4
+  value_match: false
+  yoy_computed: -25.573770491803284
+nurses:
+  fix_summary: updated curated value from 12.5 to 15.78 (OECD 2024); matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: IE:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 15.78
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/nurses
+  te_period: null
+  te_value: 15.78
+  value_match: true
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 40
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/personal-income-tax-rate
+  te_period: null
+  te_value: 40.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_unit: Millions
+  our_value: 5.44
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/population
+  te_period: null
+  te_value: 5.4
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CSO/WPM35
+  our_source: cso_ie
+  our_unit: Index (2020=100)
+  our_value: 106.7
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/producer-prices
+  te_period: in March
+  te_value: 106.7
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -5.239943542695834
+  our_period: '2025-12-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 107.42
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/ireland/productivity
+  te_period: in the fourth quarter of 2025
+  te_value: 136.86
+  value_match: false
+  yoy_computed: 1.4544767661503648
+retail-sales:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CSO/RSM08
+  our_source: cso_ie
+  our_unit: Index (2021=100)
+  our_value: 116.4
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/retail-sales
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 66
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/retirement-age-men
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 66
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/retirement-age-women
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 23
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/sales-tax-rate
+  te_period: null
+  te_value: 23.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.72
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/services-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: 3.9
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/services-sentiment
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: updated curated value from 15.05 to 11.25 (TE definition = employer rate); matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 11.25
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: The Office of the Revenue Commissioners
+  te_page: https://tradingeconomics.com/ireland/social-security-rate
+  te_period: null
+  te_value: 11.25
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 11.05
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: The Office of the Revenue Commissioners
+  te_page: https://tradingeconomics.com/ireland/social-security-rate-for-companies
+  te_period: null
+  te_value: 11.25
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IE:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 4
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/social-security-rate-for-employees
+  te_period: null
+  te_value: 4.2
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  fix_summary: updated curated value from 1.0 to 0.42 (GTI 2025); matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: IE:terrorism-index
+  our_source: curated
+  our_unit: Points
+  our_value: 0.42
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/ireland/terrorism-index
+  te_period: null
+  te_value: 0.42
+  value_match: true
+  yoy_computed: null
+trade-balance:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: CSO/TSM01/tb
+  our_source: cso_ie
+  our_unit: EUR thousand
+  our_value: 3959452
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/balance-of-trade
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: switched CSO table from quarterly QLF18 to monthly MUM01 (matches TE 140.3 for 2026-04).
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: CSO/QLF18/unemp-15plus
+  our_source: cso_ie
+  our_unit: Thousand
+  our_value: 140.3
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/unemployed-persons
+  te_period: in April of 2026
+  te_value: 140.3
+  value_match: true
+  yoy_computed: null
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: CSO/MUM01
+  our_source: cso_ie
+  our_unit: '%'
+  our_value: 4.8
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/unemployment-rate
+  te_period: in April 2026
+  te_value: 4.8
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: CSO/QLF18/yuneml-15-24
+  our_source: cso_ie
+  our_unit: '%'
+  our_value: 9.8
+  source_match: true
+  suggested_source: cso_ie
+  te_http: 200
+  te_label: Central Statistics Office Ireland
+  te_page: https://tradingeconomics.com/ireland/youth-unemployment-rate
+  te_period: in April
+  te_value: 9.8
+  value_match: true
+  yoy_computed: null

@@ -1,0 +1,1781 @@
+budget-deficit:
+  action: frontend — same magnitude opposite sign (display semantics)
+  category: sign_convention
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_value: -4.2
+  source_match: false
+  suggested_source: stat_at
+  te_desc: Austria recorded a Government Budget deficit equal to 4.20 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Austria Government Budget - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/government-budget
+  te_value: 4.2
+  truth_source: eurostat
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+business-confidence:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsin_m_r2:BS-ICI
+  our_source: eurostat
+  our_value: -12.5
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Business Confidence in Austria increased to -12.50 points in April from -12.70 points in March of 2026. This page provides - Austria Business Confidence - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: European Commission
+  te_label_href: http://ec.europa.eu
+  te_period: in April
+  te_url: https://tradingeconomics.com/austria/business-confidence
+  te_value: -12.5
+  truth_source: eurostat
+  truth_te_label: European Commission
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+capacity-utilization:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_value: 84.1
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Capacity Utilization in Austria decreased to 82.10 percent in the fourth quarter of 2025 from 83 percent in the third quarter of 2025. This page provides - Austria Capacity Utilization - actual
+    values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: European Commission
+  te_label_href: https://commission.europa.eu/index_en
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/capacity-utilization
+  te_value: 82.1
+  truth_source: eurostat
+  truth_te_label: European Commission
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  action: review — different methodology between TE and our series
+  category: concept_mismatch
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vgr108_VGR_HA_vj_1#VGRHAG-32
+  our_source: stat_at
+  our_value: -0.1561
+  source_match: true
+  suggested_source: stat_at
+  te_desc: The stocks of goods held by firms in Austria decreased by 218.31 EUR Million in the fourth quarter of 2025. This page provides - Austria Changes In Inventories - actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/changes-in-inventories
+  te_value: 218.31
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+consumer-confidence:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsco_m:BS-CSMCI
+  our_source: eurostat
+  our_value: -24.1
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Consumer Confidence in Austria decreased to -24.10 points in April from -20.40 points in March of 2026. This page provides the latest reported value for - Austria Consumer Confidence - plus previous
+    releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: European Commission
+  te_label_href: http://ec.europa.eu
+  te_period: in April
+  te_url: https://tradingeconomics.com/austria/consumer-confidence
+  te_value: -24.1
+  truth_source: eurostat
+  truth_te_label: European Commission
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+consumer-spending:
+  action: frontend — scale factor 1000x (Mio vs Bn or similar)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vgr108_VGR_HA_vj_1#VGRHAG-16
+  our_source: stat_at
+  our_value: 46.5978
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Consumer Spending in Austria increased to 46597.85 EUR Million in the fourth quarter of 2025 from 46524.74 EUR Million in the third quarter of 2025. This page provides - Austria Consumer Spending
+    - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/consumer-spending
+  te_value: 46597.85
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+core-cpi:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HI00XEF
+  our_source: eurostat
+  our_value: 102.52
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/core-inflation-rate
+  te_value: null
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+corporate-tax-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:corporate-tax-rate
+  our_source: curated
+  our_value: 23
+  source_match: true
+  suggested_source: curated
+  te_desc: The Corporate Tax Rate in Austria stands at 23 percent. This page provides - Austria Corporate Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Federal Ministry of Finance
+  te_label_href: https://www.bundesfinanzministerium.de/Web/EN/Home/home.html
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/corporate-tax-rate
+  te_value: 23.0
+  truth_source: curated
+  truth_te_label: Federal Ministry of Finance
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  action: keep — value matches TE; te_label missing in regex but truth.yaml verified
+  category: ok_value_truth_verified
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: AT:corruption-index
+  our_source: curated
+  our_value: 69
+  source_match: null
+  suggested_source: null
+  te_desc: Austria scored 69 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. This page provides the latest reported value for - Austria Corruption Index
+    - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/corruption-index
+  te_value: 69.0
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+corruption-rank:
+  action: keep — value matches TE; te_label missing in regex but truth.yaml verified
+  category: ok_value_truth_verified
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: AT:corruption-rank
+  our_source: curated
+  our_value: 21
+  source_match: null
+  suggested_source: null
+  te_desc: Austria is the 21 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. This page provides the latest reported
+    value for - Austria Corruption Rank - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/corruption-rank
+  te_value: 21.0
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+cpi-clothing:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-03
+  our_source: stat_at
+  our_value: 111.8
+  source_match: true
+  suggested_source: stat_at
+  te_desc: CPI Clothing in Austria increased to 110.50 points in March from 104.20 points in February of 2026. Austria CPI Clothing - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/cpi-clothing
+  te_value: 110.5
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-10
+  our_source: stat_at
+  our_value: 125.3
+  source_match: true
+  suggested_source: stat_at
+  te_desc: CPI Education in Austria remained unchanged at 126.80 points in March. Austria CPI Education - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/cpi-education
+  te_value: 126.8
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-01
+  our_source: stat_at
+  our_value: 133.1
+  source_match: true
+  suggested_source: stat_at
+  te_desc: CPI Food in Austria increased to 133.40 points in March from 133.20 points in February of 2026. Austria CPI Food - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/cpi-food
+  te_value: 133.4
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-04
+  our_source: stat_at
+  our_value: 140.9
+  source_match: true
+  suggested_source: stat_at
+  te_desc: CPI Housing Utilities in Austria increased to 143.50 points in March from 141.90 points in February of 2026. This page provides - Austria  Cpi Housing Utilities- actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/cpi-housing-utilities
+  te_value: 143.5
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-09
+  our_source: stat_at
+  our_value: 124.7
+  source_match: true
+  suggested_source: stat_at
+  te_desc: CPI Recreation and Culture in Austria increased to 128.50 points in March from 127.30 points in February of 2026. Austria CPI Recreation And Culture - values, historical data, forecasts and news
+    - updated on May of 2026.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/cpi-recreation-and-culture
+  te_value: 128.5
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-07
+  our_source: stat_at
+  our_value: 128.9
+  source_match: true
+  suggested_source: stat_at
+  te_desc: The transportation sub-index of the CPI basket in Austria increased to 134.80 points in March of 2026 from 129 points in February of 2026. This page provides - Austria Cpi Transportation- actual
+    values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/austria/cpi-transportation
+  te_value: 134.8
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  action: keep — TE shows letter rating (AA+/Aa1), we map to numeric
+  category: ok_curated_letter_grade
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: AT:credit-rating
+  our_source: curated
+  our_value: 94
+  source_match: null
+  suggested_source: null
+  te_desc: Standard &amp; Poor&#39;s credit rating for Austria stands at AA+ with stable outlook. Moody&#39;s credit rating for Austria was last set at Aa1 with negative outlook. DBRS&#39; credit rating
+    for Austria was last reported at AAA with negative outlook. In general, a credit rating is used by sovereign wealth funds, pension funds and other investors to gauge the credit worthiness of Austria
+    thus havi
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/rating
+  te_value: null
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+current-account:
+  action: frontend — scale factor 1000x (Mio vs Bn or similar)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_value: 2.67
+  source_match: false
+  suggested_source: oenb_at
+  te_desc: Austria recorded a Current Account surplus of 2668 EUR Million in the fourth quarter of 2025. This page provides the latest reported value for - Austria Current Account - plus previous releases,
+    historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Oesterreichische Nationalbank
+  te_label_href: https://www.oenb.at
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/current-account
+  te_value: 2668.0
+  truth_source: eurostat
+  truth_te_label: Oesterreichische Nationalbank
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+current-account-to-gdp:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: tipsbp20:CA:PC_GDP
+  our_source: eurostat
+  our_value: 1.9
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Austria recorded a Current Account surplus of 1.90 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Austria Current Account to GDP - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/current-account-to-gdp
+  te_value: 1.9
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+disposable-personal-income:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_value: 80030
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/disposable-personal-income
+  te_value: null
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+employed-persons:
+  action: review — different methodology between TE and our series
+  category: concept_mismatch
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_vgr111_VGR_Flashes_Erwerb_1#BEREIN-2#F-PERSI
+  our_source: stat_at
+  our_value: 4726
+  source_match: true
+  suggested_source: stat_at
+  te_desc: The number of employed persons in Austria decreased to 4500.20 Thousand in the fourth quarter of 2025 from 4539.50 Thousand in the third quarter of 2025. This page provides - Austria Employed
+    Persons - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/employed-persons
+  te_value: 4500.2
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+employment-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsa_ergan:Y15-64
+  our_source: eurostat
+  our_value: 74.3
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Employment Rate in Austria decreased to 74.60 percent in the fourth quarter of 2025 from 75 percent in the third quarter of 2025. This page provides - Austria Employment Rate- actual values,
+    historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/employment-rate
+  te_value: 74.6
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_value: 110.34
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/energy-inflation
+  te_value: null
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+exports:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-02-28'
+  our_series: STATAT/OGD_konjunkturmonitor_KonMon_1#F-FAKT-46
+  our_source: stat_at
+  our_value: 16164.8485
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Exports in Austria increased to 16165 EUR Million in February from 15021 EUR Million in January of 2026. This page provides - Austria Exports - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in February
+  te_url: https://tradingeconomics.com/austria/exports
+  te_value: 16165.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+food-inflation:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1#VPI-01-PZVJM
+  our_source: stat_at
+  our_value: 3.9
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Cost of food in Austria increased 2.40 percent in March of 2026 over the same month in the previous year. This page provides the latest reported value for - Austria Food Inflation - plus previous
+    releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/austria/food-inflation
+  te_value: 2026.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+gdp:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 534.79
+  source_match: true
+  suggested_source: worldbank
+  te_desc: The Gross Domestic Product (GDP) in Austria was worth 521.64 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Austria represents 0.49 percent of the
+    world economy. This page provides the latest reported value for - Austria GDP - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey
+    consen
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/gdp
+  te_value: 521.64
+  truth_source: worldbank
+  truth_te_label: World Bank
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+gdp-per-capita:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_value: 45958.83
+  source_match: true
+  suggested_source: worldbank
+  te_desc: The Gross Domestic Product per capita in Austria was last recorded at 45562.04 US dollars in 2024. The GDP per Capita in Austria is equivalent to 361 percent of the world&#39;s average. This
+    page provides the latest reported value for - Austria GDP per capita - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus
+    and new
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/gdp-per-capita
+  te_value: 45562.04
+  truth_source: worldbank
+  truth_te_label: World Bank
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+gdp-per-capita-ppp:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_value: 63788.08
+  source_match: true
+  suggested_source: worldbank
+  te_desc: The Gross Domestic Product per capita in Austria was last recorded at 63314.46 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Austria, when adjusted
+    by Purchasing Power Parity is equivalent to 356 percent of the world&#39;s average. This page provides the latest reported value for - Austria GDP per capita PPP - plus previous releases, historical
+    high and
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/gdp-per-capita-ppp
+  te_value: 63314.46
+  truth_source: worldbank
+  truth_te_label: World Bank
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+gdp-real:
+  action: frontend — TE shows % rate (YoY/MoM), we publish level
+  category: frontend_only_yoy_or_mom
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vgr108_VGR_HA_vj_1
+  our_source: stat_at
+  our_value: 95.9278
+  source_match: true
+  suggested_source: stat_at
+  te_desc: The Gross Domestic Product (GDP) in Austria expanded 0.60 percent in the first quarter of 2026 over the same quarter of the previous year. This page provides - Austria GDP Annual Growth Rate
+    - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in the first quarter of 2026
+  te_url: https://tradingeconomics.com/austria/gdp-growth-annual
+  te_value: 0.6
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+government-debt:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_value: 81.5
+  source_match: false
+  suggested_source: oenb_at
+  te_desc: Government Debt in Austria decreased to 310802 EUR Million in March from 316395 EUR Million in February of 2026. This page provides - Austria Government Debt- actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Oesterreichische Nationalbank
+  te_label_href: https://www.oenb.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/government-debt
+  te_value: 310802.0
+  truth_source: eurostat
+  truth_te_label: Oesterreichische Nationalbank
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+government-debt-total:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_kons_brv_HVD_KONS_BRV_1#F-TKL101
+  our_source: stat_at
+  our_value: 418.0785
+  source_match: false
+  suggested_source: oenb_at
+  te_desc: Government Debt in Austria decreased to 310802 EUR Million in March from 316395 EUR Million in February of 2026. This page provides - Austria Government Debt- actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Oesterreichische Nationalbank
+  te_label_href: https://www.oenb.at/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/government-debt
+  te_value: 310802.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+government-spending:
+  action: frontend — scale factor 1000x (Mio vs Bn or similar)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vgr108_VGR_HA_vj_1#VGRHAG-18
+  our_source: stat_at
+  our_value: 20.5877
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Government Spending in Austria increased to 21195.89 EUR Million in the fourth quarter of 2025 from 20007.23 EUR Million in the third quarter of 2025. This page provides - Austria Government
+    Spending - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/government-spending
+  te_value: 21195.89
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+government-spending-eur:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_value: 28.43
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/government-spending-value
+  te_value: null
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_vgr108_VGR_HA_vj_1#VGRHAG-23
+  our_source: stat_at
+  our_value: 22.2041
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Gross Fixed Capital Formation in Austria increased to 23704.80 EUR Million in the fourth quarter of 2025 from 22250.54 EUR Million in the third quarter of 2025. This page provides - Austria Gross
+    Fixed Capital Formation - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/en/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/gross-fixed-capital-formation
+  te_value: 23704.8
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+hospital-beds:
+  action: keep — value matches TE; te_label missing in regex but truth.yaml verified
+  category: ok_value_truth_verified
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2023-12-31'
+  our_series: AT:hospital-beds
+  our_source: curated
+  our_value: 6.6
+  source_match: null
+  suggested_source: null
+  te_desc: Hospital Beds in Austria decreased to 6.60 per 1000 people in 2023 from 6.72 per 1000 people in 2022. This page includes a chart with historical data for Austria Hospital Beds.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/hospital-beds
+  te_value: 6.6
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+house-price-index:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_value: 169.34
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Housing Index in Austria increased to 169.34 points in the fourth quarter of 2025 from 167.87 points in the third quarter of 2025. This page provides - Austria House Price Index - actual values,
+    historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/housing-index
+  te_value: 169.34
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: true
+  yoy_computed: null
+import-prices:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_impi21_Impi21_1
+  our_source: stat_at
+  our_value: 116.5
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/import-prices
+  te_value: null
+  truth_source: stat_at
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+imports:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-02-28'
+  our_series: STATAT/OGD_konjunkturmonitor_KonMon_1#F-FAKT-32
+  our_source: stat_at
+  our_value: 15822.8498
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Imports in Austria increased to 15823 EUR Million in February from 15498 EUR Million in January of 2026. This page provides - Austria Imports - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in February
+  te_url: https://tradingeconomics.com/austria/imports
+  te_value: 15823.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+industrial-production:
+  action: frontend — TE page exists; our_v is consistent with the description but regex couldn't isolate the value
+  category: te_value_unparseable
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_kjiprodindex2021_KJID2021_PI_1
+  our_source: stat_at
+  our_value: 111.8
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Industrial Production in Austria increased 1.70 percent in March of 2026 over the same month in the previous year. This page provides the latest reported value for - Austria Industrial Production
+    - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistik Austria
+  te_label_href: http://www.statistik.at
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/austria/industrial-production
+  te_value: null
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: null
+  yoy_computed: null
+inflation-cpi:
+  action: frontend — TE shows % rate (YoY/MoM), we publish level
+  category: frontend_only_yoy_or_mom
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_vpi20_VPI_2020_1
+  our_source: stat_at
+  our_value: 101.4
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Inflation Rate in Austria increased to 3.30 percent in April from 3.20 percent in March of 2026. This page provides - Austria Inflation Rate - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in April
+  te_url: https://tradingeconomics.com/austria/inflation-cpi
+  te_value: 3.3
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+interest-rate:
+  action: review — different methodology between TE and our series
+  category: concept_mismatch
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_desc: The benchmark interest rate in Austria was last recorded at 4.50 percent. This page provides - Austria Interest Rate - actual values, historical data, forecast, chart, statistics, economic calendar
+    and news.
+  te_http: 200
+  te_label: European Central Bank
+  te_label_href: https://www.ecb.europa.eu/home/html/index.en.html
+  te_period: in October of 2000
+  te_url: https://tradingeconomics.com/austria/interest-rate
+  te_value: 4.5
+  truth_source: ecb
+  truth_te_label: European Central Bank
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+job-vacancies:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_value: 2.9
+  source_match: null
+  suggested_source: null
+  te_desc: Job Vacancies in Austria increased to 81997 in April from 74534 in March of 2026. This page provides - Austria Job Vacancies - actual values, historical data, forecast, chart, statistics, economic
+    calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: in April
+  te_url: https://tradingeconomics.com/austria/job-vacancies
+  te_value: 81997.0
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: false
+  yoy_computed: null
+labor-force-participation-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsi_emp_q:ACT
+  our_source: eurostat
+  our_value: 79.2
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Labor Force Participation Rate in Austria decreased to 79.20 percent in the fourth quarter of 2025 from 79.40 percent in the third quarter of 2025. This page provides - Austria Labor Force Participation
+    Rate- actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/labor-force-participation-rate
+  te_value: 79.2
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  action: review — different methodology between TE and our series
+  category: concept_mismatch
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lc_lci_r2_q:I20
+  our_source: eurostat
+  our_value: 129.5
+  source_match: null
+  suggested_source: null
+  te_desc: Labour Costs in Austria increased to 148.17 points in the fourth quarter of 2025 from 129.01 points in the third quarter of 2025. This page provides - Austria Labour Costs - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/labour-costs
+  te_value: 148.17
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+long-term-unemployment-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_value: 1.4
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Long Term Unemployment Rate in Austria remained unchanged at 1.40 percent in the fourth quarter of 2025 from 1.40 percent in the third quarter of 2025. This page provides - Austria Long Term
+    Unemployment Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/long-term-unemployment-rate
+  te_value: 1.4
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_kjiprodindex2021_KJID2021_PI_1#NAC_C
+  our_source: stat_at
+  our_value: 115.4
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Manufacturing Production in Austria increased 2.80 percent in March of 2026 over the same month in the previous year. This page provides - Austria Manufacturing Production - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/en/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/austria/manufacturing-production
+  te_value: 2026.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+medical-doctors:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: AT:medical-doctors
+  our_source: curated
+  our_value: 5.4
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/medical-doctors
+  te_value: null
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+minimum-wages:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:minimum-wages
+  our_source: curated
+  our_value: 0
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/minimum-wages
+  te_value: null
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+mining-production:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_kjiprodindex2021_KJID2021_PI_1#NAC_B
+  our_source: stat_at
+  our_value: 81.3
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Mining production in Austria decreased 6.70 percent in March of 2026 over the same month in the previous year. This page provides - Austria Mining Production- actual values, historical data,
+    forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at/en/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/austria/mining-production
+  te_value: 2026.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+nurses:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: AT:nurses
+  our_source: curated
+  our_value: 6.96
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/nurses
+  te_value: null
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+personal-income-tax-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:personal-income-tax-rate
+  our_source: curated
+  our_value: 55
+  source_match: true
+  suggested_source: curated
+  te_desc: The Personal Income Tax Rate in Austria stands at 55 percent. This page provides - Austria Personal Income Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar
+    and news.
+  te_http: 200
+  te_label: Federal Ministry of Finance
+  te_label_href: http://ec.europa.eu
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/personal-income-tax-rate
+  te_value: 55.0
+  truth_source: curated
+  truth_te_label: Federal Ministry of Finance
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+population:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_value: 9.2
+  source_match: true
+  suggested_source: eurostat
+  te_desc: The total population in Austria was estimated at 9.2 million people in 2025, according to the latest census figures and projections from Trading Economics. This page provides - Austria Population
+    - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/population
+  te_value: 9.2
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+ppi:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_epi2021nac08_EPI_2021_OENACE_1
+  our_source: stat_at
+  our_value: 117.5
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Producer Prices in Austria increased to 117.50 points in March from 115.90 points in February of 2026. This page provides the latest reported value for - Austria Producer Prices - plus previous
+    releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: https://www.statistik.at
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/producer-prices
+  te_value: 117.5
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+productivity:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_value: 100.48
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Productivity in Austria decreased to 105.07 points in the fourth quarter of 2025 from 105.74 points in the third quarter of 2025. This page provides - Austria Productivity - actual values, historical
+    data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/austria/productivity
+  te_value: 105.07
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+retail-sales:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-02-28'
+  our_series: STATAT/OGD_konjidxhan21_KJIX_H_21_1#NACE-47-UIDXNSB
+  our_source: stat_at
+  our_value: 117.6
+  source_match: false
+  suggested_source: eurostat
+  te_desc: Retail Sales in Austria increased 0.10 percent in March of 2026 over the previous month. This page provides the latest reported value for - Austria Retail Sales MoM - plus previous releases,
+    historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/austria/retail-sales
+  te_value: 2026.0
+  truth_source: stat_at
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+retirement-age-men:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:retirement-age-men
+  our_source: curated
+  our_value: 65
+  source_match: true
+  suggested_source: curated
+  te_desc: Retirement Age Men in Austria remained unchanged at 65 Years in 2026 from 65 Years in 2025. This page provides - Austria Retirement Age Men - actual values, historical data, forecast, chart,
+    statistics, economic calendar and news.
+  te_http: 200
+  te_label: Federal Ministry of Finance
+  te_label_href: https://www.etk.fi/en/
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/retirement-age-men
+  te_value: 65.0
+  truth_source: curated
+  truth_te_label: Federal Ministry of Finance
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+retirement-age-women:
+  action: keep — value matches TE; TE source attribution couldn't be parsed
+  category: ok_value_no_te_label
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:retirement-age-women
+  our_source: curated
+  our_value: 60
+  source_match: null
+  suggested_source: null
+  te_desc: Retirement Age Women in Austria remained unchanged at 60.50 Years in 2026 from 60.50 Years in 2025. This page provides - Austria Retirement Age Women - actual values, historical data, forecast,
+    chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/retirement-age-women
+  te_value: 60.5
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: true
+  yoy_computed: null
+sales-tax-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:sales-tax-rate
+  our_source: curated
+  our_value: 20
+  source_match: true
+  suggested_source: curated
+  te_desc: The Sales Tax Rate in Austria stands at 20 percent. This page provides - Austria Sales Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.
+  te_http: 200
+  te_label: Federal Ministry of Finance
+  te_label_href: https://www.vatlive.com
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/sales-tax-rate
+  te_value: 20.0
+  truth_source: curated
+  truth_te_label: Federal Ministry of Finance
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_value: 103.43
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/services-inflation
+  te_value: null
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  action: keep — TE has no AT page for this slug; not covered by TE
+  category: te_no_page
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_value: 0.9
+  source_match: null
+  suggested_source: null
+  te_desc: Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/services-pmi
+  te_value: null
+  truth_source: eurostat
+  truth_te_label: null
+  truth_verified: false
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  action: keep — value matches TE; TE source attribution couldn't be parsed
+  category: ok_value_no_te_label
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:social-security-rate
+  our_source: curated
+  our_value: 39.6
+  source_match: null
+  suggested_source: null
+  te_desc: The Social Security Rate in Austria stands at 39.05 percent. This page provides - Austria Social Security Rate - actual values, historical data, forecast, chart, statistics, economic calendar
+    and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/social-security-rate
+  te_value: 39.05
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  action: keep — value matches TE; TE source attribution couldn't be parsed
+  category: ok_value_no_te_label
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:social-security-rate-companies
+  our_source: curated
+  our_value: 21.43
+  source_match: null
+  suggested_source: null
+  te_desc: The Social Security Rate For Companies in Austria stands at 20.98 percent. This page provides - Austria Social Security Rate For Companies - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/social-security-rate-for-companies
+  te_value: 20.98
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  action: keep — value matches TE; TE source attribution couldn't be parsed
+  category: ok_value_no_te_label
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: AT:social-security-rate-employees
+  our_source: curated
+  our_value: 18.12
+  source_match: null
+  suggested_source: null
+  te_desc: The Social Security Rate For Employees in Austria stands at 18.07 percent. This page provides - Austria Social Security Rate For Employees - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/social-security-rate-for-employees
+  te_value: 18.07
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  action: keep — value matches TE; TE source attribution couldn't be parsed
+  category: ok_value_no_te_label
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: AT:terrorism-index
+  our_source: curated
+  our_value: 1.5
+  source_match: null
+  suggested_source: null
+  te_desc: Terrorism Index in Austria increased to 1.50 Points in 2025 from 0.58 Points in 2024. Austria Terrorism Index - values, historical data, forecasts and news - updated on May of 2026.
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/terrorism-index
+  te_value: 1.5
+  truth_source: curated
+  truth_te_label: null
+  truth_verified: false
+  value_match: true
+  yoy_computed: null
+trade-balance:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-02-28'
+  our_series: STATAT/OGD_konjunkturmonitor_KonMon_1#F-FAKT-46-F-FAKT-32
+  our_source: stat_at
+  our_value: 341.9987
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Austria recorded a trade surplus of 342 EUR Million in February of 2026. This page provides - Austria Balance of Trade - actual values, historical data, forecast, chart, statistics, economic
+    calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: in February of 2026
+  te_url: https://tradingeconomics.com/austria/balance-of-trade
+  te_value: 342.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: true
+  yoy_computed: null
+unemployed-persons:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:TOTAL:THS_PER
+  our_source: eurostat
+  our_value: 266
+  source_match: null
+  suggested_source: null
+  te_desc: The number of unemployed persons in Austria decreased to 320300 in April of 2026 from 322700 in March of 2026. This page provides the latest reported value for - Austria Unemployed Persons -
+    plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Arbeitsmarktservice Oesterreich
+  te_label_href: https://www.ams.at
+  te_period: in April of 2026
+  te_url: https://tradingeconomics.com/austria/unemployed-persons
+  te_value: 320300.0
+  truth_source: eurostat
+  truth_te_label: Arbeitsmarktservice Oesterreich
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+unemployment:
+  action: review — different methodology between TE and our series
+  category: concept_mismatch
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATAT/OGD_ake100_hvd_ogdonly_HVD_ALQUO_1
+  our_source: stat_at
+  our_value: 5.7
+  source_match: null
+  suggested_source: null
+  te_desc: Unemployment Rate in Austria remained unchanged at 7.50 percent in April. This page provides the latest reported value for - Austria Unemployment Rate - plus previous releases, historical high
+    and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: Public Employment Service Austria (AMS)
+  te_label_href: https://www.ams.at
+  te_period: in April
+  te_url: https://tradingeconomics.com/austria/unemployment-rate
+  te_value: 7.5
+  truth_source: stat_at
+  truth_te_label: Public Employment Service Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+wages:
+  action: frontend — Mio EUR (TE) vs Bn EUR (ours)
+  category: unit_mismatch_scale
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATAT/OGD_bruttoverdiensteindex2021a_KJID2021_BVIa_1
+  our_source: stat_at
+  our_value: 125.8
+  source_match: true
+  suggested_source: stat_at
+  te_desc: Wages in Austria increased to 3170 EUR/Month in 2024 from 2942 EUR/Month in 2023. This page provides - Austria Total Yearly Wages - actual values, historical data, forecast, chart, statistics,
+    economic calendar and news.
+  te_http: 200
+  te_label: Statistics Austria
+  te_label_href: http://www.statistik.at
+  te_period: null
+  te_url: https://tradingeconomics.com/austria/wages
+  te_value: 3170.0
+  truth_source: stat_at
+  truth_te_label: Statistics Austria
+  truth_verified: true
+  value_match: false
+  yoy_computed: null
+youth-unemployment-rate:
+  action: null
+  category: ok
+  fix_summary: null
+  fixed: false
+  flag: null
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_value: 11.1
+  source_match: true
+  suggested_source: eurostat
+  te_desc: Youth Unemployment Rate in Austria decreased to 11.10 percent in March from 11.20 percent in February of 2026. This page provides the latest reported value for - Austria Youth Unemployment Rate
+    - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in March
+  te_url: https://tradingeconomics.com/austria/youth-unemployment-rate
+  te_value: 11.1
+  truth_source: eurostat
+  truth_te_label: EUROSTAT
+  truth_verified: true
+  value_match: true
+  yoy_computed: null

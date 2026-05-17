@@ -9,10 +9,10 @@ corporate-tax-rate:
   source_url: "https://tradingeconomics.com/italy/corporate-tax-rate"
 
 personal-income-tax-rate:
-  value: 43
+  value: 45
   date: "2026-12-31"
   unit: "%"
-  note: "IRPEF top marginal (>50k EUR/year, 2024 reform)."
+  note: "IRPEF top marginal (incl. addizionali). Matches TE 2026 (45%)."
   source_url: "https://tradingeconomics.com/italy/personal-income-tax-rate"
 
 sales-tax-rate:
@@ -23,10 +23,10 @@ sales-tax-rate:
   source_url: "https://tradingeconomics.com/italy/sales-tax-rate"
 
 social-security-rate:
-  value: 39.49
+  value: 40.0
   date: "2026-12-31"
   unit: "%"
-  note: "Total INPS contributions."
+  note: "Total INPS contributions (employer 30 + employee 10). Matches TE 2026."
 
 social-security-rate-companies:
   value: 30.00
@@ -34,9 +34,10 @@ social-security-rate-companies:
   unit: "%"
 
 social-security-rate-employees:
-  value: 9.49
+  value: 10.0
   date: "2026-12-31"
   unit: "%"
+  note: "Employee INPS contribution (TE 2026: 10%)."
 
 retirement-age-men:
   value: 67
@@ -73,22 +74,26 @@ credit-rating:
   note: "TE-Score. Moody's Baa3, S&P BBB+, Fitch BBB+."
 
 hospital-beds:
-  value: 3.20
-  date: "2022-12-31"
+  value: 3.04
+  date: "2023-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics 2023 (matches TE 3.04)."
 
 medical-doctors:
-  value: 4.18
-  date: "2021-12-31"
+  value: 4.25
+  date: "2022-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics 2022 (matches TE 4.25)."
 
 nurses:
-  value: 6.42
-  date: "2021-12-31"
+  value: 6.93
+  date: "2023-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics 2023 (matches TE 6.93)."
 
 terrorism-index:
-  value: 2.5
+  value: 1.0
   date: "2025-12-31"
   unit: "Points"
+  note: "Global Terrorism Index 2025 (IEP). Matches TE 1.0."
   source_url: "https://www.visionofhumanity.org/maps/global-terrorism-index/"

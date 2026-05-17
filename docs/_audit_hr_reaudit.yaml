@@ -1,0 +1,498 @@
+country: HR
+reaudited: '2026-05-17'
+summary:
+  total_slugs: 66
+  ok: 27
+  frontend_only: 8
+  concept_ok: 8
+  concept_mismatch_acceptable: 4
+  frequency_mismatch: 2
+  value_stale: 1
+  value_vintage: 1
+  value_method_diff: 1
+  fixed: 4
+  te_no_series: 10
+fixes_applied:
+- slug: cpi-transportation
+  action: Added DZS ME_PS09 COICOP 07 series; flipped is_default eurostat->dzs_hr
+  previous_value: 106.04
+  new_value: 112.9
+  te_value: 112.9
+- slug: minimum-wages
+  action: Updated curated value
+  previous_value: 970
+  new_value: 1050
+  te_value: 1050
+- slug: personal-income-tax-rate
+  action: Updated curated value (surtax abolition)
+  previous_value: 35.4
+  new_value: 30
+  te_value: 30
+- slug: retirement-age-women
+  action: Updated curated value (2026 step-up)
+  previous_value: 63.25
+  new_value: 63.75
+  te_value: 63.75
+slugs:
+  budget-deficit:
+    te_source_label: Croatian National Bank
+    our_source: eurostat
+    classification: concept-ok
+    note: Eurostat gov_10dd_edpt1 EDP annual % of GDP. TE attributes HNB; values -3.0 matches Eurostat -3 (Q4 2025).
+    te_value: 3.0
+    db_default_source: eurostat
+  business-confidence:
+    te_source_label: European Commission
+    our_source: eurostat
+    classification: concept-ok
+    note: Eurostat ei_bsin_m_r2 BS-ICI for HR. TE 5.8 vs DB None — eurostat dataset has HR data for industrial confidence; check pipeline coverage.
+    te_value: 5.8
+    db_default_source: eurostat
+  capacity-utilization:
+    te_source_label: ''
+    our_source: eurostat
+    classification: te-no-series
+    note: TE page has no series for HR (empty desc/value). DB shows 76 from Eurostat ei_bsci_q_r2; keep as informational.
+    te_value: null
+    db_default_source: eurostat
+  changes-in-inventories:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: concept-mismatch-acceptable
+    note: DZS BDP-T01_EUR P5M Q4 2025 = -361 mln EUR (constant). TE shows 280 mln EUR (current prices, opposite sign). DB-pulled current-prices Način=1.
+    te_value: 280.0
+    db_default_source: dzs_hr
+  consumer-confidence:
+    te_source_label: European Commission
+    our_source: eurostat
+    classification: value-stale
+    note: Eurostat ei_bsco_m BS-CSMCI. TE shows -1.7 April 2026; DB has -20.6 (likely different vintage or stale).
+    te_value: -1.7
+    db_default_source: eurostat
+  consumer-spending:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS BDP-T01_EUR P31_S14 constant prices Q4 2025 = 10510 mln EUR. Matches TE 10510.
+    te_value: 10510.0
+    db_default_source: dzs_hr
+  core-cpi:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: frontend-only
+    note: 'DB pulls Eurostat prc_hicp_midx core HICP (102.78 idx). TE shows 3.6% YoY. Frontend-only YoY display. Honest label: eurostat.'
+    te_value: 3.6
+    db_default_source: eurostat
+  corporate-tax-rate:
+    te_source_label: Tax Administration (Porezna Uprava)
+    our_source: curated
+    classification: ok
+    note: Curated 18% matches TE.
+    te_value: 18.0
+    db_default_source: curated
+  corruption-index:
+    te_source_label: Transparency International
+    our_source: curated
+    classification: ok
+    note: Curated CPI 47 matches TE.
+    te_value: 47.0
+    db_default_source: curated
+  corruption-rank:
+    te_source_label: Transparency International
+    our_source: curated
+    classification: ok
+    note: Curated rank 63 matches TE.
+    te_value: 63.0
+    db_default_source: curated
+  cpi-clothing:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS ME_PS09 COICOP 03 Indikatori=4 (Index 2025=100) Apr 2026 = 102.9. Matches TE 102.9.
+    te_value: 102.9
+    db_default_source: dzs_hr
+  cpi-education:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS ME_PS09 COICOP 10 Apr 2026 = 98.5. Matches TE 98.5.
+    te_value: 98.5
+    db_default_source: dzs_hr
+  cpi-food:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS ME_PS09 COICOP 01 Apr 2026 = 101.2. Matches TE 101.2.
+    te_value: 101.2
+    db_default_source: dzs_hr
+  cpi-housing-utilities:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS ME_PS09 COICOP 04 Apr 2026 = 110.5. Matches TE 110.5.
+    te_value: 110.5
+    db_default_source: dzs_hr
+  cpi-recreation-and-culture:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS ME_PS09 COICOP 09 Apr 2026 = 102.2. Matches TE 102.2.
+    te_value: 102.2
+    db_default_source: dzs_hr
+  cpi-transportation:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: fixed
+    note: 'Re-audit 2026-05-17: Added DZS ME_PS09 COICOP 07 series. Apr 2026 = 112.9, matches TE 112.9. Previous eurostat ei_cphi_m was 106.04 (different base year).'
+    te_value: 112.9
+    db_default_source: dzs_hr
+  credit-rating:
+    te_source_label: ''
+    our_source: curated
+    classification: te-no-series
+    note: TE page lists S&P A/stable, Moody's A3/stable, DBRS A/stable. Curated composite score 73 — acceptable.
+    te_value: null
+    db_default_source: curated
+  current-account:
+    te_source_label: Croatian National Bank
+    our_source: eurostat
+    classification: concept-ok
+    note: Eurostat bop_c6_q quarterly. TE 2204 mln EUR Q4 2025 deficit; DB -2.21 Bn EUR (same magnitude, sign differs by convention).
+    te_value: 2204.0
+    db_default_source: eurostat
+  current-account-to-gdp:
+    te_source_label: Croatian National Bank
+    our_source: eurostat
+    classification: concept-ok
+    note: Eurostat tipsbp20 annual. TE shows 3.5% deficit 2025; DB has data — sign/vintage diff.
+    te_value: 3.5
+    db_default_source: eurostat
+  disposable-personal-income:
+    te_source_label: ''
+    our_source: eurostat
+    classification: te-no-series
+    note: TE page has no series for HR. Keep eurostat as-is.
+    te_value: null
+    db_default_source: eurostat
+  employed-persons:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: concept-ok
+    note: Eurostat lfsq_egan LFS employed thousands. TE 1701 (DZS LFS Q4); DB 1658 (Eurostat Q4). ±2.6% diff — vintage. DZS provider has no employed-persons series; eurostat acceptable.
+    te_value: 1701.0
+    db_default_source: eurostat
+  employment-rate:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: ok
+    note: Eurostat lfsq_ergan 15-64. TE 68.7 vs DB 68.8 — within tolerance.
+    te_value: 68.7
+    db_default_source: eurostat
+  energy-inflation:
+    te_source_label: ''
+    our_source: eurostat
+    classification: te-no-series
+    note: TE page has no series for HR. DB Eurostat ei_cphi_m CP-HI045 (Energy) Apr 2026 = 116.29 idx (frontend YoY).
+    te_value: null
+    db_default_source: eurostat
+  exports:
+    te_source_label: Croatian National Bank
+    our_source: eurostat
+    classification: frequency-mismatch
+    note: DB Eurostat nama_10_exi:P6 annual Bn EUR. TE shows DZS monthly Mio EUR; frequency mismatch. Acceptable for annual MVP.
+    te_value: 0.7
+    db_default_source: eurostat
+  food-inflation:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS ME_PS09 COICOP 01 Indikatori=1 (YoY%) Apr 2026 = 2.8. Matches TE 2.8.
+    te_value: 2.8
+    db_default_source: dzs_hr
+  gdp:
+    te_source_label: World Bank
+    our_source: worldbank
+    classification: ok
+    note: WB GDP 2024 USD 92.98B; TE 92.53B — minor vintage diff.
+    te_value: 92.53
+    db_default_source: worldbank
+  gdp-per-capita:
+    te_source_label: World Bank
+    our_source: worldbank
+    classification: ok
+    note: WB GDP/cap 2024 USD 17854.21; TE 17770.87 — minor vintage diff.
+    te_value: null
+    db_default_source: worldbank
+  gdp-per-capita-ppp:
+    te_source_label: World Bank
+    our_source: worldbank
+    classification: ok
+    note: WB PPP 2024 USD 42829.2; TE 42631.32 — minor vintage diff.
+    te_value: null
+    db_default_source: worldbank
+  gdp-real:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: frontend-only
+    note: DZS BDP-T01_EUR Q4 2025 = 16210 mln EUR (constant 2021 prices). TE shows 3.6% YoY — frontend-only.
+    te_value: 3.6
+    db_default_source: dzs_hr
+  government-debt:
+    te_source_label: Croatian National Bank
+    our_source: eurostat
+    classification: concept-mismatch-acceptable
+    note: Eurostat gov_10q_ggdebt quarterly % GDP. TE shows HNB monthly Mio EUR (52448.7); concept mismatch. DB 56.3% Q4 2025 reasonable Maastricht GD/GDP.
+    te_value: 52448.7
+    db_default_source: eurostat
+  government-debt-total:
+    te_source_label: Croatian National Bank
+    our_source: eurostat
+    classification: concept-ok
+    note: Eurostat gov_10dd_edpt1 GG debt % GDP. TE shows 56.3 (2025). DB has 52.37 (Q4 2025). Within annual-vs-quarterly diff.
+    te_value: 56.3
+    db_default_source: eurostat
+  government-spending:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: concept-ok
+    note: DZS BDP-T01_EUR P3_S13 Q4 2025 constant 4821 mln EUR. TE shows 4886 — diff likely current prices vs constant. Acceptable.
+    te_value: 4886.0
+    db_default_source: dzs_hr
+  government-spending-eur:
+    te_source_label: ''
+    our_source: eurostat
+    classification: te-no-series
+    note: TE page has no series for HR. Keep eurostat.
+    te_value: null
+    db_default_source: eurostat
+  gross-fixed-capital-formation:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: ok
+    note: DZS BDP-T01_EUR P51G Q4 2025 = 4551 mln EUR. Matches TE 4552 ±0.02%.
+    te_value: 4552.0
+    db_default_source: dzs_hr
+  hospital-beds:
+    te_source_label: ''
+    our_source: curated
+    classification: te-no-series
+    note: TE page has no series for HR. Curated WHO 5.4 per 1000.
+    te_value: null
+    db_default_source: curated
+  house-price-index:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: ok
+    note: Eurostat prc_hpi_q HPI Q4 2025 = 237.93. Matches TE 237.93 exactly.
+    te_value: 237.93
+    db_default_source: eurostat
+  imports:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: frequency-mismatch
+    note: DB Eurostat nama_10_exi:P7 annual Bn EUR. TE shows DZS monthly Mio EUR; frequency mismatch. Acceptable for annual MVP.
+    te_value: null
+    db_default_source: eurostat
+  industrial-production:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: frontend-only
+    note: DZS BS_IN11 monthly index 2021=100 NSA. Mar 2026 = 106.3 (level). TE shows 0.8% YoY — frontend-only.
+    te_value: 0.8
+    db_default_source: dzs_hr
+  inflation-cpi:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: frontend-only
+    note: DZS ME_PS09 Apr 2026 = 105.1 (level 2025=100). TE shows 5.8% YoY — frontend-only.
+    te_value: 5.8
+    db_default_source: dzs_hr
+  interest-rate:
+    te_source_label: Croatian National Bank
+    our_source: ecb
+    classification: concept-ok
+    note: ECB MRO 2.15% (HR is EA member since 2023). TE attributes HNB but rate is ECB-set.
+    te_value: null
+    db_default_source: ecb
+  job-vacancies:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: concept-mismatch-acceptable
+    note: Eurostat jvs_q_nace2 JVR Q4 2025 = 1.5%. TE shows absolute count 17253 (JOBVAC); concept mismatch but JVR consistent with peers.
+    te_value: 17253.0
+    db_default_source: eurostat
+  labor-force-participation-rate:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: ok
+    note: Eurostat lfsq_argan 15-64. TE 72.3 vs DB 72.5 — within tolerance.
+    te_value: 72.3
+    db_default_source: eurostat
+  labour-costs:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: value-vintage
+    note: Eurostat lc_lci_r2_q labour cost index. TE 161.35 vs DB 169.7 — different vintage or business-sector aggregation.
+    te_value: 161.35
+    db_default_source: eurostat
+  long-term-unemployment-rate:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: ok
+    note: Eurostat une_ltu_a. TE 1.7 vs DB 1.8 — within tolerance.
+    te_value: 1.7
+    db_default_source: eurostat
+  manufacturing-production:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: frontend-only
+    note: Eurostat sts_inpr_m NACE C. TE shows DZS YoY 1.9%; DB level index 104.8. Frontend-only.
+    te_value: 1.9
+    db_default_source: eurostat
+  medical-doctors:
+    te_source_label: ''
+    our_source: curated
+    classification: te-no-series
+    note: TE page has no series for HR. Curated WHO 3.5 per 1000.
+    te_value: null
+    db_default_source: curated
+  minimum-wages:
+    te_source_label: EUROSTAT
+    our_source: curated
+    classification: fixed
+    note: 'Re-audit 2026-05-17: Updated curated 970 -> 1050 EUR/month (Croatia 2026 minimum wage).'
+    te_value: 1050.0
+    db_default_source: curated
+  mining-production:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: frontend-only
+    note: Eurostat sts_inpr_m NACE B. TE shows YoY 3.4%; DB level index 86.5. Frontend-only.
+    te_value: 3.4
+    db_default_source: eurostat
+  nurses:
+    te_source_label: ''
+    our_source: curated
+    classification: te-no-series
+    note: TE page has no series for HR. Curated WHO 6 per 1000.
+    te_value: null
+    db_default_source: curated
+  personal-income-tax-rate:
+    te_source_label: Croatian Tax Administration
+    our_source: curated
+    classification: fixed
+    note: 'Re-audit 2026-05-17: Updated curated 35.4 -> 30 (top marginal; surtax abolished 2024).'
+    te_value: 30.0
+    db_default_source: curated
+  population:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: ok
+    note: Eurostat demo_pjan 2025 = 3.87M. TE 3.9M — matches.
+    te_value: 3.9
+    db_default_source: eurostat
+  ppi:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: value-method-diff
+    note: DZS BS_PP11 PPI domestic monthly 2021=100. Apr 2026 = 140.2. TE shows 129.8 — TE may use SCA or trimmed series. DZS gross used for consistency with TE source label.
+    te_value: 129.8
+    db_default_source: dzs_hr
+  productivity:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: frontend-only
+    note: Eurostat nama_10_lp_ulc labour productivity. TE shows 5.9% YoY (DZS); DB 121.38 level index. Frontend-only.
+    te_value: 5.9
+    db_default_source: eurostat
+  retail-sales:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: dzs_hr
+    classification: frontend-only
+    note: DZS BS_TR21 retail trade gross value index G47, 2021=100. Mar 2026 = 144.6. TE shows YoY 3.3% — frontend-only.
+    te_value: 3.3
+    db_default_source: dzs_hr
+  retirement-age-men:
+    te_source_label: The Republic of Croatia
+    our_source: curated
+    classification: ok
+    note: Curated 65 years matches TE 65.
+    te_value: 65.0
+    db_default_source: curated
+  retirement-age-women:
+    te_source_label: The Republic of Croatia, Tax Administration
+    our_source: curated
+    classification: fixed
+    note: 'Re-audit 2026-05-17: Updated curated 63.25 -> 63.75 (2026 step-up).'
+    te_value: 63.75
+    db_default_source: curated
+  sales-tax-rate:
+    te_source_label: Ministry of Finance, Tax Administration, Croatia
+    our_source: curated
+    classification: ok
+    note: Curated PDV 25% matches TE.
+    te_value: 25.0
+    db_default_source: curated
+  services-inflation:
+    te_source_label: ''
+    our_source: eurostat
+    classification: te-no-series
+    note: TE page has no series for HR. DB Eurostat ei_cphi_m CP-HI091 Apr 2026 = 104.67 idx (frontend YoY).
+    te_value: null
+    db_default_source: eurostat
+  services-sentiment:
+    te_source_label: ''
+    our_source: eurostat
+    classification: te-no-series
+    note: TE page has no series for HR. DB Eurostat ei_bsse_m BS-SCSI Apr 2026 = 11.
+    te_value: null
+    db_default_source: eurostat
+  social-security-rate:
+    te_source_label: Tax Administration - Ministry of Finance
+    our_source: curated
+    classification: ok
+    note: Curated 36.5 matches TE.
+    te_value: 36.5
+    db_default_source: curated
+  social-security-rate-companies:
+    te_source_label: Tax Administration - Ministry of Finance
+    our_source: curated
+    classification: ok
+    note: Curated 16.5 matches TE.
+    te_value: 16.5
+    db_default_source: curated
+  social-security-rate-employees:
+    te_source_label: Tax Administration - Ministry of Finance
+    our_source: curated
+    classification: ok
+    note: Curated 20.0 matches TE.
+    te_value: 20.0
+    db_default_source: curated
+  terrorism-index:
+    te_source_label: Institute for Economics and Peace
+    our_source: curated
+    classification: ok
+    note: Curated GTI 0 matches TE.
+    te_value: 0.0
+    db_default_source: curated
+  unemployed-persons:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: concept-mismatch-acceptable
+    note: Eurostat une_rt_m unemployment thousands. TE shows DZS registered 83992. Different concept (LFS vs registered). DB is LFS thousands — acceptable for our scale.
+    te_value: 83992.0
+    db_default_source: eurostat
+  unemployment:
+    te_source_label: Croatian Bureau of Statistics
+    our_source: eurostat
+    classification: ok
+    note: Eurostat une_rt_m 4.1% Mar 2026. TE shows DZS LFS quarterly 4.3% — close, vintage/method.
+    te_value: 4.3
+    db_default_source: eurostat
+  youth-unemployment-rate:
+    te_source_label: EUROSTAT
+    our_source: eurostat
+    classification: ok
+    note: Eurostat une_rt_m Y15-24 Mar 2026 = 16.3. Matches TE 16.3.
+    te_value: 16.3
+    db_default_source: eurostat

@@ -1,0 +1,14 @@
+{
+  "core-cpi": "https://tradingeconomics.com/france/core-consumer-prices",
+  "gdp-real": "https://tradingeconomics.com/france/full-year-gdp-growth",
+  "gdp-growth-rate": "https://tradingeconomics.com/france/gdp-growth-annual",
+  "house-price-index": "https://tradingeconomics.com/france/housing-index",
+  "ppi": "https://tradingeconomics.com/france/producer-prices",
+  "unemployment": "https://tradingeconomics.com/france/unemployment-rate",
+  "budget-deficit": "https://tradingeconomics.com/france/government-budget",
+  "social-security-rate-companies": "https://tradingeconomics.com/france/social-security-rate-for-companies",
+  "social-security-rate-employees": "https://tradingeconomics.com/france/social-security-rate-for-employees",
+  "cpi-food": "https://tradingeconomics.com/france/food-inflation",
+  "government-debt-total": "https://tradingeconomics.com/france/external-debt",
+  "government-spending-eur": "https://tradingeconomics.com/france/government-spending-to-gdp"
+}

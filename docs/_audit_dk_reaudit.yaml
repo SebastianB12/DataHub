@@ -1,0 +1,1007 @@
+budget-deficit:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 2.9
+  db_note: DK Statbank EDP1 Government EMU surplus/deficit % of GDP, annual
+  db_series_id: DST/EDP1/deficit-pct-gdp
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/government-budget
+  te_period_raw: '2025'
+  te_slug: government-budget
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2.90'
+business-confidence:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 100.7
+  db_note: DK Statbank ETILLID business sentiment, industry KBI (TE headline)
+  db_series_id: DST/ETILLID
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/business-confidence
+  te_period_raw: Denmark
+  te_slug: business-confidence
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '100.70'
+capacity-utilization:
+  db_latest_date: '2026-06-30'
+  db_latest_source: eurostat
+  db_latest_value: 63.9
+  db_note: null
+  db_series_id: ei_bsin_q_r2:BS-ICU-PC
+  db_source: eurostat
+  status: OK
+  te_label: European Commission
+  te_page: https://tradingeconomics.com/denmark/capacity-utilization
+  te_period_raw: Denmark
+  te_slug: capacity-utilization
+  te_source_code: eurostat
+  te_source_url: https://commission.europa.eu/index_en
+  te_value_raw: '76.40'
+changes-in-inventories:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: -8.8
+  db_note: DK Statbank NKN1 Changes in inventories (P52D), current prices SA, bn DKK
+  db_series_id: DST/NKN1/inventories
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/changes-in-inventories
+  te_period_raw: Denmark
+  te_slug: changes-in-inventories
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2025.'
+consumer-confidence:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: -18.6
+  db_note: DK Statbank FORV1 consumer confidence indicator (F1 headline)
+  db_series_id: DST/FORV1
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/consumer-confidence
+  te_period_raw: Denmark
+  te_slug: consumer-confidence
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '-18.60'
+consumer-spending:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 276.7
+  db_note: DK Statbank NKN1 Household consumption (P31S14D), chained 2020 SA, bn DKK
+  db_series_id: DST/NKN1/consumer-spending
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/consumer-spending
+  te_period_raw: Denmark
+  te_slug: consumer-spending
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '274.90'
+core-cpi:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 1.6
+  db_note: DK Statbank PRIS04 Net price index excl. energy & unprocessed food (151N)
+    YoY %
+  db_series_id: DST/PRIS04/core-yoy
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/core-inflation-rate
+  te_period_raw: Denmark
+  te_slug: core-inflation-rate
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2026'
+corporate-tax-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 22
+  db_note: null
+  db_series_id: DK:corporate-tax-rate
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/corporate-tax-rate
+  te_period_raw: Denmark
+  te_slug: corporate-tax-rate
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '22'
+corruption-index:
+  db_latest_date: '2025-12-31'
+  db_latest_source: curated
+  db_latest_value: 90
+  db_note: null
+  db_series_id: DK:corruption-index
+  db_source: curated
+  status: OK
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/denmark/corruption-index
+  te_period_raw: null
+  te_slug: corruption-index
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '100'
+corruption-rank:
+  db_latest_date: '2025-12-31'
+  db_latest_source: curated
+  db_latest_value: 1
+  db_note: null
+  db_series_id: DK:corruption-rank
+  db_source: curated
+  status: OK
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/denmark/corruption-rank
+  te_period_raw: null
+  te_slug: corruption-rank
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '180'
+cpi-clothing:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 102.02
+  db_note: DK Statbank PRIS01 CPI Clothing & footwear (COICOP 03) index
+  db_series_id: DST/PRIS01/cpi-clothing
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/cpi-clothing
+  te_period_raw: Denmark
+  te_slug: cpi-clothing
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '102.02'
+cpi-education:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 103.22
+  db_note: DK Statbank PRIS01 CPI Education (COICOP 10) index
+  db_series_id: DST/PRIS01/cpi-education
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/cpi-education
+  te_period_raw: Denmark
+  te_slug: cpi-education
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '103.22'
+cpi-food:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 100.74
+  db_note: DK Statbank PRIS01 CPI Food & non-alc beverages (COICOP 01) index
+  db_series_id: DST/PRIS01/cpi-food
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/cpi-food
+  te_period_raw: Denmark
+  te_slug: cpi-food
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '100.74'
+cpi-housing-utilities:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 99.36
+  db_note: DK Statbank PRIS01 CPI Housing & utilities (COICOP 04) index
+  db_series_id: DST/PRIS01/cpi-housing
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/cpi-housing-utilities
+  te_period_raw: Denmark
+  te_slug: cpi-housing-utilities
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '99.36'
+cpi-recreation-and-culture:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 98.88
+  db_note: DK Statbank PRIS01 CPI Recreation & culture (COICOP 09) index
+  db_series_id: DST/PRIS01/cpi-recreation
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/cpi-recreation-and-culture
+  te_period_raw: Denmark
+  te_slug: cpi-recreation-and-culture
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '98.88'
+cpi-transportation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 103.46
+  db_note: DK Statbank PRIS01 CPI Transport (COICOP 07) index
+  db_series_id: DST/PRIS01/cpi-transport
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/cpi-transportation
+  te_period_raw: Denmark
+  te_slug: cpi-transportation
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '103.46'
+credit-rating:
+  db_latest_date: '2026-04-01'
+  db_latest_source: curated
+  db_latest_value: 96
+  db_note: null
+  db_series_id: DK:credit-rating
+  db_source: curated
+  policy_note: TE shows agency ratings (S&P/Moody's/DBRS/Fitch) — pure curated, no
+    API.
+  status: OK_NO_TE_PAGE
+  te_label: null
+  te_page: https://tradingeconomics.com/denmark/rating
+  te_period_raw: null
+  te_slug: rating
+  te_source_code: null
+  te_source_url: null
+  te_value_raw: null
+current-account:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 38339.6
+  db_note: DK Statbank BBM Current account net vs World, SA, mio DKK monthly
+  db_series_id: DST/BBM/current-account
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/current-account
+  te_period_raw: March of 2026
+  te_slug: current-account
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '38339.60'
+current-account-to-gdp:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 14
+  db_note: Eurostat bop_gdp6_q CA balance vs World, % of GDP, NSA, quarterly
+  db_series_id: bop_gdp6_q:CA
+  db_source: eurostat
+  status: OK
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/denmark/current-account-to-gdp
+  te_period_raw: '2025'
+  te_slug: current-account-to-gdp
+  te_source_code: eurostat
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_value_raw: '12.50'
+disposable-personal-income:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 49592
+  db_note: DK Statbank INDKP106 Disposable income total, all ages, DKK 1000 -> mio
+    DKK
+  db_series_id: DST/INDKP106
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/disposable-personal-income
+  te_period_raw: Denmark
+  te_slug: disposable-personal-income
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '1436127.85'
+employed-persons:
+  db_latest_date: '2026-02-28'
+  db_latest_source: dst
+  db_latest_value: 3078.456
+  db_note: DK Statbank LBESK104 employees all sectors SA, thousands
+  db_series_id: DST/LBESK104
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/employed-persons
+  te_period_raw: Denmark
+  te_slug: employed-persons
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '3068'
+employment-rate:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 76.2
+  db_note: DK Statbank AKU121K LFS employment rate (BFK), All DK SA quarterly
+  db_series_id: DST/AKU121K
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/employment-rate
+  te_period_raw: Denmark
+  te_slug: employment-rate
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '76.60'
+energy-inflation:
+  db_latest_date: '2026-03-31'
+  db_latest_source: eurostat
+  db_latest_value: 96.09
+  db_note: null
+  db_series_id: ei_cphi_m:CP-HIE:HICP2025
+  db_source: eurostat
+  policy_note: No dedicated TE page for DK; current Eurostat ei_cphi_m HICP energy
+    series retained.
+  status: OK_NO_TE_PAGE
+  te_label: null
+  te_page: https://tradingeconomics.com/denmark/energy-inflation
+  te_period_raw: null
+  te_slug: energy-inflation
+  te_source_code: null
+  te_source_url: null
+  te_value_raw: null
+exports:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 113502.7
+  db_note: DK Statbank BBM Goods FOB exports vs World, SA, mio DKK
+  db_series_id: DST/BBM/exp
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/exports
+  te_period_raw: Denmark
+  te_slug: exports
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '189570.60'
+food-inflation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 2.7
+  db_note: DK Statbank PRIS01 CPI Food YoY% (COICOP 01, ENHED 300)
+  db_series_id: DST/PRIS01/food-yoy
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/food-inflation
+  te_period_raw: Denmark
+  te_slug: food-inflation
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2026'
+gdp:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 3062.8
+  db_note: DK World Bank NY.GDP.MKTP.CD annual GDP, current USD (TE source)
+  db_series_id: NY.GDP.MKTP.CD
+  db_source: worldbank
+  status: OK
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/denmark/gdp
+  te_period_raw: Denmark
+  te_slug: gdp
+  te_source_code: worldbank
+  te_source_url: https://www.worldbank.org/
+  te_value_raw: '429.46'
+gdp-per-capita:
+  db_latest_date: '2024-12-31'
+  db_latest_source: worldbank
+  db_latest_value: 60772.86
+  db_note: null
+  db_series_id: NY.GDP.PCAP.KD
+  db_source: worldbank
+  status: OK
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/denmark/gdp-per-capita
+  te_period_raw: Denmark
+  te_slug: gdp-per-capita
+  te_source_code: worldbank
+  te_source_url: https://www.worldbank.org/
+  te_value_raw: '63229.95'
+gdp-per-capita-ppp:
+  db_latest_date: '2024-12-31'
+  db_latest_source: worldbank
+  db_latest_value: 71431.29
+  db_note: null
+  db_series_id: NY.GDP.PCAP.PP.KD
+  db_source: worldbank
+  status: OK
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/denmark/gdp-per-capita-ppp
+  te_period_raw: Denmark
+  te_slug: gdp-per-capita-ppp
+  te_source_code: worldbank
+  te_source_url: https://www.worldbank.org/
+  te_value_raw: '73709'
+gdp-real:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 677545
+  db_note: DK Statbank NKHO2 quarterly real GDP chained 2020 prices, SA
+  db_series_id: DST/NKHO2
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/gdp-growth-annual
+  te_period_raw: Denmark
+  te_slug: gdp-growth-annual
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2025'
+government-debt:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 27.9
+  db_note: DK Statbank EDP1 EMU debt % of GDP (annual, general government)
+  db_series_id: DST/EDP1/debt-pct-gdp
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/government-debt-to-gdp
+  te_period_raw: '2025'
+  te_slug: government-debt-to-gdp
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '27.90'
+government-debt-total:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 592.729
+  db_note: DK Statbank DNSOSB Central govt gross debt total (DKK bn monthly, TE headline)
+  db_series_id: DST/DNSOSB/debt-total
+  db_source: dst
+  policy_note: TE attributes Danmarks Nationalbank; we fetch DST DNSOSB (the same
+    monthly central-govt-debt table) → honest source label is dst per project policy.
+    Value 592.73 DKK Bn exact match TE.
+  status: OK_LABEL_HONEST
+  te_label: Danmarks Nationalbank
+  te_page: https://tradingeconomics.com/denmark/government-debt
+  te_period_raw: Denmark
+  te_slug: government-debt
+  te_source_code: dnb_dk
+  te_source_url: http://www.nationalbanken.dk
+  te_value_raw: '592.73'
+government-spending:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 158.4
+  db_note: DK Statbank NKN1 Government consumption (P3S13D), chained 2020 SA, bn DKK
+  db_series_id: DST/NKN1/gov-spending
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/government-spending
+  te_period_raw: Denmark
+  te_slug: government-spending
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '157.60'
+government-spending-eur:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 25.03
+  db_note: null
+  db_series_id: namq_10_gdp:P3_S13
+  db_source: eurostat
+  status: OK
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/denmark/government-spending-to-gdp
+  te_period_raw: Denmark
+  te_slug: government-spending-to-gdp
+  te_source_code: eurostat
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_value_raw: '48.0'
+gross-fixed-capital-formation:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 22.96
+  db_note: DK Statbank NKN1 GFCF (P51GD), chained 2020 SA, bn DKK
+  db_series_id: DST/NKN1/gfcf
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/gross-fixed-capital-formation
+  te_period_raw: Denmark
+  te_slug: gross-fixed-capital-formation
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '130.50'
+hospital-beds:
+  db_latest_date: '2022-12-31'
+  db_latest_source: curated
+  db_latest_value: 2.5
+  db_note: null
+  db_series_id: DK:hospital-beds
+  db_source: curated
+  status: OK
+  te_label: OECD
+  te_page: https://tradingeconomics.com/denmark/hospital-beds
+  te_period_raw: Denmark
+  te_slug: hospital-beds
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '2.23'
+house-price-index:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 156.61
+  db_note: null
+  db_series_id: prc_hpi_q:INX
+  db_source: eurostat
+  status: OK
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/denmark/housing-index
+  te_period_raw: Denmark
+  te_slug: housing-index
+  te_source_code: eurostat
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_value_raw: '156.61'
+imports:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 81622.9
+  db_note: DK Statbank BBM Goods FOB imports vs World, SA, mio DKK
+  db_series_id: DST/BBM/imp
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/imports
+  te_period_raw: Denmark
+  te_slug: imports
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '155742.20'
+industrial-production:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 154.5
+  db_note: DK Statbank IPOP21 IP manufacturing SA
+  db_series_id: DST/IPOP21
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/industrial-production
+  te_period_raw: Denmark
+  te_slug: industrial-production
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2026'
+inflation-cpi:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 100.74
+  db_note: DK Statbank PRIS01 CPI all-items index
+  db_series_id: DST/PRIS01
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/inflation-cpi
+  te_period_raw: Denmark
+  te_slug: inflation-cpi
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '1.40'
+job-vacancies:
+  db_latest_date: '2025-12-31'
+  db_latest_source: dst
+  db_latest_value: 45766
+  db_note: DK Statbank LSK03 Job vacancies (number), NSA, quarterly
+  db_series_id: DST/LSK03
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/job-vacancies
+  te_period_raw: Denmark
+  te_slug: job-vacancies
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '45766'
+labor-force-participation-rate:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 81.5
+  db_note: DK Statbank AKU121K LFS Economic activity rate (EFK), All DK, SA, quarterly
+  db_series_id: DST/AKU121K/EFK
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/labor-force-participation-rate
+  te_period_raw: Denmark
+  te_slug: labor-force-participation-rate
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '81.90'
+labour-costs:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 112.6
+  db_note: Eurostat LCI wages and salaries (D11), B-S, CA, 2020=100 — matches TE labour-costs
+    headline 112pts
+  db_series_id: lc_lci_r2_q:I20:D11
+  db_source: eurostat
+  policy_note: TE attributes ECB but ECB just redistributes Eurostat LCI; we fetch
+    Eurostat directly → source=eurostat per honest-label policy. Re-aligned to D11/B-S/CA
+    giving 112.6 vs TE 112 headline.
+  status: OK_LABEL_HONEST
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/denmark/labour-costs
+  te_period_raw: Denmark
+  te_slug: labour-costs
+  te_source_code: ecb
+  te_source_url: https://www.ecb.europa.eu/
+  te_value_raw: '112'
+long-term-unemployment-rate:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 1
+  db_note: null
+  db_series_id: une_ltu_q:LTU
+  db_source: eurostat
+  status: OK
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/denmark/long-term-unemployment-rate
+  te_period_raw: Denmark
+  te_slug: long-term-unemployment-rate
+  te_source_code: eurostat
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_value_raw: '1'
+manufacturing-production:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 154.5
+  db_note: DK Statbank IPOP21 Manufacturing production index (NACE C), SA
+  db_series_id: DST/IPOP21/C
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/manufacturing-production
+  te_period_raw: Denmark
+  te_slug: manufacturing-production
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2026'
+medical-doctors:
+  db_latest_date: '2021-12-31'
+  db_latest_source: curated
+  db_latest_value: 4.3
+  db_note: null
+  db_series_id: DK:medical-doctors
+  db_source: curated
+  status: OK
+  te_label: OECD
+  te_page: https://tradingeconomics.com/denmark/medical-doctors
+  te_period_raw: Denmark
+  te_slug: medical-doctors
+  te_source_code: curated
+  te_source_url: https://www.oecd.org/
+  te_value_raw: '4.66'
+minimum-wages:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 0
+  db_note: null
+  db_series_id: DK:minimum-wages
+  db_source: curated
+  policy_note: Denmark has no statutory minimum wage (sector-collective bargaining).
+    TE page does not exist for DK; curated stub value 0.
+  status: OK_NO_TE_PAGE
+  te_label: null
+  te_page: https://tradingeconomics.com/denmark/minimum-wages
+  te_period_raw: null
+  te_slug: minimum-wages
+  te_source_code: null
+  te_source_url: null
+  te_value_raw: null
+mining-production:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 164.9
+  db_note: DK Statbank IPOP21 Mining and quarrying production index (NACE B), SA
+  db_series_id: DST/IPOP21/B
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/mining-production
+  te_period_raw: Denmark
+  te_slug: mining-production
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2026'
+nurses:
+  db_latest_date: '2021-12-31'
+  db_latest_source: curated
+  db_latest_value: 10.5
+  db_note: null
+  db_series_id: DK:nurses
+  db_source: curated
+  status: OK
+  te_label: OECD
+  te_page: https://tradingeconomics.com/denmark/nurses
+  te_period_raw: Denmark
+  te_slug: nurses
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '12.17'
+personal-income-tax-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 55.9
+  db_note: null
+  db_series_id: DK:personal-income-tax-rate
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/personal-income-tax-rate
+  te_period_raw: Denmark
+  te_slug: personal-income-tax-rate
+  te_source_code: curated
+  te_source_url: http://ec.europa.eu
+  te_value_raw: '60.50'
+population:
+  db_latest_date: '2026-06-30'
+  db_latest_source: dst
+  db_latest_value: 6.0312
+  db_note: DK Statbank FOLK1A Population at first day of quarter, persons -> million
+  db_series_id: DST/FOLK1A
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/population
+  te_period_raw: Denmark
+  te_slug: population
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '6.0'
+ppi:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 148.9
+  db_note: DK Statbank PRIS4221 PPI BC mining+manufacturing index
+  db_series_id: DST/PRIS4221
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/producer-prices
+  te_period_raw: Denmark
+  te_slug: producer-prices
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '148.90'
+productivity:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 103.74
+  db_note: DK Statbank NP23 Labour productivity index, total economy (PIALT), 2020=100
+  db_series_id: DST/NP23/PIALT
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/productivity
+  te_period_raw: Denmark
+  te_slug: productivity
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '119.31'
+retail-sales:
+  db_latest_date: '2026-03-31'
+  db_latest_source: eurostat
+  db_latest_value: 101.2
+  db_note: DK Statbank DETA211A Retail Trade Index G47
+  db_series_id: DST/DETA211A
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/retail-sales-annual
+  te_period_raw: Denmark
+  te_slug: retail-sales-annual
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '2026'
+retirement-age-men:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 67
+  db_note: null
+  db_series_id: DK:retirement-age-men
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/retirement-age-men
+  te_period_raw: Denmark
+  te_slug: retirement-age-men
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '67'
+retirement-age-women:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 67
+  db_note: null
+  db_series_id: DK:retirement-age-women
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/retirement-age-women
+  te_period_raw: Denmark
+  te_slug: retirement-age-women
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '67'
+sales-tax-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 25
+  db_note: null
+  db_series_id: DK:sales-tax-rate
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/sales-tax-rate
+  te_period_raw: Denmark
+  te_slug: sales-tax-rate
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '25'
+services-inflation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: dst
+  db_latest_value: 2.2
+  db_note: DK Statbank PRIS04 Services (142) YoY % inflation
+  db_series_id: DST/PRIS04/services-yoy
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/services-inflation
+  te_period_raw: Denmark
+  te_slug: services-inflation
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '2.20'
+services-sentiment:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: 6.5
+  db_note: null
+  db_series_id: ei_bsse_m_r2:SCI
+  db_source: eurostat
+  policy_note: No dedicated TE page for DK; current Eurostat ei_bsse_m_r2 services
+    confidence retained.
+  status: OK_NO_TE_PAGE
+  te_label: null
+  te_page: https://tradingeconomics.com/denmark/services-sentiment
+  te_period_raw: null
+  te_slug: services-sentiment
+  te_source_code: null
+  te_source_url: null
+  te_value_raw: null
+social-security-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 8
+  db_note: null
+  db_series_id: DK:social-security-rate
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/social-security-rate
+  te_period_raw: Denmark
+  te_slug: social-security-rate
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '0'
+social-security-rate-companies:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 0
+  db_note: null
+  db_series_id: DK:social-security-rate-companies
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/social-security-rate-for-companies
+  te_period_raw: Denmark
+  te_slug: social-security-rate-for-companies
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '0'
+social-security-rate-employees:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 8
+  db_note: null
+  db_series_id: DK:social-security-rate-employees
+  db_source: curated
+  status: OK
+  te_label: Danish Central Tax Administration
+  te_page: https://tradingeconomics.com/denmark/social-security-rate-for-employees
+  te_period_raw: Denmark
+  te_slug: social-security-rate-for-employees
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '0'
+terrorism-index:
+  db_latest_date: '2025-12-31'
+  db_latest_source: curated
+  db_latest_value: 1.5
+  db_note: null
+  db_series_id: DK:terrorism-index
+  db_source: curated
+  status: OK
+  te_label: Institute for Economics and Peace
+  te_page: https://tradingeconomics.com/denmark/terrorism-index
+  te_period_raw: Denmark
+  te_slug: terrorism-index
+  te_source_code: curated
+  te_source_url: null
+  te_value_raw: '0.72'
+trade-balance:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 31879.8
+  db_note: DK Statbank BBM Goods FOB trade balance vs World, SA, mio DKK
+  db_series_id: DST/BBM
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/balance-of-trade
+  te_period_raw: March of 2026
+  te_slug: balance-of-trade
+  te_source_code: dst
+  te_source_url: https://www.dst.dk/
+  te_value_raw: '33828.30'
+unemployed-persons:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 81.9895
+  db_note: DK Statbank AUS09 registered unemployed (LDM, NSA, in 1000s)
+  db_series_id: DST/AUS09
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/unemployed-persons
+  te_period_raw: Denmark
+  te_slug: unemployed-persons
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '80.90'
+unemployment:
+  db_latest_date: '2026-03-31'
+  db_latest_source: dst
+  db_latest_value: 2.7
+  db_note: DK Statbank AUS07 NET unemployment SA % of labour force (TE headline 2.7%)
+  db_series_id: DST/AUS07/net-sa
+  db_source: dst
+  status: OK
+  te_label: Statistics Denmark
+  te_page: https://tradingeconomics.com/denmark/unemployment-rate
+  te_period_raw: Denmark
+  te_slug: unemployment-rate
+  te_source_code: dst
+  te_source_url: https://www.dst.dk
+  te_value_raw: '2.70'
+youth-unemployment-rate:
+  db_latest_date: '2026-03-31'
+  db_latest_source: eurostat
+  db_latest_value: 16.4
+  db_note: null
+  db_series_id: une_rt_m:Y_LT25
+  db_source: eurostat
+  status: OK
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/denmark/youth-unemployment-rate
+  te_period_raw: Denmark
+  te_slug: youth-unemployment-rate
+  te_source_code: eurostat
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_value_raw: '16.40'

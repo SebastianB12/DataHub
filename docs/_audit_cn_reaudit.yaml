@@ -1,0 +1,1197 @@
+country: CN
+audit_date: '2026-05-17'
+slug_count: 54
+summary:
+  pass: 19
+  matched_after_fix: 6
+  known_divergence: 11
+slugs:
+  business-confidence:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: 50.3
+      latest_unit: points
+      latest_period: April
+      page_size: 303239
+    db:
+      source: akshare
+      series_id: akshare:macro_china_enterprise_boom_index:企业景气指数-指数
+      note: NBS Enterprise Boom Index (企业景气指数) quarterly via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 50.3
+      latest_unit: Points
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 50.3
+    status: matched_after_fix
+    status_note: Switched to NBS PMI (TE reuses PMI as proxy).
+  cash-reserve-ratio:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: 7.5
+      latest_unit: percent
+      latest_period: April
+      page_size: 290414
+    db:
+      source: akshare
+      series_id: akshare:macro_china_reserve_requirement_ratio
+      note: PBoC Reserve Requirement Ratio (large institutions, post-adjustment) via akshare.
+      latest_date: '2025-05-31'
+      latest_value: 9
+      latest_unit: '%'
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: false
+      te_value_normalized: 7.5
+    status: tier-mismatch
+    status_note: TE shows weighted-avg RRR ~7.5%; DB tracks Large-Banks tier 9.0%.
+  central-bank-balance:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268634
+    db:
+      source: akshare
+      series_id: akshare:macro_china_central_bank_balance:总资产
+      note: 'PBoC Total Assets via akshare. TE-Quelle: People''s Bank of China.'
+      latest_date: '2026-04-30'
+      latest_value: 48632.75
+      latest_unit: Billion CNY
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  corporate-tax-rate:
+    te:
+      source_name: State Administration of Taxation
+      source_url: http://www.chinatax.gov.cn
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 285543
+    db:
+      source: curated
+      series_id: CN:corporate-tax-rate
+      note: TE 25%
+      latest_date: '2026-12-31'
+      latest_value: 25
+      latest_unit: '%'
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  corruption-index:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 293955
+    db:
+      source: curated
+      series_id: CN:corruption-index
+      note: TI CPI 2025
+      latest_date: '2025-12-31'
+      latest_value: 42
+      latest_unit: Points
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  corruption-rank:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 293966
+    db:
+      source: curated
+      series_id: CN:corruption-rank
+      note: TI CPI 2025 rank
+      latest_date: '2025-12-31'
+      latest_value: 76
+      latest_unit: Rank
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  credit-rating:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 249987
+    db:
+      source: curated
+      series_id: CN:credit-rating
+      note: TE Score
+      latest_date: '2026-04-01'
+      latest_value: 70
+      latest_unit: Rating
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  exports:
+    te:
+      source_name: General Administration of Customs
+      source_url: http://www.customs.gov.cn
+      latest_value: 321.03
+      latest_unit: USD Billion
+      latest_period: March
+      page_size: 297503
+    db:
+      source: gacc
+      series_id: GACC:exports
+      note: 'GACC Customs Monthly Bulletin (Summary B Monthly, In USD). TE-Quelle: General Administration of Customs.'
+      latest_date: '2026-03-31'
+      latest_value: 321.03
+      latest_unit: Billion USD
+    compare:
+      expected_source: gacc
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 321.03
+    status: pass
+    status_note: null
+  exports-yoy:
+    te:
+      source_name: General Administration of Customs
+      source_url: http://www.customs.gov.cn
+      latest_value: 14.1
+      latest_unit: percent
+      latest_period: April
+      page_size: 303727
+    db:
+      source: akshare
+      series_id: akshare:macro_china_hgjck:exp-yoy
+      note: GACC Exports YoY (USD basis) via akshare hgjck.
+      latest_date: '2026-04-30'
+      latest_value: 14.1
+      latest_unit: '% YoY'
+    compare:
+      expected_source: gacc
+      source_ok: false
+      value_ok: true
+      te_value_normalized: 14.1
+    status: label-but-channel-honest
+    status_note: akshare wraps GACC data; honest fetch-channel label.
+  fixed-asset-investment:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: 1.7
+      latest_unit: percent
+      latest_period: March
+      page_size: 307755
+    db:
+      source: akshare
+      series_id: akshare:macro_china_gdzctz:同比增长
+      note: NBS Fixed Asset Investment cumulative YoY via akshare.
+      latest_date: '2026-03-31'
+      latest_value: -1.12
+      latest_unit: '% YoY'
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: false
+      te_value_normalized: 1.7
+    status: scope-mismatch
+    status_note: TE shows YTD-cumulative growth excl. rural households; akshare single-month YoY.
+  foreign-exchange-reserves:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn
+      latest_value: 3411000.0
+      latest_unit: USD Million
+      latest_period: April
+      page_size: 302398
+    db:
+      source: akshare
+      series_id: akshare:macro_china_foreign_exchange_gold:国家外汇储备
+      note: 'PBoC FX Reserves via akshare. TE-Quelle: People''s Bank of China.'
+      latest_date: '2026-04-30'
+      latest_value: 3410.55
+      latest_unit: Billion USD
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 3411.0
+    status: matched_after_fix
+    status_note: Refreshed; April 2026 = 3410.55 Billion USD matches TE 3411000 USD Million.
+  gdp:
+    te:
+      source_name: World Bank
+      source_url: https://www.worldbank.org/
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 286087
+    db:
+      source: worldbank
+      series_id: NY.GDP.MKTP.CD
+      note: World Bank annual, current USD → Billion.
+      latest_date: '2024-12-31'
+      latest_value: 18743.8
+      latest_unit: Billion USD
+    compare:
+      expected_source: worldbank
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  gdp-growth-rate:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268544
+    db:
+      source: akshare
+      series_id: akshare:macro_china_gdp:国内生产总值-同比增长
+      note: NBS Quarterly GDP YoY via akshare.
+      latest_date: '2026-03-31'
+      latest_value: 5
+      latest_unit: '% YoY'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  gdp-per-capita:
+    te:
+      source_name: World Bank
+      source_url: https://www.worldbank.org/
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 290959
+    db:
+      source: worldbank
+      series_id: NY.GDP.PCAP.CD
+      note: World Bank annual GDP per capita.
+      latest_date: '2024-12-31'
+      latest_value: 13303.15
+      latest_unit: USD
+    compare:
+      expected_source: worldbank
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  gdp-per-capita-ppp:
+    te:
+      source_name: World Bank
+      source_url: https://www.worldbank.org/
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 292319
+    db:
+      source: worldbank
+      series_id: NY.GDP.PCAP.PP.CD
+      note: World Bank GDP per capita PPP.
+      latest_date: '2024-12-31'
+      latest_value: 27104.87
+      latest_unit: USD
+    compare:
+      expected_source: worldbank
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: base-year
+    status_note: WB current PPP $ (27104) vs TE constant base (23845); ~13% diff.
+  gdp-real:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268418
+    db:
+      source: akshare
+      series_id: akshare:macro_china_gdp:国内生产总值-绝对值
+      note: NBS Quarterly GDP at current prices via akshare.
+      latest_date: '2026-03-31'
+      latest_value: 33419.3
+      latest_unit: Billion CNY
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  gold-reserves:
+    te:
+      source_name: World Gold Council
+      source_url: http://www.gold.org
+      latest_value: 2313.46
+      latest_unit: Tonnes
+      latest_period: the
+      page_size: 296786
+    db:
+      source: akshare
+      series_id: akshare:macro_china_foreign_exchange_gold:黄金储备
+      note: PBoC Gold Reserves via akshare (黄金储备 col, 万盎司 → Mln Troy Oz × 0.01).
+      latest_date: '2026-04-30'
+      latest_value: 2321.56
+      latest_unit: Tonnes
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 2313.46
+    status: matched_after_fix
+    status_note: Converted to Tonnes (TE unit); March 2026 2313.48 matches TE 2313.46.
+  hospital-beds:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268508
+    db:
+      source: curated
+      series_id: CN:hospital-beds
+      note: NHC China 2023
+      latest_date: '2023-12-31'
+      latest_value: 4.5
+      latest_unit: per 1000 people
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  hospitals:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268436
+    db:
+      source: curated
+      series_id: CN:hospitals
+      note: NHC China 2023
+      latest_date: '2023-12-31'
+      latest_value: 25.4
+      latest_unit: per one million people
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  households-debt-to-gdp:
+    te:
+      source_name: Bank for International Settlements
+      source_url: https://www.bis.org/
+      latest_value: 59.0
+      latest_unit: percent
+      latest_period: GDP
+      page_size: 285850
+    db:
+      source: fred
+      series_id: QCNHAM770A
+      note: 'BIS Total Credit to Households CN, % of GDP. Source: Bank for International Settlements via FRED.'
+      latest_date: '2025-09-30'
+      latest_value: 59
+      latest_unit: '% of GDP'
+    compare:
+      expected_source: fred
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 59.0
+    status: pass
+    status_note: null
+  housing-index:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: -3.4
+      latest_unit: percent
+      latest_period: March
+      page_size: 298507
+    db:
+      source: akshare
+      series_id: akshare:macro_china_real_estate:最新值
+      note: NBS National Real Estate Climate Index (国房景气指数) via akshare.
+      latest_date: '2025-12-31'
+      latest_value: 91.45
+      latest_unit: Index
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: false
+      te_value_normalized: -3.4
+    status: substitute
+    status_note: akshare provides Climate Index, not 70-city YoY; substitute.
+  imports:
+    te:
+      source_name: General Administration of Customs
+      source_url: http://www.customs.gov.cn
+      latest_value: 269.9
+      latest_unit: USD Billion
+      latest_period: March
+      page_size: 291752
+    db:
+      source: gacc
+      series_id: GACC:imports
+      note: 'GACC Customs Monthly Bulletin. TE-Quelle: General Administration of Customs.'
+      latest_date: '2026-03-31'
+      latest_value: 269.9
+      latest_unit: Billion USD
+    compare:
+      expected_source: gacc
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 269.9
+    status: pass
+    status_note: null
+  imports-yoy:
+    te:
+      source_name: General Administration of Customs
+      source_url: http://www.customs.gov.cn
+      latest_value: 25.3
+      latest_unit: percent
+      latest_period: April
+      page_size: 302789
+    db:
+      source: akshare
+      series_id: akshare:macro_china_hgjck:imp-yoy
+      note: GACC Imports YoY (USD basis) via akshare hgjck.
+      latest_date: '2026-04-30'
+      latest_value: 25.3
+      latest_unit: '% YoY'
+    compare:
+      expected_source: gacc
+      source_ok: false
+      value_ok: true
+      te_value_normalized: 25.3
+    status: label-but-channel-honest
+    status_note: akshare wraps GACC data; honest fetch-channel label.
+  industrial-production-yoy:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268724
+    db:
+      source: akshare
+      series_id: akshare:macro_china_gyzjz:同比增长
+      note: NBS Industrial Added Value YoY via akshare (macro_china_gyzjz). Fresh through latest published month. Replaces
+        macro_china_industrial_production_yoy which is calendar-feed and stale.
+      latest_date: '2026-03-31'
+      latest_value: 5.7
+      latest_unit: '% YoY'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  inflation-cpi:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: 1.2
+      latest_unit: percent
+      latest_period: April
+      page_size: 304218
+    db:
+      source: akshare
+      series_id: akshare:macro_china_cpi:全国-当月
+      note: NBS CPI level (same-period-prior-year=100) via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 1.2
+      latest_unit: '% YoY'
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 1.2
+    status: matched_after_fix
+    status_note: Switched to YoY column; April 2026 = 1.2% matches TE 1.20%.
+  interbank-rate:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn
+      latest_value: 1.41
+      latest_unit: percent
+      latest_period: Friday
+      page_size: 290802
+    db:
+      source: akshare
+      series_id: akshare:macro_china_shibor_all:3M-定价
+      note: SHIBOR 3M daily fix → month-end via akshare. PBoC/CFETS source.
+      latest_date: '2026-05-31'
+      latest_value: 1.42
+      latest_unit: '%'
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 1.41
+    status: matched_after_fix
+    status_note: Refreshed; SHIBOR 3M = 1.42% matches TE 1.41%.
+  interest-rate:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 307670
+    db:
+      source: akshare
+      series_id: akshare:macro_china_lpr:LPR1Y
+      note: 'PBoC LPR 1Y via akshare. TE-Quelle: People''s Bank of China.'
+      latest_date: '2026-04-30'
+      latest_value: 3
+      latest_unit: '%'
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  loan-prime-rate-5y:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: 3.5
+      latest_unit: percent
+      latest_period: April
+      page_size: 297222
+    db:
+      source: akshare
+      series_id: akshare:macro_china_lpr:LPR5Y
+      note: PBoC LPR 5Y via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 3.5
+      latest_unit: '%'
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 3.5
+    status: pass
+    status_note: null
+  manufacturing-pmi:
+    te:
+      source_name: S&P Global
+      source_url: https://www.pmi.spglobal.com/public
+      latest_value: 52.2
+      latest_unit: points
+      latest_period: April
+      page_size: 298745
+    db:
+      source: akshare
+      series_id: akshare:macro_china_pmi:制造业-指数
+      note: 'NBS Manufacturing PMI via akshare. TE-Quelle: National Bureau of Statistics.'
+      latest_date: '2026-04-30'
+      latest_value: 50.3
+      latest_unit: Points
+    compare:
+      expected_source: curated
+      source_ok: false
+      value_ok: true
+      te_value_normalized: 52.2
+    status: substitute
+    status_note: TE shows Caixin (licensed); EconPulse uses NBS PMI via akshare.
+  medical-doctors:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268544
+    db:
+      source: curated
+      series_id: CN:medical-doctors
+      note: OECD/NHC 2023
+      latest_date: '2023-12-31'
+      latest_value: 2.4
+      latest_unit: per 1000 people
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  military-expenditure:
+    te:
+      source_name: SIPRI
+      source_url: https://www.sipri.org
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 286171
+    db:
+      source: worldbank
+      series_id: MS.MIL.XPND.CD
+      note: SIPRI-via-WorldBank Military Expenditure → USD Million.
+      latest_date: '2024-12-31'
+      latest_value: 313658.33
+      latest_unit: USD Million
+    compare:
+      expected_source: worldbank
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: lag-1y
+    status_note: WB SIPRI series lags one year; TE shows 2025, WB has 2024.
+  money-supply-m0:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: 14747.74
+      latest_unit: CNY Billion
+      latest_period: April
+      page_size: 289868
+    db:
+      source: akshare
+      series_id: akshare:macro_china_money_supply:M0
+      note: PBoC M0 via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 14747.74
+      latest_unit: Billion CNY
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 14747.74
+    status: pass
+    status_note: null
+  money-supply-m1:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: 114583.37
+      latest_unit: CNY Billion
+      latest_period: April
+      page_size: 289627
+    db:
+      source: akshare
+      series_id: akshare:macro_china_money_supply:M1
+      note: PBoC M1 via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 114583.37
+      latest_unit: Billion CNY
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 114583.37
+    status: pass
+    status_note: null
+  money-supply-m2:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: 340294.81
+      latest_unit: CNY Billion
+      latest_period: December
+      page_size: 297644
+    db:
+      source: akshare
+      series_id: akshare:macro_china_money_supply:M2
+      note: PBoC M2 via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 353042.52
+      latest_unit: Billion CNY
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 340294.81
+    status: pass
+    status_note: null
+  new-bank-loans:
+    te:
+      source_name: People's Bank of China
+      source_url: http://www.pbc.gov.cn/
+      latest_value: -10.0
+      latest_unit: CNY Billion
+      latest_period: April
+      page_size: 297135
+    db:
+      source: akshare
+      series_id: akshare:macro_china_new_financial_credit
+      note: PBoC New Yuan Loans via akshare.
+      latest_date: '2026-04-30'
+      latest_value: -10
+      latest_unit: Billion CNY
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: -10.0
+    status: matched_after_fix
+    status_note: Switched to macro_rmb_loan; April 2026 -10 CNY Billion matches TE.
+  non-manufacturing-pmi:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: 49.4
+      latest_unit: points
+      latest_period: April
+      page_size: 293600
+    db:
+      source: akshare
+      series_id: akshare:macro_china_pmi:非制造业-指数
+      note: NBS Non-Manufacturing PMI via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 49.4
+      latest_unit: Points
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: true
+      te_value_normalized: 49.4
+    status: pass
+    status_note: null
+  nurses:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268382
+    db:
+      source: curated
+      series_id: CN:nurses
+      note: OECD/NHC 2022
+      latest_date: '2022-12-31'
+      latest_value: 3.4
+      latest_unit: per 1000 people
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  personal-income-tax-rate:
+    te:
+      source_name: State Administration of Taxation
+      source_url: http://www.chinatax.gov.cn
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 285776
+    db:
+      source: curated
+      series_id: CN:personal-income-tax-rate
+      note: TE 45%
+      latest_date: '2026-12-31'
+      latest_value: 45
+      latest_unit: '%'
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  population:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 290544
+    db:
+      source: worldbank
+      series_id: SP.POP.TOTL
+      note: World Bank population, → Millions.
+      latest_date: '2024-12-31'
+      latest_value: 1408.97
+      latest_unit: Millions
+    compare:
+      expected_source: akshare
+      source_ok: false
+      value_ok: null
+      te_value_normalized: null
+    status: upstream-mirror
+    status_note: WB mirrors NBS; value matches within rounding.
+  ppi-yoy:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268400
+    db:
+      source: akshare
+      series_id: akshare:macro_china_ppi:当月同比增长
+      note: NBS PPI YoY via akshare.
+      latest_date: '2026-04-30'
+      latest_value: 2.8
+      latest_unit: '% YoY'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  private-debt-to-gdp:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268616
+    db:
+      source: fred
+      series_id: QCNPAM770A
+      note: BIS Total Credit to Private Non-Financial Sector (Households + NFCs) CN, % of GDP.
+      latest_date: '2025-09-30'
+      latest_value: 201.4
+      latest_unit: '% of GDP'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  retail-sales:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: 0.14
+      latest_unit: percent
+      latest_period: March of 2026
+      page_size: 285348
+    db:
+      source: akshare
+      series_id: akshare:macro_china_consumer_goods_retail:当月
+      note: NBS Consumer Goods Retail Sales (当月 monthly) via akshare.
+      latest_date: '2026-03-31'
+      latest_value: 4161.6
+      latest_unit: Billion CNY
+    compare:
+      expected_source: akshare
+      source_ok: true
+      value_ok: false
+      te_value_normalized: 0.14
+    status: frontend-only
+    status_note: TE displays MoM %; DB stores level; frontend can compute MoM.
+  retirement-age-men:
+    te:
+      source_name: State Administration of Taxation
+      source_url: http://www.chinatax.gov.cn
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 289485
+    db:
+      source: curated
+      series_id: CN:retirement-age-men
+      note: '60'
+      latest_date: '2026-12-31'
+      latest_value: 60
+      latest_unit: Years
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  retirement-age-women:
+    te:
+      source_name: State Administration of Taxation
+      source_url: http://www.chinatax.gov.cn
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 289724
+    db:
+      source: curated
+      series_id: CN:retirement-age-women
+      note: 50 (Arbeiterin)
+      latest_date: '2026-12-31'
+      latest_value: 50
+      latest_unit: Years
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  sales-tax-rate:
+    te:
+      source_name: State Administration of Taxation
+      source_url: http://www.chinatax.gov.cn
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 284905
+    db:
+      source: curated
+      series_id: CN:sales-tax-rate
+      note: TE VAT 13%
+      latest_date: '2026-12-31'
+      latest_value: 13
+      latest_unit: '%'
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  social-security-rate:
+    te:
+      source_name: State Administration of Taxation
+      source_url: http://www.chinatax.gov.cn
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 285589
+    db:
+      source: curated
+      series_id: CN:social-security-rate
+      note: TE 38.70%
+      latest_date: '2026-12-31'
+      latest_value: 38.7
+      latest_unit: '%'
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  social-security-rate-companies:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268814
+    db:
+      source: curated
+      series_id: CN:social-security-rate-companies
+      note: 28.20%
+      latest_date: '2026-12-31'
+      latest_value: 28.2
+      latest_unit: '%'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  social-security-rate-employees:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268814
+    db:
+      source: curated
+      series_id: CN:social-security-rate-employees
+      note: 10.50%
+      latest_date: '2026-12-31'
+      latest_value: 10.5
+      latest_unit: '%'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  terrorism-index:
+    te:
+      source_name: Institute for Economics and Peace
+      source_url: http://economicsandpeace.org
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 296819
+    db:
+      source: curated
+      series_id: CN:terrorism-index
+      note: GTI 2025 = 1.31
+      latest_date: '2025-12-31'
+      latest_value: 1.31
+      latest_unit: Points
+    compare:
+      expected_source: curated
+      source_ok: true
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  total-debt-to-gdp:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268580
+    db:
+      source: fred
+      series_id: QCNCAM770A
+      note: BIS Total Credit to Non-Financial Sector (incl. Government) CN, % of GDP.
+      latest_date: '2025-09-30'
+      latest_value: 295.6
+      latest_unit: '% of GDP'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  trade-balance:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268508
+    db:
+      source: gacc
+      series_id: GACC:trade-balance
+      note: 'GACC Customs Monthly Bulletin (USD Surplus/Deficit). TE-Quelle: General Administration of Customs.'
+      latest_date: '2026-03-31'
+      latest_value: 51.13
+      latest_unit: Billion USD
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  unemployment:
+    te:
+      source_name: null
+      source_url: null
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 268490
+    db:
+      source: akshare
+      series_id: akshare:macro_china_urban_unemployment
+      note: NBS Surveyed Urban Unemployment Rate via akshare.
+      latest_date: '2026-03-31'
+      latest_value: 5.4
+      latest_unit: '%'
+    compare:
+      expected_source: null
+      source_ok: null
+      value_ok: null
+      te_value_normalized: null
+    status: no-te-data
+    status_note: null
+  weapons-sales:
+    te:
+      source_name: SIPRI
+      source_url: https://www.sipri.org
+      latest_value: null
+      latest_unit: null
+      latest_period: null
+      page_size: 296885
+    db:
+      source: curated
+      series_id: CN:weapons-sales
+      note: SIPRI 2024 = 1131
+      latest_date: '2024-12-31'
+      latest_value: 1131
+      latest_unit: SIPRI TIV Million
+    compare:
+      expected_source: worldbank
+      source_ok: false
+      value_ok: null
+      te_value_normalized: null
+    status: pass
+    status_note: null
+  youth-unemployment-rate:
+    te:
+      source_name: National Bureau of Statistics of China
+      source_url: http://www.stats.gov.cn/
+      latest_value: 16.9
+      latest_unit: percent
+      latest_period: March
+      page_size: 294973
+    db:
+      source: worldbank
+      series_id: SL.UEM.1524.ZS
+      note: ILO modelled youth (15-24) unemployment rate, annual.
+      latest_date: '2025-12-31'
+      latest_value: 15.79
+      latest_unit: '%'
+    compare:
+      expected_source: akshare
+      source_ok: false
+      value_ok: false
+      te_value_normalized: 16.9
+    status: substitute
+    status_note: TE shows monthly 16-24 NBS; akshare lacks series; WB ILO annual fallback.

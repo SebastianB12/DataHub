@@ -1,0 +1,262 @@
+{
+  "budget-deficit": {
+    "date": "2025-12-31",
+    "source": "statec_lu",
+    "value": -1.961
+  },
+  "capacity-utilization": {
+    "date": "2026-06-30",
+    "source": "eurostat",
+    "value": 74.7
+  },
+  "changes-in-inventories": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 0.15
+  },
+  "consumer-confidence": {
+    "date": "2026-04-30",
+    "source": "eurostat",
+    "value": -20.6
+  },
+  "consumer-spending": {
+    "date": "2025-12-31",
+    "source": "statec_lu",
+    "value": 5576.427
+  },
+  "core-cpi": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 101.35
+  },
+  "corporate-tax-rate": {
+    "date": "2026-12-31",
+    "source": "curated",
+    "value": 23.87
+  },
+  "corruption-index": {
+    "date": "2025-12-31",
+    "source": "curated",
+    "value": 78
+  },
+  "corruption-rank": {
+    "date": "2025-12-31",
+    "source": "curated",
+    "value": 8
+  },
+  "cpi-clothing": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 102.85
+  },
+  "cpi-education": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 104.03
+  },
+  "cpi-food": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 102.07
+  },
+  "cpi-housing-utilities": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 103.91
+  },
+  "cpi-recreation-and-culture": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 101.87
+  },
+  "cpi-transportation": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 106.05
+  },
+  "credit-rating": {
+    "date": "2026-04-01",
+    "source": "curated",
+    "value": 96
+  },
+  "current-account": {
+    "date": "2025-12-31",
+    "source": "statec_lu",
+    "value": -47.2
+  },
+  "employed-persons": {
+    "date": "2026-03-31",
+    "source": "statec_lu",
+    "value": 528.6024
+  },
+  "employment-rate": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 69.5
+  },
+  "energy-inflation": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 116.65
+  },
+  "exports": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 170.56
+  },
+  "food-inflation": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 102.26
+  },
+  "gdp": {
+    "date": "2024-12-31",
+    "source": "worldbank",
+    "value": 93.28
+  },
+  "gdp-per-capita": {
+    "date": "2024-12-31",
+    "source": "worldbank",
+    "value": 104147.17
+  },
+  "gdp-real": {
+    "date": "2025-12-31",
+    "source": "statec_lu",
+    "value": 16105.587
+  },
+  "government-debt": {
+    "date": "2025-12-31",
+    "source": "statec_lu",
+    "value": 26.469
+  },
+  "government-debt-total": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 23.7
+  },
+  "government-spending": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 4.58
+  },
+  "government-spending-eur": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 4.58
+  },
+  "gross-fixed-capital-formation": {
+    "date": "2025-12-31",
+    "source": "statec_lu",
+    "value": 2248.147
+  },
+  "hospital-beds": {
+    "date": "2023-12-31",
+    "source": "curated",
+    "value": 3.94
+  },
+  "house-price-index": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 164.37
+  },
+  "imports": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 142.67
+  },
+  "industrial-production": {
+    "date": "2026-03-31",
+    "source": "eurostat",
+    "value": 84.2
+  },
+  "inflation-cpi": {
+    "date": "2026-04-30",
+    "source": "statec_lu",
+    "value": 102.65
+  },
+  "interest-rate": {
+    "date": "2025-06-11",
+    "source": "ecb",
+    "value": 2.15
+  },
+  "labor-force-participation-rate": {
+    "date": "2025-12-31",
+    "source": "eurostat",
+    "value": 73.7
+  },
+  "labour-costs": {
+    "date": "2023-09-30",
+    "source": "eurostat",
+    "value": 115.7
+  },
+  "long-term-unemployment-rate": {
+    "date": "2010-12-31",
+    "source": "eurostat",
+    "value": 1.6
+  },
+  "manufacturing-production": {
+    "date": "2025-09-30",
+    "source": "eurostat",
+    "value": 92.2
+  },
+  "mining-production": {
+    "date": "2026-03-31",
+    "source": "eurostat",
+    "value": 97.3
+  },
+  "population": {
+    "date": "2024-12-31",
+    "source": "worldbank",
+    "value": 0.68
+  },
+  "ppi": {
+    "date": "2022-08-31",
+    "source": "statec_lu",
+    "value": 138.86
+  },
+  "productivity": {
+    "date": "2024-03-31",
+    "source": "eurostat",
+    "value": 92.47
+  },
+  "retail-sales": {
+    "date": "2025-08-31",
+    "source": "eurostat",
+    "value": 135.7
+  },
+  "services-inflation": {
+    "date": "2026-01-31",
+    "source": "eurostat",
+    "value": 99.99
+  },
+  "social-security-rate": {
+    "date": "2026-12-31",
+    "source": "curated",
+    "value": 28.05
+  },
+  "social-security-rate-companies": {
+    "date": "2026-12-31",
+    "source": "curated",
+    "value": 15.1
+  },
+  "social-security-rate-employees": {
+    "date": "2026-12-31",
+    "source": "curated",
+    "value": 12.95
+  },
+  "unemployed-persons": {
+    "date": "2026-03-31",
+    "source": "eurostat",
+    "value": 24
+  },
+  "unemployment": {
+    "date": "2026-03-31",
+    "source": "eurostat",
+    "value": 6.9
+  },
+  "youth-unemployment-rate": {
+    "date": "2026-03-31",
+    "source": "eurostat",
+    "value": 19.3
+  }
+}

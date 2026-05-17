@@ -1,0 +1,642 @@
+{
+  "medical-doctors": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:medical-doctors"
+    },
+    "dp": {
+      "date": "2019-12-31",
+      "value": 2.77
+    }
+  },
+  "michigan-inflation-expectations": {
+    "src": {
+      "source": "fred",
+      "series_id": "MICH"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 3.8
+    }
+  },
+  "military-expenditure": {
+    "src": {
+      "source": "worldbank",
+      "series_id": "MS.MIL.XPND.CD"
+    },
+    "dp": {
+      "date": "2024-12-31",
+      "value": 997309
+    }
+  },
+  "minimum-wages": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:minimum-wages"
+    },
+    "dp": {
+      "date": "2025-12-31",
+      "value": 7.25
+    }
+  },
+  "mining-and-energy-payrolls": {
+    "src": {
+      "source": "fred",
+      "series_id": "USMINE"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 606
+    }
+  },
+  "mining-production": {
+    "src": {
+      "source": "fred",
+      "series_id": "IPMINE"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 120.28
+    }
+  },
+  "money-supply-m0": {
+    "src": {
+      "source": "fred",
+      "series_id": "BOGMBASE"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 5458.6
+    }
+  },
+  "money-supply-m1": {
+    "src": {
+      "source": "fred",
+      "series_id": "M1SL"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 19436.3
+    }
+  },
+  "money-supply-m2": {
+    "src": {
+      "source": "fred",
+      "series_id": "M2SL"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 22686
+    }
+  },
+  "natural-gas-storage": {
+    "src": {
+      "source": "eia",
+      "series_id": "NW2_EPG0_SWO_R48_BCF"
+    },
+    "dp": {
+      "date": "2026-04-24",
+      "value": 2142
+    }
+  },
+  "new-home-sales": {
+    "src": {
+      "source": "fred",
+      "series_id": "HSN1F"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 682
+    }
+  },
+  "new-orders": {
+    "src": {
+      "source": "fred",
+      "series_id": "AMTMNO"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 630448
+    }
+  },
+  "non-farm-payrolls": {
+    "src": {
+      "source": "fred",
+      "series_id": "PAYEMS"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 158736
+    }
+  },
+  "nonfarm-payrolls-private": {
+    "src": {
+      "source": "fred",
+      "series_id": "USPRIV"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 135428
+    }
+  },
+  "nonfarm-productivity-qoq": {
+    "src": {
+      "source": "fred",
+      "series_id": "PRS85006092"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 0.8
+    }
+  },
+  "nurses": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:nurses"
+    },
+    "dp": {
+      "date": "2024-12-31",
+      "value": 12.71
+    }
+  },
+  "ny-empire-state-manufacturing-index": {
+    "src": {
+      "source": "fred",
+      "series_id": "GACDISA066MSFRBNY"
+    },
+    "dp": {
+      "date": "2026-05-31",
+      "value": 19.6
+    }
+  },
+  "part-time-employment": {
+    "src": {
+      "source": "fred",
+      "series_id": "LNS12600000"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 28413
+    }
+  },
+  "pce-price-index": {
+    "src": {
+      "source": "fred",
+      "series_id": "PCEPI"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 130.34
+    }
+  },
+  "personal-income": {
+    "src": {
+      "source": "fred",
+      "series_id": "PI"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 26844.5
+    }
+  },
+  "personal-income-tax-rate": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:personal-income-tax-rate"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 37
+    }
+  },
+  "personal-savings": {
+    "src": {
+      "source": "fred",
+      "series_id": "PSAVERT"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 3.6
+    }
+  },
+  "personal-spending": {
+    "src": {
+      "source": "fred",
+      "series_id": "PCE"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 21860.5
+    }
+  },
+  "philadelphia-fed-manufacturing-index": {
+    "src": {
+      "source": "fred",
+      "series_id": "GACDFSA066MSFRBPHI"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 26.7
+    }
+  },
+  "population": {
+    "src": {
+      "source": "fred",
+      "series_id": "POPTHM"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 342.63
+    }
+  },
+  "ppi": {
+    "src": {
+      "source": "fred",
+      "series_id": "PPIFIS"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 156.5
+    }
+  },
+  "ppi-ex-food-energy-trade-svcs": {
+    "src": {
+      "source": "fred",
+      "series_id": "WPSFD49116"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 141.24
+    }
+  },
+  "private-debt-to-gdp": {
+    "src": {
+      "source": "fred",
+      "series_id": "QUSPAM770A"
+    },
+    "dp": {
+      "date": "2025-09-30",
+      "value": 140.4
+    }
+  },
+  "private-sector-credit": {
+    "src": {
+      "source": "fred",
+      "series_id": "TOTLL"
+    },
+    "dp": {
+      "date": "2026-05-31",
+      "value": 13765.59
+    }
+  },
+  "productivity": {
+    "src": {
+      "source": "fred",
+      "series_id": "OPHNFB"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 119.58
+    }
+  },
+  "professional-and-business-services-payrolls": {
+    "src": {
+      "source": "fred",
+      "series_id": "USPBS"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 22445
+    }
+  },
+  "real-consumer-spending": {
+    "src": {
+      "source": "fred",
+      "series_id": "DPCERL1Q225SBEA"
+    },
+    "dp": {
+      "date": "2026-01-31",
+      "value": 1.6
+    }
+  },
+  "refinery-crude-runs": {
+    "src": {
+      "source": "eia",
+      "series_id": "WCRRIUS2"
+    },
+    "dp": {
+      "date": "2026-04-24",
+      "value": 16071
+    }
+  },
+  "rent-inflation": {
+    "src": {
+      "source": "fred",
+      "series_id": "CUSR0000SEHA"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 445.12
+    }
+  },
+  "retail-sales-ex-autos": {
+    "src": {
+      "source": "fred",
+      "series_id": "RSFSXMV"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 617856
+    }
+  },
+  "retail-trade-payrolls": {
+    "src": {
+      "source": "fred",
+      "series_id": "USTRADE"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 15466.3
+    }
+  },
+  "retirement-age-men": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:retirement-age-men"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 67
+    }
+  },
+  "retirement-age-women": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:retirement-age-women"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 67
+    }
+  },
+  "sales-tax-rate": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:sales-tax-rate"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 0
+    }
+  },
+  "secured-overnight-financing-rate": {
+    "src": {
+      "source": "fred",
+      "series_id": "SOFR"
+    },
+    "dp": {
+      "date": "2026-05-31",
+      "value": 3.56
+    }
+  },
+  "services-inflation": {
+    "src": {
+      "source": "fred",
+      "series_id": "CUSR0000SAS"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 429.66
+    }
+  },
+  "social-security-rate": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:social-security-rate"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 15.3
+    }
+  },
+  "social-security-rate-companies": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:social-security-rate-companies"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 7.65
+    }
+  },
+  "social-security-rate-employees": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:social-security-rate-employees"
+    },
+    "dp": {
+      "date": "2026-12-31",
+      "value": 7.65
+    }
+  },
+  "steel-production": {
+    "src": {
+      "source": "fred",
+      "series_id": "IPG331S"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 100.1
+    }
+  },
+  "strategic-petroleum-reserve": {
+    "src": {
+      "source": "eia",
+      "series_id": "WCSSTUS1"
+    },
+    "dp": {
+      "date": "2026-04-24",
+      "value": 397924
+    }
+  },
+  "terrorism-index": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:terrorism-index"
+    },
+    "dp": {
+      "date": "2025-12-31",
+      "value": 4.52
+    }
+  },
+  "total-housing-inventory": {
+    "src": {
+      "source": "fred",
+      "series_id": "HOSINVUSM495N"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 1470000
+    }
+  },
+  "total-vehicle-sales": {
+    "src": {
+      "source": "fred",
+      "series_id": "TOTALSA"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 16.7
+    }
+  },
+  "trade-balance": {
+    "src": {
+      "source": "fred",
+      "series_id": "BOPGSTB"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": -60.31
+    }
+  },
+  "transportation-and-warehousing-payrolls": {
+    "src": {
+      "source": "fred",
+      "series_id": "CES4348400001"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 1469.6
+    }
+  },
+  "u6-unemployment-rate": {
+    "src": {
+      "source": "fred",
+      "series_id": "U6RATE"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 8.2
+    }
+  },
+  "unemployed-persons": {
+    "src": {
+      "source": "fred",
+      "series_id": "UNEMPLOY"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 7373
+    }
+  },
+  "unemployment": {
+    "src": {
+      "source": "fred",
+      "series_id": "UNRATE"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 4.3
+    }
+  },
+  "unit-labour-costs-qoq": {
+    "src": {
+      "source": "fred",
+      "series_id": "PRS85006112"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 2.3
+    }
+  },
+  "wages": {
+    "src": {
+      "source": "fred",
+      "series_id": "AHETPI"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 32.23
+    }
+  },
+  "wages-in-manufacturing": {
+    "src": {
+      "source": "fred",
+      "series_id": "CES3000000008"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 30.1
+    }
+  },
+  "weapons-sales": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:weapons-sales"
+    },
+    "dp": {
+      "date": "2024-12-31",
+      "value": 13512
+    }
+  },
+  "weekly-crude-oil-production": {
+    "src": {
+      "source": "eia",
+      "series_id": "WCRFPUS2"
+    },
+    "dp": {
+      "date": "2026-04-24",
+      "value": 13586
+    }
+  },
+  "weekly-economic-index": {
+    "src": {
+      "source": "fred",
+      "series_id": "WEI"
+    },
+    "dp": {
+      "date": "2026-05-09",
+      "value": 2.71
+    }
+  },
+  "wholesale-inventories": {
+    "src": {
+      "source": "fred",
+      "series_id": "WHLSLRIMSA"
+    },
+    "dp": {
+      "date": "2026-03-31",
+      "value": 932843
+    }
+  },
+  "wholesale-trade-payrolls": {
+    "src": {
+      "source": "fred",
+      "series_id": "USWTRADE"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 6065.5
+    }
+  },
+  "withholding-tax-rate": {
+    "src": {
+      "source": "curated",
+      "series_id": "US:withholding-tax-rate"
+    },
+    "dp": {
+      "date": "2025-12-31",
+      "value": 30
+    }
+  },
+  "youth-unemployment-rate": {
+    "src": {
+      "source": "fred",
+      "series_id": "LNS14000012"
+    },
+    "dp": {
+      "date": "2026-04-30",
+      "value": 14.4
+    }
+  }
+}

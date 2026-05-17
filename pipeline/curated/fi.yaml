@@ -7,10 +7,10 @@ corporate-tax-rate:
   unit: "%"
 
 personal-income-tax-rate:
-  value: 56.95
+  value: 52
   date: "2026-12-31"
   unit: "%"
-  note: "Top marginal incl. statlig + kommunalskatt + kyrkoskatt."
+  note: "Top marginal personal income tax. TE 2026-05 = 52% (Finnish Tax Administration)."
 
 sales-tax-rate:
   value: 25.5
@@ -29,9 +29,10 @@ social-security-rate-companies:
   unit: "%"
 
 social-security-rate-employees:
-  value: 9.49
+  value: 10.76
   date: "2026-12-31"
   unit: "%"
+  note: "TE 2026-05 = 10.76% (Finnish Tax Administration, employee contribution incl. pension + unemployment + health)."
 
 retirement-age-men:
   value: 65
@@ -65,21 +66,25 @@ credit-rating:
   unit: "Rating"
 
 hospital-beds:
-  value: 2.81
+  value: 2.6
   date: "2022-12-31"
   unit: "per 1000 people"
+  note: "OECD/WHO via TE: Finland hospital beds = 2.6 per 1000 (revised 2026-05 fetch)."
 
 medical-doctors:
-  value: 3.81
+  value: 3.83
   date: "2021-12-31"
   unit: "per 1000 people"
+  note: "OECD/WHO via TE: 3.83 per 1000 (2021)."
 
 nurses:
-  value: 14.30
+  value: 15.64
   date: "2021-12-31"
   unit: "per 1000 people"
+  note: "OECD via TE: 15.64 nurses per 1000 (2021)."
 
 terrorism-index:
-  value: 1.5
+  value: 0.58
   date: "2025-12-31"
   unit: "Points"
+  note: "Institute for Economics and Peace (Global Terrorism Index) via TE: 0.58 (2025)."

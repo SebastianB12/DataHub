@@ -1,0 +1,283 @@
+adp-employment-change:
+  desc: 'Private businesses in the US added a net 109,000 jobs in April 2026, the largest increase since January 2025 and above market forecasts of 99,000. The stronger-than-expected data still reflects
+    the Fed’s described "low-hire, low-fire" labor market, where employers avoid layoffs but have significantly reduced hiring amid slower labor force growth due to lower immigration. The service-providing
+    sector led gains with 94,000 jobs, driven by education and health services (+61,000), trade, transportation and utilities (+25,000), and financial activities (+9,000). The goods-producing sector contributed
+    15,000 jobs, mainly from construction (+10,000). Small businesses were the top contributors, adding 65,000 jobs, followed by large companies (+42,000), while medium-sized firms added 2,000. source:
+    Automatic Data Processing, Inc.'
+  http: 200
+  label: Automatic Data Processing, Inc.
+average-weekly-hours:
+  desc: 'The average workweek for all employees on private nonfarm payrolls edged up by 0.1 hour to 34.3 hours in April 2026, slightly above market estimates of 34.2 hours. In manufacturing, the average
+    workweek edged up by 0.1 hour to 40.4 hours, and overtime was unchanged at 3.0 hours. The average workweek for production and nonsupervisory employees on private nonfarm payrolls remained at 33.8 hours
+    source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+budget-deficit:
+  desc: 'The United States recorded a Government Budget deficit equal to 5.90 percent of the country''s Gross Domestic Product in 2025. Government Budget in the United States averaged -2.66 percent of GDP
+    from 1948 until 2025, reaching an all time high of 4.50 percent of GDP in 1948 and a record low of -14.50 percent of GDP in 2020. source: U.S. Treasury'
+  http: 200
+  label: U.S. Treasury
+building-permits:
+  desc: 'US building permits fell 11.4% month-over-month to a seasonally adjusted annualized rate of 1.363 million in March 2026, below the preliminary estimate of 1.372 million, revised figures showed.
+    The reading marked the lowest level since August 2025. In February, building permits rose 11%. Permits for buildings with five or more units dropped by 24.9% to an annualized rate of 419 thousand, while
+    single-family permits decreased by 3.8% to 895 Thousand. Regionally, permits declined in the Northeast (-30.2% to 113 thousand), the Midwest (-3.2% to 212 thousand), in the South (-8% to 715 thousand),
+    and in the West (-15% to 323 thousand). source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau
+business-inventories:
+  desc: 'US business inventories rose by 0.9% month-over-month in March 2026, following a 0.4% increase in February and slightly above market expectations of a 0.8% advance. This marked the strongest increase
+    in stocks since June 2022, mainly on account of merchant wholesalers (1.3% vs 0.9% in February). Inventories also went up for manufacturers (0.6% vs 0.1%) and retailers (0.6 vs 0%). On a yearly basis,
+    business inventories grew by 2% in March. source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau
+capital-flows:
+  desc: 'Net foreign acquisitions of long-term securities, short-term U.S. securities, and banking flows resulted in a net TIC inflow of $184.5 billion in February 2026. Of this total, $166.5 billion was
+    attributable to private foreign investors, while foreign official institutions accounted for $18.0 billion. Foreign residents increased their holdings of long-term U.S. securities, with net purchases
+    of $101.1 billion. This included $147.3 billion in purchases by private investors, partly offset by net sales of $46.1 billion by foreign official institutions. At the same time, U.S. investors expanded
+    their holdings of long-term foreign securities, recording net purchases of $42.6 billion. In short-term instruments, foreign residents increased their holdings of U.S. Treasury bills by $91.6 billion.
+    Additionally, their holdings of all dollar-denominated short-term U.S. securities and other custody liabilities rose by $87.4 billion. source: U.S. Department of the Treasury'
+  http: 200
+  label: U.S. Department of the Treasury
+car-production:
+  desc: 'Car Production in the United States decreased to 9.98 Million Units in March from 10.23 Million Units in February of 2026. Car Production in the United States averaged 10.64 Million Units from
+    1967 until 2026, reaching an all time high of 13.89 Million Units in November of 1978 and a record low of 0.09 Million Units in April of 2020. source: Federal Reserve'
+  http: 200
+  label: Federal Reserve
+central-bank-balance:
+  desc: null
+  http: 200
+  label: null
+changes-in-inventories:
+  desc: 'The stocks of goods held by firms in the United States decreased by 7.50 USD Billion in the first quarter of 2026. Changes in Inventories in the United States averaged 34.07 USD Billion from 1950
+    until 2026, reaching an all time high of 227.40 USD Billion in the first quarter of 2022 and a record low of -261.40 USD Billion in the second quarter of 2020. source: U.S. Bureau of Economic Analysis'
+  http: 200
+  label: null
+chicago-fed-national-activity-index:
+  desc: 'The Chicago Fed National Activity Index (CFNAI) dropped to -0.20 in March 2026, its lowest level since November 2025, down from a revised +0.03 in February. Three of the four key categories declined,
+    with production-related indicators contributing -0.20 (down from +0.13 in February), sales, orders, and inventories subtracting -0.01 (from +0.05), and personal consumption and housing also at -0.01
+    (from neutral). Only employment-related indicators improved, adding +0.02 compared to -0.15 in February. source: Federal Reserve Bank of Chicago'
+  http: 200
+  label: Federal Reserve Bank of Chicago
+construction-payrolls:
+  desc: 'Construction Payrolls in the United States decreased to 9 Thousand in April from 16 Thousand in March of 2026. Construction Payrolls in the United States averaged 6.86 Thousand from 1939 until
+    2026, reaching an all time high of 482.00 Thousand in May of 2020 and a record low of -1019.00 Thousand in April of 2020. source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+construction-spending:
+  desc: 'Construction spending in the US rose by 0.6% month-over-month in March 2026, following a 0.2% fall in the prior month and better than the expected 0.2% increase. This marked the first increase
+    since December last year. Private construction increased by 0.8%, buoyed by a 1.7% gain in the residential segment, primarily new single-family projects (+2.7%) and, to a lesser extent, multi-family
+    projects (+0.3%). Conversely, spending on nonresidential structures shrank by 0.2%, primarily manufacturing (-1.2%), commercial (-0.6%) and lodging (-0.5%). Meanwhile, public construction spending fell
+    0.2%, led by declines in both residential (-2.7%) and nonresidential (-0.2%) segments. Year-on-year, construction spending grew by 1.6%. source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau
+consumer-confidence:
+  desc: 'The University of Michigan’s Consumer Sentiment Index dropped to a record low of 48.2 in early May 2026, missing market expectations of 49.5 and falling below April’s 49.8. The current conditions
+    component declined about 9% to 47.8, driven by growing concerns over high prices affecting personal finances and buying conditions for major purchases. Meanwhile, the expectations index edged up to
+    48.5, though real income expectations continued their decline from March. About one-third of consumers spontaneously cited gasoline prices, and roughly 30% mentioned tariffs, underscoring that consumers
+    still feel pressured by rising costs, particularly at the pump. Year-ahead inflation expectations eased slightly to 4.5% from 4.7%, while long-run inflation expectations dipped to 3.4% from 3.5%. source:
+    University of Michigan'
+  http: 200
+  label: University of Michigan
+consumer-credit:
+  desc: 'Total US consumer credit increased by $24.9 billion in March 2026, following a downwardly revised $8.85 billion rise in the previous month and well above forecasts of a $12.5 billion increase.
+    Revolving credit, which includes credit card debt, rose to $1.34 trillion from $1.33 trillion in February. Meanwhile, nonrevolving credit, including auto and student loans, increased to $3.80 trillion
+    from $3.79 trillion in the prior month. source: Federal Reserve'
+  http: 200
+  label: Federal Reserve
+consumer-spending:
+  desc: 'Consumer Spending in the United States increased to 16731.20 USD Billion in the first quarter of 2026 from 16665.20 USD Billion in the fourth quarter of 2025. Consumer Spending in the United States
+    averaged 6788.76 USD Billion from 1947 until 2026, reaching an all time high of 16731.20 USD Billion in the first quarter of 2026 and a record low of 1351.40 USD Billion in the first quarter of 1947.
+    source: U.S. Bureau of Economic Analysis'
+  http: 200
+  label: null
+continuing-jobless-claims:
+  desc: 'Continuing Jobless Claims in the United States increased to 1782 thousand in the week ending May 2 of 2026 from 1758 thousand in the previous week. Continuing Jobless Claims in the United States
+    averaged 2729.19 Thousand from 1967 until 2026, reaching an all time high of 23130.00 Thousand in May of 2020 and a record low of 988.00 Thousand in May of 1969. source: U.S. Department of Labor'
+  http: 200
+  label: U.S. Department of Labor
+core-cpi:
+  desc: 'The annual core inflation rate in the United States, which excludes food and energy, rose to 2.8% in April of 2026 from 2.6% in the previous month, slightly above market expectations of 2.7%. It
+    was the sharpest core inflation rate since September of last year. Prices rose sharply for services less energy services (3.3%) amid higher costs for shelter (3.3%) and transportation services (4.3%).
+    IN turn, prices rose sharply for apparel (4.2%), while they fell rose less for new vehicles (0.2%) and tumbled for used cars and trucks (-2.7%). From the previous month, core consumer prices rose by
+    0.4%, the sharpest increase since January 2025. source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+core-producer-prices:
+  desc: 'Core Producer Prices in the United States increased to 154.06 points in April from 152.48 points in March of 2026. Core Producer Prices in the United States averaged 119.48 points from 2010 until
+    2026, reaching an all time high of 154.06 points in April of 2026 and a record low of 99.90 points in April of 2010. source: U.S. Department of Labor'
+  http: 200
+  label: U.S. Department of Labor
+corporate-profits:
+  desc: 'Corporate profits in the United States rose by 5.7% from the previous period in the fourth quarter of 2025, the most in one year, picking up from the 4.7% increase in the third quarter. Corporate
+    Profits in the United States averaged 681.95 USD Billion from 1947 until 2025, reaching an all time high of 3605.67 USD Billion in the fourth quarter of 2025 and a record low of 9.96 USD Billion in
+    the first quarter of 1947. source: U.S. Bureau of Economics Analysis'
+  http: 200
+  label: U.S. Bureau of Economics Analysis
+corporate-tax-rate:
+  desc: 'The Corporate Tax Rate in the United States stands at 21 percent. Corporate Tax Rate in the United States averaged 31.89 percent from 1909 until 2026, reaching an all time high of 52.80 percent
+    in 1968 and a record low of 1.00 percent in 1910. source: Internal Revenue Service'
+  http: 200
+  label: Internal Revenue Service
+corruption-index:
+  desc: 'The United States scored 64 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in the United States averaged 72.86 Points from 1995
+    until 2025, reaching an all time high of 78.00 Points in 2000 and a record low of 64.00 Points in 2025. source: Transparency International'
+  http: 200
+  label: null
+corruption-rank:
+  desc: The United States is the 29 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in the United States
+    averaged 19.65 from 1995 until 2025, reaching an all time high of 29.00 in 2025 and a record low of 14.00 in 2000.
+  http: 200
+  label: null
+cpi-clothing:
+  desc: 'The transportation sub-index of the CPI basket in the United States increased to 291.75 points in April of 2026 from 283.43 points in March of 2026. CPI Transportation in the United States averaged
+    115.30 points from 1950 until 2026, reaching an all time high of 291.75 points in April of 2026 and a record low of 22.30 points in April of 1950. source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+cpi-median:
+  desc: 'CPI Median in the United States increased to 2.80 percent in April from 2.70 percent in March of 2026. CPI Median in the United States averaged 3.07 percent from 1983 until 2026, reaching an all
+    time high of 7.00 percent in February of 2023 and a record low of 0.50 percent in May of 2010. source: Federal Reserve Bank of Cleveland'
+  http: 200
+  label: Federal Reserve Bank of Cleveland
+cpi-trimmed-mean:
+  desc: 'CPI Trimmed-Mean in the United States increased to 2.80 percent in April from 2.60 percent in March of 2026. CPI Trimmed-Mean in the United States averaged 2.84 percent from 1983 until 2026, reaching
+    an all time high of 7.20 percent in September of 2022 and a record low of 0.70 percent in October of 2010. source: Federal Reserve Bank of Cleveland'
+  http: 200
+  label: Federal Reserve Bank of Cleveland
+credit-rating:
+  desc: null
+  http: 200
+  label: null
+crude-oil-imports:
+  desc: 'Net US crude imports fell by 318 thousand barrels per day in the week ended May 8, 2026. Crude Oil Imports in the United States averaged -7.16 Thousand Barrels from 2001 until 2026, reaching an
+    all time high of 2940.00 Thousand Barrels in June of 2025 and a record low of -3111.00 Thousand Barrels in September of 2025. source: U.S. Energy Information Administration'
+  http: 200
+  label: U.S. Energy Information Administration
+crude-oil-production:
+  desc: 'Crude Oil Production in the United States increased to 13626 BBL/D/1K in February from 13237 BBL/D/1K in January of 2026. Crude Oil Production in the United States averaged 6544.81 BBL/D/1K from
+    1920 until 2026, reaching an all time high of 13864.00 BBL/D/1K in October of 2025 and a record low of 1097.00 BBL/D/1K in January of 1920. source: U.S. Energy Information Administration'
+  http: 200
+  label: U.S. Energy Information Administration
+crude-oil-stocks:
+  desc: null
+  http: 200
+  label: null
+currency:
+  desc: The dollar index rose to approach 99.3 on Friday, the strongest level in about a month, as concerns over war-driven inflation intensified. The situation in the Middle East remains fragile and far
+    from resolved, with Trump describing the first sentence of Iran’s latest proposal as “unacceptable”. As a result, oil prices continued to climb, with the Strait of Hormuz still closed. Meanwhile, a
+    summit between President Trump and Chinese President Xi ended without any major agreements, including any indication that Beijing would help resolve the conflict. Both the CPI and PPI reports released
+    this week suggested that the energy shock is pushing US inflation higher. Traders are now fully pricing in one rate hike by the Fed in March next year, with more than a 50% chance that interest rates
+    will rise before the end of 2026. The greenback strengthened across the board and the biggest gains were seen against the Aussie ad the pound.On the week, the dollar is up nearly 1%.
+  http: 200
+  label: null
+current-account:
+  desc: 'The United States current account deficit narrowed to a seasonally adjusted $190.7 billion in the fourth quarter of 2025 from $239.1 billion in the previous period, marking the lowest deficit since
+    the first quarter of 2021. The goods deficit narrowed to $241.5 billion from $265.9 billion, as imports contracted more than exports, reflecting the impact of tariffs from the US presidential administration.
+    Additionally, the primary income balance swung to a surplus of $23.9 billion from the deficit of $2.5 billion. In the meantime, the services surplus inched lower to $81.4 billion from $86.5 billion
+    and the secondary income deficit inched down to $54.6 billion from $57.2 billion. The gap reflected a current account deficit of 2.4% of the US GDP in the fourth quarter, narrowing from 3.1% in the
+    third quarter. source: U.S. Bureau of Economic Analysis'
+  http: 200
+  label: U.S. Bureau of Economic Analysis
+cushing-crude-oil-stocks:
+  desc: 'Crude stocks at the Cushing, Oklahoma, delivery hub decreased by 1.702 million barrels in the week ended May 8, 2026. Cushing Crude Oil Stocks in the United States averaged 13.67 Thousand Barrels
+    from 2004 until 2026, reaching an all time high of 6417.00 Thousand Barrels in April of 2020 and a record low of -5587.00 Thousand Barrels in May of 2020. source: U.S. Energy Information Administration'
+  http: 200
+  label: U.S. Energy Information Administration
+dallas-fed-manufacturing-index:
+  desc: 'The Dallas FED''s general business activity index for Texas manufacturing fell to -2.3 in April 2026 from -0.2 in March, marking its lowest level so far this year. The company outlook index rebounded
+    into positive territory at 3, while the outlook uncertainty index declined to 17.9 after nearing a one-year high in March. Labor market indicators were largely stable. Employment remained flat, but
+    firms reported slightly longer workweeks, with the hours worked index rising to 4 from 0.9. Wage pressures showed little movement, as both the wages and benefits index were unchanged. Price pressures
+    intensified, the finished goods price index surged to 27.6, its highest level since July 2022, while the raw materials price index climbed 4.3 points to 37. Looking ahead, expectations of general business
+    activity rose 4 points to 14.1, as firms expect an increase in manufacturing activity over the next six months. source: Federal Reserve Bank of Dallas'
+  http: 200
+  label: Federal Reserve Bank of Dallas
+disposable-personal-income:
+  desc: 'Disposable Personal Income in the United States decreased to 23429.80 USD Billion in February from 23448.10 USD Billion in January of 2026. Disposable Personal Income in the United States averaged
+    6755.08 USD Billion from 1959 until 2026, reaching an all time high of 23448.10 USD Billion in January of 2026 and a record low of 351.50 USD Billion in January of 1959. source: U.S. Bureau of Economic
+    Analysis'
+  http: 200
+  label: null
+distillate-fuel-production:
+  desc: 'Distillate Fuel Production in the United States decreased to -124 Thousand Barrels in May 8 from -24 Thousand Barrels in the previous week. Distillate Fuel Production in the United States averaged
+    1.08 Thousand Barrels from 1982 until 2026, reaching an all time high of 806.00 Thousand Barrels in March of 2021 and a record low of -1050.00 Thousand Barrels in December of 2022. source: U.S. Energy
+    Information Administration'
+  http: 200
+  label: U.S. Energy Information Administration
+distillate-stocks:
+  desc: 'Distillate Stocks in the United States increased to 190 Thousand Barrels in May 8 from -1294 Thousand Barrels in the previous week. Distillate Stocks in the United States averaged -20.61 Thousand
+    Barrels from 1982 until 2026, reaching an all time high of 11205.00 Thousand Barrels in January of 2015 and a record low of -13011.00 Thousand Barrels in December of 1983. source: U.S. Energy Information
+    Administration'
+  http: 200
+  label: U.S. Energy Information Administration
+durable-goods-orders:
+  desc: 'New orders for US-manufactured durable goods rose by 0.8% from the previous month to $318.9 billion in March of 2026, rebounding from the revised 1.2% drop in the previous month, and slightly ahead
+    of market expectations of a 0.5% increase. The result reflected some traction to goods orders despite the jump injection of uncertainty in the period as the war with Iran triggered a surge in energy
+    prices and disrupted global shipping. Orders rose sharply for computers and electronic products (3.7% to $29.6 billion), aligned with the stronger momentum for AI products. Orders were also higher for
+    machinery (0.8% to $41.8 billion), primary metals (0.4% to 28.8 billion), electrical equipment (0.8% to $18.3 billion), and the commonly volatile transportation equipment space (0.8% to $106.7 billion).
+    source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau
+durable-goods-orders-ex-defense:
+  desc: 'New orders for manufactured durable goods, excluding defense, in the US decreased 0.3% in March 2026. Durable Goods Orders Ex Defense in the United States averaged 0.34 percent from 1992 until
+    2026, reaching an all time high of 29.30 percent in July of 2014 and a record low of -22.20 percent in August of 2014. source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau
+durable-goods-orders-ex-transport:
+  desc: null
+  http: 200
+  label: null
+employed-persons:
+  desc: 'The number of employed persons in The United States decreased to 162622 Thousand in April of 2026 from 162848 Thousand in March of 2026. Employed Persons in the United States averaged 108558.75
+    Thousand from 1948 until 2026, reaching an all time high of 163992.00 Thousand in December of 2025 and a record low of 57172.00 Thousand in June of 1949. source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: null
+employment-cost-index:
+  desc: 'Compensation costs for civilian workers in the United States rose by 0.9% in the first quarter of 2026, after a 0.7% increase in the previous period, slightly above forecasts of a 0.8% rise. Wages
+    and salaries increased 0.8% (vs 0.7% in Q4 2025) and benefits rose at a faster pace of 1.2% (vs 0.8%), the highest level in five months. Compensation costs for private industry workers grew 0.9%, from
+    0.7% in Q4 2025, and for state and local government workers grew 1%, from 0.8% in the previous quarter. On an annual basis, employment cost growth remained unchanged from the last period at 3.4%. source:
+    U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+employment-cost-index-benefits:
+  desc: 'Benefits in the US rose by 1.2% in Q1 2026, accelerating from a 0.8% increase in the previous period and reaching its highest level in five months. Private industry benefits grew by 1.3%, while
+    state and local government''s benefits increased by 1.2%. On an annual basis, benefits rose by 3.6% broadly, while health benefits'' growth eased to 5.7% (vs 6.4%). source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+employment-cost-index-wages:
+  desc: 'Wages and salaries in the US rose 0.8% quarter-on-quarter in Q1 2026, accelerating from a 0.7% increase in the previous period. Private industry pay remained unchanged while state and local governments
+    wage growth increase by 1%, from 0.8%. On an annual basis, wages increased 3.4% broadly, picking up from a 3.3% in the last quarter. source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: U.S. Bureau of Labor Statistics
+employment-rate:
+  desc: 'Employment Rate in the United States decreased to 59.10 percent in April from 59.20 percent in March of 2026. Employment Rate in the United States averaged 59.26 percent from 1948 until 2026, reaching
+    an all time high of 64.70 percent in April of 2000 and a record low of 51.20 percent in April of 2020. source: U.S. Bureau of Labor Statistics'
+  http: 200
+  label: null
+energy-inflation:
+  desc: 'US energy inflation soared to 17.9% year-over-year in April 2026, up from 12.5% in March and marking the steepest annual increase since September 2022. The surge was driven by the Iran war and
+    the closure of the Strait of Hormuz. Energy commodities spiked 29.2%, with gasoline prices up 28.4% and fuel oil rising 54.3%. Energy services also climbed 5.4%, led by a 6.1% increase in electricity
+    costs and a 3.0% rise in piped gas service. On a monthly basis, energy prices jumped 3.8% in April, following a 10.9% surge in March. source: Bureau of Labor Statistics'
+  http: 200
+  label: null
+existing-home-sales:
+  desc: 'Existing home sales in the United States inched higher by 0.2% from the seven-month low in the previous month to an annualized rate of 4.02 million units in April of 2026. The result was slightly
+    below expectations 4.05 million units sold, pressured by higher mortgage rates after the surge in energy prices drove long-term Treasury yields to increase. Sales fell sharply in the West (-2.6% to
+    750 thousand), offsetting an increase in the Midwest (2.2% to 950 thousand). Inventory grew by 5.8% to 1.47 million, equivalent to 4.4 months of supply. Still, the NAR saw the result as optimistic.
+    “Despite mixed macroeconomic signals—including a record-high stock market and historically low consumer confidence—home sales were modestly boosted by the continued improvement in housing affordability,”
+    said NAR Chief Economist Dr. Lawrence Yun. “Mortgage rates are lower from a year ago, and average income growth is outpacing home price gains.”. source: National Association of Realtors'
+  http: 200
+  label: National Association of Realtors
+exports:
+  desc: 'US exports rose 2.0%, or $6.2 billion, to a record $320.9 billion in March 2026, fueled by a $6.5 billion surge in goods exports. Industrial supplies and materials led the gain, up $5.0 billion,
+    driven by higher energy prices tied to the Iran conflict. Key contributors included crude oil (+$2.8 billion), other petroleum products (+$1.7 billion), and fuel oil (+$1.6 billion), while exports of
+    other precious metals fell $1.6 billion. Food, feed, and beverage exports increased $1.1 billion, boosted by soybeans, while consumer goods exports declined $1.7 billion. Services exports dipped $0.3
+    billion, with travel down $1.1 billion, partially offset by gains in transport (+$0.2 billion), financial services (+$0.1 billion), and other business services (+$0.1 billion). source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau
+factory-orders:
+  desc: 'US factory orders rose 1.5% month-over-month to $630.4 billion in March 2026, beating market expectations of 0.5% and following an upwardly revised 0.3% increase in February. New orders for manufactured
+    durable goods increased 0.8% to $318.9 billion, ending three straight months of declines. Computers and electronic products surged 3.6%, the most since March 2001, with electromedical, measuring, and
+    control instruments up 7.9% to a record high amid an AI investment boom and data center construction. Transport equipment orders also rose 0.8%, led by vehicles (0.9%), defense aircraft and parts (17.8%),
+    and ships and boats (30.9%). Gains were also seen in machinery (0.9%), electrical equipment, appliances, and components (0.8%), and primary metals (0.5%). Nondurable goods orders rose 2.1% to $311.5
+    billion, the highest level since October 2022. Excluding transportation, factory orders grew 1.6% in March, while excluding defense, orders rose 0.9%. source: U.S. Census Bureau'
+  http: 200
+  label: U.S. Census Bureau

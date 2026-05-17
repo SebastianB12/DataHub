@@ -443,8 +443,8 @@ population:
   te_page: "https://tradingeconomics.com/france/population"
   te_value: 69.1
   suggested_source: "insee"
-  current_source: "worldbank"
-  conform: false
+  current_source: "insee"
+  conform: true
   verified: true
 ppi:
   te_label: "INSEE, France"
@@ -562,6 +562,6 @@ youth-unemployment-rate:
   te_value: 20.5
   te_period: "March"
   suggested_source: "eurostat"
-  current_source: "insee"
-  conform: false
+  current_source: "eurostat"
+  conform: true
   verified: true

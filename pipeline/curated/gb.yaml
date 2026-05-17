@@ -48,10 +48,10 @@ social-security-rate-employees:
 # --- Government ---
 
 corruption-index:
-  value: 71
+  value: 70
   date: "2025-12-31"
   unit: "Points"
-  note: "Transparency International CPI 2025 (0=korrupt, 100=sauber)."
+  note: "Transparency International CPI 2025 (0=korrupt, 100=sauber). TE: 70."
   source_url: "https://www.transparency.org/en/cpi/2025"
 
 corruption-rank:
@@ -99,16 +99,16 @@ retirement-age-women:
 # --- Health (OECD Health Statistics) ---
 
 hospital-beds:
-  value: 2.36
+  value: 2.44
   date: "2023-12-31"
   unit: "per 1000 people"
-  note: "OECD Health Stats. UK unter OECD-Schnitt."
+  note: "OECD Health Stats 2023 — matches TE 2.44."
 
 hospitals:
-  value: 28.0
-  date: "2023-12-31"
+  value: 29.73
+  date: "2022-12-31"
   unit: "per one million people"
-  note: "WHO Global Health Observatory."
+  note: "WHO Global Health Observatory 2022 — matches TE 29.73."
 
 medical-doctors:
   value: 3.16

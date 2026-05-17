@@ -20,10 +20,10 @@ sales-tax-rate:
   note: "VAT Standard Rate."
 
 social-security-rate:
-  value: 15.05
+  value: 11.25
   date: "2026-12-31"
   unit: "%"
-  note: "PRSI total."
+  note: "PRSI Class A employer rate (TE definition = employer side; matches TE 11.25)."
 
 social-security-rate-companies:
   value: 11.05
@@ -52,9 +52,10 @@ minimum-wages:
   note: "National Minimum Wage 2026."
 
 corruption-index:
-  value: 77
+  value: 76
   date: "2025-12-31"
   unit: "Points"
+  note: "Transparency International CPI 2025 (released early 2026)."
 
 corruption-rank:
   value: 11
@@ -77,11 +78,13 @@ medical-doctors:
   unit: "per 1000 people"
 
 nurses:
-  value: 12.50
-  date: "2021-12-31"
+  value: 15.78
+  date: "2024-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics 2024 (matches TE)."
 
 terrorism-index:
-  value: 1.0
+  value: 0.42
   date: "2025-12-31"
   unit: "Points"
+  note: "Global Terrorism Index 2025 (Institute for Economics & Peace; matches TE)."

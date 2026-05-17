@@ -404,10 +404,91 @@ TABLES: list[dict] = [
         "freq": "M", "unit": "Index", "adjustment": "NSA",
         "startyear": "2020",
     },
-    # GDP-real: Destatis publishes 81000-0020 VGR018 as INDEX 2020=100 (chain-linked
-    # volume), not as Bn EUR level. The Mrd EUR level lives in 81000-0028 (VGR Komp.
-    # Mrd EUR jew. Preise) which is too large for sync-fetch without classifying filters.
-    # Kept on eurostat (namq_10_gdp:CLV10_MEUR) — to be revisited.
+    # ===== DE CPI Sonderpositionen (TE-source-conformity, 2026-05-16) =====
+    # Table 61111-0006 with classifyingvariable1=CC13B1 returns the Sonderpositionen
+    # (special positions) variant of the COICOP breakdown — including "Gesamtindex ohne
+    # Nahrungsmittel und Energie" (core CPI, CC13-63E) and "Energie (Haushaltsenergie
+    # und Kraftstoffe)" (CC13-65D). Index base 2020=100, monthly, Deutschland insgesamt.
+    # Verified April 2026:
+    #   CC13-63E (core)  = 120.6 → YoY +2.29% (TE ~2.2-2.3% ok)
+    #   CC13-65D (energy)= 157.4 → YoY +10.15% (TE ~10.1% ok)
+    {
+        "name": "61111-0006",
+        "indicator": "core-cpi",
+        "classifyingvariable1": "CC13B1", "classifyingkey1": "*",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-63E"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "1991",
+    },
+    {
+        "name": "61111-0006",
+        "indicator": "energy-inflation",
+        "classifyingvariable1": "CC13B1", "classifyingkey1": "*",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-65D"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "1991",
+    },
+    # Services inflation: CC13-70 Dienstleistungen (Services aggregate), 2020=100.
+    # April 2026 = 120.7, YoY +2.81%. TE attributes Federal Statistical Office.
+    {
+        "name": "61111-0006",
+        "indicator": "services-inflation",
+        "classifyingvariable1": "CC13B1", "classifyingkey1": "*",
+        "filter_unit": "2020=100",
+        "filter_value_code": "PREIS1",
+        "filter_attrs": {"3_variable_attribute_code": "CC13-70"},
+        "freq": "M", "unit": "Index", "adjustment": "NSA",
+        "startyear": "1991",
+    },
+    # Changes-in-inventories: Vorratsveraenderungen und Nettozugang an Wertsachen,
+    # sa, in jeweiligen Preisen Mrd EUR (Q4 2025 TE = 21.01). VGR034 + X13JDKSB + VGRJPM.
+    {
+        "name": "81000-0020",
+        "indicator": "changes-in-inventories",
+        "filter_value_code": "VGR034",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDKSB",
+            "4_variable_attribute_code": "VGRJPM",  # in jeweiligen Preisen (Mrd. EUR)
+        },
+        "freq": "Q",
+        "unit": "Billion EUR",
+        "adjustment": "SA",
+    },
+    # Bankruptcies: Beantragte Insolvenzverfahren (Unternehmen) Insgesamt, monatlich.
+    # 52411-0011 ISV006 (Insolvenzverfahren Unternehmen), Rechtsform=Insgesamt.
+    # Jan 2026 = 1919 (TE-conform). Insgesamt row has empty 3_variable_attribute_code.
+    {
+        "name": "52411-0011",
+        "indicator": "bankruptcies",
+        "filter_unit": "Anzahl",
+        "filter_value_code": "ISV006",
+        "filter_attrs": {
+            "3_variable_attribute_code": "",  # Insgesamt (no Rechtsform breakdown)
+        },
+        "freq": "M",
+        "unit": "Number",
+        "adjustment": "NSA",
+        "startyear": "2003",
+    },
+    # GDP-real: 81000-0020 VGR014 (Bruttoinlandsprodukt) + X13JDKSB (saisonbereinigt) +
+    # VGRPVK (preisbereinigt, verkettete Volumenangabe Mrd. EUR, Referenzjahr 2020).
+    # Q4 2025 = 905.318 Mrd EUR, QoQ from Q3 = +0.30% (matches TE).
+    {
+        "name": "81000-0020",
+        "indicator": "gdp-real",
+        "filter_value_code": "VGR014",
+        "filter_attrs": {
+            "3_variable_attribute_code": "X13JDKSB",  # X13 kalender- und saisonbereinigt
+            "4_variable_attribute_code": "VGRPVK",     # preisbereinigt, verkettete Volumenang. Mrd EUR
+        },
+        "freq": "Q",
+        "unit": "Billion EUR",
+        "adjustment": "SA",
+    },
 ]
 
 

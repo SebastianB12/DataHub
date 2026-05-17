@@ -1,0 +1,338 @@
+{
+  "budget-deficit": {
+    "te_url": "https://tradingeconomics.com/portugal/government-budget",
+    "html_len": 288547
+  },
+  "business-confidence": {
+    "te_source_url": "http://www.ine.pt",
+    "te_source_label": "Statistics Portugal",
+    "te_actual_td": "2.6",
+    "te_url": "https://tradingeconomics.com/portugal/business-confidence",
+    "html_len": 296868
+  },
+  "capacity-utilization": {
+    "te_source_url": "https://commission.europa.eu/index_en",
+    "te_source_label": "European Commission",
+    "te_url": "https://tradingeconomics.com/portugal/capacity-utilization",
+    "html_len": 284031
+  },
+  "changes-in-inventories": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/changes-in-inventories",
+    "html_len": 284222
+  },
+  "consumer-confidence": {
+    "te_actual_td": "-18.70",
+    "te_url": "https://tradingeconomics.com/portugal/consumer-confidence",
+    "html_len": 296441
+  },
+  "consumer-spending": {
+    "te_url": "https://tradingeconomics.com/portugal/consumer-spending",
+    "html_len": 284413
+  },
+  "core-cpi": {
+    "te_url": "https://tradingeconomics.com/portugal/core-inflation-rate",
+    "html_len": 288238
+  },
+  "corporate-tax-rate": {
+    "te_url": "https://tradingeconomics.com/portugal/corporate-tax-rate",
+    "html_len": 284435
+  },
+  "corruption-index": {
+    "te_url": "https://tradingeconomics.com/portugal/corruption-index",
+    "html_len": 290898
+  },
+  "corruption-rank": {
+    "te_url": "https://tradingeconomics.com/portugal/corruption-rank",
+    "html_len": 290909
+  },
+  "cpi-clothing": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/cpi-clothing",
+    "html_len": 277521
+  },
+  "cpi-education": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/cpi-education",
+    "html_len": 277561
+  },
+  "cpi-food": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/cpi-food",
+    "html_len": 277358
+  },
+  "cpi-housing-utilities": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/cpi-housing-utilities",
+    "html_len": 288407
+  },
+  "cpi-recreation-and-culture": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/cpi-recreation-and-culture",
+    "html_len": 278074
+  },
+  "cpi-transportation": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/cpi-transportation",
+    "html_len": 288356
+  },
+  "credit-rating": {
+    "te_url": "https://tradingeconomics.com/portugal/credit-rating",
+    "html_len": 248452
+  },
+  "current-account": {
+    "te_source_url": "https://www.bportugal.pt/",
+    "te_source_label": "Banco de Portugal",
+    "te_actual_td": "€17.1M",
+    "te_url": "https://tradingeconomics.com/portugal/current-account",
+    "html_len": 295437
+  },
+  "current-account-to-gdp": {
+    "te_source_url": "https://www.bportugal.pt",
+    "te_source_label": "Banco de Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/current-account-to-gdp",
+    "html_len": 285608
+  },
+  "disposable-personal-income": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/disposable-personal-income",
+    "html_len": 284856
+  },
+  "employed-persons": {
+    "te_source_url": "http://www.ine.pt",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/employed-persons",
+    "html_len": 285960
+  },
+  "employment-rate": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/employment-rate",
+    "html_len": 285756
+  },
+  "energy-inflation": {
+    "te_url": "https://tradingeconomics.com/portugal/energy-inflation",
+    "html_len": 267024
+  },
+  "exports": {
+    "te_url": "https://tradingeconomics.com/portugal/exports",
+    "html_len": 297853
+  },
+  "food-inflation": {
+    "te_source_url": "http://www.ine.pt",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/food-inflation",
+    "html_len": 288076
+  },
+  "gdp": {
+    "te_source_url": "https://www.worldbank.org/",
+    "te_source_label": "World Bank",
+    "te_url": "https://tradingeconomics.com/portugal/gdp",
+    "html_len": 288388
+  },
+  "gdp-per-capita": {
+    "te_source_url": "https://www.worldbank.org/",
+    "te_source_label": "World Bank",
+    "te_url": "https://tradingeconomics.com/portugal/gdp-per-capita",
+    "html_len": 290697
+  },
+  "gdp-per-capita-ppp": {
+    "te_source_url": "https://www.worldbank.org/",
+    "te_source_label": "World Bank",
+    "te_url": "https://tradingeconomics.com/portugal/gdp-per-capita-ppp",
+    "html_len": 292145
+  },
+  "gdp-real": {
+    "te_actual_td": "1.9%",
+    "te_url": "https://tradingeconomics.com/portugal/gdp-growth-annual",
+    "html_len": 295191
+  },
+  "government-debt": {
+    "te_url": "https://tradingeconomics.com/portugal/government-debt",
+    "html_len": 282764
+  },
+  "government-debt-total": {
+    "te_url": "https://tradingeconomics.com/portugal/government-debt",
+    "html_len": 282764
+  },
+  "government-spending": {
+    "te_url": "https://tradingeconomics.com/portugal/government-spending",
+    "html_len": 288179
+  },
+  "government-spending-eur": {
+    "te_url": "https://tradingeconomics.com/portugal/government-spending-eur",
+    "html_len": 267143
+  },
+  "gross-fixed-capital-formation": {
+    "te_url": "https://tradingeconomics.com/portugal/gross-fixed-capital-formation",
+    "html_len": 288375
+  },
+  "hospital-beds": {
+    "te_url": "https://tradingeconomics.com/portugal/hospital-beds",
+    "html_len": 282005
+  },
+  "house-price-index": {
+    "te_url": "https://tradingeconomics.com/portugal/house-price-index",
+    "html_len": 267041
+  },
+  "imports": {
+    "te_url": "https://tradingeconomics.com/portugal/imports",
+    "html_len": 298097
+  },
+  "industrial-production": {
+    "te_actual_td": "-4.4%",
+    "te_url": "https://tradingeconomics.com/portugal/industrial-production",
+    "html_len": 297620
+  },
+  "inflation-cpi": {
+    "te_source_url": "http://www.ine.pt",
+    "te_source_label": "Statistics Portugal",
+    "te_actual_td": "3.4%",
+    "te_url": "https://tradingeconomics.com/portugal/inflation-cpi",
+    "html_len": 300869
+  },
+  "interest-rate": {
+    "te_url": "https://tradingeconomics.com/portugal/interest-rate",
+    "html_len": 288326
+  },
+  "job-vacancies": {
+    "te_source_url": "https://www.iefp.pt",
+    "te_source_label": "IEFP - Institute of Employment and Professional Formation, Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/job-vacancies",
+    "html_len": 293562
+  },
+  "labor-force-participation-rate": {
+    "te_source_url": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_main",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/labor-force-participation-rate",
+    "html_len": 286436
+  },
+  "labour-costs": {
+    "te_url": "https://tradingeconomics.com/portugal/labour-costs",
+    "html_len": 284720
+  },
+  "long-term-unemployment-rate": {
+    "te_url": "https://tradingeconomics.com/portugal/long-term-unemployment-rate",
+    "html_len": 285564
+  },
+  "manufacturing-production": {
+    "te_url": "https://tradingeconomics.com/portugal/manufacturing-production",
+    "html_len": 284592
+  },
+  "medical-doctors": {
+    "te_url": "https://tradingeconomics.com/portugal/medical-doctors",
+    "html_len": 267007
+  },
+  "minimum-wages": {
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_label": "EUROSTAT",
+    "te_url": "https://tradingeconomics.com/portugal/minimum-wages",
+    "html_len": 284095
+  },
+  "mining-production": {
+    "te_url": "https://tradingeconomics.com/portugal/mining-production",
+    "html_len": 283734
+  },
+  "nurses": {
+    "te_url": "https://tradingeconomics.com/portugal/nurses",
+    "html_len": 281739
+  },
+  "personal-income-tax-rate": {
+    "te_source_url": "http://info.portaldasfinancas.gov.pt",
+    "te_source_label": "Autoridade Tributária e Aduaneira",
+    "te_url": "https://tradingeconomics.com/portugal/personal-income-tax-rate",
+    "html_len": 284756
+  },
+  "population": {
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_label": "EUROSTAT",
+    "te_url": "https://tradingeconomics.com/portugal/population",
+    "html_len": 284798
+  },
+  "ppi": {
+    "te_source_url": "https://www.ine.pt/",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/producer-prices",
+    "html_len": 288831
+  },
+  "productivity": {
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_label": "EUROSTAT",
+    "te_url": "https://tradingeconomics.com/portugal/productivity",
+    "html_len": 283716
+  },
+  "retail-sales": {
+    "te_actual_td": "0.7%",
+    "te_url": "https://tradingeconomics.com/portugal/retail-sales",
+    "html_len": 290865
+  },
+  "retirement-age-men": {
+    "te_source_url": "https://en.seg-social.pt/homepage",
+    "te_source_label": "Instituto da Segurança Social",
+    "te_url": "https://tradingeconomics.com/portugal/retirement-age-men",
+    "html_len": 293060
+  },
+  "retirement-age-women": {
+    "te_source_url": "https://en.seg-social.pt/homepage",
+    "te_source_label": "Instituto da Segurança Social",
+    "te_url": "https://tradingeconomics.com/portugal/retirement-age-women",
+    "html_len": 293144
+  },
+  "sales-tax-rate": {
+    "te_url": "https://tradingeconomics.com/portugal/sales-tax-rate",
+    "html_len": 284224
+  },
+  "services-inflation": {
+    "te_url": "https://tradingeconomics.com/portugal/services-inflation",
+    "html_len": 267058
+  },
+  "services-sentiment": {
+    "te_url": "https://tradingeconomics.com/portugal/services-sentiment",
+    "html_len": 267058
+  },
+  "social-security-rate": {
+    "te_source_url": "http://www.seg-social.pt",
+    "te_source_label": "Instituto da Segurança Social",
+    "te_url": "https://tradingeconomics.com/portugal/social-security-rate",
+    "html_len": 284537
+  },
+  "social-security-rate-companies": {
+    "te_url": "https://tradingeconomics.com/portugal/social-security-rate-companies",
+    "html_len": 267262
+  },
+  "social-security-rate-employees": {
+    "te_url": "https://tradingeconomics.com/portugal/social-security-rate-employees",
+    "html_len": 267262
+  },
+  "terrorism-index": {
+    "te_url": "https://tradingeconomics.com/portugal/terrorism-index",
+    "html_len": 292344
+  },
+  "unemployed-persons": {
+    "te_source_url": "http://www.ine.pt",
+    "te_source_label": "Statistics Portugal",
+    "te_url": "https://tradingeconomics.com/portugal/unemployed-persons",
+    "html_len": 286004
+  },
+  "unemployment": {
+    "te_source_url": "http://www.ine.pt",
+    "te_source_label": "Statistics Portugal",
+    "te_actual_td": "5.8%",
+    "te_url": "https://tradingeconomics.com/portugal/unemployment-rate",
+    "html_len": 300728
+  },
+  "youth-unemployment-rate": {
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_label": "EUROSTAT",
+    "te_url": "https://tradingeconomics.com/portugal/youth-unemployment-rate",
+    "html_len": 285263
+  }
+}

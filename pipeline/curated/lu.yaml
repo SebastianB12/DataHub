@@ -2,10 +2,10 @@
 country: LU
 
 corporate-tax-rate:
-  value: 24.94
+  value: 23.87
   date: "2026-12-31"
   unit: "%"
-  note: "Combined CIT + municipal trade tax + solidarity surtax."
+  note: "TE-conform (re-audit 2026-05-17). Statutory all-in CIT incl. solidarity surtax + municipal trade tax (Luxembourg-City)."
 
 personal-income-tax-rate:
   value: 42
@@ -19,19 +19,22 @@ sales-tax-rate:
   note: "Niedrigste VAT in der EU."
 
 social-security-rate:
-  value: 25.94
+  value: 28.05
   date: "2026-12-31"
   unit: "%"
+  note: "TE-conform 2026-05-17."
 
 social-security-rate-companies:
-  value: 13.05
+  value: 15.10
   date: "2026-12-31"
   unit: "%"
+  note: "TE-conform 2026-05-17."
 
 social-security-rate-employees:
-  value: 12.89
+  value: 12.95
   date: "2026-12-31"
   unit: "%"
+  note: "TE-conform 2026-05-17."
 
 retirement-age-men:
   value: 65
@@ -43,21 +46,20 @@ retirement-age-women:
   date: "2026-12-31"
   unit: "Years"
 
-minimum-wages:
-  value: 2638
-  date: "2026-01-31"
-  unit: "EUR/Month"
-  note: "Höchster Mindestlohn EU."
+# minimum-wages: migrated to Eurostat (earn_mw_cur:LU:EUR, bi-annual) in migration 081.
+# Re-audit 2026-05-17: TE attributes EUROSTAT; latest TE value 2704 EUR/Month.
 
 corruption-index:
-  value: 81
+  value: 78
   date: "2025-12-31"
   unit: "Points"
+  note: "TE-conform 2025 CPI (Transparency International)."
 
 corruption-rank:
-  value: 9
+  value: 8
   date: "2025-12-31"
   unit: "Rank"
+  note: "TE-conform 2025 CPI rank (Transparency International)."
 
 credit-rating:
   value: 96
@@ -65,9 +67,10 @@ credit-rating:
   unit: "Rating"
 
 hospital-beds:
-  value: 4.30
-  date: "2022-12-31"
+  value: 3.94
+  date: "2023-12-31"
   unit: "per 1000 people"
+  note: "TE-conform OECD 2023 value (re-audit 2026-05-17)."
 
 medical-doctors:
   value: 3.10

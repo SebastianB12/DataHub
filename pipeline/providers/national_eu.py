@@ -15,7 +15,13 @@ Currently supported (verified reachable from this network as of 2026-05-09):
   CY — CYSTAT PxWeb (cystatdb.cystat.gov.cy) — Cloudflare-protected, needs cloudscraper
 
 Network-blocked from this environment (deferred):
-  NL — datasets.cbs.nl Connection Timeout
+  NL — datasets.cbs.nl REACHABLE since 2026-05-16 (was previously TCP-timeout).
+       Per NL re-audit (docs/_audit_nl_reaudit.yaml), 17 slugs where TE attributes
+       Statistics Netherlands could be migrated from Eurostat → CBS OData v1
+       (datasets.cbs.nl/odata/v1/CBS or opendata.cbs.nl/ODataApi). Honest label
+       policy: current source='eurostat' is correct because we fetch Eurostat.
+       Future work: implement NlCbsProvider and switch defaults where CBS gives
+       a closer value-match to TE.
   CZ — apl.czso.cz HTML only (no JSON API)
   HU — statinfo.ksh.hu HTML only
   AT — Statistik Austria endpoint discovery pending
@@ -91,11 +97,14 @@ DK_SERIES = [
      "filters": {"SÆSON": "SÆSON", "BRANCHEDB25UDVALG": "C"},
      "freq": "M", "unit": "Index", "adjustment": "SA", "conversion": 1.0,
      "note": "DK Statbank IPOP21 IP index total manufacturing SA"},
-    # AUP01: Unemployment % of labour force — All Denmark, total age, total sex
-    {"slug": "unemployment", "table": "AUP01",
-     "filters": {"OMRÅDE": "000", "KØN": "TOT", "ALDER": "TOT"},
+    # Unemployment rate (TE-aligned net unemployment, SA % of labour force).
+    # AUS07 YD=NET, SAESONFAK=9 (SA % of labour force) — matches TE 2.7% headline.
+    # Verified 2026-05-17: 2026M03 NET SA% = 2.7 (TE: 2.7 exact match).
+    # (Previously used AUP01 which is GROSS registered SA% ~3.2 — not what TE displays.)
+    {"slug": "unemployment", "table": "AUS07",
+     "filters": {"YD": "NET", "SAESONFAK": "9"},
      "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
-     "note": "DK Statbank AUP01 unemployment rate (all DK, both genders, all ages)"},
+     "note": "DK Statbank AUS07 NET unemployment SA % of labour force (TE headline)"},
     # DETA211A: Retail Trade Index — total retail trade
     {"slug": "retail-sales", "table": "DETA211A",
      "filters": {"BRANCHEDB25UDVALG": "G47"},
@@ -297,6 +306,24 @@ DK_SERIES = [
      "filters": {"BRANCHE": "PIALT", "PRISENHED": "LPR_I"},
      "freq": "A", "unit": "Index (2020=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "DK Statbank NP23 Labour productivity index, total economy (PIALT), 2020=100, annual"},
+
+    # === Migration 089 (2026-05-17): DK re-audit — DST government-debt + debt-total ===
+    # government-debt (TE: % of GDP, "Government Debt to GDP"): EDP1 GAELD ENHED=PCT, LAND=DK.
+    # Verified 2026-05-17: 2025 = 27.9% of GDP (TE: 27.90 exact match).
+    # TE labels source as "Statistics Denmark"; we fetch from DST -> source='dst'.
+    {"slug": "government-debt", "table": "EDP1", "series_id": "DST/EDP1/debt-pct-gdp",
+     "filters": {"LAND": "DK", "FUNKTION": "GAELD", "ENHED": "PCT"},
+     "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank EDP1 Government EMU-debt, % of GDP (annual, general govt)"},
+    # government-debt-total (TE: "Government Debt" central govt, DKK Billion).
+    # DST DNSOSB INSTRUMENT=2000 (Gross debt - Total), monthly central-government debt.
+    # Verified 2026-05-17: 2026M03 = 592.729 DKK bn (TE: 592.73 exact match).
+    # TE labels source "Danmarks Nationalbank" (debt manager), but the table is published
+    # via DST Statbank — honest source label is 'dst'.
+    {"slug": "government-debt-total", "table": "DNSOSB", "series_id": "DST/DNSOSB/debt-total",
+     "filters": {"INSTRUMENT": "2000"},
+     "freq": "M", "unit": "Billion DKK", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DK Statbank DNSOSB Central government gross debt total (DKK bn, monthly)"},
 ]
 
 
@@ -479,12 +506,14 @@ FI_SERIES = [
      "series_id": "STATFI/ntp/132h/inventories",
      "freq": "Q", "unit": "EUR million (current prices)", "adjustment": "SA", "conversion": 1.0,
      "note": "FI Tilastokeskus 132h Change in inventories (P52K), current prices SA, EUR mn"},
-    # government-spending = P3KS13.
-    {"slug": "government-spending", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
-     "query": {"Taloustoimi": "P3KS13", "Tiedot": "kausitvv2015"},
-     "series_id": "STATFI/ntp/132h/gov-spending",
-     "freq": "Q", "unit": "EUR million (chained 2015)", "adjustment": "SA", "conversion": 1.0,
-     "note": "FI Tilastokeskus 132h Government consumption (S13), chained 2015 SA, EUR mn"},
+    # government-spending: TE displays % of GDP (general government total expenditure / GDP).
+    # Switched 2026-05-17 from ntp 132h P3KS13 EUR level to vtp 129d OTES bkt_suhde % GDP.
+    # Verified: 2025 = 57.5% (exact TE match).
+    {"slug": "government-spending", "path": "StatFin/vtp/statfin_vtp_pxt_129d.px",
+     "query": {"Sektori": "S13", "Taloustoimi": "OTES", "Tiedot": "bkt_suhde"},
+     "series_id": "STATFI/vtp/129d/gov-spending-pct-gdp",
+     "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 129d S13 OTES Total expenditure consolidated, % of GDP"},
     # gross-fixed-capital-formation = P51K.
     {"slug": "gross-fixed-capital-formation", "path": "StatFin/ntp/statfin_ntp_pxt_132h.px",
      "query": {"Taloustoimi": "P51K", "Tiedot": "kausitvv2015"},
@@ -562,6 +591,15 @@ FI_SERIES = [
      "series_id": "STATFI/tyti/135y/youth-unemp",
      "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "FI Tilastokeskus 135y LFS Youth unemployment rate 15-24, NSA"},
+    # === FI re-audit 2026-05-17 ===
+    # government-debt: jali 122g Sektori=S13, Tiedot=Ratio_D (EDP debt % GDP), annual.
+    # Verified 2026-05-17: 2025 = 88.5% (matches TE 88.50% exact). Source-conformity:
+    # TE attributes to Statistics Finland; this aligns truth.yaml stat_fi target.
+    {"slug": "government-debt", "path": "StatFin/jali/statfin_jali_pxt_122g.px",
+     "query": {"Sektori": "S13", "Tiedot": "Ratio_D"},
+     "series_id": "STATFI/jali/122g/edp-debt-ratio",
+     "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+     "note": "FI Tilastokeskus 122g EDP general government debt ratio (Ratio_D, % of GDP)"},
 ]
 
 
@@ -600,14 +638,14 @@ SE_SERIES = [
      "freq": "M", "unit": "%", "adjustment": "WDA", "conversion": 1.0,
      "note": "SE SCB NV0402A Industrial Production YoY% WDA (B-D mining+mfg+energy)"},
     # AM/AM0401/AM0401A/AKURLBefM: LFS Unemployment rate 15-74, monthly 2001M01->
-    # Arbetskraftstillh=ALÖSP (rate %), TypData=TC_DATA (SA + smoothed/trend; matches TE headline 8.7%).
+    # Arbetskraftstillh=ALÖSP (rate %), TypData=O_DATA (NSA original; matches TE headline).
     # Kon=1+2 (both sexes), Alder=tot15-74, ContentsCode=000007L9.
-    # Verified 2026-05-09: 2026M03 = 8.7 (matches TE exactly).
+    # Verified 2026-05-17: 2026M03 = 9.7 (matches TE 9.7 exactly).
     {"slug": "unemployment", "path": "AM/AM0401/AM0401A/AKURLBefM",
-     "query": {"Arbetskraftstillh": "ALÖSP", "TypData": "TC_DATA",
+     "query": {"Arbetskraftstillh": "ALÖSP", "TypData": "O_DATA",
                "Kon": "1+2", "Alder": "tot15-74", "ContentsCode": "000007L9"},
-     "freq": "M", "unit": "%", "adjustment": "SA", "conversion": 1.0,
-     "note": "SE SCB AM0401A LFS unemployment rate 15-74 SA trend (ALÖSP/TC_DATA)"},
+     "freq": "M", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SE SCB AM0401A LFS unemployment rate 15-74 NSA (ALÖSP/O_DATA)"},
     # NR/NR0103/NR0103B/NR0103ENS2010T10SKv: GDP expenditure approach, SA, quarterly 1981Q1->
     # Anvandningstyp=BNPM (GDP at market prices), ContentsCode=NR0103CF (% volume change vs prev period SA).
     # Verified 2026-05-09: latest 2025Q4 = 0.5% (TE shows -0.2 for Q1 2026 flash; vintage lag normal).
@@ -1255,12 +1293,13 @@ IE_SERIES = [
      "series_id": "CSO/QLF18/yuneml-15-24",
      "freq": "Q", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
      "note": "CSO Ireland QLF18 Youth Unemployment Rate 15-24 both sexes"},
-    # Unemployed persons 15+ (C05, age=320).
-    {"slug": "unemployed-persons", "table": "QLF18",
-     "filters": {"STATISTIC": "QLF18C05", "C02076V02508": "320", "C02199V02655": "-"},
-     "series_id": "CSO/QLF18/unemp-15plus",
-     "freq": "Q", "unit": "Thousand", "adjustment": "NSA", "conversion": 1.0,
-     "note": "CSO Ireland QLF18 LFS unemployed persons 15+ both sexes"},
+    # Unemployed persons — TE uses CSO MUM01 Monthly Unemployment count SA
+    # (15-74 yrs, both sexes). Verified 2026-05-17: 2026-04 = 140.3 thousand (matches TE).
+    {"slug": "unemployed-persons", "table": "MUM01",
+     "filters": {"STATISTIC": "MUM01C01", "C02076V02508": "316", "C02199V02655": "-"},
+     "series_id": "CSO/MUM01/unemp-month",
+     "freq": "M", "unit": "Thousand", "adjustment": "SA", "conversion": 1.0,
+     "note": "CSO Ireland MUM01 SA Monthly Unemployment count, 15-74 both sexes"},
     # Manufacturing-production — MIM05C03 SA Industrial Production NACE V2100 (mfg 10-33).
     {"slug": "manufacturing-production", "table": "MIM05",
      "filters": {"STATISTIC": "MIM05C03", "C02576V03125": "V2100"},
@@ -1268,15 +1307,16 @@ IE_SERIES = [
      "freq": "M", "unit": "Index (2021=100)", "adjustment": "SA", "conversion": 1.0,
      "note": "CSO Ireland MIM05 SA Industrial Production NACE V2100 (Manufacturing 10-33)"},
     # National Accounts components — NAQ04, SA constant prices (S02), by C03331V04018:
-    #   001 = Personal Consumption (consumer-spending)
-    #   002 = Government Final Consumption (government-spending)
-    #   003 = Gross Domestic Fixed Capital Formation
-    #   004 = Value of Physical Changes in Stocks (changes-in-inventories)
+    #   001  = Personal Consumption (full Personal Expenditure incl. NPISH)
+    #   0012 = Household Final Consumption Expenditure only (TE consumer-spending uses this; matches 37778 for 2025Q4)
+    #   002  = Government Final Consumption (government-spending)
+    #   003  = Gross Domestic Fixed Capital Formation
+    #   004  = Value of Physical Changes in Stocks (changes-in-inventories)
     {"slug": "consumer-spending", "table": "NAQ04",
-     "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "001"},
-     "series_id": "CSO/NAQ04/consumer",
+     "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "0012"},
+     "series_id": "CSO/NAQ04/consumer-0012",
      "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
-     "note": "CSO Ireland NAQ04 Personal Consumption SA constant prices"},
+     "note": "CSO Ireland NAQ04 Household FCE SA constant prices (sector 0012; matches TE 37778)"},
     {"slug": "government-spending", "table": "NAQ04",
      "filters": {"STATISTIC": "NAQ04S02", "C03331V04018": "002"},
      "series_id": "CSO/NAQ04/gov",
@@ -1489,6 +1529,35 @@ BE_SERIES = [
      "row_filter": {"Level 1": "09 Recreation, sport and culture"},
      "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
      "note": "Statbel CPI by ECOICOP V2 — Recreation, sport and culture (09)"},
+    # === BE re-audit 2026-05-16: TE attributes Statbel for clothing/food/housing/transport CPI subgroups ===
+    # cpi-clothing: COICOP "03 Clothing and footwear". Verified 2026-05-16: April 2026 = 100.42 (TE Mar 2026 = 100.23 close).
+    {"kind": "statbel", "slug": "cpi-clothing",
+     "view_id": "dfc2ab6f-b5bf-4520-9645-31a5dbb2be06",
+     "value_col": "Consumer price index",
+     "row_filter": {"Level 1": "03 Clothing and footwear"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI by ECOICOP V2 — Clothing and footwear (03)"},
+    # cpi-food: COICOP "01 Food and non-alcoholic beverages". Verified 2026-05-16: April 2026 = 100.93.
+    {"kind": "statbel", "slug": "cpi-food",
+     "view_id": "dfc2ab6f-b5bf-4520-9645-31a5dbb2be06",
+     "value_col": "Consumer price index",
+     "row_filter": {"Level 1": "01 Food and non-alcoholic beverages"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI by ECOICOP V2 — Food and non-alcoholic beverages (01)"},
+    # cpi-housing-utilities: COICOP "04 Housing, water, electricity, gas and other fuels". April 2026 = 103.91.
+    {"kind": "statbel", "slug": "cpi-housing-utilities",
+     "view_id": "dfc2ab6f-b5bf-4520-9645-31a5dbb2be06",
+     "value_col": "Consumer price index",
+     "row_filter": {"Level 1": "04 Housing, water, electricity, gas and other fuels"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI by ECOICOP V2 — Housing, water, electricity, gas and other fuels (04)"},
+    # cpi-transportation: COICOP "07 Transport". April 2026 = 106.95.
+    {"kind": "statbel", "slug": "cpi-transportation",
+     "view_id": "dfc2ab6f-b5bf-4520-9645-31a5dbb2be06",
+     "value_col": "Consumer price index",
+     "row_filter": {"Level 1": "07 Transport"},
+     "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Statbel CPI by ECOICOP V2 — Transport (07)"},
     # core-cpi: 30778b36 HICP aggregates, Special aggregates="HICP excluding energy and unprocessed food".
     # Verified 2026-05-15: April 2026 = ~134.5 index. TE 8.7 appears to be old YoY%.
     {"kind": "statbel", "slug": "core-cpi",
@@ -1536,9 +1605,14 @@ BE_SERIES = [
     # government-spending: P3_S13 (Final consumption expenditure of general government).
     # Verified 2026-05-15: 2025Q4 = 39,161 EUR mn.
     {"kind": "nbb", "slug": "government-spending",
-     "dataflow": "DF_QNA_DISS", "key": "Q.2.P3_S13.VZ.V.Y",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.P3_S13..L.Y",
      "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
      "note": "NBB DF_QNA_DISS P.3 Final consumption of general government (S.13), current EUR mn, SA+WDA"},
+    # government-spending-eur: alias of government-spending (TE BE re-audit 2026-05-16).
+    {"kind": "nbb", "slug": "government-spending-eur",
+     "dataflow": "DF_QNA_DISS", "key": "Q.2.P3_S13..L.Y",
+     "freq": "Q", "unit": "EUR million", "adjustment": "SA", "conversion": 1.0,
+     "note": "NBB DF_QNA_DISS P.3 (alias of government-spending), EUR mn quarterly"},
     # current-account: DF_NFQADISPINC_DISS B9 (Net lending/borrowing of nation = current account proxy), Y.
     # Verified 2026-05-15: 2025Q4 = -4,452 EUR mn.
     {"kind": "nbb", "slug": "current-account",
@@ -2260,11 +2334,12 @@ def _parse_jsonstat(js: dict, freq: str) -> list[tuple[date, float]]:
 # the .px endpoint returns standard JSON-stat that _parse_jsonstat handles.
 
 LV_SERIES = [
-    # PCI030m: Consumer price indices December 1990=100, monthly 1991M01-2026M03
+    # PCI030m: Consumer price indices December 1990=100, monthly 1991M01-2026M04.
+    # CSP encodes raw integers with decimals=2 (e.g. 29648 = 296.48). Apply 0.01.
     {"slug": "inflation-cpi", "path": "VEK/PC/PCI/PCI030m",
      "query": {"ContentsCode": "PCI030m"},
-     "freq": "M", "unit": "Index (Dec 1990=100)", "adjustment": "NSA", "conversion": 1.0,
-     "note": "CSP Latvia PCI030m CPI Dec 1990=100"},
+     "freq": "M", "unit": "Index (Dec 1990=100)", "adjustment": "NSA", "conversion": 0.01,
+     "note": "CSP Latvia PCI030m CPI Dec 1990=100 (raw int *0.01)"},
     # NOTE: LV CSP PxWeb actively returns HTTP 400 when querying the section-level
     # "Industry total" aggregate (B_C_D_E in RCI020m, B_C_D_X_D353 in RUI020m)
     # paired with the TOVT/calendar-adjusted ContentsCode combos — only MIG_*
@@ -2347,6 +2422,12 @@ LV_SERIES = [
      "series_id": "CSP/ISP050c/P3_S13",
      "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
      "note": "CSP Latvia ISP050c government final consumption expenditure (P3_S13)"},
+    # government-spending-eur: alias of government-spending (TE LV re-audit 2026-05-17).
+    {"slug": "government-spending-eur", "path": "VEK/IS/ISP/ISP050c",
+     "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "P3_S13", "ContentsCode": "ISP050c"},
+     "series_id": "CSP/ISP050c/P3_S13",
+     "freq": "Q", "unit": "Million EUR (2020 chained)", "adjustment": "SA", "conversion": 0.001,
+     "note": "CSP Latvia ISP050c P3_S13 (alias of government-spending)"},
     {"slug": "gross-fixed-capital-formation", "path": "VEK/IS/ISP/ISP050c",
      "query": {"PRICES": "CLV2020", "SESON": "SA", "INDICATOR": "P51G", "ContentsCode": "ISP050c"},
      "series_id": "CSP/ISP050c/P51G",
@@ -2518,12 +2599,17 @@ def _parse_jsonstat_quarterly(js: dict) -> list[tuple[date, float]]:
 
 RO_SERIES = [
     # 4000 INDICII PRETURILOR DE CONSUM
-    # IPC102A: monthly CPI vs previous month=100 (kept for backward compat).
-    {"slug": "inflation-cpi", "parent": "4000", "matrix": "IPC102A",
-     "filter_dims": {"Categorii de marfuri si servicii cumparate": "Total"},
+    # IPC102E: monthly CPI vs same month previous year = 100 (YoY index).
+    # TE displays the YoY rate (e.g. 109.31 = +9.31% YoY) as the headline
+    # inflation number, matching INSSE's published series. Use row_filter so
+    # we keep only the exact 'TOTAL' aggregate (the dim pin alone is not strict
+    # enough — TE returns TOTAL plus TOTAL MARFURI ALIMENTARE/NEALIMENTARE/SERVICII).
+    {"slug": "inflation-cpi", "parent": "4000", "matrix": "IPC102E",
+     "filter_dims": {"Categorii de marfuri si servicii cumparate": "TOTAL"},
+     "row_filter": {"Categorii de marfuri si servicii cumparate": "TOTAL"},
      "unit_value": "Procente",
-     "freq": "M", "unit": "Index (prev month=100)", "adjustment": "NSA", "conversion": 1.0,
-     "note": "INSSE Tempo IPC102A CPI MoM index (prev month=100), total"},
+     "freq": "M", "unit": "Index (same month prev year=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "INSSE Tempo IPC102E CPI YoY index (same month prev year=100), TOTAL"},
     # 5010 INDUSTRIE — IND104N gross monthly IP index, base 2021=100
     {"slug": "industrial-production", "parent": "5010", "matrix": "IND104N",
      "filter_dims": {"Activitati ale industriei CAEN Rev.2 - total": "TOTAL"},
@@ -2611,7 +2697,7 @@ RO_TRADE_SERIES = [
 
 
 def fetch_ro_tempo(parent_code: str, matrix: str, filter_dims: dict, unit_value: str,
-                   freq: str = "M") -> list[tuple[date, float]]:
+                   freq: str = "M", row_filter: dict | None = None) -> list[tuple[date, float]]:
     """RO INSSE Tempo via tempo-py library.
 
     Generic fetcher: handles arbitrary number of dimensions by pinning each
@@ -2620,6 +2706,12 @@ def fetch_ro_tempo(parent_code: str, matrix: str, filter_dims: dict, unit_value:
     The unit dim (label starts 'UM:') is pinned to unit_value.
     The time dim ('Luni' for monthly, 'Ani' for annual) is selected exhaustively.
     Returns list of (date, value) sorted ascending.
+
+    row_filter: optional {column_label: required_value} mapping applied AFTER
+    the CSV is fetched, to drop rows whose category column doesn't match
+    exactly. Use when the upstream Tempo query returns multiple sub-categories
+    despite the dimension pin (observed for IPC102E where TOTAL also matches
+    'TOTAL MARFURI ALIMENTARE' etc.).
     """
     import tempo
     RO_MONTHS = {"ianuarie":1, "februarie":2, "martie":3, "aprilie":4, "mai":5, "iunie":6,
@@ -2666,10 +2758,28 @@ def fetch_ro_tempo(parent_code: str, matrix: str, filter_dims: dict, unit_value:
         return []
     val_col = len(header) - 1  # 'Valoare' is always last
 
+    # Pre-compute row_filter column indices (post-CSV filter to keep only rows
+    # whose specified column exactly equals the required value).
+    rf_cols: list[tuple[int, str]] = []
+    if row_filter:
+        for col_label, req_val in row_filter.items():
+            try:
+                rf_cols.append((header.index(col_label), req_val))
+            except ValueError:
+                pass
+
     out = []
     for line in lines[1:]:
         parts = [p.strip() for p in line.split(",")]
         if len(parts) <= max(time_col, val_col):
+            continue
+        # Apply row_filter (exact match) if requested
+        skip = False
+        for ci, req in rf_cols:
+            if ci >= len(parts) or parts[ci] != req:
+                skip = True
+                break
+        if skip:
             continue
         period = parts[time_col].lower()
         try:
@@ -2780,6 +2890,12 @@ EE_SERIES = [
      "series_id": "STATEE/RAA0061/K2",
      "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
      "note": "Stat Estonia RAA0061 general government final consumption expenditure, chain-linked"},
+    # government-spending-eur mirrors government-spending in EUR Million (TE attribution: Statistics Estonia)
+    {"slug": "government-spending-eur", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
+     "query": {"Komponent": "2", "Näitaja": "2"},
+     "series_id": "STATEE/RAA0061/K2",
+     "freq": "Q_year_quarter_combo", "unit": "Million EUR (2020 chain-linked)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "Stat Estonia RAA0061 government spending in EUR; mirrors government-spending. TE attributes Statistics Estonia."},
     {"slug": "gross-fixed-capital-formation", "path": "majandus/rahvamajanduse-arvepidamine/sisemajanduse-koguprodukt-(skp)/sisemajanduse-koguprodukt-tarbimise-meetodil/RAA0061.PX",
      "query": {"Komponent": "4", "Näitaja": "2"},
      "series_id": "STATEE/RAA0061/K4",
@@ -3104,6 +3220,16 @@ HU_SERIES = [
      "value_col_index": 9,
      "freq": "Q", "unit": "Million HUF", "adjustment": "NSA", "conversion": 1.0,
      "note": "KSH STADAT 21.2.1.10 gdp0094 col 9 Changes in inventories, current prices, mHUF"},
+    # kkr0065 col 19 = Hungary exports of goods (EU-comparison table), monthly, mEUR.
+    {"slug": "exports", "section": "kkr", "table": "kkr0065",
+     "value_col_index": 19,
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 17.2.3.1 kkr0065 col 19 Hungary exports of goods, monthly, mEUR"},
+    # kkr0064 col 19 = Hungary imports of goods (EU-comparison table), monthly, mEUR.
+    {"slug": "imports", "section": "kkr", "table": "kkr0064",
+     "value_col_index": 19,
+     "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+     "note": "KSH STADAT 17.2.3.2 kkr0064 col 19 Hungary imports of goods, monthly, mEUR"},
 ]
 
 HU_MONTHS = {
@@ -3399,12 +3525,14 @@ SK_SERIES = [
      ],
      "freq": "M", "unit": "Index (Dec 2000=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "ŠÚ SR sp2038ms CPI Total, Dec 2000=100 continuous monthly"},
-    # sp0101ms: Producer price indices vs. corresponding period of previous year — monthly.
-    # 3 dims: rok, mes, ukaz. UKAZ04 = Industrial producers prices - total.
-    {"slug": "ppi", "dataset_id": "sp0101ms",
-     "segments": ["all", "all", "UKAZ04"],
-     "freq": "M", "unit": "Index (same month previous year=100)", "adjustment": "NSA", "conversion": 1.0,
-     "note": "SUSR sp0101ms PPI Industrial producers prices total UKAZ04 YoY index"},
+    # sp0107ms: Producer price indices in comparison with the basic period — monthly.
+    # 5 dims (after year/month): specu (base), cpa (industry), indic.
+    # SPECU_B_DEC2021 = Dec 2021=100 (matches TE PPI series).
+    # UKAZ04 = Industrial producers prices - total, U_SP_0007 = Producer price indices.
+    {"slug": "ppi", "dataset_id": "sp0107ms",
+     "segments": ["all", "all", "SPECU_B_DEC2021", "UKAZ04", "U_SP_0007"],
+     "freq": "M", "unit": "Index (Dec 2021=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR sp0107ms PPI Industrial producers prices total, Dec 2021=100 base (TE-conform)"},
     # pm0042ms: Industrial production YoY index (adjusted). Dims: year, month, specu, nace2,
     # unit, indic. Pick SPECU_Y_ROMR (YoY) × NACE 05-39 (Industry total) × UNIT_INDEX × U_PM_0001.
     {"slug": "industrial-production", "dataset_id": "pm0042ms",
@@ -3556,6 +3684,12 @@ SK_SERIES = [
      "segments": ["all", "all", "UKAZ01", "MJ01"],
      "freq": "M", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
      "note": "SUSR zo0001ms Foreign trade imports, monthly mEUR"},
+    # nu2063qs Generation and use of income in sector of households (quarterly).
+    # 03dd13 = Gross disposable income, mj00 = Mill EUR.
+    {"slug": "disposable-personal-income", "dataset_id": "nu2063qs",
+     "segments": ["all", "all", "03dd13", "mj00"],
+     "freq": "Q", "unit": "EUR Million", "adjustment": "NSA", "conversion": 1.0,
+     "note": "SUSR nu2063qs Household gross disposable income, quarterly mEUR (current prices)"},
 ]
 
 
@@ -4262,6 +4396,12 @@ HR_SERIES = [
      "freq": "M", "parse": "tid",
      "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
      "note": "DZS Croatia ME_PS09 CPI sub-index Recreation & culture (COICOP 09), 2025=100"},
+    {"slug": "cpi-transportation",
+     "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+     "query": {"ECOICOP, ver. 2": "07", "Indikatori": "4"},
+     "freq": "M", "parse": "tid",
+     "unit": "Index (2025=100)", "adjustment": "NSA", "conversion": 1.0,
+     "note": "DZS Croatia ME_PS09 CPI sub-index Transport (COICOP 07), 2025=100. Re-audit 2026-05-17 TE 112.9."},
     # food-inflation = ME_PS09 Indikatori=1 (YoY % rate). Verified 2026M03 = 3.3% matches TE 3.3.
     {"slug": "food-inflation",
      "path": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
@@ -4792,7 +4932,7 @@ class NationalEUProvider(BaseProvider):
                 pairs = fetch_ro_tempo(
                     cfg["parent"], cfg["matrix"],
                     cfg.get("filter_dims", {}), cfg.get("unit_value", "Procente"),
-                    cfg["freq"],
+                    cfg["freq"], cfg.get("row_filter"),
                 )
                 sid = cfg.get("series_id") or f"INSSE/{cfg['matrix']}"
                 for dt, v in pairs:
@@ -4816,7 +4956,7 @@ class NationalEUProvider(BaseProvider):
                 pairs = fetch_ro_tempo(
                     cfg["parent"], cfg["matrix"],
                     cfg.get("filter_dims", {}), cfg.get("unit_value"),
-                    cfg["freq"],
+                    cfg["freq"], cfg.get("row_filter"),
                 )
                 ro_trade_cache[cfg["slug"]] = dict(pairs)
                 for dt, v in pairs:

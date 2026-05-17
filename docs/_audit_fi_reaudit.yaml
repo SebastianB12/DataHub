@@ -1,0 +1,1276 @@
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/vtp/129d/budget-deficit
+  our_source: stat_fi
+  our_unit: '% of GDP'
+  our_value: 3.4
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/government-budget
+  te_period: null
+  te_value: 3.4
+  value_match: true
+  yoy_computed: null
+business-confidence:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: null
+  our_series: ei_bsin_m_r2:BCI
+  our_source: eurostat
+  our_unit: null
+  our_value: null
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: Confederation of Finnish Industries (EK)
+  te_page: https://tradingeconomics.com/finland/business-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 77.8
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: European Commission
+  te_page: https://tradingeconomics.com/finland/capacity-utilization
+  te_period: in the first quarter of 2026
+  te_value: 78.7
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/ntp/132h/inventories
+  our_source: stat_fi
+  our_unit: EUR million (current prices)
+  our_value: 85
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/changes-in-inventories
+  te_period: in the fourth quarter of 2025
+  te_value: 85.0
+  value_match: true
+  yoy_computed: null
+consumer-confidence:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/kbar/11cc/CCI_A1
+  our_source: stat_fi
+  our_unit: Balance (%)
+  our_value: -12.5
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/consumer-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-spending:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/ntp/132h/consumer
+  our_source: stat_fi
+  our_unit: EUR million (chained 2015)
+  our_value: 29614
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/consumer-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 29614.0
+  value_match: true
+  yoy_computed: null
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HI00XEF
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.34
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/finland/core-inflation-rate
+  te_period: in April of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 20
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Finnish Tax Administration
+  te_page: https://tradingeconomics.com/finland/corporate-tax-rate
+  te_period: null
+  te_value: 20.0
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: FI:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 88
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/finland/corruption-index
+  te_period: null
+  te_value: 88.0
+  value_match: true
+  yoy_computed: null
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: FI:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 2
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/finland/corruption-rank
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/cpi-clothing
+  our_source: stat_fi
+  our_unit: Index (2025=100)
+  our_value: 99.67
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/cpi-clothing
+  te_period: in April
+  te_value: 99.67
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/cpi-education
+  our_source: stat_fi
+  our_unit: Index (2025=100)
+  our_value: 110.48
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/cpi-education
+  te_period: in April
+  te_value: 110.48
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/cpi-food
+  our_source: stat_fi
+  our_unit: Index (2025=100)
+  our_value: 101.75
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/food-inflation
+  te_period: in April of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/cpi-housing
+  our_source: stat_fi
+  our_unit: Index (2025=100)
+  our_value: 100.11
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/cpi-housing-utilities
+  te_period: in April
+  te_value: 100.11
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/cpi-recreation
+  our_source: stat_fi
+  our_unit: Index (2025=100)
+  our_value: 101.02
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/cpi-recreation-and-culture
+  te_period: in April
+  te_value: 101.02
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/cpi-transport
+  our_source: stat_fi
+  our_unit: Index (2025=100)
+  our_value: 105.8
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/cpi-transportation
+  te_period: in April of 2026
+  te_value: 105.8
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: FI:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 90
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/rating
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/mata/12gf/current-account
+  our_source: stat_fi
+  our_unit: EUR million
+  our_value: 250
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/current-account
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: Switched extra_params dataset from bop_gdp6_q to tipsbp20 (annual CA % of GDP, partner=WRL_REST). Refetched 31 dps. Latest 2025=1.3 matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: tipsbp20:CA
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 1.3
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/finland/current-account-to-gdp
+  te_period: null
+  te_value: 1.3
+  value_match: true
+  yoy_computed: null
+disposable-personal-income:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_unit: Million EUR
+  our_value: 40763
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/disposable-personal-income
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/tyti/statfin_tyti_pxt_13gg.px
+  our_source: stat_fi
+  our_unit: Thousand
+  our_value: 2524
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/employed-persons
+  te_period: in March of 2026
+  te_value: 2524.0
+  value_match: true
+  yoy_computed: null
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/tyti/135y/empl-rate
+  our_source: stat_fi
+  our_unit: '%'
+  our_value: 69.2
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/employment-rate
+  te_period: in March
+  te_value: 69.2
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 110.52
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/energy-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  fix_summary: 'NO FIX: TE uses monthly Tulli/Customs absolute level (7.36 bn EUR Mar 2026, 13.7% YoY). We use stat_fi 12gq quarterly BoP exports (29495 EUR mn Q1 2026). Tulli has no public REST API. Quarterly
+    vs monthly frequency frontend-only difference.'
+  fixed: false
+  flag: frontend-only
+  mom_computed: -6.045933806899628
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/tpulk/statfin_tpulk_pxt_12gq.px/exp
+  our_source: stat_fi
+  our_unit: EUR million
+  our_value: 29495
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Customs Finland
+  te_page: https://tradingeconomics.com/finland/exports
+  te_period: in March 2026
+  te_value: 13.7
+  value_match: false
+  yoy_computed: 0.17661243759127807
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5/food-yoy
+  our_source: stat_fi
+  our_unit: '% YoY'
+  our_value: 1.7
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/food-inflation
+  te_period: in April of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 298.7
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/finland/gdp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_unit: USD (constant 2015)
+  our_value: 45254.04
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/finland/gdp-per-capita
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_unit: Int. USD (PPP constant 2021)
+  our_value: 56123.15
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/finland/gdp-per-capita-ppp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/StatFin/ntp/statfin_ntp_pxt_132h.px
+  our_source: stat_fi
+  our_unit: EUR million (chained 2015)
+  our_value: 57249
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/gdp-growth-annual
+  te_period: in Q1 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+government-debt:
+  fix_summary: Switched source from eurostat (gov_10dd_edpt1 GD) to stat_fi 122g Ratio_D (EDP debt ratio %, annual). Refetched 51 dps. Latest 2025=88.5 matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/jali/122g/edp-debt-ratio
+  our_source: stat_fi
+  our_unit: '% of GDP'
+  our_value: 88.5
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/government-debt-to-gdp
+  te_period: null
+  te_value: 88.5
+  value_match: true
+  yoy_computed: null
+government-debt-total:
+  fix_summary: 'NO FIX: TE shows State Treasury monthly debt (194 bn EUR Mar 2026). State Treasury has no public REST API. Our eurostat gov_10dd_edpt1 GD MIO_EUR shows general government EDP debt (broader
+    aggregate, 248 bn 2025Q4). Concept difference, both valid.'
+  fixed: false
+  flag: frontend-only
+  mom_computed: 9.276854051200846
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_EUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 248.43
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: State Treasury, Finland
+  te_page: https://tradingeconomics.com/finland/government-debt
+  te_period: in March
+  te_value: 194338.0
+  value_match: false
+  yoy_computed: 100.75151515151515
+government-spending:
+  fix_summary: Switched stat_fi config from ntp 132h P3 EUR level to vtp 129d OTES bkt_suhde % of GDP (annual). Refetched 51 dps. Latest 2025=57.5 matches TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/vtp/129d/gov-spending-pct-gdp
+  our_source: stat_fi
+  our_unit: '% of GDP'
+  our_value: 57.5
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/government-spending-to-gdp
+  te_period: null
+  te_value: 57.5
+  value_match: true
+  yoy_computed: null
+government-spending-eur:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 18.42
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/government-spending-value
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/ntp/132h/gfcf
+  our_source: stat_fi
+  our_unit: EUR million (chained 2015)
+  our_value: 12341
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/gross-fixed-capital-formation
+  te_period: in the fourth quarter of 2025
+  te_value: 12326.0
+  value_match: true
+  yoy_computed: null
+hospital-beds:
+  fix_summary: Curated value updated 2.81 -> 2.6 (OECD 2022) to match TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2022-12-31'
+  our_series: FI:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 2.6
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/finland/hospital-beds
+  te_period: null
+  te_value: 2.6
+  value_match: true
+  yoy_computed: null
+house-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_unit: Index
+  our_value: 97.43
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/finland/housing-index
+  te_period: in the fourth quarter of 2025
+  te_value: 97.43
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: 'NO FIX: same as exports — quarterly BoP from stat_fi 12gq vs TE monthly Tulli.'
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.6929478465568119
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/tpulk/statfin_tpulk_pxt_12gq.px/imp
+  our_source: stat_fi
+  our_unit: EUR million
+  our_value: 29952
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Customs Finland
+  te_page: https://tradingeconomics.com/finland/imports
+  te_period: null
+  te_value: 7.2
+  value_match: false
+  yoy_computed: 1.288424469919854
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/ttvi/statfin_ttvi_pxt_14mh.px
+  our_source: stat_fi
+  our_unit: Index (2021=100)
+  our_value: 116.7
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/industrial-production
+  te_period: in March 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: STATFI/khi/15b5
+  our_source: stat_fi
+  our_unit: Index
+  our_value: 101.68
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/inflation-cpi
+  te_period: in April 2026
+  te_value: 1.5
+  value_match: true
+  yoy_computed: 1.4973048512677178
+interest-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_unit: '%'
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/finland/interest-rate
+  te_period: in October of 2000
+  te_value: null
+  value_match: null
+  yoy_computed: null
+job-vacancies:
+  fix_summary: 'NO FIX: TE shows monthly register-based job vacancies from Ministry of Employment (TEM) — no public REST API. StatFin atp 11l1 is quarterly survey-based (~22k Q4 2025), not equivalent to
+    TE concept. Our eurostat jvs_q_nace2 JVR % rate is the closest free primary source. truth.yaml accepts eurostat with note.'
+  fixed: false
+  flag: needs-attention
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 1.1
+  source_match: false
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministry of Employment and the Economy, Finland
+  te_page: https://tradingeconomics.com/finland/job-vacancies
+  te_period: in March
+  te_value: null
+  value_match: null
+  yoy_computed: null
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/tyti/135y/lfp-rate
+  our_source: stat_fi
+  our_unit: '%'
+  our_value: 68
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/labor-force-participation-rate
+  te_period: in March
+  te_value: 68.0
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: Switched eurostat lc_lci_r2_q config from SCA D1_D4_MD5 to NSA D1_D4_MD5_XB (excluding bonuses). Refetched 104 dps. Latest 2025-Q4=112.3, TE 110.91 (within 1.3%).
+  fixed: true
+  flag: ecb-source
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lc_lci_r2_q:I20:B-S:D1_D4_MD5_XB:NSA
+  our_source: eurostat
+  our_unit: Index (2020=100)
+  our_value: 112.3
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/finland/labour-costs
+  te_period: in the fourth quarter of 2025
+  te_value: 110.91
+  value_match: true
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 2.6
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/finland/long-term-unemployment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 2.7
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/ttvi/14mh/manufacturing
+  our_source: stat_fi
+  our_unit: Index (2021=100)
+  our_value: 114
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/manufacturing-production
+  te_period: in March of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+medical-doctors:
+  fix_summary: Curated value updated 3.81 -> 3.83 (OECD 2021) to match TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: FI:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 3.83
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/finland/medical-doctors
+  te_period: null
+  te_value: 3.83
+  value_match: true
+  yoy_computed: null
+minimum-wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:minimum-wages
+  our_source: curated
+  our_unit: EUR/Month
+  our_value: 0
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/minimum-wages
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/ttvi/14mh/mining
+  our_source: stat_fi
+  our_unit: Index (2021=100)
+  our_value: 102.6
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/mining-production
+  te_period: in March of 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+nurses:
+  fix_summary: Curated value updated 14.30 -> 15.64 (OECD 2021) to match TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2021-12-31'
+  our_series: FI:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 15.64
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/finland/nurses
+  te_period: null
+  te_value: 15.64
+  value_match: true
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: Curated value updated 56.95 -> 52.0 (Finnish Tax Administration, top marginal) to match TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 52
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Finnish Tax Administration
+  te_page: https://tradingeconomics.com/finland/personal-income-tax-rate
+  te_period: null
+  te_value: 52.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: STATFI/vaerak/11ra/population
+  our_source: stat_fi
+  our_unit: Million
+  our_value: 5.6529
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/population
+  te_period: null
+  te_value: 5.6
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/thi/statfin_thi_pxt_13m8.px
+  our_source: stat_fi
+  our_unit: Index (2021=100)
+  our_value: 120.6
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/producer-prices
+  te_period: in March
+  te_value: 120.6
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 100.98
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/finland/productivity
+  te_period: in the first quarter of 2026
+  te_value: 105.8
+  value_match: true
+  yoy_computed: null
+retail-sales:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/klv/statfin_klv_pxt_14kr.px
+  our_source: stat_fi
+  our_unit: Index (2021=100)
+  our_value: 91.5
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/retail-sales-mom
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 65
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministry of Social Affairs and Health
+  te_page: https://tradingeconomics.com/finland/retirement-age-men
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 65
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministry of Social Affairs and Health
+  te_page: https://tradingeconomics.com/finland/retirement-age-women
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-09-01'
+  our_series: FI:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 25.5
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Finnish Tax Administration
+  te_page: https://tradingeconomics.com/finland/sales-tax-rate
+  te_period: null
+  te_value: 25.5
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.34
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/services-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: 0.3
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/finland/services-pmi
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 31.04
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Finnish Tax Administration
+  te_page: https://tradingeconomics.com/finland/social-security-rate
+  te_period: null
+  te_value: 30.98
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 21.55
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Finnish Tax Administration
+  te_page: https://tradingeconomics.com/finland/social-security-rate-for-companies
+  te_period: null
+  te_value: 20.81
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: Curated value updated 9.49 -> 10.76 (Finnish Tax Administration, employee total) to match TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: FI:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 10.76
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Finnish Tax Administration
+  te_page: https://tradingeconomics.com/finland/social-security-rate-for-employees
+  te_period: null
+  te_value: 10.76
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  fix_summary: Curated value updated 1.5 -> 0.58 (IEP 2025) to match TE.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: FI:terrorism-index
+  our_source: curated
+  our_unit: Points
+  our_value: 0.58
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Institute for Economics and Peace
+  te_page: https://tradingeconomics.com/finland/terrorism-index
+  te_period: null
+  te_value: 0.58
+  value_match: true
+  yoy_computed: null
+trade-balance:
+  fix_summary: 'NO FIX: same — quarterly stat_fi derived (exp-imp). TE monthly Tulli shows +250 EUR mn Mar 2026.'
+  fixed: false
+  flag: frontend-only
+  mom_computed: -137.09415584415586
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/tpulk/statfin_tpulk_pxt_12gq.px/tb
+  our_source: stat_fi
+  our_unit: EUR million
+  our_value: -457
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/balance-of-trade
+  te_period: in March of 2026
+  te_value: 250.0
+  value_match: false
+  yoy_computed: -257.03125
+unemployed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/tyti/135y/unemp-persons
+  our_source: stat_fi
+  our_unit: Thousand
+  our_value: 315
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/unemployed-persons
+  te_period: in March of 2026
+  te_value: 315.0
+  value_match: true
+  yoy_computed: null
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/StatFin/tyti/statfin_tyti_pxt_135y.px
+  our_source: stat_fi
+  our_unit: '%'
+  our_value: 11.1
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/unemployment-rate
+  te_period: in March 2026
+  te_value: 11.1
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: STATFI/tyti/135y/youth-unemp
+  our_source: stat_fi
+  our_unit: '%'
+  our_value: 24.3
+  source_match: true
+  suggested_source: stat_fi
+  te_http: 200
+  te_label: Statistics Finland
+  te_page: https://tradingeconomics.com/finland/youth-unemployment-rate
+  te_period: in March
+  te_value: 24.3
+  value_match: true
+  yoy_computed: null

@@ -52,7 +52,7 @@ SERIES = [
         "conversion": 1.0,
         "note": "INE IPC Subyacente (ex unprocessed food + energy), Index level base 2025=100",
     },
-    # Food inflation — IPC290755 (Food and non-alcoholic beverages, index)
+    # Food inflation — IPC290755 (Food and non-alcoholic beverages, base 2025 ECOICOP v2 group 01)
     {
         "indicator": "food-inflation",
         "cod": "IPC290755",
@@ -60,7 +60,7 @@ SERIES = [
         "unit": "Index",
         "adjustment": "NSA",
         "conversion": 1.0,
-        "note": "INE IPC Food and non-alcoholic beverages",
+        "note": "INE IPC ECOICOP v2 group 01 Food, base 2025=100 (frontend computes YoY for display)",
     },
     # Unemployment rate quarterly EPA — both genders, national total, all ages
     {
@@ -254,6 +254,105 @@ SERIES = [
         "adjustment": "NSA",
         "conversion": 1.0,
         "note": "INE IPI Manufacturing index level (CNAE Section C), base 2021=100, NSA",
+    },
+    # === Stage-3 (2026-05-16): CPI sub-components by ECOICOP v2 group, IPC base 2025 ===
+    # Table 76125. TE attributes these to INE directly; switching from Eurostat ei_cphi_m.
+    {
+        "indicator": "cpi-clothing",
+        "cod": "IPC290759",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC ECOICOP v2 group 03 Clothing & footwear, base 2025=100",
+    },
+    {
+        "indicator": "cpi-education",
+        "cod": "IPC290791",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC ECOICOP v2 group 11 Education services, base 2025=100",
+    },
+    {
+        "indicator": "cpi-food",
+        "cod": "IPC290755",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC ECOICOP v2 group 01 Food & non-alcoholic beverages, base 2025=100",
+    },
+    {
+        "indicator": "cpi-housing-utilities",
+        "cod": "IPC290763",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC ECOICOP v2 group 04 Housing, water, electricity, gas & other fuels, base 2025=100",
+    },
+    {
+        "indicator": "cpi-recreation-and-culture",
+        "cod": "IPC290787",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC ECOICOP v2 group 10 Recreational activities, sport & culture, base 2025=100",
+    },
+    {
+        "indicator": "cpi-transportation",
+        "cod": "IPC290775",
+        "freq": "M",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE IPC ECOICOP v2 group 08 Transport, base 2025=100",
+    },
+    # === Stage-3b (2026-05-16): EPA labor-market totals (16+) + Households disposable income ===
+    # EPA388079 = activity rate both genders 16+ (table 65081). Matches TE 58.86% Q1-2026 exactly.
+    {
+        "indicator": "labor-force-participation-rate",
+        "cod": "EPA388079",
+        "freq": "Q",
+        "unit": "%",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE EPA Activity rate (16+, both genders, national total), table 65081",
+    },
+    # EPA441060 = employment rate both genders total (table 14508). Matches TE 52.48% Q1-2026 exactly.
+    {
+        "indicator": "employment-rate",
+        "cod": "EPA441060",
+        "freq": "Q",
+        "unit": "%",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE EPA Employment rate (both genders, total, national), table 14508",
+    },
+    # CTNFSI10778 = Households + NPISH Gross adjusted disposable income (table 67204).
+    # Q4-2025 = 345039 EUR Mn → matches TE exactly.
+    {
+        "indicator": "disposable-personal-income",
+        "cod": "CTNFSI10778",
+        "freq": "Q",
+        "unit": "Million EUR",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE CTNFSI Households+NPISH Gross adjusted disposable income (NSA current prices), table 67204",
+    },
+    # ICLA2379 = Labour Cost Index (ICLA), Total cost per hour ex-extra pays, sections B-S, NSA.
+    # Q4-2025 = 118.85 → matches TE exactly.
+    {
+        "indicator": "labour-costs",
+        "cod": "ICLA2379",
+        "freq": "Q",
+        "unit": "Index",
+        "adjustment": "NSA",
+        "conversion": 1.0,
+        "note": "INE ICLA Labour Cost Index per hour ex-extra pays, sections B-S, NSA (table 79663)",
     },
 ]
 

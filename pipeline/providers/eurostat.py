@@ -53,6 +53,13 @@ COUNTRY_TO_GEO: dict[str, list[str]] = {
 def _parse_period(period_str: str, freq: str) -> date | None:
     try:
         s = period_str.strip()
+        # Semester (bi-annual): "2026-S1" / "2026S1"
+        if freq == "S" or "S" in s.replace("SA", "").replace("NSA", ""):
+            clean = s.replace("-S", "S")
+            if "S" in clean and clean.split("S")[0].isdigit():
+                year, sem = clean.split("S")
+                month = {1: 1, 2: 7}[int(sem)]
+                return date(int(year), month, 1)
         if freq == "Q" or "Q" in s:
             clean = s.replace("-Q", "Q")
             if "Q" in clean:

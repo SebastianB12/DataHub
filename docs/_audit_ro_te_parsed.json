@@ -1,0 +1,483 @@
+{
+  "budget-deficit": {
+    "size": 275809,
+    "source_label": "Ministerul Finantelor Publice",
+    "source_url": null,
+    "description": "Romania recorded a Government Budget deficit equal to 7.90 percent of the country's Gross Domestic Product in 2025. Government Budget in Romania averaged -3.95 percent of GDP from 1993 until 2025, reaching an all time high of 0.50 percent of GDP in 1993 and a record low of -9.50 percent of GDP in 2009. source: Ministerul Finantelor Publice",
+    "h1": "Romania Government Budget"
+  },
+  "business-confidence": {
+    "size": 278539,
+    "source_url": "http://ec.europa.eu",
+    "source_label": "European Commission",
+    "description": "Business Confidence in Romania decreased to -3.30 points in April from -3 points in March of 2026. Business Confidence in Romania averaged -1.79 points from 1991 until 2026, reaching an all time high of 27.30 points in June of 1996 and a record low of -32.10 points in April of 2020. source: European Commission",
+    "value_first": -3.3,
+    "value_unit": "points",
+    "h1": "Romania Business Confidence"
+  },
+  "capacity-utilization": {
+    "size": 278534,
+    "source_label": "European Commission",
+    "source_url": null,
+    "description": "Capacity Utilization in Romania increased to 69.90 percent in the first quarter of 2026 from 68.50 percent in the fourth quarter of 2025. Capacity Utilization in Romania averaged 76.56 percent from 2001 until 2026, reaching an all time high of 85.60 percent in the second quarter of 2007 and a record low of 65.90 percent in the fourth quarter of 2023. source: European Commission",
+    "value_first": 69.9,
+    "value_unit": "percent",
+    "h1": "Romania Capacity Utilization"
+  },
+  "changes-in-inventories": {
+    "size": 272099,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "The stocks of goods held by firms in Romania increased by 1669.40 RON Million in the fourth quarter of 2025. Changes in Inventories in Romania averaged 804.70 RON Million from 1995 until 2025, reaching an all time high of 15538.60 RON Million in the fourth quarter of 2020 and a record low of -13758.90 RON Million in the fourth quarter of 2007. source: Institutul National de Statistica",
+    "h1": "Romania Changes in Inventories"
+  },
+  "consumer-confidence": {
+    "size": 271412,
+    "source_url": "http://ec.europa.eu",
+    "source_label": "European Commission",
+    "description": "Consumer Confidence in Romania decreased to -35.10 points in April from -32.20 points in March of 2026. Consumer Confidence in Romania averaged -18.05 points from 2001 until 2026, reaching an all time high of 0.20 points in March of 2017 and a record low of -53.50 points in June of 2010. source: European Commission",
+    "value_first": -35.1,
+    "value_unit": "points",
+    "h1": "Romania Consumer Confidence"
+  },
+  "consumer-spending": {
+    "size": 271731,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Consumer Spending in Romania decreased to 197012 RON Million in the fourth quarter of 2025 from 198257.60 RON Million in the third quarter of 2025. Consumer Spending in Romania averaged 114884.40 RON Million from 1995 until 2025, reaching an all time high of 198580.40 RON Million in the fourth quarter of 2024 and a record low of 50177.60 RON Million in the fourth quarter of 1999. source: Institutul National de Statistica",
+    "value_first": 197012.0,
+    "value_unit": "RON",
+    "h1": "Romania Consumer Spending"
+  },
+  "core-cpi": {
+    "size": 275489,
+    "source_label": "EUROSTAT",
+    "source_url": null,
+    "description": "Core consumer prices in Romania increased 9.50 percent in April of 2026 over the same month in the previous year. Core Inflation Rate in Romania averaged 5.56 percent from 2001 until 2026, reaching an all time high of 29.70 percent in December of 2001 and a record low of -0.50 percent in December of 2016. source: EUROSTAT",
+    "h1": "Romania Core Inflation Rate"
+  },
+  "corporate-tax-rate": {
+    "size": 271765,
+    "source_label": "National Agency for Fiscal Administration (ANAF)",
+    "source_url": null,
+    "description": "The Corporate Tax Rate in Romania stands at 16 percent. Corporate Tax Rate in Romania averaged 20.84 percent from 1995 until 2026, reaching an all time high of 38.00 percent in 1996 and a record low of 16.00 percent in 2005. source: National Agency for Fiscal Administration (ANAF)",
+    "h1": "Romania Corporate Tax Rate"
+  },
+  "corruption-index": {
+    "size": 278709,
+    "source_label": "Transparency International",
+    "source_url": null,
+    "description": "Romania scored 45 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Romania averaged 38.60 Points from 1997 until 2025, reaching an all time high of 48.00 Points in 2016 and a record low of 26.00 Points in 2002. source: Transparency International",
+    "h1": "Romania Corruption Index"
+  },
+  "corruption-rank": {
+    "size": 278720,
+    "source_label": "Transparency International",
+    "source_url": null,
+    "description": "Romania is the 70 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Romania averaged 68.03 from 1997 until 2025, reaching an all time high of 87.00 in 2004 and a record low of 37.00 in 1997. source: Transparency International",
+    "h1": "Romania Corruption Rank"
+  },
+  "cpi-clothing": {
+    "size": 254638,
+    "page_not_found": true
+  },
+  "cpi-education": {
+    "size": 254655,
+    "page_not_found": true
+  },
+  "cpi-food": {
+    "size": 254570,
+    "page_not_found": true
+  },
+  "cpi-housing-utilities": {
+    "size": 254791,
+    "page_not_found": true
+  },
+  "cpi-recreation-and-culture": {
+    "size": 254876,
+    "page_not_found": true
+  },
+  "cpi-transportation": {
+    "size": 272217,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "The transportation sub-index of the CPI basket in Romania decreased to 100.07 points in April of 2026 from 100.31 points in March of 2026. CPI Transportation in Romania averaged 100.66 points from 2001 until 2026, reaching an all time high of 108.60 points in June of 2001 and a record low of 99.12 points in February of 2026. source: Institutul National de Statistica",
+    "value_first": 100.07,
+    "value_unit": "points",
+    "h1": "Romania CPI Transportation"
+  },
+  "credit-rating": {
+    "size": 205917,
+    "page_not_found": true,
+    "h1": "Romania - Credit Rating"
+  },
+  "current-account": {
+    "size": 283264,
+    "source_url": "https://www.bnr.ro/",
+    "source_label": "National Bank of Romania",
+    "description": "Romania’s current account posted a deficit of EUR 2,322 million in February 2026, narrowing from EUR 2,538 million in the same month of the previous year. The primary income deficit narrowed to EUR 691 million from EUR 890 million in February 2025, while the goods account deficit narrowed to EUR 2,368 million in February 2026, from EUR 2,832 million. On the other hand, the services account surplus narrowed to EUR 1,010 million, compared with EUR 1,138 million a year earlier. At the same time, the secondary income shortfall widened to EUR 274 million from EUR 77 million. Considering the first two months of the year, Romania’s current account deficit narrowed to EUR 3,191 million, compared with EUR 3,639 million in the same period of the previous year. source: National Bank of Romania",
+    "h1": "Romania Current Account"
+  },
+  "current-account-to-gdp": {
+    "size": 279243,
+    "source_label": "Ministerul Finantelor Publice",
+    "source_url": null,
+    "description": "Romania recorded a Current Account deficit of 8 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Romania averaged -3.94 percent of GDP from 1980 until 2025, reaching an all time high of 6.60 percent of GDP in 1988 and a record low of -13.60 percent of GDP in 2007. source: Ministerul Finantelor Publice",
+    "h1": "Romania Current Account to GDP"
+  },
+  "disposable-personal-income": {
+    "size": 254876,
+    "page_not_found": true
+  },
+  "employed-persons": {
+    "size": 271839,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "The number of employed persons in Romania decreased to 5121 Thousand in February of 2026 from 5121.90 Thousand in January of 2026. Employed Persons in Romania averaged 5572.60 Thousand from 1980 until 2026, reaching an all time high of 8496.00 Thousand in June of 1990 and a record low of 4095.20 Thousand in January of 2011. source: Institutul National de Statistica",
+    "value_first": 5121.0,
+    "value_unit": null,
+    "h1": "Romania Employed Persons"
+  },
+  "employment-rate": {
+    "size": 271881,
+    "source_url": "https://insse.ro/cms/",
+    "source_label": "Institutul National de Statistica",
+    "description": "Employment Rate in Romania decreased to 62.60 percent in the fourth quarter of 2025 from 63.40 percent in the third quarter of 2025. Employment Rate in Romania averaged 61.75 percent from 1996 until 2025, reaching an all time high of 69.10 percent in the third quarter of 1996 and a record low of 55.40 percent in the first quarter of 2003. source: Institutul National de Statistica",
+    "value_first": 62.6,
+    "value_unit": "percent",
+    "h1": "Romania Employment Rate"
+  },
+  "energy-inflation": {
+    "size": 254706,
+    "page_not_found": true
+  },
+  "exports": {
+    "size": 274484,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Exports from Romania increased 6.2% year-on-year to a record high of EUR 8.959 billion in March 2026, supported by stronger shipments to both EU (8.1%) and non-EU (1.4%) countries. Considering the first quarter of the year, exports grew 1.1% compared to the same period a year earlier, reaching EUR 23.812 billion, buoyed by higher sales of machinery and transport equipment (2.9%) and manufactured goods classified mainly by raw materials (3.4%). source: Institutul National de Statistica",
+    "h1": "Romania Exports"
+  },
+  "food-inflation": {
+    "size": 271948,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Cost of food in Romania increased 7.39 percent in April of 2026 over the same month in the previous year. Food Inflation in Romania averaged 16.53 percent from 1995 until 2026, reaching an all time high of 178.30 percent in April of 1997 and a record low of -7.57 percent in May of 2016. source: Institutul National de Statistica",
+    "h1": "Romania Food Inflation"
+  },
+  "gdp": {
+    "size": 274937,
+    "source_url": "https://www.worldbank.org/",
+    "source_label": "World Bank",
+    "description": "The Gross Domestic Product (GDP) in Romania was worth 382.77 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Romania represents 0.36 percent of the world economy. source: World Bank",
+    "h1": "Romania GDP"
+  },
+  "gdp-per-capita": {
+    "size": 276572,
+    "source_url": "https://www.worldbank.org/",
+    "source_label": "World Bank",
+    "description": "The Gross Domestic Product per capita in Romania was last recorded at 12493.43 US dollars in 2024. The GDP per Capita in Romania is equivalent to 99 percent of the world's average. GDP per Capita in Romania averaged 7388.68 USD from 1990 until 2024, reaching an all time high of 12493.43 USD in 2024 and a record low of 4059.10 USD in 1992. source: World Bank",
+    "h1": "Romania GDP per capita"
+  },
+  "gdp-per-capita-ppp": {
+    "size": 278004,
+    "source_url": "https://www.worldbank.org/",
+    "source_label": "World Bank",
+    "description": "The Gross Domestic Product per capita in Romania was last recorded at 40608.42 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Romania, when adjusted by Purchasing Power Parity is equivalent to 229 percent of the world's average. source: World Bank",
+    "h1": "Romania GDP per capita PPP"
+  },
+  "gdp-real": {
+    "size": 287289,
+    "source_url": "http://www.insse.ro/",
+    "source_label": "Institutul National de Statistica",
+    "description": "Romania’s economy contracted by 1.7% year-on-year in the first quarter of 2026, reversing a modest 0.2% expansion in the previous three-month period, according to preliminary estimates. The latest figure marked the country’s first annual economic contraction since the fourth quarter of 2020, highlighting a significant loss of momentum at the start of the year. On a seasonally adjusted quarterly basis, the country’s GDP fell by 0.2%, marking a second consecutive quarterly contraction, though the pace of decline eased from an upwardly revised 2% drop in the previous quarter. source: Institutul National de Statistica",
+    "h1": "Romania GDP Annual Growth Rate"
+  },
+  "government-debt": {
+    "size": 271319,
+    "source_label": "Ministry of Public Finance, Romania",
+    "source_url": null,
+    "description": "Romania recorded a Government Debt to GDP of 59.30 percent of the country's Gross Domestic Product in 2025. Government Debt to GDP in Romania averaged 29.69 percent of GDP from 1995 until 2025, reaching an all time high of 59.30 percent of GDP in 2025 and a record low of 6.60 percent of GDP in 1995. source: Ministry of Public Finance, Romania",
+    "h1": "Romania Government Debt to GDP"
+  },
+  "government-debt-total": {
+    "size": 270024,
+    "source_label": "Ministry of Public Finance, Romania",
+    "source_url": null,
+    "description": "Government Debt in Romania decreased to 1236906.20 RON Million in February from 1239066.80 RON Million in January of 2026. Government Debt in Romania averaged 646919.18 RON Million from 2013 until 2026, reaching an all time high of 1255675.10 RON Million in December of 2025 and a record low of 237972.00 RON Million in December of 2013. source: Ministry of Public Finance, Romania",
+    "value_first": 1236906.2,
+    "value_unit": "RON",
+    "h1": "Romania Central Government Debt"
+  },
+  "government-spending": {
+    "size": 275446,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Government Spending in Romania decreased to 25993.30 RON Million in the fourth quarter of 2025 from 27802.60 RON Million in the third quarter of 2025. Government Spending in Romania averaged 21961.62 RON Million from 1995 until 2025, reaching an all time high of 37900.00 RON Million in the second quarter of 1995 and a record low of 4768.50 RON Million in the third quarter of 1995. source: Institutul National de Statistica",
+    "value_first": 25993.3,
+    "value_unit": "RON",
+    "h1": "Romania Government Spending"
+  },
+  "government-spending-eur": {
+    "size": 275446,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Government Spending in Romania decreased to 25993.30 RON Million in the fourth quarter of 2025 from 27802.60 RON Million in the third quarter of 2025. Government Spending in Romania averaged 21961.62 RON Million from 1995 until 2025, reaching an all time high of 37900.00 RON Million in the second quarter of 1995 and a record low of 4768.50 RON Million in the third quarter of 1995. source: Institutul National de Statistica",
+    "value_first": 25993.3,
+    "value_unit": "RON",
+    "h1": "Romania Government Spending"
+  },
+  "gross-fixed-capital-formation": {
+    "size": 274996,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Gross Fixed Capital Formation in Romania increased to 78237.50 RON Million in the fourth quarter of 2025 from 77944.50 RON Million in the third quarter of 2025. Gross Fixed Capital Formation in Romania averaged 45375.73 RON Million from 1995 until 2025, reaching an all time high of 84792.00 RON Million in the fourth quarter of 2023 and a record low of 14451.10 RON Million in the fourth quarter of 1995. source: Institutul National de Statistica",
+    "value_first": 78237.5,
+    "value_unit": "RON",
+    "h1": "Romania Gross Fixed Capital Formation"
+  },
+  "hospital-beds": {
+    "size": 254655,
+    "page_not_found": true
+  },
+  "house-price-index": {
+    "size": 269412,
+    "source_label": "EUROSTAT",
+    "source_url": null,
+    "description": "Housing Index in Romania increased to 168.99 points in the fourth quarter of 2025 from 166.14 points in the third quarter of 2025. Housing Index in Romania averaged 122.62 points from 2009 until 2025, reaching an all time high of 168.99 points in the fourth quarter of 2025 and a record low of 96.01 points in the third quarter of 2014. source: EUROSTAT",
+    "value_first": 168.99,
+    "value_unit": "points",
+    "h1": "Romania House Price Index"
+  },
+  "imports": {
+    "size": 274556,
+    "source_url": "http://www.insse.ro",
+    "source_label": "Institutul National de Statistica",
+    "description": "Imports to Romania rose 5.3% year-on-year to EUR 11.885 billion in March 2026, driven by an 8.1% increase in arrivals from EU countries, while imports from non-EU countries fell 2.6%. Considering the first quarter of the year, imports fell 1.7% to EUR 31.517 billion, weighed down by lower purchases of miscellaneous manufactured articles (-3%), manufactured goods classified mainly by raw materials (-3.1%), and mineral fuels, lubricants, and related materials (-14.2%). source: Institutul National de Statistica",
+    "h1": "Romania Imports"
+  },
+  "industrial-production": {
+    "size": 286158,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Industrial production in Romania fell 2.2% year-on-year in March 2026, following an upwardly revised 1.6% decline in the previous month. Output continued to contract in manufacturing (-3.1% vs -2.3% in February), particularly in the production of beverages; coke and refined petroleum products; chemicals and chemical products; basic pharmaceutical products and pharmaceutical preparations; rubber and plastic products; other non-metallic mineral products; basic metals; machinery and equipment n.e.c.; and motor vehicles, trailers, and semi-trailers. Meanwhile, activity in the mining and quarrying sector rebounded (1.3% vs -2.9%), supported by softer declines in the mining of coal, lignite, and metal ores, alongside a recovery in other mining and quarrying activities. Electricity, gas, steam, and air conditioning supply also edged higher (3.8% vs 3.7%). On a monthly basis, industrial output rose 0.3% in March, reversing a 0.4% decline in February. source: Institutul National de Statistica",
+    "h1": "Romania Industrial Production"
+  },
+  "inflation-cpi": {
+    "size": 285367,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "The inflation rate in Romania rose by 10.7% year-on-year in April 2026 from 9.9% in the previous month, matching market expectations. This marked the highest level since April 2023, driven mainly by higher costs in non-food goods (12.02% vs 10.89% in March), particularly in clothing, hosiery, trimmings, and haberdashery (7.10% vs 7.05%), cultural and sporting products (8.13% vs 7.81%), and fuels (15.65% vs 12.93%). At the same time, prices increased in services (13.04% vs 11.05%). In contrast, price growth moderated for food products (7.39% vs 7.67%), weighed down by lower costs in milling and bakery products (7.82% vs 8.60%), fruit and tinned fruit (9.61% vs 11.79%), and meat and meat products (5.98% vs 6.46%). On a monthly basis, consumer prices grew by 0.84% in April, following a 0.78% rise in the preceding period. Meanwhile, the HICP-based annual inflation rate rose to 9.5% from 9% in the previous month. source: Institutul National de Statistica",
+    "value_first": 9.5,
+    "value_unit": "%",
+    "h1": "Romania Inflation Rate"
+  },
+  "job-vacancies": {
+    "size": 272243,
+    "source_url": "https://insse.ro/cms/",
+    "source_label": "Institutul National de Statistica",
+    "description": "Job Vacancies in Romania decreased to 28360 in the fourth quarter of 2025 from 31617 in the third quarter of 2025. Job Vacancies in Romania averaged 49596.54 from 2005 until 2025, reaching an all time high of 101693.00 in the third quarter of 2007 and a record low of 20397.00 in the fourth quarter of 2010. source: Institutul National de Statistica",
+    "value_first": 28360.0,
+    "value_unit": null,
+    "h1": "Romania Job Vacancies"
+  },
+  "labor-force-participation-rate": {
+    "size": 272358,
+    "source_url": "https://insse.ro/cms/ro",
+    "source_label": "Institutul National de Statistica",
+    "description": "Labor Force Participation Rate in Romania decreased to 66.80 percent in the fourth quarter of 2025 from 67.40 percent in the third quarter of 2025. Labor Force Participation Rate in Romania averaged 66.04 percent from 1996 until 2025, reaching an all time high of 73.60 percent in the third quarter of 1996 and a record low of 60.40 percent in the first quarter of 2003. source: Institutul National de Statistica",
+    "value_first": 66.8,
+    "value_unit": "percent",
+    "h1": "Romania Labor Force Participation Rate"
+  },
+  "labour-costs": {
+    "size": 273334,
+    "source_label": "EUROSTAT",
+    "source_url": null,
+    "description": "Labour Costs in Romania decreased to 192.75 points in the fourth quarter of 2025 from 205.70 points in the third quarter of 2025. Labour Costs in Romania averaged 93.63 points from 1995 until 2025, reaching an all time high of 288.56 points in the first quarter of 2025 and a record low of 2.16 points in the third quarter of 1995. source: EUROSTAT",
+    "value_first": 192.75,
+    "value_unit": "points",
+    "h1": "Romania Unit Labour Costs"
+  },
+  "long-term-unemployment-rate": {
+    "size": 273530,
+    "source_label": "EUROSTAT",
+    "source_url": null,
+    "description": "Long Term Unemployment Rate in Romania increased to 2.30 percent in the fourth quarter of 2025 from 2 percent in the third quarter of 2025. Long Term Unemployment Rate in Romania averaged 3.10 percent from 1997 until 2025, reaching an all time high of 5.40 percent in the first quarter of 2004 and a record low of 1.50 percent in the second quarter of 2020. source: EUROSTAT",
+    "value_first": 2.3,
+    "value_unit": "percent",
+    "h1": "Romania Long Term Unemployment Rate"
+  },
+  "manufacturing-production": {
+    "size": 272060,
+    "source_url": "https://insse.ro/cms/",
+    "source_label": "Institutul National de Statistica",
+    "description": "Manufacturing Production in Romania decreased 3.10 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Romania averaged 3.10 percent from 2001 until 2026, reaching an all time high of 80.90 percent in April of 2021 and a record low of -44.80 percent in April of 2020. source: Institutul National de Statistica",
+    "h1": "Romania Manufacturing Production"
+  },
+  "medical-doctors": {
+    "size": 254689,
+    "page_not_found": true
+  },
+  "minimum-wages": {
+    "size": 272357,
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_label": "EUROSTAT",
+    "description": "Minimum Wages in Romania decreased to 795 EUR/Month in the second quarter of 2026 from 797 EUR/Month in the fourth quarter of 2025. Minimum Wages in Romania averaged 264.47 EUR/Month from 1999 until 2026, reaching an all time high of 814.00 EUR/Month in June of 2025 and a record low of 25.00 EUR/Month in June of 2000. source: EUROSTAT",
+    "value_first": 795.0,
+    "value_unit": "EUR",
+    "h1": "Romania Gross Minimum Monthly Wage"
+  },
+  "mining-production": {
+    "size": 271761,
+    "source_url": "https://insse.ro/cms/",
+    "source_label": "Institutul National de Statistica",
+    "description": "Mining production in Romania increased 1.30 percent in March of 2026 over the same month in the previous year. Mining Production in Romania averaged -1.45 percent from 2001 until 2026, reaching an all time high of 20.20 percent in May of 2017 and a record low of -21.90 percent in June of 2009. source: Institutul National de Statistica",
+    "h1": "Romania Mining Production"
+  },
+  "nurses": {
+    "size": 254536,
+    "page_not_found": true
+  },
+  "personal-income-tax-rate": {
+    "size": 271554,
+    "source_label": "National Agency for Fiscal Administration (ANAF)",
+    "source_url": null,
+    "description": "The Personal Income Tax Rate in Romania stands at 10 percent. Personal Income Tax Rate in Romania averaged 22.45 percent from 1995 until 2025, reaching an all time high of 48.00 percent in 1998 and a record low of 10.00 percent in 2018. source: National Agency for Fiscal Administration (ANAF)",
+    "h1": "Romania Personal Income Tax Rate"
+  },
+  "population": {
+    "size": 273392,
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_label": "EUROSTAT",
+    "description": "The total population in Romania was estimated at 19.0 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Romania had a population of 18.3 million people. source: EUROSTAT",
+    "h1": "Romania Population"
+  },
+  "ppi": {
+    "size": 272390,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Producer Prices in Romania increased to 159.82 points in March from 157.83 points in February of 2026. Producer Prices in Romania averaged 85.11 points from 2000 until 2026, reaching an all time high of 159.82 points in March of 2026 and a record low of 33.30 points in January of 2000. source: Institutul National de Statistica",
+    "value_first": 159.82,
+    "value_unit": "points",
+    "h1": "Romania Producer Prices"
+  },
+  "productivity": {
+    "size": 272354,
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_label": "EUROSTAT",
+    "description": "Productivity in Romania decreased to 132.04 points in the fourth quarter of 2025 from 135.59 points in the third quarter of 2025. Productivity in Romania averaged 84.63 points from 1995 until 2025, reaching an all time high of 135.59 points in the third quarter of 2025 and a record low of 39.22 points in the fourth quarter of 1995. source: EUROSTAT",
+    "value_first": 132.04,
+    "value_unit": "points",
+    "h1": "Romania Productivity"
+  },
+  "retail-sales": {
+    "size": 277903,
+    "source_url": "http://www.insse.ro",
+    "source_label": "Institutul National de Statistica",
+    "description": "Retail activity in Romania jumped 2.6% month-on-month in March 2026, following an upwardly revised 0.5% increase in the preceding period. Retail Sales MoM in Romania averaged 0.54 percent from 2000 until 2026, reaching an all time high of 17.20 percent in May of 2020 and a record low of -21.90 percent in April of 2020. source: Institutul National de Statistica",
+    "h1": "Romania Retail Sales MoM"
+  },
+  "retirement-age-men": {
+    "size": 280058,
+    "source_url": "https://www.cnpp.ro",
+    "source_label": "National Revenue Agency",
+    "description": "Retirement Age Men in Romania remained unchanged at 65 Years in 2026 from 65 Years in 2025. Retirement Age Men in Romania averaged 64.54 Years from 2006 until 2026, reaching an all time high of 65.00 Years in 2015 and a record low of 62.92 Years in 2006. source: National Revenue Agency",
+    "h1": "Romania Retirement Age - Men"
+  },
+  "retirement-age-women": {
+    "size": 279720,
+    "source_url": "https://www.cnpp.ro",
+    "source_label": "National Revenue Agency",
+    "description": "Retirement Age Women in Romania remained unchanged at 62 Years in 2026 from 62 Years in 2025. Retirement Age Women in Romania averaged 60.32 Years from 2006 until 2026, reaching an all time high of 62.00 Years in 2023 and a record low of 57.92 Years in 2006. source: National Revenue Agency",
+    "h1": "Romania Retirement Age - Women"
+  },
+  "sales-tax-rate": {
+    "size": 271211,
+    "source_url": "https://www.vatlive.com",
+    "source_label": "National Agency for Fiscal Administration (ANAF)",
+    "description": "The Sales Tax Rate in Romania stands at 19 percent. Sales Tax Rate in Romania averaged 20.15 percent from 2000 until 2026, reaching an all time high of 24.00 percent in 2010 and a record low of 19.00 percent in 2001. source: National Agency for Fiscal Administration (ANAF)",
+    "h1": "Romania Sales Tax Rate - VAT"
+  },
+  "services-inflation": {
+    "size": 254740,
+    "page_not_found": true
+  },
+  "services-sentiment": {
+    "size": 254740,
+    "page_not_found": true
+  },
+  "social-security-rate": {
+    "size": 271464,
+    "source_url": "https://home.kpmg.com",
+    "source_label": "Ministry of Labor, Family, and Social Protection",
+    "description": "The Social Security Rate in Romania stands at 37.25 percent. Social Security Rate in Romania averaged 43.28 percent from 2004 until 2026, reaching an all time high of 56.75 percent in 2004 and a record low of 37.25 percent in 2018. source: Ministry of Labor, Family, and Social Protection",
+    "h1": "Romania Social Security Rate"
+  },
+  "social-security-rate-companies": {
+    "size": 272053,
+    "source_url": "https://home.kpmg.com",
+    "source_label": "Ministry of Labor, Family, and Social Protection",
+    "description": "The Social Security Rate For Companies in Romania stands at 2.25 percent. Social Security Rate For Companies in Romania averaged 19.41 percent from 2004 until 2026, reaching an all time high of 39.75 percent in 2004 and a record low of 2.25 percent in 2018. source: Ministry of Labor, Family, and Social Protection",
+    "h1": "Romania Social Security Rate For Companies"
+  },
+  "social-security-rate-employees": {
+    "size": 272503,
+    "source_url": "https://home.kpmg.com",
+    "source_label": "Ministry of Labor, Family, and Social Protection",
+    "description": "The Social Security Rate For Employees in Romania stands at 35 percent. Social Security Rate For Employees in Romania averaged 23.87 percent from 2004 until 2026, reaching an all time high of 35.00 percent in 2018 and a record low of 16.50 percent in 2010. source: Ministry of Labor, Family, and Social Protection",
+    "h1": "Romania Social Security Rate For Employees"
+  },
+  "terrorism-index": {
+    "size": 277503,
+    "source_label": "Institute for Economics and Peace",
+    "source_url": null,
+    "description": "Terrorism Index in Romania remained unchanged at 0 Points in 2025 from 0 Points in 2024. Terrorism Index in Romania averaged 0.35 Points from 2002 until 2025, reaching an all time high of 2.60 Points in 2018 and a record low of 0.00 Points in 2003. source: Institute for Economics and Peace",
+    "h1": "Romania Terrorism Index"
+  },
+  "trade-balance": {
+    "size": 284203,
+    "source_label": "Institutul National de Statistica",
+    "source_url": null,
+    "description": "Romania’s trade deficit widened to EUR 2.927 billion in March 2026, compared with EUR 2.856 billion in the same month a year earlier. Exports increased 6.2% year-on-year to a record high of EUR 8.959 billion, supported by stronger shipments to both EU (8.1%) and non-EU (1.4%) countries. Meanwhile, imports rose 5.3% to EUR 11.885 billion, driven by an 8.1% increase in arrivals from EU countries, while imports from non-EU countries fell 2.6%. In the first quarter of the year, the trade deficit reached EUR 7.704 billion. Exports grew 1.1% to EUR 23.812 billion, buoyed by higher sales of machinery and transport equipment (2.9%) and manufactured goods classified mainly by raw materials (3.4%). In contrast, imports fell 1.7% to EUR 31.517, weighed down by lower purchases of miscellaneous manufactured articles (-3%), manufactured goods classified mainly by raw materials (-3.1%), and mineral fuels, lubricants and related materials (-14.2%). source: Institutul National de Statistica",
+    "h1": "Romania Balance of Trade"
+  },
+  "unemployed-persons": {
+    "size": 279689,
+    "source_label": "ANOFM, Romania",
+    "source_url": null,
+    "description": "The number of unemployed persons in Romania decreased to 260 Thousand in March of 2026 from 267.50 Thousand in February of 2026. Unemployed Persons in Romania averaged 576.11 Thousand from 1991 until 2026, reaching an all time high of 1291.30 Thousand in March of 1994 and a record low of 65.30 Thousand in February of 1991. source: ANOFM, Romania",
+    "value_first": 260.0,
+    "value_unit": null,
+    "h1": "Romania Unemployed Persons"
+  },
+  "unemployment": {
+    "size": 283545,
+    "source_url": "http://www.insse.ro",
+    "source_label": "Institutul National de Statistica",
+    "description": "Unemployment Rate in Romania increased to 6.10 percent in March from 6 percent in February of 2026. Unemployment Rate in Romania averaged 6.95 percent from 2004 until 2026, reaching an all time high of 9.60 percent in March of 2010 and a record low of 4.70 percent in June of 2019. source: Institutul National de Statistica",
+    "value_first": 6.1,
+    "value_unit": "percent",
+    "h1": "Romania Unemployment Rate"
+  },
+  "unemployment-rate-registered": {
+    "size": 254910,
+    "page_not_found": true
+  },
+  "wages": {
+    "size": 272813,
+    "source_url": "https://insse.ro/cms/",
+    "source_label": "Institutul National de Statistica",
+    "description": "Wages in Romania increased to 9902 RON/Month in March from 9272 RON/Month in February of 2026. Wages in Romania averaged 2398.40 RON/Month from 1991 until 2026, reaching an all time high of 9902.00 RON/Month in March of 2026 and a record low of 0.47 RON/Month in February of 1991. source: Institutul National de Statistica",
+    "value_first": 9902.0,
+    "value_unit": "RON",
+    "h1": "Romania Average Gross Monthly Wages"
+  },
+  "youth-unemployment-rate": {
+    "size": 273745,
+    "source_label": "EUROSTAT",
+    "source_url": null,
+    "description": "Youth Unemployment Rate in Romania remained unchanged at 28.20 percent in December. Youth Unemployment Rate in Romania averaged 22.14 percent from 1997 until 2025, reaching an all time high of 31.20 percent in October of 2011 and a record low of 15.30 percent in January of 1998. source: EUROSTAT",
+    "h1": "Romania Youth Unemployment Rate"
+  }
+}

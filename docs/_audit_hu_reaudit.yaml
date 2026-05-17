@@ -1,0 +1,649 @@
+country: HU
+audited_at: '2026-05-17'
+te_path: hungary
+slug_count: 66
+summary:
+  gap: 10
+  ok: 32
+  ok_curated: 12
+  te_no_page: 12
+slugs:
+  budget-deficit:
+    db_source: eurostat
+    db_latest_value: -4.7
+    db_latest_date: '2025-12-31'
+    db_unit: '% of GDP'
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: gap
+    note: TE attributes Hungarian Central Statistical Office; our source=eurostat.
+      Marked stage=gap in truth.yaml.
+  business-confidence:
+    db_source: eurostat
+    db_latest_value: -7.1
+    db_latest_date: '2026-04-30'
+    db_unit: Points
+    te_source_label: GKI Economic Research Co.
+    te_latest_value: '-8.50'
+    te_status: ok
+    status: gap
+    note: TE attributes GKI Economic Research Co.; our source=eurostat. No public
+      API for this publisher; marked stage=gap in truth.yaml.
+  capacity-utilization:
+    db_source: eurostat
+    db_latest_value: 76.9
+    db_latest_date: '2026-06-30'
+    db_unit: '%'
+    te_source_label: EUROSTAT
+    te_latest_value: '76.90'
+    te_status: ok
+    status: ok
+  changes-in-inventories:
+    db_source: ksh_hu
+    db_latest_value: 985045
+    db_latest_date: '2025-12-31'
+    db_unit: Million HUF
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  consumer-confidence:
+    db_source: eurostat
+    db_latest_value: -20.6
+    db_latest_date: '2026-04-30'
+    db_unit: Points
+    te_source_label: GKI Economic Research Co.
+    te_latest_value: '-17'
+    te_status: ok
+    status: gap
+    note: TE attributes GKI Economic Research Co.; our source=eurostat. No public
+      API for this publisher; marked stage=gap in truth.yaml.
+  consumer-spending:
+    db_source: ksh_hu
+    db_latest_value: 11829869
+    db_latest_date: '2025-12-31'
+    db_unit: Million HUF
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '9851154'
+    te_status: ok
+    status: ok
+  core-cpi:
+    db_source: eurostat
+    db_latest_value: 102.63
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '2.2'
+    te_status: ok
+    status: gap
+    note: TE attributes Hungarian Central Statistical Office; our source=eurostat.
+      Marked stage=gap in truth.yaml.
+  corporate-tax-rate:
+    db_source: curated
+    db_latest_value: 9
+    db_latest_date: '2026-12-31'
+    db_unit: '%'
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: '9'
+    te_status: ok
+    status: ok_curated
+  corruption-index:
+    db_source: curated
+    db_latest_value: 41
+    db_latest_date: '2025-12-31'
+    db_unit: Points
+    te_source_label: Transparency International
+    te_latest_value: null
+    te_status: ok
+    status: ok_curated
+  corruption-rank:
+    db_source: curated
+    db_latest_value: 76
+    db_latest_date: '2025-12-31'
+    db_unit: Rank
+    te_source_label: Transparency International
+    te_latest_value: null
+    te_status: ok
+    status: ok_curated
+  cpi-clothing:
+    db_source: eurostat
+    db_latest_value: 99.9
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/cpi-clothing. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  cpi-education:
+    db_source: eurostat
+    db_latest_value: 102.8
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/cpi-education. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  cpi-food:
+    db_source: eurostat
+    db_latest_value: 98.43
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/cpi-food. Source kept as honest fetcher; truth.yaml
+      marked stage=gap.
+  cpi-housing-utilities:
+    db_source: eurostat
+    db_latest_value: 103.36
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/cpi-housing-utilities. Source kept as honest
+      fetcher; truth.yaml marked stage=gap.
+  cpi-recreation-and-culture:
+    db_source: eurostat
+    db_latest_value: 103.32
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/cpi-recreation-and-culture. Source kept as
+      honest fetcher; truth.yaml marked stage=gap.
+  cpi-transportation:
+    db_source: ksh_hu
+    db_latest_value: 101.9
+    db_latest_date: '2026-04-30'
+    db_unit: Index (same month previous year=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '99.90'
+    te_status: ok
+    status: ok
+  credit-rating:
+    db_source: curated
+    db_latest_value: 56
+    db_latest_date: '2026-04-01'
+    db_unit: Rating
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/credit-rating. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  current-account:
+    db_source: ecb
+    db_latest_value: 124.71
+    db_latest_date: '2026-02-01'
+    db_unit: Million EUR
+    te_source_label: National Bank of Hungary
+    te_latest_value: '321.09'
+    te_status: ok
+    status: gap
+    note: TE attributes National Bank of Hungary; our source=ecb. Marked stage=gap
+      in truth.yaml.
+  current-account-to-gdp:
+    db_source: eurostat
+    db_latest_value: 1.7
+    db_latest_date: '2025-12-31'
+    db_unit: '% of GDP'
+    te_source_label: EUROSTAT
+    te_latest_value: '1.70'
+    te_status: ok
+    status: ok
+  disposable-personal-income:
+    db_source: eurostat
+    db_latest_value: 36849
+    db_latest_date: '2025-12-31'
+    db_unit: Million EUR
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/disposable-personal-income. Source kept as
+      honest fetcher; truth.yaml marked stage=gap.
+  employed-persons:
+    db_source: ksh_hu
+    db_latest_value: 4627.4
+    db_latest_date: '2026-03-31'
+    db_unit: Thousand persons
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '4627.40'
+    te_status: ok
+    status: ok
+  employment-rate:
+    db_source: ksh_hu
+    db_latest_value: 65
+    db_latest_date: '2026-03-31'
+    db_unit: '%'
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '65'
+    te_status: ok
+    status: ok
+  energy-inflation:
+    db_source: eurostat
+    db_latest_value: 101.03
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/energy-inflation. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  exports:
+    db_source: ksh_hu
+    db_latest_value: 12884
+    db_latest_date: '2026-02-28'
+    db_unit: Million EUR
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '14045.41'
+    te_status: ok
+    status: ok
+  food-inflation:
+    db_source: ksh_hu
+    db_latest_value: 101.5
+    db_latest_date: '2026-04-30'
+    db_unit: Index (same month previous year=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  gdp:
+    db_source: worldbank
+    db_latest_value: 222.72
+    db_latest_date: '2024-12-31'
+    db_unit: Billion USD
+    te_source_label: World Bank
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  gdp-per-capita:
+    db_source: worldbank
+    db_latest_value: 16518.64
+    db_latest_date: '2024-12-31'
+    db_unit: USD (constant 2015)
+    te_source_label: World Bank
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  gdp-per-capita-ppp:
+    db_source: worldbank
+    db_latest_value: 40686.93
+    db_latest_date: '2024-12-31'
+    db_unit: Int. USD (PPP constant 2021)
+    te_source_label: World Bank
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  gdp-real:
+    db_source: ksh_hu
+    db_latest_value: 101.7
+    db_latest_date: '2026-03-31'
+    db_unit: Index (same quarter previous year=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  government-debt:
+    db_source: eurostat
+    db_latest_value: 74.6
+    db_latest_date: '2025-12-31'
+    db_unit: '% of GDP'
+    te_source_label: Government Debt Management Agency Ltd, Hungary
+    te_latest_value: '64517.27'
+    te_status: ok
+    status: gap
+    note: TE attributes Government Debt Management Agency Ltd, Hungary; our source=eurostat.
+      No public API for this publisher; marked stage=gap in truth.yaml.
+  government-debt-total:
+    db_source: eurostat
+    db_latest_value: 168.54
+    db_latest_date: '2025-12-31'
+    db_unit: Billion EUR
+    te_source_label: Government Debt Management Agency Ltd, Hungary
+    te_latest_value: '64517.27'
+    te_status: ok
+    status: gap
+    note: TE attributes Government Debt Management Agency Ltd, Hungary; our source=eurostat.
+      No public API for this publisher; marked stage=gap in truth.yaml.
+  government-spending:
+    db_source: ksh_hu
+    db_latest_value: 2844852
+    db_latest_date: '2025-12-31'
+    db_unit: Million HUF
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '1838274'
+    te_status: ok
+    status: ok
+  government-spending-eur:
+    db_source: eurostat
+    db_latest_value: 12.26
+    db_latest_date: '2025-12-31'
+    db_unit: Billion EUR
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '1838274'
+    te_status: ok
+    status: gap
+    note: TE attributes Hungarian Central Statistical Office; our source=eurostat.
+      Marked stage=gap in truth.yaml.
+  gross-fixed-capital-formation:
+    db_source: ksh_hu
+    db_latest_value: 5334426
+    db_latest_date: '2025-12-31'
+    db_unit: Million HUF
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '3072895'
+    te_status: ok
+    status: ok
+  hospital-beds:
+    db_source: curated
+    db_latest_value: 6.78
+    db_latest_date: '2022-12-31'
+    db_unit: per 1000 people
+    te_source_label: OECD
+    te_latest_value: '6.51'
+    te_status: ok
+    status: ok_curated
+  house-price-index:
+    db_source: eurostat
+    db_latest_value: 390.47
+    db_latest_date: '2025-12-31'
+    db_unit: Index
+    te_source_label: EUROSTAT
+    te_latest_value: '390.47'
+    te_status: ok
+    status: ok
+  imports:
+    db_source: ksh_hu
+    db_latest_value: 12241
+    db_latest_date: '2026-02-28'
+    db_unit: Million EUR
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '13121.43'
+    te_status: ok
+    status: ok
+  industrial-production:
+    db_source: ksh_hu
+    db_latest_value: 98.5
+    db_latest_date: '2026-02-28'
+    db_unit: Index (same month previous year=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '1'
+    te_status: ok
+    status: ok
+  inflation-cpi:
+    db_source: ksh_hu
+    db_latest_value: 102.1
+    db_latest_date: '2026-04-30'
+    db_unit: Index (same month previous year=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '2.1'
+    te_status: ok
+    status: ok
+  job-vacancies:
+    db_source: ksh_hu
+    db_latest_value: 63762
+    db_latest_date: '2025-12-31'
+    db_unit: Persons
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '63762'
+    te_status: ok
+    status: ok
+  labor-force-participation-rate:
+    db_source: ksh_hu
+    db_latest_value: 68.1
+    db_latest_date: '2026-03-31'
+    db_unit: '%'
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '68.10'
+    te_status: ok
+    status: ok
+  labour-costs:
+    db_source: eurostat
+    db_latest_value: 180
+    db_latest_date: '2025-12-31'
+    db_unit: Index
+    te_source_label: EUROSTAT
+    te_latest_value: '211.37'
+    te_status: ok
+    status: ok
+  long-term-unemployment-rate:
+    db_source: eurostat
+    db_latest_value: 1.6
+    db_latest_date: '2025-12-31'
+    db_unit: '%'
+    te_source_label: EUROSTAT
+    te_latest_value: '1.60'
+    te_status: ok
+    status: ok
+  manufacturing-production:
+    db_source: ksh_hu
+    db_latest_value: 107.8
+    db_latest_date: '2026-03-31'
+    db_unit: Index (monthly avg 2021=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  medical-doctors:
+    db_source: curated
+    db_latest_value: 6.1
+    db_latest_date: '2021-12-31'
+    db_unit: per 1000 people
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/medical-doctors. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  minimum-wages:
+    db_source: curated
+    db_latest_value: 290800
+    db_latest_date: '2026-01-31'
+    db_unit: HUF/Month
+    te_source_label: EUROSTAT
+    te_latest_value: '838'
+    te_status: ok
+    status: gap
+    note: TE attributes EUROSTAT; our source=curated. Marked stage=gap in truth.yaml.
+  mining-production:
+    db_source: ksh_hu
+    db_latest_value: 82.5
+    db_latest_date: '2026-03-31'
+    db_unit: Index (monthly avg 2021=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  nurses:
+    db_source: curated
+    db_latest_value: 6.2
+    db_latest_date: '2021-12-31'
+    db_unit: per 1000 people
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/nurses. Source kept as honest fetcher; truth.yaml
+      marked stage=gap.
+  personal-income-tax-rate:
+    db_source: curated
+    db_latest_value: 15
+    db_latest_date: '2026-12-31'
+    db_unit: '%'
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: '15'
+    te_status: ok
+    status: ok_curated
+  population:
+    db_source: ksh_hu
+    db_latest_value: 9.489
+    db_latest_date: '2026-12-31'
+    db_unit: Persons
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  ppi:
+    db_source: ksh_hu
+    db_latest_value: 164.8
+    db_latest_date: '2026-03-31'
+    db_unit: Index (2021=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '152.20'
+    te_status: ok
+    status: ok
+  productivity:
+    db_source: eurostat
+    db_latest_value: 105.34
+    db_latest_date: '2025-12-31'
+    db_unit: Index
+    te_source_label: EUROSTAT
+    te_latest_value: '118.22'
+    te_status: ok
+    status: ok
+  retail-sales:
+    db_source: ksh_hu
+    db_latest_value: 108.2
+    db_latest_date: '2026-03-31'
+    db_unit: Index (same month previous year=100)
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: null
+    te_status: ok
+    status: ok
+  retirement-age-men:
+    db_source: curated
+    db_latest_value: 65
+    db_latest_date: '2026-12-31'
+    db_unit: Years
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: null
+    te_status: ok
+    status: ok_curated
+  retirement-age-women:
+    db_source: curated
+    db_latest_value: 65
+    db_latest_date: '2026-12-31'
+    db_unit: Years
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: null
+    te_status: ok
+    status: ok_curated
+  sales-tax-rate:
+    db_source: curated
+    db_latest_value: 27
+    db_latest_date: '2026-12-31'
+    db_unit: '%'
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: '27'
+    te_status: ok
+    status: ok_curated
+  services-inflation:
+    db_source: eurostat
+    db_latest_value: 103.59
+    db_latest_date: '2026-03-31'
+    db_unit: Index
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/services-inflation. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  services-sentiment:
+    db_source: eurostat
+    db_latest_value: -9.3
+    db_latest_date: '2026-04-30'
+    db_unit: Points
+    te_source_label: null
+    te_latest_value: null
+    te_status: no_page
+    status: te_no_page
+    note: TE has no public page for HU/services-sentiment. Source kept as honest fetcher;
+      truth.yaml marked stage=gap.
+  social-security-rate:
+    db_source: curated
+    db_latest_value: 31.5
+    db_latest_date: '2026-12-31'
+    db_unit: '%'
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: '31.50'
+    te_status: ok
+    status: ok_curated
+  social-security-rate-companies:
+    db_source: curated
+    db_latest_value: 13
+    db_latest_date: '2026-12-31'
+    db_unit: '%'
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: '13'
+    te_status: ok
+    status: ok_curated
+  social-security-rate-employees:
+    db_source: curated
+    db_latest_value: 18.5
+    db_latest_date: '2026-12-31'
+    db_unit: '%'
+    te_source_label: National Tax and Customs Administration of Hungary
+    te_latest_value: '18.50'
+    te_status: ok
+    status: ok_curated
+  terrorism-index:
+    db_source: curated
+    db_latest_value: 0
+    db_latest_date: '2025-12-31'
+    db_unit: Points
+    te_source_label: Institute for Economics and Peace
+    te_latest_value: null
+    te_status: ok
+    status: ok_curated
+  trade-balance:
+    db_source: ksh_hu
+    db_latest_value: 643
+    db_latest_date: '2026-02-28'
+    db_unit: Million EUR
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '923.98'
+    te_status: ok
+    status: ok
+  unemployed-persons:
+    db_source: eurostat
+    db_latest_value: 214
+    db_latest_date: '2026-03-31'
+    db_unit: Thousand
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '226.40'
+    te_status: ok
+    status: gap
+    note: TE attributes Hungarian Central Statistical Office; our source=eurostat.
+      Marked stage=gap in truth.yaml.
+  unemployment:
+    db_source: ksh_hu
+    db_latest_value: 4.6
+    db_latest_date: '2026-03-31'
+    db_unit: '%'
+    te_source_label: Hungarian Central Statistical Office
+    te_latest_value: '4.7'
+    te_status: ok
+    status: ok
+  youth-unemployment-rate:
+    db_source: eurostat
+    db_latest_value: 12.6
+    db_latest_date: '2026-03-31'
+    db_unit: '%'
+    te_source_label: EUROSTAT
+    te_latest_value: '12.60'
+    te_status: ok
+    status: ok
+notes_unemployment_rate: unemployment-rate row deactivated (is_default=False, active=False)
+  as orphan/duplicate of unemployment. EconPulse canonical slug is unemployment.

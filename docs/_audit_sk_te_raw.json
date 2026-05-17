@@ -1,0 +1,478 @@
+{
+  "changes-in-inventories": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "The stocks of goods held by firms in Slovakia decreased by 1.70 EUR Billion in the fourth quarter of 2025. Changes in Inventories in Slovakia averaged 0.23 EUR Billion from 1995 until 2025, reaching an all time high of 1.90 EUR Billion in the third quarter of 2021 and a record low of -2.19 EUR Billion in the fourth quarter of 2023. <span class='source-present'>source: <a class='source-name' target",
+    "url": "https://tradingeconomics.com/slovakia/changes-in-inventories"
+  },
+  "consumer-confidence": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Slovakia’s consumer confidence indicator edged up by 0.8 percentage points to -27.4 in April 2026 from -28.2 in the previous month, which was the lowest in three years, signaling a slight improvement in household sentiment. Consumers were less pessimistic about their ability to save (-14.1 vs -16.1 in March), while concerns over future unemployment also eased marginally (37.1 vs 38.8). Conversely,",
+    "url": "https://tradingeconomics.com/slovakia/consumer-confidence"
+  },
+  "business-confidence": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "The industrial confidence indicator in Slovakia rose by 5.6 points month-on-month to 2.3 in April 2026, rebounding from -3.3 in the previous month and remained at its highest level since December 2025. The improvement was mainly driven by a significant increase in expected production (31 vs 9 in March), particularly in the manufacture of motor vehicles, trailers and semi-trailers, and other transp",
+    "url": "https://tradingeconomics.com/slovakia/business-confidence"
+  },
+  "corporate-tax-rate": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "The Corporate Tax Rate in Slovakia stands at 24 percent. Corporate Tax Rate in Slovakia averaged 25.56 percent from 1993 until 2026, reaching an all time high of 45.00 percent in 1993 and a record low of 19.00 percent in 2004. <span class='source-present'>source: Tax Directorate, Slovakia</span>",
+    "url": "https://tradingeconomics.com/slovakia/corporate-tax-rate"
+  },
+  "consumer-spending": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Consumer Spending in Slovakia increased to 15.10 EUR Billion in the fourth quarter of 2025 from 15.03 EUR Billion in the third quarter of 2025. Consumer Spending in Slovakia averaged 10.54 EUR Billion from 1995 until 2025, reaching an all time high of 15.30 EUR Billion in the fourth quarter of 2024 and a record low of 5.65 EUR Billion in the first quarter of 1995. <span class='source-present'>sour",
+    "url": "https://tradingeconomics.com/slovakia/consumer-spending"
+  },
+  "core-cpi": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/core-cpi"
+  },
+  "budget-deficit": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/budget-deficit"
+  },
+  "corruption-index": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Slovakia scored 48 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Slovakia averaged 45.68 Points from 1998 until 2025, reaching an all time high of 54.00 Points in 2023 and a record low of 35.00 Points in 2000. <span class='source-present'>source: Transparency International</span>",
+    "url": "https://tradingeconomics.com/slovakia/corruption-index"
+  },
+  "capacity-utilization": {
+    "source_url": "https://nbs.sk/en/",
+    "source_name": "National Bank of Slovakia",
+    "te_value": null,
+    "description": "Capacity Utilization in Slovakia decreased to 79.10 percent in the first quarter of 2026 from 80.10 percent in the fourth quarter of 2025. Capacity Utilization in Slovakia averaged 75.61 percent from 1993 until 2026, reaching an all time high of 89.40 percent in the third quarter of 2019 and a record low of 46.80 percent in the second quarter of 2014. <span class='source-present'>source: <a class=",
+    "url": "https://tradingeconomics.com/slovakia/capacity-utilization"
+  },
+  "corruption-rank": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Slovakia is the 61 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Slovakia averaged 54.71 from 1998 until 2025, reaching an all time high of 66.00 in 2011 and a record low of 47.00 in 1998. <span class='source-present'>source: Transparency International</span>",
+    "url": "https://tradingeconomics.com/slovakia/corruption-rank"
+  },
+  "cpi-clothing": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "CPI Clothing in Slovakia increased to 100.70 points in April from 100.60 points in March of 2026. CPI Clothing in Slovakia averaged 119.42 points from 2013 until 2026, reaching an all time high of 141.20 points in November of 2025 and a record low of 99.50 points in February of 2026. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://slovak.statistics.sk/'>S",
+    "url": "https://tradingeconomics.com/slovakia/cpi-clothing"
+  },
+  "cpi-food": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "CPI Food in Slovakia decreased to 100 points in April from 100.20 points in March of 2026. CPI Food in Slovakia averaged 168.36 points from 2013 until 2026, reaching an all time high of 239.20 points in August of 2025 and a record low of 100.00 points in April of 2026. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://slovak.statistics.sk/'>Statistical Offi",
+    "url": "https://tradingeconomics.com/slovakia/cpi-food"
+  },
+  "cpi-recreation-and-culture": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "CPI Recreation and Culture in Slovakia increased to 103.70 points in April from 103.30 points in March of 2026. CPI Recreation and Culture in Slovakia averaged 131.21 points from 2013 until 2026, reaching an all time high of 162.90 points in December of 2025 and a record low of 103.10 points in January of 2026. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http",
+    "url": "https://tradingeconomics.com/slovakia/cpi-recreation-and-culture"
+  },
+  "cpi-housing-utilities": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "CPI Housing Utilities in Slovakia increased to 106.20 points in April from 106 points in March of 2026. CPI Housing Utilities in Slovakia averaged 92.84 points from 2021 until 2026, reaching an all time high of 106.20 points in April of 2026 and a record low of 74.70 points in January of 2021. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://slovak.statist",
+    "url": "https://tradingeconomics.com/slovakia/cpi-housing-utilities"
+  },
+  "current-account-to-gdp": {
+    "source_url": "http://www.nbs.sk",
+    "source_name": "National Bank of Slovakia",
+    "te_value": null,
+    "description": "Slovakia recorded a Current Account deficit of 3.70 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Slovakia averaged -4.28 percent of GDP from 1993 until 2025, reaching an all time high of 4.30 percent of GDP in 1994 and a record low of -10.60 percent of GDP in 2005. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://www.nb",
+    "url": "https://tradingeconomics.com/slovakia/current-account-to-gdp"
+  },
+  "cpi-transportation": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "The transportation sub-index of the CPI basket in Slovakia increased to 106.40 points in April of 2026 from 101.70 points in March of 2026. CPI Transportation in Slovakia averaged 93.12 points from 2021 until 2026, reaching an all time high of 106.40 points in April of 2026 and a record low of 75.40 points in January of 2021. <span class='source-present'>source: <a class='source-name' target='_bla",
+    "url": "https://tradingeconomics.com/slovakia/cpi-transportation"
+  },
+  "cpi-education": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "CPI Education in Slovakia increased to 104.60 points in April from 104.50 points in March of 2026. CPI Education in Slovakia averaged 350.06 points from 2013 until 2026, reaching an all time high of 525.30 points in December of 2025 and a record low of 104.10 points in January of 2026. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://slovak.statistics.sk/'",
+    "url": "https://tradingeconomics.com/slovakia/cpi-education"
+  },
+  "disposable-personal-income": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Disposable Personal Income in Slovakia increased to 22526.81 EUR Million in the fourth quarter of 2025 from 20224.16 EUR Million in the third quarter of 2025. Disposable Personal Income in Slovakia averaged 10119.05 EUR Million from 1995 until 2025, reaching an all time high of 22526.81 EUR Million in the fourth quarter of 2025 and a record low of 2607.31 EUR Million in the first quarter of 1995. ",
+    "url": "https://tradingeconomics.com/slovakia/disposable-personal-income"
+  },
+  "credit-rating": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/credit-rating"
+  },
+  "employed-persons": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "The number of employed persons in Slovakia increased to 2626.10 Thousand in the fourth quarter of 2025 from 2605.30 Thousand in the third quarter of 2025. Employed Persons in Slovakia averaged 2349.01 Thousand from 1994 until 2025, reaching an all time high of 2646.80 Thousand in the fourth quarter of 2024 and a record low of 2083.50 Thousand in the second quarter of 2000. <span class='source-pres",
+    "url": "https://tradingeconomics.com/slovakia/employed-persons"
+  },
+  "current-account": {
+    "source_url": "http://www.nbs.sk",
+    "source_name": "National Bank of Slovakia",
+    "te_value": null,
+    "description": "Slovakia’s current account deficit narrowed to EUR 397.9 million in February 2026 from EUR 564.2 million in the corresponding month in the previous year. This marked the smallest deficit since October 2025. The goods account swung to a surplus of EUR 41.7 million from a shortfall of EUR 136.5 million, while the primary income deficit narrowed to EUR 334.1 million from EUR 339.9 million. However, t",
+    "url": "https://tradingeconomics.com/slovakia/current-account"
+  },
+  "exports": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Exports in Slovakia increased by 0.5% year-on-year to EUR 10.1 billion in March 2026, driven largely by an almost 15% jump in shipments of miscellaneous manufactured articles. Additionally, sales to the EU grew nearly 4%, while sales to non-EU countries declined by almost 10%. <span class='source-present'>source: Statistical Office of the Slovak Republic</span>",
+    "url": "https://tradingeconomics.com/slovakia/exports"
+  },
+  "gdp-per-capita-ppp": {
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "te_value": null,
+    "description": "The Gross Domestic Product per capita in Slovakia was last recorded at 40346.57 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Slovakia, when adjusted by Purchasing Power Parity is equivalent to 227 percent of the world's average. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.worldbank.org/'>World Bank</a>",
+    "url": "https://tradingeconomics.com/slovakia/gdp-per-capita-ppp"
+  },
+  "gdp-per-capita": {
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "te_value": null,
+    "description": "The Gross Domestic Product per capita in Slovakia was last recorded at 19797.87 US dollars in 2024. The GDP per Capita in Slovakia is equivalent to 157 percent of the world's average. GDP per Capita in Slovakia averaged 12886.53 USD from 1990 until 2024, reaching an all time high of 19797.87 USD in 2024 and a record low of 6843.30 USD in 1992. <span class='source-present'>source: <a class='source-",
+    "url": "https://tradingeconomics.com/slovakia/gdp-per-capita"
+  },
+  "gdp": {
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "te_value": null,
+    "description": "The Gross Domestic Product (GDP) in Slovakia was worth 141.78 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Slovakia represents 0.13 percent of the world economy. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.worldbank.org/'>World Bank</a></span>",
+    "url": "https://tradingeconomics.com/slovakia/gdp"
+  },
+  "energy-inflation": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/energy-inflation"
+  },
+  "employment-rate": {
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "te_value": null,
+    "description": "Employment Rate in Slovakia increased to 72.60 percent in the fourth quarter of 2025 from 72.20 percent in the third quarter of 2025. Employment Rate in Slovakia averaged 62.77 percent from 1998 until 2025, reaching an all time high of 73.10 percent in the fourth quarter of 2024 and a record low of 56.10 percent in the first quarter of 2004. <span class='source-present'>source: <a class='source-na",
+    "url": "https://tradingeconomics.com/slovakia/employment-rate"
+  },
+  "government-debt": {
+    "source_url": "https://www.finance.gov.sk",
+    "source_name": "Ministry of Finance of the Slovak Republic",
+    "te_value": null,
+    "description": "Government Debt in Slovakia decreased to 81510 EUR Million in the fourth quarter of 2025 from 81620 EUR Million in the third quarter of 2025. Government Debt in Slovakia averaged 38020.57 EUR Million from 2002 until 2025, reaching an all time high of 81620.00 EUR Million in the third quarter of 2025 and a record low of 12737.00 EUR Million in the first quarter of 2003. <span class='source-present'",
+    "url": "https://tradingeconomics.com/slovakia/government-debt"
+  },
+  "food-inflation": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Cost of food in Slovakia increased 1 percent in April of 2026 over the same month in the previous year. Food Inflation in Slovakia averaged 5.04 percent from 1993 until 2026, reaching an all time high of 28.20 percent in March of 2023 and a record low of -5.70 percent in October of 2009. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://slovak.statistics.sk",
+    "url": "https://tradingeconomics.com/slovakia/food-inflation"
+  },
+  "government-spending": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Government Spending in Slovakia increased to 6.27 EUR Billion in the fourth quarter of 2025 from 4.96 EUR Billion in the third quarter of 2025. Government Spending in Slovakia averaged 4.12 EUR Billion from 1995 until 2025, reaching an all time high of 6.27 EUR Billion in the fourth quarter of 2025 and a record low of 2.48 EUR Billion in the first quarter of 2000. <span class='source-present'>sour",
+    "url": "https://tradingeconomics.com/slovakia/government-spending"
+  },
+  "gross-fixed-capital-formation": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Gross Fixed Capital Formation in Slovakia increased to 6.88 EUR Billion in the fourth quarter of 2025 from 5.73 EUR Billion in the third quarter of 2025. Gross Fixed Capital Formation in Slovakia averaged 4.21 EUR Billion from 1995 until 2025, reaching an all time high of 7.34 EUR Billion in the fourth quarter of 2023 and a record low of 2.26 EUR Billion in the first quarter of 1995. <span class='",
+    "url": "https://tradingeconomics.com/slovakia/gross-fixed-capital-formation"
+  },
+  "hospital-beds": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Hospital Beds in Slovakia decreased to 5.66 per 1000 people in 2023 from 5.69 per 1000 people in 2022. Hospital Beds in Slovakia averaged 6.60 per 1000 people from 1996 until 2023, reaching an all time high of 8.32 per 1000 people in 1996 and a record low of 5.66 per 1000 people in 2023. <span class='source-present'>source: OECD</span>",
+    "url": "https://tradingeconomics.com/slovakia/hospital-beds"
+  },
+  "government-debt-total": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/government-debt-total"
+  },
+  "gdp-real": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/gdp-real"
+  },
+  "imports": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Imports in Slovakia dropped by 1.6% year-on-year to EUR 9.6 billion in March 2026, due to continued declines across most product categories, specifically in five out of ten sectors. Inbound shipments fell most sharply for machinery and transport equipment, down roughly 4%. Imports from EU countries increased by nearly 5%, while arrivals from non-EU markets were lower by 13% <span class='source-pre",
+    "url": "https://tradingeconomics.com/slovakia/imports"
+  },
+  "house-price-index": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/house-price-index"
+  },
+  "industrial-production": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Industrial production in Slovakia fell 0.9% year-on-year in March 2026, improving from a 2.9% drop in February. The easing in the pace of decline was partly driven by a smaller drag from key industries, even as weakness persisted in core manufacturing sectors. The manufacture of transport equipment remained the main negative contributor, falling nearly 6% for a second consecutive month. Refined pe",
+    "url": "https://tradingeconomics.com/slovakia/industrial-production"
+  },
+  "inflation-cpi": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Slovakia’s annual inflation rate rose to 3.9% in April 2026 from 3.5% in March, slightly above market expectations of 3.8%. It marked the highest reading since January 2026, driven mainly by a sharp acceleration in housing and utilities, which rose 6.3% amid regulatory adjustments, particularly higher heating energy prices (27.8%) and gas (6.7%). Additionally, transport costs climbed to an over th",
+    "url": "https://tradingeconomics.com/slovakia/inflation-cpi"
+  },
+  "labor-force-participation-rate": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Labor Force Participation Rate in Slovakia decreased to 94.40 percent in the fourth quarter of 2025 from 94.50 percent in the third quarter of 2025. Labor Force Participation Rate in Slovakia averaged 88.07 percent from 1998 until 2025, reaching an all time high of 94.80 percent in the second quarter of 2024 and a record low of 79.40 percent in the first quarter of 2001. <span class='source-presen",
+    "url": "https://tradingeconomics.com/slovakia/labor-force-participation-rate"
+  },
+  "government-spending-eur": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/government-spending-eur"
+  },
+  "job-vacancies": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/job-vacancies"
+  },
+  "labour-costs": {
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "te_value": null,
+    "description": "Labour Costs in Slovakia increased to 167.61 points in the fourth quarter of 2025 from 147.28 points in the third quarter of 2025. Labour Costs in Slovakia averaged 97.14 points from 1995 until 2025, reaching an all time high of 167.61 points in the fourth quarter of 2025 and a record low of 45.09 points in the first quarter of 1995. <span class='source-present'>source: <a class='source-name' targ",
+    "url": "https://tradingeconomics.com/slovakia/labour-costs"
+  },
+  "manufacturing-production": {
+    "source_url": "https://www.statistics.sk",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Manufacturing Production in Slovakia decreased 1.60 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Slovakia averaged 4.04 percent from 1999 until 2026, reaching an all time high of 70.00 percent in April of 2021 and a record low of -44.50 percent in April of 2020. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http",
+    "url": "https://tradingeconomics.com/slovakia/manufacturing-production"
+  },
+  "long-term-unemployment-rate": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Long Term Unemployment Rate in Slovakia increased to 3.70 percent in the fourth quarter of 2025 from 3.40 percent in the third quarter of 2025. Long Term Unemployment Rate in Slovakia averaged 7.98 percent from 1998 until 2025, reaching an all time high of 12.50 percent in the first quarter of 2002 and a record low of 3.30 percent in the third quarter of 2020. <span class='source-present'>source: ",
+    "url": "https://tradingeconomics.com/slovakia/long-term-unemployment-rate"
+  },
+  "interest-rate": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "The benchmark interest rate in Slovakia is set by the European Central Bank. Interest Rate in Slovakia averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of 0.00 percent in March of 2016. <span class='source-present'>source: European Central Bank</span>",
+    "url": "https://tradingeconomics.com/slovakia/interest-rate"
+  },
+  "medical-doctors": {
+    "source_url": "https://www.oecd.org/",
+    "source_name": "OECD",
+    "te_value": null,
+    "description": "Medical Doctors in Slovakia increased to 3.67 per 1000 people in 2020 from 3.52 per 1000 people in 2018. Medical Doctors in Slovakia averaged 3.37 per 1000 people from 1999 until 2020, reaching an all time high of 3.57 per 1000 people in 2019 and a record low of 3.04 per 1000 people in 2005. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.oecd.org/'>O",
+    "url": "https://tradingeconomics.com/slovakia/medical-doctors"
+  },
+  "minimum-wages": {
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "te_value": null,
+    "description": "Minimum Wages in Slovakia increased to 915 EUR/Month in the second quarter of 2026 from 816 EUR/Month in the fourth quarter of 2025. Minimum Wages in Slovakia averaged 371.84 EUR/Month from 1999 until 2026, reaching an all time high of 915.00 EUR/Month in June of 2026 and a record low of 69.00 EUR/Month in June of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' hr",
+    "url": "https://tradingeconomics.com/slovakia/minimum-wages"
+  },
+  "nurses": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Nurses in Slovakia increased to 5.74 per 1000 people in 2023 from 5.69 per 1000 people in 2022. Nurses in Slovakia averaged 6.18 per 1000 people from 1998 until 2023, reaching an all time high of 7.44 per 1000 people in 2000 and a record low of 5.65 per 1000 people in 2017. <span class='source-present'>source: OECD</span>",
+    "url": "https://tradingeconomics.com/slovakia/nurses"
+  },
+  "mining-production": {
+    "source_url": "https://www.statistics.sk",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Mining production in Slovakia decreased 6.30 percent in March of 2026 over the same month in the previous year. Mining Production in Slovakia averaged 0.47 percent from 2001 until 2026, reaching an all time high of 135.30 percent in July of 2007 and a record low of -57.00 percent in July of 2008. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statist",
+    "url": "https://tradingeconomics.com/slovakia/mining-production"
+  },
+  "population": {
+    "source_url": "https://slovak.statistics.sk/",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "The total population in Slovakia was estimated at 5.4 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1945, Slovakia had a population of 3.4 million people. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://slovak.statistics.sk/'>Statistical Office of the Slovak Republic</a>",
+    "url": "https://tradingeconomics.com/slovakia/population"
+  },
+  "personal-income-tax-rate": {
+    "source_url": "http://ec.europa.eu",
+    "source_name": "Tax Directorate, Slovakia",
+    "te_value": null,
+    "description": "The Personal Income Tax Rate in Slovakia stands at 35 percent. Personal Income Tax Rate in Slovakia averaged 28.26 percent from 1995 until 2026, reaching an all time high of 42.00 percent in 1996 and a record low of 19.00 percent in 2004. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://ec.europa.eu'>Tax Directorate, Slovakia</a></span>",
+    "url": "https://tradingeconomics.com/slovakia/personal-income-tax-rate"
+  },
+  "retail-sales": {
+    "source_url": "https://www.statistics.sk",
+    "source_name": "Statistical Office of the Slovak Republic",
+    "te_value": null,
+    "description": "Retail Sales in Slovakia jumped 2.6% month-on-month in March 2026, following a 0.1% increase in the preceding period. Retail Sales MoM in Slovakia averaged 0.27 percent from 1995 until 2026, reaching an all time high of 17.60 percent in March of 2021 and a record low of -14.00 percent in January of 1997. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www",
+    "url": "https://tradingeconomics.com/slovakia/retail-sales"
+  },
+  "retirement-age-men": {
+    "source_url": "http://www.socpoist.sk",
+    "source_name": "Social Insurance Agency, Slovak Republic",
+    "te_value": null,
+    "description": "Retirement Age Men in Slovakia increased to 65 Years in 2025 from 63 Years in 2024. Retirement Age Men in Slovakia averaged 62.49 Years from 2004 until 2026, reaching an all time high of 64.08 Years in 2026 and a record low of 62.00 Years in 2005. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://www.socpoist.sk'>Social Insurance Agency, Slovak Republic</a><",
+    "url": "https://tradingeconomics.com/slovakia/retirement-age-men"
+  },
+  "productivity": {
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "te_value": null,
+    "description": "Productivity in Slovakia remained unchanged at 122.41 points in the fourth quarter of 2025 from 122.41 points in the third quarter of 2025. Productivity in Slovakia averaged 86.79 points from 1995 until 2025, reaching an all time high of 123.26 points in the first quarter of 2021 and a record low of 46.21 points in the first quarter of 1995. <span class='source-present'>source: <a class='source-na",
+    "url": "https://tradingeconomics.com/slovakia/productivity"
+  },
+  "ppi": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/ppi"
+  },
+  "retirement-age-women": {
+    "source_url": "http://www.socpoist.sk",
+    "source_name": "Social Insurance Agency, Slovak Republic",
+    "te_value": null,
+    "description": "Retirement Age Women in Slovakia increased to 65 Years in 2025 from 63 Years in 2024. Retirement Age Women in Slovakia averaged 62.49 Years from 2004 until 2026, reaching an all time high of 64.08 Years in 2026 and a record low of 62.00 Years in 2005. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://www.socpoist.sk'>Social Insurance Agency, Slovak Republic<",
+    "url": "https://tradingeconomics.com/slovakia/retirement-age-women"
+  },
+  "sales-tax-rate": {
+    "source_url": "https://www.vatlive.com",
+    "source_name": "Tax Directorate, Slovakia",
+    "te_value": null,
+    "description": "The Sales Tax Rate in Slovakia stands at 23 percent. Sales Tax Rate in Slovakia averaged 20.19 percent from 2000 until 2026, reaching an all time high of 23.00 percent in 2001 and a record low of 19.00 percent in 2004. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.vatlive.com'>Tax Directorate, Slovakia</a></span>",
+    "url": "https://tradingeconomics.com/slovakia/sales-tax-rate"
+  },
+  "social-security-rate": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "The Social Security Rate in Slovakia stands at 50.60 percent. Social Security Rate in Slovakia averaged 48.96 percent from 2000 until 2026, reaching an all time high of 50.60 percent in 2026 and a record low of 48.60 percent in 2005. <span class='source-present'>source: Tax Directorate, Slovakia</span>",
+    "url": "https://tradingeconomics.com/slovakia/social-security-rate"
+  },
+  "services-inflation": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/services-inflation"
+  },
+  "terrorism-index": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": "Terrorism Index in Slovakia decreased to 0.62 Points in 2025 from 1.02 Points in 2024. Terrorism Index in Slovakia averaged 0.38 Points from 2002 until 2025, reaching an all time high of 2.78 Points in 2022 and a record low of 0.00 Points in 2005. <span class='source-present'>source: Institute for Economics and Peace</span>",
+    "url": "https://tradingeconomics.com/slovakia/terrorism-index"
+  },
+  "services-sentiment": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/services-sentiment"
+  },
+  "social-security-rate-companies": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/social-security-rate-companies"
+  },
+  "unemployed-persons": {
+    "source_url": "https://www.employment.gov.sk/en/",
+    "source_name": "Ministry of Labour, Social Affairs and Family of the Slovak Republic",
+    "te_value": null,
+    "description": "The number of unemployed persons in Slovakia decreased to 145413 in March of 2026 from 150022 in February of 2026. Unemployed Persons in Slovakia averaged 297890.01 from 1993 until 2026, reaching an all time high of 533676.00 in January of 2001 and a record low of 134124.00 in May of 2019. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.employment.gov",
+    "url": "https://tradingeconomics.com/slovakia/unemployed-persons"
+  },
+  "social-security-rate-employees": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/social-security-rate-employees"
+  },
+  "trade-balance": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/trade-balance"
+  },
+  "youth-unemployment-rate": {
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "te_value": null,
+    "description": "Youth Unemployment Rate in Slovakia increased to 15 percent in March from 14.90 percent in February of 2026. Youth Unemployment Rate in Slovakia averaged 27.01 percent from 1998 until 2026, reaching an all time high of 39.90 percent in April of 2001 and a record low of 13.80 percent in December of 2018. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.e",
+    "url": "https://tradingeconomics.com/slovakia/youth-unemployment-rate"
+  },
+  "unemployment-rate": {
+    "source_url": "http://www.employment.gov.sk/",
+    "source_name": "Ministry of Labour, Social Affairs and Family of the Slovak Republic",
+    "te_value": null,
+    "description": "Unemployment Rate in Slovakia decreased to 5.20 percent in March from 5.40 percent in February of 2026. Unemployment Rate in Slovakia averaged 10.92 percent from 1994 until 2026, reaching an all time high of 19.79 percent in January of 2001 and a record low of 4.80 percent in March of 2025. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://www.employment.gov",
+    "url": "https://tradingeconomics.com/slovakia/unemployment-rate"
+  },
+  "unemployment": {
+    "source_url": null,
+    "source_name": null,
+    "te_value": null,
+    "description": null,
+    "url": "https://tradingeconomics.com/slovakia/unemployment"
+  }
+}

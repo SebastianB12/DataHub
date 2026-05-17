@@ -1,0 +1,1280 @@
+{
+  "budget-deficit": {
+    "url": "https://tradingeconomics.com/greece/budget-deficit",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Greece recorded a Government Budget surplus equal to 1.70 percent of the country's Gross Domestic Product in 2025. Government Budget in Greece averaged -5.96 percent of GDP from 1995 until 2025, reaching an all time high of 1.70 percent of GDP in 2025 and a record low of -15.40 percent of GDP in 2009. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Government Budget",
+    "h1": "Greece Government Budget",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "government-budget",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Greece recorded a Government Budget surplus equal to 1.70 percent of the country's Gross Domestic Product in 2025. Government Budget in Greece averaged -5.96 percent of GDP from 1995 until 2025, reaching an all time high of 1.70 percent of GDP in 2025 and a record low of -15.40 percent of GDP in 2009. source: National Statistical Service of Greece",
+      "value_str": "1.70",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "budget-deficit__remap__government-budget.html"
+  },
+  "business-confidence": {
+    "url": "https://tradingeconomics.com/greece/business-confidence",
+    "source_url": "http://ec.europa.eu",
+    "source_name": "European Commission",
+    "description": "Business Confidence in Greece decreased to 105.70 points in April from 106.80 points in March of 2026. Business Confidence in Greece averaged 102.01 points from 1985 until 2026, reaching an all time high of 119.50 points in September of 2000 and a record low of 76.30 points in August of 2015. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://ec.europa.eu'>European Commission</a></span>",
+    "title": "Greece Business Confidence",
+    "h1": "Greece Business Confidence",
+    "te_value_raw": "105.70",
+    "parsed": {
+      "source_text": "European Commission",
+      "source_url": null,
+      "description": "Business Confidence in Greece decreased to 105.70 points in April from 106.80 points in March of 2026. Business Confidence in Greece averaged 102.01 points from 1985 until 2026, reaching an all time high of 119.50 points in September of 2000 and a record low of 76.30 points in August of 2015. source: European Commission",
+      "value_str": "105.70",
+      "provider_guess": "eurostat",
+      "provider_label": "European Commission (via Eurostat ei_*)"
+    },
+    "html_file": "business-confidence.html"
+  },
+  "capacity-utilization": {
+    "url": "https://tradingeconomics.com/greece/capacity-utilization",
+    "source_url": "https://commission.europa.eu/index_en",
+    "source_name": "European Commission",
+    "description": "Capacity Utilization in Greece decreased to 77.20 percent in the first quarter of 2026 from 78 percent in the fourth quarter of 2025. Capacity Utilization in Greece averaged 73.93 percent from 1982 until 2026, reaching an all time high of 80.70 percent in the second quarter of 2024 and a record low of 62.50 percent in the third quarter of 2015. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://commission.europa.eu/index_en'>European Commission</a></span>",
+    "title": "Greece Capacity Utilization",
+    "h1": "Greece Capacity Utilization",
+    "te_value_raw": "77.20",
+    "parsed": {
+      "source_text": "European Commission",
+      "source_url": null,
+      "description": "Capacity Utilization in Greece decreased to 77.20 percent in the first quarter of 2026 from 78 percent in the fourth quarter of 2025. Capacity Utilization in Greece averaged 73.93 percent from 1982 until 2026, reaching an all time high of 80.70 percent in the second quarter of 2024 and a record low of 62.50 percent in the third quarter of 2015. source: European Commission",
+      "value_str": "77.20",
+      "provider_guess": "eurostat",
+      "provider_label": "European Commission (via Eurostat ei_*)"
+    },
+    "html_file": "capacity-utilization.html"
+  },
+  "changes-in-inventories": {
+    "url": "https://tradingeconomics.com/greece/changes-in-inventories",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "The stocks of goods held by firms in Greece decreased by 1098.74 EUR Million in the fourth quarter of 2025. Changes in Inventories in Greece averaged 350.18 EUR Million from 1995 until 2025, reaching an all time high of 3533.38 EUR Million in the first quarter of 2007 and a record low of -2342.79 EUR Million in the first quarter of 2009. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Changes In Inventories",
+    "h1": "Greece Changes In Inventories",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "The stocks of goods held by firms in Greece decreased by 1098.74 EUR Million in the fourth quarter of 2025. Changes in Inventories in Greece averaged 350.18 EUR Million from 1995 until 2025, reaching an all time high of 3533.38 EUR Million in the first quarter of 2007 and a record low of -2342.79 EUR Million in the first quarter of 2009. source: National Statistical Service of Greece",
+      "value_str": "2025",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "changes-in-inventories.html"
+  },
+  "consumer-confidence": {
+    "url": "https://tradingeconomics.com/greece/consumer-confidence",
+    "source_url": "http://ec.europa.eu",
+    "source_name": "European Commission",
+    "description": "Consumer Confidence in Greece decreased to -54.70 points in April from -52.50 points in March of 2026. Consumer Confidence in Greece averaged -33.24 points from 1985 until 2026, reaching an all time high of 0.50 points in April of 2000 and a record low of -81.30 points in February of 2012. <span class='source-present'>source: <a class='source-name' target='_blank' href ='http://ec.europa.eu'>European Commission</a></span>",
+    "title": "Greece Consumer Confidence",
+    "h1": "Greece Consumer Confidence",
+    "te_value_raw": "-54.70",
+    "parsed": {
+      "source_text": "European Commission",
+      "source_url": null,
+      "description": "Consumer Confidence in Greece decreased to -54.70 points in April from -52.50 points in March of 2026. Consumer Confidence in Greece averaged -33.24 points from 1985 until 2026, reaching an all time high of 0.50 points in April of 2000 and a record low of -81.30 points in February of 2012. source: European Commission",
+      "value_str": "-54.70",
+      "provider_guess": "eurostat",
+      "provider_label": "European Commission (via Eurostat ei_*)"
+    },
+    "html_file": "consumer-confidence.html"
+  },
+  "consumer-spending": {
+    "url": "https://tradingeconomics.com/greece/consumer-spending",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Consumer Spending in Greece decreased to 37201.79 EUR Million in the fourth quarter of 2025 from 38480.02 EUR Million in the third quarter of 2025. Consumer Spending in Greece averaged 32095.49 EUR Million from 1995 until 2025, reaching an all time high of 41440.77 EUR Million in the fourth quarter of 2008 and a record low of 23278.62 EUR Million in the first quarter of 1996. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National S",
+    "title": "Greece Consumer Spending",
+    "h1": "Greece Consumer Spending",
+    "te_value_raw": "37201.79",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Consumer Spending in Greece decreased to 37201.79 EUR Million in the fourth quarter of 2025 from 38480.02 EUR Million in the third quarter of 2025. Consumer Spending in Greece averaged 32095.49 EUR Million from 1995 until 2025, reaching an all time high of 41440.77 EUR Million in the fourth quarter of 2008 and a record low of 23278.62 EUR Million in the first quarter of 1996. source: National Statistical Service of Greece",
+      "value_str": "37201.79",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "consumer-spending.html"
+  },
+  "core-cpi": {
+    "url": "https://tradingeconomics.com/greece/core-cpi",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Core consumer prices in Greece increased 3.10 percent in April of 2026 over the same month in the previous year. Core Inflation Rate in Greece averaged 0.80 percent from 2010 until 2026, reaching an all time high of 6.70 percent in March of 2023 and a record low of -4.40 percent in November of 2013. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Core Inflation Rate",
+    "h1": "Greece Core Inflation Rate",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "core-inflation-rate",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Core consumer prices in Greece increased 3.10 percent in April of 2026 over the same month in the previous year. Core Inflation Rate in Greece averaged 0.80 percent from 2010 until 2026, reaching an all time high of 6.70 percent in March of 2023 and a record low of -4.40 percent in November of 2013. source: National Statistical Service of Greece",
+      "value_str": "2026",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "core-cpi__remap__core-inflation-rate.html"
+  },
+  "corporate-tax-rate": {
+    "url": "https://tradingeconomics.com/greece/corporate-tax-rate",
+    "source_url": "https://www.gsis.gr/",
+    "source_name": "GSIS, Greece",
+    "description": "The Corporate Tax Rate in Greece stands at 22 percent. Corporate Tax Rate in Greece averaged 33.61 percent from 1981 until 2026, reaching an all time high of 49.00 percent in 1985 and a record low of 20.00 percent in 2011. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.gsis.gr/'>GSIS, Greece</a></span>",
+    "title": "Greece Corporate Tax Rate",
+    "h1": "Greece Corporate Tax Rate",
+    "te_value_raw": "22",
+    "parsed": {
+      "source_text": "GSIS, Greece",
+      "source_url": null,
+      "description": "The Corporate Tax Rate in Greece stands at 22 percent. Corporate Tax Rate in Greece averaged 33.61 percent from 1981 until 2026, reaching an all time high of 49.00 percent in 1985 and a record low of 20.00 percent in 2011. source: GSIS, Greece",
+      "value_str": "22",
+      "provider_guess": "curated",
+      "provider_label": "GSIS Greece"
+    },
+    "html_file": "corporate-tax-rate.html"
+  },
+  "corruption-index": {
+    "url": "https://tradingeconomics.com/greece/corruption-index",
+    "source_url": null,
+    "source_name": null,
+    "description": "Greece scored 50 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Greece averaged 45.06 Points from 1995 until 2025, reaching an all time high of 53.50 Points in 1997 and a record low of 34.00 Points in 2011. <span class='source-present'>source: Transparency International</span>",
+    "title": "Greece Corruption Index",
+    "h1": "Greece Corruption Index",
+    "te_value_raw": null,
+    "source_name_retry": "Transparency International",
+    "description_meta": null,
+    "parsed": {
+      "source_text": "Transparency International",
+      "source_url": null,
+      "description": "Greece scored 50 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Greece averaged 45.06 Points from 1995 until 2025, reaching an all time high of 53.50 Points in 1997 and a record low of 34.00 Points in 2011. source: Transparency International",
+      "value_str": "100",
+      "provider_guess": "curated",
+      "provider_label": "Transparency International"
+    },
+    "html_file": "corruption-index.html"
+  },
+  "corruption-rank": {
+    "url": "https://tradingeconomics.com/greece/corruption-rank",
+    "source_url": null,
+    "source_name": null,
+    "description": "Greece is the 56 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Greece averaged 55.35 from 1995 until 2025, reaching an all time high of 94.00 in 2012 and a record low of 25.00 in 1997. <span class='source-present'>source: Transparency International</span>",
+    "title": "Greece Corruption Rank",
+    "h1": "Greece Corruption Rank",
+    "te_value_raw": null,
+    "source_name_retry": "Transparency International",
+    "description_meta": null,
+    "parsed": {
+      "source_text": "Transparency International",
+      "source_url": null,
+      "description": "Greece is the 56 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Greece averaged 55.35 from 1995 until 2025, reaching an all time high of 94.00 in 2012 and a record low of 25.00 in 1997. source: Transparency International",
+      "value_str": "180",
+      "provider_guess": "curated",
+      "provider_label": "Transparency International"
+    },
+    "html_file": "corruption-rank.html"
+  },
+  "cpi-clothing": {
+    "url": "https://tradingeconomics.com/greece/cpi-clothing",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "CPI Clothing in Greece increased to 132.64 points in April from 126.97 points in March of 2026. CPI Clothing in Greece averaged 101.50 points from 1999 until 2026, reaching an all time high of 134.18 points in September of 2025 and a record low of 72.45 points in February of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece CPI Clothing",
+    "h1": "Greece CPI Clothing",
+    "te_value_raw": "132.64",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "CPI Clothing in Greece increased to 132.64 points in April from 126.97 points in March of 2026. CPI Clothing in Greece averaged 101.50 points from 1999 until 2026, reaching an all time high of 134.18 points in September of 2025 and a record low of 72.45 points in February of 1999. source: National Statistical Service of Greece",
+      "value_str": "132.64",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "cpi-clothing.html"
+  },
+  "cpi-education": {
+    "url": "https://tradingeconomics.com/greece/cpi-education",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "CPI Education in Greece remained unchanged at 112.55 points in April. CPI Education in Greece averaged 99.93 points from 1999 until 2026, reaching an all time high of 114.85 points in January of 2011 and a record low of 74.76 points in February of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece CPI Education",
+    "h1": "Greece CPI Education",
+    "te_value_raw": "112.55",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "CPI Education in Greece remained unchanged at 112.55 points in April. CPI Education in Greece averaged 99.93 points from 1999 until 2026, reaching an all time high of 114.85 points in January of 2011 and a record low of 74.76 points in February of 1999. source: National Statistical Service of Greece",
+      "value_str": "112.55",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "cpi-education.html"
+  },
+  "cpi-food": {
+    "url": "https://tradingeconomics.com/greece/cpi-food",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "CPI Food in Greece decreased to 138.07 points in April from 138.57 points in March of 2026. CPI Food in Greece averaged 95.67 points from 1999 until 2026, reaching an all time high of 138.57 points in March of 2026 and a record low of 65.53 points in August of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece CPI Food",
+    "h1": "Greece CPI Food",
+    "te_value_raw": "138.07",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "CPI Food in Greece decreased to 138.07 points in April from 138.57 points in March of 2026. CPI Food in Greece averaged 95.67 points from 1999 until 2026, reaching an all time high of 138.57 points in March of 2026 and a record low of 65.53 points in August of 1999. source: National Statistical Service of Greece",
+      "value_str": "138.07",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "cpi-food.html"
+  },
+  "cpi-housing-utilities": {
+    "url": "https://tradingeconomics.com/greece/cpi-housing-utilities",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "CPI Housing Utilities in Greece increased to 139.52 points in April from 133.69 points in March of 2026. CPI Housing Utilities in Greece averaged 94.52 points from 1999 until 2026, reaching an all time high of 139.52 points in April of 2026 and a record low of 54.89 points in February of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece CPI Housing",
+    "h1": "Greece CPI Housing",
+    "te_value_raw": "139.52",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "CPI Housing Utilities in Greece increased to 139.52 points in April from 133.69 points in March of 2026. CPI Housing Utilities in Greece averaged 94.52 points from 1999 until 2026, reaching an all time high of 139.52 points in April of 2026 and a record low of 54.89 points in February of 1999. source: National Statistical Service of Greece",
+      "value_str": "139.52",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "cpi-housing-utilities.html"
+  },
+  "cpi-recreation-and-culture": {
+    "url": "https://tradingeconomics.com/greece/cpi-recreation-and-culture",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "CPI Recreation and Culture in Greece increased to 112.94 points in April from 112.03 points in March of 2026. CPI Recreation and Culture in Greece averaged 104.88 points from 1999 until 2026, reaching an all time high of 116.28 points in December of 2009 and a record low of 90.45 points in January of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece CPI Recreation And Culture",
+    "h1": "Greece CPI Recreation And Culture",
+    "te_value_raw": "112.94",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "CPI Recreation and Culture in Greece increased to 112.94 points in April from 112.03 points in March of 2026. CPI Recreation and Culture in Greece averaged 104.88 points from 1999 until 2026, reaching an all time high of 116.28 points in December of 2009 and a record low of 90.45 points in January of 1999. source: National Statistical Service of Greece",
+      "value_str": "112.94",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "cpi-recreation-and-culture.html"
+  },
+  "cpi-transportation": {
+    "url": "https://tradingeconomics.com/greece/cpi-transportation",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "The transportation sub-index of the CPI basket in Greece increased to 135.73 points in April of 2026 from 130.86 points in March of 2026. CPI Transportation in Greece averaged 94.69 points from 1999 until 2026, reaching an all time high of 135.73 points in April of 2026 and a record low of 64.06 points in February of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece CPI Transportation",
+    "h1": "Greece CPI Transportation",
+    "te_value_raw": "135.73",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "The transportation sub-index of the CPI basket in Greece increased to 135.73 points in April of 2026 from 130.86 points in March of 2026. CPI Transportation in Greece averaged 94.69 points from 1999 until 2026, reaching an all time high of 135.73 points in April of 2026 and a record low of 64.06 points in February of 1999. source: National Statistical Service of Greece",
+      "value_str": "135.73",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "cpi-transportation.html"
+  },
+  "credit-rating": {
+    "url": "https://tradingeconomics.com/greece/credit-rating",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "Greece - Credit Rating",
+    "h1": "Greece - Credit Rating",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "rating",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "credit-rating__remap__rating.html"
+  },
+  "current-account": {
+    "url": "https://tradingeconomics.com/greece/current-account",
+    "source_url": "https://www.bankofgreece.gr",
+    "source_name": "Bank of Greece",
+    "description": "Greece’s current account recorded a deficit of €1.29 billion in January 2026, reversing a surplus of €0.87 billion in the same month last year. The shift was mainly driven by a narrowing in income balances, as the primary income surplus fell to €0.11 billion from €0.26 billion due to lower net receipts from other primary income, while the secondary income surplus dropped sharply to €1.09 billion from €3.27 billion amid weaker inflows from other sectors excluding general government. Meanwhile, th",
+    "title": "Greece Current Account",
+    "h1": "Greece Current Account",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "Bank of Greece",
+      "source_url": null,
+      "description": "Greece’s current account recorded a deficit of €1.29 billion in January 2026, reversing a surplus of €0.87 billion in the same month last year. The shift was mainly driven by a narrowing in income balances, as the primary income surplus fell to €0.11 billion from €0.26 billion due to lower net receipts from other primary income, while the secondary income surplus dropped sharply to €1.09 billion from €3.27 billion amid weaker inflows from other sectors excluding general government. Meanwhile, th",
+      "value_str": null,
+      "provider_guess": "bog",
+      "provider_label": "Bank of Greece"
+    },
+    "html_file": "current-account.html"
+  },
+  "current-account-to-gdp": {
+    "url": "https://tradingeconomics.com/greece/current-account-to-gdp",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Greece recorded a Current Account deficit of 5.70 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Greece averaged -5.29 percent of GDP from 1980 until 2025, reaching an all time high of -0.10 percent of GDP in 1994 and a record low of -15.40 percent of GDP in 2007. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></span>",
+    "title": "Greece Current Account to GDP",
+    "h1": "Greece Current Account to GDP",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "Greece recorded a Current Account deficit of 5.70 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Greece averaged -5.29 percent of GDP from 1980 until 2025, reaching an all time high of -0.10 percent of GDP in 1994 and a record low of -15.40 percent of GDP in 2007. source: EUROSTAT",
+      "value_str": "5.70",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "current-account-to-gdp.html"
+  },
+  "disposable-personal-income": {
+    "url": "https://tradingeconomics.com/greece/disposable-personal-income",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries",
+    "h1": null,
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "disposable-personal-income",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "disposable-personal-income__remap__disposable-personal-income.html"
+  },
+  "employed-persons": {
+    "url": "https://tradingeconomics.com/greece/employed-persons",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "The number of employed persons in Greece increased to 4412.40 Thousand in March of 2026 from 4408.70 Thousand in February of 2026. Employed Persons in Greece averaged 4062.99 Thousand from 2004 until 2026, reaching an all time high of 4611.00 Thousand in April of 2008 and a record low of 3392.80 Thousand in May of 2020. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Employed Persons",
+    "h1": "Greece Employed Persons",
+    "te_value_raw": "4412.40",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "The number of employed persons in Greece increased to 4412.40 Thousand in March of 2026 from 4408.70 Thousand in February of 2026. Employed Persons in Greece averaged 4062.99 Thousand from 2004 until 2026, reaching an all time high of 4611.00 Thousand in April of 2008 and a record low of 3392.80 Thousand in May of 2020. source: National Statistical Service of Greece",
+      "value_str": "4412.40",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "employed-persons.html"
+  },
+  "employment-rate": {
+    "url": "https://tradingeconomics.com/greece/employment-rate",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Employment Rate in Greece decreased to 91.70 percent in the fourth quarter of 2025 from 91.80 percent in the third quarter of 2025. Employment Rate in Greece averaged 84.99 percent from 2001 until 2025, reaching an all time high of 92.70 percent in the second quarter of 2008 and a record low of 72.20 percent in the fourth quarter of 2013. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span",
+    "title": "Greece Employment Rate",
+    "h1": "Greece Employment Rate",
+    "te_value_raw": "91.70",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Employment Rate in Greece decreased to 91.70 percent in the fourth quarter of 2025 from 91.80 percent in the third quarter of 2025. Employment Rate in Greece averaged 84.99 percent from 2001 until 2025, reaching an all time high of 92.70 percent in the second quarter of 2008 and a record low of 72.20 percent in the fourth quarter of 2013. source: National Statistical Service of Greece",
+      "value_str": "91.70",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "employment-rate.html"
+  },
+  "energy-inflation": {
+    "url": "https://tradingeconomics.com/greece/energy-inflation",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries",
+    "h1": null,
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "energy-inflation",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "energy-inflation__remap__energy-inflation.html"
+  },
+  "exports": {
+    "url": "https://tradingeconomics.com/greece/exports",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Exports in Greece fell 11.9% year-on-year to EUR 3.6 billion in January 2026, largely weighed down by decreased sales to EU countries (-2.2%), and to third countries (-23.6%). Exports in Greece averaged 2339.56 EUR Million from 2001 until 2026, reaching an all time high of 5480.60 EUR Million in June of 2022 and a record low of 691.90 EUR Million in August of 2002. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical ",
+    "title": "Greece Exports",
+    "h1": "Greece Exports",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Exports in Greece fell 11.9% year-on-year to EUR 3.6 billion in January 2026, largely weighed down by decreased sales to EU countries (-2.2%), and to third countries (-23.6%). Exports in Greece averaged 2339.56 EUR Million from 2001 until 2026, reaching an all time high of 5480.60 EUR Million in June of 2022 and a record low of 691.90 EUR Million in August of 2002. source: National Statistical Service of Greece",
+      "value_str": "5480.60",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "exports.html"
+  },
+  "food-inflation": {
+    "url": "https://tradingeconomics.com/greece/food-inflation",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Cost of food in Greece increased 4.40 percent in April of 2026 over the same month in the previous year. Food Inflation in Greece averaged 2.73 percent from 2000 until 2026, reaching an all time high of 15.48 percent in December of 2022 and a record low of -3.00 percent in June of 2014. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Food Inflation",
+    "h1": "Greece Food Inflation",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Cost of food in Greece increased 4.40 percent in April of 2026 over the same month in the previous year. Food Inflation in Greece averaged 2.73 percent from 2000 until 2026, reaching an all time high of 15.48 percent in December of 2022 and a record low of -3.00 percent in June of 2014. source: National Statistical Service of Greece",
+      "value_str": "2026",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "food-inflation.html"
+  },
+  "gdp": {
+    "url": "https://tradingeconomics.com/greece/gdp",
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "description": "The Gross Domestic Product (GDP) in Greece was worth 257.14 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Greece represents 0.24 percent of the world economy. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.worldbank.org/'>World Bank</a></span>",
+    "title": "Greece GDP",
+    "h1": "Greece GDP",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "World Bank",
+      "source_url": null,
+      "description": "The Gross Domestic Product (GDP) in Greece was worth 257.14 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Greece represents 0.24 percent of the world economy. source: World Bank",
+      "value_str": null,
+      "provider_guess": "worldbank",
+      "provider_label": "World Bank"
+    },
+    "html_file": "gdp.html"
+  },
+  "gdp-per-capita": {
+    "url": "https://tradingeconomics.com/greece/gdp-per-capita",
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "description": "The Gross Domestic Product per capita in Greece was last recorded at 21654.34 US dollars in 2024. The GDP per Capita in Greece is equivalent to 171 percent of the world's average. GDP per Capita in Greece averaged 15610.00 USD from 1960 until 2024, reaching an all time high of 23973.69 USD in 2007 and a record low of 4985.76 USD in 1960. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.worldbank.org/'>World Bank</a></span>",
+    "title": "Greece GDP per capita",
+    "h1": "Greece GDP per capita",
+    "te_value_raw": "21654.34",
+    "parsed": {
+      "source_text": "World Bank",
+      "source_url": null,
+      "description": "The Gross Domestic Product per capita in Greece was last recorded at 21654.34 US dollars in 2024. The GDP per Capita in Greece is equivalent to 171 percent of the world's average. GDP per Capita in Greece averaged 15610.00 USD from 1960 until 2024, reaching an all time high of 23973.69 USD in 2007 and a record low of 4985.76 USD in 1960. source: World Bank",
+      "value_str": "21654.34",
+      "provider_guess": "worldbank",
+      "provider_label": "World Bank"
+    },
+    "html_file": "gdp-per-capita.html"
+  },
+  "gdp-per-capita-ppp": {
+    "url": "https://tradingeconomics.com/greece/gdp-per-capita-ppp",
+    "source_url": "https://www.worldbank.org/",
+    "source_name": "World Bank",
+    "description": "The Gross Domestic Product per capita in Greece was last recorded at 37752.63 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Greece, when adjusted by Purchasing Power Parity is equivalent to 213 percent of the world's average. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.worldbank.org/'>World Bank</a></span>",
+    "title": "Greece GDP per capita PPP",
+    "h1": "Greece GDP per capita PPP",
+    "te_value_raw": "37752.63",
+    "parsed": {
+      "source_text": "World Bank",
+      "source_url": null,
+      "description": "The Gross Domestic Product per capita in Greece was last recorded at 37752.63 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Greece, when adjusted by Purchasing Power Parity is equivalent to 213 percent of the world's average. source: World Bank",
+      "value_str": "37752.63",
+      "provider_guess": "worldbank",
+      "provider_label": "World Bank"
+    },
+    "html_file": "gdp-per-capita-ppp.html"
+  },
+  "gdp-real": {
+    "url": "https://tradingeconomics.com/greece/gdp-real",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "GDP Constant Prices in Greece decreased to 52589.60 EUR Million in the fourth quarter of 2025 from 55288.90 EUR Million in the third quarter of 2025. GDP Constant Prices in Greece averaged 47292.97 EUR Million from 1995 until 2025, reaching an all time high of 60834.90 EUR Million in the third quarter of 2007 and a record low of 34893.00 EUR Million in the first quarter of 1995. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece GDP Constant Prices",
+    "h1": "Greece GDP Constant Prices",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "gdp-constant-prices",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "GDP Constant Prices in Greece decreased to 52589.60 EUR Million in the fourth quarter of 2025 from 55288.90 EUR Million in the third quarter of 2025. GDP Constant Prices in Greece averaged 47292.97 EUR Million from 1995 until 2025, reaching an all time high of 60834.90 EUR Million in the third quarter of 2007 and a record low of 34893.00 EUR Million in the first quarter of 1995. source: National Statistical Service of Greece",
+      "value_str": "52589.60",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "gdp-real__remap__gdp-constant-prices.html"
+  },
+  "government-debt": {
+    "url": "https://tradingeconomics.com/greece/government-debt",
+    "source_url": "https://minfin.gov.gr/",
+    "source_name": "Ministry of Economy and Finance",
+    "description": "Government Debt in Greece increased to 406181.06 EUR Million in the fourth quarter of 2025 from 402200.52 EUR Million in the third quarter of 2025. Government Debt in Greece averaged 355416.73 EUR Million from 2011 until 2025, reaching an all time high of 407059.67 EUR Million in the second quarter of 2024 and a record low of 280292.44 EUR Million in the first quarter of 2012. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://minfin.gov.gr/'>Ministry of E",
+    "title": "Greece Central Government Debt",
+    "h1": "Greece Central Government Debt",
+    "te_value_raw": "406181.06",
+    "parsed": {
+      "source_text": "Ministry of Economy and Finance",
+      "source_url": null,
+      "description": "Government Debt in Greece increased to 406181.06 EUR Million in the fourth quarter of 2025 from 402200.52 EUR Million in the third quarter of 2025. Government Debt in Greece averaged 355416.73 EUR Million from 2011 until 2025, reaching an all time high of 407059.67 EUR Million in the second quarter of 2024 and a record low of 280292.44 EUR Million in the first quarter of 2012. source: Ministry of Economy and Finance",
+      "value_str": "406181.06",
+      "provider_guess": "curated_or_bog",
+      "provider_label": "Ministry of Economy and Finance"
+    },
+    "html_file": "government-debt.html"
+  },
+  "government-debt-total": {
+    "url": "https://tradingeconomics.com/greece/government-debt-total",
+    "source_url": "https://minfin.gov.gr/",
+    "source_name": "Ministry of Economy and Finance",
+    "description": "Government Debt in Greece increased to 406181.06 EUR Million in the fourth quarter of 2025 from 402200.52 EUR Million in the third quarter of 2025. Government Debt in Greece averaged 355416.73 EUR Million from 2011 until 2025, reaching an all time high of 407059.67 EUR Million in the second quarter of 2024 and a record low of 280292.44 EUR Million in the first quarter of 2012. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://minfin.gov.gr/'>Ministry of Economy and Finance</a></span>",
+    "title": "Greece Central Government Debt",
+    "h1": "Greece Central Government Debt",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "government-debt",
+    "parsed": {
+      "source_text": "Ministry of Economy and Finance",
+      "source_url": null,
+      "description": "Government Debt in Greece increased to 406181.06 EUR Million in the fourth quarter of 2025 from 402200.52 EUR Million in the third quarter of 2025. Government Debt in Greece averaged 355416.73 EUR Million from 2011 until 2025, reaching an all time high of 407059.67 EUR Million in the second quarter of 2024 and a record low of 280292.44 EUR Million in the first quarter of 2012. source: Ministry of Economy and Finance",
+      "value_str": "406181.06",
+      "provider_guess": "curated_or_bog",
+      "provider_label": "Ministry of Economy and Finance"
+    },
+    "html_file": "government-debt-total__remap__government-debt.html"
+  },
+  "government-spending": {
+    "url": "https://tradingeconomics.com/greece/government-spending",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Government Spending in Greece increased to 10652.10 EUR Million in the fourth quarter of 2025 from 9195.10 EUR Million in the third quarter of 2025. Government Spending in Greece averaged 9658.07 EUR Million from 1995 until 2025, reaching an all time high of 12654.50 EUR Million in the fourth quarter of 2007 and a record low of 7188.80 EUR Million in the first quarter of 1995. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National ",
+    "title": "Greece Government Spending",
+    "h1": "Greece Government Spending",
+    "te_value_raw": "10652.10",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Government Spending in Greece increased to 10652.10 EUR Million in the fourth quarter of 2025 from 9195.10 EUR Million in the third quarter of 2025. Government Spending in Greece averaged 9658.07 EUR Million from 1995 until 2025, reaching an all time high of 12654.50 EUR Million in the fourth quarter of 2007 and a record low of 7188.80 EUR Million in the first quarter of 1995. source: National Statistical Service of Greece",
+      "value_str": "10652.10",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "government-spending.html"
+  },
+  "government-spending-eur": {
+    "url": "https://tradingeconomics.com/greece/government-spending-eur",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Government Spending in Greece increased to 10652.10 EUR Million in the fourth quarter of 2025 from 9195.10 EUR Million in the third quarter of 2025. Government Spending in Greece averaged 9658.07 EUR Million from 1995 until 2025, reaching an all time high of 12654.50 EUR Million in the fourth quarter of 2007 and a record low of 7188.80 EUR Million in the first quarter of 1995. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Government Spending",
+    "h1": "Greece Government Spending",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "government-spending",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Government Spending in Greece increased to 10652.10 EUR Million in the fourth quarter of 2025 from 9195.10 EUR Million in the third quarter of 2025. Government Spending in Greece averaged 9658.07 EUR Million from 1995 until 2025, reaching an all time high of 12654.50 EUR Million in the fourth quarter of 2007 and a record low of 7188.80 EUR Million in the first quarter of 1995. source: National Statistical Service of Greece",
+      "value_str": "10652.10",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "government-spending-eur__remap__government-spending.html"
+  },
+  "gross-fixed-capital-formation": {
+    "url": "https://tradingeconomics.com/greece/gross-fixed-capital-formation",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Gross Fixed Capital Formation in Greece increased to 9866.90 EUR Million in the fourth quarter of 2025 from 9456.71 EUR Million in the third quarter of 2025. Gross Fixed Capital Formation in Greece averaged 8374.06 EUR Million from 1995 until 2025, reaching an all time high of 16070.58 EUR Million in the third quarter of 2007 and a record low of 4320.23 EUR Million in the third quarter of 2015. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statist",
+    "title": "Greece Gross Fixed Capital Formation",
+    "h1": "Greece Gross Fixed Capital Formation",
+    "te_value_raw": "9866.90",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Gross Fixed Capital Formation in Greece increased to 9866.90 EUR Million in the fourth quarter of 2025 from 9456.71 EUR Million in the third quarter of 2025. Gross Fixed Capital Formation in Greece averaged 8374.06 EUR Million from 1995 until 2025, reaching an all time high of 16070.58 EUR Million in the third quarter of 2007 and a record low of 4320.23 EUR Million in the third quarter of 2015. source: National Statistical Service of Greece",
+      "value_str": "9866.90",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "gross-fixed-capital-formation.html"
+  },
+  "hospital-beds": {
+    "url": "https://tradingeconomics.com/greece/hospital-beds",
+    "source_url": null,
+    "source_name": null,
+    "description": "Hospital Beds in Greece decreased to 4.24 per 1000 people in 2023 from 4.26 per 1000 people in 2022. Hospital Beds in Greece averaged 5.25 per 1000 people from 1960 until 2023, reaching an all time high of 6.47 per 1000 people in 1975 and a record low of 4.15 per 1000 people in 2019. <span class='source-present'>source: OECD</span>",
+    "title": "Greece Hospital Beds",
+    "h1": "Greece Hospital Beds",
+    "te_value_raw": "4.24",
+    "source_name_retry": "OECD",
+    "description_meta": null,
+    "te_slug_remapped": "hospital-beds",
+    "parsed": {
+      "source_text": "OECD",
+      "source_url": null,
+      "description": "Hospital Beds in Greece decreased to 4.24 per 1000 people in 2023 from 4.26 per 1000 people in 2022. Hospital Beds in Greece averaged 5.25 per 1000 people from 1960 until 2023, reaching an all time high of 6.47 per 1000 people in 1975 and a record low of 4.15 per 1000 people in 2019. source: OECD",
+      "value_str": "4.24",
+      "provider_guess": "curated",
+      "provider_label": "OECD"
+    },
+    "html_file": "hospital-beds__remap__hospital-beds.html"
+  },
+  "house-price-index": {
+    "url": "https://tradingeconomics.com/greece/house-price-index",
+    "source_url": "https://www.bankofgreece.gr",
+    "source_name": "Bank of Greece",
+    "description": "Housing Index in Greece increased to 110.50 points in the fourth quarter of 2025 from 110 points in the third quarter of 2025. Housing Index in Greece averaged 80.70 points from 2006 until 2025, reaching an all time high of 110.50 points in the fourth quarter of 2025 and a record low of 58.90 points in the third quarter of 2017. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.bankofgreece.gr'>Bank of Greece</a></span>",
+    "title": "Greece House Price Index",
+    "h1": "Greece House Price Index",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "housing-index",
+    "parsed": {
+      "source_text": "Bank of Greece",
+      "source_url": null,
+      "description": "Housing Index in Greece increased to 110.50 points in the fourth quarter of 2025 from 110 points in the third quarter of 2025. Housing Index in Greece averaged 80.70 points from 2006 until 2025, reaching an all time high of 110.50 points in the fourth quarter of 2025 and a record low of 58.90 points in the third quarter of 2017. source: Bank of Greece",
+      "value_str": "110.50",
+      "provider_guess": "bog",
+      "provider_label": "Bank of Greece"
+    },
+    "html_file": "house-price-index__remap__housing-index.html"
+  },
+  "imports": {
+    "url": "https://tradingeconomics.com/greece/imports",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Imports to Greece declined by 7.4% year-on-year to EUR 6.4 billion in January 2026, reflecting lower purchases from the EU (-5.3%), and third countries (-9.5%). Imports in Greece averaged 4621.45 EUR Million from 2001 until 2026, reaching an all time high of 8953.80 EUR Million in October of 2022 and a record low of 1919.00 EUR Million in August of 2001. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of ",
+    "title": "Greece Imports",
+    "h1": "Greece Imports",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Imports to Greece declined by 7.4% year-on-year to EUR 6.4 billion in January 2026, reflecting lower purchases from the EU (-5.3%), and third countries (-9.5%). Imports in Greece averaged 4621.45 EUR Million from 2001 until 2026, reaching an all time high of 8953.80 EUR Million in October of 2022 and a record low of 1919.00 EUR Million in August of 2001. source: National Statistical Service of Greece",
+      "value_str": "8953.80",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "imports.html"
+  },
+  "industrial-production": {
+    "url": "https://tradingeconomics.com/greece/industrial-production",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Industrial output in Greece climbed 8.3% year-on-year in March 2026 from a revised 2.3% rise in the previous month, marking the strongest growth since July 2024. Manufacturing output picked up (5.5% vs 3.6% in February), supported by gains in computers, electronic and optical products (37%), and basic pharmaceutical products and preparations (30.6%). Production also rebounded strongly in electricity supply (24.6% vs -1.5%). In contrast, water supply output declined further (-1.5% vs 1%), while m",
+    "title": "Greece Industrial Production",
+    "h1": "Greece Industrial Production",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Industrial output in Greece climbed 8.3% year-on-year in March 2026 from a revised 2.3% rise in the previous month, marking the strongest growth since July 2024. Manufacturing output picked up (5.5% vs 3.6% in February), supported by gains in computers, electronic and optical products (37%), and basic pharmaceutical products and preparations (30.6%). Production also rebounded strongly in electricity supply (24.6% vs -1.5%). In contrast, water supply output declined further (-1.5% vs 1%), while m",
+      "value_str": null,
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "industrial-production.html"
+  },
+  "inflation-cpi": {
+    "url": "https://tradingeconomics.com/greece/inflation-cpi",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "The annual inflation rate in Greece quickened further to 5.4% in April 2026 from 3.9% in the prior month, reaching the highest level since February 2023. Rising energy and fuel costs, along with sustained increases in basic food prices have supported the overall rise in inflation. Price increases were most pronounced in housing and utilities (13.8% vs 5.7% in March), amid higher electricity tariffs, and transportation (10% vs 8%), particularly fuel and air travel costs, while food inflation stay",
+    "title": "Greece Inflation Rate",
+    "h1": "Greece Inflation Rate",
+    "te_value_raw": "4.4",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "The annual inflation rate in Greece quickened further to 5.4% in April 2026 from 3.9% in the prior month, reaching the highest level since February 2023. Rising energy and fuel costs, along with sustained increases in basic food prices have supported the overall rise in inflation. Price increases were most pronounced in housing and utilities (13.8% vs 5.7% in March), amid higher electricity tariffs, and transportation (10% vs 8%), particularly fuel and air travel costs, while food inflation stay",
+      "value_str": "5.4",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "inflation-cpi.html"
+  },
+  "interest-rate": {
+    "url": "https://tradingeconomics.com/greece/interest-rate",
+    "source_url": "https://www.ecb.europa.eu",
+    "source_name": "European Central Bank",
+    "description": "The benchmark interest rate in Greece is set by the European Central Bank. Interest Rate in Greece averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of 0.00 percent in March of 2016. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.ecb.europa.eu'>European Central Bank</a></span>",
+    "title": "Greece Interest Rate",
+    "h1": "Greece Interest Rate",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "European Central Bank",
+      "source_url": null,
+      "description": "The benchmark interest rate in Greece is set by the European Central Bank. Interest Rate in Greece averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of 0.00 percent in March of 2016. source: European Central Bank",
+      "value_str": "4.75",
+      "provider_guess": "ecb",
+      "provider_label": "ECB"
+    },
+    "html_file": "interest-rate.html"
+  },
+  "job-vacancies": {
+    "url": "https://tradingeconomics.com/greece/job-vacancies",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Job Vacancies in Greece decreased to 31059 in the fourth quarter of 2025 from 45687 in the third quarter of 2025. Job Vacancies in Greece averaged 22158.59 from 2009 until 2025, reaching an all time high of 70826.00 in the first quarter of 2024 and a record low of 2825.00 in the fourth quarter of 2017. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Job Vacancies",
+    "h1": "Greece Job Vacancies",
+    "te_value_raw": "31059",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Job Vacancies in Greece decreased to 31059 in the fourth quarter of 2025 from 45687 in the third quarter of 2025. Job Vacancies in Greece averaged 22158.59 from 2009 until 2025, reaching an all time high of 70826.00 in the first quarter of 2024 and a record low of 2825.00 in the fourth quarter of 2017. source: National Statistical Service of Greece",
+      "value_str": "31059",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "job-vacancies.html"
+  },
+  "labor-force-participation-rate": {
+    "url": "https://tradingeconomics.com/greece/labor-force-participation-rate",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Labor Force Participation Rate in Greece decreased to 52.80 percent in the fourth quarter of 2025 from 53.30 percent in the third quarter of 2025. Labor Force Participation Rate in Greece averaged 52.31 percent from 1998 until 2025, reaching an all time high of 53.70 percent in the third quarter of 2009 and a record low of 48.20 percent in the first quarter of 2021. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical",
+    "title": "Greece Labor Force Participation Rate",
+    "h1": "Greece Labor Force Participation Rate",
+    "te_value_raw": "52.80",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Labor Force Participation Rate in Greece decreased to 52.80 percent in the fourth quarter of 2025 from 53.30 percent in the third quarter of 2025. Labor Force Participation Rate in Greece averaged 52.31 percent from 1998 until 2025, reaching an all time high of 53.70 percent in the third quarter of 2009 and a record low of 48.20 percent in the first quarter of 2021. source: National Statistical Service of Greece",
+      "value_str": "52.80",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "labor-force-participation-rate.html"
+  },
+  "labour-costs": {
+    "url": "https://tradingeconomics.com/greece/labour-costs",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Labour Costs in Greece increased to 118.26 points in the fourth quarter of 2025 from 105.40 points in the third quarter of 2025. Labour Costs in Greece averaged 94.02 points from 1995 until 2025, reaching an all time high of 122.74 points in the fourth quarter of 2012 and a record low of 52.59 points in the first quarter of 1995. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></span>",
+    "title": "Greece Unit Labour Costs",
+    "h1": "Greece Unit Labour Costs",
+    "te_value_raw": "118.26",
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "Labour Costs in Greece increased to 118.26 points in the fourth quarter of 2025 from 105.40 points in the third quarter of 2025. Labour Costs in Greece averaged 94.02 points from 1995 until 2025, reaching an all time high of 122.74 points in the fourth quarter of 2012 and a record low of 52.59 points in the first quarter of 1995. source: EUROSTAT",
+      "value_str": "118.26",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "labour-costs.html"
+  },
+  "long-term-unemployment-rate": {
+    "url": "https://tradingeconomics.com/greece/long-term-unemployment-rate",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Long Term Unemployment Rate in Greece remained unchanged at 4.80 percent in the fourth quarter of 2025 from 4.80 percent in the third quarter of 2025. Long Term Unemployment Rate in Greece averaged 8.25 percent from 1992 until 2025, reaching an all time high of 18.00 percent in the first quarter of 2014 and a record low of 3.40 percent in the second quarter of 2009. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></sp",
+    "title": "Greece Long Term Unemployment Rate",
+    "h1": "Greece Long Term Unemployment Rate",
+    "te_value_raw": "4.80",
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "Long Term Unemployment Rate in Greece remained unchanged at 4.80 percent in the fourth quarter of 2025 from 4.80 percent in the third quarter of 2025. Long Term Unemployment Rate in Greece averaged 8.25 percent from 1992 until 2025, reaching an all time high of 18.00 percent in the first quarter of 2014 and a record low of 3.40 percent in the second quarter of 2009. source: EUROSTAT",
+      "value_str": "4.80",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "long-term-unemployment-rate.html"
+  },
+  "manufacturing-production": {
+    "url": "https://tradingeconomics.com/greece/manufacturing-production",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Manufacturing Production in Greece increased 5.50 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Greece averaged 0.69 percent from 1996 until 2026, reaching an all time high of 21.80 percent in April of 2021 and a record low of -17.50 percent in January of 2009. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Manufacturing Production",
+    "h1": "Greece Manufacturing Production",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Manufacturing Production in Greece increased 5.50 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Greece averaged 0.69 percent from 1996 until 2026, reaching an all time high of 21.80 percent in April of 2021 and a record low of -17.50 percent in January of 2009. source: National Statistical Service of Greece",
+      "value_str": "2026",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "manufacturing-production.html"
+  },
+  "medical-doctors": {
+    "url": "https://tradingeconomics.com/greece/medical-doctors",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries",
+    "h1": null,
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "medical-doctors",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "medical-doctors__remap__medical-doctors.html"
+  },
+  "minimum-wages": {
+    "url": "https://tradingeconomics.com/greece/minimum-wages",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Minimum Wages in Greece remained unchanged at 1027 EUR/Month in the second quarter of 2026 from 1027 EUR/Month in the fourth quarter of 2025. Minimum Wages in Greece averaged 732.42 EUR/Month from 1999 until 2026, reaching an all time high of 1027.00 EUR/Month in December of 2025 and a record low of 505.00 EUR/Month in June of 1999. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></span>",
+    "title": "Greece Gross Minimum Monthly Wage",
+    "h1": "Greece Gross Minimum Monthly Wage",
+    "te_value_raw": "1027",
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "Minimum Wages in Greece remained unchanged at 1027 EUR/Month in the second quarter of 2026 from 1027 EUR/Month in the fourth quarter of 2025. Minimum Wages in Greece averaged 732.42 EUR/Month from 1999 until 2026, reaching an all time high of 1027.00 EUR/Month in December of 2025 and a record low of 505.00 EUR/Month in June of 1999. source: EUROSTAT",
+      "value_str": "1027",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "minimum-wages.html"
+  },
+  "mining-production": {
+    "url": "https://tradingeconomics.com/greece/mining-production",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Mining production in Greece decreased 5.40 percent in March of 2026 over the same month in the previous year. Mining Production in Greece averaged -1.39 percent from 2001 until 2026, reaching an all time high of 71.10 percent in December of 2025 and a record low of -29.40 percent in April of 2022. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Mining Production",
+    "h1": "Greece Mining Production",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Mining production in Greece decreased 5.40 percent in March of 2026 over the same month in the previous year. Mining Production in Greece averaged -1.39 percent from 2001 until 2026, reaching an all time high of 71.10 percent in December of 2025 and a record low of -29.40 percent in April of 2022. source: National Statistical Service of Greece",
+      "value_str": "2026",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "mining-production.html"
+  },
+  "nurses": {
+    "url": "https://tradingeconomics.com/greece/nurses",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries",
+    "h1": null,
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "nurses",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "nurses__remap__nurses.html"
+  },
+  "personal-income-tax-rate": {
+    "url": "https://tradingeconomics.com/greece/personal-income-tax-rate",
+    "source_url": "https://www.gsis.gr/",
+    "source_name": "GSIS, Greece",
+    "description": "The Personal Income Tax Rate in Greece stands at 44 percent. Personal Income Tax Rate in Greece averaged 43.17 percent from 1995 until 2026, reaching an all time high of 45.00 percent in 1996 and a record low of 40.00 percent in 2002. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.gsis.gr/'>GSIS, Greece</a></span>",
+    "title": "Greece Personal Income Tax Rate",
+    "h1": "Greece Personal Income Tax Rate",
+    "te_value_raw": "44",
+    "parsed": {
+      "source_text": "GSIS, Greece",
+      "source_url": null,
+      "description": "The Personal Income Tax Rate in Greece stands at 44 percent. Personal Income Tax Rate in Greece averaged 43.17 percent from 1995 until 2026, reaching an all time high of 45.00 percent in 1996 and a record low of 40.00 percent in 2002. source: GSIS, Greece",
+      "value_str": "44",
+      "provider_guess": "curated",
+      "provider_label": "GSIS Greece"
+    },
+    "html_file": "personal-income-tax-rate.html"
+  },
+  "population": {
+    "url": "https://tradingeconomics.com/greece/population",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "The total population in Greece was estimated at 10.4 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Greece had a population of 8.3 million people. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></span>",
+    "title": "Greece Population",
+    "h1": "Greece Population",
+    "te_value_raw": "10.4",
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "The total population in Greece was estimated at 10.4 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Greece had a population of 8.3 million people. source: EUROSTAT",
+      "value_str": "10.4",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "population.html"
+  },
+  "ppi": {
+    "url": "https://tradingeconomics.com/greece/ppi",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Producer Prices in Greece increased to 136.25 points in March from 123.85 points in February of 2026. Producer Prices in Greece averaged 102.53 points from 2010 until 2026, reaching an all time high of 145.33 points in October of 2022 and a record low of 82.70 points in February of 2016. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Producer Prices",
+    "h1": "Greece Producer Prices",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "producer-prices",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Producer Prices in Greece increased to 136.25 points in March from 123.85 points in February of 2026. Producer Prices in Greece averaged 102.53 points from 2010 until 2026, reaching an all time high of 145.33 points in October of 2022 and a record low of 82.70 points in February of 2016. source: National Statistical Service of Greece",
+      "value_str": "136.25",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "ppi__remap__producer-prices.html"
+  },
+  "productivity": {
+    "url": "https://tradingeconomics.com/greece/productivity",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Productivity in Greece decreased to 99.60 points in the fourth quarter of 2025 from 101.41 points in the third quarter of 2025. Productivity in Greece averaged 100.35 points from 1995 until 2025, reaching an all time high of 119.14 points in the second quarter of 2007 and a record low of 82.77 points in the first quarter of 1995. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></span>",
+    "title": "Greece Productivity",
+    "h1": "Greece Productivity",
+    "te_value_raw": "99.60",
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "Productivity in Greece decreased to 99.60 points in the fourth quarter of 2025 from 101.41 points in the third quarter of 2025. Productivity in Greece averaged 100.35 points from 1995 until 2025, reaching an all time high of 119.14 points in the second quarter of 2007 and a record low of 82.77 points in the first quarter of 1995. source: EUROSTAT",
+      "value_str": "99.60",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "productivity.html"
+  },
+  "retail-sales": {
+    "url": "https://tradingeconomics.com/greece/retail-sales",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Retail Sales in Greece increased 1.40 percent in February of 2026 over the previous month. Retail Sales MoM in Greece averaged 0.10 percent from 1995 until 2026, reaching an all time high of 29.30 percent in May of 2020 and a record low of -26.00 percent in April of 2020. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Retail Sales MoM",
+    "h1": "Greece Retail Sales MoM",
+    "te_value_raw": null,
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Retail Sales in Greece increased 1.40 percent in February of 2026 over the previous month. Retail Sales MoM in Greece averaged 0.10 percent from 1995 until 2026, reaching an all time high of 29.30 percent in May of 2020 and a record low of -26.00 percent in April of 2020. source: National Statistical Service of Greece",
+      "value_str": "2026",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "retail-sales.html"
+  },
+  "retirement-age-men": {
+    "url": "https://tradingeconomics.com/greece/retirement-age-men",
+    "source_url": null,
+    "source_name": null,
+    "description": "Retirement Age Men in Greece remained unchanged at 67 Years in 2026 from 67 Years in 2025. Retirement Age Men in Greece averaged 65.94 Years from 2009 until 2026, reaching an all time high of 67.00 Years in 2015 and a record low of 57.00 Years in 2009. <span class='source-present'>source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity</span>",
+    "title": "Greece Retirement Age - Men",
+    "h1": "Greece Retirement Age - Men",
+    "te_value_raw": "67",
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "retirement-age-men",
+    "parsed": {
+      "source_text": "Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "source_url": null,
+      "description": "Retirement Age Men in Greece remained unchanged at 67 Years in 2026 from 67 Years in 2025. Retirement Age Men in Greece averaged 65.94 Years from 2009 until 2026, reaching an all time high of 67.00 Years in 2015 and a record low of 57.00 Years in 2009. source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "value_str": "67",
+      "provider_guess": "curated",
+      "provider_label": "Hellenic Ministry of Labour"
+    },
+    "html_file": "retirement-age-men__remap__retirement-age-men.html"
+  },
+  "retirement-age-women": {
+    "url": "https://tradingeconomics.com/greece/retirement-age-women",
+    "source_url": null,
+    "source_name": null,
+    "description": "Retirement Age Women in Greece remained unchanged at 67 Years in 2026 from 67 Years in 2025. Retirement Age Women in Greece averaged 65.42 Years from 2009 until 2026, reaching an all time high of 67.00 Years in 2015 and a record low of 57.00 Years in 2009. <span class='source-present'>source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity</span>",
+    "title": "Greece Retirement Age - Women",
+    "h1": "Greece Retirement Age - Women",
+    "te_value_raw": "67",
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "retirement-age-women",
+    "parsed": {
+      "source_text": "Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "source_url": null,
+      "description": "Retirement Age Women in Greece remained unchanged at 67 Years in 2026 from 67 Years in 2025. Retirement Age Women in Greece averaged 65.42 Years from 2009 until 2026, reaching an all time high of 67.00 Years in 2015 and a record low of 57.00 Years in 2009. source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "value_str": "67",
+      "provider_guess": "curated",
+      "provider_label": "Hellenic Ministry of Labour"
+    },
+    "html_file": "retirement-age-women__remap__retirement-age-women.html"
+  },
+  "sales-tax-rate": {
+    "url": "https://tradingeconomics.com/greece/sales-tax-rate",
+    "source_url": "https://www.gsis.gr/",
+    "source_name": "GSIS, Greece",
+    "description": "The Sales Tax Rate in Greece stands at 24 percent. Sales Tax Rate in Greece averaged 21.74 percent from 2000 until 2026, reaching an all time high of 24.00 percent in 2016 and a record low of 18.00 percent in 2001. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.gsis.gr/'>GSIS, Greece</a></span>",
+    "title": "Greece Sales Tax Rate - VAT",
+    "h1": "Greece Sales Tax Rate - VAT",
+    "te_value_raw": "24",
+    "parsed": {
+      "source_text": "GSIS, Greece",
+      "source_url": null,
+      "description": "The Sales Tax Rate in Greece stands at 24 percent. Sales Tax Rate in Greece averaged 21.74 percent from 2000 until 2026, reaching an all time high of 24.00 percent in 2016 and a record low of 18.00 percent in 2001. source: GSIS, Greece",
+      "value_str": "24",
+      "provider_guess": "curated",
+      "provider_label": "GSIS Greece"
+    },
+    "html_file": "sales-tax-rate.html"
+  },
+  "services-inflation": {
+    "url": "https://tradingeconomics.com/greece/services-inflation",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries",
+    "h1": null,
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "services-inflation",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "services-inflation__remap__services-inflation.html"
+  },
+  "services-sentiment": {
+    "url": "https://tradingeconomics.com/greece/services-sentiment",
+    "source_url": null,
+    "source_name": null,
+    "description": null,
+    "title": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries",
+    "h1": null,
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "services-sentiment",
+    "parsed": {
+      "source_text": null,
+      "source_url": null,
+      "description": null,
+      "value_str": null,
+      "provider_guess": null,
+      "provider_label": null
+    },
+    "html_file": "services-sentiment__remap__services-sentiment.html"
+  },
+  "social-security-rate": {
+    "url": "https://tradingeconomics.com/greece/social-security-rate",
+    "source_url": null,
+    "source_name": null,
+    "description": "The Social Security Rate in Greece stands at 35.16 percent. Social Security Rate in Greece averaged 40.84 percent from 1981 until 2026, reaching an all time high of 44.10 percent in 2003 and a record low of 29.05 percent in 1981. <span class='source-present'>source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity</span>",
+    "title": "Greece Social Security Rate",
+    "h1": "Greece Social Security Rate",
+    "te_value_raw": "35.16",
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "social-security-rate",
+    "parsed": {
+      "source_text": "Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "source_url": null,
+      "description": "The Social Security Rate in Greece stands at 35.16 percent. Social Security Rate in Greece averaged 40.84 percent from 1981 until 2026, reaching an all time high of 44.10 percent in 2003 and a record low of 29.05 percent in 1981. source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "value_str": "35.16",
+      "provider_guess": "curated",
+      "provider_label": "Hellenic Ministry of Labour"
+    },
+    "html_file": "social-security-rate__remap__social-security-rate.html"
+  },
+  "social-security-rate-companies": {
+    "url": "https://tradingeconomics.com/greece/social-security-rate-companies",
+    "source_url": null,
+    "source_name": null,
+    "description": "The Social Security Rate For Companies in Greece stands at 21.79 percent. Social Security Rate For Companies in Greece averaged 25.60 percent from 1981 until 2026, reaching an all time high of 28.10 percent in 2003 and a record low of 18.80 percent in 1981. <span class='source-present'>source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity</span>",
+    "title": "Greece Social Security Rate For Companies",
+    "h1": "Greece Social Security Rate For Companies",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "social-security-rate-for-companies",
+    "parsed": {
+      "source_text": "Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "source_url": null,
+      "description": "The Social Security Rate For Companies in Greece stands at 21.79 percent. Social Security Rate For Companies in Greece averaged 25.60 percent from 1981 until 2026, reaching an all time high of 28.10 percent in 2003 and a record low of 18.80 percent in 1981. source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "value_str": "21.79",
+      "provider_guess": "curated",
+      "provider_label": "Hellenic Ministry of Labour"
+    },
+    "html_file": "social-security-rate-companies__remap__social-security-rate-for-companies.html"
+  },
+  "social-security-rate-employees": {
+    "url": "https://tradingeconomics.com/greece/social-security-rate-employees",
+    "source_url": null,
+    "source_name": null,
+    "description": "The Social Security Rate For Employees in Greece stands at 13.37 percent. Social Security Rate For Employees in Greece averaged 15.24 percent from 1981 until 2026, reaching an all time high of 16.50 percent in 2013 and a record low of 10.25 percent in 1981. <span class='source-present'>source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity</span>",
+    "title": "Greece Social Security Rate For Employees",
+    "h1": "Greece Social Security Rate For Employees",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "social-security-rate-for-employees",
+    "parsed": {
+      "source_text": "Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "source_url": null,
+      "description": "The Social Security Rate For Employees in Greece stands at 13.37 percent. Social Security Rate For Employees in Greece averaged 15.24 percent from 1981 until 2026, reaching an all time high of 16.50 percent in 2013 and a record low of 10.25 percent in 1981. source: Hellenic Ministry of Labour, Social Insurance and Social Solidarity",
+      "value_str": "13.37",
+      "provider_guess": "curated",
+      "provider_label": "Hellenic Ministry of Labour"
+    },
+    "html_file": "social-security-rate-employees__remap__social-security-rate-for-employees.html"
+  },
+  "terrorism-index": {
+    "url": "https://tradingeconomics.com/greece/terrorism-index",
+    "source_url": null,
+    "source_name": null,
+    "description": "Terrorism Index in Greece decreased to 2.79 Points in 2025 from 2.93 Points in 2024. Terrorism Index in Greece averaged 4.13 Points from 2002 until 2025, reaching an all time high of 5.91 Points in 2009 and a record low of 2.79 Points in 2025. <span class='source-present'>source: Institute for Economics and Peace</span>",
+    "title": "Greece Terrorism Index",
+    "h1": "Greece Terrorism Index",
+    "te_value_raw": "2.79",
+    "source_name_retry": "Institute for Economics and Peace",
+    "description_meta": null,
+    "parsed": {
+      "source_text": "Institute for Economics and Peace",
+      "source_url": null,
+      "description": "Terrorism Index in Greece decreased to 2.79 Points in 2025 from 2.93 Points in 2024. Terrorism Index in Greece averaged 4.13 Points from 2002 until 2025, reaching an all time high of 5.91 Points in 2009 and a record low of 2.79 Points in 2025. source: Institute for Economics and Peace",
+      "value_str": "2.79",
+      "provider_guess": "curated",
+      "provider_label": "Institute for Economics and Peace"
+    },
+    "html_file": "terrorism-index.html"
+  },
+  "trade-balance": {
+    "url": "https://tradingeconomics.com/greece/trade-balance",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "The Greek trade deficit narrowed to €2.2 billion in March of 2026 from €3.0 billion in the corresponding period of the previous year, the lowest for the month since 2021. Exports soared by 25% from the previous year to €4.9 billion, the highest since August of 2022, amid surges in sales to the EU (26.5% to €2.9 billion) and sales to third countries (€22.8% to 2.1 billion). The surge in exports took place despite a tepid month for the global shipping industry as tankers and commercial vessels were unable to take deliveries from the Persian Gulf amid the war in the region. Meanwhile, imports inched higher by 0.2% to €7.2 billion. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Balance of Trade",
+    "h1": "Greece Balance of Trade",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "balance-of-trade",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "The Greek trade deficit narrowed to €2.2 billion in March of 2026 from €3.0 billion in the corresponding period of the previous year, the lowest for the month since 2021. Exports soared by 25% from the previous year to €4.9 billion, the highest since August of 2022, amid surges in sales to the EU (26.5% to €2.9 billion) and sales to third countries (€22.8% to 2.1 billion). The surge in exports took place despite a tepid month for the global shipping industry as tankers and commercial vessels wer",
+      "value_str": "2026",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "trade-balance__remap__balance-of-trade.html"
+  },
+  "unemployed-persons": {
+    "url": "https://tradingeconomics.com/greece/unemployed-persons",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "The number of unemployed persons in Greece increased to 436.10 Thousand in March of 2026 from 417 Thousand in February of 2026. Unemployed Persons in Greece averaged 758.56 Thousand from 2004 until 2026, reaching an all time high of 1366.50 Thousand in July of 2013 and a record low of 363.90 Thousand in May of 2008. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Unemployed Persons",
+    "h1": "Greece Unemployed Persons",
+    "te_value_raw": "436.10",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "The number of unemployed persons in Greece increased to 436.10 Thousand in March of 2026 from 417 Thousand in February of 2026. Unemployed Persons in Greece averaged 758.56 Thousand from 2004 until 2026, reaching an all time high of 1366.50 Thousand in July of 2013 and a record low of 363.90 Thousand in May of 2008. source: National Statistical Service of Greece",
+      "value_str": "436.10",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "unemployed-persons.html"
+  },
+  "unemployment": {
+    "url": "https://tradingeconomics.com/greece/unemployment",
+    "source_url": "https://www.statistics.gr/",
+    "source_name": "National Statistical Service of Greece",
+    "description": "Greece’s seasonally adjusted unemployment rate rose to 9% in March 2026, following an upwardly revised 8.6% gain in the previous month. This marked the highest reading in nine months, as the number of unemployed individuals increased by 19.1 thousand month-on-month, bringing the total to 436.1 thousand. Unemployment among women remained significantly higher than among men, standing at 11.5% compared to 6.9%. Meanwhile the number of people outside the labour force, those under 75 who are neither employed nor seeking work, decreased by 26.9 thousand to 2,876.8 thousand. On the other hand, employment rose by 3.7 thousand, lifting the total number of employed individuals to around 4,412.4 thousand. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://www.statistics.gr/'>National Statistical Service of Greece</a></span>",
+    "title": "Greece Unemployment Rate",
+    "h1": "Greece Unemployment Rate",
+    "te_value_raw": null,
+    "source_name_retry": null,
+    "description_meta": null,
+    "te_slug_remapped": "unemployment-rate",
+    "parsed": {
+      "source_text": "National Statistical Service of Greece",
+      "source_url": null,
+      "description": "Greece’s seasonally adjusted unemployment rate rose to 9% in March 2026, following an upwardly revised 8.6% gain in the previous month. This marked the highest reading in nine months, as the number of unemployed individuals increased by 19.1 thousand month-on-month, bringing the total to 436.1 thousand. Unemployment among women remained significantly higher than among men, standing at 11.5% compared to 6.9%. Meanwhile the number of people outside the labour force, those under 75 who are neither ",
+      "value_str": "9",
+      "provider_guess": "elstat",
+      "provider_label": "ELSTAT"
+    },
+    "html_file": "unemployment__remap__unemployment-rate.html"
+  },
+  "youth-unemployment-rate": {
+    "url": "https://tradingeconomics.com/greece/youth-unemployment-rate",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "source_name": "EUROSTAT",
+    "description": "Youth Unemployment Rate in Greece increased to 21 percent in March from 17.90 percent in February of 2026. Youth Unemployment Rate in Greece averaged 34.27 percent from 1998 until 2026, reaching an all time high of 61.40 percent in June of 2013 and a record low of 14.30 percent in December of 2025. <span class='source-present'>source: <a class='source-name' target='_blank' href ='https://ec.europa.eu/eurostat/'>EUROSTAT</a></span>",
+    "title": "Greece Youth Unemployment Rate",
+    "h1": "Greece Youth Unemployment Rate",
+    "te_value_raw": "21",
+    "parsed": {
+      "source_text": "EUROSTAT",
+      "source_url": null,
+      "description": "Youth Unemployment Rate in Greece increased to 21 percent in March from 17.90 percent in February of 2026. Youth Unemployment Rate in Greece averaged 34.27 percent from 1998 until 2026, reaching an all time high of 61.40 percent in June of 2013 and a record low of 14.30 percent in December of 2025. source: EUROSTAT",
+      "value_str": "21",
+      "provider_guess": "eurostat",
+      "provider_label": "EUROSTAT"
+    },
+    "html_file": "youth-unemployment-rate.html"
+  }
+}

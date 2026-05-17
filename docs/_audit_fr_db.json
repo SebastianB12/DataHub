@@ -1,0 +1,587 @@
+[
+  {
+    "indicator": "job-vacancies",
+    "source": "eurostat",
+    "series_id": "jvs_q_nace2:JVR",
+    "note": "Job Vacancy Rate",
+    "extra_params": {
+      "params": {
+        "s_adj": "SA",
+        "nace_r2": "B-S",
+        "indic_em": "JVR",
+        "sizeclas": "TOTAL"
+      },
+      "dataset": "jvs_q_nace2"
+    }
+  },
+  {
+    "indicator": "employed-persons",
+    "source": "eurostat",
+    "series_id": "lfsi_emp_a:EMP_LFS:Y20-64",
+    "note": "Eurostat lfsi_emp_a Y20-64 annual (TE-conform: TE shows EUROSTAT 28117 Q4 2025 ≈ annual 2025=28125).",
+    "extra_params": {
+      "params": {
+        "age": "Y20-64",
+        "sex": "T",
+        "unit": "THS_PER",
+        "indic_em": "EMP_LFS"
+      },
+      "dataset": "lfsi_emp_a"
+    }
+  },
+  {
+    "indicator": "government-debt-total",
+    "source": "insee",
+    "series_id": "DETTE-TRIM-APU-2020:010777616",
+    "note": "TE-conformity 2026-05-16: switched eurostat→insee per TE label.",
+    "extra_params": {
+      "idbank": "010777616",
+      "dataset": "DETTE-TRIM-APU-2020",
+      "filters": {
+        "NATURE": "VALEUR_ABSOLUE",
+        "SECT_INST": "S13",
+        "DETTE_MAASTRICHT_INTRUMENTS": "F"
+      }
+    }
+  },
+  {
+    "indicator": "corporate-tax-rate",
+    "source": "curated",
+    "series_id": "FR:corporate-tax-rate",
+    "note": "Standard CIT rate (since 2022).",
+    "extra_params": null
+  },
+  {
+    "indicator": "youth-unemployment-rate",
+    "source": "eurostat",
+    "series_id": "une_rt_m:Y_LT25",
+    "note": null,
+    "extra_params": {
+      "params": {
+        "age": "Y_LT25",
+        "sex": "T",
+        "unit": "PC_ACT",
+        "s_adj": "SA"
+      },
+      "dataset": "une_rt_m"
+    }
+  },
+  {
+    "indicator": "personal-income-tax-rate",
+    "source": "curated",
+    "series_id": "FR:personal-income-tax-rate",
+    "note": "Top marginal IR rate (>177k EUR/year).",
+    "extra_params": null
+  },
+  {
+    "indicator": "sales-tax-rate",
+    "source": "curated",
+    "series_id": "FR:sales-tax-rate",
+    "note": "VAT (TVA) Standard Rate.",
+    "extra_params": null
+  },
+  {
+    "indicator": "social-security-rate",
+    "source": "curated",
+    "series_id": "FR:social-security-rate",
+    "note": "Total social security contributions: AG ~45% + AN ~22.4%.",
+    "extra_params": null
+  },
+  {
+    "indicator": "social-security-rate-companies",
+    "source": "curated",
+    "series_id": "FR:social-security-rate-companies",
+    "note": "Employer share.",
+    "extra_params": null
+  },
+  {
+    "indicator": "government-debt",
+    "source": "insee",
+    "series_id": "DETTE-TRIM-APU-2020:010777608",
+    "note": "TE-conformity 2026-05-16: switched eurostat→insee per TE label.",
+    "extra_params": {
+      "idbank": "010777608",
+      "dataset": "DETTE-TRIM-APU-2020",
+      "filters": {
+        "NATURE": "PROPORTION",
+        "SECT_INST": "S13",
+        "DETTE_MAASTRICHT_INTRUMENTS": "F"
+      }
+    }
+  },
+  {
+    "indicator": "government-spending-eur",
+    "source": "eurostat",
+    "series_id": "namq_10_gdp:P3_S13",
+    "note": null,
+    "extra_params": {
+      "params": {
+        "unit": "CP_MEUR",
+        "s_adj": "SCA",
+        "na_item": "P3_S13"
+      },
+      "dataset": "namq_10_gdp"
+    }
+  },
+  {
+    "indicator": "house-price-index",
+    "source": "eurostat",
+    "series_id": "prc_hpi_q:INX",
+    "note": null,
+    "extra_params": {
+      "params": {
+        "unit": "I15_Q",
+        "purchase": "TOTAL"
+      },
+      "dataset": "prc_hpi_q"
+    }
+  },
+  {
+    "indicator": "gdp",
+    "source": "worldbank",
+    "series_id": "NY.GDP.MKTP.CD",
+    "note": "Annual GDP nominal",
+    "extra_params": {}
+  },
+  {
+    "indicator": "gdp-per-capita",
+    "source": "worldbank",
+    "series_id": "NY.GDP.PCAP.KD",
+    "note": "GDP per capita, constant 2015 USD (TE-conform).",
+    "extra_params": {}
+  },
+  {
+    "indicator": "gdp-per-capita-ppp",
+    "source": "worldbank",
+    "series_id": "NY.GDP.PCAP.PP.KD",
+    "note": "GDP per capita PPP, constant 2021 international $ (TE-conform).",
+    "extra_params": {}
+  },
+  {
+    "indicator": "productivity",
+    "source": "eurostat",
+    "series_id": "namq_10_lp_ulc:RLPR_PER:I15",
+    "note": "Eurostat namq_10_lp_ulc Real Labour Productivity per Person Employed, Index 2015=100, SCA. TE Q1 2026 = 101.41 matches.",
+    "extra_params": {
+      "params": {
+        "unit": "I15",
+        "s_adj": "SCA",
+        "na_item": "RLPR_PER"
+      },
+      "dataset": "namq_10_lp_ulc"
+    }
+  },
+  {
+    "indicator": "long-term-unemployment-rate",
+    "source": "insee",
+    "series_id": "010605073",
+    "note": "INSEE CHOMAGE-TRIM-NATIONAL 010605073 LTU rate, all ages, both sexes. TE-conform.",
+    "extra_params": {
+      "idbank": "010605073",
+      "dataset": "CHOMAGE-TRIM-NATIONAL"
+    }
+  },
+  {
+    "indicator": "social-security-rate-employees",
+    "source": "curated",
+    "series_id": "FR:social-security-rate-employees",
+    "note": "Employee share.",
+    "extra_params": null
+  },
+  {
+    "indicator": "corruption-index",
+    "source": "curated",
+    "series_id": "FR:corruption-index",
+    "note": "Transparency International CPI 2025.",
+    "extra_params": null
+  },
+  {
+    "indicator": "corruption-rank",
+    "source": "curated",
+    "series_id": "FR:corruption-rank",
+    "note": "TI CPI 2025 rank.",
+    "extra_params": null
+  },
+  {
+    "indicator": "credit-rating",
+    "source": "curated",
+    "series_id": "FR:credit-rating",
+    "note": "TE-Score. Moody's Aa3, S&P AA-, Fitch AA- (negative outlook).",
+    "extra_params": null
+  },
+  {
+    "indicator": "retirement-age-men",
+    "source": "curated",
+    "series_id": "FR:retirement-age-men",
+    "note": "Statutorisches Renteneintrittsalter (Reform 2023). Schrittweise Anhebung von 62 auf 64 bis 2030.",
+    "extra_params": null
+  },
+  {
+    "indicator": "retirement-age-women",
+    "source": "curated",
+    "series_id": "FR:retirement-age-women",
+    "note": "Gleich wie Männer.",
+    "extra_params": null
+  },
+  {
+    "indicator": "interest-rate",
+    "source": "ecb",
+    "series_id": "D.U2.EUR.4F.KR.MRR_FR.LEV",
+    "note": "ECB Main Refinancing Rate (Fixed). FR is in EA, shares ECB rate.",
+    "extra_params": {
+      "dataset": "FM",
+      "series_key": "D.U2.EUR.4F.KR.MRR_FR.LEV"
+    }
+  },
+  {
+    "indicator": "hospital-beds",
+    "source": "curated",
+    "series_id": "FR:hospital-beds",
+    "note": "OECD Health Stats 2022. France hat seit Jahrzehnten >5.5/1000.",
+    "extra_params": null
+  },
+  {
+    "indicator": "medical-doctors",
+    "source": "curated",
+    "series_id": "FR:medical-doctors",
+    "note": "OECD Health Stats. Practising physicians per 1000.",
+    "extra_params": null
+  },
+  {
+    "indicator": "nurses",
+    "source": "curated",
+    "series_id": "FR:nurses",
+    "note": "OECD Health Stats. Practising nurses per 1000.",
+    "extra_params": null
+  },
+  {
+    "indicator": "weapons-sales",
+    "source": "curated",
+    "series_id": "FR:weapons-sales",
+    "note": "SIPRI Arms Transfers Database — exports 2024. France ist 2.-größter Exporteur weltweit.",
+    "extra_params": null
+  },
+  {
+    "indicator": "terrorism-index",
+    "source": "curated",
+    "series_id": "FR:terrorism-index",
+    "note": "Global Terrorism Index 2025 (Institute for Economics and Peace).",
+    "extra_params": null
+  },
+  {
+    "indicator": "inflation-cpi",
+    "source": "insee",
+    "series_id": "IPC-2025:011814630",
+    "note": "INSEE BDM IPC-2025 headline (Ensemble FE NSA Index Base 2025).",
+    "extra_params": null
+  },
+  {
+    "indicator": "industrial-production",
+    "source": "insee",
+    "series_id": "IPI-2021:010768261",
+    "note": "INSEE BDM IPI-2021 NAF2 A10-BE (Industrie hors construction, CVS-CJO).",
+    "extra_params": null
+  },
+  {
+    "indicator": "ppi",
+    "source": "insee",
+    "series_id": "IPPI-2021:010765093",
+    "note": "INSEE BDM IPPI-2021 ENS_IPP PRODUIT_IPPI=BII0 (Industrie totale, BRUT).",
+    "extra_params": null
+  },
+  {
+    "indicator": "retail-sales",
+    "source": "insee",
+    "series_id": "ICA-2021-COMMERCE:010770798",
+    "note": "INSEE BDM ICA-2021-COMMERCE NAF2=47 (Retail Trade, CVS-CJO).",
+    "extra_params": null
+  },
+  {
+    "indicator": "gdp-real",
+    "source": "insee",
+    "series_id": "CNT-2020-PIB-EQB-RF:011794860",
+    "note": "INSEE BDM CNT-2020-PIB-EQB-RF — PIB Volume CVS-CJO chained 2020 (FE).",
+    "extra_params": null
+  },
+  {
+    "indicator": "gdp-growth-rate",
+    "source": "insee",
+    "series_id": "CNT-2020-PIB-EQB-RF:011794844",
+    "note": "INSEE BDM CNT-2020-PIB-EQB-RF — PIB Taux QoQ % CVS-CJO.",
+    "extra_params": null
+  },
+  {
+    "indicator": "unemployment",
+    "source": "insee",
+    "series_id": "CHOMAGE-TRIM-NATIONAL:001688526",
+    "note": "INSEE BDM CHOMAGE-TRIM-NATIONAL CTTXC TAUX FM 15+ both sexes CVS.",
+    "extra_params": null
+  },
+  {
+    "indicator": "consumer-confidence",
+    "source": "insee",
+    "series_id": "ENQ-CONJ-MENAGES:001587668",
+    "note": "INSEE BDM ENQ-CONJ-MENAGES — IND_SYNT_CONF CAMME confidence index.",
+    "extra_params": null
+  },
+  {
+    "indicator": "business-confidence",
+    "source": "insee",
+    "series_id": "ENQ-CONJ-ACT-IND:001585934",
+    "note": "INSEE BDM ENQ-CONJ-ACT-IND CLIMAT_AFFAIRES NAF2=A10-CZ (Industrie).",
+    "extra_params": null
+  },
+  {
+    "indicator": "core-cpi",
+    "source": "insee",
+    "series_id": "IPC-2025:011813738",
+    "note": "INSEE BDM IPC-2025 PRIX_CONSO=4001 (Ensemble ex Energie ex Alimentation, Base 2025).",
+    "extra_params": null
+  },
+  {
+    "indicator": "food-inflation",
+    "source": "insee",
+    "series_id": "IPC-2025:011814667",
+    "note": "INSEE BDM IPC-2025 COICOP=01 (Food and non-alcoholic beverages).",
+    "extra_params": null
+  },
+  {
+    "indicator": "cpi-clothing",
+    "source": "insee",
+    "series_id": "IPC-2025:011815448",
+    "note": "INSEE BDM IPC-2025 COICOP=03.",
+    "extra_params": null
+  },
+  {
+    "indicator": "cpi-housing-utilities",
+    "source": "insee",
+    "series_id": "IPC-2025:011815624",
+    "note": "INSEE BDM IPC-2025 COICOP=04.",
+    "extra_params": null
+  },
+  {
+    "indicator": "cpi-transportation",
+    "source": "insee",
+    "series_id": "IPC-2025:011816518",
+    "note": "INSEE BDM IPC-2025 COICOP=07.",
+    "extra_params": null
+  },
+  {
+    "indicator": "cpi-recreation-and-culture",
+    "source": "insee",
+    "series_id": "IPC-2025:011817099",
+    "note": "INSEE BDM IPC-2025 COICOP=09.",
+    "extra_params": null
+  },
+  {
+    "indicator": "cpi-education",
+    "source": "insee",
+    "series_id": "IPC-2025:011817585",
+    "note": "INSEE BDM IPC-2025 COICOP=10.",
+    "extra_params": null
+  },
+  {
+    "indicator": "manufacturing-production",
+    "source": "insee",
+    "series_id": "IPI-2021:010768307",
+    "note": "INSEE BDM IPI-2021 NAF2=A10-CZ (Industrie manufacturière, CVS-CJO).",
+    "extra_params": null
+  },
+  {
+    "indicator": "mining-production",
+    "source": "insee",
+    "series_id": "IPI-2021:010768259",
+    "note": "INSEE BDM IPI-2021 NAF2=A21-B (Industries extractives, CVS-CJO).",
+    "extra_params": null
+  },
+  {
+    "indicator": "consumer-spending",
+    "source": "insee",
+    "series_id": "CNT-2020-PIB-EQB-RF:011794863",
+    "note": "INSEE BDM CNT-2020-PIB-EQB-RF P3 SECT_INST=S14 (Households final consumption, V current).",
+    "extra_params": null
+  },
+  {
+    "indicator": "changes-in-inventories",
+    "source": "insee",
+    "series_id": "CNT-2020-PIB-EQB-RF:011794873",
+    "note": "INSEE BDM CNT-2020-PIB-EQB-RF P52 V (Changes in inventories current price).",
+    "extra_params": null
+  },
+  {
+    "indicator": "energy-inflation",
+    "source": "insee",
+    "series_id": "IPC-2025:011813864",
+    "note": "INSEE BDM IPC-2025 PRIX_CONSO=4007 (Energy aggregate, Base 2025).",
+    "extra_params": null
+  },
+  {
+    "indicator": "services-inflation",
+    "source": "insee",
+    "series_id": "IPC-2025:011813906",
+    "note": "INSEE BDM IPC-2025 PRIX_CONSO=4009 (Services aggregate, Base 2025).",
+    "extra_params": null
+  },
+  {
+    "indicator": "imports",
+    "source": "insee",
+    "series_id": "COM-EXT:total(EU+Third+Misc)",
+    "note": "TE-conformity 2026-05-16: switched quarterly CNT P6/P7 -> monthly COM-EXT (DGDDI via INSEE). TE label = Ministère/lekiosque; COM-EXT is the INSEE-hosted official mirror.",
+    "extra_params": {
+      "naf2": "SO",
+      "zones": [
+        "Z7712 EU-27",
+        "Z7711 Third countries",
+        "Z6600 Misc overseas"
+      ],
+      "method": "sum_zones",
+      "dataset": "COM-EXT",
+      "correction": "CVS-CJO",
+      "indicateur": "I"
+    }
+  },
+  {
+    "indicator": "capacity-utilization",
+    "source": "bdf",
+    "series_id": "CONJ:M.N01.S.IN.000CZ.TUTSM000.10",
+    "note": "Banque de France CONJ — Manufacturing total capacity utilisation rate, SA, monthly. Via DBnomics public API.",
+    "extra_params": null
+  },
+  {
+    "indicator": "employment-rate",
+    "source": "insee",
+    "series_id": "melodi:DD_EEC_ANNUEL:EMPRATE:Y15T64",
+    "note": "INSEE Melodi DD_EEC_ANNUEL EMPRATE Y15T64 _T/_T (annual).",
+    "extra_params": null
+  },
+  {
+    "indicator": "unemployed-persons",
+    "source": "insee",
+    "series_id": "melodi:DD_EEC_ANNUEL:UNEMP:Y15T74",
+    "note": "INSEE Melodi DD_EEC_ANNUEL UNEMP Y15T74 _T/_T (annual).",
+    "extra_params": null
+  },
+  {
+    "indicator": "labor-force-participation-rate",
+    "source": "insee",
+    "series_id": "EMPLOI-BIT-TRIM:010605834",
+    "note": "TE-conformity 2026-05-16: switched from annual DD_EEC_ANNUEL Melodi -> quarterly EMPLOI-BIT-TRIM CTTA15 to match TE Q1 2026 = 75.6.",
+    "extra_params": null
+  },
+  {
+    "indicator": "minimum-wages",
+    "source": "eurostat",
+    "series_id": "earn_mw_cur:FR",
+    "note": "Eurostat earn_mw_cur (Monthly minimum wages, bi-annual), FR, EUR/month gross.",
+    "extra_params": {
+      "params": {
+        "currency": "EUR"
+      },
+      "dataset": "earn_mw_cur"
+    }
+  },
+  {
+    "indicator": "government-spending",
+    "source": "insee",
+    "series_id": "CNT-2020-PIB-EQB-RF:011794862",
+    "note": "INSEE BDM CNT-2020-PIB-EQB-RF P3 SO L (Total Final Consumption chained, TE-conform 169953).",
+    "extra_params": null
+  },
+  {
+    "indicator": "disposable-personal-income",
+    "source": "insee",
+    "series_id": "CNT-2020-CSI:011794746",
+    "note": "INSEE BDM CNT-2020-CSI B6 S14 (RDB Households, Q4 2025=471342 ≈ TE 471367).",
+    "extra_params": null
+  },
+  {
+    "indicator": "current-account",
+    "source": "bdf",
+    "series_id": "BPM6:M.S.FR.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL",
+    "note": "Banque de France BPM6 Current Account Total Economy Balance, monthly seasonally-adjusted (TE primary).",
+    "extra_params": null
+  },
+  {
+    "indicator": "cpi-food",
+    "source": "insee",
+    "series_id": "IPC-2025:011814667",
+    "note": "INSEE IPC-2025 COICOP 01 Food & non-alcoholic beverages (TE primary).",
+    "extra_params": null
+  },
+  {
+    "indicator": "population",
+    "source": "insee",
+    "series_id": "POPULATION-STRUCTURE:001641586",
+    "note": "INSEE BDM POPULATION-STRUCTURE IDBANK 001641586 (Population totale au 1er janvier, FR=FE).",
+    "extra_params": null
+  },
+  {
+    "indicator": "exports",
+    "source": "insee",
+    "series_id": "COM-EXT:total(EU+Third+Misc)",
+    "note": "TE-conformity 2026-05-16: switched quarterly CNT P6/P7 -> monthly COM-EXT (DGDDI via INSEE). TE label = Ministère/lekiosque; COM-EXT is the INSEE-hosted official mirror.",
+    "extra_params": {
+      "naf2": "SO",
+      "zones": [
+        "Z7712 EU-27",
+        "Z7711 Third countries",
+        "Z6600 Misc overseas"
+      ],
+      "method": "sum_zones",
+      "dataset": "COM-EXT",
+      "correction": "CVS-CJO",
+      "indicateur": "E"
+    }
+  },
+  {
+    "indicator": "current-account-to-gdp",
+    "source": "eurostat",
+    "series_id": "bop_gdp6_q:CA:PC_GDP:WRL_REST",
+    "note": "Eurostat bop_gdp6_q Current Account % of GDP, WRL_REST partner, NSA, annual (TE primary).",
+    "extra_params": {
+      "params": {
+        "partner": "WRL_REST",
+        "bop_item": "CA",
+        "currency": "PC_GDP",
+        "stk_flow": "BAL"
+      },
+      "dataset": "bop_c6_q"
+    }
+  },
+  {
+    "indicator": "gross-fixed-capital-formation",
+    "source": "insee",
+    "series_id": "CNT-2020-PIB-EQB-RF:011794884",
+    "note": "TE-conformity 2026-05-16: switched VALORISATION V (nominal) -> L (chained-volume) to match TE.",
+    "extra_params": null
+  },
+  {
+    "indicator": "budget-deficit",
+    "source": "insee",
+    "series_id": "011794759_OVER_011794859_4Q",
+    "note": "INSEE CNT-2020 B9NF/PIB 4Q rolling: 011794759 (S13 net lending/borrowing) / 011794859 (nominal PIB). TE-conform.",
+    "extra_params": {
+      "numerator": "011794759",
+      "transform": "rolling4_ratio_pct",
+      "denominator": "011794859"
+    }
+  },
+  {
+    "indicator": "labour-costs",
+    "source": "ecb",
+    "series_id": "lc_lci_r2_q:B-N:D1_D4_MD5:SCA:I20",
+    "note": "Eurostat lc_lci_r2_q (B-N, D1_D4_MD5, SCA, I20) — same series ECB redistributes as LCI; TE attributes ECB.",
+    "extra_params": {
+      "params": {
+        "unit": "I20",
+        "s_adj": "SCA",
+        "nace_r2": "B-N",
+        "lcstruct": "D1_D4_MD5"
+      },
+      "dataset": "lc_lci_r2_q",
+      "geo_override": [
+        "FR"
+      ]
+    }
+  }
+]

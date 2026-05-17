@@ -1,0 +1,392 @@
+{
+  "budget-deficit": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Czech Republic recorded a Government Budget deficit equal to 2.10 percent of the country's Gross Domestic Product in 2025. Government Budget in Czech Republic averaged -3.14 percent of GDP from 1995 until 2025, reaching an all time high of 1.50 percent of GDP in 2017 and a record low of -12.40 percent of GDP in 1995. source: Czech Statistical Office",
+    "value_match": "2.10"
+  },
+  "business-confidence": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "The business confidence indicator in the Czech Republic stood at 100.4 in April 2026, unchanged from the previous month and remaining at its highest level since October 2025. Confidence strengthened in the construction sector, where the indicator climbed to 115.5 from 113.8 in March. Sentiment also improved in selected services, rising to 102.9 from 100.3, its strongest reading in three months. On the other hand, gains were partially offset by weaker business morale in the industry sector, which",
+    "value_match": null
+  },
+  "capacity-utilization": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "changes-in-inventories": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "The stocks of goods held by firms in Czech Republic decreased by 4.80 CZK Billion in the fourth quarter of 2025. Changes in Inventories in Czech Republic averaged 6.76 CZK Billion from 1995 until 2025, reaching an all time high of 62.33 CZK Billion in the fourth quarter of 2022 and a record low of -32.59 CZK Billion in the fourth quarter of 2023. source: Czech Statistical Office",
+    "value_match": "62.33"
+  },
+  "consumer-confidence": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "The consumer confidence indicator in the Czech Republic fell to 106 in April 2026 from 110.4 in the previous month, marking the lowest level since September 2025. The share of consumers expecting the country’s economic situation to worsen over the next twelve months increased notably. At the same time, perceptions of current financial conditions compared to a year earlier were broadly unchanged. On a monthly basis, households' expectations about improvements in their financial situation over the",
+    "value_match": null
+  },
+  "consumer-spending": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Consumer Spending in Czech Republic increased to 729.82 CZK Billion in the fourth quarter of 2025 from 720.86 CZK Billion in the third quarter of 2025. Consumer Spending in Czech Republic averaged 580.26 CZK Billion from 1996 until 2025, reaching an all time high of 729.82 CZK Billion in the fourth quarter of 2025 and a record low of 406.21 CZK Billion in the first quarter of 1996. source: Czech Statistical Office",
+    "value_match": "729.82"
+  },
+  "core-cpi": {
+    "source_label": "Czech National Bank",
+    "source_url": "https://www.cnb.cz/en/index.html",
+    "desc": "Core consumer prices in Czech Republic increased 2.94 percent in April of 2026 over the same month in the previous year. Core Inflation Rate in Czech Republic averaged 2.33 percent from 2007 until 2026, reaching an all time high of 14.75 percent in July of 2022 and a record low of -1.40 percent in November of 2010. source: Czech National Bank",
+    "value_match": "14.75"
+  },
+  "corporate-tax-rate": {
+    "source_label": "Financial Administration of the Czech Republic",
+    "source_url": "https://taxsummaries.pwc.com/",
+    "desc": "The Corporate Tax Rate in Czech Republic stands at 21 percent. Corporate Tax Rate in Czech Republic averaged 25.65 percent from 1993 until 2026, reaching an all time high of 45.00 percent in 1993 and a record low of 19.00 percent in 2010. source: Financial Administration of the Czech Republic",
+    "value_match": "21"
+  },
+  "corruption-index": {
+    "source_label": "Transparency International",
+    "source_url": null,
+    "desc": "Czech Republic scored 59 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Czech Republic averaged 50.02 Points from 1996 until 2025, reaching an all time high of 59.00 Points in 2018 and a record low of 37.00 Points in 2002. source: Transparency International",
+    "value_match": "59.00"
+  },
+  "corruption-rank": {
+    "source_label": "Transparency International",
+    "source_url": null,
+    "desc": "Czech Republic is the 39 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Czech Republic averaged 45.07 from 1996 until 2025, reaching an all time high of 57.00 in 2011 and a record low of 25.00 in 1996. source: Transparency International",
+    "value_match": null
+  },
+  "cpi-clothing": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "CPI Clothing in Czech Republic increased to 97.80 points in April from 97.70 points in March of 2026. CPI Clothing in Czech Republic averaged 99.32 points from 2025 until 2026, reaching an all time high of 100.60 points in November of 2025 and a record low of 97.60 points in February of 2026. source: Czech Statistical Office",
+    "value_match": "97.80"
+  },
+  "cpi-education": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "CPI Education in Czech Republic remained unchanged at 102.70 points in April. CPI Education in Czech Republic averaged 100.94 points from 2025 until 2026, reaching an all time high of 102.70 points in February of 2026 and a record low of 98.80 points in April of 2025. source: Czech Statistical Office",
+    "value_match": "102.70"
+  },
+  "cpi-food": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "CPI Food in Czech Republic decreased to 98.50 points in April from 98.90 points in March of 2026. CPI Food in Czech Republic averaged 99.94 points from 2025 until 2026, reaching an all time high of 101.20 points in June of 2025 and a record low of 98.40 points in December of 2025. source: Czech Statistical Office",
+    "value_match": "98.50"
+  },
+  "cpi-housing-utilities": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "CPI Housing Utilities in Czech Republic increased to 100.60 points in April from 100.30 points in March of 2026. CPI Housing Utilities in Czech Republic averaged 87.25 points from 1995 until 2026, reaching an all time high of 170.00 points in January of 2025 and a record low of 24.80 points in January of 1995. source: Czech Statistical Office",
+    "value_match": "100.60"
+  },
+  "cpi-recreation-and-culture": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "CPI Recreation and Culture in Czech Republic decreased to 101.20 points in April from 101.40 points in March of 2026. CPI Recreation and Culture in Czech Republic averaged 100.48 points from 2025 until 2026, reaching an all time high of 107.60 points in August of 2025 and a record low of 97.90 points in April of 2025. source: Czech Statistical Office",
+    "value_match": "101.20"
+  },
+  "cpi-transportation": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "The transportation sub-index of the CPI basket in Czech Republic increased to 108.60 points in April of 2026 from 105.80 points in March of 2026. CPI Transportation in Czech Republic averaged 100.81 points from 2025 until 2026, reaching an all time high of 108.60 points in April of 2026 and a record low of 99.10 points in January of 2026. source: Czech Statistical Office",
+    "value_match": "108.60"
+  },
+  "credit-rating": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "current-account": {
+    "source_label": "Czech National Bank",
+    "source_url": "http://www.cnb.cz",
+    "desc": "The Czech Republic’s current account surplus narrowed sharply to CZK 5.9 billion in March 2026 from CZK 27.1 billion in the same month of the previous year and below market expectations of CZK 13.1 billion. It marked the smallest current account surplus since November 2025, as the goods account surplus narrowed to CZK 48.7 billion from CZK 58.8 billion, while the services account surplus fell to CZK 3.3 billion from CZK 12.1 billion. Moreover, the primary income deficit widened to CZK 36.4 billi",
+    "value_match": null
+  },
+  "current-account-to-gdp": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Czech Republic recorded a Current Account surplus of 0.70 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Czech Republic averaged -1.87 percent of GDP from 1993 until 2025, reaching an all time high of 1.80 percent of GDP in 2016 and a record low of -6.10 percent of GDP in 1996. source: Czech Statistical Office",
+    "value_match": "0.70"
+  },
+  "disposable-personal-income": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "employed-persons": {
+    "source_label": "Czech Statistical Office (CSU)",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "The number of employed persons in Czech Republic increased to 5272.20 Thousand in the fourth quarter of 2025 from 5272.10 Thousand in the third quarter of 2025. Employed Persons in Czech Republic averaged 5026.02 Thousand from 2003 until 2025, reaching an all time high of 5326.30 Thousand in the fourth quarter of 2018 and a record low of 4675.90 Thousand in the first quarter of 2004. source: Czech Statistical Office (CSU)",
+    "value_match": null
+  },
+  "employment-rate": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Employment Rate in Czech Republic decreased to 75.70 percent in the fourth quarter of 2025 from 76 percent in the third quarter of 2025. Employment Rate in Czech Republic averaged 69.13 percent from 1998 until 2025, reaching an all time high of 76.00 percent in the third quarter of 2025 and a record low of 63.70 percent in the first quarter of 2004. source: EUROSTAT",
+    "value_match": "75.70"
+  },
+  "energy-inflation": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "exports": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "http://www.czso.cz",
+    "desc": "Exports from the Czech Republic climbed 6.5% year-on-year to CZK 459.1 billion in March 2026, driven by increased sales of machinery and transport equipment (+5.7%), manufactured goods by materials (+5.7%), chemicals and related products (+8.8%), mineral fuels and lubricants (+15%), and food and live animals (+6.8%). source: Czech Statistical Office",
+    "value_match": null
+  },
+  "food-inflation": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "http://www.czso.cz",
+    "desc": "Cost of food in Czech Republic decreased 1.30 percent in April of 2026 over the same month in the previous year. Food Inflation in Czech Republic averaged 2.98 percent from 2000 until 2026, reaching an all time high of 26.00 percent in November of 2022 and a record low of -6.50 percent in July of 2009. source: Czech Statistical Office",
+    "value_match": "26.00"
+  },
+  "gdp": {
+    "source_label": "World Bank",
+    "source_url": "https://www.worldbank.org/",
+    "desc": "The Gross Domestic Product (GDP) in Czech Republic was worth 345.04 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Czech Republic represents 0.32 percent of the world economy. source: World Bank",
+    "value_match": null
+  },
+  "gdp-per-capita": {
+    "source_label": "World Bank",
+    "source_url": "https://www.worldbank.org/",
+    "desc": "The Gross Domestic Product per capita in Czech Republic was last recorded at 20444.54 US dollars in 2024. The GDP per Capita in Czech Republic is equivalent to 162 percent of the world's average. GDP per Capita in Czech Republic averaged 15495.05 USD from 1990 until 2024, reaching an all time high of 20627.35 USD in 2022 and a record low of 10475.08 USD in 1993. source: World Bank",
+    "value_match": "162"
+  },
+  "gdp-per-capita-ppp": {
+    "source_label": "World Bank",
+    "source_url": "https://www.worldbank.org/",
+    "desc": "The Gross Domestic Product per capita in Czech Republic was last recorded at 47961.81 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Czech Republic, when adjusted by Purchasing Power Parity is equivalent to 270 percent of the world's average. source: World Bank",
+    "value_match": "270"
+  },
+  "gdp-real": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "The Czech Republic’s gross domestic product grew by 2.1% year-on-year in Q1 2026, easing from a 2.7% expansion in the previous quarter and falling below market expectations of 2.5%, according to preliminary estimates. source: Czech Statistical Office",
+    "value_match": "2.5"
+  },
+  "government-debt": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Government Debt in Czech Republic increased to 3786250 CZK Million in 2025 from 3488500 CZK Million in 2024. Government Debt in Czech Republic averaged 1472636.03 CZK Million from 1995 until 2025, reaching an all time high of 3786250.00 CZK Million in 2025 and a record low of 211777.00 CZK Million in 1996. source: Czech Statistical Office",
+    "value_match": "3786250"
+  },
+  "government-debt-total": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Czech Republic recorded a Government Debt to GDP of 44.30 percent of the country's Gross Domestic Product in 2025. Government Debt to GDP in Czech Republic averaged 30.91 percent of GDP from 1995 until 2025, reaching an all time high of 44.30 percent of GDP in 2025 and a record low of 11.50 percent of GDP in 1996. source: Czech Statistical Office",
+    "value_match": "44.30"
+  },
+  "government-spending": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Government Spending in Czech Republic increased to 348.30 CZK Billion in the fourth quarter of 2025 from 348.25 CZK Billion in the third quarter of 2025. Government Spending in Czech Republic averaged 269.80 CZK Billion from 1996 until 2025, reaching an all time high of 348.30 CZK Billion in the fourth quarter of 2025 and a record low of 209.19 CZK Billion in the second quarter of 1996. source: Czech Statistical Office",
+    "value_match": "348.30"
+  },
+  "government-spending-eur": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Government Spending in Czech Republic increased to 348.30 CZK Billion in the fourth quarter of 2025 from 348.25 CZK Billion in the third quarter of 2025. Government Spending in Czech Republic averaged 269.80 CZK Billion from 1996 until 2025, reaching an all time high of 348.30 CZK Billion in the fourth quarter of 2025 and a record low of 209.19 CZK Billion in the second quarter of 1996. source: Czech Statistical Office",
+    "value_match": "348.30"
+  },
+  "gross-fixed-capital-formation": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Gross Fixed Capital Formation in Czech Republic increased to 451.73 CZK Billion in the fourth quarter of 2025 from 439.44 CZK Billion in the third quarter of 2025. Gross Fixed Capital Formation in Czech Republic averaged 315.91 CZK Billion from 1996 until 2025, reaching an all time high of 451.73 CZK Billion in the fourth quarter of 2025 and a record low of 215.49 CZK Billion in the third quarter of 1997. source: Czech Statistical Office",
+    "value_match": "451.73"
+  },
+  "hospital-beds": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "house-price-index": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Housing Index in Czech Republic increased to 254.10 points in the fourth quarter of 2025 from 249 points in the third quarter of 2025. Housing Index in Czech Republic averaged 139.09 points from 2008 until 2025, reaching an all time high of 254.10 points in the fourth quarter of 2025 and a record low of 93.60 points in the first quarter of 2013. source: EUROSTAT",
+    "value_match": "254.10"
+  },
+  "imports": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "Imports into the Czech Republic went up 6.0% year-on-year to CZK 427.2 billion in March 2026, attributed to higher purchases of mineral fuels and lubricants (+20.9%), chemicals and related products (+8.4%), food and live animals (+8.4%), machinery and transport equipment (+4.2%), and crude materials (+6.3%). source: Czech Statistical Office",
+    "value_match": null
+  },
+  "industrial-production": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "Industrial production in the Czech Republic rose 0.9% year-on-year in March 2026, slowing from 1.3% in the previous month and coming in below market expectations of 1.9%. This marked the weakest growth since September 2025, as manufacturing output moderated to 1.7% from 2.4% in February. Across the manufacturing sector, activity was dragged down by sharp declines in wearing apparel (-7.6% vs 4.2%) and pharmaceutical products (-5% vs 4.5%), while growth also moderated for wood products excluding ",
+    "value_match": "1.9"
+  },
+  "inflation-cpi": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/",
+    "desc": "The annual inflation rate in the Czech Republic rose to 2.5% year-on-year in April 2026 from 1.9% in the previous month, confirming preliminary estimates and marking the highest reading since October 2025. Price growth continued for several categories namely housing and utilities (1.2% vs 1% in March), transport (8.7% vs 5.5%), alcoholic beverages and tobacco (5.2% vs 3.3%), recreation, sports and culture (3.4% vs 2.5%), information and communication (3.4% vs 2.9%), and health (4% vs 3.9%). Conv",
+    "value_match": "2.5"
+  },
+  "job-vacancies": {
+    "source_label": "Labor Office of the Czech Republic",
+    "source_url": "https://www.uradprace.cz/uvod",
+    "desc": "Job Vacancies in Czech Republic increased to 94483 in April from 91545 in March of 2026. Job Vacancies in Czech Republic averaged 118658.29 from 1990 until 2026, reaching an all time high of 363917.00 in February of 2022 and a record low of 30803.00 in December of 2010. source: Labor Office of the Czech Republic",
+    "value_match": null
+  },
+  "labor-force-participation-rate": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Labor Force Participation Rate in Czech Republic decreased to 78.10 percent in the fourth quarter of 2025 from 78.30 percent in the third quarter of 2025. Labor Force Participation Rate in Czech Republic averaged 73.11 percent from 1998 until 2025, reaching an all time high of 78.30 percent in the third quarter of 2025 and a record low of 69.40 percent in the first quarter of 2008. source: EUROSTAT",
+    "value_match": "78.10"
+  },
+  "labour-costs": {
+    "source_label": "European Central Bank",
+    "source_url": "https://www.ecb.europa.eu/home/html/index.en.html",
+    "desc": "Labour Costs in Czech Republic increased to 134.97 points in the fourth quarter of 2025 from 124.59 points in the third quarter of 2025. Labour Costs in Czech Republic averaged 78.02 points from 1995 until 2025, reaching an all time high of 134.97 points in the fourth quarter of 2025 and a record low of 38.60 points in the first quarter of 1995. source: European Central Bank",
+    "value_match": "134.97"
+  },
+  "long-term-unemployment-rate": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Long Term Unemployment Rate in Czech Republic increased to 1 percent in the fourth quarter of 2025 from 0.90 percent in the third quarter of 2025. Long Term Unemployment Rate in Czech Republic averaged 2.35 percent from 1998 until 2025, reaching an all time high of 4.50 percent in the first quarter of 2005 and a record low of 0.50 percent in the first quarter of 2020. source: EUROSTAT",
+    "value_match": "1"
+  },
+  "manufacturing-production": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "Manufacturing Production in Czech Republic increased 1.70 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Czech Republic averaged 3.40 percent from 2001 until 2026, reaching an all time high of 54.10 percent in April of 2021 and a record low of -33.80 percent in April of 2020. source: Czech Statistical Office",
+    "value_match": "54.10"
+  },
+  "medical-doctors": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "minimum-wages": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Minimum Wages in Czech Republic increased to 924 EUR/Month in the second quarter of 2026 from 841 EUR/Month in the fourth quarter of 2025. Minimum Wages in Czech Republic averaged 386.11 EUR/Month from 1999 until 2026, reaching an all time high of 924.00 EUR/Month in June of 2026 and a record low of 92.00 EUR/Month in June of 1999. source: EUROSTAT",
+    "value_match": null
+  },
+  "mining-production": {
+    "source_label": "CSU - Czech Statistical Office",
+    "source_url": "http://www.czso.cz",
+    "desc": "Mining production in Czech Republic increased 5.90 percent in March of 2026 over the same month in the previous year. Mining Production in Czech Republic averaged -3.41 percent from 2001 until 2026, reaching an all time high of 31.90 percent in July of 2021 and a record low of -30.50 percent in July of 2020. source: CSU - Czech Statistical Office",
+    "value_match": "31.90"
+  },
+  "nurses": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "personal-income-tax-rate": {
+    "source_label": "Financial Administration of the Czech Republic",
+    "source_url": "http://ec.europa.eu",
+    "desc": "The Personal Income Tax Rate in Czech Republic stands at 23 percent. Personal Income Tax Rate in Czech Republic averaged 26.50 percent from 1995 until 2026, reaching an all time high of 43.00 percent in 1995 and a record low of 15.00 percent in 2008. source: Financial Administration of the Czech Republic",
+    "value_match": "23"
+  },
+  "population": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz",
+    "desc": "The total population in Czech Republic was estimated at 10.9 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Czech Republic had a population of 9.7 million people. source: Czech Statistical Office",
+    "value_match": "10.9"
+  },
+  "ppi": {
+    "source_label": "Czech Statistical Office",
+    "source_url": "https://www.czso.cz/csu/czso/home",
+    "desc": "Producer Prices in Czech Republic increased to 144.30 points in March from 142.20 points in February of 2026. Producer Prices in Czech Republic averaged 91.25 points from 1990 until 2026, reaching an all time high of 148.40 points in January of 2023 and a record low of 28.20 points in February of 1990. source: Czech Statistical Office",
+    "value_match": "144.30"
+  },
+  "productivity": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Productivity in Czech Republic decreased to 108.39 points in the fourth quarter of 2025 from 108.87 points in the third quarter of 2025. Productivity in Czech Republic averaged 89.64 points from 1995 until 2025, reaching an all time high of 116.50 points in the fourth quarter of 2020 and a record low of 59.31 points in the first quarter of 1995. source: EUROSTAT",
+    "value_match": "108.39"
+  },
+  "retail-sales": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "retirement-age-men": {
+    "source_label": "Czech Social Security Administration",
+    "source_url": "https://www.duchodovareforma.cz",
+    "desc": "Retirement Age Men in Czech Republic increased to 64.67 Years in 2026 from 64.50 Years in 2025. Retirement Age Men in Czech Republic averaged 62.83 Years from 2004 until 2026, reaching an all time high of 64.67 Years in 2026 and a record low of 61.00 Years in 2004. source: Czech Social Security Administration",
+    "value_match": null
+  },
+  "retirement-age-women": {
+    "source_label": "Czech Social Security Administration",
+    "source_url": "https://www.duchodovareforma.cz",
+    "desc": "Retirement Age Women in Czech Republic increased to 64.67 Years in 2026 from 64.50 Years in 2025. Retirement Age Women in Czech Republic averaged 61.62 Years from 2004 until 2026, reaching an all time high of 64.67 Years in 2026 and a record low of 58.00 Years in 2004. source: Czech Social Security Administration",
+    "value_match": null
+  },
+  "sales-tax-rate": {
+    "source_label": "Financial Administration of the Czech Republic",
+    "source_url": null,
+    "desc": "The Sales Tax Rate in Czech Republic stands at 21 percent. Sales Tax Rate in Czech Republic averaged 20.59 percent from 2000 until 2026, reaching an all time high of 22.00 percent in 2001 and a record low of 19.00 percent in 2004. source: Financial Administration of the Czech Republic",
+    "value_match": "21"
+  },
+  "services-inflation": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "services-sentiment": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "social-security-rate": {
+    "source_label": "Czech Social Security Administration",
+    "source_url": null,
+    "desc": "The Social Security Rate in Czech Republic stands at 45.40 percent. Social Security Rate in Czech Republic averaged 45.94 percent from 2000 until 2026, reaching an all time high of 47.50 percent in 2001 and a record low of 44.80 percent in 2020. source: Czech Social Security Administration",
+    "value_match": "45.40"
+  },
+  "social-security-rate-companies": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "social-security-rate-employees": {
+    "source_label": null,
+    "source_url": null,
+    "desc": "",
+    "value_match": null
+  },
+  "terrorism-index": {
+    "source_label": "Institute for Economics and Peace",
+    "source_url": null,
+    "desc": "Terrorism Index in Czech Republic decreased to 2.26 Points in 2025 from 2.91 Points in 2024. Terrorism Index in Czech Republic averaged 0.82 Points from 2002 until 2025, reaching an all time high of 2.91 Points in 2024 and a record low of 0.00 Points in 2011. source: Institute for Economics and Peace",
+    "value_match": "2.26"
+  },
+  "unemployed-persons": {
+    "source_label": "Labor Office of the Czech Republic",
+    "source_url": "https://www.uradprace.cz/uvod",
+    "desc": "The number of unemployed persons in Czech Republic decreased to 372338 in March of 2026 from 381705 in February of 2026. Unemployed Persons in Czech Republic averaged 349335.08 from 1990 until 2026, reaching an all time high of 629274.00 in January of 2014 and a record low of 3000.00 in March of 1990. source: Labor Office of the Czech Republic",
+    "value_match": null
+  },
+  "unemployment": {
+    "source_label": "Labor Office of the Czech Republic",
+    "source_url": "https://www.uradprace.cz/uvod",
+    "desc": "The Czech unemployment rate edged down to 4.9% in April 2026 from 5.0% in the previous month, slightly above market expectations of 4.8%. This was driven by continued seasonal employment and the economic recovery, bringing the jobless rate to its lowest level since December 2025. The number of unemployed individuals fell by 7,866 month-on-month to 364,472 but was still up by 45,932 compared to the same month last year. Meanwhile, the number of registered job vacancies rose by 2,938 from the prev",
+    "value_match": "4.9"
+  },
+  "youth-unemployment-rate": {
+    "source_label": "EUROSTAT",
+    "source_url": "https://ec.europa.eu/eurostat/",
+    "desc": "Youth Unemployment Rate in Czech Republic decreased to 10 percent in March from 10.40 percent in February of 2026. Youth Unemployment Rate in Czech Republic averaged 12.65 percent from 1993 until 2026, reaching an all time high of 22.30 percent in May of 2004 and a record low of 4.00 percent in December of 2019. source: EUROSTAT",
+    "value_match": "10"
+  }
+}

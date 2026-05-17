@@ -175,6 +175,20 @@ SERIES = [
         "adjustment": "SA",
         "series_label": "Index der Arbeitskosten / B-S Gesamtwirtschaft / kal.+saisonbereinigt",
     },
+    # Productivity: Produktionsergebnis je Arbeitsstunde (B+C Bergbau + Verarbeitendes Gewerbe),
+    # monthly, calendar-adjusted, Index 2021=100. TE Feb 2026 = 95.60 ≈ ours 95.2.
+    # Verified 2026-05-16 by listing BBDE1 CL_BBK_DOES_CONCEPT — BA10 = "Output per man-hour worked".
+    {
+        "flow": "BBDE1",
+        "key": "M.DE.Y.BA10.A2P200000.F.C.I21.A",
+        "indicator": "productivity",
+        "country": "DE",
+        "freq": "M",
+        "unit": "Index (2021=100)",
+        "conversion": 1,
+        "adjustment": "CA",
+        "series_label": "Produktionsergebnis je Arbeitsstunde (Produktivität) / Bergbau + Verarbeitendes Gewerbe (B+C) / kalenderbereinigt",
+    },
 ]
 
 

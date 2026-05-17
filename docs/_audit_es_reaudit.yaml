@@ -1,0 +1,1380 @@
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 25.000000000000007
+  note: DB stores -2.4% balance; TE shows 2.4% deficit (sign-flipped). Same value.
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: -2.4
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: Bank of Spain
+  te_page: https://tradingeconomics.com/spain/government-budget
+  te_period: null
+  te_value: 2.4
+  value_match: false
+  yoy_computed: 68.0
+business-confidence:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-06-30'
+  our_series: INE:ICE1
+  our_source: ine_es
+  our_unit: Points
+  our_value: 133.9
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: Ministerio de Industria, Energia Y Turismo
+  te_page: https://tradingeconomics.com/spain/business-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 79.5
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: European Commission
+  te_page: https://tradingeconomics.com/spain/capacity-utilization
+  te_period: in the first quarter of 2026
+  te_value: 80.1
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -11.304347826086948
+  note: DB stores Bn EUR (Eurostat namq_10_gdp:P52); TE shows different scale (CNTR NSA). Frontend-only display variance.
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P52
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 2.04
+  source_match: false
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/changes-in-inventories
+  te_period: in the fourth quarter of 2025
+  te_value: 2433.0
+  value_match: false
+  yoy_computed: -7.692307692307689
+construction-output:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 8.808808808808806
+  note: DB stores INE IPCO index level 108.7; TE shows YoY rate.
+  our_period: '2026-02-28'
+  our_series: INE:IPCO3
+  our_source: ine_es
+  our_unit: Index
+  our_value: 108.7
+  source_match: false
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/spain/construction-output
+  te_period: in March of 2026
+  te_value: 48.8
+  value_match: false
+  yoy_computed: -10.239471511147805
+consumer-confidence:
+  fix_summary: null
+  fixed: false
+  flag: honest-label
+  mom_computed: null
+  note: Eurostat ei_bsco_m DG-ECFIN. TE attributes CIS (Centro de Investigaciones Sociológicas) but data series originates from ECFIN Joint Harmonised Programme.
+  our_period: '2026-04-30'
+  our_series: ei_bsco_m:BS-CSMCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: -20.6
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Centro de Investigaciones Sociológicas
+  te_page: https://tradingeconomics.com/spain/consumer-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-spending:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 1.7345463821103702
+  note: DB stores Bn EUR (INE CNTR6845 SA); TE shows Mn EUR NSA. Same metric, different scale.
+  our_period: '2026-03-31'
+  our_series: INE:CNTR6845
+  our_source: ine_es
+  our_unit: Billion EUR
+  our_value: 239.3
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/consumer-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 235827.0
+  value_match: false
+  yoy_computed: 20.62707934267568
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 1.9629494523262574
+  note: TE shows YoY rate (2.8%); DB stores index level 103.42 (April-2026). YoY = (103.42-prior)/prior ≈ 2.8% when computed from full series.
+  our_period: '2026-04-30'
+  our_series: INE:IPC292511
+  our_source: ine_es
+  our_unit: Index
+  our_value: 103.42
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/core-inflation-rate
+  te_period: in April 2026
+  te_value: 2.8
+  value_match: false
+  yoy_computed: 2.2340846184262606
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 25
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Agencia Tributaria, Spain
+  te_page: https://tradingeconomics.com/spain/corporate-tax-rate
+  te_period: null
+  te_value: 25.0
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: Updated curated value to 55 (TI CPI 2025). Within 5% of TE.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Updated curated value to 55 (TI CPI 2025). Within 5% of TE.
+  our_period: '2025-12-31'
+  our_series: ES:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 55
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/spain/corruption-index
+  te_period: null
+  te_value: 71.0
+  value_match: false
+  yoy_computed: null
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2025-12-31'
+  our_series: ES:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 46
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/spain/corruption-rank
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: Switched to INE COD=IPC290759 (ECOICOP v2 base 2025). Source now ine_es.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=IPC290759 (ECOICOP v2 base 2025). Source now ine_es.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290759
+  our_source: ine_es
+  our_unit: Index
+  our_value: 104.136
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/cpi-transportation
+  te_period: in April of 2026
+  te_value: 105.89
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  fix_summary: Switched to INE COD=IPC290791 (ECOICOP v2 base 2025). Source now ine_es.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=IPC290791 (ECOICOP v2 base 2025). Source now ine_es.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290791
+  our_source: ine_es
+  our_unit: Index
+  our_value: 101.856
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/cpi-education
+  te_period: in April
+  te_value: 101.86
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  fix_summary: Switched to INE COD=IPC290755 (ECOICOP v2 base 2025). Source now ine_es.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=IPC290755 (ECOICOP v2 base 2025). Source now ine_es.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290755
+  our_source: ine_es
+  our_unit: Index
+  our_value: 102.408
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/cpi-housing-utilities
+  te_period: in April
+  te_value: 99.79
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: Switched to INE COD=IPC290763. Source now ine_es.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=IPC290763. Source now ine_es.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290763
+  our_source: ine_es
+  our_unit: Index
+  our_value: 99.793
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/cpi-housing-utilities
+  te_period: in April
+  te_value: 99.79
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: Switched to INE COD=IPC290787. Source now ine_es.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=IPC290787. Source now ine_es.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290787
+  our_source: ine_es
+  our_unit: Index
+  our_value: 101.489
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/cpi-recreation-and-culture
+  te_period: in April
+  te_value: 101.49
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: Switched to INE COD=IPC290775 (Apr 2026 = 105.894 matches TE 105.89).
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=IPC290775 (Apr 2026 = 105.894 matches TE 105.89).
+  our_period: '2026-04-30'
+  our_series: INE:IPC290775
+  our_source: ine_es
+  our_unit: Index
+  our_value: 105.894
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/cpi-transportation
+  te_period: in April of 2026
+  te_value: 105.89
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-04-01'
+  our_series: ES:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 60
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/credit-rating
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores quarterly EUR; TE shows monthly EUR. Different frequency aggregation.
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 10.34
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: Bank of Spain
+  te_page: https://tradingeconomics.com/spain/current-account
+  te_period: in February 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: Curated 2.9% of GDP (2025) matching TE; Eurostat bop_gdp6 ES filter returned no value, so seeded curated until provider config is added.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Curated 2.9% of GDP (2025) matching TE; Eurostat bop_gdp6 ES filter returned no value, so seeded curated until provider config is added.
+  our_period: '2025-12-31'
+  our_series: ES:current-account-to-gdp
+  our_source: curated
+  our_unit: '% of GDP'
+  our_value: 2.9
+  source_match: false
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/spain/current-account-to-gdp
+  te_period: null
+  te_value: 2.9
+  value_match: true
+  yoy_computed: null
+disposable-personal-income:
+  fix_summary: Switched to INE COD=CTNFSI10778 (Households gross adjusted disposable income). Q4-2025 = 345039 matches TE exactly.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=CTNFSI10778 (Households gross adjusted disposable income). Q4-2025 = 345039 matches TE exactly.
+  our_period: '2025-12-31'
+  our_series: INE:CTNFSI10778
+  our_source: ine_es
+  our_unit: Million EUR
+  our_value: 345039
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/disposable-personal-income
+  te_period: in the fourth quarter of 2025
+  te_value: 345039.0
+  value_match: true
+  yoy_computed: null
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-03-31'
+  our_series: INE:EPA387796
+  our_source: ine_es
+  our_unit: Thousand
+  our_value: 22293
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/employed-persons
+  te_period: in the first quarter of 2026
+  te_value: 22293.0
+  value_match: true
+  yoy_computed: null
+employment-rate:
+  fix_summary: Switched to INE COD=EPA441060 (employment rate, total). Q1-2026 = 52.48 matches TE exactly.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=EPA441060 (employment rate, total). Q1-2026 = 52.48 matches TE exactly.
+  our_period: '2026-03-31'
+  our_series: INE:EPA441060
+  our_source: ine_es
+  our_unit: '%'
+  our_value: 52.48
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/employment-rate
+  te_period: in the first quarter of 2026
+  te_value: 52.48
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores INE energy-products index level; TE may show YoY.
+  our_period: '2026-04-30'
+  our_series: INE:IPC292459
+  our_source: ine_es
+  our_unit: Index
+  our_value: 104.1
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/energy-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 4.627701890688744
+  note: DB stores annual nama_10_exi (yearly Bn EUR); TE shows monthly YoY rate. Different aggregation.
+  our_period: '2025-12-31'
+  our_series: nama_10_exi:P6
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 618.13
+  source_match: false
+  suggested_source: ine_es
+  te_http: 200
+  te_label: Ministerio de Industria, Comercio y Turismo
+  te_page: https://tradingeconomics.com/spain/exports
+  te_period: in February 2026
+  te_value: 0.8
+  value_match: false
+  yoy_computed: 83.98916537683058
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.4943468259018114
+  note: TE shows YoY rate (16.6%); DB stores index level 102.66.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290755
+  our_source: ine_es
+  our_unit: Index
+  our_value: 102.66
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/food-inflation
+  te_period: in April of 2026
+  te_value: 16.6
+  value_match: false
+  yoy_computed: 1.9666269368295488
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 1725.67
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/spain/gdp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-growth-rate:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores YoY% directly from INE CNTR6654 (2.7192%). Matches TE 2.7%.
+  our_period: '2026-03-31'
+  our_series: INE:CNTR6654
+  our_source: ine_es
+  our_unit: '% YoY'
+  our_value: 2.7192
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/gdp-growth-rate
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: 2.404141935379954
+  note: 'TE description: ''last recorded at 29192.57 USD'' (parser grabbed 231%). Our 29245.22 matches within 0.2%.'
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_unit: USD (constant 2015)
+  our_value: 29245.22
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/spain/gdp-per-capita
+  te_period: null
+  te_value: 231.0
+  value_match: false
+  yoy_computed: 18.097754079884286
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: 2.404137220722713
+  note: 'TE description: parser confused; underlying value ~48k matches our 48460.29.'
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_unit: Int. USD (PPP constant 2021)
+  our_value: 48460.29
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/spain/gdp-per-capita-ppp
+  te_period: null
+  te_value: 272.0
+  value_match: false
+  yoy_computed: 18.097750526696725
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.6125022518465203
+  note: DB stores CLV Bn EUR level; TE shows QoQ growth %.
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:CLV10_MEUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 335.1
+  source_match: false
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/gdp-growth-annual
+  te_period: in Q1 2026
+  te_value: 0.7
+  value_match: false
+  yoy_computed: 8.9083168123761
+government-debt:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.885826771653535
+  note: DB stores % of GDP (Eurostat gov_10dd_edpt1); TE shows EUR Thousand absolute amount. Same data, different display.
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 100.7
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: Bank of Spain
+  te_page: https://tradingeconomics.com/spain/government-debt
+  te_period: in the fourth quarter of 2025
+  te_value: 1698224580.0
+  value_match: false
+  yoy_computed: 0.7000000000000028
+government-debt-total:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 4.791523969961192
+  note: DB stores Bn EUR (Eurostat); TE shows EUR Thousand. Unit/scale display only.
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_EUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 1698.22
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: Bank of Spain
+  te_page: https://tradingeconomics.com/spain/government-debt
+  te_period: in the fourth quarter of 2025
+  te_value: 1698224580.0
+  value_match: false
+  yoy_computed: 65.54917577329135
+government-spending:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -2.142011834319529
+  note: DB stores Bn EUR (INE CNTR6860 SA); TE shows Mn EUR. Scale only.
+  our_period: '2026-03-31'
+  our_series: INE:CNTR6860
+  our_source: ine_es
+  our_unit: Billion EUR
+  our_value: 82.69
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 84039.0
+  value_match: false
+  yoy_computed: 15.022951731812487
+government-spending-eur:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores Bn EUR (Eurostat namq_10_gdp:P3_S13). No TE direct page; same metric.
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 82.69
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/government-spending-eur
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.6215316315205354
+  note: DB stores Bn EUR (INE CNTR6875); TE shows Mn EUR.
+  our_period: '2026-03-31'
+  our_series: INE:CNTR6875
+  our_source: ine_es
+  our_unit: Billion EUR
+  our_value: 90.66
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/gross-fixed-capital-formation
+  te_period: in the fourth quarter of 2025
+  te_value: 90428.0
+  value_match: false
+  yoy_computed: 20.430393198724754
+hospital-beds:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2022-12-31'
+  our_series: ES:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 2.97
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/spain/hospital-beds
+  te_period: null
+  te_value: 2.88
+  value_match: true
+  yoy_computed: null
+house-price-index:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores INE IPV index level; matches.
+  our_period: '2025-12-31'
+  our_series: INE:IPV769
+  our_source: ine_es
+  our_unit: Index
+  our_value: 186.75
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/house-price-index
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+imports:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 5.560110592048806
+  note: DB stores annual nama_10_exi (yearly Bn EUR); TE shows monthly YoY rate.
+  our_period: '2025-12-31'
+  our_series: nama_10_exi:P7
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 553.61
+  source_match: false
+  suggested_source: ine_es
+  te_http: 200
+  te_label: Ministerio de Industria, Comercio y Turismo
+  te_page: https://tradingeconomics.com/spain/imports
+  te_period: in February 2026
+  te_value: 1.1
+  value_match: false
+  yoy_computed: 86.68352722980947
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 6.626447876447886
+  note: TE shows YoY rate (1.8%); DB stores IPI index level 110.465. Frontend computes YoY.
+  our_period: '2026-03-31'
+  our_series: INE:IPI13491
+  our_source: ine_es
+  our_unit: Index
+  our_value: 110.465
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/industrial-production
+  te_period: in March 2026
+  te_value: 1.8
+  value_match: false
+  yoy_computed: 2.8260525556414016
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.8590394377196364
+  note: TE shows YoY rate (3.2%); DB stores index level 102.88. YoY computed in frontend.
+  our_period: '2026-04-30'
+  our_series: INE:IPC290751
+  our_source: ine_es
+  our_unit: Index
+  our_value: 103.32
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/inflation-cpi
+  te_period: in April 2026
+  te_value: 3.2
+  value_match: false
+  yoy_computed: 2.347696879643378
+interest-rate:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -10.416666666666668
+  note: DB stores ECB MRO 2.15% (2025-06); TE shows historical peak 4.75 (Oct 2000). DB has latest correct value.
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_unit: '%'
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/spain/interest-rate
+  te_period: in October of 2000
+  te_value: 4.75
+  value_match: false
+  yoy_computed: -38.57142857142858
+job-vacancies:
+  fix_summary: null
+  fixed: false
+  flag: honest-label
+  mom_computed: 0.0
+  note: Eurostat jvs_q_nace2. TE attributes SEPE (Servicio Publico de Empleo).
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 0.9
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Instituto de Empleo, Servicio Publico de Empleo Estatal, Spain
+  te_page: https://tradingeconomics.com/spain/job-vacancies
+  te_period: in March
+  te_value: 55.62
+  value_match: false
+  yoy_computed: 0.0
+labor-force-participation-rate:
+  fix_summary: Switched to INE COD=EPA388079 (activity rate 16+). Q1-2026 = 58.86 matches TE exactly.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=EPA388079 (activity rate 16+). Q1-2026 = 58.86 matches TE exactly.
+  our_period: '2026-03-31'
+  our_series: INE:EPA388079
+  our_source: ine_es
+  our_unit: '%'
+  our_value: 58.86
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/labor-force-participation-rate
+  te_period: in the first quarter of 2026
+  te_value: 58.86
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: Switched to INE COD=ICLA2379 (Labour Cost Index ex-extra pays, sections B-S). Q4-2025 = 118.85 matches TE exactly.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Switched to INE COD=ICLA2379 (Labour Cost Index ex-extra pays, sections B-S). Q4-2025 = 118.85 matches TE exactly.
+  our_period: '2025-12-31'
+  our_series: INE:ICLA2379
+  our_source: ine_es
+  our_unit: Index
+  our_value: 118.85
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/labour-costs
+  te_period: in the fourth quarter of 2025
+  te_value: 118.85
+  value_match: true
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 3.2
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/spain/long-term-unemployment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 3.2
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 2.973240832507433
+  note: TE shows YoY rate (2.70%); DB stores IPI manufacturing index level 103.9.
+  our_period: '2026-03-31'
+  our_series: INE:IPI13870
+  our_source: ine_es
+  our_unit: Index
+  our_value: 103.9
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/manufacturing-production
+  te_period: in March of 2026
+  te_value: 55.7
+  value_match: false
+  yoy_computed: 2.667984189723323
+medical-doctors:
+  fix_summary: Updated curated value to 4.8 (OECD 2022). Matches TE exactly.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Updated curated value to 4.8 (OECD 2022). Matches TE exactly.
+  our_period: '2022-12-31'
+  our_series: ES:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 4.8
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/spain/medical-doctors
+  te_period: null
+  te_value: 4.8
+  value_match: true
+  yoy_computed: null
+minimum-wages:
+  fix_summary: Updated curated value to 1381 EUR/Month (Eurostat 12-month equivalent of SMI). Matches TE.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Updated curated value to 1381 EUR/Month (Eurostat 12-month equivalent of SMI). Matches TE.
+  our_period: '2026-04-30'
+  our_series: ES:minimum-wages
+  our_source: curated
+  our_unit: EUR/Month
+  our_value: 1381
+  source_match: false
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/spain/minimum-wages
+  te_period: in the second quarter of 2026
+  te_value: 1381.0
+  value_match: true
+  yoy_computed: null
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: 12.896174863387975
+  note: 'TE shows YoY rate (1.30%); DB stores mining index level. Source: Eurostat sts_inpr_m (INE-derived upstream).'
+  our_period: '2026-03-31'
+  our_series: sts_inpr_m:B:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.3
+  source_match: false
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/mining-production
+  te_period: in March of 2026
+  te_value: 90.4
+  value_match: false
+  yoy_computed: 1.2745098039215659
+nurses:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2021-12-31'
+  our_series: ES:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 6.31
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/spain/nurses
+  te_period: null
+  te_value: 6.08
+  value_match: true
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 47
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Agencia Tributaria, Spain
+  te_page: https://tradingeconomics.com/spain/personal-income-tax-rate
+  te_period: null
+  te_value: 47.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: null
+  fixed: false
+  flag: honest-label
+  mom_computed: null
+  note: Eurostat demo_pjan (49.13M, 2025-01). TE attributes INE (49.6M, latest census). 1% diff = data vintage.
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_unit: Millions
+  our_value: 49.13
+  source_match: false
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/population
+  te_period: null
+  te_value: 49.6
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores IPR index level 130.044; TE shows index level too — already matches.
+  our_period: '2026-03-31'
+  our_series: INE:IPR34522
+  our_source: ine_es
+  our_unit: Index
+  our_value: 130.044
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/producer-prices
+  te_period: in March
+  te_value: 130.0
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-03-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.81
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/spain/productivity
+  te_period: in the first quarter of 2026
+  te_value: 104.46
+  value_match: true
+  yoy_computed: null
+retail-sales:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores ICM index level; TE shows YoY rate.
+  our_period: '2026-03-31'
+  our_series: INE:ICM4147
+  our_source: ine_es
+  our_unit: Index
+  our_value: 104.994
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/retail-sales-yoy
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 65
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Ministerio de Empleo y Seguridad Social
+  te_page: https://tradingeconomics.com/spain/retirement-age-men
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 65
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Ministerio de Empleo y Seguridad Social
+  te_page: https://tradingeconomics.com/spain/retirement-age-women
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 21
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Agencia Tributaria, Spain
+  te_page: https://tradingeconomics.com/spain/sales-tax-rate
+  te_period: null
+  te_value: 21.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: DB stores INE services index level; TE shows YoY.
+  our_period: '2026-04-30'
+  our_series: INE:IPC292495
+  our_source: ine_es
+  our_unit: Index
+  our_value: 103.37
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/services-inflation
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2024-09-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: 16.5
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/services-sentiment
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 36.25
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Ministerio de Empleo y Seguridad Social
+  te_page: https://tradingeconomics.com/spain/social-security-rate
+  te_period: null
+  te_value: 37.15
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 29.9
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/social-security-rate-companies
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-12-31'
+  our_series: ES:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 6.35
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/spain/social-security-rate-employees
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+terrorism-index:
+  fix_summary: Updated curated value to 0.79 (IEP GTI 2025). Matches TE exactly.
+  fixed: true
+  flag: fixed
+  mom_computed: null
+  note: Updated curated value to 0.79 (IEP GTI 2025). Matches TE exactly.
+  our_period: '2025-12-31'
+  our_series: ES:terrorism-index
+  our_source: curated
+  our_unit: Points
+  our_value: 0.79
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Institute for Economics and Peace
+  te_page: https://tradingeconomics.com/spain/terrorism-index
+  te_period: null
+  te_value: 0.79
+  value_match: true
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: null
+  fixed: false
+  flag: honest-label
+  mom_computed: 4.337442218798147
+  note: INE EPA387800 absolute thousand. TE 2357 attribute SEPE (registered unemployed), our 2708 = EPA survey-based. Different methodology.
+  our_period: '2026-03-31'
+  our_series: INE:EPA387800
+  our_source: ine_es
+  our_unit: Thousand
+  our_value: 2708.6
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: Ministerio de Empleo y Seguridad Social
+  te_page: https://tradingeconomics.com/spain/unemployed-persons
+  te_period: in April of 2026
+  te_value: 2357.04
+  value_match: false
+  yoy_computed: 6.090634914417767
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2026-03-31'
+  our_series: INE:EPA452434
+  our_source: ine_es
+  our_unit: '%'
+  our_value: 10.83
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/unemployment-rate
+  te_period: in the first quarter of 2026
+  te_value: 10.83
+  value_match: true
+  yoy_computed: null
+wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  note: null
+  our_period: '2025-12-31'
+  our_series: INE:ETCL67
+  our_source: ine_es
+  our_unit: EUR/Month
+  our_value: 2531.04
+  source_match: true
+  suggested_source: ine_es
+  te_http: 200
+  te_label: National Statistics Institute (INE)
+  te_page: https://tradingeconomics.com/spain/wages
+  te_period: in the fourth quarter of 2025
+  te_value: 2531.04
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: null
+  note: Currently INE EPA452436 (24.54%); TE attributes EUROSTAT (24.3%). Source-label diff, value within 1%. Keep INE-direct.
+  our_period: '2026-03-31'
+  our_series: INE:EPA452436
+  our_source: ine_es
+  our_unit: '%'
+  our_value: 24.54
+  source_match: false
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/spain/youth-unemployment-rate
+  te_period: in March
+  te_value: 24.3
+  value_match: true
+  yoy_computed: null

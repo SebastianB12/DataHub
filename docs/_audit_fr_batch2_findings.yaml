@@ -1,0 +1,312 @@
+# FR Batch 2 audit findings (2026-05-16)
+# 22 slugs verified against tradingeconomics.com/france/<slug>
+# TE values pulled live (HTML cached in docs/_audit_te_html/fr_batch2/)
+# DB queries via Supabase indicator_sources + data_points
+
+energy-inflation:
+  te_label: "INSEE, France"
+  te_value: 14.3
+  te_period: "2026-04"
+  our_source: insee
+  our_series: "IPC-2025:011814631"
+  our_value: 113.3
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frontend-only: DB stores energy CPI index (113.3); TE shows YoY %change (+14.3%). YoY = (113.3 / 99.13 - 1) * 100 ≈ 14.3%."
+
+exports:
+  te_label: "Ministère de l'Économie et des Finances"
+  te_value: 52.5
+  te_period: "2026-03"
+  our_source: insee
+  our_series: "COM-EXT:total(EU+Third+Misc)"
+  our_value: 51.567
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched from quarterly CNT P6 (Q1 value ~248 Bn EUR) to monthly COM-EXT sum of zones Z7712+Z7711+Z6600 (E indicator, CVS-CJO). March 2026 = 51.567 Bn EUR vs TE 52.5 Bn EUR (~98% match). COM-EXT is INSEE-hosted DGDDI customs data; TE label maps to 'Ministère de l'Économie' = lekiosque.finances.gouv.fr which republishes DGDDI. Source code stays 'insee' as data is fetched from INSEE BDM."
+  flag: "value-tolerance: ~1 Bn diff from TE — TE may include additional adjustments (gold trade, services, FAB/CAF). 98% match acceptable."
+
+food-inflation:
+  te_label: "INSEE, France"
+  te_value: 1.2
+  te_period: "2026-04"
+  our_source: insee
+  our_series: "IPC-2025:010762122"
+  our_value: 101.07
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frontend-only: DB stores food CPI index (101.07); TE shows YoY %change (+1.2%) — note TE description has stale '1.20%' YoY while still labelled 15.90 in older period. Frontend computes YoY."
+
+gdp:
+  te_label: "World Bank"
+  te_value: 3162.08
+  te_period: "2024"
+  our_source: worldbank
+  our_series: "NY.GDP.MKTP.CD"
+  our_value: 3160.44
+  our_period: "2024-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "vintage-tolerance: 3160.44 vs 3162.08 — 0.05% diff likely from WB API revision after TE last sync."
+
+gdp-growth-rate:
+  te_label: "INSEE, France"
+  te_value: 0.0
+  te_period: "2026-Q1"
+  our_source: insee
+  our_series: "CNT-2020-PIB-EQB-RF:011794861"
+  our_value: 0.0
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+gdp-per-capita:
+  te_label: "World Bank"
+  te_value: 39441.26
+  te_period: "2024"
+  our_source: worldbank
+  our_series: "NY.GDP.PCAP.KD"
+  our_value: 39683.4
+  our_period: "2024-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "vintage-tolerance: 39683 vs 39441 — 0.6% diff, WB API revision; TE may not have refreshed."
+
+gdp-per-capita-ppp:
+  te_label: "World Bank"
+  te_value: 54464.98
+  te_period: "2024"
+  our_source: worldbank
+  our_series: "NY.GDP.PCAP.PP.KD"
+  our_value: 54799.35
+  our_period: "2024-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "vintage-tolerance: 54799 vs 54465 — 0.6% diff; WB revision."
+
+gdp-real:
+  te_label: "INSEE, France"
+  te_value: 1.1
+  te_period: "2026-Q1"
+  our_source: insee
+  our_series: "CNT-2020-PIB-EQB-RF:011794860"
+  our_value: 662.981
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frontend-only: DB stores GDP volume (662.981 Bn EUR chained); TE label 'GDP Annual Growth Rate' shows YoY % (+1.1%). Frontend computes YoY from level."
+
+government-debt:
+  te_label: "INSEE, France"
+  te_value: 3460.5
+  te_period: "2025-Q4"
+  our_source: insee
+  our_series: "DETTE-TRIM-APU-2020:010777608"
+  our_value: 115.6
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched eurostat gov_10dd_edpt1 -> insee DETTE-TRIM-APU-2020 IDBANK 010777608 (Quarterly Maastricht debt for General Government, % of GDP). Q4 2025 = 115.6% exact TE match. Slug semantics: 'government-debt' = % of GDP (indicator.name = 'Government Debt to GDP'). TE description headline value 3460.5 is actually for sibling slug government-debt-total."
+  flag: null
+
+government-debt-total:
+  te_label: "INSEE, France"
+  te_value: 115.6
+  te_period: "2025"
+  our_source: insee
+  our_series: "DETTE-TRIM-APU-2020:010777616"
+  our_value: 3460.5
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched eurostat gov_10dd_edpt1 -> insee DETTE-TRIM-APU-2020 IDBANK 010777616 (Quarterly Maastricht debt for General Government, EUR Billion). Q4 2025 = 3460.5 EUR Bn exact TE match. Slug semantics: 'government-debt-total' = absolute debt (indicator.name = 'Government Debt'). TE description headline value 115.60 is actually for sibling slug government-debt (% of GDP)."
+  flag: "slug-naming: 'government-debt-total' is the absolute number (3460.5 Bn EUR), TE displays it on 'government-debt' page. The current naming swaps the two — frontend uses 'government-debt-total' for the absolute amount, 'government-debt' for % of GDP."
+
+government-spending:
+  te_label: "INSEE, France"
+  te_value: 169953
+  te_period: "2026-Q1"
+  our_source: insee
+  our_series: "CNT-2020-PIB-EQB-RF:011794862"
+  our_value: 169.979
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "unit-display: DB stores 169.979 Bn EUR; TE shows 169953 EUR Million. Same number, frontend should display in EUR Million for parity with TE."
+
+government-spending-eur:
+  te_label: null
+  te_value: null
+  te_period: null
+  our_source: eurostat
+  our_series: "namq_10_gdp:P3_S13"
+  our_value: 184.1
+  our_period: "2026-03-31"
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: "no-te-page: 'government-spending-eur' has no proper TE indicator page (TE returns generic 'Trading Economics' shell with no description). This slug is a duplicate of 'government-spending'. Current eurostat namq_10_gdp P3_S13 (Total general government final consumption expenditure incl. social transfers in kind = 184.1 Bn EUR) is a different concept than the insee chained-volume P3 S0 government-spending (169.979 Bn EUR). Recommend deprecating slug or restricting to non-FR countries."
+
+gross-fixed-capital-formation:
+  te_label: "INSEE, France"
+  te_value: 142928
+  te_period: "2026-Q1"
+  our_source: insee
+  our_series: "CNT-2020-PIB-EQB-RF:011794884"
+  our_value: 142.928
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched VALORISATION V (nominal current price, 166.315 Bn EUR Q1 2026) -> L (chained-volume, 142.928 Bn EUR) to match TE's published EUR Million figure (142928). IDBANK changed from 011794879 to 011794884."
+  flag: null
+
+hospital-beds:
+  te_label: "OECD"
+  te_value: 5.4
+  te_period: "2023"
+  our_source: curated
+  our_series: "FR:hospital-beds"
+  our_value: 5.4
+  our_period: "2023-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+house-price-index:
+  te_label: "EUROSTAT"
+  te_value: 127.56
+  te_period: "2025-Q4"
+  our_source: eurostat
+  our_series: "prc_hpi_q:INX"
+  our_value: 127.56
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+imports:
+  te_label: "Ministère de l'Économie et des Finances"
+  te_value: 59.3
+  te_period: "2026-03"
+  our_source: insee
+  our_series: "COM-EXT:total(EU+Third+Misc)"
+  our_value: 61.763
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched from quarterly CNT P7 (~252 Bn) to monthly COM-EXT sum of zones Z7712+Z7711+Z6600 (I indicator, CVS-CJO). March 2026 = 61.763 Bn EUR vs TE 59.3 Bn EUR (~96% match). COM-EXT is INSEE-hosted DGDDI customs data; TE label maps to 'Ministère de l'Économie' = lekiosque.finances.gouv.fr which republishes DGDDI."
+  flag: "value-tolerance: 2.5 Bn diff from TE — TE may apply CIF/FOB adjustment, gold/silver classification, or different territory aggregation. 96% match acceptable; exact alignment would require direct lekiosque scrape."
+
+industrial-production:
+  te_label: "INSEE, France"
+  te_value: 0.9
+  te_period: "2026-03"
+  our_source: insee
+  our_series: "IPI-2021:010768261"
+  our_value: 102.0
+  our_period: "2026-02-28"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frontend-only: DB stores IPI index (102.0); TE shows YoY % (+0.9%). Frontend computes YoY. Note: data is 1 month behind TE (Feb vs Mar) — INSEE BDM release lag."
+
+inflation-cpi:
+  te_label: "INSEE, France"
+  te_value: 2.2
+  te_period: "2026-04"
+  our_source: insee
+  our_series: "IPC-2025:011814630"
+  our_value: 102.26
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frontend-only: DB stores CPI index (102.26); TE shows YoY % (+2.2%)."
+
+interest-rate:
+  te_label: "European Central Bank"
+  te_value: null
+  te_period: null
+  our_source: ecb
+  our_series: "D.U2.EUR.4F.KR.MRR_FR.LEV"
+  our_value: 2.15
+  our_period: "2025-06-11"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "data-staleness: DB last point 2025-06-11 with value 2.15 (ECB main refinancing rate). TE description doesn't quote a current value — only historical average + all-time-high 4.75 (2000). Source is correct; current 2.15 matches ECB June 2025 cut."
+
+job-vacancies:
+  te_label: "DARES, France"
+  te_value: 295.2
+  te_period: "2026-03"
+  our_source: eurostat
+  our_series: "jvs_q_nace2:JVR"
+  our_value: 2.3
+  our_period: "2025-12-31"
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: "real-gap: TE shows DARES monthly absolute count (295.2 thousand postes vacants); our eurostat JVR is the job vacancy rate (2.3%) — both wrong source AND wrong concept. DARES publishes the absolute series via STMT survey but no public API; data is on dares.travail-emploi.gouv.fr as quarterly Excel/CSV downloads. INSEE BDM has no DARES vacancies dataset. Would require DARES STMT scrape (5+ URL variants tried: dares.travail-emploi.gouv.fr/donnees/emplois-vacants, pole-emploi.org open data, data.gouv.fr). Defer to dedicated DARES provider."
+
+labor-force-participation-rate:
+  te_label: "INSEE, France"
+  te_value: 75.6
+  te_period: "2026-Q1"
+  our_source: insee
+  our_series: "EMPLOI-BIT-TRIM:010605834"
+  our_value: 75.6
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched from annual DD_EEC_ANNUEL Melodi (ACTRATE _T Y15T64 = 74.4 in 2024) to quarterly EMPLOI-BIT-TRIM CTTA15 (Activity rate, 15-64, both sexes, REF_AREA=FR-D976 'France excluding Mayotte' = national, CVS). Q1 2026 = 75.6 exact TE match."
+  flag: null
+
+labour-costs:
+  te_label: "European Central Bank"
+  te_value: 113.8
+  te_period: "2025-Q4"
+  our_source: insee
+  our_series: "ICT-2020:010761999"
+  our_value: 114.1
+  our_period: "2025-12-31"
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "source-label-mismatch: TE attributes to ECB; our data from INSEE ICT-2020 (CH BTN coût horaire). Values are within 0.3 points (114.1 vs 113.8). ECB SDW LCI dataflow not directly callable (no public LCI endpoint at data-api.ecb.europa.eu, no DBnomics mirror). The underlying source for ECB's LCI is Eurostat lc_lci_r2_q. Both Eurostat and INSEE publish closely-aligned labour cost indices for France. 5+ variants tried (data-api.ecb LCI keys, sdw-wsrest, DBnomics ECB/LCI, Eurostat lc_lci_r2_q FR B-S I20 NSA). Accept INSEE ICT as 'close enough'; the source-label difference is methodology naming rather than data origin."

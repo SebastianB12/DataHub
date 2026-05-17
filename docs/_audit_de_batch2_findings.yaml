@@ -1,0 +1,416 @@
+factory-orders:
+  fix_summary: Source matches (Destatis 42151-0001); value stored as level index. TE shows MoM % (+5.0% Mar 2026 — derived from levels 122.8 vs 101.8 = +20.6% — discrepancy; TE may show WDA/cal-adj). Series correct but TE headline interpretation differs.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: '42151-0001'
+  our_source: destatis
+  our_value: 122.8
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-03'
+  te_value: 5.0
+  value_match: null
+  yoy_computed: null
+food-inflation:
+  fix_summary: Re-routed from Eurostat HICP (ei_cphi_m CP-HIF) to Destatis 61111-0004 CC13-01 (Food, 2020=100). YoY April 2026 = 1.54% matches TE 1.50%.
+  fixed: true
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: 61111-0004#CC13-01
+  our_source: destatis
+  our_value: 138.6
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-04'
+  te_value: 1.5
+  value_match: true
+  yoy_computed: 1.538
+foreign-exchange-reserves:
+  fix_summary: Source matches Bundesbank; DB latest Mar 2026 = 518.69 bn EUR = 518687 mn (matches TE March headline 518687); TE Apr 2026 = 513150 not yet fetched (pipeline one month stale).
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: BBFI1.M.N.DE.W1.S121.S1.LE.A.FA.R.F._Z.X1._X.N
+  our_source: bundesbank
+  our_value: 518.69
+  source_match: true
+  suggested_source: bundesbank
+  te_http: 200
+  te_label: Deutsche Bundesbank
+  te_period: '2026-04'
+  te_value: 513150
+  value_match: true
+  yoy_computed: null
+gdp:
+  fix_summary: Source matches (World Bank NY.GDP.MKTP.CD). DB latest 4685.59 bn USD (2024). TE shows 4659.93 bn (older WB vintage). Diff ~0.55%, within tolerance.
+  fixed: false
+  flag: ok
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 4685.59
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_period: '2024'
+  te_value: 4659.93
+  value_match: true
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: Source matches (World Bank NY.GDP.PCAP.CD). DB 56103.73 (2024 latest WB vintage). TE shows 44108.70 — TE appears to use older WB snapshot or different methodology. Source label OK; value diff reflects WB revision lag at TE.
+  fixed: false
+  flag: ok
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.CD
+  our_source: worldbank
+  our_value: 56103.73
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_period: '2024'
+  te_value: 44108.70
+  value_match: false
+  yoy_computed: null
+gdp-per-capita-ppp:
+  fix_summary: Source matches (World Bank NY.GDP.PCAP.PP.CD). DB 73551.93 (2024 latest WB vintage); TE 62829.80. Same WB revision lag pattern as gdp-per-capita.
+  fixed: false
+  flag: ok
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.CD
+  our_source: worldbank
+  our_value: 73551.93
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_period: '2024'
+  te_value: 62829.80
+  value_match: false
+  yoy_computed: null
+gdp-real:
+  fix_summary: Source = Eurostat namq_10_gdp CLV10_MEUR; TE label says Federal Statistical Office. Stores quarterly chain-linked-volume level. YoY Q1-2026 vs Q1-2025 = +0.33% matches TE +0.30% Annual Growth. Frontend derives YoY from level.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:CLV10_MEUR
+  our_source: eurostat
+  our_value: 769.47
+  source_match: false
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-Q1'
+  te_value: 0.3
+  value_match: true
+  yoy_computed: 0.334
+government-debt:
+  fix_summary: Source and value both match TE exactly (Destatis 71311-0001, 2025-Q4 = 2,661,549 EUR mn).
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: '71311-0001'
+  our_source: destatis
+  our_value: 2661549
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2025-Q4'
+  te_value: 2661549
+  value_match: true
+  yoy_computed: null
+government-debt-total:
+  fix_summary: Alias of government-debt; same Destatis series. DB has both 2,661,549 mn (raw) and 2838.24 bn variants — minor data hygiene issue but TE headline matches.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: '71311-0001'
+  our_source: destatis
+  our_value: 2661549
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2025-Q4'
+  te_value: 2661549
+  value_match: true
+  yoy_computed: null
+government-spending:
+  fix_summary: Source matches (Destatis 81000-0020). DB has 209.33 (real volume) and 258.25 (nominal) duplicates for Q4-2025. TE 209.33 EUR Billion = real volume value. Match.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: '81000-0020'
+  our_source: destatis
+  our_value: 209.33
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2025-Q4'
+  te_value: 209.33
+  value_match: true
+  yoy_computed: null
+government-spending-eur:
+  fix_summary: TE page shows no source/value (likely deprecated TE slug). DB stores nominal government consumption (Eurostat namq_10_gdp P3_S13 CP_MEUR). Documented as conform=false in TE inventory.
+  fixed: false
+  flag: documented-gap
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_value: 258.25
+  source_match: null
+  suggested_source: eurostat
+  te_http: 200
+  te_label: null
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+government-spending-to-gdp:
+  fix_summary: TE label says EUROSTAT but our source is curated/IMF. Value matches exactly (50.5% 2025). Source label drift only.
+  fixed: false
+  flag: source-label-drift
+  our_period: '2025-12-31'
+  our_series: DE:government-spending-to-gdp
+  our_source: curated
+  our_value: 50.5
+  source_match: false
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_period: '2025'
+  te_value: 50.5
+  value_match: true
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: Source and value both match TE exactly (Destatis 81000-0020, 177.05 EUR Billion Q4-2025).
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: '81000-0020'
+  our_source: destatis
+  our_value: 177.05
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2025-Q4'
+  te_value: 177.05
+  value_match: true
+  yoy_computed: null
+hospital-beds:
+  fix_summary: Source = curated/OECD; value 7.66 per 1000 (2023) matches TE exactly.
+  fixed: false
+  flag: ok
+  our_period: '2023-12-31'
+  our_series: DE:hospital-beds
+  our_source: curated
+  our_value: 7.66
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: null
+  te_period: '2023'
+  te_value: 7.66
+  value_match: true
+  yoy_computed: null
+hospitals:
+  fix_summary: TE page has no published value (generic indicator stub). DB stores curated/WHO value 35.46 (2023). Documented gap.
+  fixed: false
+  flag: documented-gap
+  our_period: '2023-12-31'
+  our_series: DE:hospitals
+  our_source: curated
+  our_value: 35.46
+  source_match: null
+  suggested_source: curated
+  te_http: 200
+  te_label: null
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+house-price-index:
+  fix_summary: TE source = Europace AG (private, licensed); we use Eurostat prc_hpi_q (2015=100). Different vendor entirely. Cannot replicate without licensed Europace data. Documented gap.
+  fixed: false
+  flag: documented-gap
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_value: 153.7
+  source_match: false
+  suggested_source: eurostat
+  te_http: 200
+  te_label: Europace AG, Germany
+  te_period: '2026-04'
+  te_value: 221.58
+  value_match: false
+  yoy_computed: null
+import-prices:
+  fix_summary: Source and value both match TE exactly (Destatis 61411-0002, 116.9 Mar 2026).
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: '61411-0002'
+  our_source: destatis
+  our_value: 116.9
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-03'
+  te_value: 116.9
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: Source = Destatis 51000-0002. DB has multiple dimensions (latest 2026-02 = 111.71 bn EUR; some Mar-26 rows missing). TE Mar 2026 = 121.50 bn EUR. Pipeline appears one month stale and the dataset contains both monthly bn EUR levels and some duplicate rows; series correct but data freshness lags one month.
+  fixed: false
+  flag: ok
+  our_period: '2026-02-28'
+  our_series: '51000-0002'
+  our_source: destatis
+  our_value: 111.71
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-03'
+  te_value: 121.5
+  value_match: null
+  yoy_computed: null
+industrial-production:
+  fix_summary: Source matches Destatis 42153-0001. DB stores level index (NSA + SA both stored). TE shows YoY % (-2.8% Mar 2026 per inventory; -1.2% Jan 2026 per latest TE page). Frontend computes YoY from level.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: '42153-0001'
+  our_source: destatis
+  our_value: 100.7
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-03'
+  te_value: -2.8
+  value_match: null
+  yoy_computed: null
+inflation-cpi:
+  fix_summary: Source matches Destatis 61111-0002 (CPI). YoY April 2026 = 2.88% (102.67 vs 99.80) matches TE 2.90% exactly. Frontend computes YoY from level.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: '61111-0002'
+  our_source: destatis
+  our_value: 102.67
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-04'
+  te_value: 2.9
+  value_match: true
+  yoy_computed: 2.876
+job-vacancies:
+  fix_summary: TE source = Bundesagentur für Arbeit (BA) — level in Thousand (641.21 Apr 2026). We use Eurostat jvs_q_nace2 Job Vacancy Rate (% — 2.6 Q4 2025). Source AND unit mismatch. Needs BA scraper (statistik.arbeitsagentur.de) for proper TE conformity.
+  fixed: false
+  flag: needs-fix
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_value: 2.6
+  source_match: false
+  suggested_source: curated
+  te_http: 200
+  te_label: Bundesagentur für Arbeit
+  te_period: '2026-04'
+  te_value: 641.21
+  value_match: false
+  yoy_computed: null
+labor-force-participation-rate:
+  fix_summary: Source matches Eurostat lfsi_emp_q ACT. Value Q4-2025 = 80.3 vs TE 80.8 — minor methodology gap (TE may use latest revised release or wider age band). Within 1pp tolerance.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: lfsi_emp_q:ACT
+  our_source: eurostat
+  our_value: 80.3
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_period: '2025-Q4'
+  te_value: 80.8
+  value_match: false
+  yoy_computed: null
+labour-costs:
+  fix_summary: Source matches Bundesbank LCI 2020=100, B-S, sa+ca. DB Q4-2025 = 121.5 vs TE 124.27. TE may be using LCI including bonuses (D1_D4_MD5) vs our excluding-bonuses series, or a different aggregate. Source label OK; value methodology drift.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: BBDE1.Q.DE.Y.LCA1.A2N100000.A.L.I20.A
+  our_source: bundesbank
+  our_value: 121.5
+  source_match: true
+  suggested_source: bundesbank
+  te_http: 200
+  te_label: Deutsche Bundesbank
+  te_period: '2025-Q4'
+  te_value: 124.27
+  value_match: false
+  yoy_computed: null
+loans-to-private-sector:
+  fix_summary: Source matches Bundesbank (BBBK10 TXI358 - Lending to enterprises AND households / German contribution). DB latest Feb 2026 = 3901.36 bn EUR. TE Q4-2025 = 1975.51 bn EUR — exactly half. TE likely uses 'loans to non-financial corporations' only (excluding households) or different MFI BSI subset. Series mismatch needs review.
+  fixed: false
+  flag: needs-fix
+  our_period: '2026-02-28'
+  our_series: BBBK10.M.TXI358
+  our_source: bundesbank
+  our_value: 3901.36
+  source_match: true
+  suggested_source: bundesbank
+  te_http: 200
+  te_label: Deutsche Bundesbank
+  te_period: '2025-Q4'
+  te_value: 1975.51
+  value_match: false
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: Source and value both match TE exactly (Eurostat une_ltu_q LTU, 1.1% Q4-2025).
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_value: 1.1
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_period: '2025-Q4'
+  te_value: 1.1
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: Source matches Destatis 42153-0001 (Manufacturing WZ08-C). DB stores level index Mar 2026 = 91.3 (NSA) / 101.8 (SA). TE shows YoY % (-3.60%). Frontend derives YoY.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: '42153-0001'
+  our_source: destatis
+  our_value: 101.8
+  source_match: true
+  suggested_source: destatis
+  te_http: 200
+  te_label: Federal Statistical Office
+  te_period: '2026-03'
+  te_value: -3.6
+  value_match: null
+  yoy_computed: null

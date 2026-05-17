@@ -274,9 +274,11 @@ SERIES: list[dict] = [
         "dataset": "CNT-2020-PIB-EQB-RF",
         "filters": {
             "FREQ": "T", "OPERATION": "P51", "SECT_INST": "S0",
-            "NATURE": "VALEUR_ABSOLUE", "VALORISATION": "V",
+            "NATURE": "VALEUR_ABSOLUE", "VALORISATION": "L",
             "UNIT_MEASURE": "EUROS", "CORRECTION": "CVS-CJO", "REF_AREA": "FE",
         },
+        # 2026-05-16 audit fix: TE shows L (chained-volume) Q1 2026 = 142928 EUR Mio,
+        # not V (nominal) which would be ~166315. IDBANK 011794884.
         "freq": "Q", "unit": "Billion EUR", "adjustment": "SA", "conversion": 0.001,
     },
     {
@@ -356,6 +358,83 @@ SERIES: list[dict] = [
         },
         "freq": "M", "unit": "Index", "adjustment": "NSA", "conversion": 1.0,
     },
+
+    # === FR Batch2 fix 2026-05-16 ===
+    # Government debt (Maastricht) — TE shows INSEE label.
+    # Q4 2025 verified: total = 3460.5 EUR Bn (IDBANK 010777616, EUROS / 1000),
+    #                   % of GDP = 115.6 (IDBANK 010777608, POURCENT).
+    # government-debt slug = "% of GDP" (slug name misleading, indicator.name = "Government Debt to GDP")
+    # government-debt-total slug = "Total EUR Bn"
+    {
+        "indicator": "government-debt",
+        "dataset": "DETTE-TRIM-APU-2020",
+        "filters": {
+            "FREQ": "T", "INDICATEUR": "DETTE_MAASTRICHT", "SECT_INST": "S13",
+            "DETTE_MAASTRICHT_INTRUMENTS": "F", "NATURE": "PROPORTION",
+            "REF_AREA": "FE", "UNIT_MEASURE": "POURCENT",
+            "CORRECTION": "BRUT", "BASIND": "2020", "SERIE_ARRETEE": "FALSE",
+        },
+        "freq": "Q", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+    },
+    {
+        "indicator": "government-debt-total",
+        "dataset": "DETTE-TRIM-APU-2020",
+        "filters": {
+            "FREQ": "T", "INDICATEUR": "DETTE_MAASTRICHT", "SECT_INST": "S13",
+            "DETTE_MAASTRICHT_INTRUMENTS": "F", "NATURE": "VALEUR_ABSOLUE",
+            "REF_AREA": "FE", "UNIT_MEASURE": "EUROS",
+            "CORRECTION": "BRUT", "BASIND": "2020", "SERIE_ARRETEE": "FALSE",
+        },
+        # INSEE returns EUR Billion directly (3460.5 = TE value).
+        "freq": "Q", "unit": "EUR Billion", "adjustment": "NSA", "conversion": 1.0,
+    },
+
+    # Labour force participation rate — quarterly (TE shows Q1 2026 = 75.6).
+    # EMPLOI-BIT-TRIM CTTA15 SEXE=0 AGE=15-64 REF_AREA=FR-D976 (France excl. Mayotte = "national")
+    {
+        "indicator": "labor-force-participation-rate",
+        "dataset": "EMPLOI-BIT-TRIM",
+        "filters": {
+            "FREQ": "T", "INDICATEUR": "CTTA15", "NATURE": "TAUX",
+            "REF_AREA": "FR-D976", "SEXE": "0", "AGE": "15-64",
+            "UNIT_MEASURE": "POURCENT", "CORRECTION": "CVS",
+            "SERIE_ARRETEE": "FALSE",
+        },
+        "freq": "Q", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+    },
+
+    # Long-term unemployment rate — INSEE CHOMAGE-TRIM-NATIONAL TXCHLODU
+    # SEXE=0 (both) AGE=00- (all 15+) REF_AREA=FR-D976 (France hors Mayotte) CVS — IDBANK 010605073
+    # Previous note assumed TXCHLODU discontinued; only the FE variant was. FR-D976 still active.
+    # Q3 2025 / Q4 2025 = 1.8 — matches TE exactly. Q1 2026 = 2.0.
+    {
+        "indicator": "long-term-unemployment-rate",
+        "dataset": "CHOMAGE-TRIM-NATIONAL",
+        "filters": {
+            "FREQ": "T", "INDICATEUR": "TXCHLODU", "NATURE": "TAUX",
+            "REF_AREA": "FR-D976", "SEXE": "0", "AGE": "00-",
+            "UNIT_MEASURE": "POURCENT", "CORRECTION": "CVS",
+            "SERIE_ARRETEE": "FALSE",
+        },
+        "freq": "Q", "unit": "%", "adjustment": "SA", "conversion": 1.0,
+    },
+]
+
+
+# Series with custom derivation (e.g. ratios) that don't map to a single IDBANK.
+DERIVED_SERIES: list[dict] = [
+    # Budget deficit as % of GDP — INSEE quarterly net lending (B9NF, S13, IDBANK 011794759)
+    # divided by INSEE nominal GDP (CNT-2020-PIB-EQB-RF, IDBANK 011794859), summed annually.
+    # 2025 = -5.11% matches TE exactly. Method exactly mirrors INSEE's own publication
+    # (Informations Rapides 78/2026): -152.5 bn EUR / 2984 bn PIB ≈ -5.1%.
+    {
+        "indicator": "budget-deficit",
+        "method": "deficit_ratio_annual",
+        "freq": "A", "unit": "% of GDP", "adjustment": "",
+        "numerator_idbank": "011794759",   # B9NF S13 (deficit, mil EUR)
+        "denominator_idbank": "011794859", # PIB nominal V (mil EUR)
+        "series_id": "INSEE:CNT-2020-CSI:B9NF/PIB",
+    },
 ]
 
 
@@ -374,13 +453,9 @@ MELODI_SERIES: list[dict] = [
                     "EDUC": "_T", "IMMI": "_T"},
         "freq": "A", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
     },
-    {
-        "indicator": "labor-force-participation-rate",
-        "dataset": "DD_EEC_ANNUEL",
-        "filters": {"EEC_MEASURE": "ACTRATE", "SEX": "_T", "AGE": "Y15T64",
-                    "EDUC": "_T", "IMMI": "_T"},
-        "freq": "A", "unit": "%", "adjustment": "NSA", "conversion": 1.0,
-    },
+    # 2026-05-16 audit fix: switched from annual DD_EEC_ANNUEL (74.4 in 2024)
+    # to quarterly EMPLOI-BIT-TRIM CTTA15 (75.6 Q1 2026) to match TE.
+    # Moved to SERIES (BDM) section above — see below for replacement entry.
     {
         "indicator": "youth-unemployment-rate",
         "dataset": "DD_EEC_ANNUEL",
@@ -508,6 +583,51 @@ def _parse_period(period_str: str, freq: str) -> date | None:
     return None
 
 
+def _compute_derived(cfg: dict) -> list[DataPoint]:
+    """Compute a derived series (currently only deficit_ratio_annual).
+
+    For deficit_ratio_annual: sum quarterly numerator and denominator over each
+    calendar year, then compute ratio*100. Matches INSEE's standard methodology
+    for deficit-to-GDP ratio.
+    """
+    method = cfg["method"]
+    if method != "deficit_ratio_annual":
+        raise ValueError(f"Unknown derived method: {method}")
+
+    num_df = get_series([cfg["numerator_idbank"]])
+    den_df = get_series([cfg["denominator_idbank"]])
+    # Both should be quarterly; sum to annual
+    num_df = num_df[["TIME_PERIOD", "OBS_VALUE"]].dropna()
+    den_df = den_df[["TIME_PERIOD", "OBS_VALUE"]].dropna()
+    num_df["year"] = num_df["TIME_PERIOD"].astype(str).str[:4]
+    den_df["year"] = den_df["TIME_PERIOD"].astype(str).str[:4]
+    num_df["OBS_VALUE"] = num_df["OBS_VALUE"].astype(float)
+    den_df["OBS_VALUE"] = den_df["OBS_VALUE"].astype(float)
+    # Only include years with 4 quarters in BOTH series
+    num_counts = num_df.groupby("year").size()
+    den_counts = den_df.groupby("year").size()
+    complete_years = sorted(set(num_counts[num_counts >= 4].index) & set(den_counts[den_counts >= 4].index))
+
+    num_ann = num_df.groupby("year")["OBS_VALUE"].sum()
+    den_ann = den_df.groupby("year")["OBS_VALUE"].sum()
+
+    out: list[DataPoint] = []
+    for year in complete_years:
+        ratio = num_ann[year] / den_ann[year] * 100.0
+        dt = date(int(year), 1, 1)
+        out.append(DataPoint(
+            indicator=cfg["indicator"],
+            country="FR",
+            date=normalize_date(dt, cfg["freq"]),
+            value=round(ratio, 2),
+            source="insee",
+            unit=cfg["unit"],
+            series_id=cfg["series_id"],
+            adjustment=cfg.get("adjustment", ""),
+        ))
+    return out
+
+
 class InseeProvider(BaseProvider):
     name = "insee"
     display_name = "INSEE (Institut National de la Statistique)"
@@ -556,6 +676,16 @@ class InseeProvider(BaseProvider):
                 ))
                 n_added += 1
             print(f"  OK {slug}/FR (IDBANK {idbank}): {n_added} points")
+
+        # Derived series (ratios computed from multiple IDBANKs)
+        for cfg in DERIVED_SERIES:
+            slug = cfg["indicator"]
+            try:
+                pts = _compute_derived(cfg)
+                out.extend(pts)
+                print(f"  OK {slug}/FR (derived {cfg['method']}): {len(pts)} points")
+            except Exception as e:
+                print(f"  FAIL {slug}/FR (derived): {e}")
 
         # Melodi REST series (DD_EEC_ANNUEL etc.)
         dataset_cache: dict[str, list[dict]] = {}

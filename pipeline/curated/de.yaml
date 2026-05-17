@@ -109,8 +109,10 @@ minimum-wages:
   value: 13.9
   date: "2026-01-01"
   unit: "EUR/Hour"
-  note: "Gesetzlicher Mindestlohn ab 2026. Davor: 12.82 (2025), 12.41 (2024)."
-  source_url: "https://www.bmas.de/DE/Arbeit/Arbeitsrecht/Mindestlohn/mindestlohn.html"
+  source: "destatis"
+  series_id: "DE:minimum-wages"
+  note: "Gesetzlicher Mindestlohn ab 2026. Davor: 12.82 (2025), 12.41 (2024). Destatis publiziert den Mindestlohn als Verwaltungsstatistik (z. B. Pressemeldungen), aber nicht als GENESIS-API-Tabelle — daher curated mit source=destatis."
+  source_url: "https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/mindestlohn.html"
 
 # --- Trade ---
 

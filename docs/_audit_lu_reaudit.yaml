@@ -1,0 +1,801 @@
+country: LU
+te_path: luxembourg
+summary:
+  OK: 52
+  MISMATCH: 0
+  DOC_EXCEPTION: 5
+  TE_NO_PAGE: 1
+  TE_NO_SRC: 8
+findings:
+- slug: budget-deficit
+  te_slug: government-budget
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E3101,1.0#L03
+  db_unit: '% of GDP'
+  db_latest_date: '2025-12-31'
+  db_latest_value: -1.961
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: business-confidence
+  te_slug: business-confidence
+  te_source_raw: European Commission
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: ei_bsin_m_r2:BCI
+  db_unit: Points
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: capacity-utilization
+  te_slug: capacity-utilization
+  te_source_raw: European Commission
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: ei_bsin_q_r2:BS-ICU-PC
+  db_unit: '%'
+  db_latest_date: '2026-06-30'
+  db_latest_value: 74.7
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: changes-in-inventories
+  te_slug: changes-in-inventories
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: eurostat
+  db_series_id: namq_10_gdp:P52
+  db_unit: Billion EUR
+  db_latest_date: '2025-12-31'
+  db_latest_value: 0.15
+  db_latest_source: eurostat
+  status: DOC_EXCEPTION
+  te_meta_desc: null
+- slug: consumer-confidence
+  te_slug: consumer-confidence
+  te_source_raw: European Commission
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: ei_bsco_m:BS-CSMCI
+  db_unit: Points
+  db_latest_date: '2026-04-30'
+  db_latest_value: -20.6
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: consumer-spending
+  te_slug: consumer-spending
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E2504,1.0#r13
+  db_unit: Million EUR (chain-linked, SA)
+  db_latest_date: '2025-12-31'
+  db_latest_value: 5576.427
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: core-cpi
+  te_slug: core-inflation-rate
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5409,1.0#TOT_X_NRG_FOOD
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 101.35
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: corporate-tax-rate
+  te_slug: corporate-tax-rate
+  te_source_raw: Administration des Contributions Directes
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:corporate-tax-rate
+  db_unit: '%'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 23.87
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: corruption-index
+  te_slug: corruption-index
+  te_source_raw: Transparency International
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:corruption-index
+  db_unit: Points
+  db_latest_date: '2025-12-31'
+  db_latest_value: 78
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: corruption-rank
+  te_slug: corruption-rank
+  te_source_raw: Transparency International
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:corruption-rank
+  db_unit: Rank
+  db_latest_date: '2025-12-31'
+  db_latest_value: 8
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: cpi-clothing
+  te_slug: cpi-clothing
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#CP03
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 102.85
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: cpi-education
+  te_slug: cpi-education
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#CP10
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 104.03
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: cpi-food
+  te_slug: cpi-food
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#CP01
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 102.07
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: cpi-housing-utilities
+  te_slug: cpi-housing-utilities
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#CP04
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 103.91
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: cpi-recreation-and-culture
+  te_slug: cpi-recreation-and-culture
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#CP09
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 101.87
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: cpi-transportation
+  te_slug: cpi-transportation
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0#CP07
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 106.05
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: credit-rating
+  te_slug: rating
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: curated
+  db_series_id: LU:credit-rating
+  db_unit: Rating
+  db_latest_date: '2026-04-01'
+  db_latest_value: 96
+  db_latest_source: curated
+  status: TE_NO_DATA
+  te_meta_desc: null
+- slug: current-account
+  te_slug: current-account
+  te_source_raw: Banque Centrale du Luxembourg
+  te_source_mapped: bcl_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E4202,1.0#B-CA
+  db_unit: Million EUR
+  db_latest_date: '2025-12-31'
+  db_latest_value: -47.2
+  db_latest_source: statec_lu
+  status: DOC_EXCEPTION
+  te_meta_desc: null
+- slug: current-account-to-gdp
+  te_slug: current-account-to-gdp
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: bop_gdp6_q:CA
+  db_unit: '% of GDP'
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: disposable-personal-income
+  te_slug: disposable-personal-income
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: eurostat
+  db_series_id: nasq_10_nf_tr:B6G
+  db_unit: Million EUR
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: employed-persons
+  te_slug: employed-persons
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_B3019,1.0
+  db_unit: Thousand
+  db_latest_date: '2026-03-31'
+  db_latest_value: 528.6024
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: employment-rate
+  te_slug: employment-rate
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: lfsa_ergan:Y15-64
+  db_unit: '%'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 69.5
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: energy-inflation
+  te_slug: energy-inflation
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5409,1.0#NRG
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 116.65
+  db_latest_source: statec_lu
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: exports
+  te_slug: exports
+  te_source_raw: Banque Centrale du Luxembourg
+  te_source_mapped: bcl_lu
+  db_source: eurostat
+  db_series_id: nama_10_exi:P6
+  db_unit: Billion EUR
+  db_latest_date: '2025-12-31'
+  db_latest_value: 170.56
+  db_latest_source: eurostat
+  status: DOC_EXCEPTION
+  te_meta_desc: null
+- slug: food-inflation
+  te_slug: food-inflation
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5409,1.0#FOOD
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 102.26
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: gdp
+  te_slug: gdp
+  te_source_raw: World Bank
+  te_source_mapped: worldbank
+  db_source: worldbank
+  db_series_id: NY.GDP.MKTP.CD
+  db_unit: Billion USD
+  db_latest_date: '2024-12-31'
+  db_latest_value: 93.28
+  db_latest_source: worldbank
+  status: OK
+  te_meta_desc: null
+- slug: gdp-per-capita
+  te_slug: gdp-per-capita
+  te_source_raw: World Bank
+  te_source_mapped: worldbank
+  db_source: worldbank
+  db_series_id: NY.GDP.PCAP.KD
+  db_unit: USD (constant 2015)
+  db_latest_date: '2024-12-31'
+  db_latest_value: 104147.17
+  db_latest_source: worldbank
+  status: OK
+  te_meta_desc: null
+- slug: gdp-per-capita-ppp
+  te_slug: gdp-per-capita-ppp
+  te_source_raw: World Bank
+  te_source_mapped: worldbank
+  db_source: worldbank
+  db_series_id: NY.GDP.PCAP.PP.KD
+  db_unit: Int. USD (PPP constant 2021)
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: gdp-real
+  te_slug: gdp-constant-prices
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E2504,1.0#r33
+  db_unit: Million EUR (chain-linked, SA)
+  db_latest_date: '2025-12-31'
+  db_latest_value: 16105.587
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: government-debt
+  te_slug: government-debt-to-gdp
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E3101,1.0#L14
+  db_unit: '% of GDP'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 26.469
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: government-debt-total
+  te_slug: government-debt
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E3101,1.0#L12
+  db_unit: Million EUR
+  db_latest_date: '2025-12-31'
+  db_latest_value: 23.7
+  db_latest_source: eurostat
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: government-spending
+  te_slug: government-spending
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E2504,1.0#r15
+  db_unit: Million EUR (chain-linked, SA)
+  db_latest_date: '2025-12-31'
+  db_latest_value: 4.58
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: government-spending-eur
+  te_slug: government-spending-value
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: eurostat
+  db_series_id: namq_10_gdp:P3_S13
+  db_unit: Billion EUR
+  db_latest_date: '2025-12-31'
+  db_latest_value: 4.58
+  db_latest_source: eurostat
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: gross-fixed-capital-formation
+  te_slug: gross-fixed-capital-formation
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_E2504,1.0#r16
+  db_unit: Million EUR (chain-linked, SA)
+  db_latest_date: '2025-12-31'
+  db_latest_value: 2248.147
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: hospital-beds
+  te_slug: hospital-beds
+  te_source_raw: OECD
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:hospital-beds
+  db_unit: per 1000 people
+  db_latest_date: '2023-12-31'
+  db_latest_value: 3.94
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: house-price-index
+  te_slug: housing-index
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: prc_hpi_q:INX
+  db_unit: Index
+  db_latest_date: '2025-12-31'
+  db_latest_value: 164.37
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: imports
+  te_slug: imports
+  te_source_raw: Banque Centrale du Luxembourg
+  te_source_mapped: bcl_lu
+  db_source: eurostat
+  db_series_id: nama_10_exi:P7
+  db_unit: Billion EUR
+  db_latest_date: '2025-12-31'
+  db_latest_value: 142.67
+  db_latest_source: eurostat
+  status: DOC_EXCEPTION
+  te_meta_desc: null
+- slug: industrial-production
+  te_slug: industrial-production
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_D5110,1.1
+  db_unit: Index (2021=100)
+  db_latest_date: '2026-03-31'
+  db_latest_value: 84.2
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: inflation-cpi
+  te_slug: inflation-cpi
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5405,1.0
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-04-30'
+  db_latest_value: 102.65
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: interest-rate
+  te_slug: interest-rate
+  te_source_raw: European Central Bank
+  te_source_mapped: ecb
+  db_source: ecb
+  db_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+  db_unit: '%'
+  db_latest_date: '2025-06-11'
+  db_latest_value: 2.15
+  db_latest_source: ecb
+  status: OK
+  te_meta_desc: null
+- slug: job-vacancies
+  te_slug: job-vacancies
+  te_source_raw: Agence pour le développement de l'emploi (ADEM)
+  te_source_mapped: statec_lu
+  db_source: eurostat
+  db_series_id: jvs_q_nace2:JVR
+  db_unit: '%'
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: DOC_EXCEPTION
+  te_meta_desc: null
+- slug: labor-force-participation-rate
+  te_slug: labor-force-participation-rate
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: lfsi_emp_q:ACT
+  db_unit: '%'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 73.7
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: labour-costs
+  te_slug: labour-costs
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: lc_lci_r2_q:I20
+  db_unit: Index
+  db_latest_date: '2023-09-30'
+  db_latest_value: 115.7
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: long-term-unemployment-rate
+  te_slug: long-term-unemployment-rate
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: une_ltu_q:LTU
+  db_unit: '%'
+  db_latest_date: '2010-12-31'
+  db_latest_value: 1.6
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: manufacturing-production
+  te_slug: manufacturing-production
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: sts_inpr_m:C:I21
+  db_unit: Index
+  db_latest_date: '2025-09-30'
+  db_latest_value: 92.2
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: medical-doctors
+  te_slug: medical-doctors
+  te_source_raw: OECD
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:medical-doctors
+  db_unit: per 1000 people
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: minimum-wages
+  te_slug: minimum-wages
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: earn_mw_cur:LU:EUR
+  db_unit: EUR/Month
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: mining-production
+  te_slug: mining-production
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: sts_inpr_m:B:I21
+  db_unit: Index
+  db_latest_date: '2026-03-31'
+  db_latest_value: 97.3
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: nurses
+  te_slug: nurses
+  te_source_raw: OECD
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:nurses
+  db_unit: per 1000 people
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: personal-income-tax-rate
+  te_slug: personal-income-tax-rate
+  te_source_raw: Administration des Contributions Directes
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:personal-income-tax-rate
+  db_unit: '%'
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: population
+  te_slug: population
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_B1100,1.0
+  db_unit: Million
+  db_latest_date: '2024-12-31'
+  db_latest_value: 0.68
+  db_latest_source: worldbank
+  status: OK
+  te_meta_desc: null
+- slug: ppi
+  te_slug: producer-prices
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_PRIX_PPI@DF_D3202,1.0
+  db_unit: Index (2021=100)
+  db_latest_date: '2022-08-31'
+  db_latest_value: 138.86
+  db_latest_source: statec_lu
+  status: OK
+  te_meta_desc: null
+- slug: productivity
+  te_slug: productivity
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+  db_unit: Index
+  db_latest_date: '2024-03-31'
+  db_latest_value: 92.47
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: retail-sales
+  te_slug: retail-sales-mom
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_D5108,1.1#G47-TOVV-Y
+  db_unit: Index (2021=100, SA)
+  db_latest_date: '2025-08-31'
+  db_latest_value: 135.7
+  db_latest_source: eurostat
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: retirement-age-men
+  te_slug: retirement-age-men
+  te_source_raw: Caisse Nationale d’Assurance Pension
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:retirement-age-men
+  db_unit: Years
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: retirement-age-women
+  te_slug: retirement-age-women
+  te_source_raw: Caisse Nationale d’Assurance Pension
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:retirement-age-women
+  db_unit: Years
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: sales-tax-rate
+  te_slug: sales-tax-rate
+  te_source_raw: Administration des Contributions Directes
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:sales-tax-rate
+  db_unit: '%'
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: OK
+  te_meta_desc: null
+- slug: services-inflation
+  te_slug: services-inflation
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DSD_ECOICOP_PRIX@DF_E5409,1.0#SERV
+  db_unit: Index (2025=100)
+  db_latest_date: '2026-01-31'
+  db_latest_value: 99.99
+  db_latest_source: eurostat
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: services-sentiment
+  te_slug: services-sentiment
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: eurostat
+  db_series_id: ei_bsse_m_r2:SCI
+  db_unit: Points
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: social-security-rate
+  te_slug: social-security-rate
+  te_source_raw: Administration des Contributions Directes
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:social-security-rate
+  db_unit: '%'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 28.05
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: social-security-rate-companies
+  te_slug: social-security-rate-for-companies
+  te_source_raw: Administration des Contributions Directes
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:social-security-rate-companies
+  db_unit: '%'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 15.1
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: social-security-rate-employees
+  te_slug: social-security-rate-for-employees
+  te_source_raw: Administration des Contributions Directes
+  te_source_mapped: curated
+  db_source: curated
+  db_series_id: LU:social-security-rate-employees
+  db_unit: '%'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 12.95
+  db_latest_source: curated
+  status: OK
+  te_meta_desc: null
+- slug: terrorism-index
+  te_slug: terrorism-index
+  te_source_raw: null
+  te_source_mapped: null
+  db_source: curated
+  db_series_id: LU:terrorism-index
+  db_unit: Points
+  db_latest_date: null
+  db_latest_value: null
+  db_latest_source: null
+  status: TE_NO_SRC
+  te_meta_desc: null
+- slug: unemployed-persons
+  te_slug: unemployed-persons
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_B3019,1.0
+  db_unit: Thousand
+  db_latest_date: '2026-03-31'
+  db_latest_value: 24
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: unemployment
+  te_slug: unemployment-rate
+  te_source_raw: STATEC, Luxembourg
+  te_source_mapped: statec_lu
+  db_source: statec_lu
+  db_series_id: STATEC/LU1,DF_B3019,1.0
+  db_unit: '%'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 6.9
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null
+- slug: youth-unemployment-rate
+  te_slug: youth-unemployment-rate
+  te_source_raw: EUROSTAT
+  te_source_mapped: eurostat
+  db_source: eurostat
+  db_series_id: une_rt_m:Y_LT25
+  db_unit: '%'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 19.3
+  db_latest_source: eurostat
+  status: OK
+  te_meta_desc: null

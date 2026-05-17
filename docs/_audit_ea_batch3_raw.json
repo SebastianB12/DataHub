@@ -1,0 +1,401 @@
+{
+  "labor-force-participation-rate": {
+    "te_url": "https://tradingeconomics.com/euro-area/labor-force-participation-rate",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 75.6,
+    "te_desc": "Labor Force Participation Rate In the Euro Area decreased to 75.60 percent in the fourth quarter of 2025 from 75.80 percent in the third quarter of 2025. Labor Force Participation Rate in Euro Area averaged 72.34 percent from 2002 until 2025, reaching an all time high of 75.80 percent in the third quarter of 2025 and a record low of 68.00 percent in the second quarter of 2002. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "lfsi_emp_q:ACT",
+    "db_extra": {
+      "params": {
+        "age": "Y15-64",
+        "sex": "T",
+        "unit": "PC_POP",
+        "s_adj": "SA",
+        "indic_em": "ACT"
+      },
+      "dataset": "lfsi_emp_q"
+    },
+    "db_latest": {
+      "date": "2025-12-31",
+      "value": 75.6
+    },
+    "db_count": 13,
+    "db_yoy": 1.34
+  },
+  "loans-to-private-sector": {
+    "te_url": "https://tradingeconomics.com/euro-area/loans-to-private-sector",
+    "te_http": 200,
+    "te_label": "European Central Bank",
+    "te_source_url": "https://www.ecb.europa.eu",
+    "te_value": null,
+    "te_desc": "Lending to Eurozone businesses increased 3.2% year-on-year to a record \u20ac5.38 trillion in March 2026. The rise underscores a continued recovery in credit demand, supported by the European Central Bank\u2019s recent policy easing. source: European Central Bank",
+    "db_source": "ecb",
+    "db_series_id": "M.U2.Y.U.A20T.A.1.U2.2240.Z01.E",
+    "db_extra": null,
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 5383.07
+    },
+    "db_count": 13,
+    "db_yoy": 3.04
+  },
+  "long-term-unemployment-rate": {
+    "te_url": "https://tradingeconomics.com/euro-area/long-term-unemployment-rate",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 2.0,
+    "te_desc": "Long Term Unemployment Rate In the Euro Area remained unchanged at 2 percent in the fourth quarter of 2025 from 2 percent in the third quarter of 2025. Long Term Unemployment Rate in Euro Area averaged 3.76 percent from 1997 until 2025, reaching an all time high of 6.20 percent in the first quarter of 2014 and a record low of 1.90 percent in the third quarter of 2024. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "une_ltu_q:LTU",
+    "db_extra": {
+      "params": {
+        "age": "Y15-74",
+        "sex": "T",
+        "unit": "PC_ACT",
+        "s_adj": "SA",
+        "indic_em": "LTU"
+      },
+      "dataset": "une_ltu_q"
+    },
+    "db_latest": {
+      "date": "2025-12-31",
+      "value": 2
+    },
+    "db_count": 13,
+    "db_yoy": -20.0
+  },
+  "manufacturing-production": {
+    "te_url": "https://tradingeconomics.com/euro-area/manufacturing-production",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 2026.0,
+    "te_desc": "Manufacturing Production In the Euro Area decreased 2.40 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Euro Area averaged 1.02 percent from 1992 until 2026, reaching an all time high of 45.30 percent in April of 2021 and a record low of -30.00 percent in April of 2020. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "sts_inpr_m:C:I21",
+    "db_extra": {
+      "params": {
+        "unit": "I21",
+        "s_adj": "SCA",
+        "nace_r2": "C"
+      },
+      "dataset": "sts_inpr_m"
+    },
+    "db_latest": {
+      "date": "2026-02-28",
+      "value": 98.4
+    },
+    "db_count": 13,
+    "db_yoy": -0.91
+  },
+  "mining-production": {
+    "te_url": "https://tradingeconomics.com/euro-area/mining-production",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 2026.0,
+    "te_desc": "Mining production In the Euro Area decreased 1 percent in March of 2026 over the same month in the previous year. Mining Production in Euro Area averaged 0.91 percent from 1954 until 2026, reaching an all time high of 42.30 percent in September of 1990 and a record low of -37.20 percent in April of 1987. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "sts_inpr_m:B:I21",
+    "db_extra": {
+      "params": {
+        "unit": "I21",
+        "s_adj": "SCA",
+        "nace_r2": "B"
+      },
+      "dataset": "sts_inpr_m"
+    },
+    "db_latest": {
+      "date": "2026-02-28",
+      "value": 78.6
+    },
+    "db_count": 13,
+    "db_yoy": -3.44
+  },
+  "money-supply-m1": {
+    "te_url": "https://tradingeconomics.com/euro-area/money-supply-m1",
+    "te_http": 200,
+    "te_label": "European Central Bank",
+    "te_source_url": "https://www.ecb.europa.eu",
+    "te_value": 11279794.0,
+    "te_desc": "Money Supply M1 In the Euro Area increased to 11279794 EUR Million in March from 11234619 EUR Million in February of 2026. Money Supply M1 in Euro Area averaged 3893355.79 EUR Million from 1980 until 2026, reaching an all time high of 11781516.00 EUR Million in August of 2022 and a record low of 444330.00 EUR Million in January of 1980. source: European Central Bank",
+    "db_source": "ecb",
+    "db_series_id": "M.U2.Y.V.M10.X.1.U2.2300.Z01.E",
+    "db_extra": null,
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 11279.79
+    },
+    "db_count": 13,
+    "db_yoy": 5.59
+  },
+  "money-supply-m3": {
+    "te_url": "https://tradingeconomics.com/euro-area/money-supply-m3",
+    "te_http": 200,
+    "te_label": "European Central Bank",
+    "te_source_url": "https://www.ecb.europa.eu",
+    "te_value": 2.9,
+    "te_desc": "Eurozone M3 money supply rose 3.3% year-on-year to \u20ac17,344.7 billion in January 2026, up from 2.8% in December and surpassing market expectations of 2.9%. The narrower M1 aggregate, which includes currency in circulation and overnight deposits, rose 5.3% annually, up from 4.7% in December. In contrast, short-term deposits excluding overnight deposits (M2-M1) declined 0.6% year-on-year in January, ",
+    "db_source": "ecb",
+    "db_series_id": "M.U2.Y.V.M30.X.1.U2.2300.Z01.E",
+    "db_extra": null,
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 17446.55
+    },
+    "db_count": 13,
+    "db_yoy": 3.61
+  },
+  "personal-income-tax-rate": {
+    "te_url": "https://tradingeconomics.com/euro-area/personal-income-tax-rate",
+    "te_http": 200,
+    "te_label": "European Commission",
+    "te_source_url": "https://ec.europa.eu",
+    "te_value": 41.3,
+    "te_desc": "The Personal Income Tax Rate In the Euro Area stands at 41.30 percent. Personal Income Tax Rate in Euro area averaged 41.85 percent from 1995 until 2025, reaching an all time high of 49.00 percent in 1995 and a record low of 39.00 percent in 2009. source: European Commission",
+    "db_source": "curated",
+    "db_series_id": "EA:personal-income-tax-rate",
+    "db_extra": null,
+    "db_latest": {
+      "date": "2025-12-31",
+      "value": 41.3
+    },
+    "db_count": 1
+  },
+  "population": {
+    "te_url": "https://tradingeconomics.com/euro-area/population",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 351.6,
+    "te_desc": "The total population In the Euro Area was estimated at 351.6 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Euro Area had a population of 260.4 million people. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "demo_pjan:TOTAL",
+    "db_extra": {
+      "params": {
+        "age": "TOTAL",
+        "sex": "T"
+      },
+      "dataset": "demo_pjan"
+    },
+    "db_latest": {
+      "date": "2025-12-31",
+      "value": 358.08
+    },
+    "db_count": 13,
+    "db_yoy": 5.05
+  },
+  "ppi": {
+    "te_url": "https://tradingeconomics.com/euro-area/producer-prices",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 129.1,
+    "te_desc": "Producer Prices In the Euro Area increased to 129.10 points in March from 124.80 points in February of 2026. Producer Prices in Euro Area averaged 90.35 points from 2000 until 2026, reaching an all time high of 143.30 points in September of 2022 and a record low of 66.20 points in January of 2000. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "sts_inppd_m:B-D",
+    "db_extra": {
+      "params": {
+        "unit": "I21",
+        "s_adj": "NSA",
+        "nace_r2": "B-D"
+      },
+      "dataset": "sts_inppd_m"
+    },
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 129
+    },
+    "db_count": 13,
+    "db_yoy": 2.06
+  },
+  "productivity": {
+    "te_url": "https://tradingeconomics.com/euro-area/productivity",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 104.07,
+    "te_desc": "Productivity In the Euro Area decreased to 104.07 points in the fourth quarter of 2025 from 104.46 points in the third quarter of 2025. Productivity in Euro Area averaged 94.87 points from 1995 until 2025, reaching an all time high of 106.27 points in the second quarter of 2020 and a record low of 79.72 points in the first quarter of 1995. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "namq_10_lp_ulc:RLPR_HW:I20",
+    "db_extra": {
+      "params": {
+        "unit": "I20",
+        "s_adj": "SCA",
+        "na_item": "RLPR_HW"
+      },
+      "dataset": "namq_10_lp_ulc"
+    },
+    "db_latest": {
+      "date": "2025-12-31",
+      "value": 99.38
+    },
+    "db_count": 13,
+    "db_yoy": -0.66
+  },
+  "retail-sales": {
+    "te_url": "https://tradingeconomics.com/euro-area/retail-sales-yoy",
+    "te_http": 200,
+    "te_label": null,
+    "te_source_url": null,
+    "te_value": null,
+    "te_desc": "TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function () { var p = new URLSearchParams(window.location.search); if (!p.has('_auth')) return; p.delete('_auth'); var qs = p.toString(); history.replaceState({}, '', window.location.pathname + (qs ? '?' + qs : '')); window.location.reload(); })(); (function () { function h(n) { return new RegExp('(?:^|;\\\\s*)' + n.replace(/\\./g, '\\\\.') +",
+    "db_source": "eurostat",
+    "db_series_id": "sts_trtu_m:G47:I21",
+    "db_extra": {
+      "params": {
+        "unit": "I21",
+        "s_adj": "SCA",
+        "nace_r2": "G47"
+      },
+      "dataset": "sts_trtu_m"
+    },
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 103.6
+    },
+    "db_count": 13,
+    "db_yoy": 1.07
+  },
+  "sales-tax-rate": {
+    "te_url": "https://tradingeconomics.com/euro-area/sales-tax-rate",
+    "te_http": 200,
+    "te_label": "European Commission",
+    "te_source_url": "https://ec.europa.eu",
+    "te_value": 21.2,
+    "te_desc": "The Sales Tax Rate In the Euro Area stands at 21.20 percent. Sales Tax Rate in Euro Area averaged 18.32 percent from 1968 until 2025, reaching an all time high of 21.20 percent in 2024 and a record low of 13.50 percent in 1970. source: European Commission",
+    "db_source": "curated",
+    "db_series_id": "EA:sales-tax-rate",
+    "db_extra": null,
+    "db_latest": {
+      "date": "2025-12-31",
+      "value": 21.2
+    },
+    "db_count": 1
+  },
+  "services-inflation": {
+    "te_url": "https://tradingeconomics.com/euro-area/services-inflation",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 3.0,
+    "te_desc": "Services Inflation In the Euro Area decreased to 3 percent in April from 3.20 percent in March of 2026. Services Inflation in Euro area averaged 2.53 percent from 1991 until 2026, reaching an all time high of 6.00 percent in July of 1991 and a record low of 0.40 percent in October of 2020. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "ei_cphi_m:CP-HIS:HICP2025",
+    "db_extra": {
+      "params": {
+        "unit": "HICP2025",
+        "indic": "CP-HIS"
+      },
+      "dataset": "ei_cphi_m"
+    },
+    "db_latest": {
+      "date": "2026-04-30",
+      "value": 102.75
+    },
+    "db_count": 13,
+    "db_yoy": 2.98
+  },
+  "services-sentiment": {
+    "te_url": "https://tradingeconomics.com/euro-area/services-sentiment",
+    "te_http": 200,
+    "te_label": "European Commission",
+    "te_source_url": "http://ec.europa.eu",
+    "te_value": 0.9,
+    "te_desc": "The index measuring services confidence in the Euro Area sank to 0.9 points in April of 2026 from 4.1 in the previous month, firmly below market expectations of 3.5 to reflect the least optimistic sentiment since April of 2021. The assessment of business situation fell deeper (-3.4 vs -1.4 in March) and expectations on demand growth sank (3 vs 7.8), consistent with lower purchasing powers from sur",
+    "db_source": "eurostat",
+    "db_series_id": "ei_bsse_m_r2:SCI",
+    "db_extra": {
+      "params": {
+        "unit": "BAL",
+        "indic": "BS-SCI",
+        "s_adj": "SA"
+      },
+      "dataset": "ei_bsse_m_r2"
+    },
+    "db_latest": {
+      "date": "2026-04-30",
+      "value": 0.9
+    },
+    "db_count": 13,
+    "db_yoy": -72.73
+  },
+  "unemployed-persons": {
+    "te_url": "https://tradingeconomics.com/euro-area/unemployed-persons",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 10984.0,
+    "te_desc": "The number of unemployed persons In the Euro Area decreased to 10984 Thousand in March of 2026 from 11047 Thousand in February of 2026. Unemployed Persons in Euro Area averaged 14033.97 Thousand from 1990 until 2026, reaching an all time high of 20229.00 Thousand in April of 2013 and a record low of 7843.00 Thousand in June of 1991. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "une_rt_m:TOTAL:THS_PER",
+    "db_extra": {
+      "params": {
+        "age": "TOTAL",
+        "sex": "T",
+        "unit": "THS_PER",
+        "s_adj": "SA"
+      },
+      "dataset": "une_rt_m"
+    },
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 10984
+    },
+    "db_count": 13,
+    "db_yoy": -1.52
+  },
+  "unemployment": {
+    "te_url": "https://tradingeconomics.com/euro-area/unemployment-rate",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 6.2,
+    "te_desc": "The Euro Area seasonally adjusted unemployment rate eased to 6.2% in March 2026 from a revised 6.3% in February, in line with market expectations. The number of unemployed fell by 63,000 from a month earlier to 10.984 million. Meanwhile, youth unemployment remained elevated, with the youth jobless rate standing at 14.9% in the euro area, unchanged from the previous month, and 2.354 million young p",
+    "db_source": "eurostat",
+    "db_series_id": "ei_lmhr_m:LM-UN-T-TOT",
+    "db_extra": {
+      "params": {
+        "unit": "PC_ACT",
+        "indic": "LM-UN-T-TOT",
+        "s_adj": "SA"
+      },
+      "dataset": "ei_lmhr_m"
+    },
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 6.2
+    },
+    "db_count": 13,
+    "db_yoy": -1.59
+  },
+  "youth-unemployment-rate": {
+    "te_url": "https://tradingeconomics.com/euro-area/youth-unemployment-rate",
+    "te_http": 200,
+    "te_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 14.9,
+    "te_desc": "Youth Unemployment Rate In the Euro Area remained unchanged at 14.90 percent in March. Youth Unemployment Rate in Euro Area averaged 19.14 percent from 1993 until 2026, reaching an all time high of 25.60 percent in January of 2013 and a record low of 14.00 percent in March of 2023. source: EUROSTAT",
+    "db_source": "eurostat",
+    "db_series_id": "une_rt_m:Y_LT25",
+    "db_extra": {
+      "params": {
+        "age": "Y_LT25",
+        "sex": "T",
+        "unit": "PC_ACT",
+        "s_adj": "SA"
+      },
+      "dataset": "une_rt_m"
+    },
+    "db_latest": {
+      "date": "2026-03-31",
+      "value": 14.9
+    },
+    "db_count": 13,
+    "db_yoy": 0.68
+  }
+}

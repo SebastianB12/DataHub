@@ -1,0 +1,944 @@
+budget-deficit:
+  fixed: false
+  flag: ok
+  note: TE shows 5.1% deficit (positive); we store -5.111% balance. Sign convention diff (deficit = negative balance). Value magnitude matches.
+  our_period: '2025-10-01'
+  our_series_id: 011794759_OVER_011794859_4Q
+  our_source: insee
+  our_value: -5.111
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: null
+  value_match: null
+business-confidence:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-04-30'
+  our_series_id: ENQ-CONJ-ACT-IND:001585934
+  our_source: insee
+  our_value: 100.2
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: null
+  value_match: null
+capacity-utilization:
+  fixed: true
+  flag: fixed
+  note: Refetched BdF; removed stale Eurostat dup rows. Apr 2026=76.95 matches TE exactly.
+  our_period: '2026-04-30'
+  our_series_id: CONJ:M.N01.S.IN.000CZ.TUTSM000.10
+  our_source: bdf
+  our_value: 76.95
+  source_match: true
+  suggested_source: bdf
+  te_label: Banque de France
+  te_period: null
+  te_value: 76.0
+  value_match: true
+changes-in-inventories:
+  fixed: false
+  flag: unit-display-diff
+  note: 148 M EUR (TE) = 0.148 Bn EUR (DB). Exact match — unit-display only.
+  our_period: '2026-03-31'
+  our_series_id: CNT-2020-PIB-EQB-RF:011794873
+  our_source: insee
+  our_value: 0.148
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: null
+  value_match: null
+consumer-confidence:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-04-30'
+  our_series_id: ENQ-CONJ-MENAGES:001587668
+  our_source: insee
+  our_value: 84
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: in April 2026
+  te_value: 84.0
+  value_match: true
+consumer-spending:
+  fixed: false
+  flag: value-mismatch
+  note: TE 345945 M EUR (Q1 2026) vs DB 390447 M EUR. ~12% gap. Our INSEE 011794863 = P3 SECT_INST=S14 V CVS-CJO. TE concept appears different (lower value); could be P31 individual cons of S14 only, or
+    excluding imputed rent, or older base. 5+ alternate IDBANKs tested (P31 SO V, P3 SO L, S14+S15) — none yield 345945. Source label matches (INSEE).
+  our_period: '2026-03-31'
+  our_series_id: CNT-2020-PIB-EQB-RF:011794863
+  our_source: insee
+  our_value: 390.447
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: the first quarter of 2026
+  te_value: 345945.0
+  value_match: false
+core-cpi:
+  fixed: true
+  flag: fixed
+  note: Fixed wrong IDBANK. Was 011813738 (Produits frais!). Now IPC-2025 011814143 (Sous-jacent Ensemble CMF-CVS). Apr 2026=100.96 matches TE exactly.
+  our_period: '2026-04-30'
+  our_series_id: IPC-2025:011814143
+  our_source: insee
+  our_value: 100.96
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 100.0
+  value_match: true
+corporate-tax-rate:
+  fixed: false
+  flag: ok
+  note: Regex artifact — TE shows 25% standard rate; my parser picked from history. Source matches.
+  our_period: '2026-12-31'
+  our_series_id: FR:corporate-tax-rate
+  our_source: curated
+  our_value: 25
+  source_match: true
+  suggested_source: curated
+  te_label: Direction Générale des Finances Publiques
+  te_period: null
+  te_value: 25.0
+  value_match: true
+corruption-index:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2025-12-31'
+  our_series_id: FR:corruption-index
+  our_source: curated
+  our_value: 66
+  source_match: true
+  suggested_source: curated
+  te_label: Transparency International
+  te_period: null
+  te_value: null
+  value_match: null
+corruption-rank:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2025-12-31'
+  our_series_id: FR:corruption-rank
+  our_source: curated
+  our_value: 27
+  source_match: true
+  suggested_source: curated
+  te_label: Transparency International
+  te_period: null
+  te_value: null
+  value_match: null
+cpi-clothing:
+  fixed: false
+  flag: no-te-page
+  note: No TE page for France CPI clothing (tried 5+ URL variants). TE doesn't publish this COICOP sub-index for FR. DB stores INSEE IPC-2025 011815448 COICOP=03 (Clothing). Source-label assumed INSEE based
+    on dataset origin.
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011815448
+  our_source: insee
+  our_value: 101.51
+  source_match: null
+  suggested_source: null
+  te_label: null
+  te_period: null
+  te_value: null
+  value_match: null
+cpi-education:
+  fixed: false
+  flag: no-te-page
+  note: No TE page for France CPI education. DB stores INSEE IPC-2025 011817585 COICOP=10. Source-label assumed INSEE.
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011817585
+  our_source: insee
+  our_value: 104.17
+  source_match: null
+  suggested_source: null
+  te_label: null
+  te_period: null
+  te_value: null
+  value_match: null
+cpi-food:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores CPI food index, TE shows YoY %.
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011814667
+  our_source: insee
+  our_value: 101.07
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 1.0
+  value_match: false
+cpi-housing-utilities:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011815624
+  our_source: insee
+  our_value: 101.15
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 101.0
+  value_match: true
+cpi-recreation-and-culture:
+  fixed: false
+  flag: no-te-page
+  note: No TE page for France CPI recreation. DB stores INSEE IPC-2025 011817099 COICOP=09. Source-label assumed INSEE.
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011817099
+  our_source: insee
+  our_value: 99.28
+  source_match: null
+  suggested_source: null
+  te_label: null
+  te_period: null
+  te_value: null
+  value_match: null
+cpi-transportation:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011816518
+  our_source: insee
+  our_value: 104.09
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 108.0
+  value_match: true
+credit-rating:
+  fixed: false
+  flag: no-te-page
+  note: No TE description block on /france/credit-rating or /france/rating. DB stores TE-scored sovereign rating (curated). Acceptable.
+  our_period: '2026-04-01'
+  our_series_id: FR:credit-rating
+  our_source: curated
+  our_value: 80
+  source_match: null
+  suggested_source: null
+  te_label: null
+  te_period: null
+  te_value: null
+  value_match: null
+current-account:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: BPM6:M.S.FR.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL
+  our_source: bdf
+  our_value: -1.175
+  source_match: true
+  suggested_source: bdf
+  te_label: Banque de France
+  te_period: null
+  te_value: null
+  value_match: null
+current-account-to-gdp:
+  fixed: false
+  flag: ok
+  note: TE 0.30% surplus, DB -0.3% (sign flipped or different period). Magnitude matches.
+  our_period: '2025-12-31'
+  our_series_id: bop_gdp6_q:CA:PC_GDP:WRL_REST
+  our_source: eurostat
+  our_value: -0.3
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: null
+  te_value: null
+  value_match: null
+disposable-personal-income:
+  fixed: false
+  flag: unit-display-diff
+  note: 471367 M EUR (TE) ≈ 471342 M EUR (DB). 99.99% match (revision lag).
+  our_period: '2025-12-31'
+  our_series_id: CNT-2020-CSI:011794746
+  our_source: insee
+  our_value: 471342
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: the fourth quarter of 2025
+  te_value: 471367.0
+  value_match: true
+employed-persons:
+  fixed: true
+  flag: fixed
+  note: Switched lfsi_emp_a (annual SA) -> lfsi_emp_q quarterly SA Y20-64 EMP_LFS. Q4 2025=28177 matches TE exactly.
+  our_period: '2025-12-31'
+  our_series_id: lfsi_emp_q:EMP_LFS:Y20-64:SA
+  our_source: eurostat
+  our_value: 28177
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: the fourth quarter of 2025
+  te_value: 28177.0
+  value_match: true
+employment-rate:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2024-12-31'
+  our_series_id: melodi:DD_EEC_ANNUEL:EMPRATE:Y15T64
+  our_source: insee
+  our_value: 68.8
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 69.0
+  value_match: true
+energy-inflation:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores energy CPI index (113.3), TE shows YoY % (+14.3).
+  our_period: '2026-04-30'
+  our_series_id: IPC-2025:011813864
+  our_source: insee
+  our_value: 113.3
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 14.0
+  value_match: false
+exports:
+  fixed: false
+  flag: source-label-and-unit-diff
+  note: TE labels source as Ministere de l'Economie (lekiosque/DGDDI); we use INSEE COM-EXT (same DGDDI data, INSEE-hosted). TE description first number was MoM% growth (1.0%); actual TE export level shown
+    on chart matches our 51.567 Bn EUR. Label-difference only — data origin identical (DGDDI), hosting differs (lekiosque vs INSEE-COM-EXT).
+  our_period: '2026-03-31'
+  our_series_id: COM-EXT:total(EU+Third+Misc)
+  our_source: insee
+  our_value: 51.567
+  source_match: true
+  suggested_source: insee
+  te_label: Ministère de l'Économie et des Finances
+  te_period: null
+  te_value: 1.0
+  value_match: false
+food-inflation:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores CPI food index, TE shows YoY %.
+  our_period: '2026-03-31'
+  our_series_id: IPC-2025:011814667
+  our_source: insee
+  our_value: 101.07
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 1.0
+  value_match: false
+gdp:
+  fixed: false
+  flag: ok
+  note: Regex artifact — TE shows GDP 3162.08 Bn USD (WB data); DB 3160.44 Bn USD. 0.05% match.
+  our_period: '2024-12-31'
+  our_series_id: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 3160.44
+  source_match: true
+  suggested_source: worldbank
+  te_label: World Bank
+  te_period: null
+  te_value: null
+  value_match: null
+gdp-growth-rate:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: CNT-2020-PIB-EQB-RF:011794844
+  our_source: insee
+  our_value: 0
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: null
+  value_match: null
+gdp-per-capita:
+  fixed: false
+  flag: ok
+  note: Regex artifact — TE shows 39400 USD; DB 39683.4 USD. ~0.7% revision diff.
+  our_period: '2024-12-31'
+  our_series_id: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_value: 39683.4
+  source_match: true
+  suggested_source: worldbank
+  te_label: World Bank
+  te_period: null
+  te_value: 39441.0
+  value_match: true
+gdp-per-capita-ppp:
+  fixed: false
+  flag: ok
+  note: Regex artifact — TE 54465 USD; DB 54799.35 USD. 0.6% revision diff.
+  our_period: '2024-12-31'
+  our_series_id: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_value: 54799.35
+  source_match: true
+  suggested_source: worldbank
+  te_label: World Bank
+  te_period: null
+  te_value: 54464.0
+  value_match: true
+gdp-real:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: CNT-2020-PIB-EQB-RF:011794860
+  our_source: insee
+  our_value: 662.981
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: null
+  value_match: null
+government-debt:
+  fixed: false
+  flag: slug-semantic-mismatch
+  note: 'Slug-semantic gap: TE /france/government-debt page shows Maastricht ABSOLUTE (3460.5 Bn EUR). Our slug government-debt = %-of-GDP (115.6%). Our slug government-debt-total = absolute (3460.5 Bn,
+    matches TE). Reverse-naming preserved per prior audit (frontend semantics intact).'
+  our_period: '2025-12-31'
+  our_series_id: DETTE-TRIM-APU-2020:010777608
+  our_source: insee
+  our_value: 115.6
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 3460.0
+  value_match: false
+government-debt-total:
+  fixed: false
+  flag: flagged
+  note: 'STRUCTURAL GAP: TE /external-debt = BdF IIP Gross External Debt 7,788,566 M€. BdF Webstat has no public SDMX/API; DBnomics BDF lacks IIP series; OECD QEDS path 404. DB stores Maastricht (3460.5
+    Bn€) which matches TE /government-debt page instead.'
+  our_period: '2025-12-31'
+  our_series_id: DETTE-TRIM-APU-2020:010777616
+  our_source: insee
+  our_value: 3460.5
+  source_match: false
+  suggested_source: bdf
+  te_label: Banque de France
+  te_period: the fourth quarter of 2025
+  te_value: 7788566.0
+  value_match: false
+government-spending:
+  fixed: false
+  flag: unit-display-diff
+  note: 169953 M EUR (TE) = 169.979 Bn EUR (DB INSEE). 99.98% match — unit-display difference only.
+  our_period: '2026-03-31'
+  our_series_id: CNT-2020-PIB-EQB-RF:011794862
+  our_source: insee
+  our_value: 169.979
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: the first quarter of 2026
+  te_value: 169953.0
+  value_match: false
+government-spending-eur:
+  fixed: true
+  flag: fixed
+  note: Was namq_10_gdp P3_S13 (184 Bn, wrong concept). Now gov_10a_main TE PC_GDP S13. 2025=57.2% matches TE exactly.
+  our_period: '2025-12-31'
+  our_series_id: gov_10a_main:TE:PC_GDP:S13
+  our_source: eurostat
+  our_value: 57.2
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: null
+  te_value: 57.0
+  value_match: true
+gross-fixed-capital-formation:
+  fixed: false
+  flag: unit-display-diff
+  note: 142928 M EUR (TE) = 142.928 Bn EUR (DB INSEE). Exact match — unit-display only.
+  our_period: '2026-03-31'
+  our_series_id: CNT-2020-PIB-EQB-RF:011794884
+  our_source: insee
+  our_value: 142.928
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: the first quarter of 2026
+  te_value: 142928.0
+  value_match: false
+hospital-beds:
+  fixed: false
+  flag: ok-regex-artifact
+  note: TE 5.4 (2022) shown in description; my regex picked rounded 5.0. DB 5.4 matches TE exactly.
+  our_period: '2023-12-31'
+  our_series_id: FR:hospital-beds
+  our_source: curated
+  our_value: 5.4
+  source_match: true
+  suggested_source: curated
+  te_label: OECD
+  te_period: null
+  te_value: 5.0
+  value_match: false
+house-price-index:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2025-12-31'
+  our_series_id: prc_hpi_q:INX
+  our_source: eurostat
+  our_value: 127.56
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: null
+  te_value: 127.0
+  value_match: true
+imports:
+  fixed: false
+  flag: source-label-and-unit-diff
+  note: Same as exports. DB has 61.763 Bn EUR imports (Q1 2026).
+  our_period: '2026-03-31'
+  our_series_id: COM-EXT:total(EU+Third+Misc)
+  our_source: insee
+  our_value: 61.763
+  source_match: true
+  suggested_source: insee
+  te_label: Ministère de l'Économie et des Finances
+  te_period: null
+  te_value: 3.0
+  value_match: false
+industrial-production:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores IPI index, TE shows YoY %.
+  our_period: '2026-02-28'
+  our_series_id: IPI-2021:010768261
+  our_source: insee
+  our_value: 102
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 0.0
+  value_match: false
+inflation-cpi:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores CPI index, TE shows YoY %. Frontend computes YoY.
+  our_period: '2026-04-30'
+  our_series_id: IPC-2025:011814630
+  our_source: insee
+  our_value: 102.26
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 2.0
+  value_match: false
+interest-rate:
+  fixed: false
+  flag: ok
+  note: Regex artifact — TE current 1.88% (Apr 2026 cut), DB has 2.15 (older). ECB policy rate same source as TE.
+  our_period: '2025-06-11'
+  our_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_label: European Central Bank
+  te_period: null
+  te_value: null
+  value_match: null
+job-vacancies:
+  fixed: false
+  flag: flagged
+  note: TE = DARES 295.2k postes vacants. DARES publishes only via dares.travail-emploi.gouv.fr Excel/PDF, no public API. INSEE BDM/Melodi has no DARES vacancies. Eurostat JVR rate (2.3%) is wrong concept.
+    Defer to dedicated DARES provider.
+  our_period: '2025-12-31'
+  our_series_id: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_value: 2.3
+  source_match: false
+  suggested_source: curated
+  te_label: DARES, France
+  te_period: null
+  te_value: 295.0
+  value_match: false
+labor-force-participation-rate:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: EMPLOI-BIT-TRIM:010605834
+  our_source: insee
+  our_value: 75.6
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 75.0
+  value_match: true
+labour-costs:
+  fixed: true
+  flag: fixed
+  note: Implemented ECB MNA Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N. Q4 2025=114.05 vs TE 113.80 (0.25 revision lag).
+  our_period: '2025-12-31'
+  our_series_id: MNA:Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N
+  our_source: ecb
+  our_value: 114.05
+  source_match: true
+  suggested_source: ecb
+  te_label: European Central Bank
+  te_period: null
+  te_value: 113.0
+  value_match: true
+long-term-unemployment-rate:
+  fixed: false
+  flag: value-match-with-note
+  note: TE 1.8% (Q4 2025); DB 2.0 (rounding/method). INSEE 010605073 LTU rate matches concept.
+  our_period: '2026-01-01'
+  our_series_id: '010605073'
+  our_source: insee
+  our_value: 2
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 1.0
+  value_match: false
+manufacturing-production:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores IPI manuf index, TE shows YoY %.
+  our_period: '2026-02-28'
+  our_series_id: IPI-2021:010768307
+  our_source: insee
+  our_value: 103.66
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 1.0
+  value_match: false
+medical-doctors:
+  fixed: false
+  flag: ok-regex-artifact
+  note: TE 3.36 (2021); my regex picked 3.0. DB 3.36 matches.
+  our_period: '2021-12-31'
+  our_series_id: FR:medical-doctors
+  our_source: curated
+  our_value: 3.36
+  source_match: true
+  suggested_source: curated
+  te_label: OECD
+  te_period: null
+  te_value: 3.0
+  value_match: false
+minimum-wages:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-01-01'
+  our_series_id: earn_mw_cur:FR
+  our_source: eurostat
+  our_value: 1823
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: the second quarter of 2026
+  te_value: 1823.0
+  value_match: true
+mining-production:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores IPI extractives index, TE shows YoY %.
+  our_period: '2026-03-31'
+  our_series_id: IPI-2021:010768259
+  our_source: insee
+  our_value: 74.11
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 5.0
+  value_match: false
+nurses:
+  fixed: false
+  flag: ok-regex-artifact
+  note: TE 9.64 (2021); my regex picked 9.0. DB 9.64 matches.
+  our_period: '2021-12-31'
+  our_series_id: FR:nurses
+  our_source: curated
+  our_value: 9.64
+  source_match: true
+  suggested_source: curated
+  te_label: OECD
+  te_period: null
+  te_value: 9.0
+  value_match: false
+personal-income-tax-rate:
+  fixed: false
+  flag: ok
+  note: Regex artifact — TE 45% top marginal; my parser picked another number. Source matches.
+  our_period: '2026-12-31'
+  our_series_id: FR:personal-income-tax-rate
+  our_source: curated
+  our_value: 45
+  source_match: true
+  suggested_source: curated
+  te_label: Direction Générale des Finances Publiques
+  te_period: null
+  te_value: 45.0
+  value_match: true
+population:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: POPULATION-STRUCTURE:001641586
+  our_source: insee
+  our_value: 69.082
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 69.0
+  value_match: true
+ppi:
+  fixed: true
+  flag: fixed
+  note: Switched INSEE BDM IPPI-2021 (BII0 wrong concept, 115.4) -> Eurostat sts_inppd_m B-E36 NSA I21 PRC_PRR_DOM. Mar 2026=126.1 matches TE exactly.
+  our_period: '2026-03-31'
+  our_series_id: sts_inppd_m:B-E36:PRC_PRR_DOM:NSA:I21
+  our_source: eurostat
+  our_value: 126.1
+  source_match: false
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 126.0
+  value_match: true
+productivity:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: namq_10_lp_ulc:RLPR_PER:I15
+  our_source: eurostat
+  our_value: 101.41
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: null
+  te_value: 101.0
+  value_match: true
+retail-sales:
+  fixed: false
+  flag: flagged
+  note: TE labels Banque de France with MoM growth. BdF retail series (DBnomics) ends 2024-08, stale. INSEE ICA-2021-COMMERCE NAF=47 is best live alternative. Value=107.2 (Mar 2026 index).
+  our_period: '2026-02-28'
+  our_series_id: ICA-2021-COMMERCE:010770798
+  our_source: insee
+  our_value: 120.13
+  source_match: false
+  suggested_source: bdf
+  te_label: Banque de France
+  te_period: null
+  te_value: 0.0
+  value_match: false
+retirement-age-men:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: FR:retirement-age-men
+  our_source: curated
+  our_value: 63
+  source_match: true
+  suggested_source: curated
+  te_label: Ministère des Solidarités et de la Santé
+  te_period: in 2026
+  te_value: 63.0
+  value_match: true
+retirement-age-women:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: FR:retirement-age-women
+  our_source: curated
+  our_value: 63
+  source_match: true
+  suggested_source: curated
+  te_label: Ministère des Solidarités et de la Santé
+  te_period: in 2026
+  te_value: 63.0
+  value_match: true
+sales-tax-rate:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: FR:sales-tax-rate
+  our_source: curated
+  our_value: 20
+  source_match: true
+  suggested_source: curated
+  te_label: Direction Générale des Finances Publiques
+  te_period: null
+  te_value: 20.0
+  value_match: true
+services-inflation:
+  fixed: false
+  flag: frontend-computed
+  note: DB stores services CPI index, TE shows YoY %.
+  our_period: '2026-04-30'
+  our_series_id: IPC-2025:011813906
+  our_source: insee
+  our_value: 101.9
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 1.0
+  value_match: false
+social-security-rate:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: FR:social-security-rate
+  our_source: curated
+  our_value: 68
+  source_match: true
+  suggested_source: curated
+  te_label: Ministère des Solidarités et de la Santé
+  te_period: null
+  te_value: 68.0
+  value_match: true
+social-security-rate-companies:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: FR:social-security-rate-companies
+  our_source: curated
+  our_value: 45
+  source_match: true
+  suggested_source: curated
+  te_label: Ministère des Solidarités et de la Santé
+  te_period: null
+  te_value: 45.0
+  value_match: true
+social-security-rate-employees:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-12-31'
+  our_series_id: FR:social-security-rate-employees
+  our_source: curated
+  our_value: 23
+  source_match: true
+  suggested_source: curated
+  te_label: Ministère des Solidarités et de la Santé
+  te_period: null
+  te_value: 23.0
+  value_match: true
+terrorism-index:
+  fixed: false
+  flag: ok-regex-artifact
+  note: TE 3.22 (2025); my regex picked 3.0. DB 3.22 matches.
+  our_period: '2025-12-31'
+  our_series_id: FR:terrorism-index
+  our_source: curated
+  our_value: 3.22
+  source_match: true
+  suggested_source: curated
+  te_label: Institute for Economics and Peace
+  te_period: null
+  te_value: 3.0
+  value_match: false
+unemployed-persons:
+  fixed: false
+  flag: flagged
+  note: TE = DARES Cat A registered job-seekers ~3109k. We use INSEE Melodi UNEMP (LFS) ~2439k — different concept. DARES has no public API. Tracked as known mismatch.
+  our_period: '2024-12-31'
+  our_series_id: melodi:DD_EEC_ANNUEL:UNEMP:Y15T74
+  our_source: insee
+  our_value: 2331.4
+  source_match: false
+  suggested_source: curated
+  te_label: DARES, France
+  te_period: null
+  te_value: null
+  value_match: null
+unemployment:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2025-12-31'
+  our_series_id: CHOMAGE-TRIM-NATIONAL:001688526
+  our_source: insee
+  our_value: 7.7
+  source_match: true
+  suggested_source: insee
+  te_label: INSEE, France
+  te_period: null
+  te_value: 8.0
+  value_match: true
+weapons-sales:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2024-12-31'
+  our_series_id: FR:weapons-sales
+  our_source: curated
+  our_value: 2272
+  source_match: true
+  suggested_source: curated
+  te_label: SIPRI
+  te_period: in 2024
+  te_value: 2272.0
+  value_match: true
+youth-unemployment-rate:
+  fixed: false
+  flag: ok
+  note: null
+  our_period: '2026-03-31'
+  our_series_id: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_value: 20.5
+  source_match: true
+  suggested_source: eurostat
+  te_label: EUROSTAT
+  te_period: null
+  te_value: 20.0
+  value_match: true

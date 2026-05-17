@@ -1,0 +1,1190 @@
+{
+  "business-confidence": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 50.3,
+      "latest_unit": "points",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_enterprise_boom_index:企业景气指数-指数",
+      "note": "NBS Enterprise Boom Index (企业景气指数) quarterly via akshare.",
+      "latest_date": "2026-03-31",
+      "latest_value": 109.3,
+      "latest_unit": "Points"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "cash-reserve-ratio": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": 7.5,
+      "latest_unit": "percent",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_reserve_requirement_ratio",
+      "note": "PBoC Reserve Requirement Ratio (large institutions, post-adjustment) via akshare.",
+      "latest_date": "2025-05-31",
+      "latest_value": 9,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "central-bank-balance": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_central_bank_balance:总资产",
+      "note": "PBoC Total Assets via akshare. TE-Quelle: People's Bank of China.",
+      "latest_date": "2026-04-30",
+      "latest_value": 48632.75,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "corporate-tax-rate": {
+    "te": {
+      "source_name": "State Administration of Taxation",
+      "source_url": "http://www.chinatax.gov.cn",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:corporate-tax-rate",
+      "note": "TE 25%",
+      "latest_date": "2026-12-31",
+      "latest_value": 25,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "corruption-index": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:corruption-index",
+      "note": "TI CPI 2025",
+      "latest_date": "2025-12-31",
+      "latest_value": 42,
+      "latest_unit": "Points"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "corruption-rank": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:corruption-rank",
+      "note": "TI CPI 2025 rank",
+      "latest_date": "2025-12-31",
+      "latest_value": 76,
+      "latest_unit": "Rank"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "credit-rating": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:credit-rating",
+      "note": "TE Score",
+      "latest_date": "2026-04-01",
+      "latest_value": 70,
+      "latest_unit": "Rating"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "exports": {
+    "te": {
+      "source_name": "General Administration of Customs",
+      "source_url": "http://www.customs.gov.cn",
+      "latest_value": 321.03,
+      "latest_unit": "USD Billion",
+      "latest_period": "March"
+    },
+    "db": {
+      "source": "gacc",
+      "series_id": "GACC:exports",
+      "note": "GACC Customs Monthly Bulletin (Summary B Monthly, In USD). TE-Quelle: General Administration of Customs.",
+      "latest_date": "2026-03-31",
+      "latest_value": 321.03,
+      "latest_unit": "Billion USD"
+    },
+    "status": {
+      "expected_source": "gacc",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "exports-yoy": {
+    "te": {
+      "source_name": "General Administration of Customs",
+      "source_url": "http://www.customs.gov.cn",
+      "latest_value": 14.1,
+      "latest_unit": "percent",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_hgjck:exp-yoy",
+      "note": "GACC Exports YoY (USD basis) via akshare hgjck.",
+      "latest_date": "2026-04-30",
+      "latest_value": 14.1,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": "gacc",
+      "source_ok": false,
+      "value_ok": true
+    }
+  },
+  "fixed-asset-investment": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 1.7,
+      "latest_unit": "percent",
+      "latest_period": "March"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_gdzctz:同比增长",
+      "note": "NBS Fixed Asset Investment cumulative YoY via akshare.",
+      "latest_date": "2026-03-31",
+      "latest_value": -1.12,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "foreign-exchange-reserves": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn",
+      "latest_value": 3411000.0,
+      "latest_unit": "USD Million",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_foreign_exchange_gold:国家外汇储备",
+      "note": "PBoC FX Reserves via akshare. TE-Quelle: People's Bank of China.",
+      "latest_date": "2026-04-30",
+      "latest_value": 3410.55,
+      "latest_unit": "Billion USD"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "gdp": {
+    "te": {
+      "source_name": "World Bank",
+      "source_url": "https://www.worldbank.org/",
+      "latest_value": 18743.8,
+      "latest_unit": "billion US dollars",
+      "latest_period": "2024"
+    },
+    "db": {
+      "source": "worldbank",
+      "series_id": "NY.GDP.MKTP.CD",
+      "note": "World Bank annual, current USD → Billion.",
+      "latest_date": "2024-12-31",
+      "latest_value": 18743.8,
+      "latest_unit": "Billion USD"
+    },
+    "status": {
+      "expected_source": "worldbank",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "gdp-growth-rate": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_gdp:国内生产总值-同比增长",
+      "note": "NBS Quarterly GDP YoY via akshare.",
+      "latest_date": "2026-03-31",
+      "latest_value": 5,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "gdp-per-capita": {
+    "te": {
+      "source_name": "World Bank",
+      "source_url": "https://www.worldbank.org/",
+      "latest_value": 13121.68,
+      "latest_unit": "US dollars in",
+      "latest_period": ""
+    },
+    "db": {
+      "source": "worldbank",
+      "series_id": "NY.GDP.PCAP.CD",
+      "note": "World Bank annual GDP per capita.",
+      "latest_date": "2024-12-31",
+      "latest_value": 13303.15,
+      "latest_unit": "USD"
+    },
+    "status": {
+      "expected_source": "worldbank",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "gdp-per-capita-ppp": {
+    "te": {
+      "source_name": "World Bank",
+      "source_url": "https://www.worldbank.org/",
+      "latest_value": 23845.62,
+      "latest_unit": "US dollars in",
+      "latest_period": ""
+    },
+    "db": {
+      "source": "worldbank",
+      "series_id": "NY.GDP.PCAP.PP.CD",
+      "note": "World Bank GDP per capita PPP.",
+      "latest_date": "2024-12-31",
+      "latest_value": 27104.87,
+      "latest_unit": "USD"
+    },
+    "status": {
+      "expected_source": "worldbank",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "gdp-real": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_gdp:国内生产总值-绝对值",
+      "note": "NBS Quarterly GDP at current prices via akshare.",
+      "latest_date": "2026-03-31",
+      "latest_value": 33419.3,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "gold-reserves": {
+    "te": {
+      "source_name": "World Gold Council",
+      "source_url": "http://www.gold.org",
+      "latest_value": 2313.46,
+      "latest_unit": "Tonnes",
+      "latest_period": "the"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_foreign_exchange_gold:黄金储备",
+      "note": "PBoC Gold Reserves via akshare (黄金储备 col, 万盎司 → Mln Troy Oz × 0.01).",
+      "latest_date": "2026-04-30",
+      "latest_value": 2321.56,
+      "latest_unit": "Tonnes"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": false,
+      "value_ok": true
+    }
+  },
+  "hospital-beds": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:hospital-beds",
+      "note": "NHC China 2023",
+      "latest_date": "2023-12-31",
+      "latest_value": 4.5,
+      "latest_unit": "per 1000 people"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "hospitals": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:hospitals",
+      "note": "NHC China 2023",
+      "latest_date": "2023-12-31",
+      "latest_value": 25.4,
+      "latest_unit": "per one million people"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "households-debt-to-gdp": {
+    "te": {
+      "source_name": "Bank for International Settlements",
+      "source_url": "https://www.bis.org/",
+      "latest_value": 59.0,
+      "latest_unit": "percent",
+      "latest_period": "GDP"
+    },
+    "db": {
+      "source": "fred",
+      "series_id": "QCNHAM770A",
+      "note": "BIS Total Credit to Households CN, % of GDP. Source: Bank for International Settlements via FRED.",
+      "latest_date": "2025-09-30",
+      "latest_value": 59,
+      "latest_unit": "% of GDP"
+    },
+    "status": {
+      "expected_source": "fred",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "housing-index": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": -3.4,
+      "latest_unit": "percent",
+      "latest_period": "March"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_real_estate:最新值",
+      "note": "NBS National Real Estate Climate Index (国房景气指数) via akshare.",
+      "latest_date": "2025-12-31",
+      "latest_value": 91.45,
+      "latest_unit": "Index"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "imports": {
+    "te": {
+      "source_name": "General Administration of Customs",
+      "source_url": "http://www.customs.gov.cn",
+      "latest_value": 269.9,
+      "latest_unit": "USD Billion",
+      "latest_period": "March"
+    },
+    "db": {
+      "source": "gacc",
+      "series_id": "GACC:imports",
+      "note": "GACC Customs Monthly Bulletin. TE-Quelle: General Administration of Customs.",
+      "latest_date": "2026-03-31",
+      "latest_value": 269.9,
+      "latest_unit": "Billion USD"
+    },
+    "status": {
+      "expected_source": "gacc",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "imports-yoy": {
+    "te": {
+      "source_name": "General Administration of Customs",
+      "source_url": "http://www.customs.gov.cn",
+      "latest_value": 25.3,
+      "latest_unit": "percent",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_hgjck:imp-yoy",
+      "note": "GACC Imports YoY (USD basis) via akshare hgjck.",
+      "latest_date": "2026-04-30",
+      "latest_value": 25.3,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": "gacc",
+      "source_ok": false,
+      "value_ok": true
+    }
+  },
+  "industrial-production-yoy": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_gyzjz:同比增长",
+      "note": "NBS Industrial Added Value YoY via akshare (macro_china_gyzjz). Fresh through latest published month. Replaces macro_china_industrial_production_yoy which is calendar-feed and stale.",
+      "latest_date": "2026-03-31",
+      "latest_value": 5.7,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "inflation-cpi": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 1.2,
+      "latest_unit": "percent",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_cpi:全国-当月",
+      "note": "NBS CPI level (same-period-prior-year=100) via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 1.2,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "interbank-rate": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn",
+      "latest_value": 1.41,
+      "latest_unit": "percent",
+      "latest_period": "Friday May 15"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_shibor_all:3M-定价",
+      "note": "SHIBOR 3M daily fix → month-end via akshare. PBoC/CFETS source.",
+      "latest_date": "2026-05-31",
+      "latest_value": 1.42,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "interest-rate": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": 3.0,
+      "latest_unit": "percent",
+      "latest_period": ""
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_lpr:LPR1Y",
+      "note": "PBoC LPR 1Y via akshare. TE-Quelle: People's Bank of China.",
+      "latest_date": "2026-04-30",
+      "latest_value": 3,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "loan-prime-rate-5y": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": 3.5,
+      "latest_unit": "percent",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_lpr:LPR5Y",
+      "note": "PBoC LPR 5Y via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 3.5,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "manufacturing-pmi": {
+    "te": {
+      "source_name": "S&P Global",
+      "source_url": "https://www.pmi.spglobal.com/public",
+      "latest_value": 52.2,
+      "latest_unit": "points",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_pmi:制造业-指数",
+      "note": "NBS Manufacturing PMI via akshare. TE-Quelle: National Bureau of Statistics.",
+      "latest_date": "2026-04-30",
+      "latest_value": 50.3,
+      "latest_unit": "Points"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": false,
+      "value_ok": true
+    }
+  },
+  "medical-doctors": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:medical-doctors",
+      "note": "OECD/NHC 2023",
+      "latest_date": "2023-12-31",
+      "latest_value": 2.4,
+      "latest_unit": "per 1000 people"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "military-expenditure": {
+    "te": {
+      "source_name": "SIPRI",
+      "source_url": "https://www.sipri.org",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "worldbank",
+      "series_id": "MS.MIL.XPND.CD",
+      "note": "SIPRI-via-WorldBank Military Expenditure → USD Million.",
+      "latest_date": "2024-12-31",
+      "latest_value": 313658.33,
+      "latest_unit": "USD Million"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": false,
+      "value_ok": null
+    }
+  },
+  "money-supply-m0": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": 14747.74,
+      "latest_unit": "CNY Billion",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_money_supply:M0",
+      "note": "PBoC M0 via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 14747.74,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "money-supply-m1": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": 114583.37,
+      "latest_unit": "CNY Billion",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_money_supply:M1",
+      "note": "PBoC M1 via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 114583.37,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "money-supply-m2": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": 340294.81,
+      "latest_unit": "CNY Billion",
+      "latest_period": "December"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_money_supply:M2",
+      "note": "PBoC M2 via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 353042.52,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "new-bank-loans": {
+    "te": {
+      "source_name": "People's Bank of China",
+      "source_url": "http://www.pbc.gov.cn/",
+      "latest_value": -10.0,
+      "latest_unit": "CNY Billion",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_new_financial_credit",
+      "note": "PBoC New Yuan Loans via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": -10,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "non-manufacturing-pmi": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 49.4,
+      "latest_unit": "points",
+      "latest_period": "April"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_pmi:非制造业-指数",
+      "note": "NBS Non-Manufacturing PMI via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 49.4,
+      "latest_unit": "Points"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": true
+    }
+  },
+  "nurses": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:nurses",
+      "note": "OECD/NHC 2022",
+      "latest_date": "2022-12-31",
+      "latest_value": 3.4,
+      "latest_unit": "per 1000 people"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "personal-income-tax-rate": {
+    "te": {
+      "source_name": "State Administration of Taxation",
+      "source_url": "http://www.chinatax.gov.cn",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:personal-income-tax-rate",
+      "note": "TE 45%",
+      "latest_date": "2026-12-31",
+      "latest_value": 45,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "population": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 1408.0,
+      "latest_unit": "million people",
+      "latest_period": "2024"
+    },
+    "db": {
+      "source": "worldbank",
+      "series_id": "SP.POP.TOTL",
+      "note": "World Bank population, → Millions.",
+      "latest_date": "2024-12-31",
+      "latest_value": 1408.97,
+      "latest_unit": "Millions"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": false,
+      "value_ok": true
+    }
+  },
+  "ppi-yoy": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_ppi:当月同比增长",
+      "note": "NBS PPI YoY via akshare.",
+      "latest_date": "2026-04-30",
+      "latest_value": 2.8,
+      "latest_unit": "% YoY"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "private-debt-to-gdp": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "fred",
+      "series_id": "QCNPAM770A",
+      "note": "BIS Total Credit to Private Non-Financial Sector (Households + NFCs) CN, % of GDP.",
+      "latest_date": "2025-09-30",
+      "latest_value": 201.4,
+      "latest_unit": "% of GDP"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "retail-sales": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 0.14,
+      "latest_unit": "percent",
+      "latest_period": "March of 2026"
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_consumer_goods_retail:当月",
+      "note": "NBS Consumer Goods Retail Sales (当月 monthly) via akshare.",
+      "latest_date": "2026-03-31",
+      "latest_value": 4161.6,
+      "latest_unit": "Billion CNY"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": true,
+      "value_ok": false
+    }
+  },
+  "retirement-age-men": {
+    "te": {
+      "source_name": "State Administration of Taxation",
+      "source_url": "http://www.chinatax.gov.cn",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:retirement-age-men",
+      "note": "60",
+      "latest_date": "2026-12-31",
+      "latest_value": 60,
+      "latest_unit": "Years"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "retirement-age-women": {
+    "te": {
+      "source_name": "State Administration of Taxation",
+      "source_url": "http://www.chinatax.gov.cn",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:retirement-age-women",
+      "note": "50 (Arbeiterin)",
+      "latest_date": "2026-12-31",
+      "latest_value": 50,
+      "latest_unit": "Years"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "sales-tax-rate": {
+    "te": {
+      "source_name": "State Administration of Taxation",
+      "source_url": "http://www.chinatax.gov.cn",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:sales-tax-rate",
+      "note": "TE VAT 13%",
+      "latest_date": "2026-12-31",
+      "latest_value": 13,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "social-security-rate": {
+    "te": {
+      "source_name": "State Administration of Taxation",
+      "source_url": "http://www.chinatax.gov.cn",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:social-security-rate",
+      "note": "TE 38.70%",
+      "latest_date": "2026-12-31",
+      "latest_value": 38.7,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "social-security-rate-companies": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:social-security-rate-companies",
+      "note": "28.20%",
+      "latest_date": "2026-12-31",
+      "latest_value": 28.2,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "social-security-rate-employees": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:social-security-rate-employees",
+      "note": "10.50%",
+      "latest_date": "2026-12-31",
+      "latest_value": 10.5,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "terrorism-index": {
+    "te": {
+      "source_name": "Institute for Economics and Peace",
+      "source_url": "http://economicsandpeace.org",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:terrorism-index",
+      "note": "GTI 2025 = 1.31",
+      "latest_date": "2025-12-31",
+      "latest_value": 1.31,
+      "latest_unit": "Points"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "total-debt-to-gdp": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "fred",
+      "series_id": "QCNCAM770A",
+      "note": "BIS Total Credit to Non-Financial Sector (incl. Government) CN, % of GDP.",
+      "latest_date": "2025-09-30",
+      "latest_value": 295.6,
+      "latest_unit": "% of GDP"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "trade-balance": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "gacc",
+      "series_id": "GACC:trade-balance",
+      "note": "GACC Customs Monthly Bulletin (USD Surplus/Deficit). TE-Quelle: General Administration of Customs.",
+      "latest_date": "2026-03-31",
+      "latest_value": 51.13,
+      "latest_unit": "Billion USD"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "unemployment": {
+    "te": {
+      "source_name": null,
+      "source_url": null,
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "akshare",
+      "series_id": "akshare:macro_china_urban_unemployment",
+      "note": "NBS Surveyed Urban Unemployment Rate via akshare.",
+      "latest_date": "2026-03-31",
+      "latest_value": 5.4,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": null,
+      "source_ok": null,
+      "value_ok": null
+    }
+  },
+  "weapons-sales": {
+    "te": {
+      "source_name": "SIPRI",
+      "source_url": "https://www.sipri.org",
+      "latest_value": null,
+      "latest_unit": null,
+      "latest_period": null
+    },
+    "db": {
+      "source": "curated",
+      "series_id": "CN:weapons-sales",
+      "note": "SIPRI 2024 = 1131",
+      "latest_date": "2024-12-31",
+      "latest_value": 1131,
+      "latest_unit": "SIPRI TIV Million"
+    },
+    "status": {
+      "expected_source": "curated",
+      "source_ok": true,
+      "value_ok": null
+    }
+  },
+  "youth-unemployment-rate": {
+    "te": {
+      "source_name": "National Bureau of Statistics of China",
+      "source_url": "http://www.stats.gov.cn/",
+      "latest_value": 16.9,
+      "latest_unit": "percent",
+      "latest_period": "March"
+    },
+    "db": {
+      "source": "worldbank",
+      "series_id": "SL.UEM.1524.ZS",
+      "note": "ILO modelled youth (15-24) unemployment rate, annual.",
+      "latest_date": "2025-12-31",
+      "latest_value": 15.79,
+      "latest_unit": "%"
+    },
+    "status": {
+      "expected_source": "akshare",
+      "source_ok": false,
+      "value_ok": false
+    }
+  }
+}

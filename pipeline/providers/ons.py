@@ -80,8 +80,9 @@ ONS_SERIES = [
         "adjustment": "SA",
     },
     {
-        # MGWG = Economic activity rate (16-64), SA, %
-        "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgwg/lms",
+        # LF22 = LFS: Economic activity rate: UK: All: Aged 16-64 (%): SA — matches TE headline (~79%).
+        # (MGWG is the inactivity rate — was used here previously by mistake.)
+        "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf22/lms",
         "indicator": "labor-force-participation-rate",
         "conversion": 1,
         "unit": "%",
@@ -164,18 +165,20 @@ ONS_SERIES = [
         "unit": "Index",
         "adjustment": "NSA",
     },
-    # Production
+    # Production — fixed 2026-05-16: K22A is MANUFACTURING (Section C), K222 is
+    # all PRODUCTION (Sections B-E). Previous mapping was swapped (verified against
+    # ONS Title metadata: K22A = "IOP: C:MANUFACTURING: CVMSA", K222 = "IOP: B-E:PRODUCTION: CVMSA").
     {
-        # K22A = Index of Production all-industries, 2022=100, SA, monthly
-        "uri": "/economy/economicoutputandproductivity/output/timeseries/k22a/diop",
+        # K222 = Index of Production all-industries (B-E), 2022=100, SA, monthly
+        "uri": "/economy/economicoutputandproductivity/output/timeseries/k222/diop",
         "indicator": "industrial-production",
         "conversion": 1,
         "unit": "Index",
         "adjustment": "SA",
     },
     {
-        # K222 = Manufacturing Index of Production C, 2022=100, SA, monthly
-        "uri": "/economy/economicoutputandproductivity/output/timeseries/k222/diop",
+        # K22A = Manufacturing Index of Production (Section C), 2022=100, SA, monthly
+        "uri": "/economy/economicoutputandproductivity/output/timeseries/k22a/diop",
         "indicator": "manufacturing-production",
         "conversion": 1,
         "unit": "Index",
@@ -200,11 +203,12 @@ ONS_SERIES = [
     },
     # Government
     {
-        "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6x/pusf",
+        # HF6W = PS: Net Debt (excluding public sector banks): £bn: CPNSA (absolute level — TE headline)
+        "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6w/pusf",
         "indicator": "government-debt",
-        "conversion": 1,  # % of GDP
-        "unit": "% of GDP",
-        "adjustment": "",
+        "conversion": 1,  # GBP Billion (already £bn)
+        "unit": "Billion GBP",
+        "adjustment": "NSA",
     },
     {
         "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/j5ij/pusf",

@@ -89,6 +89,35 @@ SERIES = [
         "note": "GUS DBW var=875 sec=143 pres=95 (Registered unemployment rate %, POLAND)",
     },
     {
+        "indicator": "unemployment",
+        # TE labels this 'unemployment-rate' attributing GUS — same series as
+        # unemployment-rate-registered. Honest fetch = GUS DBW.
+        "specs": [_spec(875, 143, 95, ["875;143;95;"], "M")],
+        "unit": "%",
+        "adjustment": "NSA",
+        "series_id": "GUS:var=875/sec=143/type=95",
+        "note": "GUS DBW var=875 sec=143 pres=95 (Registered unemployment rate %, POLAND) — TE primary 'unemployment-rate'",
+    },
+    {
+        "indicator": "unemployed-persons",
+        # GUS var=507 = Registered unemployed persons (count); sec=871, type=93,
+        # dim1 (Sex)=6648242 Total, dim687 (Categories)=7226259 Unemployed.
+        # Split into chunks of ~5 years to avoid 30s timeout on full series.
+        "specs": [
+            _spec(507, 871, 93, ["507;871;93;1.6648242", "507;871;93;687.7226259"], "M",
+                  years=list(range(2010, 2016))),
+            _spec(507, 871, 93, ["507;871;93;1.6648242", "507;871;93;687.7226259"], "M",
+                  years=list(range(2016, 2021))),
+            _spec(507, 871, 93, ["507;871;93;1.6648242", "507;871;93;687.7226259"], "M",
+                  years=list(range(2021, date.today().year + 1))),
+        ],
+        "unit": "Thousand",
+        "adjustment": "NSA",
+        "series_id": "GUS:var=507/sec=871/type=93",
+        "conversion_after_fetch": 0.001,  # raw is persons; convert to thousand
+        "note": "GUS DBW var=507 sec=871 pres=93 (Registered unemployed persons, count converted to thousand)",
+    },
+    {
         "indicator": "retail-sales",
         "specs": [_spec(109, 849, 7, ["109;849;7;505.6661586"], "M")],
         "unit": "Index (previous year=100, constant prices)",
@@ -403,12 +432,13 @@ def _fetch_series(cfg: dict) -> list[DataPoint]:
             print(f"    spec var={spec['variable_id']}/sec={spec['section_id']} failed: {e}")
         time.sleep(0.3)
     freq = cfg["specs"][0]["freq"]
+    conv = cfg.get("conversion_after_fetch", 1.0)
     out: list[DataPoint] = []
     for dt, val in sorted(pairs.items()):
         norm = normalize_date(dt, freq)
         out.append(DataPoint(
             indicator=cfg["indicator"], country="PL", date=norm,
-            value=val, source="gus_pl",
+            value=val * conv, source="gus_pl",
             unit=cfg["unit"],
             series_id=cfg["series_id"],
             adjustment=cfg["adjustment"],

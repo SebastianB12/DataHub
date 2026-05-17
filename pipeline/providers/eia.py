@@ -53,18 +53,28 @@ class EiaProvider(BaseProvider):
         url = f"{BASE_URL}/{endpoint}/data/"
 
         # The "series" facet key differs per dataset (some use 'series', some 'product', etc.).
+        # For multi-facet queries (e.g. petroleum/pri/gnd needs duoarea+product+process),
+        # extra_params may also include `facets` as a dict {facet_name: [values]}.
         facet_key = params_cfg.get("facet", "series")
+        extra_facets = params_cfg.get("facets") or {}
 
-        params = {
-            "api_key": self.api_key,
-            "frequency": frequency,
-            "data[0]": "value",
-            f"facets[{facet_key}][]": series_id,
-            "sort[0][column]": "period",
-            "sort[0][direction]": "desc",
-            "offset": 0,
-            "length": 5000,
-        }
+        params = [
+            ("api_key", self.api_key),
+            ("frequency", frequency),
+            ("data[0]", "value"),
+            ("sort[0][column]", "period"),
+            ("sort[0][direction]", "desc"),
+            ("offset", 0),
+            ("length", 5000),
+        ]
+        # Primary facet (series_id) — skip when extra_facets is fully self-contained
+        if not params_cfg.get("facets_only"):
+            params.append((f"facets[{facet_key}][]", series_id))
+        for fname, fvals in extra_facets.items():
+            if isinstance(fvals, str):
+                fvals = [fvals]
+            for v in fvals:
+                params.append((f"facets[{fname}][]", v))
         resp = requests.get(url, params=params, timeout=30)
         resp.raise_for_status()
         payload = resp.json()

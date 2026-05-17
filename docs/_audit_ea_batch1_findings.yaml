@@ -1,0 +1,240 @@
+# EA Batch 1 audit — 17 slugs
+# Audit date: 2026-05-16
+
+budget-deficit:
+  te_label: "EUROSTAT"
+  te_value: -2.9
+  te_period: "2025"
+  our_source: eurostat
+  our_series: "gov_10dd_edpt1:B9"
+  our_value: -2.9
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+business-confidence:
+  te_label: "European Commission"
+  te_value: -0.28
+  te_period: "Apr 2026"
+  our_source: eurostat
+  our_series: "ei_bsin_m_r2:BCI"
+  our_value: -0.28
+  our_period: "2026-04-30"
+  source_match: true   # European Commission DG ECFIN mirrored via Eurostat (per mapping)
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+capacity-utilization:
+  te_label: "European Commission"
+  te_value: 77.6
+  te_period: "2026-Q1"
+  our_source: eurostat
+  our_series: "ei_bsin_q_r2:BS-ICU-PC"
+  our_value: 77.8
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true   # 0.26% vintage diff
+  fixed: false
+  fix_summary: null
+  flag: null
+
+changes-in-inventories:
+  te_label: "EUROSTAT"
+  te_value: 26.52
+  te_period: "2025-Q4"
+  our_source: eurostat
+  our_series: "namq_10_gdp:P52"
+  our_value: 20.52
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: false   # TE shows 26.52, we show 20.32 (SCA); NSA Q4=-3.02, neither matches exactly. Likely TE vintage drift / different revision.
+  fixed: false
+  fix_summary: null
+  flag: "vintage-mismatch: TE 26.52 vs our SCA 20.32 (P52 CP_MEUR SCA EA20). NSA Q4=-3.02. TE figure not reproducible from current Eurostat API."
+
+consumer-confidence:
+  te_label: "European Commission"
+  te_value: -20.6
+  te_period: "Apr 2026"
+  our_source: eurostat
+  our_series: "ei_bsco_m:BS-CSMCI"
+  our_value: -20.6
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+consumer-spending:
+  te_label: "EUROSTAT"
+  te_value: 1647.11
+  te_period: "2025-Q4"
+  our_source: eurostat
+  our_series: "namq_10_gdp:P31_S14:CLV20_MEUR"
+  our_value: 1678.74
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true   # within 2% vintage tolerance, correct chain-linked concept
+  fixed: true
+  fix_summary: "Switched from CP_MEUR (nominal) to CLV20_MEUR (chain-linked 2020 prices, SCA, EA20). Old DB value 2071.79 (nominal) replaced with 1678.74 (chained). TE concept-match restored."
+  flag: null
+
+core-cpi:
+  te_label: "EUROSTAT"
+  te_value: 2.2     # YoY %
+  te_period: "Apr 2026"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI00XEF"
+  our_value: 102.34   # index level
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true   # YoY 102.34/100.13 (Apr 2025) computes ~2.2%; frontend renders YoY from level
+  fixed: false
+  fix_summary: null
+  flag: "level-vs-yoy: we store index level, TE shows YoY%. Frontend computes YoY on the fly."
+
+corporate-tax-rate:
+  te_label: "European Commission"
+  te_value: 22.2
+  te_period: "2025"
+  our_source: curated
+  our_series: "EA:corporate-tax-rate"
+  our_value: 22.2
+  our_period: "2025-12-31"
+  source_match: true   # curated is the documented internal label for TI/EC tax aggregates
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-clothing:
+  te_label: "EUROSTAT"
+  te_value: 102.62
+  te_period: "Mar 2026"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI03:HICP2025"
+  our_value: 102.61
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-education:
+  te_label: "EUROSTAT"
+  te_value: 102.85
+  te_period: "Mar 2026"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI10:HICP2025"
+  our_value: 102.88
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-housing-utilities:
+  te_label: "EUROSTAT"
+  te_value: 101.91
+  te_period: "Mar 2026"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI04:HICP2025"
+  our_value: 101.91
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-recreation-and-culture:
+  te_label: "EUROSTAT"
+  te_value: 100.23
+  te_period: "Mar 2026"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI09:HICP2025"
+  our_value: 100.26
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-transportation:
+  te_label: "EUROSTAT"
+  te_value: 104.49
+  te_period: "Mar 2026"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI07:HICP2025"
+  our_value: 104.49
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+current-account:
+  te_label: "European Central Bank"
+  te_value: 21.1   # EUR billion, Feb 2026
+  te_period: "Feb 2026"
+  our_source: ecb
+  our_series: "BPS/M.N.U2.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"
+  our_value: 21092.04   # mill EUR == 21.1 bn
+  our_period: "2026-02-28"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched from Eurostat quarterly bop_eu6_q (EUR 80.77 bn Q4 2025) to ECB BPS monthly NSA series M.N.U2.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL. TE-conform source (ECB) and matching cadence (monthly). 218 rows backfilled."
+  flag: null
+
+current-account-to-gdp:
+  te_label: "EUROSTAT"
+  te_value: 1.7
+  te_period: "2025"
+  our_source: eurostat
+  our_series: "tipsbp20:CA:PC_GDP:EXT_EA20"
+  our_value: 1.7
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "DB had zero data points. Old config used bop_eu6_q with PC_GDP unit which Eurostat does not expose. Switched to annual tipsbp20 dataset (unit=PC_GDP, partner=EXT_EA20, geo=EA20). 13 annual rows backfilled (2013-2025); 2025 = 1.7 matches TE."
+  flag: null
+
+disposable-personal-income:
+  te_label: "EUROSTAT"
+  te_value: 2451271
+  te_period: "2025-Q4"
+  our_source: eurostat
+  our_series: "nasq_10_nf_tr:B6G"
+  our_value: 2450613
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true   # 0.03% vintage diff
+  fixed: false
+  fix_summary: null
+  flag: null
+
+employment-rate:
+  te_label: "EUROSTAT"
+  te_value: 70.9
+  te_period: "2025-Q4"
+  our_source: eurostat
+  our_series: "lfsa_ergan:Y15-64"
+  our_value: 70.8
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true   # lfsa_ergan is annual (annual avg = 70.8 for 2025). TE shows quarterly 70.9 (Q4) -> different dataset (lfsi_emp_q).
+  fixed: false
+  fix_summary: null
+  flag: "frequency-mismatch: lfsa_ergan is annual; TE uses quarterly lfsi_emp_q. Annual avg ~ Q4 within rounding. Consider switching to quarterly for fresher reads."

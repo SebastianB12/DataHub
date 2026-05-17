@@ -1,0 +1,535 @@
+{
+  "_indicators": {
+    "slug": "_indicators",
+    "te_meta_desc": "Trading Economics provides data for 20 million economic indicators from 196 countries including actual values, consensus figures, forecasts, historical time series and news.  Slovenia Indicators - was last updated on Sunday, May 17, 2026.",
+    "te_value_meta": 20.0,
+    "te_h1": "Slovenia Indicators"
+  },
+  "budget-deficit": {
+    "slug": "budget-deficit",
+    "te_source_url": "http://pxweb.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Slovenia recorded a Government Budget deficit equal to 2.50 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Slovenia Government Budget - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 2.5,
+    "te_h1": "Slovenia Government Budget"
+  },
+  "business-confidence": {
+    "slug": "business-confidence",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Business Confidence in Slovenia decreased to -9 points in April from -8 points in March of 2026. This page provides - Slovenia Business Confidence - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": -9.0,
+    "te_h1": "Slovenia Business Confidence"
+  },
+  "capacity-utilization": {
+    "slug": "capacity-utilization",
+    "te_source_url": "https://commission.europa.eu/index_en",
+    "te_source_name": "European Commission",
+    "te_meta_desc": "Capacity Utilization in Slovenia increased to 82.40 percent in the first quarter of 2026 from 82 percent in the fourth quarter of 2025. This page provides - Slovenia Capacity Utilization - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 82.4,
+    "te_h1": "Slovenia Capacity Utilization"
+  },
+  "changes-in-inventories": {
+    "slug": "changes-in-inventories",
+    "te_source_url": "https://www.stat.si/statweb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "The stocks of goods held by firms in Slovenia increased by 46.80 EUR Million in the first quarter of 2026. This page provides - Slovenia Changes In Inventories - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 46.8,
+    "te_h1": "Slovenia Changes In Inventories"
+  },
+  "consumer-confidence": {
+    "slug": "consumer-confidence",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Consumer Confidence in Slovenia decreased to -32 points in April from -22 points in March of 2026. This page provides the latest reported value for - Slovenia Consumer Confidence - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": -32.0,
+    "te_h1": "Slovenia Consumer Confidence"
+  },
+  "consumer-spending": {
+    "slug": "consumer-spending",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Consumer Spending in Slovenia increased to 6502.80 EUR Million in the first quarter of 2026 from 6477.50 EUR Million in the fourth quarter of 2025. This page provides - Slovenia Consumer Spending - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 650.0,
+    "te_h1": "Slovenia Consumer Spending"
+  },
+  "core-cpi": {
+    "slug": "core-cpi",
+    "te_source_url": "https://www.stat.si/statweb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Core Consumer Prices in Slovenia increased to 101.63 points in April from 100.67 points in March of 2026. This page provides - Slovenia Core Consumer Prices - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 101.63,
+    "te_h1": "Slovenia Core Consumer Prices"
+  },
+  "corporate-tax-rate": {
+    "slug": "corporate-tax-rate",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "The Corporate Tax Rate in Slovenia stands at 22 percent. This page provides - Slovenia Corporate Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 22.0,
+    "te_h1": "Slovenia Corporate Tax Rate"
+  },
+  "corruption-index": {
+    "slug": "corruption-index",
+    "te_source_name": "Transparency International",
+    "te_source_url": null,
+    "te_meta_desc": "Slovenia scored 58 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. This page provides the latest reported value for - Slovenia Corruption Index - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 58.0,
+    "te_h1": "Slovenia Corruption Index"
+  },
+  "corruption-rank": {
+    "slug": "corruption-rank",
+    "te_source_name": "Transparency International",
+    "te_source_url": null,
+    "te_meta_desc": "Slovenia is the 41 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. This page provides the latest reported value for - Slovenia Corruption Rank - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 41.0,
+    "te_h1": "Slovenia Corruption Rank"
+  },
+  "cpi-clothing": {
+    "slug": "cpi-clothing",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "CPI Clothing in Slovenia increased to 104.85 points in April from 101.48 points in March of 2026. This page includes a chart with historical data for Slovenia CPI Clothing.",
+    "te_value_meta": 104.85,
+    "te_h1": "Slovenia CPI Clothing"
+  },
+  "cpi-education": {
+    "slug": "cpi-education",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "CPI Education in Slovenia increased to 102.50 points in April from 102.30 points in March of 2026. This page includes a chart with historical data for Slovenia CPI Education.",
+    "te_value_meta": 102.5,
+    "te_h1": "Slovenia CPI Education"
+  },
+  "cpi-food": {
+    "slug": "cpi-food",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "CPI Food in Slovenia decreased to 100.25 points in April from 100.49 points in March of 2026. Slovenia CPI Food - values, historical data, forecasts and news - updated on May of 2026.",
+    "te_value_meta": 100.25,
+    "te_h1": "Slovenia CPI Food"
+  },
+  "cpi-housing-utilities": {
+    "slug": "cpi-housing-utilities",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "CPI Housing Utilities in Slovenia increased to 108.32 points in April from 104.46 points in March of 2026. This page provides - Slovenia  Cpi Housing &amp; Utilities- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 108.32,
+    "te_h1": "Slovenia CPI Housing & Utilities"
+  },
+  "cpi-recreation-and-culture": {
+    "slug": "cpi-recreation-and-culture",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "CPI Recreation and Culture in Slovenia increased to 99.24 points in April from 93.43 points in March of 2026. This page includes a chart with historical data for Slovenia CPI Recreation And Culture.",
+    "te_value_meta": 99.24,
+    "te_h1": "Slovenia CPI Recreation And Culture"
+  },
+  "cpi-transportation": {
+    "slug": "cpi-transportation",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "The transportation sub-index of the CPI basket in Slovenia increased to 104.99 points in April of 2026 from 99.61 points in March of 2026. This page provides - Slovenia Cpi Transportation- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 104.99,
+    "te_h1": "Slovenia CPI Transportation"
+  },
+  "credit-rating": {
+    "slug": "credit-rating",
+    "te_meta_desc": "Standard &amp; Poor&#39;s credit rating for Slovenia stands at AA with stable outlook. Moody&#39;s credit rating for Slovenia was last set at A2 with stable outlook. DBRS&#39; credit rating for Slovenia was last reported at AA (low) with stable outlook. In general, a credit rating is used by sovereign wealth funds, pension funds and other investors to gauge the credit worthiness of Slovenia thus having a big impact on the country&#39;s borrowing costs. This page includes the government debt credit rating for Slovenia as reported by major credit rating agencies.",
+    "te_value_meta": 39.0,
+    "te_h1": "Slovenia - Credit Rating"
+  },
+  "current-account-to-gdp": {
+    "slug": "current-account-to-gdp",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_name": "EUROSTAT",
+    "te_meta_desc": "Slovenia recorded a Current Account surplus of 3.50 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Slovenia Current Account to GDP - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 3.5,
+    "te_h1": "Slovenia Current Account to GDP"
+  },
+  "current-account": {
+    "slug": "current-account",
+    "te_source_url": "http://www.bsi.si",
+    "te_source_name": "Bank of Slovenia",
+    "te_meta_desc": "Slovenia recorded a Current Account surplus of 103.20 EUR Million in March of 2026. This page provides - Slovenia Current Account - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 103.2,
+    "te_h1": "Slovenia Current Account"
+  },
+  "disposable-personal-income": {
+    "slug": "disposable-personal-income",
+    "te_meta_desc": "Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.",
+    "te_value_meta": 196.0
+  },
+  "employed-persons": {
+    "slug": "employed-persons",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "The number of employed persons in Slovenia increased to 938412 in February of 2026 from 936428 in January of 2026. This page provides the latest reported value for - Slovenia Employed Persons - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 938.0,
+    "te_h1": "Slovenia Employed Persons"
+  },
+  "employment-rate": {
+    "slug": "employment-rate",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_name": "EUROSTAT",
+    "te_meta_desc": "Employment Rate in Slovenia decreased to 73 percent in the fourth quarter of 2025 from 73.40 percent in the third quarter of 2025. This page provides - Slovenia Employment Rate- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 73.0,
+    "te_h1": "Slovenia Employment Rate"
+  },
+  "energy-inflation": {
+    "slug": "energy-inflation",
+    "te_meta_desc": "Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.",
+    "te_value_meta": 196.0
+  },
+  "exports": {
+    "slug": "exports",
+    "te_source_url": "http://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Exports in Slovenia increased to 6505.48 EUR Million in March from 5154.23 EUR Million in February of 2026. This page provides - Slovenia Exports - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 650.0,
+    "te_h1": "Slovenia Exports"
+  },
+  "food-inflation": {
+    "slug": "food-inflation",
+    "te_source_url": "http://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Cost of food in Slovenia increased 1 percent in April of 2026 over the same month in the previous year. This page provides the latest reported value for - Slovenia Food Inflation - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 1.0,
+    "te_h1": "Slovenia Food Inflation"
+  },
+  "gdp-growth-rate": {
+    "slug": "gdp-growth-rate",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "The Gross Domestic Product (GDP) in Slovenia expanded 3 percent in the first quarter of 2026 over the same quarter of the previous year. This page provides - Slovenia GDP Annual Growth Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 3.0,
+    "te_h1": "Slovenia GDP Annual Growth Rate"
+  },
+  "gdp-per-capita-ppp": {
+    "slug": "gdp-per-capita-ppp",
+    "te_source_url": "https://www.worldbank.org/",
+    "te_source_name": "World Bank",
+    "te_meta_desc": "The Gross Domestic Product per capita in Slovenia was last recorded at 48495.89 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Slovenia, when adjusted by Purchasing Power Parity is equivalent to 273 percent of the world&#39;s average. This page provides the latest reported value for - Slovenia GDP per capita PPP - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 484.0,
+    "te_h1": "Slovenia GDP per capita PPP"
+  },
+  "gdp-per-capita": {
+    "slug": "gdp-per-capita",
+    "te_source_url": "https://www.worldbank.org/",
+    "te_source_name": "World Bank",
+    "te_meta_desc": "The Gross Domestic Product per capita in Slovenia was last recorded at 26045.89 US dollars in 2024. The GDP per Capita in Slovenia is equivalent to 206 percent of the world&#39;s average. This page provides the latest reported value for - Slovenia GDP per capita - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 260.0,
+    "te_h1": "Slovenia GDP per capita"
+  },
+  "gdp-real": {
+    "slug": "gdp-real",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "GDP Constant Prices in Slovenia decreased to 11644.40 EUR Million in the first quarter of 2026 from 12721.30 EUR Million in the fourth quarter of 2025. This page provides - Slovenia GDP Constant Prices - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 116.0,
+    "te_h1": "Slovenia GDP Constant Prices"
+  },
+  "gdp": {
+    "slug": "gdp",
+    "te_source_url": "https://www.worldbank.org/",
+    "te_source_name": "World Bank",
+    "te_meta_desc": "The Gross Domestic Product (GDP) in Slovenia was worth 72.49 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Slovenia represents 0.07 percent of the world economy. This page provides the latest reported value for - Slovenia GDP - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 72.49,
+    "te_h1": "Slovenia GDP"
+  },
+  "government-debt-total": {
+    "slug": "government-debt-total",
+    "te_source_url": "http://pxweb.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Slovenia recorded a Government Debt to GDP of 65.70 percent of the country&#39;s Gross Domestic Product in 2025. This page provides - Slovenia Government Debt To GDP - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 65.7,
+    "te_h1": "Slovenia Government Debt to GDP"
+  },
+  "government-debt": {
+    "slug": "government-debt",
+    "te_source_name": "Eurostat",
+    "te_source_url": null,
+    "te_meta_desc": "Government Debt in Slovenia decreased to 45325.70 EUR Million in the fourth quarter of 2025 from 46155.90 EUR Million in the third quarter of 2025. This page provides - Slovenia Government Debt- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 453.0,
+    "te_h1": "Slovenia Government Debt"
+  },
+  "government-spending-eur": {
+    "slug": "government-spending-eur",
+    "te_meta_desc": "Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.",
+    "te_value_meta": 196.0
+  },
+  "government-spending": {
+    "slug": "government-spending",
+    "te_source_url": "https://www.stat.si/StatWeb/en",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Government Spending in Slovenia increased to 2414.30 EUR Million in the first quarter of 2026 from 2408.90 EUR Million in the fourth quarter of 2025. This page provides - Slovenia Government Spending - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 241.0,
+    "te_h1": "Slovenia Government Spending"
+  },
+  "gross-fixed-capital-formation": {
+    "slug": "gross-fixed-capital-formation",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Gross Fixed Capital Formation in Slovenia increased to 2708.60 EUR Million in the first quarter of 2026 from 2669.80 EUR Million in the fourth quarter of 2025. This page provides - Slovenia Gross Fixed Capital Formation - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 270.0,
+    "te_h1": "Slovenia Gross Fixed Capital Formation"
+  },
+  "hospital-beds": {
+    "slug": "hospital-beds",
+    "te_source_name": "OECD",
+    "te_source_url": null,
+    "te_meta_desc": "Hospital Beds in Slovenia decreased to 4.05 per 1000 people in 2023 from 4.12 per 1000 people in 2022. This page includes a chart with historical data for Slovenia Hospital Beds.",
+    "te_value_meta": 4.05,
+    "te_h1": "Slovenia Hospital Beds"
+  },
+  "house-price-index": {
+    "slug": "house-price-index",
+    "te_source_url": "http://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Housing Index in Slovenia increased to 217.57 points in the fourth quarter of 2025 from 207.03 points in the third quarter of 2025. This page provides - Slovenia House Price Index - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 217.57,
+    "te_h1": "Slovenia House Price Index"
+  },
+  "imports": {
+    "slug": "imports",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "Imports in Slovenia increased to 7610.12 EUR Million in March from 5759.05 EUR Million in February of 2026. This page provides - Slovenia Imports - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 761.0,
+    "te_h1": "Slovenia Imports"
+  },
+  "industrial-production": {
+    "slug": "industrial-production",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Industrial Production in Slovenia increased 3.80 percent in March of 2026 over the same month in the previous year. This page provides - Slovenia Industrial Production - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 3.8,
+    "te_h1": "Slovenia Industrial Production"
+  },
+  "inflation-cpi": {
+    "slug": "inflation-cpi",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Inflation Rate in Slovenia increased to 3.10 percent in April from 2.50 percent in March of 2026. This page provides the latest reported value for - Slovenia Inflation Rate - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 3.1,
+    "te_h1": "Slovenia Inflation Rate"
+  },
+  "interest-rate": {
+    "slug": "interest-rate",
+    "te_source_name": "European Central Bank",
+    "te_source_url": null,
+    "te_meta_desc": "The benchmark interest rate in Slovenia was last recorded at 4.50 percent. This page provides - Slovenia Interest Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 4.5,
+    "te_h1": "Slovenia Interest Rate"
+  },
+  "job-vacancies": {
+    "slug": "job-vacancies",
+    "te_source_url": "https://www.ess.gov.si/",
+    "te_source_name": "Employment Service of Slovenia",
+    "te_meta_desc": "Job Vacancies in Slovenia decreased to 11437 in April from 12983 in March of 2026. This page provides - Slovenia Job Vacancies - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 114.0,
+    "te_h1": "Slovenia Job Vacancies"
+  },
+  "labor-force-participation-rate": {
+    "slug": "labor-force-participation-rate",
+    "te_source_url": "http://pxweb.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Labor Force Participation Rate in Slovenia decreased to 58.50 percent in the fourth quarter of 2025 from 59.10 percent in the third quarter of 2025. This page provides - Slovenia Labor Force Participation Rate- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 58.5,
+    "te_h1": "Slovenia Labor Force Participation Rate"
+  },
+  "labour-costs": {
+    "slug": "labour-costs",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "Labour Costs in Slovenia increased to 157.90 points in the fourth quarter of 2025 from 133.40 points in the third quarter of 2025. This page provides - Slovenia Labour Costs - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 157.9,
+    "te_h1": "Slovenia Labour Costs"
+  },
+  "long-term-unemployment-rate": {
+    "slug": "long-term-unemployment-rate",
+    "te_source_name": "EUROSTAT",
+    "te_source_url": null,
+    "te_meta_desc": "Long Term Unemployment Rate in Slovenia increased to 1.30 percent in the fourth quarter of 2025 from 1.10 percent in the third quarter of 2025. This page provides - Slovenia Long Term Unemployment Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 1.3,
+    "te_h1": "Slovenia Long Term Unemployment Rate"
+  },
+  "manufacturing-production": {
+    "slug": "manufacturing-production",
+    "te_source_url": "http://pxweb.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Manufacturing Production in Slovenia increased 6.40 percent in March of 2026 over the same month in the previous year. This page provides the latest reported value for - Slovenia Manufacturing Production - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 6.4,
+    "te_h1": "Slovenia Manufacturing Production"
+  },
+  "medical-doctors": {
+    "slug": "medical-doctors",
+    "te_source_name": "OECD",
+    "te_source_url": null,
+    "te_meta_desc": "Medical Doctors in Slovenia increased to 3.30 per 1000 people in 2020 from 3.26 per 1000 people in 2019. This page includes a chart with historical data for Slovenia Medical Doctors.",
+    "te_value_meta": 3.3,
+    "te_h1": "Slovenia Medical Doctors"
+  },
+  "minimum-wages": {
+    "slug": "minimum-wages",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_name": "EUROSTAT",
+    "te_meta_desc": "Minimum Wages in Slovenia remained unchanged at 1278 EUR/Month in the second quarter of 2026 from 1278 EUR/Month in the fourth quarter of 2025. This page provides - Slovenia Minimum Wages - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 127.0,
+    "te_h1": "Slovenia Gross Minimum Monthly Wage"
+  },
+  "mining-production": {
+    "slug": "mining-production",
+    "te_source_url": "http://pxweb.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Mining production in Slovenia decreased 12 percent in March of 2026 over the same month in the previous year. This page provides - Slovenia Mining Production- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 12.0,
+    "te_h1": "Slovenia Mining Production"
+  },
+  "nurses": {
+    "slug": "nurses",
+    "te_source_name": "OECD",
+    "te_source_url": null,
+    "te_meta_desc": "Nurses in Slovenia increased to 10.66 per 1000 people in 2023 from 10.57 per 1000 people in 2022. This page includes a chart with historical data for Slovenia Nurses.",
+    "te_value_meta": 10.66,
+    "te_h1": "Slovenia Nurses"
+  },
+  "personal-income-tax-rate": {
+    "slug": "personal-income-tax-rate",
+    "te_source_url": "http://ec.europa.eu",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_meta_desc": "The Personal Income Tax Rate in Slovenia stands at 50 percent. This page provides - Slovenia Personal Income Tax Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 50.0,
+    "te_h1": "Slovenia Personal Income Tax Rate"
+  },
+  "population": {
+    "slug": "population",
+    "te_source_url": "http://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "The total population in Slovenia was estimated at 2.1 million people in 2025, according to the latest census figures and projections from Trading Economics. This page provides - Slovenia Population - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 2.1,
+    "te_h1": "Slovenia Population"
+  },
+  "ppi": {
+    "slug": "ppi",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Producer Prices in Slovenia increased to 126.98 points in March from 126.76 points in February of 2026. This page provides the latest reported value for - Slovenia Producer Prices - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 126.98,
+    "te_h1": "Slovenia Producer Prices"
+  },
+  "productivity": {
+    "slug": "productivity",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_name": "EUROSTAT",
+    "te_meta_desc": "Productivity in Slovenia decreased to 117.09 points in the fourth quarter of 2025 from 117.40 points in the third quarter of 2025. This page provides - Slovenia Productivity- actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 117.09,
+    "te_h1": "Slovenia Productivity"
+  },
+  "retail-sales": {
+    "slug": "retail-sales",
+    "te_source_url": "https://www.stat.si",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Retail Sales in Slovenia increased 4.20 percent in March of 2026 over the previous month. This page provides - Slovenia Retail Sales MoM - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 4.2,
+    "te_h1": "Slovenia Retail Sales MoM"
+  },
+  "retirement-age-men": {
+    "slug": "retirement-age-men",
+    "te_source_url": "https://e-uprava.gov.si",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_meta_desc": "Retirement Age Men in Slovenia remained unchanged at 60 Years in 2025 from 60 Years in 2024. This page provides - Slovenia Retirement Age Men - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 60.0,
+    "te_h1": "Slovenia Retirement Age - Men"
+  },
+  "retirement-age-women": {
+    "slug": "retirement-age-women",
+    "te_source_url": "https://e-uprava.gov.si",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_meta_desc": "Retirement Age Women in Slovenia remained unchanged at 60 Years in 2025 from 60 Years in 2024. This page provides - Slovenia Retirement Age Women - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 60.0,
+    "te_h1": "Slovenia Retirement Age - Women"
+  },
+  "sales-tax-rate": {
+    "slug": "sales-tax-rate",
+    "te_source_url": "https://www.vatlive.com",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_meta_desc": "The Sales Tax Rate in Slovenia stands at 22 percent. This page provides - Slovenia Sales Tax Rate | VAT - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 22.0,
+    "te_h1": "Slovenia Sales Tax Rate"
+  },
+  "services-inflation": {
+    "slug": "services-inflation",
+    "te_meta_desc": "Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.",
+    "te_value_meta": 196.0
+  },
+  "services-sentiment": {
+    "slug": "services-sentiment",
+    "te_meta_desc": "Get Free Economic Indicators Charts, Historical Data and Forecasts for 196 Countries.",
+    "te_value_meta": 196.0
+  },
+  "social-security-rate-companies": {
+    "slug": "social-security-rate-companies",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "The Social Security Rate For Companies in Slovenia stands at 16.10 percent. This page provides - Slovenia Social Security Rate For Companies - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 16.1,
+    "te_h1": "Slovenia Social Security Rate For Companies"
+  },
+  "social-security-rate-employees": {
+    "slug": "social-security-rate-employees",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "The Social Security Rate For Employees in Slovenia stands at 22.10 percent. This page provides - Slovenia Social Security Rate For Employees - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 22.1,
+    "te_h1": "Slovenia Social Security Rate For Employees"
+  },
+  "social-security-rate": {
+    "slug": "social-security-rate",
+    "te_source_name": "Tax Administration of the Republic of Slovenia",
+    "te_source_url": null,
+    "te_meta_desc": "The Social Security Rate in Slovenia stands at 38.20 percent. This page provides - Slovenia Social Security Rate - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 38.2,
+    "te_h1": "Slovenia Social Security Rate"
+  },
+  "terrorism-index": {
+    "slug": "terrorism-index",
+    "te_source_name": "Institute for Economics and Peace",
+    "te_source_url": null,
+    "te_meta_desc": "Terrorism Index in Slovenia remained unchanged at 0 Points in 2025 from 0 Points in 2024. Slovenia Terrorism Index - values, historical data, forecasts and news - updated on May of 2026.",
+    "te_value_meta": 0.0,
+    "te_h1": "Slovenia Terrorism Index"
+  },
+  "trade-balance": {
+    "slug": "trade-balance",
+    "te_source_url": "http://www.stat.si/eng/",
+    "te_source_name": "Statistical Office of the Republic of Slovenia",
+    "te_meta_desc": "Slovenia recorded a trade deficit of 1104.60 EUR Million in March of 2026. This page provides - Slovenia Balance of Trade - actual values, historical data, forecast, chart, statistics, economic calendar and news.",
+    "te_value_meta": 110.0,
+    "te_h1": "Slovenia Balance of Trade"
+  },
+  "unemployed-persons": {
+    "slug": "unemployed-persons",
+    "te_source_url": "https://www.ess.gov.si",
+    "te_source_name": "Employment Service of Slovenia",
+    "te_meta_desc": "The number of unemployed persons in Slovenia decreased to 45760 in March of 2026 from 48096 in February of 2026. This page provides the latest reported value for - Slovenia Unemployed Persons - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 457.0,
+    "te_h1": "Slovenia Unemployed Persons"
+  },
+  "unemployment": {
+    "slug": "unemployment",
+    "te_source_url": "https://www.ess.gov.si",
+    "te_source_name": "Employment Service of Slovenia",
+    "te_meta_desc": "Unemployment Rate in Slovenia decreased to 4.90 percent in February from 5 percent in January of 2026. This page provides the latest reported value for - Slovenia Unemployment Rate - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 4.9,
+    "te_h1": "Slovenia Unemployment Rate"
+  },
+  "youth-unemployment-rate": {
+    "slug": "youth-unemployment-rate",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_source_name": "EUROSTAT",
+    "te_meta_desc": "Youth Unemployment Rate in Slovenia remained unchanged at 9.50 percent in March. This page provides the latest reported value for - Slovenia Youth Unemployment Rate - plus previous releases, historical high and low, short-term forecast and long-term prediction, economic calendar, survey consensus and news.",
+    "te_value_meta": 9.5,
+    "te_h1": "Slovenia Youth Unemployment Rate"
+  }
+}

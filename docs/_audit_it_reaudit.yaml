@@ -1,0 +1,1254 @@
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 8.823529411764701
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: -3.1
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/government-budget
+  te_period: null
+  te_value: 3.1
+  value_match: false
+  yoy_computed: -6.896551724137938
+business-confidence:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: null
+  our_series: ei_bsin_m_r2:BCI
+  our_source: eurostat
+  our_unit: null
+  our_value: null
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/business-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-06-30'
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 75
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: European Commission
+  te_page: https://tradingeconomics.com/italy/capacity-utilization
+  te_period: in the first quarter of 2026
+  te_value: 74.7
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 1161.5384615384614
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P52
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 4.14
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/changes-in-inventories
+  te_period: in the fourth quarter of 2025
+  te_value: 5003.0
+  value_match: false
+  yoy_computed: -33.44051446945338
+consumer-confidence:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsco_m:BS-CSMCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: -20.6
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/consumer-confidence
+  te_period: in April 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-spending:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 0.4830768277954982
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P31_S14
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 324.49
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/consumer-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 277560.9
+  value_match: false
+  yoy_computed: 8.467041048268479
+core-cpi:
+  fix_summary: TE parser extracted 6.29 from averaged-since-2000 phrase. TE current 1.6% YoY matches our index YoY computation.
+  fixed: false
+  flag: frontend-only
+  mom_computed: 1.285855588526223
+  our_period: '2026-04-30'
+  our_series: ISTAT/IT1,168_760_DF_DCSP_IPCA1B2015_1,1.0/M.IT.41.4.00XEFOODUNP
+  our_source: istat
+  our_unit: Index
+  our_value: 102.4
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/core-inflation-rate
+  te_period: in April of 2026
+  te_value: 6.29
+  value_match: false
+  yoy_computed: 1.6881827209533296
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 24
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Agenzia delle Entrate, Ministero dell'Economia e delle finanze
+  te_page: https://tradingeconomics.com/italy/corporate-tax-rate
+  te_period: null
+  te_value: 24.0
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: IT:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 56
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/italy/corruption-index
+  te_period: null
+  te_value: 56.0
+  value_match: true
+  yoy_computed: null
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: IT:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 41
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Transparency International
+  te_page: https://tradingeconomics.com/italy/corruption-rank
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: TE has no /italy/cpi-clothing page; we keep Eurostat HICP CP-HI03 as honest approximation.
+  fixed: false
+  flag: te-no-page
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI03
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103.3
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/cpi-transportation
+  te_period: in April of 2026
+  te_value: 104.4
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  fix_summary: TE has no /italy/cpi-education page; we keep Eurostat HICP CP-HI10.
+  fixed: false
+  flag: te-no-page
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI10
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.2
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/italy/cpi-education
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-food:
+  fix_summary: TE has no /italy/cpi-food page; we keep Eurostat HICP CP-HI01.
+  fixed: false
+  flag: te-no-page
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI01
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.8
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/cpi-housing-utilities
+  te_period: in April
+  te_value: 105.5
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI04
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.8
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/cpi-housing-utilities
+  te_period: in April
+  te_value: 105.5
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: TE has no /italy/cpi-recreation-and-culture page; we keep Eurostat HICP CP-HI09.
+  fixed: false
+  flag: te-no-page
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI09
+  our_source: eurostat
+  our_unit: Index
+  our_value: 100.2
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/italy/cpi-recreation-and-culture
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI07
+  our_source: eurostat
+  our_unit: Index
+  our_value: 101.9
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/cpi-transportation
+  te_period: in April of 2026
+  te_value: 104.4
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-01'
+  our_series: IT:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 47
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/italy/credit-rating
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: TE attributes Banca d'Italia (EUR bn monthly); we fetch Eurostat bop_c6_q quarterly. Hard-constraint-allowed.
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 4.84
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: Banca d'Italia
+  te_page: https://tradingeconomics.com/italy/current-account
+  te_period: in February 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: Switched bop_gdp6_q (no IT data) -> tipsbp20 annual. Matches TE 1.1 for 2025.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-01-01'
+  our_series: tipsbp20
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 1.1
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/italy/current-account-to-gdp
+  te_period: null
+  te_value: 1.1
+  value_match: true
+  yoy_computed: null
+disposable-personal-income:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_unit: Million EUR
+  our_value: 364784
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/disposable-personal-income
+  te_period: in the fourth quarter of 2025
+  te_value: 364784.0
+  value_match: true
+  yoy_computed: null
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: ISTAT/IT1,EMP,1.0
+  our_source: istat
+  our_unit: Thousand
+  our_value: 24121.324
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/employed-persons
+  te_period: in March of 2026
+  te_value: 24123.82
+  value_match: true
+  yoy_computed: null
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsa_ergan:Y15-64
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 62.5
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/employment-rate
+  te_period: in March
+  te_value: 62.4
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 5.3639846743294965
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIE:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 110
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/energy-inflation
+  te_period: in April
+  te_value: 9.2
+  value_match: false
+  yoy_computed: 9.670987038883352
+exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: ISTAT/IT1,139_176,1.0/M.ITTOT.EV.0010.WORLD
+  our_source: istat
+  our_unit: Billion EUR
+  our_value: 727.7
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/exports
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 1.079489695780171
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIF:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 103
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/food-inflation
+  te_period: in April of 2026
+  te_value: 13.6
+  value_match: false
+  yoy_computed: 3.206412825651306
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 2380.83
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/italy/gdp
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: TE parser extracted "272% of world average"; actual TE 34398 USD matches our 34495.25. No fix needed.
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.7464735339077446
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_unit: USD (constant 2015)
+  our_value: 34495.25
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/italy/gdp-per-capita
+  te_period: null
+  te_value: 272.0
+  value_match: false
+  yoy_computed: 11.442487273615413
+gdp-per-capita-ppp:
+  fix_summary: TE parser extracted "299% of world average"; actual TE 53115 USD matches our 53265. No fix needed.
+  fixed: false
+  flag: frontend-only
+  mom_computed: 0.7464867346203404
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_unit: Int. USD (PPP constant 2021)
+  our_value: 53265
+  source_match: true
+  suggested_source: worldbank
+  te_http: 200
+  te_label: World Bank
+  te_page: https://tradingeconomics.com/italy/gdp-per-capita-ppp
+  te_period: null
+  te_value: 299.0
+  value_match: false
+  yoy_computed: 11.44247338059535
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 0.16563146997930236
+  our_period: '2026-03-31'
+  our_series: namq_10_gdp:CLV10_MEUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 435.42
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/gdp-growth-annual
+  te_period: in the first quarter of 2026
+  te_value: 19.2
+  value_match: false
+  yoy_computed: 1.9575703648199347
+government-debt:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 1.7817371937639241
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_unit: '% of GDP'
+  our_value: 137.1
+  source_match: false
+  suggested_source: ecb
+  te_http: 200
+  te_label: Banca d'Italia
+  te_page: https://tradingeconomics.com/italy/government-debt
+  te_period: in February
+  te_value: 3139864.0
+  value_match: false
+  yoy_computed: 3.94238059135708
+government-debt-total:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 4.344118638355237
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_EUR
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 3095.89
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/government-debt-to-gdp
+  te_period: null
+  te_value: 137.1
+  value_match: false
+  yoy_computed: 44.82340833606213
+government-spending:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 0.9568915522907493
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 104.45
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 92308.3
+  value_match: false
+  yoy_computed: 10.307318618650338
+government-spending-eur:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 0.9568915522907493
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 104.45
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/government-spending
+  te_period: in the fourth quarter of 2025
+  te_value: 92308.3
+  value_match: false
+  yoy_computed: 10.307318618650338
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 0.9730599115400146
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P51G
+  our_source: eurostat
+  our_unit: Billion EUR
+  our_value: 125.56
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/gross-fixed-capital-formation
+  te_period: in the fourth quarter of 2025
+  te_value: 111407.2
+  value_match: false
+  yoy_computed: 12.49888002867127
+hospital-beds:
+  fix_summary: Curated 3.20 (2022) -> 3.04 (2023), matches TE OECD 2023
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2023-12-31'
+  our_series: IT:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 3.04
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/italy/hospital-beds
+  te_period: null
+  te_value: 3.04
+  value_match: true
+  yoy_computed: null
+house-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_unit: Index
+  our_value: 118.1
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/italy/housing-index
+  te_period: in the fourth quarter of 2025
+  te_value: 118.1
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: ISTAT/IT1,139_176,1.0/M.ITTOT.IV.0010.WORLD
+  our_source: istat
+  our_unit: Billion EUR
+  our_value: 684.1
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/imports
+  te_period: in February 2026
+  te_value: null
+  value_match: null
+  yoy_computed: null
+industrial-production:
+  fix_summary: TE 1.5% = YoY growth; our 94.4 = index level. Frontend computes YoY.
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.5268703898840885
+  our_period: '2026-03-31'
+  our_series: ISTAT/IT1,IND,1.0
+  our_source: istat
+  our_unit: Index
+  our_value: 94.4
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/industrial-production
+  te_period: in March 2026
+  te_value: 1.5
+  value_match: false
+  yoy_computed: -0.3167898627243898
+inflation-cpi:
+  fix_summary: TE 2.7% = YoY growth; our 102.8 = index level (NIC 2026=100). Frontend computes YoY.
+  fixed: false
+  flag: frontend-only
+  mom_computed: -0.5802707930367587
+  our_period: '2026-04-30'
+  our_series: ISTAT/IT1,CPI,1.0
+  our_source: istat
+  our_unit: Index
+  our_value: 102.8
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/inflation-cpi
+  te_period: in April 2026
+  te_value: 2.7
+  value_match: false
+  yoy_computed: -16.218418907905466
+interest-rate:
+  fix_summary: TE parser extracted historical 4.75% (all-time high); current 2.15 matches our ECB MRR_FR. No fix needed.
+  fixed: false
+  flag: frontend-only
+  mom_computed: -10.416666666666668
+  our_period: '2025-06-11'
+  our_series: D.U2.EUR.4F.KR.MRR_FR.LEV
+  our_source: ecb
+  our_unit: '%'
+  our_value: 2.15
+  source_match: true
+  suggested_source: ecb
+  te_http: 200
+  te_label: European Central Bank
+  te_page: https://tradingeconomics.com/italy/interest-rate
+  te_period: in October of 2000
+  te_value: 4.75
+  value_match: false
+  yoy_computed: -38.57142857142858
+job-vacancies:
+  fix_summary: TE 1.6% Q4 2025 (Job Vacancy Rate); our 1.9% Q3. Slight vintage lag from Eurostat jvs_q_nace2.
+  fixed: false
+  flag: frontend-only
+  mom_computed: 5.555555555555548
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JVR
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 1.9
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/italy/job-vacancy-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 1.6
+  value_match: false
+  yoy_computed: -17.391304347826082
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lfsi_emp_q:ACT
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 66.2
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/labor-force-participation-rate
+  te_period: in March
+  te_value: 65.9
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: lc_lci_r2_q:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 110.7
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/labour-costs
+  te_period: in the fourth quarter of 2025
+  te_value: 111.6
+  value_match: true
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 2.8
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/italy/long-term-unemployment-rate
+  te_period: in the fourth quarter of 2025
+  te_value: 2.8
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ISTAT/115_333_DF_DCSC_INDXPRODIND_1_6/M.IT.IND_PROD_21.N.0040
+  our_source: istat
+  our_unit: Index
+  our_value: 94.6
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/manufacturing-production
+  te_period: in March of 2026
+  te_value: 90.82
+  value_match: true
+  yoy_computed: null
+medical-doctors:
+  fix_summary: Curated 4.18 (2021) -> 4.25 (2022), matches TE OECD 2022
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2022-12-31'
+  our_series: IT:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 4.25
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/italy/medical-doctors
+  te_period: null
+  te_value: 4.25
+  value_match: true
+  yoy_computed: null
+minimum-wages:
+  fix_summary: Italy has no statutory minimum wage; curated value=0 reflects reality. TE shows annual nominal wages as proxy. Documented as concept gap.
+  fixed: false
+  flag: concept-gap
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:minimum-wages
+  our_source: curated
+  our_unit: EUR/Month
+  our_value: 0
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/italy/wages
+  te_period: null
+  te_value: 33148.0
+  value_match: false
+  yoy_computed: null
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: 13.27433628318584
+  our_period: '2026-03-31'
+  our_series: sts_inpr_m:B:I21
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.4
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/mining-production
+  te_period: in March of 2026
+  te_value: 51.21
+  value_match: false
+  yoy_computed: 6.444906444906448
+nurses:
+  fix_summary: Curated 6.42 (2021) -> 6.93 (2023), matches TE OECD 2023
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2023-12-31'
+  our_series: IT:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 6.93
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: OECD
+  te_page: https://tradingeconomics.com/italy/nurses
+  te_period: null
+  te_value: 6.93
+  value_match: true
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: Curated 43% -> 45% IRPEF top marginal (matches TE 2026)
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 45
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Agenzia delle Entrate, Ministero dell'Economia e delle finanze
+  te_page: https://tradingeconomics.com/italy/personal-income-tax-rate
+  te_period: null
+  te_value: 45.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: Switched ISTAT -> Eurostat (tps00001). TE attributes to EUROSTAT.
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: tps00001
+  our_source: eurostat
+  our_unit: Millions
+  our_value: 58.94
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/italy/population
+  te_period: null
+  te_value: 58.9
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ISTAT/IT1,PPI,1.0
+  our_source: istat
+  our_unit: Index
+  our_value: 129.9
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/producer-prices
+  te_period: in March
+  te_value: 129.9
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_unit: Index
+  our_value: 94.86
+  source_match: true
+  suggested_source: eurostat
+  te_http: 200
+  te_label: EUROSTAT
+  te_page: https://tradingeconomics.com/italy/productivity
+  te_period: in the third quarter of 2025
+  te_value: 97.91
+  value_match: true
+  yoy_computed: null
+retail-sales:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  mom_computed: -5.322415557830095
+  our_period: '2026-03-31'
+  our_series: ISTAT/120_337_DF_DCSC_COMMDET_1_15/M.IT.RTD_TURN_VOL_21.N.1.9.TOTAL
+  our_source: istat
+  our_unit: Index
+  our_value: 92.5
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/retail-sales-annual
+  te_period: in March 2026
+  te_value: 1.6
+  value_match: false
+  yoy_computed: 2.0971302428256138
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 67
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministero del Lavoro e delle Politiche Sociali
+  te_page: https://tradingeconomics.com/italy/retirement-age-men
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 67
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/italy/retirement-age-women
+  te_period: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 22
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Agenzia delle Entrate, Ministero dell'Economia e delle finanze
+  te_page: https://tradingeconomics.com/italy/sales-tax-rate
+  te_period: null
+  te_value: 22.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_source: eurostat
+  our_unit: Index
+  our_value: 102.2
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/services-inflation
+  te_period: in April
+  te_value: 2.4
+  value_match: true
+  yoy_computed: 2.3023023023022993
+services-sentiment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_unit: Points
+  our_value: 5.7
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: S&P Global
+  te_page: https://tradingeconomics.com/italy/services-pmi
+  te_period: in April
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: Curated 39.49% -> 40% (matches TE 2026)
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 40
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/italy/social-security-rate
+  te_period: null
+  te_value: 40.0
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 30
+  source_match: null
+  suggested_source: null
+  te_http: 200
+  te_label: null
+  te_page: https://tradingeconomics.com/italy/social-security-rate-for-companies
+  te_period: null
+  te_value: 30.0
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: Curated 9.49% -> 10% (matches TE 2026)
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2026-12-31'
+  our_series: IT:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 10
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Ministero del Lavoro e delle Politiche Sociali
+  te_page: https://tradingeconomics.com/italy/social-security-rate-for-employees
+  te_period: null
+  te_value: 10.0
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  fix_summary: Curated value 2.5 -> 1.0 (Global Terrorism Index 2025, matches TE)
+  fixed: true
+  flag: ok
+  mom_computed: null
+  our_period: '2025-12-31'
+  our_series: IT:terrorism-index
+  our_source: curated
+  our_unit: Points
+  our_value: 1
+  source_match: true
+  suggested_source: curated
+  te_http: 200
+  te_label: Institute for Economics and Peace
+  te_page: https://tradingeconomics.com/italy/terrorism-index
+  te_period: null
+  te_value: 1.0
+  value_match: true
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ISTAT/IT1,UEM,1.0
+  our_source: istat
+  our_unit: Thousand
+  our_value: 1323
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/unemployed-persons
+  te_period: in March of 2026
+  te_value: 1322.51
+  value_match: true
+  yoy_computed: null
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: ISTAT/IT1,151_874_DF_DCCV_TAXDISOCCUMENS1_1,1.0/M.IT.UNEM_R.N.9.Y15-74.
+  our_source: istat
+  our_unit: '%'
+  our_value: 5.2
+  source_match: true
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/unemployment-rate
+  te_period: in March 2026
+  te_value: 5.2
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: hard-constraint-allowed
+  mom_computed: null
+  our_period: '2026-03-31'
+  our_series: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_unit: '%'
+  our_value: 18.1
+  source_match: false
+  suggested_source: istat
+  te_http: 200
+  te_label: National Institute of Statistics (ISTAT)
+  te_page: https://tradingeconomics.com/italy/youth-unemployment-rate
+  te_period: in March 2026
+  te_value: 18.1
+  value_match: true
+  yoy_computed: null

@@ -1,0 +1,1397 @@
+budget-deficit:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: -1036.81
+  db_series_id: NSI-BG/CGO/GBXCCB_G01_CA_XDC
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'Ministry of Finance of the Republic of Bulgaria' (suggest=curated), DB has nsi_bg
+  slug: budget-deficit
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: government-budget-value
+  te_source_name: Ministry of Finance of the Republic of Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Government Budget Value
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/government-budget-value
+  verdict: source_mismatch
+business-confidence:
+  audit_date: '2026-05-17'
+  db_latest_date: null
+  db_latest_value: null
+  db_series_id: ei_bsin_m_r2:BCI
+  db_source: eurostat
+  db_unit: null
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: business-confidence
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: business-confidence
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Business Confidence
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/business-confidence
+  verdict: source_mismatch
+capacity-utilization:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-06-30'
+  db_latest_value: 74.5
+  db_series_id: ei_bsin_q_r2:BS-ICU-PC
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: capacity-utilization
+  suggested_label: eurostat
+  te_latest_value: 73.5
+  te_period: Q1 2026
+  te_slug: capacity-utilization
+  te_source_name: European Commission
+  te_source_url: null
+  te_title: Bulgaria Capacity Utilization
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/capacity-utilization
+  verdict: ok
+changes-in-inventories:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 194.92
+  db_series_id: NSI-BG/NAG/P5M
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - no_change
+  notes: []
+  slug: changes-in-inventories
+  suggested_label: nsi_bg
+  te_latest_value: 357.62
+  te_period: Q4 2025
+  te_slug: changes-in-inventories
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en
+  te_title: Bulgaria Changes in Inventories
+  te_unit_hint: BGN Million
+  te_url: https://tradingeconomics.com/bulgaria/changes-in-inventories
+  verdict: ok
+consumer-confidence:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: -20.6
+  db_series_id: ei_bsco_m:BS-CSMCI
+  db_source: eurostat
+  db_unit: Points
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: consumer-confidence
+  suggested_label: nsi_bg
+  te_latest_value: -28.6
+  te_period: Q2 2026
+  te_slug: consumer-confidence
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Consumer Confidence
+  te_unit_hint: points
+  te_url: https://tradingeconomics.com/bulgaria/consumer-confidence
+  verdict: source_mismatch
+consumer-spending:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 20047.11
+  db_series_id: NSI-BG/NAG/P31
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - no_change
+  notes: []
+  slug: consumer-spending
+  suggested_label: nsi_bg
+  te_latest_value: 31365.12
+  te_period: Q4 2025
+  te_slug: consumer-spending
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en
+  te_title: Bulgaria Consumer Spending
+  te_unit_hint: BGN Million
+  te_url: https://tradingeconomics.com/bulgaria/consumer-spending
+  verdict: ok
+core-cpi:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: 102.96
+  db_series_id: ei_cphi_m:CP-HI00XEF
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: core-cpi
+  suggested_label: eurostat
+  te_latest_value: 4.6
+  te_period: April 2026
+  te_slug: core-inflation-rate
+  te_source_name: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_title: Bulgaria Core Inflation Rate
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/core-inflation-rate
+  verdict: ok
+corporate-tax-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 10
+  db_series_id: BG:corporate-tax-rate
+  db_source: curated
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: corporate-tax-rate
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: corporate-tax-rate
+  te_source_name: National Revenue Agency, Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Corporate Tax Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/corporate-tax-rate
+  verdict: ok
+corruption-index:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 43
+  db_series_id: BG:corruption-index
+  db_source: curated
+  db_unit: Points
+  decision:
+  - no_change
+  notes: []
+  slug: corruption-index
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: corruption-index
+  te_source_name: Transparency International
+  te_source_url: null
+  te_title: Bulgaria Corruption Index
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/corruption-index
+  verdict: ok
+corruption-rank:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 76
+  db_series_id: BG:corruption-rank
+  db_source: curated
+  db_unit: Rank
+  decision:
+  - no_change
+  notes: []
+  slug: corruption-rank
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: corruption-rank
+  te_source_name: Transparency International
+  te_source_url: null
+  te_title: Bulgaria Corruption Rank
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/corruption-rank
+  verdict: ok
+cpi-clothing:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 95.52
+  db_series_id: ei_cphi_m:CP-HI03
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: cpi-clothing
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: cpi-clothing
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria CPI Clothing
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/cpi-clothing
+  verdict: source_mismatch
+cpi-education:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 105.81
+  db_series_id: ei_cphi_m:CP-HI10
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: cpi-education
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: cpi-education
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria CPI Education
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/cpi-education
+  verdict: source_mismatch
+cpi-food:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 103.03
+  db_series_id: ei_cphi_m:CP-HI01
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: cpi-food
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: cpi-food
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria CPI Food
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/cpi-food
+  verdict: source_mismatch
+cpi-housing-utilities:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 103.13
+  db_series_id: ei_cphi_m:CP-HI04
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: cpi-housing-utilities
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: cpi-housing-utilities
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria CPI Housing & Utilities
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/cpi-housing-utilities
+  verdict: source_mismatch
+cpi-recreation-and-culture:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 107.43
+  db_series_id: ei_cphi_m:CP-HI09
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: cpi-recreation-and-culture
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: cpi-recreation-and-culture
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria CPI Recreation And Culture
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/cpi-recreation-and-culture
+  verdict: source_mismatch
+cpi-transportation:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 104.16
+  db_series_id: ei_cphi_m:CP-HI07
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: cpi-transportation
+  suggested_label: nsi_bg
+  te_latest_value: 119.5
+  te_period: April 2026
+  te_slug: cpi-transportation
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria CPI Transportation
+  te_unit_hint: points
+  te_url: https://tradingeconomics.com/bulgaria/cpi-transportation
+  verdict: source_mismatch
+credit-rating:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-01'
+  db_latest_value: 65
+  db_series_id: BG:credit-rating
+  db_source: curated
+  db_unit: Rating
+  decision:
+  - kept_curated (credit-rating TE has no parseable source attribution)
+  notes:
+  - Could not parse TE source from page
+  slug: credit-rating
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: rating
+  te_source_name: null
+  te_source_url: null
+  te_title: Bulgaria - Credit Rating
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/rating
+  verdict: unparsed
+current-account:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-02-28'
+  db_latest_value: -170.1
+  db_series_id: NSI-BG/BOP/CA_B
+  db_source: nsi_bg
+  db_unit: Million EUR
+  decision:
+  - no_change
+  notes: []
+  slug: current-account
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: current-account
+  te_source_name: Bulgarian National Bank
+  te_source_url: http://www.bnb.bg
+  te_title: Bulgaria Current Account
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/current-account
+  verdict: ok
+current-account-to-gdp:
+  audit_date: '2026-05-17'
+  db_latest_date: null
+  db_latest_value: null
+  db_series_id: bop_gdp6_q:CA
+  db_source: eurostat
+  db_unit: null
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'Bulgarian National Bank' (suggest=nsi_bg), DB has eurostat
+  slug: current-account-to-gdp
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: current-account-to-gdp
+  te_source_name: Bulgarian National Bank
+  te_source_url: http://www.bnb.bg
+  te_title: Bulgaria Current Account to GDP
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/current-account-to-gdp
+  verdict: source_mismatch
+disposable-personal-income:
+  audit_date: '2026-05-17'
+  db_latest_date: null
+  db_latest_value: null
+  db_series_id: nasq_10_nf_tr:B6G
+  db_source: eurostat
+  db_unit: null
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: disposable-personal-income
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: disposable-personal-income
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/disposable-personal-income
+  verdict: te_no_page
+employed-persons:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 2794.8
+  db_series_id: NSI-BG/LE_PE_NUM
+  db_source: nsi_bg
+  db_unit: Thousand
+  decision:
+  - no_change
+  notes: []
+  slug: employed-persons
+  suggested_label: nsi_bg
+  te_latest_value: 2919.5
+  te_period: Q4 2025
+  te_slug: employed-persons
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Employed Persons
+  te_unit_hint: Thousand
+  te_url: https://tradingeconomics.com/bulgaria/employed-persons
+  verdict: ok
+employment-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 70.9
+  db_series_id: lfsa_ergan:Y15-64
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: employment-rate
+  suggested_label: nsi_bg
+  te_latest_value: 53.1
+  te_period: Q4 2025
+  te_slug: employment-rate
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Employment Rate
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/employment-rate
+  verdict: source_mismatch
+energy-inflation:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: 115.48
+  db_series_id: ei_cphi_m:CP-HIE:HICP2025
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: energy-inflation
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: energy-inflation
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/energy-inflation
+  verdict: te_no_page
+exports:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 14638.4
+  db_series_id: NSI-BG/NAG/P6
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - no_change
+  notes: []
+  slug: exports
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: exports
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/
+  te_title: Bulgaria Exports
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/exports
+  verdict: ok
+food-inflation:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: 104.91
+  db_series_id: ei_cphi_m:CP-HIF:HICP2025
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: food-inflation
+  suggested_label: nsi_bg
+  te_latest_value: 5.7
+  te_period: April 2026
+  te_slug: food-inflation
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Food Inflation
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/food-inflation
+  verdict: source_mismatch
+gdp:
+  audit_date: '2026-05-17'
+  db_latest_date: '2024-12-31'
+  db_latest_value: 113.34
+  db_series_id: NY.GDP.MKTP.CD
+  db_source: worldbank
+  db_unit: Billion USD
+  decision:
+  - no_change
+  notes: []
+  slug: gdp
+  suggested_label: worldbank
+  te_latest_value: null
+  te_period: null
+  te_slug: gdp
+  te_source_name: World Bank
+  te_source_url: https://www.worldbank.org/
+  te_title: Bulgaria GDP
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/gdp
+  verdict: ok
+gdp-per-capita:
+  audit_date: '2026-05-17'
+  db_latest_date: '2024-12-31'
+  db_latest_value: 10126.9
+  db_series_id: NY.GDP.PCAP.KD
+  db_source: worldbank
+  db_unit: USD (constant 2015)
+  decision:
+  - no_change
+  notes: []
+  slug: gdp-per-capita
+  suggested_label: worldbank
+  te_latest_value: null
+  te_period: null
+  te_slug: gdp-per-capita
+  te_source_name: World Bank
+  te_source_url: https://www.worldbank.org/
+  te_title: Bulgaria GDP per capita
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/gdp-per-capita
+  verdict: ok
+gdp-per-capita-ppp:
+  audit_date: '2026-05-17'
+  db_latest_date: '2024-12-31'
+  db_latest_value: 34221.53
+  db_series_id: NY.GDP.PCAP.PP.KD
+  db_source: worldbank
+  db_unit: Int. USD (PPP constant 2021)
+  decision:
+  - no_change
+  notes: []
+  slug: gdp-per-capita-ppp
+  suggested_label: worldbank
+  te_latest_value: null
+  te_period: null
+  te_slug: gdp-per-capita-ppp
+  te_source_name: World Bank
+  te_source_url: https://www.worldbank.org/
+  te_title: Bulgaria GDP per capita PPP
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/gdp-per-capita-ppp
+  verdict: ok
+gdp-real:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 13.71
+  db_series_id: NSI-BG/NAG/B1GQ_Y
+  db_source: nsi_bg
+  db_unit: Billion EUR
+  decision:
+  - no_change
+  notes: []
+  slug: gdp-real
+  suggested_label: nsi_bg
+  te_latest_value: 2.9
+  te_period: Q1 2026
+  te_slug: gdp-growth-annual
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria GDP Annual Growth Rate
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/gdp-growth-annual
+  verdict: ok
+government-debt:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 29.9
+  db_series_id: gov_10dd_edpt1:GD
+  db_source: eurostat
+  db_unit: '% of GDP'
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'Ministry of Finance of the Republic of Bulgaria' (suggest=curated), DB has eurostat
+  slug: government-debt
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: government-debt
+  te_source_name: Ministry of Finance of the Republic of Bulgaria
+  te_source_url: https://www.minfin.bg
+  te_title: Bulgaria Government Debt
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/government-debt
+  verdict: source_mismatch
+government-debt-total:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 34.63
+  db_series_id: gov_10dd_edpt1:GD:MIO_EUR
+  db_source: eurostat
+  db_unit: Billion EUR
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'Ministry of Finance of the Republic of Bulgaria' (suggest=curated), DB has eurostat
+  slug: government-debt-total
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: government-debt
+  te_source_name: Ministry of Finance of the Republic of Bulgaria
+  te_source_url: https://www.minfin.bg
+  te_title: Bulgaria Government Debt
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/government-debt
+  verdict: source_mismatch
+government-spending:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 7335.51
+  db_series_id: NSI-BG/NAG/P3
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - no_change
+  notes: []
+  slug: government-spending
+  suggested_label: nsi_bg
+  te_latest_value: 4452.81
+  te_period: Q4 2025
+  te_slug: government-spending
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en
+  te_title: Bulgaria Government Spending
+  te_unit_hint: BGN Million
+  te_url: https://tradingeconomics.com/bulgaria/government-spending
+  verdict: ok
+government-spending-eur:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 6.39
+  db_series_id: namq_10_gdp:P3_S13
+  db_source: eurostat
+  db_unit: Billion EUR
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: government-spending-eur
+  suggested_label: nsi_bg
+  te_latest_value: 4452.81
+  te_period: Q4 2025
+  te_slug: government-spending
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en
+  te_title: Bulgaria Government Spending
+  te_unit_hint: BGN Million
+  te_url: https://tradingeconomics.com/bulgaria/government-spending
+  verdict: source_mismatch
+gross-fixed-capital-formation:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 7808.83
+  db_series_id: NSI-BG/NAG/P51G
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - no_change
+  notes: []
+  slug: gross-fixed-capital-formation
+  suggested_label: nsi_bg
+  te_latest_value: 9583.36
+  te_period: Q4 2025
+  te_slug: gross-fixed-capital-formation
+  te_source_name: National statistical institute, Bulgaria
+  te_source_url: https://www.nsi.bg/en/
+  te_title: Bulgaria Gross Fixed Capital Formation
+  te_unit_hint: BGN Million
+  te_url: https://tradingeconomics.com/bulgaria/gross-fixed-capital-formation
+  verdict: ok
+hospital-beds:
+  audit_date: '2026-05-17'
+  db_latest_date: '2022-12-31'
+  db_latest_value: 7.6
+  db_series_id: BG:hospital-beds
+  db_source: curated
+  db_unit: per 1000 people
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: hospital-beds
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: hospital-beds
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/hospital-beds
+  verdict: te_no_page
+house-price-index:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 256.71
+  db_series_id: prc_hpi_q:INX
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: house-price-index
+  suggested_label: eurostat
+  te_latest_value: 256.71
+  te_period: Q4 2025
+  te_slug: housing-index
+  te_source_name: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_title: Bulgaria House Price Index
+  te_unit_hint: points
+  te_url: https://tradingeconomics.com/bulgaria/housing-index
+  verdict: ok
+imports:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 16553.62
+  db_series_id: NSI-BG/NAG/P7
+  db_source: nsi_bg
+  db_unit: Million BGN
+  decision:
+  - no_change
+  notes: []
+  slug: imports
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: imports
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg/
+  te_title: Bulgaria Imports
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/imports
+  verdict: ok
+industrial-production:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 94.2
+  db_series_id: NSI-BG/AIP_IX
+  db_source: nsi_bg
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: industrial-production
+  suggested_label: nsi_bg
+  te_latest_value: 4.8
+  te_period: March 2026
+  te_slug: industrial-production
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Industrial Production
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/industrial-production
+  verdict: ok
+inflation-cpi:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: 104.91
+  db_series_id: NSI-BG/PCPI_IX
+  db_source: nsi_bg
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: inflation-cpi
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: inflation-cpi
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Inflation Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/inflation-cpi
+  verdict: ok
+job-vacancies:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 0.8
+  db_series_id: jvs_q_nace2:JVR
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: job-vacancies
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: job-vacancies
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Job Vacancies
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/job-vacancies
+  verdict: source_mismatch
+labor-force-participation-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 73.4
+  db_series_id: lfsi_emp_q:ACT
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: labor-force-participation-rate
+  suggested_label: nsi_bg
+  te_latest_value: 54.8
+  te_period: Q4 2025
+  te_slug: labor-force-participation-rate
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Labor Force Participation Rate
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/labor-force-participation-rate
+  verdict: source_mismatch
+labour-costs:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 191.1
+  db_series_id: lc_lci_r2_q:I20
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: labour-costs
+  suggested_label: eurostat
+  te_latest_value: 186.98
+  te_period: Q4 2025
+  te_slug: labour-costs
+  te_source_name: EUROSTAT
+  te_source_url: null
+  te_title: Bulgaria Labour Costs
+  te_unit_hint: points
+  te_url: https://tradingeconomics.com/bulgaria/labour-costs
+  verdict: ok
+long-term-unemployment-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 1.4
+  db_series_id: une_ltu_q:LTU
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: long-term-unemployment-rate
+  suggested_label: eurostat
+  te_latest_value: null
+  te_period: null
+  te_slug: long-term-unemployment-rate
+  te_source_name: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_title: Bulgaria Long Term Unemployment Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/long-term-unemployment-rate
+  verdict: ok
+manufacturing-production:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 104.3
+  db_series_id: sts_inpr_m:C:I21
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: manufacturing-production
+  suggested_label: nsi_bg
+  te_latest_value: 4.0
+  te_period: March 2026
+  te_slug: manufacturing-production
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Manufacturing Production
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/manufacturing-production
+  verdict: source_mismatch
+medical-doctors:
+  audit_date: '2026-05-17'
+  db_latest_date: '2021-12-31'
+  db_latest_value: 4.2
+  db_series_id: BG:medical-doctors
+  db_source: curated
+  db_unit: per 1000 people
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: medical-doctors
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: medical-doctors
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/medical-doctors
+  verdict: te_no_page
+minimum-wages:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-01-31'
+  db_latest_value: 1077
+  db_series_id: BG:minimum-wages
+  db_source: curated
+  db_unit: BGN/Month
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'EUROSTAT' (suggest=eurostat), DB has curated
+  slug: minimum-wages
+  suggested_label: eurostat
+  te_latest_value: null
+  te_period: null
+  te_slug: minimum-wages
+  te_source_name: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_title: Bulgaria Gross Minimum Monthly Wage
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/minimum-wages
+  verdict: source_mismatch
+mining-production:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 62.6
+  db_series_id: sts_inpr_m:B:I21
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute of Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: mining-production
+  suggested_label: nsi_bg
+  te_latest_value: 27.3
+  te_period: March 2026
+  te_slug: mining-production
+  te_source_name: National Statistical Institute of Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Mining Production
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/mining-production
+  verdict: source_mismatch
+nurses:
+  audit_date: '2026-05-17'
+  db_latest_date: '2021-12-31'
+  db_latest_value: 4.5
+  db_series_id: BG:nurses
+  db_source: curated
+  db_unit: per 1000 people
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: nurses
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: nurses
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/nurses
+  verdict: te_no_page
+personal-income-tax-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 10
+  db_series_id: BG:personal-income-tax-rate
+  db_source: curated
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: personal-income-tax-rate
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: personal-income-tax-rate
+  te_source_name: National Revenue Agency, Bulgaria
+  te_source_url: http://ec.europa.eu
+  te_title: Bulgaria Personal Income Tax Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/personal-income-tax-rate
+  verdict: ok
+population:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 6.44
+  db_series_id: demo_pjan:TOTAL
+  db_source: eurostat
+  db_unit: Millions
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: population
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: population
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg
+  te_title: Bulgaria Population
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/population
+  verdict: source_mismatch
+ppi:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 153.6
+  db_series_id: NSI-BG/PPPI_IX
+  db_source: nsi_bg
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: ppi
+  suggested_label: nsi_bg
+  te_latest_value: null
+  te_period: null
+  te_slug: producer-prices
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: https://www.nsi.bg
+  te_title: Bulgaria Producer Prices
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/producer-prices
+  verdict: ok
+productivity:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 114.99
+  db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - no_change
+  notes: []
+  slug: productivity
+  suggested_label: eurostat
+  te_latest_value: 129.59
+  te_period: Q4 2025
+  te_slug: productivity
+  te_source_name: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_title: Bulgaria Productivity
+  te_unit_hint: points
+  te_url: https://tradingeconomics.com/bulgaria/productivity
+  verdict: ok
+retail-sales:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 130
+  db_series_id: sts_trtu_m:G47:I21
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'National Statistical Institute, Bulgaria' (suggest=nsi_bg), DB has eurostat
+  slug: retail-sales
+  suggested_label: nsi_bg
+  te_latest_value: 2.1
+  te_period: March 2026
+  te_slug: retail-sales
+  te_source_name: National Statistical Institute, Bulgaria
+  te_source_url: http://www.nsi.bg
+  te_title: Bulgaria Retail Sales MoM
+  te_unit_hint: percent
+  te_url: https://tradingeconomics.com/bulgaria/retail-sales
+  verdict: source_mismatch
+retirement-age-men:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 64
+  db_series_id: BG:retirement-age-men
+  db_source: curated
+  db_unit: Years
+  decision:
+  - no_change
+  notes: []
+  slug: retirement-age-men
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: retirement-age-men
+  te_source_name: National Revenue Agency
+  te_source_url: http://www.noi.bg
+  te_title: Bulgaria Retirement Age - Men
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/retirement-age-men
+  verdict: ok
+retirement-age-women:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 62
+  db_series_id: BG:retirement-age-women
+  db_source: curated
+  db_unit: Years
+  decision:
+  - no_change
+  notes: []
+  slug: retirement-age-women
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: retirement-age-women
+  te_source_name: National Revenue Agency
+  te_source_url: http://www.noi.bg
+  te_title: Bulgaria Retirement Age - Women
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/retirement-age-women
+  verdict: ok
+sales-tax-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 20
+  db_series_id: BG:sales-tax-rate
+  db_source: curated
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: sales-tax-rate
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: sales-tax-rate
+  te_source_name: National Revenue Agency, Bulgaria
+  te_source_url: https://www.vatlive.com
+  te_title: Bulgaria Sales Tax Rate - VAT
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/sales-tax-rate
+  verdict: ok
+services-inflation:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: 104.76
+  db_series_id: ei_cphi_m:CP-HIS:HICP2025
+  db_source: eurostat
+  db_unit: Index
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: services-inflation
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: services-inflation
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/services-inflation
+  verdict: te_no_page
+services-sentiment:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-04-30'
+  db_latest_value: -1.9
+  db_series_id: ei_bsse_m_r2:SCI
+  db_source: eurostat
+  db_unit: Points
+  decision:
+  - coverage_gap_kept_as_internal_eurostat_curated
+  notes:
+  - TE has no BG page for this EconPulse-internal slug
+  slug: services-sentiment
+  suggested_label: null
+  te_latest_value: null
+  te_period: null
+  te_slug: services-sentiment
+  te_source_name: null
+  te_source_url: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/services-sentiment
+  verdict: te_no_page
+social-security-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 32.7
+  db_series_id: BG:social-security-rate
+  db_source: curated
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: social-security-rate
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: social-security-rate
+  te_source_name: National Revenue Agency, Bulgaria
+  te_source_url: http://www.ey.com
+  te_title: Bulgaria Social Security Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/social-security-rate
+  verdict: ok
+social-security-rate-companies:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 18.92
+  db_series_id: BG:social-security-rate-companies
+  db_source: curated
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: social-security-rate-companies
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: social-security-rate-for-companies
+  te_source_name: National Revenue Agency, Bulgaria
+  te_source_url: http://www.ey.com
+  te_title: Bulgaria Social Security Rate For Companies
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/social-security-rate-for-companies
+  verdict: ok
+social-security-rate-employees:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-12-31'
+  db_latest_value: 13.78
+  db_series_id: BG:social-security-rate-employees
+  db_source: curated
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: social-security-rate-employees
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: social-security-rate-for-employees
+  te_source_name: National Revenue Agency, Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Social Security Rate For Employees
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/social-security-rate-for-employees
+  verdict: ok
+terrorism-index:
+  audit_date: '2026-05-17'
+  db_latest_date: '2025-12-31'
+  db_latest_value: 0
+  db_series_id: BG:terrorism-index
+  db_source: curated
+  db_unit: Points
+  decision:
+  - no_change
+  notes: []
+  slug: terrorism-index
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: terrorism-index
+  te_source_name: Institute for Economics and Peace
+  te_source_url: http://economicsandpeace.org
+  te_title: Bulgaria Terrorism Index
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/terrorism-index
+  verdict: ok
+unemployed-persons:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 97
+  db_series_id: une_rt_m:TOTAL:THS_PER
+  db_source: eurostat
+  db_unit: Thousand
+  decision:
+  - mapped_typo_to_curated_or_eurostat
+  notes:
+  - 'unmapped TE source: ''Minstry of Labour and Social Policy, Bulgaria'''
+  slug: unemployed-persons
+  suggested_label: null
+  te_latest_value: 151.12
+  te_period: March 2026
+  te_slug: unemployed-persons
+  te_source_name: Minstry of Labour and Social Policy, Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Unemployed Persons
+  te_unit_hint: Thousand
+  te_url: https://tradingeconomics.com/bulgaria/unemployed-persons
+  verdict: unknown_source
+unemployment:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 3.2
+  db_series_id: ei_lmhr_m:LM-UN-T-TOT
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - honest_fetch_label_kept (TE attributes upstream NSI/MoF/etc., we fetch from eurostat/curated)
+  notes:
+  - TE says 'Ministry of Labour and Social Policy of the Republic of Bulgaria' (suggest=curated), DB has eurostat
+  slug: unemployment
+  suggested_label: curated
+  te_latest_value: null
+  te_period: null
+  te_slug: unemployment-rate
+  te_source_name: Ministry of Labour and Social Policy of the Republic of Bulgaria
+  te_source_url: null
+  te_title: Bulgaria Unemployment Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/unemployment-rate
+  verdict: source_mismatch
+youth-unemployment-rate:
+  audit_date: '2026-05-17'
+  db_latest_date: '2026-03-31'
+  db_latest_value: 12.5
+  db_series_id: une_rt_m:Y_LT25
+  db_source: eurostat
+  db_unit: '%'
+  decision:
+  - no_change
+  notes: []
+  slug: youth-unemployment-rate
+  suggested_label: eurostat
+  te_latest_value: null
+  te_period: null
+  te_slug: youth-unemployment-rate
+  te_source_name: EUROSTAT
+  te_source_url: https://ec.europa.eu/eurostat/
+  te_title: Bulgaria Youth Unemployment Rate
+  te_unit_hint: null
+  te_url: https://tradingeconomics.com/bulgaria/youth-unemployment-rate
+  verdict: ok

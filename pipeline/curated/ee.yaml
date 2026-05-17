@@ -20,9 +20,10 @@ sales-tax-rate:
   note: "KMS (erhöht von 22% auf 24% ab Juli 2025)."
 
 social-security-rate:
-  value: 35
+  value: 37.40
   date: "2026-12-31"
   unit: "%"
+  note: "TE 37.40% (Sotsiaalmaksu + tööandja töötuskindlustusmakse + funded pension). Re-audit 2026-05-17."
 
 social-security-rate-companies:
   value: 33.8
@@ -30,9 +31,10 @@ social-security-rate-companies:
   unit: "%"
 
 social-security-rate-employees:
-  value: 1.6
+  value: 3.60
   date: "2026-12-31"
   unit: "%"
+  note: "TE 3.60% (1.6 unemployment + 2.0 funded pension). Re-audit 2026-05-17."
 
 retirement-age-men:
   value: 64.75
@@ -44,10 +46,8 @@ retirement-age-women:
   date: "2026-12-31"
   unit: "Years"
 
-minimum-wages:
-  value: 886
-  date: "2026-01-31"
-  unit: "EUR/Month"
+# minimum-wages: migrated to Eurostat (earn_mw_cur:EE:EUR, bi-annual) in migration 080.
+# Re-audit 2026-05-17: TE attributes EUROSTAT, value 886 matches.
 
 corruption-index:
   value: 76
@@ -65,9 +65,10 @@ credit-rating:
   unit: "Rating"
 
 hospital-beds:
-  value: 4.6
-  date: "2022-12-31"
+  value: 4.12
+  date: "2023-12-31"
   unit: "per 1000 people"
+  note: "TE 4.12 (2023 OECD). Re-audit 2026-05-17."
 
 medical-doctors:
   value: 3.50

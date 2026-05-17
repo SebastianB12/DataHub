@@ -19,17 +19,17 @@ sales-tax-rate:
   note: "FPA Standard Rate."
 
 social-security-rate:
-  value: 36.16
+  value: 35.16
   date: "2026-12-31"
   unit: "%"
 
 social-security-rate-companies:
-  value: 22.29
+  value: 21.79
   date: "2026-12-31"
   unit: "%"
 
 social-security-rate-employees:
-  value: 13.87
+  value: 13.37
   date: "2026-12-31"
   unit: "%"
 
@@ -43,19 +43,15 @@ retirement-age-women:
   date: "2026-12-31"
   unit: "Years"
 
-minimum-wages:
-  value: 880
-  date: "2026-04-01"
-  unit: "EUR/Month"
-  note: "Κατώτατος μισθός 2026."
+# minimum-wages: served by eurostat earn_mw_cur (geo=EL, currency=EUR), TE conform.
 
 corruption-index:
-  value: 49
+  value: 50
   date: "2025-12-31"
   unit: "Points"
 
 corruption-rank:
-  value: 59
+  value: 56
   date: "2025-12-31"
   unit: "Rank"
 
@@ -66,8 +62,8 @@ credit-rating:
   note: "Investment Grade since 2023."
 
 hospital-beds:
-  value: 4.21
-  date: "2022-12-31"
+  value: 4.24
+  date: "2023-12-31"
   unit: "per 1000 people"
 
 medical-doctors:
@@ -81,6 +77,6 @@ nurses:
   unit: "per 1000 people"
 
 terrorism-index:
-  value: 4.5
+  value: 2.79
   date: "2025-12-31"
   unit: "Points"

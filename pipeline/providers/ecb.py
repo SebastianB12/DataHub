@@ -97,6 +97,19 @@ COUNTRY_CA_SERIES = [
 ]
 
 
+# Country-specific labour-cost series (TE attributes "European Central Bank" for
+# French labour-costs). ECB LCI dataflow carries only EA/EU aggregates, so the
+# only ECB-published national-level labour cost index is in MNA (Main aggregates).
+# Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N — Unit Labour Cost (persons), SA, IX 2020=100.
+# Verified 2026-05-16: Q4 2025 ≈ 114.0 vs TE 113.8 (revision lag).
+COUNTRY_LC_SERIES = [
+    ("FR", "Q.S.FR.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N"),
+    # IE: ECB MNA only publishes ULC NSA for Ireland; SA variant 404s.
+    # Verified 2026-05-17: Q4 2025 ≈ 108.4 vs TE 109.16 (matches ±5%).
+    ("IE", "Q.N.IE.W2.S1.S1._Z.ULC_PS._Z._T._Z.IX.D.N"),
+]
+
+
 def _parse_period(period_str: str) -> date | None:
     """Parse ECB time period to date.
     Formats: '2024-03-15' (daily/business), '2026-W15' (weekly),
@@ -181,6 +194,27 @@ class EcbProvider(BaseProvider):
                 print(f"  OK {series['indicator']}: {len(raw)} periods x {len(targets)} countries")
             except Exception as e:
                 print(f"  FAIL {series['indicator']}: {e}")
+
+        # Country-specific MNA labour-cost (quarterly index 2020=100, SA).
+        for cc, key in COUNTRY_LC_SERIES:
+            try:
+                raw = _fetch_series("MNA", key)
+                sid = f"MNA/{key}"
+                for dt, value in raw:
+                    norm_dt = normalize_date(dt, "Q")
+                    all_points.append(DataPoint(
+                        indicator="labour-costs",
+                        country=cc,
+                        date=norm_dt,
+                        value=round(value, 2),
+                        source="ecb",
+                        unit="Index (2020=100)",
+                        series_id=sid,
+                        adjustment="SA",
+                    ))
+                print(f"  OK labour-costs/{cc}: {len(raw)} periods (MNA {key})")
+            except Exception as e:
+                print(f"  FAIL labour-costs/{cc}: {e}")
 
         # Country-specific BPS current-account (monthly, NSA, mill EUR).
         for cc, key in COUNTRY_CA_SERIES:

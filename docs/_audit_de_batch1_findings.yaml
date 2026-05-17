@@ -1,0 +1,364 @@
+# DE Batch 1 audit findings (2026-05-16)
+# 26 slugs verified against tradingeconomics.com/germany/<slug>
+# TE values pulled live; DB queries via Supabase indicator_sources + data_points
+bankruptcies:
+  te_label: "Federal Statistical Office"
+  te_value: 1919
+  te_period: "2026-01"
+  our_source: destatis
+  our_series: "52411-0011"
+  our_value: 1919
+  our_period: "2026-01-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Switched series_id 52411-0019 (industry-breakdown) -> 52411-0011 (Insolvenzverfahren Unternehmen Insgesamt). Added TABLES entry in destatis.py, upserted 193 points; Jan 2026 = 1919 matches TE exactly."
+  flag: null
+
+banks-balance-sheet:
+  te_label: "Deutsche Bundesbank"
+  te_value: 11379.5
+  te_period: "2026-03"
+  our_source: bundesbank
+  our_series: "BBBK10.M.TXI355"
+  our_value: 9979.82
+  our_period: "2026-02-28"
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: "value-mismatch: BBBK10.M.TXI355 returns ~10k EUR Bn (likely a subset like loans only); TE shows total balance sheet ~11.4k EUR Bn. Series likely needs to be the broader Bilanzsumme aggregate (e.g. BBK01.OU0308 or another TXI). Needs Bundesbank SDMX discovery."
+
+budget-deficit:
+  te_label: "Federal Statistical Office"
+  te_value: -2.7
+  te_period: "2025"
+  our_source: destatis
+  our_series: "81000-0031"
+  our_value: -119.15
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frontend-only: DB stores Finanzierungssaldo in Mrd EUR (-119.15); TE displays % of GDP (-2.7). Ratio -119.15 / ~4410 GDP = -2.70% — matches. Frontend computes the ratio."
+
+capacity-utilization:
+  te_label: "European Commission"
+  te_value: 77.4
+  te_period: "2026-Q1"
+  our_source: eurostat
+  our_series: "ei_bsin_q_r2:BS-ICU-PC"
+  our_value: 78.4
+  our_period: "2026-06-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+central-bank-balance:
+  te_label: "Deutsche Bundesbank"
+  te_value: 2345.18
+  te_period: "2026-05-08"
+  our_source: bundesbank
+  our_series: "BBBK11.D.TTA032"
+  our_value: 2327.9
+  our_period: "2026-04-24"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "data-staleness: DB last point Apr 24, TE shows May 8. Weekly series — 2 weeks lag, well within tolerance. Indicator unit currently says 'Billion USD' but values are EUR Bn (frontend label issue)."
+
+changes-in-inventories:
+  te_label: "Federal Statistical Office"
+  te_value: 21.01
+  te_period: "2025-Q4"
+  our_source: destatis
+  our_series: "81000-0020:VGR034"
+  our_value: 21.0
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Migrated from eurostat namq_10_gdp:P52 (=18, lagged) to destatis 81000-0020 VGR034 (Vorratsveraenderungen + Wertsachen, X13JDKSB sa, VGRJPM jew. Preise Mrd EUR). Q4 2025 = 21.0 matches TE 21.01. Added TABLES entry in destatis.py, updated indicator_sources, upserted 140 points."
+
+consumer-spending:
+  te_label: "Federal Statistical Office"
+  te_value: 484.81
+  te_period: "2025-Q4"
+  our_source: destatis
+  our_series: "81000-0020"
+  our_value: 484.81
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+core-cpi:
+  te_label: "Federal Statistical Office"
+  te_value: 2.30
+  te_period: "2026-04"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HI00XEF"
+  our_value: 102.01
+  our_period: "2026-04-30"
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "source-mismatch + frontend-only: DB stores HICP core (eurostat) as Index (102.01). YoY = 102.01 / 99.73 - 1 = +2.29% matches TE 2.30% (national VPI ex food/energy). TE attributes to Destatis, but eurostat HICP-XEF tracks the national headline closely enough. Could migrate to destatis 61111-0004 + ex-food/energy aggregate; deferred (HICP-XEF is conformant in spirit)."
+
+corporate-tax-rate:
+  te_label: "Bundeszentralamt für Steuern"
+  te_value: 30.0
+  te_period: "current"
+  our_source: curated
+  our_series: "DE:corporate-tax-rate"
+  our_value: 30
+  our_period: "2026-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+corruption-index:
+  te_label: "Transparency International"
+  te_value: 77
+  te_period: "2025"
+  our_source: curated
+  our_series: "DE:corruption-index"
+  our_value: 77
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+corruption-rank:
+  te_label: "Transparency International"
+  te_value: 10
+  te_period: "2025"
+  our_source: curated
+  our_series: "DE:corruption-rank"
+  our_value: 10
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-clothing:
+  te_label: "Federal Statistical Office"
+  te_value: 112.7
+  te_period: "2026-04"
+  our_source: destatis
+  our_series: "61111-0004#CC13-03"
+  our_value: 112.7
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-education:
+  te_label: "Federal Statistical Office"
+  te_value: 124.4
+  te_period: "2026-04"
+  our_source: destatis
+  our_series: "61111-0004#CC13-10"
+  our_value: 124.4
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-food:
+  te_label: "Federal Statistical Office"
+  te_value: 138.6
+  te_period: "2026-04"
+  our_source: destatis
+  our_series: "61111-0004#CC13-01"
+  our_value: 138.6
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-housing-utilities:
+  te_label: "Federal Statistical Office"
+  te_value: 119.1
+  te_period: "2026-04"
+  our_source: destatis
+  our_series: "61111-0004#CC13-04"
+  our_value: 119.1
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-recreation-and-culture:
+  te_label: "Federal Statistical Office"
+  te_value: 117.9
+  te_period: "2026-04"
+  our_source: destatis
+  our_series: "61111-0004#CC13-09"
+  our_value: 117.9
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+cpi-transportation:
+  te_label: "Federal Statistical Office"
+  te_value: 137.4
+  te_period: "2026-04"
+  our_source: destatis
+  our_series: "61111-0004#CC13-07"
+  our_value: 137.4
+  our_period: "2026-04-30"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+credit-rating:
+  te_label: null
+  te_value: null
+  te_period: null
+  our_source: curated
+  our_series: "DE:credit-rating"
+  our_value: 100
+  our_period: "2026-04-01"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "te-page-empty: tradingeconomics.com/germany/rating returns no parseable source/value (TE composite of S&P/Moody's/Fitch). Composite rating handled as curated; not actionable."
+
+current-account:
+  te_label: "Deutsche Bundesbank"
+  te_value: 23635
+  te_period: "2026-03"
+  our_source: bundesbank
+  our_series: "BBFBOPV.M.N.DE.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL"
+  our_value: 23635.26
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: true
+  fix_summary: "Indicator_sources already pointed at bundesbank BBFBOPV but data_points only had stale eurostat residuals. Ran BundesbankProvider.fetch() and upserted 663 points; March 2026 = 23,635.26 Mio EUR matches TE 23,635 exactly. Note: indicators.unit still says '% of GDP' which is wrong for the level series — frontend-label fix needed."
+
+current-account-to-gdp:
+  te_label: "EUROSTAT"
+  te_value: 4.50
+  te_period: "2025"
+  our_source: eurostat
+  our_series: "bop_c6_q:CAtoGDP"
+  our_value: null
+  our_period: null
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: "coverage-gap: indicator_sources points at bop_c6_q but EurostatProvider has no config to fetch it; 0 data_points exist. Needs eurostat.py DATASETS entry with params {partner: WRL_REST, bop_item: CA, currency: PC_GDP, stk_flow: BAL}. Out of scope for this batch."
+
+disposable-personal-income:
+  te_label: "Federal Statistical Office"
+  te_value: 670.87
+  te_period: "2025-Q4"
+  our_source: destatis
+  our_series: "81000-0010"
+  our_value: 670.87
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+employed-persons:
+  te_label: "Federal Statistical Office"
+  te_value: 45519
+  te_period: "2026-03"
+  our_source: destatis
+  our_series: "13321-0001"
+  our_value: 45519
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+employment-rate:
+  te_label: "EUROSTAT"
+  te_value: 77.7
+  te_period: "2025-Q4"
+  our_source: eurostat
+  our_series: "lfsa_ergan:Y15-64"
+  our_value: 77.2
+  our_period: "2025-12-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "frequency-mismatch: TE uses quarterly lfsq_ergan (Q4 2025 = 77.7); DB uses annual lfsa_ergan (2025 avg = 77.2). 0.5pp drift within freq tolerance but Q4 reading is fresher. Migration to lfsq_ergan recommended; not blocking."
+
+energy-inflation:
+  te_label: "Federal Statistical Office"
+  te_value: 10.1
+  te_period: "2026-04"
+  our_source: eurostat
+  our_series: "ei_cphi_m:CP-HIE:HICP2025"
+  our_value: 108.89
+  our_period: "2026-04-30"
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: "source-mismatch + value-units: DB stores HICP-Energy index (Eurostat, base 2025=100). YoY 108.89/99.97-1 = 8.92% vs TE 10.1%. TE attributes to Destatis (national VPI energy, 61111-0004 CC13-04546 sub-aggregate). Migration to destatis required for full conformance."
+
+export-prices:
+  te_label: "Federal Statistical Office"
+  te_value: 117.9
+  te_period: "2026-03"
+  our_source: destatis
+  our_series: "61421-0002"
+  our_value: 117.9
+  our_period: "2026-03-31"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+
+exports:
+  te_label: "Federal Statistical Office"
+  te_value: 135.8
+  te_period: "2026-03"
+  our_source: destatis
+  our_series: "51000-0002"
+  our_value: 132.05
+  our_period: "2026-02-28"
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: "data-staleness: Destatis 51000-0002 not yet refreshed to Mar 2026 (table publication lag); DB stops at Feb 2026 = 132.05 vs TE Mar 2026 = 135.8. Will resolve at next nightly destatis run. Source/series correct."

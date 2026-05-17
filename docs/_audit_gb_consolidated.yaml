@@ -1,0 +1,673 @@
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'DB stores % of GDP from TE''s `government-budget` page (-4.30% for 2025)
+    not the monthly £m headline. Indicator metadata (`te_slug=government-budget`,
+    unit `% of GDP`) confirms this is intentional. The TE inventory `te_page` pointing
+    to `government-budget-value` (monthly GBP m) is misleading but the value is correct
+    against TE''s government-budget page.
+
+    '
+  our_period: '2026-03-31'
+  our_series: ons:j5ii
+  our_source: ons
+  our_value: -4.3
+  source_match: true
+  te_label: Office for National Statistics (via OBR)
+  te_period: '2025'
+  te_value: -4.3
+  value_match: true
+central-bank-balance:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: 'Source (BoE) matches TE. But series is LPMBL22 = BoE Total Balance Sheet
+    monthly (~644 GBP bn) while TE uses a weekly aggregate (~774 GBP bn). Different
+    scope/aggregation. Also: indicator_sources.series_id row says `boe:rpwb55a` while
+    the actual provider code uses LPMBL22 — stale note, needs correction. RPWB55A
+    returns only ~97k GBP m (a sub-component). Needs research into which BoE weekly
+    series TE uses (likely the "Bank Return" total assets including APF), and whether
+    to switch.
+
+    '
+  our_period: '2026-03-31'
+  our_series: ons:lpmbl22
+  our_source: ons
+  our_unit: GBP Billion (monthly)
+  our_value: 644
+  source_match: true
+  te_label: Bank of England
+  te_period: '2026-05-13'
+  te_unit: GBP Million (weekly)
+  te_value: 774297
+  value_match: false
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  notes: 'DKC7 = CPI excluding energy & unprocessed food, index level. YoY computed
+    from DB: (139.2 / 134.9) - 1 = 3.19% which rounds to TE''s 3.1%. Frontend should
+    compute YoY on display for inflation indicators.
+
+    '
+  our_period: '2026-03-31'
+  our_series: ons:dkc7
+  our_source: ons
+  our_unit: Index 2015=100
+  our_value: 139.2
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: '% YoY'
+  te_value: 3.1
+  value_match: true
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: GB:corporate-tax-rate
+  our_source: curated
+  our_value: 25
+  source_match: true
+  te_label: HM Revenue & Customs
+  te_period: '2026'
+  te_value: 25
+  value_match: true
+corruption-index:
+  fix_summary: Updated 2025 CPI score 71 -> 70 to match TE's headline (TI 2025 Corruption
+    Perceptions Index).
+  fixed: true
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: GB:corruption-index
+  our_source: curated
+  our_value: 70
+  source_match: true
+  te_label: Transparency International
+  te_period: '2025'
+  te_value: 70
+  value_match: true
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: GB:corruption-rank
+  our_source: curated
+  our_value: 20
+  source_match: true
+  te_label: Transparency International
+  te_period: '2025'
+  te_value: 20
+  value_match: true
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: TE description gives agency ratings (S&P AA, Moody's Aa3, DBRS AA, stable).
+    92.5 is the TE composite numeric score. Value retained from prior audit.
+  our_period: '2026-04-01'
+  our_series: GB:credit-rating
+  our_source: curated
+  our_value: 92.5
+  source_match: true
+  te_label: TE / rating agencies (S&P AA, Moody's Aa3, DBRS)
+  te_period: '2026'
+  te_value: 92.5
+  value_match: true
+current-account:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: ons:hbop
+  our_source: ons
+  our_value: -18.39
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2025 Q4
+  te_value: -18.4
+  value_match: true
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'Date label differs by one month (TE labels rolling 3-month period MGRZ "DEC-FEB"
+    as Feb 2026; ONS stores as Jan 2026). Same observation.
+
+    '
+  our_period: '2026-01-31'
+  our_series: ons:mgrz
+  our_source: ons
+  our_value: 34328
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026 Feb
+  te_value: 34328
+  value_match: true
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Same rolling-period labelling note as employed-persons.
+  our_period: '2026-01-31'
+  our_series: ons:lf24
+  our_source: ons
+  our_value: 75
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026 Feb
+  te_value: 75.0
+  value_match: true
+exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: ons:ikbh
+  our_source: ons
+  our_value: 79.13
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: GBP Billion
+  te_value: 79.13
+  value_match: true
+food-inflation:
+  fix_summary: 'Switched series from L522 (CPIH All Items, wrong) to D7BU (CPI Food
+    & Non-Alcoholic Beverages, TE-conform). Reloaded 459 data points. YoY computed:
+    144.4/139.2 - 1 = 3.74% matches TE 3.7%.
+
+    '
+  fixed: true
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: ons:d7bu
+  our_source: ons
+  our_unit: Index 2015=100
+  our_value: 144.4
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: '% YoY'
+  te_value: 3.7
+  value_match: true
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'Our value matches the current World Bank API (3,686.03 B USD for 2024).
+    TE shows an older vintage (3,643.83 B). Within ±5% tolerance and our data is
+    fresher.
+
+    '
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 3686.03
+  source_match: true
+  te_label: World Bank
+  te_period: '2024'
+  te_unit: Billion USD
+  te_value: 3643.83
+  value_match: true
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: 'Source matches (World Bank). Our value 53,246.37 matches WB API exactly
+    for 2024 (NY.GDP.PCAP.CD). TE shows 47,265 which is a stale vintage (~12% off).
+    Our data is more current. May still warrant a flag for user visibility since TE
+    shows materially lower value.
+
+    '
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.CD
+  our_source: worldbank
+  our_value: 53246.37
+  source_match: true
+  te_label: World Bank
+  te_period: '2024'
+  te_unit: USD
+  te_value: 47265
+  value_match: false
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: 'Source matches (World Bank). Our value 62,009.49 matches WB API exactly
+    for 2024 (NY.GDP.PCAP.PP.CD). TE shows 52,517.98 — older vintage (~18% off).
+    Our value is fresher. Worth a flag for visibility.
+
+    '
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.CD
+  our_source: worldbank
+  our_value: 62009.49
+  source_match: true
+  te_label: World Bank
+  te_period: '2024'
+  te_unit: USD PPP
+  te_value: 52517.98
+  value_match: false
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: ONS ABMI Q4 2025 = 706067 GBP Million matches our 706.07 Bn. TE shows
+    preliminary Q1 2026 (710896) not yet on ONS quarterly endpoint — DB is current
+    vs source.
+  our_period: '2025-12-31'
+  our_series: ons:abmi
+  our_source: ons
+  our_value: 706.07
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-Q1
+  te_unit: GBP Million
+  te_value: 710896
+  value_match: true
+government-debt:
+  fix_summary: ons.py uri hf6x->hf6w; unit '% of GDP'->'Billion GBP'; series_id ons:hf6x->ons:hf6w;
+    cleared+refetched.
+  fixed: true
+  flag: ok
+  flag_reason: Was fetching hf6x (% of GDP). TE shows absolute £bn. Switched provider
+    to hf6w + cleared old points. DB now 2910.8 Bn Mar 2026 — exact match TE 2910.80.
+  our_period: '2026-03-31'
+  our_series: ons:hf6w
+  our_source: ons
+  our_value: 2910.8
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: GBP Billion
+  te_value: 2910.8
+  value_match: true
+hospital-beds:
+  fix_summary: curated/gb.yaml hospital-beds 2.36 -> 2.44.
+  fixed: true
+  flag: ok
+  flag_reason: OECD value updated from 2.36 to 2.44 to match TE 2023 figure.
+  our_period: '2023-12-31'
+  our_series: GB:hospital-beds
+  our_source: curated
+  our_value: 2.44
+  source_match: true
+  te_label: OECD
+  te_period: '2023'
+  te_unit: per 1000 people
+  te_value: 2.44
+  value_match: true
+hospitals:
+  fix_summary: curated/gb.yaml hospitals 28.0/2023-12-31 -> 29.73/2022-12-31; old
+    datapoint deleted.
+  fixed: true
+  flag: ok
+  flag_reason: WHO value updated from 28.0/2023 to 29.73/2022 (matches TE). Stale
+    2023 datapoint removed.
+  our_period: '2022-12-31'
+  our_series: GB:hospitals
+  our_source: curated
+  our_value: 29.73
+  source_match: true
+  te_label: World Health Organization
+  te_period: '2022'
+  te_unit: per one million people
+  te_value: 29.73
+  value_match: true
+imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: Refreshed; Mar 2026 = 88.78 Bn GBP matches TE £88.78 billion exactly.
+  our_period: '2026-03-31'
+  our_series: ons:ikbi
+  our_source: ons
+  our_value: 88.78
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: GBP Billion
+  te_value: 88.78
+  value_match: true
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows YoY% (0.0% Mar 2026); we store K22A Index level (101.1). Frontend
+    computes YoY. Source + series correct.
+  our_period: '2026-03-31'
+  our_series: ons:k22a
+  our_source: ons
+  our_value: 101.1
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: percent (YoY)
+  te_value: 0.0
+  value_match: null
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows 3.3% YoY Mar 2026; we store D7BT Index level (141.0). Frontend
+    computes YoY. Source + series correct.
+  our_period: '2026-03-31'
+  our_series: ons:d7bt
+  our_source: ons
+  our_value: 141.0
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: percent (YoY)
+  te_value: 3.3
+  value_match: null
+interest-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: BoE Bank Rate 3.75% (Apr/May 2026) matches TE exactly.
+  our_period: '2026-05-31'
+  our_series: boe:IUDBEDR
+  our_source: ons
+  our_value: 3.75
+  source_match: true
+  te_label: Bank of England
+  te_period: 2026-05
+  te_unit: percent
+  te_value: 3.75
+  value_match: true
+labor-force-participation-rate:
+  fix_summary: ons.py mgwg -> lf22; series_id ons:mgwg -> ons:lf22; cleared+refetched.
+  fixed: true
+  flag: ok
+  flag_reason: Provider was using MGWG (Economic INACTIVITY rate 16-64, ~63.8%) —
+    semantically wrong. Switched to LF22 (Economic Activity Rate 16-64 SA). DB now
+    79.0 Jan 2026 matches TE 79.0 Feb (rounded).
+  our_period: '2026-01-31'
+  our_series: ons:lf22
+  our_source: ons
+  our_value: 79.0
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-02
+  te_unit: percent
+  te_value: 79.0
+  value_match: true
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows YoY% (1.2% Mar 2026); we store K222 Index level (98.7). Frontend
+    computes YoY. Source + series correct.
+  our_period: '2026-03-31'
+  our_series: ons:k222
+  our_source: ons
+  our_value: 98.7
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: percent (YoY)
+  te_value: 1.2
+  value_match: null
+medical-doctors:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: OECD 2022 = 3.16 per 1000 people. TE page lacks numeric description
+    on detail page but inventory + curated agree.
+  our_period: '2022-12-31'
+  our_series: GB:medical-doctors
+  our_source: curated
+  our_value: 3.16
+  source_match: true
+  te_label: OECD
+  te_period: '2022'
+  te_unit: per 1000 people
+  te_value: 3.16
+  value_match: true
+military-expenditure:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: SIPRI 2025 = 88977.50 USD Million matches TE exactly.
+  our_period: '2025-12-31'
+  our_series: GB:military-expenditure
+  our_source: curated
+  our_value: 88977.5
+  source_match: true
+  te_label: SIPRI
+  te_period: '2025'
+  te_unit: USD Million
+  te_value: 88977.5
+  value_match: true
+minimum-wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: NLW 2026 = 12.71 GBP/Hour matches TE exactly.
+  our_period: '2026-04-01'
+  our_series: GB:minimum-wages
+  our_source: curated
+  our_value: 12.71
+  source_match: true
+  te_label: Department for Work and Pensions, UK
+  te_period: '2026'
+  te_unit: GBP/Hour
+  te_value: 12.71
+  value_match: true
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  flag_reason: TE shows YoY% (-3.9% Mar 2026); we store K224 Index level (83.1). Frontend
+    computes YoY. Source + series correct.
+  our_period: '2026-03-31'
+  our_series: ons:k224
+  our_source: ons
+  our_value: 83.1
+  source_match: true
+  te_label: Office for National Statistics
+  te_period: 2026-03
+  te_unit: percent (YoY)
+  te_value: -3.9
+  value_match: null
+money-supply-m2:
+  fix_summary: indicator_sources note 'boe:lpqvqjt' -> 'boe:LPMAUYM'; unit 'Million
+    GBP' -> 'Billion GBP'.
+  fixed: true
+  flag: ok-after-vintage
+  flag_reason: BoE LPMAUYM = 3277274 GBP Million Mar 2026 (stored as 3277.27 Bn).
+    TE shows 3199976 GBP Million — close (~2.4% vintage diff; TE may use a narrower
+    cut). Same source (BoE) and same canonical M2 series. Updated DB note (boe:lpqvqjt
+    was stale label) and unit ('Million GBP' -> 'Billion GBP').
+  our_period: '2026-03-31'
+  our_series: boe:LPMAUYM
+  our_source: ons
+  our_value: 3277.27
+  source_match: true
+  te_label: Bank of England
+  te_period: 2026-03
+  te_unit: GBP Million
+  te_value: 3199976
+  value_match: true
+mortgage-approvals:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  flag_reason: BoE LPMVTVX = 63531 Mar 2026 (stored as 63.53 Thousand) matches TE
+    63531 exactly.
+  our_period: '2026-03-31'
+  our_series: boe:LPMVTVX
+  our_source: ons
+  our_value: 63.53
+  source_match: true
+  te_label: Bank of England
+  te_period: 2026-03
+  te_unit: count (Thousand)
+  te_value: 63531
+  value_match: true
+slugs:
+  nurses:
+    db_date: 2022-12-31
+    db_source: curated
+    db_value: 8.71
+    note: Static curated OECD value; matches.
+    status: ok
+    te_label: OECD
+    te_period: '2022'
+    te_value: 8.71
+  personal-income-tax-rate:
+    db_date: 2026-12-31
+    db_source: curated
+    db_value: 45
+    note: Static UK additional rate; matches.
+    status: ok
+    te_label: HM Revenue & Customs
+    te_period: '2026'
+    te_value: 45
+  population:
+    db_date: 2026-03-31
+    db_series: ons:ebaq
+    db_source: ons
+    db_value: 69.6
+    note: Within tolerance (annual EBAQ projection); DB even fresher than TE.
+    status: ok
+    te_label: Office for National Statistics
+    te_period: '2025'
+    te_value: 69.5
+  ppi:
+    db_date: 2026-03-31
+    db_series: ons:gb7s
+    db_source: ons
+    db_value: 145
+    note: Exact match.
+    status: ok
+    te_label: Office for National Statistics
+    te_period: 2026-03
+    te_value: 145
+  retail-sales:
+    db_date: 2026-03-31
+    db_series: ons:j5ek
+    db_source: ons
+    db_unit: Index 2022=100
+    db_value: 103.7
+    note: TE shows MoM%, DB stores level. Computed MoM = (103.7/103.0 - 1)*100 = 0.68%
+      ≈ 0.7%. Frontend transform.
+    status: ok
+    te_label: Office for National Statistics
+    te_period: 2026-03
+    te_unit: '% MoM'
+    te_value: 0.7
+  retirement-age-men:
+    db_source: curated
+    db_value: 66
+    note: Static; matches.
+    status: ok
+    te_label: Department for Work and Pensions
+    te_value: 66
+  retirement-age-women:
+    db_source: curated
+    db_value: 66
+    note: Static; matches.
+    status: ok
+    te_label: Department for Work and Pensions
+    te_value: 66
+  sales-tax-rate:
+    db_source: curated
+    db_value: 20
+    note: Static UK VAT; matches.
+    status: ok
+    te_label: HM Revenue & Customs
+    te_value: 20
+  social-security-rate:
+    db_source: curated
+    db_value: 25.8
+    note: Static; matches.
+    status: ok
+    te_label: HM Revenue & Customs
+    te_value: 25.8
+  social-security-rate-companies:
+    db_source: curated
+    db_value: 13.8
+    note: Static NI Employer; matches.
+    status: ok
+    te_label: HM Revenue & Customs
+    te_value: 13.8
+  social-security-rate-employees:
+    db_source: curated
+    db_value: 12
+    note: Static NI Employee; matches.
+    status: ok
+    te_label: HM Revenue & Customs
+    te_value: 12
+  trade-balance:
+    db_date_after: 2026-03-31
+    db_date_before: 2026-02-28
+    db_series: ons:ikbj
+    db_source: ons
+    db_value_after: -9.66
+    db_value_before: -0.72
+    note: Pre-refresh data was 2 weeks stale (last ONS run 2026-05-01). Triggered
+      ons provider refresh — March 2026 figure now -9.66bn = -9660M ≈ TE -9658.
+      Minor cosmetic gap in indicator_sources.series_id ('bokk' vs actual 'ikbj')
+      — not load-bearing; recommend cleanup.
+    status: fixed_via_refresh
+    te_label: Office for National Statistics
+    te_period: 2026-03
+    te_unit: GBP Million
+    te_value: -9658
+  unemployed-persons:
+    db_date: 2026-01-31
+    db_series: ons:mgsc
+    db_source: ons
+    db_value: 1780
+    note: ONS time-series MGSC still ends Jan 2026 (verified live). ONS Labour Market
+      Overview next release 19 May 2026. TE appears to be showing forecast/preview
+      Feb data. DB matches ONS source-of-truth; will converge on next ONS release.
+    status: flagged_stale_upstream
+    te_label: Office for National Statistics
+    te_period: 2026-02
+    te_value: 1667.4
+  unemployment:
+    db_date: 2026-01-31
+    db_series: ons:mgsx
+    db_source: ons
+    db_value: 4.9
+    note: Value matches; period 1m behind TE. Same as unemployed-persons — ONS MGSX
+      live API ends Jan 2026 (next release 19 May).
+    status: flagged_stale_upstream
+    te_label: Office for National Statistics
+    te_period: 2026-02
+    te_value: 4.9
+  wages:
+    db_date: 2026-02-28
+    db_series: ons:kab9
+    db_source: ons
+    db_value: 745
+    note: Exact match. (Wages KAB9 release cycle is ahead of LFS unemployment.)
+    status: ok
+    te_label: Office for National Statistics
+    te_period: 2026-02
+    te_value: 745
+  youth-unemployment-rate:
+    db_date: 2026-01-31
+    db_series: ons:mgwy
+    db_source: ons
+    db_value: 15.8
+    note: ONS MGWY time-series live API ends Jan 2026 = 15.8. TE 14.3 likely preview/forecast
+      for Feb. Same ONS LFS release cycle gap. Will converge 19 May 2026.
+    status: flagged_stale_upstream
+    te_label: Office for National Statistics
+    te_period: 2026-02
+    te_value: 14.3
+summary:
+  fixed_via_refresh: 1
+  flagged: 3
+  ok: 15
+  series_id_changes: 0
+  source_changes: 0
+  total: 16

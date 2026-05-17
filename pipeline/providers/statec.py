@@ -277,6 +277,29 @@ SERIES = [
         "note": "STATEC E3101 L12 Consolidated gross general government debt (mln EUR)",
     },
 
+    # === Balance of Payments — DF_E4202 v1.0 (quarterly, BPM6) ===
+    # DIRECTION B=Balance, C=Credit (exports), D=Debit (imports)
+    # COMPONENT CA=current account, G=goods, S=services
+    {
+        "slug": "current-account",
+        "dataflow": "DF_E4202",
+        "version": "1.0",
+        "filter": {"FREQ": "Q", "DIRECTION": "B", "COMPONENT": "CA"},
+        "freq": "Q", "unit": "Million EUR", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC E4202 BPM6 quarterly Current Account balance (mln EUR)",
+    },
+
+    # === Government finance % of GDP — DF_E3101 v1.0 ===
+    # L14 = General government consolidated gross debt in % of GDP (annual EDP)
+    {
+        "slug": "government-debt",
+        "dataflow": "DF_E3101",
+        "version": "1.0",
+        "filter": {"FREQ": "A", "LABELS": "L14"},
+        "freq": "A", "unit": "% of GDP", "adjustment": "NSA", "conversion": 1.0,
+        "note": "STATEC E3101 L14 General government consolidated gross debt % of GDP",
+    },
+
     # === Retail sales — DF_D5108 v1.1 ===
     # G47 retail trade, MEASURE=TOVV (turnover value), SEASONAL_ADJUST=Y (seasonally adj),
     # BASE_PER=2021. Reported as an index (UNIT_MEASURE=IX).

@@ -1,0 +1,477 @@
+{
+  "budget-deficit": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "http://www.hnb.hr",
+    "te_value": 3.0,
+    "desc_snippet": "Croatia recorded a Government Budget deficit equal to 3 percent of the country's Gross Domestic Product in 2025. Government Budget in Croatia averaged -3.50 percent of GDP from 1995 until 2025, reaching an all time high of 1.40 percent of GDP in 1997 and a record low of -8.80 percent of GDP in 2000.  source:  Croatian National Bank",
+    "extras": {}
+  },
+  "business-confidence": {
+    "te_source_label": "European Commission",
+    "te_source_url": "https://ec.europa.eu",
+    "te_value": 5.8,
+    "desc_snippet": "Business Confidence in Croatia increased to 5.80 points in April from 5 points in March of 2026. Business Confidence in Croatia averaged -1.27 points from 2008 until 2026, reaching an all time high of 15.70 points in August of 2017 and a record low of -35.90 points in April of 2020.  source:  European Commission",
+    "extras": {}
+  },
+  "capacity-utilization": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "changes-in-inventories": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 280.0,
+    "desc_snippet": "The stocks of goods held by firms in Croatia decreased by 280 EUR Million in the fourth quarter of 2025. Changes in Inventories in Croatia averaged 50.04 EUR Million from 1995 until 2025, reaching an all time high of 1615.00 EUR Million in the first quarter of 2022 and a record low of -2579.00 EUR Million in the third quarter of 2023.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "consumer-confidence": {
+    "te_source_label": "European Commission",
+    "te_source_url": "http://ec.europa.eu",
+    "te_value": -1.7,
+    "desc_snippet": "Consumer Confidence in Croatia decreased to -1.70 points in April from 9.10 points in March of 2026. Consumer Confidence in Croatia averaged -2.55 points from 2005 until 2026, reaching an all time high of 22.10 points in April of 2018 and a record low of -48.50 points in April of 2020.  source:  European Commission",
+    "extras": {}
+  },
+  "consumer-spending": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 10510.0,
+    "desc_snippet": "Consumer Spending in Croatia increased to 10510 EUR Million in the fourth quarter of 2025 from 9806 EUR Million in the third quarter of 2025. Consumer Spending in Croatia averaged 7156.60 EUR Million from 1995 until 2025, reaching an all time high of 10510.00 EUR Million in the fourth quarter of 2025 and a record low of 4346.00 EUR Million in the first quarter of 1995.  source:  Croatian Bureau of",
+    "extras": {}
+  },
+  "core-cpi": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://www.dzs.hr",
+    "te_value": 3.6,
+    "desc_snippet": "Core consumer prices in Croatia increased 3.60 percent in April of 2026 over the same month in the previous year. Core Inflation Rate in Croatia averaged 2.43 percent from 1999 until 2026, reaching an all time high of 12.50 percent in December of 2022 and a record low of -1.80 percent in June of 2010.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "corporate-tax-rate": {
+    "te_source_label": "Tax Administration (Porezna Uprava)",
+    "te_source_url": "",
+    "te_value": 18.0,
+    "desc_snippet": "The Corporate Tax Rate in Croatia stands at 18 percent. Corporate Tax Rate in Croatia averaged 19.38 percent from 2001 until 2026, reaching an all time high of 20.32 percent in 2003 and a record low of 18.00 percent in 2018.  source: Tax Administration (Porezna Uprava)",
+    "extras": {}
+  },
+  "corruption-index": {
+    "te_source_label": "Transparency International",
+    "te_source_url": "",
+    "te_value": 47.0,
+    "desc_snippet": "Croatia scored 47 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Croatia averaged 43.04 Points from 1999 until 2025, reaching an all time high of 51.00 Points in 2015 and a record low of 27.00 Points in 1999.  source: Transparency International",
+    "extras": {}
+  },
+  "corruption-rank": {
+    "te_source_label": "Transparency International",
+    "te_source_url": "",
+    "te_value": 63.0,
+    "desc_snippet": "Croatia is the 63 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Croatia averaged 60.70 from 1999 until 2025, reaching an all time high of 74.00 in 1999 and a record low of 47.00 in 2001.  source: Transparency International",
+    "extras": {}
+  },
+  "cpi-clothing": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://dzs.gov.hr/en",
+    "te_value": 102.9,
+    "desc_snippet": "CPI Clothing in Croatia increased to 102.90 points in April from 95.30 points in March of 2026. CPI Clothing in Croatia averaged 96.89 points from 1998 until 2026, reaching an all time high of 121.50 points in November of 2008 and a record low of 74.40 points in August of 2018.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "cpi-education": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://dzs.gov.hr/en",
+    "te_value": 98.5,
+    "desc_snippet": "CPI Education in Croatia remained unchanged at 98.50 points in April. CPI Education in Croatia averaged 88.09 points from 1998 until 2026, reaching an all time high of 106.60 points in August of 2003 and a record low of 68.80 points in May of 1999.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "cpi-food": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://dzs.gov.hr/en",
+    "te_value": 101.2,
+    "desc_snippet": "CPI Food in Croatia remained unchanged at 101.20 points in April. CPI Food in Croatia averaged 64.44 points from 1998 until 2026, reaching an all time high of 101.60 points in August of 2025 and a record low of 44.80 points in November of 1999.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "cpi-housing-utilities": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://dzs.gov.hr/en",
+    "te_value": 110.5,
+    "desc_snippet": "CPI Housing Utilities in Croatia increased to 110.50 points in April from 109.30 points in March of 2026. CPI Housing Utilities in Croatia averaged 67.42 points from 1998 until 2026, reaching an all time high of 110.50 points in April of 2026 and a record low of 38.70 points in December of 1998.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "cpi-recreation-and-culture": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://dzs.gov.hr/en",
+    "te_value": 102.2,
+    "desc_snippet": "CPI Recreation and Culture in Croatia increased to 102.20 points in April from 101.30 points in March of 2026. CPI Recreation and Culture in Croatia averaged 65.52 points from 1998 until 2026, reaching an all time high of 104.40 points in August of 2025 and a record low of 44.10 points in December of 1998.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "cpi-transportation": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "",
+    "te_value": 112.9,
+    "desc_snippet": "The transportation sub-index of the CPI basket in Croatia increased to 112.90 points in April of 2026 from 107.60 points in March of 2026. CPI Transportation in Croatia averaged 79.86 points from 1998 until 2026, reaching an all time high of 112.90 points in April of 2026 and a record low of 52.90 points in December of 1998.  source: Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "credit-rating": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {
+      "sp": [
+        "A",
+        "stable"
+      ],
+      "moodys": [
+        "A3",
+        "stable"
+      ],
+      "dbrs": [
+        "A",
+        "stable"
+      ]
+    }
+  },
+  "current-account-to-gdp": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "https://www.hnb.hr",
+    "te_value": 3.5,
+    "desc_snippet": "Croatia recorded a Current Account deficit of 3.50 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Croatia averaged -3.37 percent of GDP from 1995 until 2025, reaching an all time high of 3.30 percent of GDP in 2017 and a record low of -11.00 percent of GDP in 2008.  source:  Croatian National Bank",
+    "extras": {}
+  },
+  "current-account": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "https://www.hnb.hr",
+    "te_value": 2204.0,
+    "desc_snippet": "The current account deficit of Croatia widened to EUR 2,204 million in the fourth quarter of 2025, up from a deficit of EUR 2,140 million in the same period a year earlier, as most components showed improvements. The services surplus rose to EUR 1,725 million from EUR 1,670 million a year earlier, while the goods deficit shrank to EUR 4,412 million from a deficit of EUR 4,520 million. The secondar",
+    "extras": {}
+  },
+  "disposable-personal-income": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "employed-persons": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 1701.0,
+    "desc_snippet": "The number of employed persons in Croatia decreased to 1701 Thousand in the fourth quarter of 2025 from 1719 Thousand in the third quarter of 2025. Employed Persons in Croatia averaged 1591.81 Thousand from 1998 until 2025, reaching an all time high of 1719.00 Thousand in the fourth quarter of 2022 and a record low of 1344.00 Thousand in the first quarter of 2013.  source:  Croatian Bureau of Stat",
+    "extras": {}
+  },
+  "employment-rate": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 68.7,
+    "desc_snippet": "Employment Rate in Croatia decreased to 68.70 percent in the fourth quarter of 2025 from 69.40 percent in the third quarter of 2025. Employment Rate in Croatia averaged 58.84 percent from 2002 until 2025, reaching an all time high of 69.40 percent in the third quarter of 2025 and a record low of 50.70 percent in the first quarter of 2013.  source:  EUROSTAT",
+    "extras": {}
+  },
+  "energy-inflation": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "exports": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "http://www.dzs.hr",
+    "te_value": 0.7,
+    "desc_snippet": "Croatia's exports jumped 15.8% year-over-year to a record €2.51 billion in March 2026, according to preliminary data. In the first quarter of 2026, exports rose 3.0% to €6.36 billion, supported by a 4.9% increase in sales to the EU, though exports to non-EU countries declined by 0.7%.  source:  Croatian National Bank",
+    "extras": {}
+  },
+  "food-inflation": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr/",
+    "te_value": 2.8,
+    "desc_snippet": "Cost of food in Croatia increased 2.80 percent in April of 2026 over the same month in the previous year. Food Inflation in Croatia averaged 3.01 percent from 1999 until 2026, reaching an all time high of 19.76 percent in October of 2022 and a record low of -4.06 percent in June of 2014.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "gdp-per-capita-ppp": {
+    "te_source_label": "World Bank",
+    "te_source_url": "https://www.worldbank.org/",
+    "te_value": null,
+    "desc_snippet": "The Gross Domestic Product per capita in Croatia was last recorded at 42631.32 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Croatia, when adjusted by Purchasing Power Parity is equivalent to 240 percent of the world's average.  source:  World Bank",
+    "extras": {}
+  },
+  "gdp-per-capita": {
+    "te_source_label": "World Bank",
+    "te_source_url": "https://www.worldbank.org/",
+    "te_value": null,
+    "desc_snippet": "The Gross Domestic Product per capita in Croatia was last recorded at 17770.87 US dollars in 2024. The GDP per Capita in Croatia is equivalent to 141 percent of the world's average. GDP per Capita in Croatia averaged 11355.18 USD from 1990 until 2024, reaching an all time high of 17770.87 USD in 2024 and a record low of 6490.14 USD in 1993.  source:  World Bank",
+    "extras": {}
+  },
+  "gdp-real": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 3.6,
+    "desc_snippet": "Croatia's economy expanded by 3.6% year-on-year in the fourth quarter of 2025, accelerating from a 2.3% growth in the third quarter. Household consumption picked up (2.6% vs 1.9% in Q3), while government spending increased further (4.7% vs 3.8%). Net external demand also contributed positively, as exports (1.5% vs -1.1%) rose more than imports (0.3% vs 2.4%). Meanwhile, growth in gross fixed capit",
+    "extras": {}
+  },
+  "gdp": {
+    "te_source_label": "World Bank",
+    "te_source_url": "https://www.worldbank.org/",
+    "te_value": 92.53,
+    "desc_snippet": "The Gross Domestic Product (GDP) in Croatia was worth 92.53 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Croatia represents 0.09 percent of the world economy.  source:  World Bank",
+    "extras": {}
+  },
+  "government-debt-total": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "http://www.hnb.hr",
+    "te_value": 56.3,
+    "desc_snippet": "Croatia recorded a Government Debt to GDP of 56.30 percent of the country's Gross Domestic Product in 2025. Government Debt to GDP in Croatia averaged 53.40 percent of GDP from 1995 until 2025, reaching an all time high of 86.50 percent of GDP in 2020 and a record low of 22.60 percent of GDP in 1998.  source:  Croatian National Bank",
+    "extras": {}
+  },
+  "government-debt": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "http://www.hnb.hr",
+    "te_value": 52448.7,
+    "desc_snippet": "Government Debt in Croatia increased to 52448.70 EUR Million in January from 52370.80 EUR Million in December of 2025. Government Debt in Croatia averaged 25801.22 EUR Million from 1995 until 2026, reaching an all time high of 52448.70 EUR Million in January of 2026 and a record low of 3520.20 EUR Million in June of 1996.  source:  Croatian National Bank",
+    "extras": {}
+  },
+  "government-spending-eur": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "government-spending": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 4886.0,
+    "desc_snippet": "Government Spending in Croatia increased to 4886 EUR Million in the fourth quarter of 2025 from 3830 EUR Million in the third quarter of 2025. Government Spending in Croatia averaged 2814.52 EUR Million from 1995 until 2025, reaching an all time high of 4886.00 EUR Million in the fourth quarter of 2025 and a record low of 2040.00 EUR Million in the first quarter of 1996.  source:  Croatian Bureau ",
+    "extras": {}
+  },
+  "gross-fixed-capital-formation": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 4552.0,
+    "desc_snippet": "Gross Fixed Capital Formation in Croatia increased to 4552 EUR Million in the fourth quarter of 2025 from 4547 EUR Million in the third quarter of 2025. Gross Fixed Capital Formation in Croatia averaged 2664.93 EUR Million from 1995 until 2025, reaching an all time high of 4782.00 EUR Million in the second quarter of 2025 and a record low of 853.00 EUR Million in the first quarter of 1995.  source",
+    "extras": {}
+  },
+  "hospital-beds": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "house-price-index": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "",
+    "te_value": 237.93,
+    "desc_snippet": "Housing Index in Croatia increased to 237.93 points in the fourth quarter of 2025 from 230.07 points in the third quarter of 2025. Housing Index in Croatia averaged 125.85 points from 2005 until 2025, reaching an all time high of 237.93 points in the fourth quarter of 2025 and a record low of 80.89 points in the first quarter of 2005.  source: EUROSTAT",
+    "extras": {}
+  },
+  "imports": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://www.dzs.hr",
+    "te_value": null,
+    "desc_snippet": "Croatia's imports surged 14.8% year-over-year to €4.52 billion in March 2026, the highest level since late 1999, according to preliminary data. In the first quarter of 2026, however, imports fell 0.5% to €10.98 billion, driven by a 2.7% drop in purchases from non-EU countries and nearly flat demand from the EU.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "industrial-production": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr/",
+    "te_value": 0.8,
+    "desc_snippet": "Croatia’s industrial production rose by 0.8% year-on-year in March 2026, easing from a 1.2% increase in the previous month. Electricity, gas, steam and air-conditioning supply fell 6.2%, reversing sharply from a 7.2% surge in the previous month. Meanwhile, manufacturing output increased at a faster pace (1.9% vs 1.3% in February), led by machinery and equipment n.e.c. (3.8%), textiles (3.8%), leat",
+    "extras": {}
+  },
+  "inflation-cpi": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr/",
+    "te_value": 5.8,
+    "desc_snippet": "The inflation rate in Croatia advanced by 5.8% year-on-year in April 2026 from 4.8% in the previous month, matching preliminary estimates. Prices increased for alcoholic beverages and tobacco (7.6% vs 7.5% in March), housing and utilities (12.1% vs 11.1%), health (4.2% vs 3.6%), transportation (13.1% vs 7%), information and communication (3.3% vs 3.2%), restaurants and hotels (6.2% vs 6%), insuran",
+    "extras": {}
+  },
+  "interest-rate": {
+    "te_source_label": "Croatian National Bank",
+    "te_source_url": "http://www.hnb.hr",
+    "te_value": null,
+    "desc_snippet": "The benchmark interest rate in Croatia is set by the European Central Bank. Interest Rate in Euro Area averaged 1.88 percent from 1998 until 2026, reaching an all time high of 4.75 percent in October of 2000 and a record low of 0.00 percent in March of 2016. The benchmark interest rate in Croatia is set by the European Central Bank.Croatian National Bank.  source:  Croatian National Bank",
+    "extras": {}
+  },
+  "job-vacancies": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 17253.0,
+    "desc_snippet": "Job Vacancies in Croatia decreased to 17253 in the fourth quarter of 2025 from 20133 in the third quarter of 2025. Job Vacancies in Croatia averaged 17040.89 from 2012 until 2025, reaching an all time high of 25754.00 in the first quarter of 2023 and a record low of 5673.00 in the fourth quarter of 2013.  source:  EUROSTAT",
+    "extras": {}
+  },
+  "labor-force-participation-rate": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "",
+    "te_value": 72.3,
+    "desc_snippet": "Labor Force Participation Rate in Croatia decreased to 72.30 percent in the fourth quarter of 2025 from 72.50 percent in the third quarter of 2025. Labor Force Participation Rate in Croatia averaged 66.10 percent from 2002 until 2025, reaching an all time high of 72.50 percent in the third quarter of 2025 and a record low of 62.00 percent in the first quarter of 2006.  source: EUROSTAT",
+    "extras": {}
+  },
+  "labour-costs": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "",
+    "te_value": 161.35,
+    "desc_snippet": "Labour Costs in Croatia increased to 161.35 points in the fourth quarter of 2025 from 135.09 points in the third quarter of 2025. Labour Costs in Croatia averaged 96.80 points from 1995 until 2025, reaching an all time high of 161.35 points in the fourth quarter of 2025 and a record low of 53.97 points in the third quarter of 1995.  source: EUROSTAT",
+    "extras": {}
+  },
+  "long-term-unemployment-rate": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 1.7,
+    "desc_snippet": "Long Term Unemployment Rate in Croatia remained unchanged at 1.70 percent in the fourth quarter of 2025 from 1.70 percent in the third quarter of 2025. Long Term Unemployment Rate in Croatia averaged 5.90 percent from 2002 until 2025, reaching an all time high of 11.60 percent in the fourth quarter of 2012 and a record low of 1.50 percent in the second quarter of 2020.  source:  EUROSTAT",
+    "extras": {}
+  },
+  "manufacturing-production": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr/",
+    "te_value": 1.9,
+    "desc_snippet": "Manufacturing Production in Croatia increased 1.90 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Croatia averaged 1.28 percent from 1999 until 2026, reaching an all time high of 16.50 percent in May of 2021 and a record low of -13.70 percent in January of 2009.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "medical-doctors": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "minimum-wages": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 1050.0,
+    "desc_snippet": "Minimum Wages in Croatia increased to 1050 EUR/Month in the second quarter of 2026 from 970 EUR/Month in the fourth quarter of 2025. Minimum Wages in Croatia averaged 526.72 EUR/Month from 2008 until 2026, reaching an all time high of 1050.00 EUR/Month in June of 2026 and a record low of 372.00 EUR/Month in June of 2013.  source:  EUROSTAT",
+    "extras": {}
+  },
+  "mining-production": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr/",
+    "te_value": 3.4,
+    "desc_snippet": "Mining production in Croatia increased 3.40 percent in March of 2026 over the same month in the previous year. Mining Production in Croatia averaged -2.05 percent from 1999 until 2026, reaching an all time high of 36.60 percent in June of 2002 and a record low of -31.60 percent in February of 1999.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "nurses": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "personal-income-tax-rate": {
+    "te_source_label": "Croatian Tax Administration",
+    "te_source_url": "https://www.porezna-uprava.hr/Stranice/Naslovnica.aspx",
+    "te_value": 30.0,
+    "desc_snippet": "The Personal Income Tax Rate in Croatia stands at 30 percent. Personal Income Tax Rate in Croatia averaged 42.63 percent from 1995 until 2026, reaching an all time high of 56.10 percent in 2009 and a record low of 30.00 percent in 2021.  source:  Croatian Tax Administration",
+    "extras": {}
+  },
+  "population": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 3.9,
+    "desc_snippet": "The total population in Croatia was estimated at 3.9 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960, Croatia had a population of 4.1 million people.  source:  EUROSTAT",
+    "extras": {}
+  },
+  "ppi": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://www.dzs.hr",
+    "te_value": 129.8,
+    "desc_snippet": "Producer Prices in Croatia increased to 129.80 points in April from 127.10 points in March of 2026. Producer Prices in Croatia averaged 106.68 points from 2013 until 2026, reaching an all time high of 129.80 points in April of 2026 and a record low of 90.40 points in May of 2020.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "productivity": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "",
+    "te_value": 5.9,
+    "desc_snippet": "Productivity in Croatia decreased to 5.90 points in March from 104.90 points in February of 2026. Productivity in Croatia averaged 102.07 points from 2009 until 2026, reaching an all time high of 111.30 points in January of 2013 and a record low of 5.90 points in March of 2026.  source: Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "retail-sales": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr",
+    "te_value": 3.3,
+    "desc_snippet": "Retail sales in Croatia rose by 3.3% year-on-year in March 2026 from 3.1% in the previous month. This marked the highest level since December 2025, as sales increased in non-food products excluding automotive fuels and lubricants (8% vs 6.5% in February). At the same time, activity declined at a softer pace for automotive fuels and lubricants (-4.7% vs -8.7%). In contrast, sales growth moderated f",
+    "extras": {}
+  },
+  "retirement-age-men": {
+    "te_source_label": "The Republic of Croatia",
+    "te_source_url": "",
+    "te_value": 65.0,
+    "desc_snippet": "Retirement Age Men in Croatia remained unchanged at 65 Years in 2026 from 65 Years in 2025. Retirement Age Men in Croatia averaged 65.00 Years from 2004 until 2026, reaching an all time high of 65.00 Years in 2005 and a record low of 65.00 Years in 2005.  source: The Republic of Croatia, Tax Administration",
+    "extras": {}
+  },
+  "retirement-age-women": {
+    "te_source_label": "The Republic of Croatia, Tax Administration",
+    "te_source_url": "http://siteresources.worldbank.org",
+    "te_value": 63.75,
+    "desc_snippet": "Retirement Age Women in Croatia remained unchanged at 63.75 Years in 2026 from 63.75 Years in 2025. Retirement Age Women in Croatia averaged 61.47 Years from 2004 until 2026, reaching an all time high of 63.75 Years in 2025 and a record low of 60.00 Years in 2005.  source:  The Republic of Croatia, Tax Administration",
+    "extras": {}
+  },
+  "sales-tax-rate": {
+    "te_source_label": "Ministry of Finance, Tax Administration, Croatia",
+    "te_source_url": "https://www.vatlive.com",
+    "te_value": 25.0,
+    "desc_snippet": "The Sales Tax Rate in Croatia stands at 25 percent. Sales Tax Rate in Croatia averaged 24.24 percent from 2006 until 2026, reaching an all time high of 25.00 percent in 2012 and a record low of 22.00 percent in 2007.  source:  Ministry of Finance, Tax Administration, Croatia",
+    "extras": {}
+  },
+  "services-inflation": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "services-sentiment": {
+    "te_source_label": "",
+    "te_source_url": "",
+    "te_value": null,
+    "desc_snippet": "",
+    "extras": {}
+  },
+  "social-security-rate-companies": {
+    "te_source_label": "Tax Administration - Ministry of Finance",
+    "te_source_url": "",
+    "te_value": 16.5,
+    "desc_snippet": "The Social Security Rate For Companies in Croatia stands at 16.50 percent. Social Security Rate For Companies in Croatia averaged 16.87 percent from 2004 until 2026, reaching an all time high of 17.20 percent in 2005 and a record low of 15.20 percent in 2013.  source: Tax Administration - Ministry of Finance",
+    "extras": {}
+  },
+  "social-security-rate-employees": {
+    "te_source_label": "Tax Administration - Ministry of Finance",
+    "te_source_url": "",
+    "te_value": 20.0,
+    "desc_snippet": "The Social Security Rate For Employees in Croatia stands at 20 percent. Social Security Rate For Employees in Croatia averaged 20.00 percent from 2004 until 2026, reaching an all time high of 20.00 percent in 2005 and a record low of 20.00 percent in 2005.  source: Tax Administration - Ministry of Finance",
+    "extras": {}
+  },
+  "social-security-rate": {
+    "te_source_label": "Tax Administration - Ministry of Finance",
+    "te_source_url": "",
+    "te_value": 36.5,
+    "desc_snippet": "The Social Security Rate in Croatia stands at 36.50 percent. Social Security Rate in Croatia averaged 36.87 percent from 2004 until 2026, reaching an all time high of 37.20 percent in 2005 and a record low of 35.20 percent in 2013.  source: Tax Administration - Ministry of Finance",
+    "extras": {}
+  },
+  "terrorism-index": {
+    "te_source_label": "Institute for Economics and Peace",
+    "te_source_url": "",
+    "te_value": 0.0,
+    "desc_snippet": "Terrorism Index in Croatia remained unchanged at 0 Points in 2025 from 0 Points in 2024. Terrorism Index in Croatia averaged 0.50 Points from 2002 until 2025, reaching an all time high of 2.01 Points in 2008 and a record low of 0.00 Points in 2011.  source: Institute for Economics and Peace",
+    "extras": {}
+  },
+  "unemployed-persons": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "https://podaci.dzs.hr/en/",
+    "te_value": 83992.0,
+    "desc_snippet": "The number of unemployed persons in Croatia decreased to 83992 in February of 2026 from 87935 in January of 2026. Unemployed Persons in Croatia averaged 248695.21 from 1990 until 2026, reaching an all time high of 415352.00 in March of 2002 and a record low of 70036.00 in June of 2025.  source:  Croatian Bureau of Statistics",
+    "extras": {}
+  },
+  "unemployment": {
+    "te_source_label": "Croatian Bureau of Statistics",
+    "te_source_url": "http://www.dzs.hr",
+    "te_value": 4.3,
+    "desc_snippet": "Croatia’s registered unemployment rate fell to 4.3% in March 2026 from 4.7% in the previous month, marking the lowest jobless rate since October 2025. The number of unemployed persons dropped 9.6% from a month earlier to 75.9 thousand, of whom 40.3 thousand were women. Employment increased 0.3% to 1.698 million, while the labor force declined 0.2% to 1.774 million. Paid employment in legal entitie",
+    "extras": {}
+  },
+  "youth-unemployment-rate": {
+    "te_source_label": "EUROSTAT",
+    "te_source_url": "https://ec.europa.eu/eurostat/",
+    "te_value": 16.3,
+    "desc_snippet": "Youth Unemployment Rate in Croatia remained unchanged at 16.30 percent in March. Youth Unemployment Rate in Croatia averaged 29.61 percent from 2000 until 2026, reaching an all time high of 50.20 percent in April of 2013 and a record low of 16.30 percent in July of 2019.  source:  EUROSTAT",
+    "extras": {}
+  }
+}

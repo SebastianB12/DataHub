@@ -1,0 +1,596 @@
+{
+  "budget-deficit": {
+    "te_slug": "government-budget",
+    "te_url": "https://tradingeconomics.com/luxembourg/government-budget",
+    "canonical": "https://tradingeconomics.com/luxembourg/government-budget",
+    "html_bytes": 274646,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "http://www.statistiques.public.lu",
+    "meta_desc": null
+  },
+  "business-confidence": {
+    "te_slug": "business-confidence",
+    "te_url": "https://tradingeconomics.com/luxembourg/business-confidence",
+    "canonical": "https://tradingeconomics.com/luxembourg/business-confidence",
+    "html_bytes": 279513,
+    "src_name": "European Commission",
+    "src_url": "http://ec.europa.eu",
+    "meta_desc": null
+  },
+  "capacity-utilization": {
+    "te_slug": "capacity-utilization",
+    "te_url": "https://tradingeconomics.com/luxembourg/capacity-utilization",
+    "canonical": "https://tradingeconomics.com/luxembourg/capacity-utilization",
+    "html_bytes": 278054,
+    "src_name": "European Commission",
+    "src_url": "https://ec.europa.eu/eurostat/en/",
+    "meta_desc": null
+  },
+  "changes-in-inventories": {
+    "te_slug": "changes-in-inventories",
+    "te_url": "https://tradingeconomics.com/luxembourg/changes-in-inventories",
+    "canonical": "https://tradingeconomics.com/luxembourg/changes-in-inventories",
+    "html_bytes": 272176,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "consumer-confidence": {
+    "te_slug": "consumer-confidence",
+    "te_url": "https://tradingeconomics.com/luxembourg/consumer-confidence",
+    "canonical": "https://tradingeconomics.com/luxembourg/consumer-confidence",
+    "html_bytes": 278191,
+    "src_name": "European Commission",
+    "src_url": "https://ec.europa.eu",
+    "meta_desc": null
+  },
+  "consumer-spending": {
+    "te_slug": "consumer-spending",
+    "te_url": "https://tradingeconomics.com/luxembourg/consumer-spending",
+    "canonical": "https://tradingeconomics.com/luxembourg/consumer-spending",
+    "html_bytes": 277829,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/",
+    "meta_desc": null
+  },
+  "core-cpi": {
+    "te_slug": "core-inflation-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/core-inflation-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/core-inflation-rate",
+    "html_bytes": 280424,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "corporate-tax-rate": {
+    "te_slug": "corporate-tax-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/corporate-tax-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/corporate-tax-rate",
+    "html_bytes": 275134,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "corruption-index": {
+    "te_slug": "corruption-index",
+    "te_url": "https://tradingeconomics.com/luxembourg/corruption-index",
+    "canonical": "https://tradingeconomics.com/luxembourg/corruption-index",
+    "html_bytes": 278144,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "corruption-rank": {
+    "te_slug": "corruption-rank",
+    "te_url": "https://tradingeconomics.com/luxembourg/corruption-rank",
+    "canonical": "https://tradingeconomics.com/luxembourg/corruption-rank",
+    "html_bytes": 278148,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "cpi-clothing": {
+    "te_slug": "cpi-clothing",
+    "te_url": "https://tradingeconomics.com/luxembourg/cpi-clothing",
+    "canonical": "https://tradingeconomics.com/luxembourg/cpi-clothing",
+    "html_bytes": 268196,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "cpi-education": {
+    "te_slug": "cpi-education",
+    "te_url": "https://tradingeconomics.com/luxembourg/cpi-education",
+    "canonical": "https://tradingeconomics.com/luxembourg/cpi-education",
+    "html_bytes": 268157,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "cpi-food": {
+    "te_slug": "cpi-food",
+    "te_url": "https://tradingeconomics.com/luxembourg/cpi-food",
+    "canonical": "https://tradingeconomics.com/luxembourg/cpi-food",
+    "html_bytes": 268034,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "cpi-housing-utilities": {
+    "te_slug": "cpi-housing-utilities",
+    "te_url": "https://tradingeconomics.com/luxembourg/cpi-housing-utilities",
+    "canonical": "https://tradingeconomics.com/luxembourg/cpi-housing-utilities",
+    "html_bytes": 277912,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "cpi-recreation-and-culture": {
+    "te_slug": "cpi-recreation-and-culture",
+    "te_url": "https://tradingeconomics.com/luxembourg/cpi-recreation-and-culture",
+    "canonical": "https://tradingeconomics.com/luxembourg/cpi-recreation-and-culture",
+    "html_bytes": 268744,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "cpi-transportation": {
+    "te_slug": "cpi-transportation",
+    "te_url": "https://tradingeconomics.com/luxembourg/cpi-transportation",
+    "canonical": "https://tradingeconomics.com/luxembourg/cpi-transportation",
+    "html_bytes": 279053,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "credit-rating": {
+    "te_slug": "rating",
+    "te_url": "https://tradingeconomics.com/luxembourg/rating",
+    "canonical": "https://tradingeconomics.com/luxembourg/rating",
+    "html_bytes": 201559,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "current-account": {
+    "te_slug": "current-account",
+    "te_url": "https://tradingeconomics.com/luxembourg/current-account",
+    "canonical": "https://tradingeconomics.com/luxembourg/current-account",
+    "html_bytes": 286741,
+    "src_name": "Banque Centrale du Luxembourg",
+    "src_url": "http://www.bcl.lu",
+    "meta_desc": null
+  },
+  "current-account-to-gdp": {
+    "te_slug": "current-account-to-gdp",
+    "te_url": "https://tradingeconomics.com/luxembourg/current-account-to-gdp",
+    "canonical": "https://tradingeconomics.com/luxembourg/current-account-to-gdp",
+    "html_bytes": 281529,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "disposable-personal-income": {
+    "te_slug": "disposable-personal-income",
+    "te_url": "https://tradingeconomics.com/luxembourg/disposable-personal-income",
+    "canonical": "https://tradingeconomics.com/luxembourg/disposable-personal-income",
+    "html_bytes": 257804,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "employed-persons": {
+    "te_slug": "employed-persons",
+    "te_url": "https://tradingeconomics.com/luxembourg/employed-persons",
+    "canonical": "https://tradingeconomics.com/luxembourg/employed-persons",
+    "html_bytes": 273753,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "employment-rate": {
+    "te_slug": "employment-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/employment-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/employment-rate",
+    "html_bytes": 275953,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "energy-inflation": {
+    "te_slug": "energy-inflation",
+    "te_url": "https://tradingeconomics.com/luxembourg/energy-inflation",
+    "canonical": "https://tradingeconomics.com/luxembourg/energy-inflation",
+    "html_bytes": 257634,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "exports": {
+    "te_slug": "exports",
+    "te_url": "https://tradingeconomics.com/luxembourg/exports",
+    "canonical": "https://tradingeconomics.com/luxembourg/exports",
+    "html_bytes": 279291,
+    "src_name": "Banque Centrale du Luxembourg",
+    "src_url": "http://www.statistiques.public.lu",
+    "meta_desc": null
+  },
+  "food-inflation": {
+    "te_slug": "food-inflation",
+    "te_url": "https://tradingeconomics.com/luxembourg/food-inflation",
+    "canonical": "https://tradingeconomics.com/luxembourg/food-inflation",
+    "html_bytes": 278805,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "http://www.statistiques.public.lu",
+    "meta_desc": null
+  },
+  "gdp": {
+    "te_slug": "gdp",
+    "te_url": "https://tradingeconomics.com/luxembourg/gdp",
+    "canonical": "https://tradingeconomics.com/luxembourg/gdp",
+    "html_bytes": 277340,
+    "src_name": "World Bank",
+    "src_url": "https://www.worldbank.org/",
+    "meta_desc": null
+  },
+  "gdp-per-capita": {
+    "te_slug": "gdp-per-capita",
+    "te_url": "https://tradingeconomics.com/luxembourg/gdp-per-capita",
+    "canonical": "https://tradingeconomics.com/luxembourg/gdp-per-capita",
+    "html_bytes": 276646,
+    "src_name": "World Bank",
+    "src_url": "https://www.worldbank.org/",
+    "meta_desc": null
+  },
+  "gdp-per-capita-ppp": {
+    "te_slug": "gdp-per-capita-ppp",
+    "te_url": "https://tradingeconomics.com/luxembourg/gdp-per-capita-ppp",
+    "canonical": "https://tradingeconomics.com/luxembourg/gdp-per-capita-ppp",
+    "html_bytes": 278097,
+    "src_name": "World Bank",
+    "src_url": "https://www.worldbank.org/",
+    "meta_desc": null
+  },
+  "gdp-real": {
+    "te_slug": "gdp-constant-prices",
+    "te_url": "https://tradingeconomics.com/luxembourg/gdp-constant-prices",
+    "canonical": "https://tradingeconomics.com/luxembourg/gdp-constant-prices",
+    "html_bytes": 274617,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/",
+    "meta_desc": null
+  },
+  "government-debt": {
+    "te_slug": "government-debt-to-gdp",
+    "te_url": "https://tradingeconomics.com/luxembourg/government-debt-to-gdp",
+    "canonical": "https://tradingeconomics.com/luxembourg/government-debt-to-gdp",
+    "html_bytes": 274718,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "government-debt-total": {
+    "te_slug": "government-debt",
+    "te_url": "https://tradingeconomics.com/luxembourg/government-debt",
+    "canonical": "https://tradingeconomics.com/luxembourg/government-debt",
+    "html_bytes": 257617,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "government-spending": {
+    "te_slug": "government-spending",
+    "te_url": "https://tradingeconomics.com/luxembourg/government-spending",
+    "canonical": "https://tradingeconomics.com/luxembourg/government-spending",
+    "html_bytes": 274260,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/",
+    "meta_desc": null
+  },
+  "government-spending-eur": {
+    "te_slug": "government-spending-value",
+    "te_url": "https://tradingeconomics.com/luxembourg/government-spending-value",
+    "canonical": "https://tradingeconomics.com/luxembourg/government-spending-value",
+    "html_bytes": 257787,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "gross-fixed-capital-formation": {
+    "te_slug": "gross-fixed-capital-formation",
+    "te_url": "https://tradingeconomics.com/luxembourg/gross-fixed-capital-formation",
+    "canonical": "https://tradingeconomics.com/luxembourg/gross-fixed-capital-formation",
+    "html_bytes": 275026,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/",
+    "meta_desc": null
+  },
+  "hospital-beds": {
+    "te_slug": "hospital-beds",
+    "te_url": "https://tradingeconomics.com/luxembourg/hospital-beds",
+    "canonical": "https://tradingeconomics.com/luxembourg/hospital-beds",
+    "html_bytes": 273507,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "house-price-index": {
+    "te_slug": "housing-index",
+    "te_url": "https://tradingeconomics.com/luxembourg/housing-index",
+    "canonical": "https://tradingeconomics.com/luxembourg/housing-index",
+    "html_bytes": 272717,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "imports": {
+    "te_slug": "imports",
+    "te_url": "https://tradingeconomics.com/luxembourg/imports",
+    "canonical": "https://tradingeconomics.com/luxembourg/imports",
+    "html_bytes": 279184,
+    "src_name": "Banque Centrale du Luxembourg",
+    "src_url": "http://www.statistiques.public.lu",
+    "meta_desc": null
+  },
+  "industrial-production": {
+    "te_slug": "industrial-production",
+    "te_url": "https://tradingeconomics.com/luxembourg/industrial-production",
+    "canonical": "https://tradingeconomics.com/luxembourg/industrial-production",
+    "html_bytes": 272783,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "http://www.statistiques.public.lu",
+    "meta_desc": null
+  },
+  "inflation-cpi": {
+    "te_slug": "inflation-cpi",
+    "te_url": "https://tradingeconomics.com/luxembourg/inflation-cpi",
+    "canonical": "https://tradingeconomics.com/luxembourg/inflation-cpi",
+    "html_bytes": 293442,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "interest-rate": {
+    "te_slug": "interest-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/interest-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/interest-rate",
+    "html_bytes": 277703,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "job-vacancies": {
+    "te_slug": "job-vacancies",
+    "te_url": "https://tradingeconomics.com/luxembourg/job-vacancies",
+    "canonical": "https://tradingeconomics.com/luxembourg/job-vacancies",
+    "html_bytes": 274153,
+    "src_name": "Agence pour le développement de l'emploi (ADEM)",
+    "src_url": "https://adem.public.lu/en.html",
+    "meta_desc": null
+  },
+  "labor-force-participation-rate": {
+    "te_slug": "labor-force-participation-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/labor-force-participation-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/labor-force-participation-rate",
+    "html_bytes": 276435,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "labour-costs": {
+    "te_slug": "labour-costs",
+    "te_url": "https://tradingeconomics.com/luxembourg/labour-costs",
+    "canonical": "https://tradingeconomics.com/luxembourg/labour-costs",
+    "html_bytes": 273605,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "long-term-unemployment-rate": {
+    "te_slug": "long-term-unemployment-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/long-term-unemployment-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/long-term-unemployment-rate",
+    "html_bytes": 277642,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "manufacturing-production": {
+    "te_slug": "manufacturing-production",
+    "te_url": "https://tradingeconomics.com/luxembourg/manufacturing-production",
+    "canonical": "https://tradingeconomics.com/luxembourg/manufacturing-production",
+    "html_bytes": 278092,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "medical-doctors": {
+    "te_slug": "medical-doctors",
+    "te_url": "https://tradingeconomics.com/luxembourg/medical-doctors",
+    "canonical": "https://tradingeconomics.com/luxembourg/medical-doctors",
+    "html_bytes": 273583,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "minimum-wages": {
+    "te_slug": "minimum-wages",
+    "te_url": "https://tradingeconomics.com/luxembourg/minimum-wages",
+    "canonical": "https://tradingeconomics.com/luxembourg/minimum-wages",
+    "html_bytes": 275842,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "mining-production": {
+    "te_slug": "mining-production",
+    "te_url": "https://tradingeconomics.com/luxembourg/mining-production",
+    "canonical": "https://tradingeconomics.com/luxembourg/mining-production",
+    "html_bytes": 277806,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "nurses": {
+    "te_slug": "nurses",
+    "te_url": "https://tradingeconomics.com/luxembourg/nurses",
+    "canonical": "https://tradingeconomics.com/luxembourg/nurses",
+    "html_bytes": 273254,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "personal-income-tax-rate": {
+    "te_slug": "personal-income-tax-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/personal-income-tax-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/personal-income-tax-rate",
+    "html_bytes": 275429,
+    "src_name": "Administration des Contributions Directes",
+    "src_url": "http://ec.europa.eu",
+    "meta_desc": null
+  },
+  "population": {
+    "te_slug": "population",
+    "te_url": "https://tradingeconomics.com/luxembourg/population",
+    "canonical": "https://tradingeconomics.com/luxembourg/population",
+    "html_bytes": 274794,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "http://www.statistiques.public.lu",
+    "meta_desc": null
+  },
+  "ppi": {
+    "te_slug": "producer-prices",
+    "te_url": "https://tradingeconomics.com/luxembourg/producer-prices",
+    "canonical": "https://tradingeconomics.com/luxembourg/producer-prices",
+    "html_bytes": 279072,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/en.html",
+    "meta_desc": null
+  },
+  "productivity": {
+    "te_slug": "productivity",
+    "te_url": "https://tradingeconomics.com/luxembourg/productivity",
+    "canonical": "https://tradingeconomics.com/luxembourg/productivity",
+    "html_bytes": 275785,
+    "src_name": "EUROSTAT",
+    "src_url": "https://ec.europa.eu/eurostat/",
+    "meta_desc": null
+  },
+  "retail-sales": {
+    "te_slug": "retail-sales-mom",
+    "te_url": "https://tradingeconomics.com/luxembourg/retail-sales-mom",
+    "canonical": "https://tradingeconomics.com/luxembourg/retail-sales-mom",
+    "html_bytes": 257634,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "retirement-age-men": {
+    "te_slug": "retirement-age-men",
+    "te_url": "https://tradingeconomics.com/luxembourg/retirement-age-men",
+    "canonical": "https://tradingeconomics.com/luxembourg/retirement-age-men",
+    "html_bytes": 282170,
+    "src_name": "Caisse Nationale d’Assurance Pension",
+    "src_url": "http://www.cnap.lu",
+    "meta_desc": null
+  },
+  "retirement-age-women": {
+    "te_slug": "retirement-age-women",
+    "te_url": "https://tradingeconomics.com/luxembourg/retirement-age-women",
+    "canonical": "https://tradingeconomics.com/luxembourg/retirement-age-women",
+    "html_bytes": 282258,
+    "src_name": "Caisse Nationale d’Assurance Pension",
+    "src_url": "http://www.cnap.lu",
+    "meta_desc": null
+  },
+  "sales-tax-rate": {
+    "te_slug": "sales-tax-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/sales-tax-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/sales-tax-rate",
+    "html_bytes": 274989,
+    "src_name": "Administration des Contributions Directes",
+    "src_url": "https://www.vatlive.com",
+    "meta_desc": null
+  },
+  "services-inflation": {
+    "te_slug": "services-inflation",
+    "te_url": "https://tradingeconomics.com/luxembourg/services-inflation",
+    "canonical": "https://tradingeconomics.com/luxembourg/services-inflation",
+    "html_bytes": 257668,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "services-sentiment": {
+    "te_slug": "services-sentiment",
+    "te_url": "https://tradingeconomics.com/luxembourg/services-sentiment",
+    "canonical": "https://tradingeconomics.com/luxembourg/services-sentiment",
+    "html_bytes": 257668,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "social-security-rate": {
+    "te_slug": "social-security-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/social-security-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/social-security-rate",
+    "html_bytes": 275155,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "social-security-rate-companies": {
+    "te_slug": "social-security-rate-for-companies",
+    "te_url": "https://tradingeconomics.com/luxembourg/social-security-rate-for-companies",
+    "canonical": "https://tradingeconomics.com/luxembourg/social-security-rate-for-companies",
+    "html_bytes": 275787,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "social-security-rate-employees": {
+    "te_slug": "social-security-rate-for-employees",
+    "te_url": "https://tradingeconomics.com/luxembourg/social-security-rate-for-employees",
+    "canonical": "https://tradingeconomics.com/luxembourg/social-security-rate-for-employees",
+    "html_bytes": 275787,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "terrorism-index": {
+    "te_slug": "terrorism-index",
+    "te_url": "https://tradingeconomics.com/luxembourg/terrorism-index",
+    "canonical": "https://tradingeconomics.com/luxembourg/terrorism-index",
+    "html_bytes": 257617,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  },
+  "unemployed-persons": {
+    "te_slug": "unemployed-persons",
+    "te_url": "https://tradingeconomics.com/luxembourg/unemployed-persons",
+    "canonical": "https://tradingeconomics.com/luxembourg/unemployed-persons",
+    "html_bytes": 273878,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu",
+    "meta_desc": null
+  },
+  "unemployment": {
+    "te_slug": "unemployment-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/unemployment-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/unemployment-rate",
+    "html_bytes": 287753,
+    "src_name": "STATEC, Luxembourg",
+    "src_url": "https://statistiques.public.lu/fr.html",
+    "meta_desc": null
+  },
+  "youth-unemployment-rate": {
+    "te_slug": "youth-unemployment-rate",
+    "te_url": "https://tradingeconomics.com/luxembourg/youth-unemployment-rate",
+    "canonical": "https://tradingeconomics.com/luxembourg/youth-unemployment-rate",
+    "html_bytes": 277280,
+    "src_name": null,
+    "src_url": null,
+    "meta_desc": null
+  }
+}

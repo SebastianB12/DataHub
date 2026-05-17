@@ -60,3 +60,13 @@ docs/.coverage_audit.pkl
 # Claude local config
 .claude/
 cache.sqlite
+
+# TE-Scrape scratch caches (will be replaced by te_page_snapshots table in v2)
+docs/_audit_te_html/
+docs/_audit_be_html/
+docs/_audit_cn_te_html/
+docs/_audit_fr_te_html/
+docs/_audit_si_te_html/
+# Excel/Office lock files
+~$*
+UserssbsourcetradingEconomics.tmp_rs.html

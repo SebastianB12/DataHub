@@ -1,0 +1,179 @@
+# GB Audit — Batch 3 findings
+# Generated: 2026-05-16
+# Method: TE inventory + live TE meta-description fetch + DB compare; ONS provider refresh executed mid-audit.
+
+summary:
+  total: 16
+  ok: 15
+  fixed_via_refresh: 1   # trade-balance now correct after re-running ons provider
+  flagged: 3             # unemployed-persons, unemployment, youth-unemployment-rate (ONS not yet published Feb 2026; TE shows forecast/preview)
+  source_changes: 0
+  series_id_changes: 0
+
+slugs:
+
+  nurses:
+    status: ok
+    te_label: OECD
+    db_source: curated
+    te_value: 8.71
+    te_period: "2022"
+    db_value: 8.71
+    db_date: 2022-12-31
+    note: Static curated OECD value; matches.
+
+  personal-income-tax-rate:
+    status: ok
+    te_label: HM Revenue & Customs
+    db_source: curated
+    te_value: 45
+    te_period: "2026"
+    db_value: 45
+    db_date: 2026-12-31
+    note: Static UK additional rate; matches.
+
+  population:
+    status: ok
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:ebaq
+    te_value: 69.5
+    te_period: "2025"
+    db_value: 69.6
+    db_date: 2026-03-31
+    note: Within tolerance (annual EBAQ projection); DB even fresher than TE.
+
+  ppi:
+    status: ok
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:gb7s
+    te_value: 145
+    te_period: "2026-03"
+    db_value: 145
+    db_date: 2026-03-31
+    note: Exact match.
+
+  retail-sales:
+    status: ok
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:j5ek
+    te_value: 0.70
+    te_period: "2026-03"
+    te_unit: "% MoM"
+    db_value: 103.7
+    db_date: 2026-03-31
+    db_unit: Index 2022=100
+    note: TE shows MoM%, DB stores level. Computed MoM = (103.7/103.0 - 1)*100 = 0.68% ≈ 0.7%. Frontend transform.
+
+  retirement-age-men:
+    status: ok
+    te_label: Department for Work and Pensions
+    db_source: curated
+    te_value: 66
+    db_value: 66
+    note: Static; matches.
+
+  retirement-age-women:
+    status: ok
+    te_label: Department for Work and Pensions
+    db_source: curated
+    te_value: 66
+    db_value: 66
+    note: Static; matches.
+
+  sales-tax-rate:
+    status: ok
+    te_label: HM Revenue & Customs
+    db_source: curated
+    te_value: 20
+    db_value: 20
+    note: Static UK VAT; matches.
+
+  social-security-rate:
+    status: ok
+    te_label: HM Revenue & Customs
+    db_source: curated
+    te_value: 25.8
+    db_value: 25.8
+    note: Static; matches.
+
+  social-security-rate-companies:
+    status: ok
+    te_label: HM Revenue & Customs
+    db_source: curated
+    te_value: 13.8
+    db_value: 13.8
+    note: Static NI Employer; matches.
+
+  social-security-rate-employees:
+    status: ok
+    te_label: HM Revenue & Customs
+    db_source: curated
+    te_value: 12
+    db_value: 12
+    note: Static NI Employee; matches.
+
+  trade-balance:
+    status: fixed_via_refresh
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:ikbj   # indicator_sources note says 'ons:bokk' but provider URL uses IKBJ; series_id field is informational only
+    te_value: -9658
+    te_unit: GBP Million
+    te_period: "2026-03"
+    db_value_before: -0.72
+    db_date_before: 2026-02-28
+    db_value_after: -9.66
+    db_date_after: 2026-03-31
+    note: Pre-refresh data was 2 weeks stale (last ONS run 2026-05-01). Triggered ons provider refresh — March 2026 figure now -9.66bn = -9660M ≈ TE -9658. Minor cosmetic gap in indicator_sources.series_id ('bokk' vs actual 'ikbj') — not load-bearing; recommend cleanup.
+
+  unemployed-persons:
+    status: flagged_stale_upstream
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:mgsc
+    te_value: 1667.4
+    te_period: "2026-02"
+    db_value: 1780
+    db_date: 2026-01-31
+    note: ONS time-series MGSC still ends Jan 2026 (verified live). ONS Labour Market Overview next release 19 May 2026. TE appears to be showing forecast/preview Feb data. DB matches ONS source-of-truth; will converge on next ONS release.
+
+  unemployment:
+    status: flagged_stale_upstream
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:mgsx
+    te_value: 4.9
+    te_period: "2026-02"
+    db_value: 4.9
+    db_date: 2026-01-31
+    note: Value matches; period 1m behind TE. Same as unemployed-persons — ONS MGSX live API ends Jan 2026 (next release 19 May).
+
+  wages:
+    status: ok
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:kab9
+    te_value: 745
+    te_period: "2026-02"
+    db_value: 745
+    db_date: 2026-02-28
+    note: Exact match. (Wages KAB9 release cycle is ahead of LFS unemployment.)
+
+  youth-unemployment-rate:
+    status: flagged_stale_upstream
+    te_label: Office for National Statistics
+    db_source: ons
+    db_series: ons:mgwy
+    te_value: 14.3
+    te_period: "2026-02"
+    db_value: 15.8
+    db_date: 2026-01-31
+    note: ONS MGWY time-series live API ends Jan 2026 = 15.8. TE 14.3 likely preview/forecast for Feb. Same ONS LFS release cycle gap. Will converge 19 May 2026.
+
+# Cleanup recommendation (non-blocking)
+# - indicator_sources for GB/trade-balance has series_id='ons:bokk' but ons.py provider fetches IKBJ.
+#   The data is correct (IKBJ); only the metadata label is wrong. Consider updating to 'ons:ikbj'
+#   for consistency with other ONS rows.

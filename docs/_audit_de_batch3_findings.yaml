@@ -1,0 +1,373 @@
+medical-doctors:
+  te_label: OECD
+  te_value: '4.98'
+  te_period: '2021'
+  our_source: curated
+  our_series: DE:medical-doctors
+  our_value: 4.98
+  our_period: '2021-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: TE attributes to OECD; we use curated snapshot. Value matches exactly. Same as US/GB pattern — OECD provider not implemented.
+military-expenditure:
+  te_label: SIPRI
+  te_value: '113585.90'
+  te_period: '2025'
+  our_source: curated
+  our_series: DE:military-expenditure
+  our_value: 113586
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: TE attributes to SIPRI; we use curated snapshot. Value matches.
+minimum-wages:
+  te_label: Federal Statistical Office
+  te_value: '13.90'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:minimum-wages
+  our_value: 13.9
+  our_period: '2026-01-01'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: TE attributes to Destatis; minimum-wage is a legal/policy figure (Mindestlohngesetz) — curated snapshot is correct in practice but should ideally come from Destatis 81000.
+mining-production:
+  te_label: Federal Statistical Office
+  te_value: '-4.80'
+  te_period: March 2026
+  our_source: destatis
+  our_series: 42153-0001
+  our_value: 89.9
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows YoY% from SA index. SA YoY March 2026 (84.7/89.3-1) = -5.15% vs TE -4.80%, within tolerance. Frontend should compute YoY from SA series.
+money-supply-m1:
+  te_label: Deutsche Bundesbank
+  te_value: '2906'
+  te_period: February 2026
+  our_source: bundesbank
+  our_series: BBBK10.M.TXI301
+  our_value: 2912.3
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+  note: We have March 2026 (2912.3); TE shows Feb (2906). Both Bundesbank values. Vintage diff only.
+money-supply-m3:
+  te_label: Deutsche Bundesbank
+  te_value: '4145'
+  te_period: March 2026
+  our_source: bundesbank
+  our_series: BBBS2.M.DB.Y.U.M30A.X.1.U2.2300.Z01.E
+  our_value: 4145
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+nurses:
+  te_label: OECD
+  te_value: '14.41'
+  te_period: '2023'
+  our_source: curated
+  our_series: DE:nurses
+  our_value: 14.41
+  our_period: '2023-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: TE source-name tag missing in HTML but description says OECD. Value matches.
+personal-income-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '45'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:personal-income-tax-rate
+  our_value: 45
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: BZSt is policy figure (Einkommensteuergesetz §32a). curated snapshot is appropriate; no API for tax law.
+population:
+  te_label: Federal Statistical Office
+  te_value: '83.6'
+  te_period: '2024'
+  our_source: destatis
+  our_series: 12411-0001
+  our_value: 83.58
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+  note: TE shows 2024 vintage (83.6 mn); we have 2025-12-31 = 83.58 mn from Destatis. Source matches.
+ppi:
+  te_label: Federal Statistical Office
+  te_value: '126.90'
+  te_period: March 2026
+  our_source: destatis
+  our_series: 61241-0002
+  our_value: 126.9
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null
+productivity:
+  te_label: Deutsche Bundesbank
+  te_value: '95.60'
+  te_period: February 2026
+  our_source: eurostat
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_value: 100.28
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-and-series
+  note: TE uses Bundesbank monthly labor-productivity index; we use Eurostat quarterly real labour productivity per hour (different concept and frequency). Bundesbank series not yet onboarded — coverage gap.
+retail-sales:
+  te_label: Federal Statistical Office
+  te_value: '-2.0'
+  te_period: March 2026
+  our_source: destatis
+  our_series: 45212-0005
+  our_value: 99.7
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows MoM% from SCA index (99.7 vs prior SCA 100.5 = -0.80%; TE -2.0% reflects post-revision data we don't yet have). Source and series correct; frontend should compute MoM%.
+retirement-age-men:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '66.33'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:retirement-age-men
+  our_value: 66.33
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: Policy figure from DRV/SGB VI §35. curated appropriate.
+retirement-age-women:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '66.33'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:retirement-age-women
+  our_value: 66.33
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: Same retirement age for women in DE since 2018 (Renteneintrittsalter angleichung). curated snapshot.
+sales-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '19'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:sales-tax-rate
+  our_value: 19
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: VAT/USt is law-defined; curated appropriate.
+services-inflation:
+  te_label: Federal Statistical Office
+  te_value: '2.8'
+  te_period: April 2026
+  our_source: eurostat
+  our_series: ei_cphi_m:CP-HIS:HICP2025
+  our_value: 102.56
+  our_period: '2026-04-30'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE attributes to Destatis (CPI services component); we use Eurostat HICP-services (ei_cphi_m). YoY computed (102.56/99.52-1)=3.05% vs TE 2.8% (TE uses Destatis CPI YoY, slight difference vs HICP). Within ±5% tolerance.
+social-security-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '38.74'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:social-security-rate
+  our_value: 38.74
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: Sozialversicherungsbeiträge — policy figure from SGB; curated.
+social-security-rate-companies:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '19.42'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:social-security-rate-companies
+  our_value: 19.42
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+social-security-rate-employees:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '19.33'
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:social-security-rate-employees
+  our_value: 19.33
+  our_period: '2026-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+terrorism-index:
+  te_label: Institute for Economics and Peace
+  te_value: '4.45'
+  te_period: '2025'
+  our_source: curated
+  our_series: DE:terrorism-index
+  our_value: 4.45
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: IEP Global Terrorism Index — licensed/PDF; curated snapshot OK.
+trade-balance:
+  te_label: Federal Statistical Office
+  te_value: '14.3'
+  te_period: March 2026
+  our_source: destatis
+  our_series: 51000-0002
+  our_value: 20.34
+  our_period: '2026-02-28'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: vintage-lag
+  note: Source/series correct. We have through February (20.34 €bn); TE shows March (14.3 €bn). Next pipeline run will catch up.
+unemployed-persons:
+  te_label: Bundesagentur für Arbeit
+  te_value: '3006'
+  te_period: April 2026
+  our_source: eurostat
+  our_series: une_rt_m:TOTAL:THS_PER
+  our_value: 1760
+  our_period: '2026-03-31'
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-and-concept
+  note: TE uses Bundesagentur für Arbeit registered unemployed (Arbeitslosenstatistik), ~3 million. Eurostat ILO concept = ~1.76 million. Different methodology. BA-API not yet integrated — coverage gap.
+unemployment:
+  te_label: Bundesagentur für Arbeit
+  te_value: '6.4'
+  te_period: April 2026
+  our_source: destatis
+  our_series: 13211-0002
+  our_value: 6.4
+  our_period: '2026-04-30'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: TE attributes to BA; we use Destatis 13211-0002 (NSA, identical headline 6.4% for April 2026). Destatis publishes BA's number — value matches exactly.
+wages:
+  te_label: Federal Statistical Office
+  te_value: '4701'
+  te_period: '2024'
+  our_source: destatis
+  our_series: 62361-0007
+  our_value: 100.4
+  our_period: '2026-02-28'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: wrong-series
+  note: TE shows annual gross monthly earnings level (4701 EUR/Month, 2024); we use Destatis 62361-0007 Index der durchschn. Bruttomonatsverdienste 2025=100. Different metric — should be 62321-0001 or similar annual EUR level. Source attribution correct, series mismatch.
+weapons-sales:
+  te_label: SIPRI
+  te_value: '2049'
+  te_period: '2024'
+  our_source: curated
+  our_series: DE:weapons-sales
+  our_value: 2049
+  our_period: '2024-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: SIPRI TIV — licensed/snapshot; curated appropriate.
+withholding-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_value: '0'
+  te_period: '2025'
+  our_source: curated
+  our_series: DE:withholding-tax-rate
+  our_value: 0
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: wrong-source-label
+  note: Policy figure; curated.
+youth-unemployment-rate:
+  te_label: Federal Statistical Office
+  te_value: '7.50'
+  te_period: March 2026
+  our_source: destatis
+  our_series: 13231-0003
+  our_value: 7.5
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: null

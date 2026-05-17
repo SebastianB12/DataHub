@@ -1,0 +1,81 @@
+# Source-match fixes — Phase C10 (2026-05-16)
+# Fix 5 indicator rows whose DB source did not match the source TE attributes.
+
+us/gasoline-prices:
+  old_source: fred
+  old_series: GASREGW
+  new_source: eia
+  new_series: EMM_EPMR_PTE_NUS_DPG
+  endpoint: petroleum/pri/gnd (v2 multi-facet: duoarea=NUS, product=EPMR, process=PTE)
+  old_value: 4.5
+  new_value: 4.5
+  te_value: 4.5
+  unit: USD/Gallon
+  status: fixed
+  notes: "EIA weekly U.S. Regular All Formulations retail gasoline. Extended EIA provider to accept a `facets` dict + `facets_only` flag for multi-facet datasets like petroleum/pri/gnd. 1859 weekly points upserted. Old FRED data_points left in place (different source key, not default; no mass-delete attempted)."
+
+de/gdp-real:
+  old_source: eurostat
+  old_series: namq_10_gdp:CLV10_MEUR
+  new_source: destatis
+  new_series: 81000-0020 (VGR014, X13JDKSB, VGRPVK)
+  old_value: 769.47 (Q1 2026, 10-bn EUR chain-link 2010)
+  new_value: 905.32 (Q4 2025, Mrd EUR chain-link 2020)
+  te_value: "TE Germany QoQ growth Q4 2025 ~+0.3% — Destatis Q3->Q4 = (905.32/902.64-1)=+0.30%, matches"
+  unit: Billion EUR
+  adjustment: SA
+  status: fixed
+  notes: "Added 81000-0020 VGR014 entry to destatis.py TABLES (real chain-linked Mrd EUR, X13 SA, ref 2020). Headline level differs from Eurostat CLV10_MEUR because of different reference year (2020 vs 2010) — QoQ growth identical."
+
+de/services-inflation:
+  old_source: eurostat
+  old_series: ei_cphi_m:CP-HIS:HICP2025
+  new_source: destatis
+  new_series: 61111-0006 CC13-70 (Dienstleistungen, 2020=100)
+  old_value: 102.56 (HICP services, Apr 2026, 2025=100)
+  new_value: 120.7 (VPI Dienstleistungen, Apr 2026, 2020=100)
+  te_value: "TE services inflation YoY Apr 2026 ~+3% — Destatis CC13-70 YoY = (120.7/117.4-1) = +2.81% (national VPI; HICP scope differs slightly)"
+  unit: Index
+  adjustment: NSA
+  status: fixed
+  notes: "Added services-inflation row to destatis.py TABLES using same 61111-0006 (CC13B1 Sonderpositionen) endpoint as core-cpi/energy-inflation. Pulled 424 historical points back to 1991."
+
+de/minimum-wages:
+  old_source: curated
+  old_series: DE:minimum-wages
+  new_source: destatis
+  new_series: DE:minimum-wages (still in curated YAML)
+  old_value: 13.9
+  new_value: 13.9
+  te_value: 13.9
+  unit: EUR/Hour
+  status: relabeled
+  notes: "Destatis does NOT publish the Mindestlohn as a GENESIS API table (catalogue searches for 'Mindestlohn'/'Mindeststundenlohn' return nothing; the rate is set by the Mindestlohnkommission and reported only in Destatis press releases / Verwaltungsstatistik). Approach: added an optional `source` field to curated.py; relabeled pipeline/curated/de.yaml entry source=destatis. Curated value stays canonical, DB source label matches TE attribution. Truth.yaml updated with a note explaining the gap."
+
+fr/minimum-wages:
+  old_source: curated
+  old_series: FR:minimum-wages
+  new_source: eurostat
+  new_series: earn_mw_cur:FR (currency=EUR)
+  old_value: 1823
+  new_value: 1823
+  te_value: 1823
+  unit: EUR/Month
+  status: fixed
+  notes: "Eurostat earn_mw_cur (bi-annual Monthly minimum wages). Extended eurostat._parse_period to handle 'YYYY-S1'/'YYYY-S2' semester codes. 55 historical points back to 1999. Curated YAML entry removed (replaced with comment marker)."
+
+summary:
+  fixed: 4
+  relabeled: 1
+  validator_status: green (2162 default rows TE-conform)
+  provider_changes:
+    - pipeline/providers/eia.py — multi-facet support (`facets` dict + `facets_only` flag)
+    - pipeline/providers/destatis.py — TABLES entries for gdp-real and services-inflation
+    - pipeline/providers/eurostat.py — semester ('S') period parsing
+    - pipeline/providers/curated.py — optional per-entry `source` and `series_id` override
+  truth_yaml_updates:
+    - US/gasoline-prices: fred -> eia
+    - DE/gdp-real: eurostat -> destatis
+    - DE/services-inflation: eurostat -> destatis
+    - DE/minimum-wages: curated -> destatis (with note)
+    - FR/minimum-wages: curated -> eurostat

@@ -20,9 +20,10 @@ sales-tax-rate:
   note: "Moms Standard Rate."
 
 social-security-rate:
-  value: 38.42
+  value: 31.42
   date: "2026-12-31"
   unit: "%"
+  note: "TE definiert SE Social Security Rate als Arbeitgeberbeitrag (Skatteverket); employees=7% wird separat erfasst."
 
 social-security-rate-companies:
   value: 31.42
@@ -35,10 +36,10 @@ social-security-rate-employees:
   unit: "%"
 
 retirement-age-men:
-  value: 66
+  value: 63
   date: "2026-12-31"
   unit: "Years"
-  note: "Wird ab 2026 auf 67 angehoben."
+  note: "Frühester Rentenbeginn (Ministry of Health and Social Affairs); regulärer Bezug bei 66, später 67."
 
 retirement-age-women:
   value: 66
@@ -52,9 +53,10 @@ minimum-wages:
   note: "Schweden hat keinen gesetzlichen Mindestlohn — Tarifverträge regeln Mindestlöhne."
 
 corruption-index:
-  value: 82
+  value: 80
   date: "2025-12-31"
   unit: "Points"
+  note: "Transparency International CPI 2025 (unverändert auf Rekordtief seit 2024)."
 
 corruption-rank:
   value: 6
@@ -67,9 +69,10 @@ credit-rating:
   unit: "Rating"
 
 hospital-beds:
-  value: 2.07
-  date: "2022-12-31"
+  value: 1.87
+  date: "2023-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics, 2023."
 
 medical-doctors:
   value: 4.31
@@ -77,11 +80,13 @@ medical-doctors:
   unit: "per 1000 people"
 
 nurses:
-  value: 11.94
-  date: "2021-12-31"
+  value: 11.64
+  date: "2022-12-31"
   unit: "per 1000 people"
+  note: "OECD Health Statistics, 2022."
 
 terrorism-index:
-  value: 4.0
+  value: 1.84
   date: "2025-12-31"
   unit: "Points"
+  note: "Global Terrorism Index 2025 (Institute for Economics and Peace)."

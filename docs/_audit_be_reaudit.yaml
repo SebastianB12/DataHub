@@ -1,0 +1,1304 @@
+budget-deficit:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: -5.2
+  db_note: null
+  db_series_id: gov_10dd_edpt1:B9
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/government-budget
+  te_period: null
+  te_slug: government-budget
+  te_source_code: eurostat
+  te_title: Belgium Government Budget
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+business-confidence:
+  db_latest_date: '2026-02-28'
+  db_latest_source: nbb
+  db_latest_value: -13.3
+  db_note: NBB monthly business survey, synthetic curve, Belgium total, SA + smoothed
+  db_series_id: NBB/DF_BUSSURVM/M.SYNC.BE.A999.X
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/business-confidence
+  te_period: null
+  te_slug: business-confidence
+  te_source_code: nbb
+  te_title: Belgium Business Confidence
+  te_url: http://www.nbb.be
+  te_value: null
+capacity-utilization:
+  db_latest_date: '2026-06-30'
+  db_latest_source: eurostat
+  db_latest_value: 75.9
+  db_note: null
+  db_series_id: ei_bsin_q_r2:BS-ICU-PC
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: European Commission
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/capacity-utilization
+  te_period: null
+  te_slug: capacity-utilization
+  te_source_code: eurostat
+  te_title: Belgium Capacity Utilization
+  te_url: https://commission.europa.eu/index_en
+  te_value: null
+changes-in-inventories:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 3780.1
+  db_note: NBB DF_QNA_DISS P.52 Changes in stocks + acquisitions, current EUR mn SA+WDA
+  db_series_id: NBB/DF_QNA_DISS/Q.2.P52.VZ.V.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/changes-in-inventories
+  te_period: null
+  te_slug: changes-in-inventories
+  te_source_code: nbb
+  te_title: Belgium Changes In Inventories
+  te_url: http://www.nbb.be
+  te_value: null
+consumer-confidence:
+  db_latest_date: '2026-04-30'
+  db_latest_source: nbb
+  db_latest_value: -9
+  db_note: NBB consumer confidence indicator (CCI), Belgium, balance of opinions
+  db_series_id: NBB/DF_CONSN/M.CCI.BE
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/consumer-confidence
+  te_period: null
+  te_slug: consumer-confidence
+  te_source_code: nbb
+  te_title: Belgium Consumer Confidence
+  te_url: https://www.nbb.be
+  te_value: null
+consumer-spending:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 84503.1
+  db_note: NBB DF_QNA_DISS Private final consumption (P.31 S14+S15), current EUR mn
+    SA+WDA
+  db_series_id: NBB/DF_QNA_DISS/Q.2.P31_S14_S15.VZ.V.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/consumer-spending
+  te_period: null
+  te_slug: consumer-spending
+  te_source_code: nbb
+  te_title: Belgium Consumer Spending
+  te_url: https://www.nbb.be/en
+  te_value: null
+core-cpi:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: 102.74
+  db_note: Statbel HICP excluding energy and unprocessed food (core HICP)
+  db_series_id: STATBEL/30778b36
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/core-inflation-rate
+  te_period: null
+  te_slug: core-inflation-rate
+  te_source_code: statbel
+  te_title: Belgium Core Inflation Rate
+  te_url: https://statbel.fgov.be
+  te_value: null
+corporate-tax-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 25
+  db_note: null
+  db_series_id: BE:corporate-tax-rate
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Service Public Fédéral Finances
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/corporate-tax-rate
+  te_period: null
+  te_slug: corporate-tax-rate
+  te_source_code: curated
+  te_title: Belgium Corporate Tax Rate
+  te_url: https://finances.belgium.be/fr
+  te_value: null
+corruption-index:
+  db_latest_date: '2025-12-31'
+  db_latest_source: curated
+  db_latest_value: 71
+  db_note: null
+  db_series_id: BE:corruption-index
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Transparency International
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/corruption-index
+  te_period: null
+  te_slug: corruption-index
+  te_source_code: curated
+  te_title: Belgium Corruption Index
+  te_url: null
+  te_value: null
+corruption-rank:
+  db_latest_date: '2025-12-31'
+  db_latest_source: curated
+  db_latest_value: 16
+  db_note: null
+  db_series_id: BE:corruption-rank
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Transparency International
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/corruption-rank
+  te_period: null
+  te_slug: corruption-rank
+  te_source_code: curated
+  te_title: Belgium Corruption Rank
+  te_url: null
+  te_value: null
+cpi-clothing:
+  db_latest_date: '2026-04-30'
+  db_latest_source: statbel
+  db_latest_value: 100.42
+  db_note: Statbel CPI by ECOICOP V2 13 groups — Clothing and footwear (03), national
+    CPI index
+  db_series_id: STATBEL/dfc2ab6f
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/cpi-clothing
+  te_period: null
+  te_slug: cpi-clothing
+  te_source_code: statbel
+  te_title: Belgium CPI Clothing
+  te_url: http://statbel.fgov.be
+  te_value: null
+cpi-education:
+  db_latest_date: '2026-04-30'
+  db_latest_source: statbel
+  db_latest_value: 101.79
+  db_note: Statbel CPI by ECOICOP V2 13 groups — Education services (10)
+  db_series_id: STATBEL/dfc2ab6f
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/cpi-education
+  te_period: null
+  te_slug: cpi-education
+  te_source_code: statbel
+  te_title: Belgium CPI Education
+  te_url: http://statbel.fgov.be
+  te_value: null
+cpi-food:
+  db_latest_date: '2026-04-30'
+  db_latest_source: statbel
+  db_latest_value: 100.93
+  db_note: Statbel CPI by ECOICOP V2 13 groups — Food and non-alcoholic beverages
+    (01)
+  db_series_id: STATBEL/dfc2ab6f
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/cpi-food
+  te_period: null
+  te_slug: cpi-food
+  te_source_code: statbel
+  te_title: Belgium CPI Food
+  te_url: http://statbel.fgov.be
+  te_value: null
+cpi-housing-utilities:
+  db_latest_date: '2026-04-30'
+  db_latest_source: statbel
+  db_latest_value: 103.91
+  db_note: Statbel CPI by ECOICOP V2 13 groups — Housing, water, electricity, gas
+    and other fuels (04)
+  db_series_id: STATBEL/dfc2ab6f
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/cpi-housing-utilities
+  te_period: null
+  te_slug: cpi-housing-utilities
+  te_source_code: statbel
+  te_title: Belgium  CPI Housing Utilities
+  te_url: null
+  te_value: null
+cpi-recreation-and-culture:
+  db_latest_date: '2026-04-30'
+  db_latest_source: statbel
+  db_latest_value: 105.54
+  db_note: Statbel CPI by ECOICOP V2 — Recreation, sport and culture (09)
+  db_series_id: STATBEL/dfc2ab6f
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/cpi-recreation-and-culture
+  te_period: null
+  te_slug: cpi-recreation-and-culture
+  te_source_code: statbel
+  te_title: Belgium CPI Recreation And Culture
+  te_url: http://statbel.fgov.be
+  te_value: null
+cpi-transportation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: statbel
+  db_latest_value: 106.95
+  db_note: Statbel CPI by ECOICOP V2 13 groups — Transport (07), national CPI index
+  db_series_id: STATBEL/dfc2ab6f
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/cpi-transportation
+  te_period: null
+  te_slug: cpi-transportation
+  te_source_code: statbel
+  te_title: Belgium CPI Transportation
+  te_url: null
+  te_value: null
+credit-rating:
+  db_latest_date: '2026-04-01'
+  db_latest_source: curated
+  db_latest_value: 79
+  db_note: null
+  db_series_id: BE:credit-rating
+  db_source: curated
+  desc: null
+  policy_note: TE rating page shows S&P AA-, Moody's A1, DBRS AA in a table without
+    a single 'source:' attribution. Curated stays.
+  status: TE_LABEL_UNPARSED
+  te_label: null
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/rating
+  te_period: null
+  te_slug: rating
+  te_source_code: null
+  te_title: Belgium - Credit Rating
+  te_url: null
+  te_value: null
+current-account:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: -4451.7
+  db_note: NBB DF_NFQADISPINC_DISS B.9 Net lending/borrowing (current+capital), EUR
+    mn SA+WDA
+  db_series_id: NBB/DF_NFQADISPINC_DISS/Q.B9.V.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/current-account
+  te_period: null
+  te_slug: current-account
+  te_source_code: nbb
+  te_title: Belgium Current Account
+  te_url: http://www.nbb.be
+  te_value: null
+current-account-to-gdp:
+  db_latest_date: null
+  db_latest_source: null
+  db_latest_value: null
+  db_note: null
+  db_series_id: bop_gdp6_q:CA
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/current-account-to-gdp
+  te_period: null
+  te_slug: current-account-to-gdp
+  te_source_code: eurostat
+  te_title: Belgium Current Account to GDP
+  te_url: null
+  te_value: null
+disposable-personal-income:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 96444.6
+  db_note: NBB DF_NASECDETQ_DISS Gross disposable income (B.6g), Households+NPISH
+    (S1M)
+  db_series_id: NBB/DF_NASECDETQ_DISS/Q.II2U_B6G.S1M
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/disposable-personal-income
+  te_period: null
+  te_slug: disposable-personal-income
+  te_source_code: nbb
+  te_title: Belgium Net Disposable Personal Income
+  te_url: https://www.nbb.be/en
+  te_value: null
+employed-persons:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 4210.2
+  db_note: NBB DF_EMPLOY_DISS Number of employees, total economy domestic, thousands
+    SA+WDA
+  db_series_id: NBB/DF_EMPLOY_DISS/Q.EMPLOY.VZ.D.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/employed-persons
+  te_period: null
+  te_slug: employed-persons
+  te_source_code: nbb
+  te_title: Belgium Employed Persons
+  te_url: https://www.nbb.be/en
+  te_value: null
+employment-rate:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 67.4
+  db_note: null
+  db_series_id: lfsa_ergan:Y15-64
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/employment-rate
+  te_period: null
+  te_slug: employment-rate
+  te_source_code: eurostat
+  te_title: Belgium Employment Rate
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+energy-inflation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: 118.94
+  db_note: null
+  db_series_id: ei_cphi_m:CP-HIE:HICP2025
+  db_source: eurostat
+  desc: null
+  policy_note: TE does not publish a BE page for this indicator (verified 2026-05-16).
+    Keeping current source.
+  status: TE_PAGE_MISSING
+  te_label: null
+  te_landing_page: true
+  te_page: https://tradingeconomics.com/belgium/energy-inflation
+  te_period: null
+  te_slug: energy-inflation
+  te_source_code: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_url: null
+  te_value: null
+exports:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 33100.4269
+  db_note: NBB EXTERNAL_TRADE_OVERVIEW Exports of goods vs World, national concept
+  db_series_id: NBB/DF_EXTERNAL_TRADE_OVERVIEW/M.NBB_A1.X.NAT.VAL.M
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/exports
+  te_period: null
+  te_slug: exports
+  te_source_code: nbb
+  te_title: Belgium Exports
+  te_url: http://www.nbb.be
+  te_value: null
+food-inflation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: 101.07
+  db_note: Statbel HICP inflation by COICOP — Food YoY % (decimal -> %)
+  db_series_id: STATBEL/70adacda
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/food-inflation
+  te_period: null
+  te_slug: food-inflation
+  te_source_code: statbel
+  te_title: Belgium Food Inflation
+  te_url: https://statbel.fgov.be
+  te_value: null
+gdp:
+  db_latest_date: '2024-12-31'
+  db_latest_source: worldbank
+  db_latest_value: 671.37
+  db_note: null
+  db_series_id: NY.GDP.MKTP.CD
+  db_source: worldbank
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: World Bank
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/gdp
+  te_period: null
+  te_slug: gdp
+  te_source_code: worldbank
+  te_title: Belgium GDP
+  te_url: https://www.worldbank.org/
+  te_value: null
+gdp-per-capita:
+  db_latest_date: '2024-12-31'
+  db_latest_source: worldbank
+  db_latest_value: 45045.66
+  db_note: null
+  db_series_id: NY.GDP.PCAP.KD
+  db_source: worldbank
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: World Bank
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/gdp-per-capita
+  te_period: null
+  te_slug: gdp-per-capita
+  te_source_code: worldbank
+  te_title: Belgium GDP per capita
+  te_url: https://www.worldbank.org/
+  te_value: null
+gdp-per-capita-ppp:
+  db_latest_date: '2024-12-31'
+  db_latest_source: worldbank
+  db_latest_value: 63347.79
+  db_note: null
+  db_series_id: NY.GDP.PCAP.PP.KD
+  db_source: worldbank
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: World Bank
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/gdp-per-capita-ppp
+  te_period: null
+  te_slug: gdp-per-capita-ppp
+  te_source_code: worldbank
+  te_title: Belgium GDP per capita PPP
+  te_url: https://www.worldbank.org/
+  te_value: null
+gdp-real:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 0.8
+  db_note: NBB quarterly GDP, chain-linked Y/Y % change (ref. year 2020), working-day
+    + seasonally adj.
+  db_series_id: NBB/DF_QNA_DISS/Q.2.B1GM.VZ.LY.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/gdp-growth-annual
+  te_period: null
+  te_slug: gdp-growth-annual
+  te_source_code: nbb
+  te_title: Belgium GDP Annual Growth Rate
+  te_url: https://www.nbb.be
+  te_value: null
+government-debt:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 107.9
+  db_note: Eurostat gov_10dd_edpt1 General government gross debt as % of GDP (S13)
+  db_series_id: gov_10dd_edpt1:GD
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/government-debt-to-gdp
+  te_period: null
+  te_slug: government-debt-to-gdp
+  te_source_code: eurostat
+  te_title: Belgium Government Debt to GDP
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+government-debt-total:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 692461
+  db_note: NBB DF_CGD Consolidated gross debt (alias of government-debt)
+  db_series_id: NBB/DF_CGD/Q.CGD.S1300.F
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/government-debt
+  te_period: null
+  te_slug: government-debt
+  te_source_code: nbb
+  te_title: Belgium Government Gross Debt
+  te_url: https://www.nbb.be/en
+  te_value: null
+government-spending:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 32371.5
+  db_note: NBB DF_QNA_DISS P.3 Government final consumption (S.13), chain-linked volume
+    (L), 2020 ref yr — matches TE 32,371 EUR mn Q4 2025
+  db_series_id: NBB/DF_QNA_DISS/Q.2.P3_S13..L.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/government-spending
+  te_period: null
+  te_slug: government-spending
+  te_source_code: nbb
+  te_title: Belgium Government Spending
+  te_url: https://www.nbb.be/en
+  te_value: null
+government-spending-eur:
+  db_latest_date: '2025-12-31'
+  db_latest_source: nbb
+  db_latest_value: 32371.5
+  db_note: NBB DF_QNA_DISS P.3 Government final consumption (alias of government-spending),
+    chain-linked volume — matches TE 32,371 EUR mn Q4 2025
+  db_series_id: NBB/DF_QNA_DISS/Q.2.P3_S13..L.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/government-spending
+  te_period: null
+  te_slug: government-spending
+  te_source_code: nbb
+  te_title: Belgium Government Spending
+  te_url: https://www.nbb.be/en
+  te_value: null
+gross-fixed-capital-formation:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 39.14
+  db_note: NBB DF_QNA_DISS P.51 GFCF total economy, current EUR mn SA+WDA
+  db_series_id: NBB/DF_QNA_DISS/Q.2.P51.VZ.V.Y
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank Of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/gross-fixed-capital-formation
+  te_period: null
+  te_slug: gross-fixed-capital-formation
+  te_source_code: nbb
+  te_title: Belgium Gross Fixed Capital Formation
+  te_url: https://www.nbb.be/en
+  te_value: null
+hospital-beds:
+  db_latest_date: '2022-12-31'
+  db_latest_source: curated
+  db_latest_value: 5.55
+  db_note: null
+  db_series_id: BE:hospital-beds
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: OECD
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/hospital-beds
+  te_period: null
+  te_slug: hospital-beds
+  te_source_code: curated
+  te_title: Belgium Hospital Beds
+  te_url: null
+  te_value: null
+house-price-index:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 147.1
+  db_note: null
+  db_series_id: prc_hpi_q:INX
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/housing-index
+  te_period: null
+  te_slug: housing-index
+  te_source_code: eurostat
+  te_title: Belgium House Price Index
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+imports:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 29816.3354
+  db_note: NBB EXTERNAL_TRADE_OVERVIEW Imports of goods vs World, national concept
+  db_series_id: NBB/DF_EXTERNAL_TRADE_OVERVIEW/M.NBB_A1.I.NAT.VAL.M
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/imports
+  te_period: null
+  te_slug: imports
+  te_source_code: nbb
+  te_title: Belgium Imports
+  te_url: http://www.nbb.be
+  te_value: null
+industrial-production:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 97.3
+  db_note: NBB DF_INDPROD total industry B+C+D (NACE), WDA, base 2021=100. Underlying
+    data compiled by Statbel; redistributed via NBB Belgostat SDMX (nsidisseminate-stat.nbb.be).
+    Statbel REST API has no direct IPI volume view as of 2026-05-15 — full enumeration
+    of 1341 views returned only PPI.
+  db_series_id: NBB/DF_INDPROD/M.2021.INDPROD.W.B_C_D.BE
+  db_source: nbb
+  desc: null
+  policy_note: 'honest_fetch: Statbel REST API has NO IPI volume view (verified 2026-05-15
+    by full enumeration of 1341 views). NBB Belgostat SDMX (DF_INDPROD) redistributes
+    the same Statbel IPI methodology. Source-label = fetch quote per user rule.'
+  status: MISMATCH
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/industrial-production
+  te_period: null
+  te_slug: industrial-production
+  te_source_code: statbel
+  te_title: Belgium Industrial Production
+  te_url: https://statbel.fgov.be
+  te_value: null
+inflation-cpi:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: 103.72
+  db_note: Statbel CPI base 2013=100 (last 13 months)
+  db_series_id: STATBEL/208b69bd
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/inflation-cpi
+  te_period: null
+  te_slug: inflation-cpi
+  te_source_code: statbel
+  te_title: Belgium Inflation Rate
+  te_url: https://statbel.fgov.be
+  te_value: null
+interest-rate:
+  db_latest_date: '2025-06-11'
+  db_latest_source: ecb
+  db_latest_value: 2.15
+  db_note: ECB Main Refinancing Rate (Fixed). BE is in EA, shares ECB rate.
+  db_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+  db_source: ecb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: European Central Bank
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/interest-rate
+  te_period: null
+  te_slug: interest-rate
+  te_source_code: ecb
+  te_title: Belgium Interest Rate
+  te_url: https://www.ecb.europa.eu/
+  te_value: null
+job-vacancies:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 3.5
+  db_note: null
+  db_series_id: jvs_q_nace2:JVR
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/job-vacancies
+  te_period: null
+  te_slug: job-vacancies
+  te_source_code: eurostat
+  te_title: Belgium Job Vacancies
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+labor-force-participation-rate:
+  db_latest_date: '2025-12-31'
+  db_latest_source: statbel
+  db_latest_value: 71.9
+  db_note: Statbel LFS Activity rate, Belgium total both sexes (decimal -> %)
+  db_series_id: STATBEL/7d30d7ff
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/labor-force-participation-rate
+  te_period: null
+  te_slug: labor-force-participation-rate
+  te_source_code: statbel
+  te_title: Belgium Labor Force Participation Rate
+  te_url: https://statbel.fgov.be
+  te_value: null
+labour-costs:
+  db_latest_date: '2025-06-30'
+  db_latest_source: eurostat
+  db_latest_value: 119.3
+  db_note: Eurostat lc_lci_r2_q LCI B-S exc. bonuses, CA, 2020=100. TE attributes
+    ECB which redistributes Eurostat LCI.
+  db_series_id: lc_lci_r2_q:D1_D4_MD5_XB:CA
+  db_source: eurostat
+  desc: null
+  policy_note: 'honest_fetch: ECB data-api.ecb.europa.eu has NO labour-cost dataflow.
+    ECB redistributes Eurostat lc_lci_r2_q. Source-label = fetch quote.'
+  status: MISMATCH
+  te_label: European Central Bank
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/labour-costs
+  te_period: null
+  te_slug: labour-costs
+  te_source_code: ecb
+  te_title: Belgium Labour Costs
+  te_url: http://ecb.europa.eu
+  te_value: null
+long-term-unemployment-rate:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 2
+  db_note: null
+  db_series_id: une_ltu_q:LTU
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/long-term-unemployment-rate
+  te_period: null
+  te_slug: long-term-unemployment-rate
+  te_source_code: eurostat
+  te_title: Belgium Long Term Unemployment Rate
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+manufacturing-production:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 101.2
+  db_note: NBB DF_INDPROD Industrial production index, Manufacturing (NACE C), WDA
+  db_series_id: NBB/DF_INDPROD/M.2021.INDPROD.W.C.BE
+  db_source: nbb
+  desc: null
+  policy_note: 'honest_fetch: Statbel REST API has NO IPI volume view (verified 2026-05-15
+    by full enumeration of 1341 views). NBB Belgostat SDMX (DF_INDPROD) redistributes
+    the same Statbel IPI methodology. Source-label = fetch quote per user rule.'
+  status: MISMATCH
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/manufacturing-production
+  te_period: null
+  te_slug: manufacturing-production
+  te_source_code: statbel
+  te_title: Belgium Manufacturing Production
+  te_url: https://statbel.fgov.be
+  te_value: null
+medical-doctors:
+  db_latest_date: '2021-12-31'
+  db_latest_source: curated
+  db_latest_value: 3.2
+  db_note: null
+  db_series_id: BE:medical-doctors
+  db_source: curated
+  desc: null
+  policy_note: TE does not publish a BE page for this indicator (verified 2026-05-16).
+    Keeping current source.
+  status: TE_PAGE_MISSING
+  te_label: null
+  te_landing_page: true
+  te_page: https://tradingeconomics.com/belgium/medical-doctors
+  te_period: null
+  te_slug: medical-doctors
+  te_source_code: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_url: null
+  te_value: null
+minimum-wages:
+  db_latest_date: '2026-01-01'
+  db_latest_source: eurostat
+  db_latest_value: 2112
+  db_note: Eurostat earn_mw_cur Minimum wage in EUR (semi-annual S1/S2)
+  db_series_id: earn_mw_cur:EUR
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/minimum-wages
+  te_period: null
+  te_slug: minimum-wages
+  te_source_code: eurostat
+  te_title: Belgium Gross Minimum Monthly Wage
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+mining-production:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 101.2
+  db_note: NBB DF_INDPROD Industrial production index, Mining and quarrying (NACE
+    B), WDA
+  db_series_id: NBB/DF_INDPROD/M.2021.INDPROD.W.B.BE
+  db_source: nbb
+  desc: null
+  policy_note: 'honest_fetch: Statbel REST API has NO IPI volume view (verified 2026-05-15
+    by full enumeration of 1341 views). NBB Belgostat SDMX (DF_INDPROD) redistributes
+    the same Statbel IPI methodology. Source-label = fetch quote per user rule.'
+  status: MISMATCH
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/mining-production
+  te_period: null
+  te_slug: mining-production
+  te_source_code: statbel
+  te_title: Belgium Mining Production
+  te_url: https://statbel.fgov.be
+  te_value: null
+nurses:
+  db_latest_date: '2021-12-31'
+  db_latest_source: curated
+  db_latest_value: 11
+  db_note: null
+  db_series_id: BE:nurses
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: OECD
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/nurses
+  te_period: null
+  te_slug: nurses
+  te_source_code: curated
+  te_title: Belgium Nurses
+  te_url: null
+  te_value: null
+personal-income-tax-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 50
+  db_note: null
+  db_series_id: BE:personal-income-tax-rate
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Service Public Fédéral Finances
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/personal-income-tax-rate
+  te_period: null
+  te_slug: personal-income-tax-rate
+  te_source_code: curated
+  te_title: Belgium Personal Income Tax Rate
+  te_url: http://ec.europa.eu
+  te_value: null
+population:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 11.88
+  db_note: null
+  db_series_id: demo_pjan:TOTAL
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/population
+  te_period: null
+  te_slug: population
+  te_source_code: eurostat
+  te_title: Belgium Population
+  te_url: null
+  te_value: null
+ppi:
+  db_latest_date: '2026-03-31'
+  db_latest_source: statbel
+  db_latest_value: 124.44
+  db_note: Statbel PPI industry excl. construction, total market index base 2021=100
+    (view 098275aa)
+  db_series_id: STATBEL/098275aa
+  db_source: statbel
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Statistics Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/producer-prices
+  te_period: null
+  te_slug: producer-prices
+  te_source_code: statbel
+  te_title: Belgium Producer Prices
+  te_url: https://statbel.fgov.be
+  te_value: null
+productivity:
+  db_latest_date: '2025-12-31'
+  db_latest_source: eurostat
+  db_latest_value: 100.45
+  db_note: null
+  db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/productivity
+  te_period: null
+  te_slug: productivity
+  te_source_code: eurostat
+  te_title: Belgium Productivity
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+retail-sales:
+  db_latest_date: '2026-03-31'
+  db_latest_source: eurostat
+  db_latest_value: 95.1
+  db_note: Eurostat sts_trtu_m retail trade NACE G47 SCA volume of sales index 2021=100.
+    TE attributes Eurostat.
+  db_series_id: sts_trtu_m:G47:I21:VOL_SLS
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/retail-sales
+  te_period: null
+  te_slug: retail-sales
+  te_source_code: eurostat
+  te_title: Belgium Retail Sales MoM
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null
+retirement-age-men:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 66
+  db_note: null
+  db_series_id: BE:retirement-age-men
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Commission Bancaire, Financière et des Assurances
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/retirement-age-men
+  te_period: null
+  te_slug: retirement-age-men
+  te_source_code: curated
+  te_title: Belgium Retirement Age - Men
+  te_url: https://www.expatica.com
+  te_value: null
+retirement-age-women:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 66
+  db_note: null
+  db_series_id: BE:retirement-age-women
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Commission Bancaire, Financière et des Assurances
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/retirement-age-women
+  te_period: null
+  te_slug: retirement-age-women
+  te_source_code: curated
+  te_title: Belgium Retirement Age - Women
+  te_url: https://www.expatica.com
+  te_value: null
+sales-tax-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 21
+  db_note: null
+  db_series_id: BE:sales-tax-rate
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Service Public Fédéral Finances
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/sales-tax-rate
+  te_period: null
+  te_slug: sales-tax-rate
+  te_source_code: curated
+  te_title: Belgium Sales Tax Rate - VAT
+  te_url: null
+  te_value: null
+services-inflation:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: 102.89
+  db_note: null
+  db_series_id: ei_cphi_m:CP-HIS:HICP2025
+  db_source: eurostat
+  desc: null
+  policy_note: TE does not publish a BE page for this indicator (verified 2026-05-16).
+    Keeping current source.
+  status: TE_PAGE_MISSING
+  te_label: null
+  te_landing_page: true
+  te_page: https://tradingeconomics.com/belgium/services-inflation
+  te_period: null
+  te_slug: services-inflation
+  te_source_code: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_url: null
+  te_value: null
+services-sentiment:
+  db_latest_date: '2026-04-30'
+  db_latest_source: eurostat
+  db_latest_value: -8.8
+  db_note: null
+  db_series_id: ei_bsse_m_r2:SCI
+  db_source: eurostat
+  desc: null
+  policy_note: TE does not publish a BE page for this indicator (verified 2026-05-16).
+    Keeping current source.
+  status: TE_PAGE_MISSING
+  te_label: null
+  te_landing_page: true
+  te_page: https://tradingeconomics.com/belgium/services-sentiment
+  te_period: null
+  te_slug: services-sentiment
+  te_source_code: null
+  te_title: TRADING ECONOMICS | 20 Million Indicators for 196 Countries
+  te_url: null
+  te_value: null
+social-security-rate:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 38.07
+  db_note: null
+  db_series_id: BE:social-security-rate
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Social Security Office
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/social-security-rate
+  te_period: null
+  te_slug: social-security-rate
+  te_source_code: curated
+  te_title: Belgium Social Security Rate
+  te_url: null
+  te_value: null
+social-security-rate-companies:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 25
+  db_note: null
+  db_series_id: BE:social-security-rate-companies
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Social Security Office
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/social-security-rate-for-companies
+  te_period: null
+  te_slug: social-security-rate-for-companies
+  te_source_code: curated
+  te_title: Belgium Social Security Rate For Companies
+  te_url: null
+  te_value: null
+social-security-rate-employees:
+  db_latest_date: '2026-12-31'
+  db_latest_source: curated
+  db_latest_value: 13.07
+  db_note: null
+  db_series_id: BE:social-security-rate-employees
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Social Security Office
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/social-security-rate-for-employees
+  te_period: null
+  te_slug: social-security-rate-for-employees
+  te_source_code: curated
+  te_title: Belgium Social Security Rate For Employees
+  te_url: null
+  te_value: null
+terrorism-index:
+  db_latest_date: '2025-12-31'
+  db_latest_source: curated
+  db_latest_value: 3.5
+  db_note: null
+  db_series_id: BE:terrorism-index
+  db_source: curated
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: Institute for Economics and Peace
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/terrorism-index
+  te_period: null
+  te_slug: terrorism-index
+  te_source_code: curated
+  te_title: Belgium Terrorism Index
+  te_url: null
+  te_value: null
+trade-balance:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 3284.0915
+  db_note: NBB foreign trade balance vs World, national concept, monthly value, EUR
+    mn
+  db_series_id: NBB/DF_EXTERNAL_TRADE_OVERVIEW/M.NBB_A1.B.NAT.VAL.M
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/balance-of-trade
+  te_period: null
+  te_slug: balance-of-trade
+  te_source_code: nbb
+  te_title: Belgium Balance of Trade
+  te_url: http://www.nbb.be
+  te_value: null
+unemployed-persons:
+  db_latest_date: '2026-04-30'
+  db_latest_source: nbb
+  db_latest_value: 560412
+  db_note: NBB DF_UNEMPLOYMENT Belgium total all ages, persons (NHU), monthly NSA
+  db_series_id: NBB/DF_UNEMPLOYMENT/M.BE.AA.A0000.Z0000.999.BR00.000.0000.N.00.99.NHU._Z
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/unemployed-persons
+  te_period: null
+  te_slug: unemployed-persons
+  te_source_code: nbb
+  te_title: Belgium Unemployed Persons
+  te_url: https://www.nbb.be/en
+  te_value: null
+unemployment:
+  db_latest_date: '2026-03-31'
+  db_latest_source: nbb
+  db_latest_value: 6.3
+  db_note: NBB harmonised unemployment rate, total, all ages, seasonally and calendar
+    adjusted
+  db_series_id: NBB/DF_UNEMPLOY_RATE/M.AA.Z0000.Y.BE.HUR.RATE
+  db_source: nbb
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: National Bank of Belgium
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/unemployment-rate
+  te_period: null
+  te_slug: unemployment-rate
+  te_source_code: nbb
+  te_title: Belgium Unemployment Rate
+  te_url: http://www.nbb.be
+  te_value: null
+youth-unemployment-rate:
+  db_latest_date: '2026-03-31'
+  db_latest_source: eurostat
+  db_latest_value: 17.8
+  db_note: null
+  db_series_id: une_rt_m:Y_LT25
+  db_source: eurostat
+  desc: null
+  policy_note: null
+  status: OK
+  te_label: EUROSTAT
+  te_landing_page: false
+  te_page: https://tradingeconomics.com/belgium/youth-unemployment-rate
+  te_period: null
+  te_slug: youth-unemployment-rate
+  te_source_code: eurostat
+  te_title: Belgium Youth Unemployment Rate
+  te_url: https://ec.europa.eu/eurostat/
+  te_value: null

@@ -1,0 +1,1326 @@
+budget-deficit:
+  fix_summary: 'Eurostat B9 net lending: deficit = negative (-7.3% 2025). TE shows magnitude 7.3% (positive). Frontend can display either; sign convention only.'
+  fixed: false
+  flag: sign_convention
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:B9
+  our_source: eurostat
+  our_value: -7.3
+  source_match: false
+  suggested_source: gus_pl
+  te_desc: 'Poland recorded a Government Budget deficit equal to 7.30 percent of the country''s Gross Domestic Product in 2025. Government Budget in Poland averaged -4.09 percent of GDP from 1995 until
+    2025, reaching an all time high of -0.20 percent of GDP in 2018 and a record low of -7.40 percent of GDP in 2010. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/government-budget
+  te_value: 7.3
+  value_match: false
+  yoy_computed: -73.8095238095238
+business-confidence:
+  fix_summary: GUS climate indicator -4.4 matches TE description '-4.4 in April 2026'.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: GUS:var=184/sec=751/type=117
+  our_source: gus_pl
+  our_value: -4.4
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: The general business climate indicator for manufacturing in Poland rose to -4.4 in April 2026 from a three-month low of -5.2 in March. Still, the latest reading remained below its long-term average
+    of +0.4. Most companies expected prices for services or raw materials to increase at a faster pace in the near term (40.5), citing energy prices as the main factor likely to drive operating costs higher
+    amid the war in the Middle East. Among other sectors, the financial and insurance activities sectio
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in April 2026
+  te_url: https://tradingeconomics.com/poland/business-confidence
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: TE attributes European Commission (BCS survey). We fetch GUS DBW (var=189). Both publish; values match (77.9~78.5).
+  fixed: false
+  flag: accepted_mismatch
+  our_period: '2026-04-30'
+  our_series: GUS:var=189/sec=751/type=95
+  our_source: gus_pl
+  our_value: 78.5
+  source_match: false
+  suggested_source: eurostat
+  te_desc: 'Capacity Utilization in Poland decreased to 77.90 percent in the first quarter of 2026 from 78.30 percent in the fourth quarter of 2025. Capacity Utilization in Poland averaged 76.63 percent
+    from 2002 until 2026, reaching an all time high of 83.50 percent in the third quarter of 2018 and a record low of 66.20 percent in the first quarter of 2002. source: European Commission'
+  te_http: 200
+  te_label: European Commission
+  te_label_href: https://commission.europa.eu/index_en
+  te_period: in the first quarter of 2026
+  te_url: https://tradingeconomics.com/poland/capacity-utilization
+  te_value: 77.9
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: 'GUS var=1199: our 15663 vs TE 12446 (Q4 2025). Likely different sector/valuation; ~25% revision diff. Source = gus_pl honest.'
+  fixed: false
+  flag: data_diff
+  our_period: '2025-12-31'
+  our_series: GUS:var=1199/sec=16/type=105
+  our_source: gus_pl
+  our_value: 15663.5
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'The stocks of goods held by firms in Poland increased by 12445.80 PLN Million in the fourth quarter of 2025. Changes in Inventories in Poland averaged 6126.42 PLN Million from 1996 until 2025,
+    reaching an all time high of 59046.10 PLN Million in the fourth quarter of 2022 and a record low of -12410.70 PLN Million in the third quarter of 2023. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/changes-in-inventories
+  te_value: 12445.8
+  value_match: false
+  yoy_computed: -70.06635147169553
+consumer-confidence:
+  fix_summary: GUS BWUK -14.1 matches TE description 'fell to -14.1 April 2026'. TE 1.7 in audit value is averaged number from page.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: GUS:var=469/sec=16/type=117
+  our_source: gus_pl
+  our_value: -14.1
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: Poland’s consumer sentiment indicator fell to -14.1 in April 2026 from -12.2 in the previous month, marking its lowest level since May 2025. Assessments of the current economic situation worsened
+    further (-28.4% vs -22.4% in March), while expectations for the future eased slightly but remained negative (-23.8 vs -24.1). Expectations on household finances also deteriorated for both the present
+    (-7.2% vs -4.4%) and the year ahead (-7.7% vs -4.5%). Meanwhile, consumers’ perceived ability to make cu
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in April 2026
+  te_url: https://tradingeconomics.com/poland/consumer-confidence
+  te_value: 1.7
+  value_match: false
+  yoy_computed: 14.545454545454547
+consumer-spending:
+  fix_summary: GUS quarterly mln zł matches TE Q4 2025.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: GUS:var=1391/sec=950/type=105
+  our_source: gus_pl
+  our_value: 547287.6
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Consumer Spending in Poland decreased to 524576.40 PLN Million in the fourth quarter of 2025 from 541577.90 PLN Million in the third quarter of 2025. Consumer Spending in Poland averaged 230937.03
+    PLN Million from 1996 until 2025, reaching an all time high of 541577.90 PLN Million in the third quarter of 2025 and a record low of 54155.30 PLN Million in the second quarter of 1996. source: Central
+    Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/consumer-spending
+  te_value: 524576.4
+  value_match: true
+  yoy_computed: null
+core-cpi:
+  fix_summary: 'Eurostat ei_cphi_m HICP-XEF index. Frontend: YoY from same-month prior year. 101.77 ≈ +1.77 prelim. TE attributes NBP — we honestly use eurostat ECP-XEF.'
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: ei_cphi_m:CP-HI00XEF
+  our_source: eurostat
+  our_value: 101.77
+  source_match: fallback_eurostat_for_nbp
+  suggested_source: nbp_pl
+  te_desc: 'Annual core inflation rate in Poland increased to 2.7% in March 2026 from 2.5% in February and compared to forecasts of 2.5%. Core Inflation Rate in Poland averaged 3.47 percent from 1998 until
+    2026, reaching an all time high of 15.90 percent in February of 1998 and a record low of -0.30 percent in April of 2016. source: National Bank of Poland'
+  te_http: 200
+  te_label: National Bank of Poland
+  te_label_href: https://www.nbp.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/core-inflation-rate
+  te_value: 2.7
+  value_match: false
+  yoy_computed: 2.250577715261725
+corporate-tax-rate:
+  fix_summary: Curated 19% matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: PL:corporate-tax-rate
+  our_source: curated
+  our_value: 19
+  source_match: null
+  suggested_source: null
+  te_desc: 'The Corporate Tax Rate in Poland stands at 19 percent. Corporate Tax Rate in Poland averaged 24.51 percent from 1992 until 2026, reaching an all time high of 40.00 percent in 1993 and a record
+    low of 19.00 percent in 2004. source: Ministry of Finance, Poland'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/corporate-tax-rate
+  te_value: 19.0
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: 'TE description: ''scored 53 points on 2025 CPI''; audit parsed all-time-high 62. Our 53 matches.'
+  fixed: false
+  flag: parser_artifact
+  our_period: '2025-12-31'
+  our_series: PL:corruption-index
+  our_source: curated
+  our_value: 53
+  source_match: null
+  suggested_source: null
+  te_desc: 'Poland scored 53 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Poland averaged 50.42 Points from 1996 until 2025, reaching
+    an all time high of 62.00 Points in 2015 and a record low of 34.00 Points in 2005. source: Transparency International'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/corruption-index
+  te_value: 62.0
+  value_match: false
+  yoy_computed: null
+corruption-rank:
+  fix_summary: Curated 53 -> 52 (matches TE).
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: PL:corruption-rank
+  our_source: curated
+  our_value: 52
+  source_match: null
+  suggested_source: null
+  te_desc: 'Poland is the 52 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Poland averaged 45.00
+    from 1996 until 2025, reaching an all time high of 70.00 in 2005 and a record low of 24.00 in 1996. source: Transparency International'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/corruption-rank
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: GUS COICOP-03 YoY index 97.2 = -2.8% YoY.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=03
+  our_source: gus_pl
+  our_value: 97.2
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/cpi-transportation
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-education:
+  fix_summary: GUS COICOP-10 YoY index matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=10
+  our_source: gus_pl
+  our_value: 106
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'CPI Education in Poland increased to 106.10 points in April from 106 points in March of 2026. CPI Education in Poland averaged 103.67 points from 2005 until 2026, reaching an all time high of
+    114.10 points in March of 2023 and a record low of 93.70 points in March of 2014. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in April
+  te_url: https://tradingeconomics.com/poland/cpi-education
+  te_value: 106.1
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  fix_summary: GUS COICOP-01 YoY index 101.9.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=01
+  our_source: gus_pl
+  our_value: 101.9
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/cpi-housing-utilities
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: GUS COICOP-04 YoY index 104.8 = +4.8% YoY.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=04
+  our_source: gus_pl
+  our_value: 104.8
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/cpi-housing-utilities
+  te_value: null
+  value_match: null
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: GUS COICOP-9 YoY index matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=09
+  our_source: gus_pl
+  our_value: 104.6
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'CPI Recreation and Culture in Poland increased to 106 points in April from 105.10 points in March of 2026. CPI Recreation and Culture in Poland averaged 102.35 points from 2005 until 2026, reaching
+    an all time high of 116.70 points in January of 2023 and a record low of 96.90 points in May of 2016. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in April
+  te_url: https://tradingeconomics.com/poland/cpi-recreation-and-culture
+  te_value: 106.0
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: GUS COICOP-07 YoY index 103.5 = +3.5% YoY.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=07
+  our_source: gus_pl
+  our_value: 103.5
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/cpi-transportation
+  te_value: null
+  value_match: null
+  yoy_computed: null
+credit-rating:
+  fix_summary: Curated rating numeric 64.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-01'
+  our_series: PL:credit-rating
+  our_source: curated
+  our_value: 64
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/rating
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account:
+  fix_summary: TE attributes NBP. We fetch Eurostat (bop_c6_q quarterly BoP). Value -0.11 bn EUR Q4 2025 is annual aggregate; TE shows monthly -234 mln EUR Mar 2026. Different frequency.
+  fixed: false
+  flag: accepted_mismatch
+  our_period: '2025-12-31'
+  our_series: bop_c6_q:CA
+  our_source: eurostat
+  our_value: -0.11
+  source_match: fallback_eurostat_for_nbp
+  suggested_source: nbp_pl
+  te_desc: 'Poland posted a current account gap of €234 million in March 2026, smaller than the revised €1,091 million in the same month a year ago. The goods deficit narrowed to €497 million from €1,530
+    million in March 2025, with exports (+7.4%) rising faster than imports (+3.8%). At the same time, the secondary income shortfall shrank to €21 million from €356 million a year ago, while the primary
+    income gap surged to €2,783 million from €2,248 million, influenced by income from foreign direct investors'' '
+  te_http: 200
+  te_label: National Bank of Poland
+  te_label_href: https://www.nbp.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/current-account
+  te_value: null
+  value_match: null
+  yoy_computed: null
+current-account-to-gdp:
+  fix_summary: 'Fixed eurostat params: WRL_REST/NSA/BAL/freq=A (-0.9% annual 2025 matches TE 0.9 deficit).'
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: bop_gdp6_q:CA:BAL:PC_GDP:WRL_REST:A
+  our_source: eurostat
+  our_value: -0.9
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Poland recorded a Current Account deficit of 0.90 percent of the country''s Gross Domestic Product in 2025. Current Account to GDP in Poland averaged -3.93 percent of GDP from 1980 until 2025,
+    reaching an all time high of 5.30 percent of GDP in 1994 and a record low of -15.70 percent of GDP in 1981. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/current-account-to-gdp
+  te_value: 0.9
+  value_match: false
+  yoy_computed: 55.00000000000001
+disposable-personal-income:
+  fix_summary: Eurostat nasq_10_nf_tr S14_S15 B6G PAID 148794 MEUR.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: nasq_10_nf_tr:B6G
+  our_source: eurostat
+  our_value: 148794
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/disposable-personal-income
+  te_value: null
+  value_match: null
+  yoy_computed: null
+employed-persons:
+  fix_summary: GUS ESA-2010 quarterly thousand-persons matches.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: GUS:var=1036/sec=1418/type=98
+  our_source: gus_pl
+  our_value: 17516.8
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'The number of employed persons in Poland decreased to 17346 Thousand in the fourth quarter of 2025 from 17361 Thousand in the third quarter of 2025. Employed Persons in Poland averaged 16320.33
+    Thousand from 2010 until 2025, reaching an all time high of 17361.00 Thousand in the third quarter of 2025 and a record low of 15177.00 Thousand in the first quarter of 2010. source: Central Statistical
+    Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/employed-persons
+  te_value: 17346.0
+  value_match: true
+  yoy_computed: null
+employment-rate:
+  fix_summary: Eurostat lfsi_emp_q EMP matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: lfsa_ergan:Y15-64
+  our_source: eurostat
+  our_value: 72.8
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Employment Rate in Poland decreased to 73.20 percent in the fourth quarter of 2025 from 73.30 percent in the third quarter of 2025. Employment Rate in Poland averaged 61.48 percent from 1997
+    until 2025, reaching an all time high of 73.30 percent in the third quarter of 2025 and a record low of 50.40 percent in the first quarter of 2003. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/employment-rate
+  te_value: 73.2
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: GUS YoY index (fuels special aggregate) 108.5 = +8.5% YoY.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/sec=1722/GR477512
+  our_source: gus_pl
+  our_value: 108.5
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/energy-inflation
+  te_value: null
+  value_match: null
+  yoy_computed: null
+exports:
+  fix_summary: TE attributes NBP. We fetch Eurostat nama_10_exi annual (461.55 bn EUR 2025). TE shows monthly NBP €32.44 bn Mar 2026. Different freq.
+  fixed: false
+  flag: accepted_mismatch
+  our_period: '2025-12-31'
+  our_series: nama_10_exi:P6
+  our_source: eurostat
+  our_value: 461.55
+  source_match: fallback_eurostat_for_nbp
+  suggested_source: nbp_pl
+  te_desc: 'Poland''s exports surged 7.4% year-over-year to a record €32.44 billion in March 2026, driven by strong performance in supply goods, particularly copper and raw silver, which benefited from
+    higher prices. Capital goods exports also continued their upward trend, fueled by rising computer sales, while agricultural exports rebounded as well after two months of stagnation. source: National
+    Bank of Poland'
+  te_http: 200
+  te_label: National Bank of Poland
+  te_label_href: https://www.nbp.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/exports
+  te_value: null
+  value_match: null
+  yoy_computed: null
+food-inflation:
+  fix_summary: GUS YoY index. 101.9 = +1.9% YoY. TE description shows ATH 24.0.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/sec=1722/GR477507
+  our_source: gus_pl
+  our_value: 101.9
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Cost of food in Poland increased 1.90 percent in April of 2026 over the same month in the previous year. Food Inflation in Poland averaged 4.08 percent from 1999 until 2026, reaching an all
+    time high of 24.00 percent in February of 2023 and a record low of -3.70 percent in January of 2015. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in April of 2026
+  te_url: https://tradingeconomics.com/poland/food-inflation
+  te_value: 24.0
+  value_match: false
+  yoy_computed: null
+gdp:
+  fix_summary: 'TE description: ''GDP worth 914.70 billion USD 2024''. Our worldbank value 917.77 matches. Audit value parser missed it.'
+  fixed: false
+  flag: parser_artifact
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 917.77
+  source_match: true
+  suggested_source: worldbank
+  te_desc: 'The Gross Domestic Product (GDP) in Poland was worth 914.70 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Poland represents 0.86 percent of the
+    world economy. source: World Bank'
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/gdp
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: 'TE description: ''17984.38 USD''; audit parsed ''142 percent of world avg''. Our 18000.5 matches.'
+  fixed: false
+  flag: parser_artifact
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_value: 18000.5
+  source_match: true
+  suggested_source: worldbank
+  te_desc: 'The Gross Domestic Product per capita in Poland was last recorded at 17984.38 US dollars in 2024. The GDP per Capita in Poland is equivalent to 142 percent of the world''s average. GDP per Capita
+    in Poland averaged 10060.64 USD from 1990 until 2024, reaching an all time high of 17984.38 USD in 2024 and a record low of 4735.93 USD in 1991. source: World Bank'
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/gdp-per-capita
+  te_value: 142.0
+  value_match: false
+  yoy_computed: 55.95326383786856
+gdp-per-capita-ppp:
+  fix_summary: 'TE description: ''45112.60 USD PPP''; audit parsed ''254 percent of world avg''. Our 45153.04 matches.'
+  fixed: false
+  flag: parser_artifact
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_value: 45153.04
+  source_match: true
+  suggested_source: worldbank
+  te_desc: 'The Gross Domestic Product per capita in Poland was last recorded at 45112.60 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Poland, when adjusted
+    by Purchasing Power Parity is equivalent to 254 percent of the world''s average. source: World Bank'
+  te_http: 200
+  te_label: World Bank
+  te_label_href: https://www.worldbank.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/gdp-per-capita-ppp
+  te_value: 254.0
+  value_match: false
+  yoy_computed: 55.95332007963274
+gdp-real:
+  fix_summary: Switched eurostat MEUR level -> CLV_PCH_SM YoY% SCA (3.9% Q4 2025; TE shows 3.4% Q1 2026 fresher).
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:B1GQ:CLV_PCH_SM:SCA
+  our_source: eurostat
+  our_value: 3.9
+  source_match: false
+  suggested_source: gus_pl
+  te_desc: The Polish economy grew by 3.4% year-on-year in the first quarter of 2026, slowing from a revised 4.1% in the previous quarter. This marked the weakest expansion since the second quarter of 2025,
+    as growth momentum has been gradually downgraded amid persistent inflationary pressures, elevated energy costs, and tighter fiscal conditions weighing on activity. On a seasonally adjusted quarterly
+    basis, GDP edged down to 0.5% in the first quarter of 2026 from 1% growth in the previous quarter, the we
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the first quarter of 2026
+  te_url: https://tradingeconomics.com/poland/gdp-growth-annual
+  te_value: 3.4
+  value_match: false
+  yoy_computed: 254.5454545454545
+government-debt:
+  fix_summary: TE attributes GUS but we fetch Eurostat (gov_10dd_edpt1). Values match (59.7=59.7). Honest label = eurostat per source-label-matches-fetch rule.
+  fixed: false
+  flag: accepted_mismatch
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD
+  our_source: eurostat
+  our_value: 59.7
+  source_match: false
+  suggested_source: gus_pl
+  te_desc: 'Poland recorded a Government Debt to GDP of 59.70 percent of the country''s Gross Domestic Product in 2025. Government Debt to GDP in Poland averaged 48.11 percent of GDP from 1995 until 2025,
+    reaching an all time high of 59.70 percent of GDP in 2025 and a record low of 36.20 percent of GDP in 2000. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/government-debt-to-gdp
+  te_value: 59.7
+  value_match: true
+  yoy_computed: null
+government-debt-total:
+  fix_summary: Switched eurostat MIO_EUR -> MIO_NAC PLN Million. TE shows Polish MinFin monthly (2.04T Feb 2026); ours is Eurostat annual (2.34T 2025).
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: gov_10dd_edpt1:GD:MIO_NAC
+  our_source: eurostat
+  our_value: 2335153
+  source_match: null
+  suggested_source: null
+  te_desc: 'Government Debt in Poland increased to 2037497.20 PLN Million in February from 1998317.80 PLN Million in January of 2026. Government Debt in Poland averaged 774876.88 PLN Million from 1998 until
+    2026, reaching an all time high of 2037497.20 PLN Million in February of 2026 and a record low of 237399.87 PLN Million in December of 1998. source: Ministry of Finance, Poland'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: in February
+  te_url: https://tradingeconomics.com/poland/government-debt
+  te_value: 2037497.2
+  value_match: false
+  yoy_computed: 150.763032111673
+government-spending:
+  fix_summary: GUS quarterly mln zł 259258 matches TE 256273 Q4 2025 (~1%).
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: GUS:var=1196/sec=1040/type=105
+  our_source: gus_pl
+  our_value: 259258.1
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Government Spending in Poland increased to 256273.40 PLN Million in the fourth quarter of 2025 from 202251 PLN Million in the third quarter of 2025. Government Spending in Poland averaged 76548.65
+    PLN Million from 1996 until 2025, reaching an all time high of 256273.40 PLN Million in the fourth quarter of 2025 and a record low of 16728.70 PLN Million in the second quarter of 1996. source: Central
+    Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/government-spending
+  te_value: 256273.4
+  value_match: true
+  yoy_computed: null
+government-spending-eur:
+  fix_summary: Eurostat namq_10_gdp P3_S13 51.16 bn EUR Q4 2025.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: namq_10_gdp:P3_S13
+  our_source: eurostat
+  our_value: 51.16
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/government-spending-value
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: GUS var=1198 has Q3 2025 (158733); TE shows Q4 2025 (239574). GUS Q4 not yet published in our fetch window. Source correct.
+  fixed: false
+  flag: data_diff
+  our_period: '2025-09-30'
+  our_series: GUS:var=1198/sec=1099/type=105
+  our_source: gus_pl
+  our_value: 158733
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Gross Fixed Capital Formation in Poland increased to 239573.60 PLN Million in the fourth quarter of 2025 from 154773.60 PLN Million in the third quarter of 2025. Gross Fixed Capital Formation
+    in Poland averaged 75494.02 PLN Million from 1996 until 2025, reaching an all time high of 239573.60 PLN Million in the fourth quarter of 2025 and a record low of 11831.80 PLN Million in the first quarter
+    of 1996. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/gross-fixed-capital-formation
+  te_value: 239573.6
+  value_match: false
+  yoy_computed: 28.028036101723625
+hospital-beds:
+  fix_summary: Curated 6.3 per 1000 matches TE description 6.27.
+  fixed: false
+  flag: ok
+  our_period: '2022-12-31'
+  our_series: PL:hospital-beds
+  our_source: curated
+  our_value: 6.3
+  source_match: null
+  suggested_source: null
+  te_desc: 'Hospital Beds in Poland decreased to 6.27 per 1000 people in 2023 from 6.29 per 1000 people in 2022. Hospital Beds in Poland averaged 6.52 per 1000 people from 2003 until 2023, reaching an all
+    time high of 6.68 per 1000 people in 2003 and a record low of 6.17 per 1000 people in 2019. source: OECD'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/hospital-beds
+  te_value: null
+  value_match: null
+  yoy_computed: null
+house-price-index:
+  fix_summary: Eurostat prc_hpi_q matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: prc_hpi_q:INX
+  our_source: eurostat
+  our_value: 220.82
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Housing Index in Poland increased to 220.82 points in the fourth quarter of 2025 from 217.54 points in the third quarter of 2025. Housing Index in Poland averaged 131.49 points from 2010 until
+    2025, reaching an all time high of 220.82 points in the fourth quarter of 2025 and a record low of 97.15 points in the first quarter of 2014. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/housing-index
+  te_value: 220.82
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: TE attributes NBP. We fetch Eurostat nama_10_exi annual (435.69 bn EUR 2025). TE shows monthly NBP YoY +3.8% Mar 2026.
+  fixed: false
+  flag: accepted_mismatch
+  our_period: '2025-12-31'
+  our_series: nama_10_exi:P7
+  our_source: eurostat
+  our_value: 435.69
+  source_match: fallback_eurostat_for_nbp
+  suggested_source: nbp_pl
+  te_desc: 'Poland''s imports rose by 3.8% year-over-year to an all-time high of €32.93 billion in March 2026, primarily due to rising fuel prices. Other categories, including durable consumer goods, capital
+    goods, and passenger cars, also saw continued growth. source: National Bank of Poland'
+  te_http: 200
+  te_label: National Bank of Poland
+  te_label_href: https://www.nbp.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/imports
+  te_value: 3.8
+  value_match: false
+  yoy_computed: 150.0947132770794
+industrial-production:
+  fix_summary: GUS YoY index. 109.4 = +9.4% (matches TE description 9.4%).
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GUS:var=814/sec=2/type=7
+  our_source: gus_pl
+  our_value: 109.4
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Poland’s industrial output advanced 9.4% year-on-year in March 2026, following a downwardly revised 1.3% increase in the previous month, sharply exceeding market expectations of a 4.2% gain.
+    This marked the highest reading since September 2022, as production in manufacturing rose 9.1% after stagnating in February, supported by stronger activity in food (11.2% vs 4.2%), beverages (12.9%
+    vs 3.8%), wood, cork, straw, and wicker products (5.8% vs 2.5%), and paper and paper products (9.3% vs 5%). At '
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/industrial-production
+  te_value: null
+  value_match: null
+  yoy_computed: null
+inflation-cpi:
+  fix_summary: 'Index (prev-year=100). Frontend: value-100 = YoY%. 103.2 = +3.2% (matches TE 3.2%).'
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/COICOP=Total
+  our_source: gus_pl
+  our_value: 103.2
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: The annual inflation rate in Poland rose to 3.2% in April 2026 from 3% in the previous month, in line with initial estimates. This marked the highest reading since June last year, largely driven
+    by faster increases in costs for housing and utilities (4.8% vs 4.3% in March), health (5% vs 4.7%), transport (3.5% vs 3.1%), and information and communication (4.7% vs 2.9%). At the same time, prices
+    declined at a softer pace for clothing and footwear (-2.8% vs -3.2%) and furnishings, household equipme
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in April 2026
+  te_url: https://tradingeconomics.com/poland/inflation-cpi
+  te_value: 3.2
+  value_match: yoy_from_index
+  yoy_computed: 3.200000000000003
+job-vacancies:
+  fix_summary: Switched eurostat JVR rate -> JOBVAC count. TE attributes GUS (registered vacancies = different methodology); we honestly label eurostat.
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: jvs_q_nace2:JOBVAC
+  our_source: eurostat
+  our_value: 85514
+  source_match: false
+  suggested_source: gus_pl
+  te_desc: 'Job Vacancies in Poland increased to 41.90 Thousand in March from 31.70 Thousand in February of 2026. Job Vacancies in Poland averaged 56.44 Thousand from 2001 until 2026, reaching an all time
+    high of 120.30 Thousand in May of 2017 and a record low of 5.30 Thousand in December of 2001. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March
+  te_url: https://tradingeconomics.com/poland/job-vacancies
+  te_value: 41.9
+  value_match: false
+  yoy_computed: -25.802589109082707
+labor-force-participation-rate:
+  fix_summary: Switched eurostat lfsi_emp_q Y15-64 -> lfsq_argan Y_GE15 (58.4% matches TE BAEL).
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: lfsq_argan:Y_GE15:ACT
+  our_source: eurostat
+  our_value: 58.4
+  source_match: false
+  suggested_source: gus_pl
+  te_desc: 'Labor Force Participation Rate in Poland decreased to 58.40 percent in the fourth quarter of 2025 from 59 percent in the third quarter of 2025. Labor Force Participation Rate in Poland averaged
+    56.08 percent from 1998 until 2025, reaching an all time high of 58.90 percent in the fourth quarter of 2023 and a record low of 53.20 percent in the first quarter of 2007. source: Central Statistical
+    Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/labor-force-participation-rate
+  te_value: 58.4
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: 'Eurostat lc_lci_r2_q: our 170.6 vs TE 160.1. TE quotes Q4 2025 vintage; we have newer eurostat version. Data revision difference.'
+  fixed: false
+  flag: data_diff
+  our_period: '2025-12-31'
+  our_series: lc_lci_r2_q:I20
+  our_source: eurostat
+  our_value: 170.6
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Labour Costs in Poland decreased to 160.10 points in the fourth quarter of 2025 from 161.86 points in the third quarter of 2025. Labour Costs in Poland averaged 98.55 points from 1995 until
+    2025, reaching an all time high of 170.73 points in the second quarter of 2025 and a record low of 48.24 points in the second quarter of 1995. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/labour-costs
+  te_value: 160.1
+  value_match: false
+  yoy_computed: 37.24859211584875
+long-term-unemployment-rate:
+  fix_summary: Eurostat une_ltu_q matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: une_ltu_q:LTU
+  our_source: eurostat
+  our_value: 0.9
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Long Term Unemployment Rate in Poland increased to 0.90 percent in the fourth quarter of 2025 from 0.80 percent in the third quarter of 2025. Long Term Unemployment Rate in Poland averaged 4.24
+    percent from 1997 until 2025, reaching an all time high of 11.60 percent in the first quarter of 2003 and a record low of 0.60 percent in the third quarter of 2019. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/long-term-unemployment-rate
+  te_value: 0.9
+  value_match: true
+  yoy_computed: null
+manufacturing-production:
+  fix_summary: GUS YoY index. 109.1 = +9.1% (matches TE). 50.2 in TE description is all-time-high not latest.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GUS:var=814/sec=807/type=7/C
+  our_source: gus_pl
+  our_value: 109.1
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Manufacturing Production in Poland increased 9.10 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Poland averaged 5.41 percent from 2006 until
+    2026, reaching an all time high of 50.20 percent in April of 2021 and a record low of -27.50 percent in April of 2020. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/poland/manufacturing-production
+  te_value: 50.2
+  value_match: false
+  yoy_computed: 5.9223300970873725
+medical-doctors:
+  fix_summary: Curated 3.4 per 1000 matches TE description 3.30.
+  fixed: false
+  flag: ok
+  our_period: '2021-12-31'
+  our_series: PL:medical-doctors
+  our_source: curated
+  our_value: 3.4
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Medical Doctors in Poland increased to 3.30 per 1000 people in 2019 from 2.38 per 1000 people in 2017. Medical Doctors in Poland averaged 2.32 per 1000 people from 2005 until 2019, reaching
+    an all time high of 3.30 per 1000 people in 2019 and a record low of 2.14 per 1000 people in 2005. source: OECD'
+  te_http: 200
+  te_label: OECD
+  te_label_href: https://www.oecd.org/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/medical-doctors
+  te_value: null
+  value_match: null
+  yoy_computed: null
+minimum-wages:
+  fix_summary: Switched curated PLN -> eurostat earn_mw_cur EUR (1139 EUR/Month matches TE).
+  fixed: true
+  flag: fixed
+  our_period: '2026-01-01'
+  our_series: earn_mw_cur:PL:EUR
+  our_source: eurostat
+  our_value: 1139
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Minimum Wages in Poland increased to 1139 EUR/Month in the second quarter of 2026 from 1100 EUR/Month in the fourth quarter of 2025. Minimum Wages in Poland averaged 429.78 EUR/Month from 1999
+    until 2026, reaching an all time high of 1139.00 EUR/Month in June of 2026 and a record low of 159.00 EUR/Month in June of 1999. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the second quarter of 2026
+  te_url: https://tradingeconomics.com/poland/minimum-wages
+  te_value: 1139.0
+  value_match: true
+  yoy_computed: null
+mining-production:
+  fix_summary: GUS YoY index. 121.1 = +21.1% (matches TE). 32.1 in TE description is all-time-high.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GUS:var=814/sec=807/type=7/B
+  our_source: gus_pl
+  our_value: 121.1
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'Mining production in Poland increased 21.10 percent in March of 2026 over the same month in the previous year. Mining Production in Poland averaged -1.00 percent from 2006 until 2026, reaching
+    an all time high of 32.10 percent in January of 2022 and a record low of -21.70 percent in September of 2017. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/poland/mining-production
+  te_value: 32.1
+  value_match: false
+  yoy_computed: 28.82978723404255
+nurses:
+  fix_summary: Curated 5.74 per 1000 matches TE description 5.84.
+  fixed: false
+  flag: ok
+  our_period: '2021-12-31'
+  our_series: PL:nurses
+  our_source: curated
+  our_value: 5.74
+  source_match: null
+  suggested_source: null
+  te_desc: 'Nurses in Poland decreased to 5.84 per 1000 people in 2022 from 5.87 per 1000 people in 2021. Nurses in Poland averaged 5.32 per 1000 people from 2004 until 2022, reaching an all time high of
+    5.87 per 1000 people in 2021 and a record low of 4.97 per 1000 people in 2004. source: OECD'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/nurses
+  te_value: null
+  value_match: null
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: Curated 32% top marginal matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: PL:personal-income-tax-rate
+  our_source: curated
+  our_value: 32
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Personal Income Tax Rate in Poland stands at 32 percent. Personal Income Tax Rate in Poland averaged 35.94 percent from 1995 until 2026, reaching an all time high of 45.00 percent in 1996
+    and a record low of 32.00 percent in 2009. source: Ministry of Finance, Poland'
+  te_http: 200
+  te_label: Ministry of Finance, Poland
+  te_label_href: http://ec.europa.eu
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/personal-income-tax-rate
+  te_value: 32.0
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: Eurostat demo_pjan matches.
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: demo_pjan:TOTAL
+  our_source: eurostat
+  our_value: 36.5
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'The total population in Poland was estimated at 36.5 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the year of 1960,
+    Poland had a population of 29.5 million people. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/population
+  te_value: 36.5
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: GUS PPI 2021=100. Frontend computes YoY from same-month prior year. 116.6 -> -0.8% YoY (matches TE).
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GUS:var=1667/sec=1413/type=372
+  our_source: gus_pl
+  our_value: 116.6
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: Producer prices in Poland fell 0.8% year-on-year in March 2026, easing from a downwardly revised 2% decrease in the previous month, though still coming in above expectations for a 0.1% decline.
+    Deflationary pressures moderated in manufacturing (-0.8% vs -2.3% in February) and in electricity, gas, steam, and air-conditioning supply (-1.6% vs -4.1%). Costs also rose in water supply, sewerage,
+    waste management, and remediation activities (1.9% vs 1.7%). Conversely, price growth slowed in mining and
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/producer-prices-change
+  te_value: null
+  value_match: null
+  yoy_computed: null
+productivity:
+  fix_summary: 'Eurostat namq_10_lp_ulc: our 118.18 vs TE 136. TE uses different chain unit (likely RLPR_HW non-I20). Acceptable methodology diff.'
+  fixed: false
+  flag: data_diff
+  our_period: '2025-12-31'
+  our_series: namq_10_lp_ulc:RLPR_HW:I20
+  our_source: eurostat
+  our_value: 118.18
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Productivity in Poland increased to 136 points in the fourth quarter of 2025 from 134.74 points in the third quarter of 2025. Productivity in Poland averaged 89.40 points from 1995 until 2025,
+    reaching an all time high of 136.00 points in the fourth quarter of 2025 and a record low of 47.22 points in the first quarter of 1995. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in the fourth quarter of 2025
+  te_url: https://tradingeconomics.com/poland/productivity
+  te_value: 136.0
+  value_match: false
+  yoy_computed: 12.84254750310322
+retail-sales:
+  fix_summary: GUS YoY index (prev-year=100). 108.7 = +8.7% (TE description shows all-time-high 18.1).
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GUS:var=109/sec=849/type=7
+  our_source: gus_pl
+  our_value: 108.7
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: Retail sales in Poland rose 8.7% year-on-year in March 2026, accelerating from a 5% increase in the previous month and marking the strongest growth since April 2022. Retail activity strengthened
+    further in motor vehicles, motorcycles and parts (7.7% vs 2.7% in February), solid, liquid and gaseous fuels (16.2% vs 10.2%), food, beverages and tobacco products (4.3% vs 0.2%), pharmaceuticals, cosmetics
+    and orthopedic equipment (10.1% vs 5.5%), textiles, clothing and footwear (13.6% vs 0.8%), and fur
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/retail-sales-annual
+  te_value: 18.1
+  value_match: false
+  yoy_computed: 9.027081243731192
+retirement-age-men:
+  fix_summary: Curated 65 years matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: PL:retirement-age-men
+  our_source: curated
+  our_value: 65
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Retirement Age Men in Poland remained unchanged at 65 Years in 2026 from 65 Years in 2025. Retirement Age Men in Poland averaged 65.11 Years from 2009 until 2026, reaching an all time high of
+    65.58 Years in 2015 and a record low of 65.00 Years in 2010. source: Republic of Poland'
+  te_http: 200
+  te_label: Republic of Poland
+  te_label_href: https://www.gov.pl/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/retirement-age-men
+  te_value: null
+  value_match: null
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: Curated 60 years matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: PL:retirement-age-women
+  our_source: curated
+  our_value: 60
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Retirement Age Women in Poland remained unchanged at 60 Years in 2026 from 60 Years in 2025. Retirement Age Women in Poland averaged 60.11 Years from 2009 until 2026, reaching an all time high
+    of 60.58 Years in 2015 and a record low of 60.00 Years in 2010. source: Republic of Poland'
+  te_http: 200
+  te_label: Republic of Poland
+  te_label_href: https://www.gov.pl/
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/retirement-age-women
+  te_value: null
+  value_match: null
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: Curated VAT 23% matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: PL:sales-tax-rate
+  our_source: curated
+  our_value: 23
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Sales Tax Rate in Poland stands at 23 percent. Sales Tax Rate in Poland averaged 22.59 percent from 2000 until 2026, reaching an all time high of 23.00 percent in 2011 and a record low of
+    22.00 percent in 2001. source: Ministry of Finance, Poland'
+  te_http: 200
+  te_label: Ministry of Finance, Poland
+  te_label_href: https://www.vatlive.com
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/sales-tax-rate
+  te_value: 23.0
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: GUS YoY index 105.2 = +5.2% YoY.
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: GUS:var=305/sec=1722/GR477510
+  our_source: gus_pl
+  our_value: 105.2
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/services-inflation
+  te_value: null
+  value_match: null
+  yoy_computed: null
+services-sentiment:
+  fix_summary: Eurostat ei_bsse_m_r2 SCI -4.5 balance points.
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: ei_bsse_m_r2:SCI
+  our_source: eurostat
+  our_value: -4.5
+  source_match: null
+  suggested_source: null
+  te_desc: null
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/services-sentiment
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate:
+  fix_summary: Curated 35.65 -> 34.19 (matches TE).
+  fixed: true
+  flag: fixed
+  our_period: '2026-12-31'
+  our_series: PL:social-security-rate
+  our_source: curated
+  our_value: 34.19
+  source_match: null
+  suggested_source: null
+  te_desc: 'The Social Security Rate in Poland stands at 34.19 percent. Social Security Rate in Poland averaged 38.30 percent from 1981 until 2026, reaching an all time high of 50.86 percent in 2006 and
+    a record low of 24.31 percent in 2017. source: Ministry of Finance, Income Tax Department'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/social-security-rate
+  te_value: 34.19
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: Curated 19.21 -> 20.48 (matches TE).
+  fixed: true
+  flag: fixed
+  our_period: '2026-12-31'
+  our_series: PL:social-security-rate-companies
+  our_source: curated
+  our_value: 20.48
+  source_match: null
+  suggested_source: null
+  te_desc: 'The Social Security Rate For Companies in Poland stands at 20.48 percent. Social Security Rate For Companies in Poland averaged 22.09 percent from 1981 until 2026, reaching an all time high
+    of 45.00 percent in 1990 and a record low of 18.38 percent in 2012. source: Ministry of Finance, Income Tax Department'
+  te_http: 200
+  te_label: Ministry of Finance, Income Tax Department
+  te_label_href: https://www.pit.pl
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/social-security-rate-for-companies
+  te_value: 20.48
+  value_match: true
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: Curated 13.71% matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: PL:social-security-rate-employees
+  our_source: curated
+  our_value: 13.71
+  source_match: null
+  suggested_source: null
+  te_desc: 'The Social Security Rate For Employees in Poland stands at 13.71 percent. Social Security Rate For Employees in Poland averaged 17.41 percent from 2000 until 2026, reaching an all time high
+    of 26.26 percent in 2006 and a record low of 3.70 percent in 2017. source: Ministry of Finance, Income Tax Department'
+  te_http: 200
+  te_label: Ministry of Finance, Income Tax Department
+  te_label_href: https://www.pit.pl
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/social-security-rate-for-employees
+  te_value: 13.71
+  value_match: true
+  yoy_computed: null
+terrorism-index:
+  fix_summary: Curated 0 -> 1.68 (GTI 2025).
+  fixed: true
+  flag: fixed
+  our_period: '2025-12-31'
+  our_series: PL:terrorism-index
+  our_source: curated
+  our_value: 1.68
+  source_match: null
+  suggested_source: null
+  te_desc: 'Terrorism Index in Poland decreased to 1.68 Points in 2025 from 1.96 Points in 2024. Terrorism Index in Poland averaged 0.38 Points from 2002 until 2025, reaching an all time high of 1.96 Points
+    in 2024 and a record low of 0.00 Points in 2006. source: Institute for Economics and Peace'
+  te_http: 200
+  te_label: null
+  te_label_href: null
+  te_period: null
+  te_url: https://tradingeconomics.com/poland/terrorism-index
+  te_value: 1.68
+  value_match: true
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: Switched eurostat ILO -> gus_pl var=507 registered count (949.8K matches TE).
+  fixed: true
+  flag: fixed
+  our_period: '2026-03-31'
+  our_series: GUS:var=507/sec=871/type=93
+  our_source: gus_pl
+  our_value: 949.828
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: 'The number of unemployed persons in Poland decreased to 949.80 Thousand in March of 2026 from 954.90 Thousand in February of 2026. Unemployed Persons in Poland averaged 1895.90 Thousand from
+    1990 until 2026, reaching an all time high of 3344.20 Thousand in February of 2003 and a record low of 56.00 Thousand in January of 1990. source: Central Statistical Office of Poland (GUS)'
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March of 2026
+  te_url: https://tradingeconomics.com/poland/unemployed-persons
+  te_value: 949.8
+  value_match: true
+  yoy_computed: null
+unemployment:
+  fix_summary: Switched eurostat ILO 3.3% -> gus_pl registered 6.1% (matches TE primary).
+  fixed: true
+  flag: fixed
+  our_period: '2026-03-31'
+  our_series: GUS:var=875/sec=143/type=95
+  our_source: gus_pl
+  our_value: 6.1
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: The registered unemployment rate in Poland was unchanged at 6.1% in March 2026, remaining at its highest level since September 2021, in line with market expectations. The number of unemployed
+    persons decreased by 5.1 thousand from the previous month to 949.8 thousand. Women constituted 49.1% of the registered unemployed persons. The majority of unemployed individuals were not entitled to
+    unemployment benefits, representing 86.8% of the total. In March 2025, the jobless rate was 0.7 percentage po
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/unemployment-rate
+  te_value: 6.1
+  value_match: true
+  yoy_computed: null
+unemployment-rate-registered:
+  fix_summary: GUS var=875 matches TE.
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: GUS:var=875/sec=143/type=95
+  our_source: gus_pl
+  our_value: 6.1
+  source_match: true
+  suggested_source: gus_pl
+  te_desc: The registered unemployment rate in Poland was unchanged at 6.1% in March 2026, remaining at its highest level since September 2021, in line with market expectations. The number of unemployed
+    persons decreased by 5.1 thousand from the previous month to 949.8 thousand. Women constituted 49.1% of the registered unemployed persons. The majority of unemployed individuals were not entitled to
+    unemployment benefits, representing 86.8% of the total. In March 2025, the jobless rate was 0.7 percentage po
+  te_http: 200
+  te_label: Central Statistical Office of Poland (GUS)
+  te_label_href: https://stat.gov.pl/
+  te_period: in March 2026
+  te_url: https://tradingeconomics.com/poland/unemployment-rate
+  te_value: 6.1
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: Eurostat une_rt_m Y_LT25 matches.
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: une_rt_m:Y_LT25
+  our_source: eurostat
+  our_value: 12.1
+  source_match: true
+  suggested_source: eurostat
+  te_desc: 'Youth Unemployment Rate in Poland increased to 12.10 percent in March from 11.60 percent in February of 2026. Youth Unemployment Rate in Poland averaged 23.07 percent from 1997 until 2026, reaching
+    an all time high of 44.20 percent in November of 2002 and a record low of 7.60 percent in November of 2019. source: EUROSTAT'
+  te_http: 200
+  te_label: EUROSTAT
+  te_label_href: https://ec.europa.eu/eurostat/
+  te_period: in March
+  te_url: https://tradingeconomics.com/poland/youth-unemployment-rate
+  te_value: 12.1
+  value_match: true
+  yoy_computed: null

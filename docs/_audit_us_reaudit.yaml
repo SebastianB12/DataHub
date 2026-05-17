@@ -1,0 +1,4374 @@
+15-year-mortgage-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-14'
+  our_series: MORTGAGE15US
+  our_source: fred
+  our_value: 5.71
+  source_match: true
+  suggested_source: fred
+  te_desc: '15 Year Mortgage Rate in the United States decreased to 5.71 percent in
+    May 14 from 5.72 percent in the previous week. 15 Year Mortgage Rate in the United
+    States averaged 5.26 percent from 1991 until 2026, reaching an all time high of
+    8.89 percent in December of 1994 and a record low of 2.10 percent in July of 2021.
+    source: Freddie Mac'
+  te_label: Freddie Mac
+  te_period: May
+  te_unit: percent
+  te_url: https://www.freddiemac.com/
+  te_value: 5.71
+  value_match: true
+  yoy_computed: null
+30-year-mortgage-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-14'
+  our_series: MORTGAGE30US
+  our_source: fred
+  our_value: 6.36
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The average rate on a 30-year fixed-mortgage was at 6.36% as of May 14th,
+    one basis point below the one-month high in the previous week to hold most of
+    the rebound since the start of the year. Mortgage rates tracked the increase in
+    long-dated Treasury yields during the period as a surge in energy prices placed
+    inflationary risks on the upside, potentially warranting a hawkish Federal Reserve.
+    “While purchase demand is softening, it remains above this time last year. Recent
+    data also shows existing-home sales modestly edging up.” said Sam Khater, Freddie
+    Mac’s Chief Economist. source: Freddie M'
+  te_label: Freddie Mac
+  te_period: null
+  te_unit: '%'
+  te_url: https://www.freddiemac.com/
+  te_value: 6.36
+  value_match: true
+  yoy_computed: null
+adp-employment-change:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: ADPMNUSNERSA
+  our_source: fred
+  our_value: 132506.0
+  source_match: true
+  suggested_source: fred
+  te_desc: Private businesses in the US added a net 109,000 jobs in April 2026, the
+    largest increase since January 2025 and above market forecasts of 99,000. The
+    stronger-than-expected data still reflects the Fed’s described "low-hire, low-fire"
+    labor market, where employers avoid layoffs but have significantly reduced hiring
+    amid slower labor force growth due to lower immigration. The service-providing
+    sector led gains with 94,000 jobs, driven by education and health services (+61,000),
+    trade, transportation and utilities (+25,000), and financial activities (+9,000).
+    The goods-producing sector contribut
+  te_label: Automatic Data Processing, Inc.
+  te_period: 2026-04
+  te_unit: null
+  te_url: https://adpemploymentreport.com/
+  te_value: 99000.0
+  value_match: false
+  yoy_computed: 0.42974404838599656
+average-hourly-earnings-yoy:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CES0500000003
+  our_source: fred
+  our_value: 37.41
+  source_match: true
+  suggested_source: fred
+  te_desc: 'US average hourly earnings increased by 3.6% year-on-year in April 2026,
+    after a downwardly revised 3.4% rise in March, which was the weakest since May
+    2021. Even so, the figure undershot expectations of a 3.8% increase source: U.S.
+    Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: null
+  te_url: https://www.bls.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+average-weekly-hours:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: AWHAETP
+  our_source: fred
+  our_value: 34.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The average workweek for all employees on private nonfarm payrolls edged
+    up by 0.1 hour to 34.3 hours in April 2026, slightly above market estimates of
+    34.2 hours. In manufacturing, the average workweek edged up by 0.1 hour to 40.4
+    hours, and overtime was unchanged at 3.0 hours. The average workweek for production
+    and nonsupervisory employees on private nonfarm payrolls remained at 33.8 hours
+    source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: hours
+  te_url: https://www.bls.gov
+  te_value: 34.3
+  value_match: true
+  yoy_computed: null
+bank-lending-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-31'
+  our_series: DPRIME
+  our_source: fred
+  our_value: 6.75
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Bank Lending Rate in the United States remained unchanged at 6.75 percent
+    in April. Bank Lending Rate in the United States averaged 6.55 percent from 1950
+    until 2026, reaching an all time high of 20.50 percent in August of 1981 and a
+    record low of 2.00 percent in February of 1950. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: April
+  te_unit: percent
+  te_url: http://www.federalreserve.gov/
+  te_value: 6.75
+  value_match: true
+  yoy_computed: null
+banks-balance-sheet:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-06'
+  our_series: TLAACBW027SBOG
+  our_source: fred
+  our_value: 25491.46
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Banks Balance Sheet in the United States increased to 25340.10 USD Billion
+    in May 6 from 25312.50 USD Billion in the previous week. Banks Balance Sheet in
+    the United States averaged 8338.90 USD Billion from 1973 until 2026, reaching
+    an all time high of 25340.10 USD Billion in May of 2026 and a record low of 697.60
+    USD Billion in January of 1973. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: May
+  te_unit: USD
+  te_url: http://www.federalreserve.gov
+  te_value: 25340.1
+  value_match: true
+  yoy_computed: null
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2025-12-31'
+  our_series: FYFSGDA188S
+  our_source: fred
+  our_value: -5.77
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: 'The United States recorded a Government Budget deficit equal to 5.90 percent
+    of the country''s Gross Domestic Product in 2025. Government Budget in the United
+    States averaged -2.66 percent of GDP from 1948 until 2025, reaching an all time
+    high of 4.50 percent of GDP in 1948 and a record low of -14.50 percent of GDP
+    in 2020. source: U.S. Treasury'
+  te_label: U.S. Treasury
+  te_period: null
+  te_unit: percent
+  te_url: https://home.treasury.gov/
+  te_value: 5.9
+  value_match: false
+  yoy_computed: -43.17617866004961
+building-permits:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: PERMIT
+  our_source: fred
+  our_value: 1363.0
+  source_match: true
+  suggested_source: fred
+  te_desc: US building permits fell 11.4% month-over-month to a seasonally adjusted
+    annualized rate of 1.363 million in March 2026, below the preliminary estimate
+    of 1.372 million, revised figures showed. The reading marked the lowest level
+    since August 2025. In February, building permits rose 11%. Permits for buildings
+    with five or more units dropped by 24.9% to an annualized rate of 419 thousand,
+    while single-family permits decreased by 3.8% to 895 Thousand. Regionally, permits
+    declined in the Northeast (-30.2% to 113 thousand), the Midwest (-3.2% to 212
+    thousand), in the South (-8% to 715 thousand), a
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: million
+  te_url: https://www.census.gov
+  te_value: 1.363
+  value_match: false
+  yoy_computed: -7.967589466576637
+business-inventories:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: BUSINV
+  our_source: fred
+  our_value: 2709734.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'US business inventories rose by 0.9% month-over-month in March 2026, following
+    a 0.4% increase in February and slightly above market expectations of a 0.8% advance.
+    This marked the strongest increase in stocks since June 2022, mainly on account
+    of merchant wholesalers (1.3% vs 0.9% in February). Inventories also went up for
+    manufacturers (0.6% vs 0.1%) and retailers (0.6 vs 0%). On a yearly basis, business
+    inventories grew by 2% in March. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.census.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+capacity-utilization:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: TCU
+  our_source: fred
+  our_value: 76.12
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Capacity Utilization in the United States increased to 76.10 percent in
+    April from 75.70 percent in March of 2026. Capacity Utilization in the United
+    States averaged 79.83 percent from 1967 until 2026, reaching an all time high
+    of 89.40 percent in January of 1967 and a record low of 64.10 percent in April
+    of 2020. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: April
+  te_unit: percent
+  te_url: http://www.federalreserve.gov
+  te_value: 76.1
+  value_match: true
+  yoy_computed: null
+capital-flows:
+  fix_summary: TE shows Treasury TIC monthly net inflow ($184.5B); we use NETFI (NIPA
+    annual). FRED has no TIC.
+  fixed: false
+  flag: gap
+  our_period: '2025-12-31'
+  our_series: NETFI
+  our_source: fred
+  our_value: -890031.0
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: Net foreign acquisitions of long-term securities, short-term U.S. securities,
+    and banking flows resulted in a net TIC inflow of $184.5 billion in February 2026.
+    Of this total, $166.5 billion was attributable to private foreign investors, while
+    foreign official institutions accounted for $18.0 billion. Foreign residents increased
+    their holdings of long-term U.S. securities, with net purchases of $101.1 billion.
+    This included $147.3 billion in purchases by private investors, partly offset
+    by net sales of $46.1 billion by foreign official institutions. At the same time,
+    U.S. investors expanded th
+  te_label: U.S. Department of the Treasury
+  te_period: 2026-02
+  te_unit: billion
+  te_url: https://home.treasury.gov/
+  te_value: 184.5
+  value_match: false
+  yoy_computed: 4.6682033474219535
+car-production:
+  fix_summary: Consolidated duplicate (SA/empty adjustment) rows from prior series-switch
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-30'
+  our_series: MVAAUTLTTS
+  our_source: fred
+  our_value: 10.45
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Car Production in the United States decreased to 9.98 Million Units in
+    March from 10.23 Million Units in February of 2026. Car Production in the United
+    States averaged 10.64 Million Units from 1967 until 2026, reaching an all time
+    high of 13.89 Million Units in November of 1978 and a record low of 0.09 Million
+    Units in April of 2020. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: March
+  te_unit: Million
+  te_url: https://www.federalreserve.gov
+  te_value: 9.98
+  value_match: true
+  yoy_computed: null
+case-shiller-home-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-02-28'
+  our_series: CSUSHPISA
+  our_source: fred
+  our_value: 332.1
+  source_match: null
+  suggested_source: null
+  te_desc: 'Case Shiller Home Price Index in the United States increased to 338.15
+    points in February from 336.66 points in January of 2026. Case Shiller Home Price
+    Index in the United States averaged 196.89 points from 2000 until 2026, reaching
+    an all time high of 343.03 points in May of 2025 and a record low of 100.00 points
+    in January of 2000. source: Standard & Poor''s'
+  te_label: Standard & Poor's
+  te_period: February
+  te_unit: points
+  te_url: https://us.spindices.com
+  te_value: 338.15
+  value_match: true
+  yoy_computed: null
+central-bank-balance:
+  fix_summary: Converted stored values from USD Billion (6728.5) to USD Million (6,728,502)
+    to match TE display 6,709,505
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-05-13'
+  our_series: WALCL
+  our_source: fred
+  our_value: 6728502.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Central Bank Balance Sheet in the United States increased to 6709505 USD
+    Million in May 6 from 6699950 USD Million in the previous week. Central Bank Balance
+    Sheet in the United States averaged 3956632.64 USD Million from 2002 until 2026,
+    reaching an all time high of 8965487.00 USD Million in April of 2022 and a record
+    low of 712809.00 USD Million in January of 2003. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: May
+  te_unit: USD
+  te_url: http://www.federalreserve.gov
+  te_value: 6709505.0
+  value_match: true
+  yoy_computed: null
+changes-in-inventories:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: CBIC1
+  our_source: fred
+  our_value: -7.53
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The stocks of goods held by firms in the United States decreased by 7.50
+    USD Billion in the first quarter of 2026. Changes in Inventories in the United
+    States averaged 34.07 USD Billion from 1950 until 2026, reaching an all time high
+    of 227.40 USD Billion in the first quarter of 2022 and a record low of -261.40
+    USD Billion in the second quarter of 2020. source: U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: null
+  te_url: null
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: -117.33026467203682
+chicago-fed-national-activity-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: CFNAI
+  our_source: fred
+  our_value: -0.2
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The Chicago Fed National Activity Index (CFNAI) dropped to -0.20 in March
+    2026, its lowest level since November 2025, down from a revised +0.03 in February.
+    Three of the four key categories declined, with production-related indicators
+    contributing -0.20 (down from +0.13 in February), sales, orders, and inventories
+    subtracting -0.01 (from +0.05), and personal consumption and housing also at -0.01
+    (from neutral). Only employment-related indicators improved, adding +0.02 compared
+    to -0.15 in February. source: Federal Reserve Bank of Chicago'
+  te_label: Federal Reserve Bank of Chicago
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.chicagofed.org/
+  te_value: -0.2
+  value_match: true
+  yoy_computed: null
+construction-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USCONS
+  our_source: fred
+  our_value: 8321.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Construction Payrolls in the United States decreased to 9 Thousand in
+    April from 16 Thousand in March of 2026. Construction Payrolls in the United States
+    averaged 6.86 Thousand from 1939 until 2026, reaching an all time high of 482.00
+    Thousand in May of 2020 and a record low of -1019.00 Thousand in April of 2020.
+    source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 9.0
+  value_match: false
+  yoy_computed: 0.6045218232378189
+construction-spending:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: TTLCONS
+  our_source: fred
+  our_value: 2185455.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Construction spending in the US rose by 0.6% month-over-month in March
+    2026, following a 0.2% fall in the prior month and better than the expected 0.2%
+    increase. This marked the first increase since December last year. Private construction
+    increased by 0.8%, buoyed by a 1.7% gain in the residential segment, primarily
+    new single-family projects (+2.7%) and, to a lesser extent, multi-family projects
+    (+0.3%). Conversely, spending on nonresidential structures shrank by 0.2%, primarily
+    manufacturing (-1.2%), commercial (-0.6%) and lodging (-0.5%). Meanwhile, public
+    construction spending fell 0.2%, '
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.census.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+consumer-confidence:
+  fix_summary: null
+  fixed: false
+  flag: vintage-lag
+  our_period: '2026-03-31'
+  our_series: UMCSENT
+  our_source: fred
+  our_value: 53.3
+  source_match: true
+  suggested_source: fred
+  te_desc: The University of Michigan’s Consumer Sentiment Index dropped to a record
+    low of 48.2 in early May 2026, missing market expectations of 49.5 and falling
+    below April’s 49.8. The current conditions component declined about 9% to 47.8,
+    driven by growing concerns over high prices affecting personal finances and buying
+    conditions for major purchases. Meanwhile, the expectations index edged up to
+    48.5, though real income expectations continued their decline from March. About
+    one-third of consumers spontaneously cited gasoline prices, and roughly 30% mentioned
+    tariffs, underscoring that consumers sti
+  te_label: University of Michigan
+  te_period: null
+  te_unit: null
+  te_url: http://www.sca.isr.umich.edu/
+  te_value: 48.2
+  value_match: false
+  yoy_computed: -6.491228070175444
+consumer-credit:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: TOTALSL
+  our_source: fred
+  our_value: 5140540.72
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Total US consumer credit increased by $24.9 billion in March 2026, following
+    a downwardly revised $8.85 billion rise in the previous month and well above forecasts
+    of a $12.5 billion increase. Revolving credit, which includes credit card debt,
+    rose to $1.34 trillion from $1.33 trillion in February. Meanwhile, nonrevolving
+    credit, including auto and student loans, increased to $3.80 trillion from $3.79
+    trillion in the prior month. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.federalreserve.gov
+  te_value: 1.34
+  value_match: false
+  yoy_computed: 2.3475176869912606
+consumer-spending:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: PCEC96
+  our_source: fred
+  our_value: 16772.7
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Consumer Spending in the United States increased to 16731.20 USD Billion
+    in the first quarter of 2026 from 16665.20 USD Billion in the fourth quarter of
+    2025. Consumer Spending in the United States averaged 6788.76 USD Billion from
+    1947 until 2026, reaching an all time high of 16731.20 USD Billion in the first
+    quarter of 2026 and a record low of 1351.40 USD Billion in the first quarter of
+    1947. source: U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: USD
+  te_url: null
+  te_value: 16731.2
+  value_match: true
+  yoy_computed: null
+continuing-jobless-claims:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-02'
+  our_series: CCSA
+  our_source: fred
+  our_value: 1782.0
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: 'Continuing Jobless Claims in the United States increased to 1782 thousand
+    in the week ending May 2 of 2026 from 1758 thousand in the previous week. Continuing
+    Jobless Claims in the United States averaged 2729.19 Thousand from 1967 until
+    2026, reaching an all time high of 23130.00 Thousand in May of 2020 and a record
+    low of 988.00 Thousand in May of 1969. source: U.S. Department of Labor'
+  te_label: U.S. Department of Labor
+  te_period: 2020-05
+  te_unit: thousand
+  te_url: http://www.dol.gov
+  te_value: 1782.0
+  value_match: true
+  yoy_computed: null
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CPILFENS
+  our_source: fred
+  our_value: 335.42
+  source_match: true
+  suggested_source: fred
+  te_desc: The annual core inflation rate in the United States, which excludes food
+    and energy, rose to 2.8% in April of 2026 from 2.6% in the previous month, slightly
+    above market expectations of 2.7%. It was the sharpest core inflation rate since
+    September of last year. Prices rose sharply for services less energy services
+    (3.3%) amid higher costs for shelter (3.3%) and transportation services (4.3%).
+    IN turn, prices rose sharply for apparel (4.2%), while they fell rose less for
+    new vehicles (0.2%) and tumbled for used cars and trucks (-2.7%). From the previous
+    month, core consumer prices rose by 0.4%,
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: https://www.bls.gov
+  te_value: 2.8
+  value_match: true
+  yoy_computed: 2.9875034542049246
+core-pce-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: PCEPILFE
+  our_source: fred
+  our_value: 129.28
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Core PCE Price Index in the United States increased to 129.28 points in
+    March from 128.90 points in February of 2026. Core PCE Price Index in the United
+    States averaged 61.39 points from 1959 until 2026, reaching an all time high of
+    129.28 points in March of 2026 and a record low of 15.50 points in January of
+    1959. source: U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: March
+  te_unit: points
+  te_url: http://www.bea.gov/
+  te_value: 129.28
+  value_match: true
+  yoy_computed: null
+core-producer-prices:
+  fix_summary: Consolidated duplicate (NSA/empty adjustment) rows from prior series-switch
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-30'
+  our_series: PPIFES
+  our_source: fred
+  our_value: 154.06
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: 'Core Producer Prices in the United States increased to 154.06 points in
+    April from 152.48 points in March of 2026. Core Producer Prices in the United
+    States averaged 119.48 points from 2010 until 2026, reaching an all time high
+    of 154.06 points in April of 2026 and a record low of 99.90 points in April of
+    2010. source: U.S. Department of Labor'
+  te_label: U.S. Department of Labor
+  te_period: April
+  te_unit: points
+  te_url: https://www.bls.gov
+  te_value: 154.06
+  value_match: true
+  yoy_computed: null
+corporate-profits:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2025-12-31'
+  our_series: CP
+  our_source: fred
+  our_value: 3792.21
+  source_match: null
+  suggested_source: null
+  te_desc: 'Corporate profits in the United States rose by 5.7% from the previous
+    period in the fourth quarter of 2025, the most in one year, picking up from the
+    4.7% increase in the third quarter. Corporate Profits in the United States averaged
+    681.95 USD Billion from 1947 until 2025, reaching an all time high of 3605.67
+    USD Billion in the fourth quarter of 2025 and a record low of 9.96 USD Billion
+    in the first quarter of 1947. source: U.S. Bureau of Economics Analysis'
+  te_label: U.S. Bureau of Economics Analysis
+  te_period: 2025-Q4
+  te_unit: null
+  te_url: https://www.bea.gov
+  te_value: 2025.0
+  value_match: false
+  yoy_computed: 31.135755337469128
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: US:corporate-tax-rate
+  our_source: curated
+  our_value: 21.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Corporate Tax Rate in the United States stands at 21 percent. Corporate
+    Tax Rate in the United States averaged 31.89 percent from 1909 until 2026, reaching
+    an all time high of 52.80 percent in 1968 and a record low of 1.00 percent in
+    1910. source: Internal Revenue Service'
+  te_label: Internal Revenue Service
+  te_period: null
+  te_unit: percent
+  te_url: https://www.taxpolicycenter.org/
+  te_value: 21.0
+  value_match: true
+  yoy_computed: null
+corruption-index:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2025-12-31'
+  our_series: US:corruption-index
+  our_source: curated
+  our_value: 64.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The United States scored 64 points out of 100 on the 2025 Corruption Perceptions
+    Index reported by Transparency International. Corruption Index in the United States
+    averaged 72.86 Points from 1995 until 2025, reaching an all time high of 78.00
+    Points in 2000 and a record low of 64.00 Points in 2025. source: Transparency
+    International'
+  te_label: Transparency International
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: 100.0
+  value_match: false
+  yoy_computed: null
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2025-12-31'
+  our_series: US:corruption-rank
+  our_source: curated
+  our_value: 29.0
+  source_match: true
+  suggested_source: curated
+  te_desc: The United States is the 29 least corrupt nation out of 180 countries,
+    according to the 2025 Corruption Perceptions Index reported by Transparency International.
+    Corruption Rank in the United States averaged 19.65 from 1995 until 2025, reaching
+    an all time high of 29.00 in 2025 and a record low of 14.00 in 2000.
+  te_label: Transparency International
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: 180.0
+  value_match: false
+  yoy_computed: null
+cpi-clothing:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CPIAPPSL
+  our_source: fred
+  our_value: 136.67
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Clothing in the United States decreased to 138.07 points in April
+    from 138.58 points in March of 2026. CPI Clothing in the United States averaged
+    84.43 points from 1914 until 2026, reaching an all time high of 138.58 points
+    in March of 2026 and a record low of 15.00 points in December of 1914. source:
+    U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: http://www.bls.gov
+  te_value: 138.07
+  value_match: true
+  yoy_computed: null
+cpi-education:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CUSR0000SAE1
+  our_source: fred
+  our_value: 316.82
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Education in the United States increased to 315.42 points in April
+    from 315.34 points in March of 2026. CPI Education in the United States averaged
+    189.31 points from 1993 until 2026, reaching an all time high of 315.42 points
+    in April of 2026 and a record low of 76.50 points in January of 1993. source:
+    U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: http://www.bls.gov
+  te_value: 315.42
+  value_match: true
+  yoy_computed: null
+cpi-food:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CPIUFDSL
+  our_source: fred
+  our_value: 348.35
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Food in the United States increased to 348.50 points in April from
+    346.80 points in March of 2026. CPI Food in the United States averaged 92.88 points
+    from 1913 until 2026, reaching an all time high of 348.50 points in April of 2026
+    and a record low of 9.40 points in February of 1933. source: U.S. Bureau of Labor
+    Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: http://www.bls.gov
+  te_value: 348.5
+  value_match: true
+  yoy_computed: null
+cpi-housing-utilities:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CPIHOSSL
+  our_source: fred
+  our_value: 357.37
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Housing Utilities in the United States increased to 357.35 points
+    in April from 355.10 points in March of 2026. CPI Housing Utilities in the United
+    States averaged 158.11 points from 1967 until 2026, reaching an all time high
+    of 357.35 points in April of 2026 and a record low of 30.50 points in February
+    of 1967. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: http://www.bls.gov
+  te_value: 357.35
+  value_match: true
+  yoy_computed: null
+cpi-median:
+  fix_summary: Consolidated duplicate (SA/empty adjustment) rows from prior series-switch
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-30'
+  our_series: MEDCPIM159SFRBCLE
+  our_source: fred
+  our_value: 2.8
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Median in the United States increased to 2.80 percent in April from
+    2.70 percent in March of 2026. CPI Median in the United States averaged 3.07 percent
+    from 1983 until 2026, reaching an all time high of 7.00 percent in February of
+    2023 and a record low of 0.50 percent in May of 2010. source: Federal Reserve
+    Bank of Cleveland'
+  te_label: Federal Reserve Bank of Cleveland
+  te_period: April
+  te_unit: percent
+  te_url: https://www.clevelandfed.org/
+  te_value: 2.8
+  value_match: true
+  yoy_computed: null
+cpi-recreation-and-culture:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CPIRECSL
+  our_source: fred
+  our_value: 143.7
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Recreation and Culture in the United States increased to 143.92 points
+    in April from 143.90 points in March of 2026. CPI Recreation and Culture in the
+    United States averaged 113.11 points from 1993 until 2026, reaching an all time
+    high of 143.98 points in February of 2026 and a record low of 89.50 points in
+    January of 1993. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: http://www.bls.gov
+  te_value: 143.92
+  value_match: true
+  yoy_computed: null
+cpi-transportation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CPITRNSL
+  our_source: fred
+  our_value: 289.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The transportation sub-index of the CPI basket in the United States increased
+    to 291.75 points in April of 2026 from 283.43 points in March of 2026. CPI Transportation
+    in the United States averaged 115.30 points from 1950 until 2026, reaching an
+    all time high of 291.75 points in April of 2026 and a record low of 22.30 points
+    in April of 1950. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: points
+  te_url: http://www.bls.gov
+  te_value: 291.75
+  value_match: true
+  yoy_computed: null
+cpi-trimmed-mean:
+  fix_summary: Consolidated duplicate (SA/empty adjustment) rows from prior series-switch
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-30'
+  our_series: TRMMEANCPIM159SFRBCLE
+  our_source: fred
+  our_value: 2.83
+  source_match: true
+  suggested_source: fred
+  te_desc: 'CPI Trimmed-Mean in the United States increased to 2.80 percent in April
+    from 2.60 percent in March of 2026. CPI Trimmed-Mean in the United States averaged
+    2.84 percent from 1983 until 2026, reaching an all time high of 7.20 percent in
+    September of 2022 and a record low of 0.70 percent in October of 2010. source:
+    Federal Reserve Bank of Cleveland'
+  te_label: Federal Reserve Bank of Cleveland
+  te_period: April
+  te_unit: percent
+  te_url: https://www.clevelandfed.org/
+  te_value: 2.8
+  value_match: true
+  yoy_computed: null
+credit-rating:
+  fix_summary: Curated only; TE doesn't have US Credit Rating page.
+  fixed: false
+  flag: gap
+  our_period: '2026-04-01'
+  our_series: US:credit-rating
+  our_source: curated
+  our_value: 97.0
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+crude-oil-imports:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WCEIMUS2
+  our_source: eia
+  our_value: 5750.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Net US crude imports fell by 318 thousand barrels per day in the week
+    ended May 8, 2026. Crude Oil Imports in the United States averaged -7.16 Thousand
+    Barrels from 2001 until 2026, reaching an all time high of 2940.00 Thousand Barrels
+    in June of 2025 and a record low of -3111.00 Thousand Barrels in September of
+    2025. source: U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: 2025-06
+  te_unit: Thousand
+  te_url: https://www.eia.gov
+  te_value: 2940.0
+  value_match: false
+  yoy_computed: -7.27302048056765
+crude-oil-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-02-28'
+  our_series: MCRFPUS2
+  our_source: eia
+  our_value: 13626.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Crude Oil Production in the United States increased to 13626 BBL/D/1K
+    in February from 13237 BBL/D/1K in January of 2026. Crude Oil Production in the
+    United States averaged 6544.81 BBL/D/1K from 1920 until 2026, reaching an all
+    time high of 13864.00 BBL/D/1K in October of 2025 and a record low of 1097.00
+    BBL/D/1K in January of 1920. source: U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: February
+  te_unit: null
+  te_url: http://www.eia.gov
+  te_value: 13626.0
+  value_match: true
+  yoy_computed: null
+crude-oil-stocks:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WCESTUS1
+  our_source: eia
+  our_value: 459495.0
+  source_match: true
+  suggested_source: eia
+  te_desc: US crude inventories fell by 4.306 million barrels to 452.9 million barrels
+    in the week ended May 8, compared with expectations for a 2.1 million barrel draw.
+    Stocks at the Cushing, Oklahoma hub decreased by 1.702 million barrels. Refinery
+    activity increased, with crude runs rising by 370,000 barrels per day and utilisation
+    rates up 0.5 percentage points. Gasoline inventories dropped by 4.084 million
+    barrels to 215.7 million, exceeding forecasts for a 2.85 million barrel decline.
+    Distillate stocks, including diesel and heating oil, rose by 0.190 million barrels
+    to 102.5 million, versus expecta
+  te_label: U.S. Energy Information Administration
+  te_period: null
+  te_unit: million
+  te_url: https://www.eia.gov
+  te_value: 452.9
+  value_match: false
+  yoy_computed: 9.325741912305286
+currency:
+  fix_summary: TE shows DXY-style 'United States Dollar' (99.3); we store DTWEXBGS
+    trade-weighted (118.04). Different concept; DXY not in FRED.
+  fixed: false
+  flag: gap
+  our_period: '2026-05-31'
+  our_series: DTWEXBGS
+  our_source: fred
+  our_value: 118.04
+  source_match: null
+  suggested_source: null
+  te_desc: 'The dollar index rose to approach 99.3 on Friday, the strongest level
+    in about a month, as concerns over war-driven inflation intensified. The situation
+    in the Middle East remains fragile and far from resolved, with Trump describing
+    the first sentence of Iran’s latest proposal as “unacceptable”. As a result, oil
+    prices continued to climb, with the Strait of Hormuz still closed. Meanwhile,
+    a summit between President Trump and Chinese President Xi ended without any major
+    agreements, including any indication that Beijing would help resolve the conflict.
+    Both the CPI and PPI reports released this '
+  te_label: null
+  te_period: March
+  te_unit: null
+  te_url: null
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: -3.0631518436396403
+current-account:
+  fix_summary: Consolidated duplicate (SA/empty adjustment) rows from prior series-switch
+  fixed: true
+  flag: ok-fixed
+  our_period: '2025-12-31'
+  our_series: IEABC
+  our_source: fred
+  our_value: -190745.0
+  source_match: true
+  suggested_source: fred
+  te_desc: The United States current account deficit narrowed to a seasonally adjusted
+    $190.7 billion in the fourth quarter of 2025 from $239.1 billion in the previous
+    period, marking the lowest deficit since the first quarter of 2021. The goods
+    deficit narrowed to $241.5 billion from $265.9 billion, as imports contracted
+    more than exports, reflecting the impact of tariffs from the US presidential administration.
+    Additionally, the primary income balance swung to a surplus of $23.9 billion from
+    the deficit of $2.5 billion. In the meantime, the services surplus inched lower
+    to $81.4 billion from $86.5 bill
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2025-Q4
+  te_unit: null
+  te_url: http://www.bea.gov
+  te_value: 2025.0
+  value_match: false
+  yoy_computed: 17.083253638434385
+cushing-crude-oil-stocks:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WCESTP31
+  our_source: eia
+  our_value: 266087.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Crude stocks at the Cushing, Oklahoma, delivery hub decreased by 1.702
+    million barrels in the week ended May 8, 2026. Cushing Crude Oil Stocks in the
+    United States averaged 13.67 Thousand Barrels from 2004 until 2026, reaching an
+    all time high of 6417.00 Thousand Barrels in April of 2020 and a record low of
+    -5587.00 Thousand Barrels in May of 2020. source: U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: 2020-04
+  te_unit: Thousand
+  te_url: https://www.eia.gov
+  te_value: 6417.0
+  value_match: false
+  yoy_computed: 12.48087182218615
+dallas-fed-manufacturing-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: BACTSAMFRBDAL
+  our_source: fred
+  our_value: -2.3
+  source_match: true
+  suggested_source: fred
+  te_desc: The Dallas FED's general business activity index for Texas manufacturing
+    fell to -2.3 in April 2026 from -0.2 in March, marking its lowest level so far
+    this year. The company outlook index rebounded into positive territory at 3, while
+    the outlook uncertainty index declined to 17.9 after nearing a one-year high in
+    March. Labor market indicators were largely stable. Employment remained flat,
+    but firms reported slightly longer workweeks, with the hours worked index rising
+    to 4 from 0.9. Wage pressures showed little movement, as both the wages and benefits
+    index were unchanged. Price pressures int
+  te_label: Federal Reserve Bank of Dallas
+  te_period: 2026-04
+  te_unit: null
+  te_url: https://www.dallasfed.org
+  te_value: -2.3
+  value_match: true
+  yoy_computed: null
+disposable-personal-income:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: DSPI
+  our_source: fred
+  our_value: 23601.9
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Disposable Personal Income in the United States decreased to 23429.80
+    USD Billion in February from 23448.10 USD Billion in January of 2026. Disposable
+    Personal Income in the United States averaged 6755.08 USD Billion from 1959 until
+    2026, reaching an all time high of 23448.10 USD Billion in January of 2026 and
+    a record low of 351.50 USD Billion in January of 1959. source: U.S. Bureau of
+    Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: February
+  te_unit: USD
+  te_url: null
+  te_value: 23429.8
+  value_match: true
+  yoy_computed: null
+distillate-fuel-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WDIRPUS2
+  our_source: eia
+  our_value: 4940.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Distillate Fuel Production in the United States decreased to -124 Thousand
+    Barrels in May 8 from -24 Thousand Barrels in the previous week. Distillate Fuel
+    Production in the United States averaged 1.08 Thousand Barrels from 1982 until
+    2026, reaching an all time high of 806.00 Thousand Barrels in March of 2021 and
+    a record low of -1050.00 Thousand Barrels in December of 2022. source: U.S. Energy
+    Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: May
+  te_unit: Thousand
+  te_url: https://www.eia.gov
+  te_value: -124.0
+  value_match: false
+  yoy_computed: 2.617366015787287
+distillate-stocks:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WDISTUS1
+  our_source: eia
+  our_value: 103638.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Distillate Stocks in the United States increased to 190 Thousand Barrels
+    in May 8 from -1294 Thousand Barrels in the previous week. Distillate Stocks in
+    the United States averaged -20.61 Thousand Barrels from 1982 until 2026, reaching
+    an all time high of 11205.00 Thousand Barrels in January of 2015 and a record
+    low of -13011.00 Thousand Barrels in December of 1983. source: U.S. Energy Information
+    Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: May
+  te_unit: Thousand
+  te_url: https://www.eia.gov
+  te_value: 190.0
+  value_match: false
+  yoy_computed: -18.631053325796117
+durable-goods-orders:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: DGORDER
+  our_source: fred
+  our_value: 318909.0
+  source_match: true
+  suggested_source: fred
+  te_desc: New orders for US-manufactured durable goods rose by 0.8% from the previous
+    month to $318.9 billion in March of 2026, rebounding from the revised 1.2% drop
+    in the previous month, and slightly ahead of market expectations of a 0.5% increase.
+    The result reflected some traction to goods orders despite the jump injection
+    of uncertainty in the period as the war with Iran triggered a surge in energy
+    prices and disrupted global shipping. Orders rose sharply for computers and electronic
+    products (3.7% to $29.6 billion), aligned with the stronger momentum for AI products.
+    Orders were also higher for ma
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: billion
+  te_url: https://www.census.gov/
+  te_value: 318.9
+  value_match: false
+  yoy_computed: 0.8519519946871591
+durable-goods-orders-ex-defense:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: ADXDNO
+  our_source: fred
+  our_value: 296303.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'New orders for manufactured durable goods, excluding defense, in the US
+    decreased 0.3% in March 2026. Durable Goods Orders Ex Defense in the United States
+    averaged 0.34 percent from 1992 until 2026, reaching an all time high of 29.30
+    percent in July of 2014 and a record low of -22.20 percent in August of 2014.
+    source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: percent
+  te_url: https://www.census.gov
+  te_value: 29.3
+  value_match: false
+  yoy_computed: -1.8301874915100373
+durable-goods-orders-ex-transport:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2026-03-31'
+  our_series: ADXTNO
+  our_source: fred
+  our_value: 212178.0
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+effective-federal-funds-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: FEDFUNDS
+  our_source: fred
+  our_value: 3.64
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Effective Federal Funds Rate in the United States remained unchanged at
+    3.63 percent on Thursday May 14. Effective Federal Funds Rate in the United States
+    averaged 4.60 percent from 1954 until 2026, reaching an all time high of 22.36
+    percent in July of 1981 and a record low of 0.04 percent in December of 2011.
+    source: Federal Reserve Bank of New York'
+  te_label: Federal Reserve Bank of New York
+  te_period: 1981-07
+  te_unit: percent
+  te_url: https://www.newyorkfed.org
+  te_value: 3.63
+  value_match: true
+  yoy_computed: null
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CE16OV
+  our_source: fred
+  our_value: 162622.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The number of employed persons in The United States decreased to 162622
+    Thousand in April of 2026 from 162848 Thousand in March of 2026. Employed Persons
+    in the United States averaged 108558.75 Thousand from 1948 until 2026, reaching
+    an all time high of 163992.00 Thousand in December of 2025 and a record low of
+    57172.00 Thousand in June of 1949. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_url: null
+  te_value: 162622.0
+  value_match: true
+  yoy_computed: null
+employment-cost-index:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: ECIALLCIV
+  our_source: fred
+  our_value: 175.62
+  source_match: true
+  suggested_source: fred
+  te_desc: Compensation costs for civilian workers in the United States rose by 0.9%
+    in the first quarter of 2026, after a 0.7% increase in the previous period, slightly
+    above forecasts of a 0.8% rise. Wages and salaries increased 0.8% (vs 0.7% in
+    Q4 2025) and benefits rose at a faster pace of 1.2% (vs 0.8%), the highest level
+    in five months. Compensation costs for private industry workers grew 0.9%, from
+    0.7% in Q4 2025, and for state and local government workers grew 1%, from 0.8%
+    in the previous quarter. On an annual basis, employment cost growth remained unchanged
+    from the last period at 3.4%. source
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-Q1
+  te_unit: null
+  te_url: http://www.bls.gov
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: 11.646535282898913
+employment-cost-index-benefits:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: ECIBEN
+  our_source: fred
+  our_value: 169.01
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Benefits in the US rose by 1.2% in Q1 2026, accelerating from a 0.8% increase
+    in the previous period and reaching its highest level in five months. Private
+    industry benefits grew by 1.3%, while state and local government''s benefits increased
+    by 1.2%. On an annual basis, benefits rose by 3.6% broadly, while health benefits''
+    growth eased to 5.7% (vs 6.4%). source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: in Q1 2026
+  te_unit: '%'
+  te_url: http://www.bls.gov
+  te_value: 5.7
+  value_match: false
+  yoy_computed: 11.044678055190541
+employment-cost-index-wages:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: ECIWAG
+  our_source: fred
+  our_value: 177.5
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Wages and salaries in the US rose 0.8% quarter-on-quarter in Q1 2026,
+    accelerating from a 0.7% increase in the previous period. Private industry pay
+    remained unchanged while state and local governments wage growth increase by 1%,
+    from 0.8%. On an annual basis, wages increased 3.4% broadly, picking up from a
+    3.3% in the last quarter. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: in Q1 2026
+  te_unit: null
+  te_url: http://www.bls.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: EMRATIO
+  our_source: fred
+  our_value: 59.1
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Employment Rate in the United States decreased to 59.10 percent in April
+    from 59.20 percent in March of 2026. Employment Rate in the United States averaged
+    59.26 percent from 1948 until 2026, reaching an all time high of 64.70 percent
+    in April of 2000 and a record low of 51.20 percent in April of 2020. source: U.S.
+    Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: percent
+  te_url: null
+  te_value: 59.1
+  value_match: true
+  yoy_computed: null
+energy-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CPIENGSL
+  our_source: fred
+  our_value: 325.98
+  source_match: true
+  suggested_source: fred
+  te_desc: 'US energy inflation soared to 17.9% year-over-year in April 2026, up from
+    12.5% in March and marking the steepest annual increase since September 2022.
+    The surge was driven by the Iran war and the closure of the Strait of Hormuz.
+    Energy commodities spiked 29.2%, with gasoline prices up 28.4% and fuel oil rising
+    54.3%. Energy services also climbed 5.4%, led by a 6.1% increase in electricity
+    costs and a 3.0% rise in piped gas service. On a monthly basis, energy prices
+    jumped 3.8% in April, following a 10.9% surge in March. source: Bureau of Labor
+    Statistics'
+  te_label: Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: null
+  te_value: 17.9
+  value_match: true
+  yoy_computed: 16.876411745724422
+existing-home-sales:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: EXHOSLUSM495S
+  our_source: fred
+  our_value: 4020000.0
+  source_match: true
+  suggested_source: fred
+  te_desc: Existing home sales in the United States inched higher by 0.2% from the
+    seven-month low in the previous month to an annualized rate of 4.02 million units
+    in April of 2026. The result was slightly below expectations 4.05 million units
+    sold, pressured by higher mortgage rates after the surge in energy prices drove
+    long-term Treasury yields to increase. Sales fell sharply in the West (-2.6% to
+    750 thousand), offsetting an increase in the Midwest (2.2% to 950 thousand). Inventory
+    grew by 5.8% to 1.47 million, equivalent to 4.4 months of supply. Still, the NAR
+    saw the result as optimistic. “Despite
+  te_label: National Association of Realtors
+  te_period: 2026-04
+  te_unit: million
+  te_url: https://www.nar.realtor
+  te_value: 4.02
+  value_match: false
+  yoy_computed: 0.0
+export-prices:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: IQ
+  our_source: fred
+  our_value: 166.1
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Export Prices in the United States increased to 166.10 points in April
+    from 160.80 points in March of 2026. Export Prices in the United States averaged
+    115.29 points from 1983 until 2026, reaching an all time high of 166.70 points
+    in June of 2022 and a record low of 82.40 points in September of 1986. source:
+    U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: https://www.bls.gov/
+  te_value: 166.1
+  value_match: true
+  yoy_computed: null
+exports:
+  fix_summary: Refetched BOPTEXP and converted to USD Billion to match TE display;
+    removed duplicate scales
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-03-01'
+  our_series: BOPTEXP
+  our_source: fred
+  our_value: 320.859
+  source_match: true
+  suggested_source: fred
+  te_desc: US exports rose 2.0%, or $6.2 billion, to a record $320.9 billion in March
+    2026, fueled by a $6.5 billion surge in goods exports. Industrial supplies and
+    materials led the gain, up $5.0 billion, driven by higher energy prices tied to
+    the Iran conflict. Key contributors included crude oil (+$2.8 billion), other
+    petroleum products (+$1.7 billion), and fuel oil (+$1.6 billion), while exports
+    of other precious metals fell $1.6 billion. Food, feed, and beverage exports increased
+    $1.1 billion, boosted by soybeans, while consumer goods exports declined $1.7
+    billion. Services exports dipped $0.3 billi
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.census.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+factory-orders:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: AMTMNO
+  our_source: fred
+  our_value: 630448.0
+  source_match: true
+  suggested_source: fred
+  te_desc: US factory orders rose 1.5% month-over-month to $630.4 billion in March
+    2026, beating market expectations of 0.5% and following an upwardly revised 0.3%
+    increase in February. New orders for manufactured durable goods increased 0.8%
+    to $318.9 billion, ending three straight months of declines. Computers and electronic
+    products surged 3.6%, the most since March 2001, with electromedical, measuring,
+    and control instruments up 7.9% to a record high amid an AI investment boom and
+    data center construction. Transport equipment orders also rose 0.8%, led by vehicles
+    (0.9%), defense aircraft and parts (
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: billion
+  te_url: http://www.census.gov
+  te_value: 630.4
+  value_match: false
+  yoy_computed: 2.1104017051657062
+federal-government-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CES9091000001
+  our_source: fred
+  our_value: 2665.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Federal Government Payrolls in the United States increased to -9 Thousand
+    in April from -15 Thousand in March of 2026. Federal Government Payrolls in the
+    United States averaged 1.67 Thousand from 1939 until 2026, reaching an all time
+    high of 432.00 Thousand in May of 2010 and a record low of -240.00 Thousand in
+    June of 2000. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: -9.0
+  value_match: false
+  yoy_computed: -10.450268817204302
+financial-activities-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USFIRE
+  our_source: fred
+  our_value: 9119.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Financial Activities Payrolls in the United States increased to -11 Thousand
+    in April from -19 Thousand in March of 2026. Financial Activities Payrolls in
+    the United States averaged 7.40 Thousand from 1939 until 2026, reaching an all
+    time high of 42.00 Thousand in February of 2022 and a record low of -263.00 Thousand
+    in April of 2020. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: -11.0
+  value_match: false
+  yoy_computed: -0.9342748506246605
+fiscal-expenditure:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: MTSO133FMS
+  our_source: fred
+  our_value: 622315.98
+  source_match: null
+  suggested_source: null
+  te_desc: 'Fiscal Expenditure in the United States increased to 622316 USD Million
+    in April from 548963 USD Million in March of 2026. Fiscal Expenditure in the United
+    States averaged 154717.19 USD Million from 1954 until 2026, reaching an all time
+    high of 1104903.00 USD Million in June of 2020 and a record low of 3842.00 USD
+    Million in November of 1954. source: Financial Management Service, United States'
+  te_label: Financial Management Service, United States
+  te_period: April
+  te_unit: USD
+  te_url: https://www.fiscal.treasury.gov
+  te_value: 622316.0
+  value_match: true
+  yoy_computed: null
+food-inflation:
+  fix_summary: Migrated adjustment='SA' rows to adjustment='' (single default)
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-30'
+  our_series: CPIUFDSL
+  our_source: fred
+  our_value: 348.35
+  source_match: true
+  suggested_source: fred
+  te_desc: 'US food inflation accelerated to 3.2% year-over-year in April 2026 from
+    2.7% in the previous month, with food at home rising 2.9% and food away from home
+    up 3.6%. Food Inflation in the United States averaged 3.46 percent from 1914 until
+    2026, reaching an all time high of 36.70 percent in May of 1917 and a record low
+    of -34.30 percent in June of 1921. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: http://www.bls.gov
+  te_value: 3.2
+  value_match: true
+  yoy_computed: 3.2668306999081134
+foreign-exchange-reserves:
+  fix_summary: TE shows Treasury 'Foreign Currencies' line ($38B); we use FRED TRESEGUSM052N
+    (Total Reserves excl Gold, $241B). Need IMF SDDS or Treasury TIC data.
+  fixed: false
+  flag: gap
+  our_period: '2026-03-31'
+  our_series: TRESEGUSM052N
+  our_source: fred
+  our_value: 241283.12
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Foreign Exchange Reserves in the United States decreased to 38121 USD
+    Million in March from 38992 USD Million in February of 2026. Foreign Exchange
+    Reserves in the United States averaged 23684.28 USD Million from 1957 until 2026,
+    reaching an all time high of 54933.00 USD Million in August of 2011 and a record
+    low of 0.00 USD Million in February of 1957. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: March
+  te_unit: USD
+  te_url: https://www.federalreserve.gov
+  te_value: 38121.0
+  value_match: false
+  yoy_computed: 2.8543415838545254
+full-time-employment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: LNS12500000
+  our_source: fred
+  our_value: 134252.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Full Time Employment in the United States decreased to 134252 Thousand
+    in April from 134676 Thousand in March of 2026. Full Time Employment in the United
+    States averaged 102137.20 Thousand from 1968 until 2026, reaching an all time
+    high of 135898.00 Thousand in January of 2025 and a record low of 64640.00 Thousand
+    in January of 1968. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: https://www.bls.gov/
+  te_value: 134252.0
+  value_match: true
+  yoy_computed: null
+full-year-gdp-growth:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: A191RL1A225NBEA
+  our_source: fred
+  our_value: 2.1
+  source_match: true
+  suggested_source: fred
+  te_desc: The US economy expanded by 2.1% in 2025, slowing from 2.8% in 2024 and
+    marking the weakest annual growth rate since the 2.1% contraction recorded during
+    the pandemic in 2020. The reading was revised lower from initial estimates of
+    2.2%. While consumer spending and nonresidential investment remained solid, net
+    exports weighed on growth. The rollout of US tariffs in the first half of the
+    year prompted businesses and households to front-load purchases, driving imports
+    to record highs and widening the trade deficit. Residential investment also declined,
+    and federal government spending contracted a
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: null
+  te_unit: '%'
+  te_url: http://www.bea.gov
+  te_value: 2.2
+  value_match: true
+  yoy_computed: null
+gasoline-prices:
+  fix_summary: Deleted duplicate adjustment='SA' shadow rows from prior FRED source
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-05-11'
+  our_series: EMM_EPMR_PTE_NUS_DPG
+  our_source: eia
+  our_value: 4.5
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Gasoline Prices in the United States increased to 1.08 USD/Liter in April
+    from 0.96 USD/Liter in March of 2026. Gasoline Prices in the United States averaged
+    0.60 USD/Liter from 1991 until 2026, reaching an all time high of 1.30 USD/Liter
+    in June of 2022 and a record low of 0.24 USD/Liter in February of 1999. source:
+    U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: April
+  te_unit: USD
+  te_url: https://www.eia.gov
+  te_value: 1.08
+  value_match: false
+  yoy_computed: 1.1235955056179736
+gasoline-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WGFRPUS2
+  our_source: eia
+  our_value: 9838.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Gasoline Production in the United States increased to 222 Thousand Barrels
+    in May 8 from -275 Thousand Barrels in the previous week. Gasoline Production
+    in the United States averaged 1.57 Thousand Barrels from 1982 until 2026, reaching
+    an all time high of 1373.00 Thousand Barrels in January of 2021 and a record low
+    of -1678.00 Thousand Barrels in December of 2022. source: U.S. Energy Information
+    Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: May
+  te_unit: Thousand
+  te_url: http://www.eia.gov
+  te_value: 222.0
+  value_match: false
+  yoy_computed: 9.201909201909201
+gasoline-stocks:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WGTSTUS1
+  our_source: eia
+  our_value: 222299.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Stocks of gasoline in the United States decreased by 4084 thousand barrels
+    in the week ending May 8th 2026, extending the declines for a 13th consecutive
+    week, and much higher than forecasts of a 2850 thousand barrels drop. source:
+    U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: null
+  te_unit: null
+  te_url: http://www.eia.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: vintage-lag
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_value: 28750.96
+  source_match: true
+  suggested_source: curated/worldbank
+  te_desc: 'The Gross Domestic Product (GDP) in the United States was worth 29184.89
+    billion US dollars in 2024, according to official data from the World Bank. The
+    GDP value of the United States represents 27.49 percent of the world economy.
+    source: World Bank'
+  te_label: World Bank
+  te_period: null
+  te_unit: null
+  te_url: https://www.worldbank.org/
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-deflator:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GDPDEF
+  our_source: fred
+  our_value: 131.78
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The US Implicit Price Deflator for GDP increased at an annualized rate
+    of 4.5% in the first quarter of 2026, following a 3.7% rise in the previous quarter.
+    GDP Deflator in the United States averaged 53.78 points from 1947 until 2025,
+    reaching an all time high of 130.62 points in the fourth quarter of 2025 and a
+    record low of 11.14 points in the first quarter of 1947. source: U.S. Bureau of
+    Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: '%'
+  te_url: http://www.bea.gov
+  te_value: 4.5
+  value_match: false
+  yoy_computed: 8.648693214609608
+gdp-from-construction:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-10-01'
+  our_series: RVAC
+  our_source: fred
+  our_value: 885.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP from Construction in the United States decreased to 885 USD Billion
+    in the fourth quarter of 2025 from 889.10 USD Billion in the third quarter of
+    2025. GDP from Construction in the United States averaged 806.75 USD Billion from
+    2005 until 2025, reaching an all time high of 945.70 USD Billion in the first
+    quarter of 2005 and a record low of 640.10 USD Billion in the first quarter of
+    2011. source: U.S. Bureau of Economic Analysis (BEA)'
+  te_label: U.S. Bureau of Economic Analysis (BEA)
+  te_period: 2025-Q4
+  te_unit: USD
+  te_url: https://www.bea.gov/
+  te_value: 885.0
+  value_match: true
+  yoy_computed: null
+gdp-from-transport:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-10-01'
+  our_series: RVAT
+  our_source: fred
+  our_value: 749.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP from Transport in the United States decreased to 749.30 USD Billion
+    in the fourth quarter of 2025 from 755.90 USD Billion in the third quarter of
+    2025. GDP from Transport in the United States averaged 598.64 USD Billion from
+    2005 until 2025, reaching an all time high of 755.90 USD Billion in the third
+    quarter of 2025 and a record low of 475.00 USD Billion in the first quarter of
+    2005. source: U.S. Bureau of Economic Analysis (BEA)'
+  te_label: U.S. Bureau of Economic Analysis (BEA)
+  te_period: 2025-Q4
+  te_unit: USD
+  te_url: https://www.bea.gov/
+  te_value: 749.3
+  value_match: true
+  yoy_computed: null
+gdp-from-utilities:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-10-01'
+  our_series: RVAU
+  our_source: fred
+  our_value: 350.1
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP from Utilities in the United States decreased to 350.10 USD Billion
+    in the fourth quarter of 2025 from 353.50 USD Billion in the third quarter of
+    2025. GDP from Utilities in the United States averaged 302.89 USD Billion from
+    2005 until 2025, reaching an all time high of 367.00 USD Billion in the second
+    quarter of 2023 and a record low of 237.70 USD Billion in the first quarter of
+    2005. source: U.S. Bureau of Economic Analysis (BEA)'
+  te_label: U.S. Bureau of Economic Analysis (BEA)
+  te_period: 2025-Q4
+  te_unit: USD
+  te_url: https://www.bea.gov/
+  te_value: 350.1
+  value_match: true
+  yoy_computed: null
+gdp-growth-contribution-consumer:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2026-03-31'
+  our_series: DPCERY2Q224SBEA
+  our_source: fred
+  our_value: 1.08
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+gdp-growth-contribution-exports:
+  fix_summary: Series A019RY2Q224SBEA (Net Exports, -1.3pp) -> A020RY2Q224SBEA (Exports
+    only, 1.32pp) to match TE
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-01-01'
+  our_series: A020RY2Q224SBEA
+  our_source: fred
+  our_value: 1.32
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP Growth Contribution Exports in the United States increased to 1.32
+    percentage points in the first quarter of 2026 from -0.35 percentage points in
+    the fourth quarter of 2025. GDP Growth Contribution Exports in the United States
+    averaged 0.36 percentage points from 1947 until 2026, reaching an all time high
+    of 4.86 percentage points in the third quarter of 2020 and a record low of -8.71
+    percentage points in the second quarter of 2020. source: U.S. Bureau of Economic
+    Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.bea.gov
+  te_value: 1.32
+  value_match: true
+  yoy_computed: null
+gdp-growth-contribution-government:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: A822RY2Q224SBEA
+  our_source: fred
+  our_value: 0.73
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP Growth Contribution Government in the United States increased to 0.73
+    percentage points in the first quarter of 2026 from -0.99 percentage points in
+    the fourth quarter of 2025. GDP Growth Contribution Government in the United States
+    averaged 0.53 percentage points from 1947 until 2026, reaching an all time high
+    of 10.01 percentage points in the second quarter of 1951 and a record low of -3.25
+    percentage points in the second quarter of 1954. source: U.S. Bureau of Economic
+    Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.bea.gov
+  te_value: 0.73
+  value_match: true
+  yoy_computed: null
+gdp-growth-contribution-imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: A021RY2Q224SBEA
+  our_source: fred
+  our_value: -2.62
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP Growth Contribution Imports in the United States decreased to -2.62
+    percentage points in the first quarter of 2026 from 0.13 percentage points in
+    the fourth quarter of 2025. GDP Growth Contribution Imports in the United States
+    averaged -0.48 percentage points from 1947 until 2026, reaching an all time high
+    of 9.45 percentage points in the second quarter of 2020 and a record low of -7.36
+    percentage points in the third quarter of 2020. source: U.S. Bureau of Economic
+    Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.bea.gov
+  te_value: -2.62
+  value_match: true
+  yoy_computed: null
+gdp-growth-contribution-investment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: A006RY2Q224SBEA
+  our_source: fred
+  our_value: 1.48
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP Growth Contribution Investment in the United States increased to 1.48
+    percentage points in the first quarter of 2026 from 0.40 percentage points in
+    the fourth quarter of 2025. GDP Growth Contribution Investment in the United States
+    averaged 0.73 percentage points from 1947 until 2026, reaching an all time high
+    of 14.11 percentage points in the first quarter of 1950 and a record low of -11.57
+    percentage points in the first quarter of 1975. source: U.S. Bureau of Economic
+    Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.bea.gov
+  te_value: 1.48
+  value_match: true
+  yoy_computed: null
+gdp-per-capita:
+  fix_summary: Series NY.GDP.PCAP.CD (current USD, $84,534) -> NY.GDP.PCAP.KD (constant
+    2015 USD, $66,356) to match TE constant-USD convention
+  fixed: true
+  flag: ok-fixed
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.KD
+  our_source: worldbank
+  our_value: 66356.1706750101
+  source_match: true
+  suggested_source: curated/worldbank
+  te_desc: 'The Gross Domestic Product per capita in the United States was last recorded
+    at 66682.61 US dollars in 2024. The GDP per Capita in the United States is equivalent
+    to 528 percent of the world''s average. source: World Bank'
+  te_label: World Bank
+  te_period: null
+  te_unit: null
+  te_url: https://www.worldbank.org/
+  te_value: 66682.61
+  value_match: true
+  yoy_computed: null
+gdp-per-capita-ppp:
+  fix_summary: Series NY.GDP.PCAP.PP.CD (current intl $, $85,810) -> NY.GDP.PCAP.PP.KD
+    (constant 2021 intl $, $75,489) to match TE $75,491.61
+  fixed: true
+  flag: ok-fixed
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.KD
+  our_source: worldbank
+  our_value: 75489.2664334817
+  source_match: true
+  suggested_source: curated/worldbank
+  te_desc: 'The Gross Domestic Product per capita in the United States was last recorded
+    at 75491.61 US dollars in 2024, when adjusted by purchasing power parity (PPP).
+    The GDP per Capita, in the United States, when adjusted by Purchasing Power Parity
+    is equivalent to 425 percent of the world''s average. source: World Bank'
+  te_label: World Bank
+  te_period: null
+  te_unit: null
+  te_url: https://www.worldbank.org/
+  te_value: 75491.61
+  value_match: true
+  yoy_computed: null
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: GDPC1
+  our_source: fred
+  our_value: 24174.53
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The US economy expanded 2.7% year-on-year in the first quarter of 2026,
+    slightly above the previous period''s growth of 2.0%, according to preliminary
+    estimates. GDP Annual Growth Rate in the United States averaged 3.15 percent from
+    1948 until 2026, reaching an all time high of 13.40 percent in the fourth quarter
+    of 1950 and a record low of -7.40 percent in the second quarter of 2020. source:
+    U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: null
+  te_url: http://www.bea.gov
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: 7.731506920129175
+gdp-sales-qoq:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: A190RL1Q225SBEA
+  our_source: fred
+  our_value: 1.6
+  source_match: true
+  suggested_source: fred
+  te_desc: 'GDP Sales QoQ in the United States increased to 1.60 percent in the first
+    quarter of 2026 from 0.30 percent in the fourth quarter of 2025. GDP Sales QoQ
+    in the United States averaged 3.15 percent from 1947 until 2026, reaching an all
+    time high of 25.20 percent in the third quarter of 2020 and a record low of -24.60
+    percent in the second quarter of 2020. source: U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.bea.gov
+  te_value: 1.6
+  value_match: true
+  yoy_computed: null
+goods-exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: BOPGEXP
+  our_source: fred
+  our_value: 213461.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Goods Exports in the United States increased to 212504 USD Million in
+    March from 206278 USD Million in February of 2026. Goods Exports in the United
+    States averaged 100627.47 USD Million from 1992 until 2026, reaching an all time
+    high of 212504.00 USD Million in March of 2026 and a record low of 35404.00 USD
+    Million in January of 1992. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: March
+  te_unit: USD
+  te_url: https://www.census.gov
+  te_value: 212504.0
+  value_match: true
+  yoy_computed: null
+goods-imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: BOPGIMP
+  our_source: fred
+  our_value: 302173.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Goods Imports in the United States increased to 299950 USD Million in
+    March from 289784 USD Million in February of 2026. Goods Imports in the United
+    States averaged 154300.09 USD Million from 1992 until 2026, reaching an all time
+    high of 345962.00 USD Million in March of 2025 and a record low of 41371.00 USD
+    Million in February of 1992. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: March
+  te_unit: USD
+  te_url: https://www.census.gov
+  te_value: 299950.0
+  value_match: true
+  yoy_computed: null
+goods-trade-balance:
+  fix_summary: Series BOPGSTB (Goods+Services, -$60.3B) -> BOPGTB (Goods only, -$88.7B)
+    to match TE -$87.4B March; converted to USD Billion
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-03-01'
+  our_series: BOPGTB
+  our_source: fred
+  our_value: -88.712
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The goods deficit in the US widened to $87.4 billion in March 2026 from
+    $83.5 billion in February, revised data showed. Goods Trade Balance in the United
+    States averaged -27064.26 USD Million from 1955 until 2026, reaching an all time
+    high of 1492.00 USD Million in June of 1975 and a record low of -161497.00 USD
+    Million in March of 2025. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: billion
+  te_url: https://www.census.gov
+  te_value: 87.4
+  value_match: false
+  yoy_computed: 45.25978032827348
+government-budget-value:
+  fix_summary: Converted values from USD Million (215024) to USD Billion (215.02)
+    to match TE display
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-01'
+  our_series: MTSDS133FMS
+  our_source: fred
+  our_value: 215.02414019777
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: The US government recorded a $215 billion budget surplus in April 2026,
+    down from $258.4 billion in the same month a year earlier and below forecasts
+    of a $220 billion surplus. Government outlays rose to $622.3 billion from $591.8
+    billion in April 2025. The largest spending categories were Social Security ($139
+    billion), net interest payments ($97 billion), Medicare ($88 billion), and national
+    defense ($77 billion). Meanwhile, receipts declined to $837.3 billion from $850.2
+    billion a year earlier. Most revenue came from individual income taxes ($515 billion),
+    social insurance and retirement co
+  te_label: Financial Management Service, US Treasury
+  te_period: 2026-04
+  te_unit: billion
+  te_url: https://www.fiscal.treasury.gov
+  te_value: 622.3
+  value_match: false
+  yoy_computed: -16.78630706614128
+government-debt:
+  fix_summary: Series GFDEBTN (quarterly, $38.5T) -> Treasury Debt-to-the-Penny monthly
+    EoM ($38.97T April) via fiscaldata.treasury.gov API
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-30'
+  our_series: TREASURY_TOTAL_PUBLIC_DEBT
+  our_source: fred
+  our_value: 38967833.8615431
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: 'Government Debt in the United States decreased to 38967834 USD Million
+    in April from 39065421 USD Million in March of 2026. Government Debt in the United
+    States averaged 6371519.74 USD Million from 1942 until 2026, reaching an all time
+    high of 39065421.00 USD Million in March of 2026 and a record low of 60000.00
+    USD Million in January of 1942. source: U.S. Department of the Treasury'
+  te_label: U.S. Department of the Treasury
+  te_period: April
+  te_unit: USD
+  te_url: https://www.treasurydirect.gov
+  te_value: 38967834.0
+  value_match: true
+  yoy_computed: null
+government-debt-total:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2025-12-31'
+  our_series: GFDEBTN
+  our_source: fred
+  our_value: 38514009.0
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+government-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USGOVT
+  our_source: fred
+  our_value: 23308.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Government payrolls in the United States fell by 8,000 in April 2026,
+    marking the seventh consecutive monthly decline, following a revised drop of 5,000
+    in March. Government Payrolls in the United States averaged 18.45 Thousand from
+    1939 until 2026, reaching an all time high of 486.00 Thousand in August of 2020
+    and a record low of -918.00 Thousand in April of 2020. source: U.S. Bureau of
+    Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: null
+  te_url: http://www.bls.gov/
+  te_value: 5000.0
+  value_match: false
+  yoy_computed: -1.1031907671418872
+government-revenues:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: MTSR133FMS
+  our_source: fred
+  our_value: 837340.12
+  source_match: null
+  suggested_source: null
+  te_desc: 'Government Revenues in the United States increased to 837340 USD Million
+    in April from 384863 USD Million in March of 2026. Government Revenues in the
+    United States averaged 182650.99 USD Million from 1980 until 2026, reaching an
+    all time high of 863644.00 USD Million in April of 2022 and a record low of 33111.00
+    USD Million in March of 1980. source: Financial Management Service, United States'
+  te_label: Financial Management Service, United States
+  te_period: April
+  te_unit: USD
+  te_url: https://www.fiscal.treasury.gov
+  te_value: 837340.0
+  value_match: true
+  yoy_computed: null
+government-spending:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: GCEC1
+  our_source: fred
+  our_value: 3999.71
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Government Spending in the United States increased to 3999.70 USD Billion
+    in the first quarter of 2026 from 3957.10 USD Billion in the fourth quarter of
+    2025. Government Spending in the United States averaged 2285.03 USD Billion from
+    1947 until 2026, reaching an all time high of 4015.00 USD Billion in the third
+    quarter of 2025 and a record low of 555.60 USD Billion in the fourth quarter of
+    1947. source: U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: USD
+  te_url: null
+  te_value: 3999.7
+  value_match: true
+  yoy_computed: null
+government-spending-to-gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: US:government-spending-to-gdp
+  our_source: curated
+  our_value: 33.8
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: 'Government spending in the United States was last recorded at 33.8 percent
+    of GDP in 2025 . Government Spending to GDP in the United States averaged 24.61
+    percent of GDP from 1900 until 2025, reaching an all time high of 45.62 percent
+    of GDP in 1945 and a record low of 6.55 percent of GDP in 1907. source: U.S. Treasury'
+  te_label: U.S. Treasury
+  te_period: null
+  te_unit: percent
+  te_url: https://home.treasury.gov/
+  te_value: 33.8
+  value_match: true
+  yoy_computed: null
+gross-fixed-capital-formation:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: GPDIC1
+  our_source: fred
+  our_value: 4501.15
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Gross Fixed Capital Formation in the United States increased to 4472.80
+    USD Billion in the first quarter of 2026 from 4405.70 USD Billion in the fourth
+    quarter of 2025. Gross Fixed Capital Formation in the United States averaged 2833.21
+    USD Billion from 1995 until 2026, reaching an all time high of 4472.80 USD Billion
+    in the first quarter of 2026 and a record low of 1215.60 USD Billion in the second
+    quarter of 1995. source: U.S. Bureau Of Economic Analysis'
+  te_label: U.S. Bureau Of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: USD
+  te_url: null
+  te_value: 4472.8
+  value_match: true
+  yoy_computed: null
+gross-national-product:
+  fix_summary: Series GNP (nominal, 31553.79) -> GNPC96 (Real Chained 2017 USD, 24173.72)
+    to match TE 24173.7 Q4 2025
+  fixed: true
+  flag: ok-fixed
+  our_period: '2025-10-01'
+  our_series: GNPC96
+  our_source: fred
+  our_value: 24173.722
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Gross National Product in the United States increased to 24173.70 USD
+    Billion in the fourth quarter of 2025 from 24064 USD Billion in the third quarter
+    of 2025. Gross National Product in the United States averaged 10406.50 USD Billion
+    from 1947 until 2025, reaching an all time high of 24173.70 USD Billion in the
+    fourth quarter of 2025 and a record low of 2187.10 USD Billion in the third quarter
+    of 1947. source: U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2025-Q4
+  te_unit: USD
+  te_url: https://www.bea.gov/
+  te_value: 24173.7
+  value_match: true
+  yoy_computed: null
+health-care-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CES6562000001
+  our_source: fred
+  our_value: 23808.5
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Health Care Payrolls in the United States decreased to 37.30 Thousand
+    in April from 78.30 Thousand in March of 2026. Health Care Payrolls in the United
+    States averaged 23.98 Thousand from 1990 until 2026, reaching an all time high
+    of 371.90 Thousand in June of 2020 and a record low of -1516.10 Thousand in April
+    of 2020. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 37.3
+  value_match: false
+  yoy_computed: 2.8356081548030407
+home-ownership-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: RHORUSQ156N
+  our_source: fred
+  our_value: 65.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Home Ownership Rate in the United States decreased to 65.30 percent in
+    the first quarter of 2026 from 65.70 percent in the fourth quarter of 2025. Home
+    Ownership Rate in the United States averaged 65.28 percent from 1965 until 2026,
+    reaching an all time high of 69.20 percent in the second quarter of 2004 and a
+    record low of 62.90 percent in the second quarter of 1965. source: U.S. Census
+    Bureau'
+  te_label: U.S. Census Bureau
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.census.gov
+  te_value: 65.3
+  value_match: true
+  yoy_computed: null
+hospital-beds:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2022-12-31'
+  our_series: US:hospital-beds
+  our_source: curated
+  our_value: 2.75
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Hospital Beds in the United States decreased to 2.75 per 1000 people in
+    2022 from 2.77 per 1000 people in 2021. Hospital Beds in the United States averaged
+    4.62 per 1000 people from 1960 until 2022, reaching an all time high of 9.18 per
+    1000 people in 1960 and a record low of 2.75 per 1000 people in 2022. source:
+    OECD'
+  te_label: OECD
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: 2.75
+  value_match: true
+  yoy_computed: null
+hospitals:
+  fix_summary: Curated value only; TE doesn't have a US Hospitals page.
+  fixed: false
+  flag: gap
+  our_period: '2022-12-31'
+  our_series: US:hospitals
+  our_source: curated
+  our_value: 18.36
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+households-debt-to-gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-06-30'
+  our_series: HDTGPDUSQ163N
+  our_source: fred
+  our_value: 68.55
+  source_match: null
+  suggested_source: null
+  te_desc: 'Households Debt in the United States decreased to 68 percent of GDP in
+    the third quarter of 2025 from 68.10 percent of GDP in the second quarter of 2025.
+    Households Debt to GDP in the United States averaged 57.70 percent of GDP from
+    1947 until 2025, reaching an all time high of 98.40 percent of GDP in the fourth
+    quarter of 2007 and a record low of 18.00 percent of GDP in the fourth quarter
+    of 1947. source: Bank for International Settlements'
+  te_label: Bank for International Settlements
+  te_period: 2025-Q3
+  te_unit: percent
+  te_url: null
+  te_value: 68.0
+  value_match: true
+  yoy_computed: null
+housing-index:
+  fix_summary: Series USSTHPI (FHFA Q index, 709) -> HPIPONM226S (FHFA Purchase-Only
+    monthly, 441.43) to match TE 441.40
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-02-01'
+  our_series: HPIPONM226S
+  our_source: fred
+  our_value: 441.43
+  source_match: null
+  suggested_source: null
+  te_desc: 'Housing Index in the United States decreased to 441.40 points in February
+    from 441.50 points in January of 2026. Housing Index in the United States averaged
+    209.79 points from 1991 until 2026, reaching an all time high of 441.50 points
+    in January of 2026 and a record low of 100.00 points in January of 1991. source:
+    Federal Housing Finance Agency'
+  te_label: Federal Housing Finance Agency
+  te_period: February
+  te_unit: points
+  te_url: https://www.fhfa.gov
+  te_value: 441.4
+  value_match: true
+  yoy_computed: null
+housing-starts:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: HOUST
+  our_source: fred
+  our_value: 1502.0
+  source_match: true
+  suggested_source: fred
+  te_desc: US housing starts rose 10.8% month-on-month to a seasonally adjusted annual
+    rate of 1.502 million in March 2026, the highest level since December 2024 and
+    well above forecasts of 1.40 million, as builders scaled up construction despite
+    ongoing affordability challenges. Single-family starts surged 9.7% to a 13-month
+    high of 1.032 million, while multi-family starts jumped 9.6% to 446,000. Regionally,
+    construction activity climbed sharply in the South (+9.1% to 794,000), the West
+    (+7.2% to 311,000), the Midwest (+12.2% to 221,000), and the Northeast (+24.8%
+    to 176,000). Meanwhile, building permit
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: million
+  te_url: https://www.census.gov/
+  te_value: 1.502
+  value_match: false
+  yoy_computed: 10.84870848708487
+housing-starts-multi-family:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: HOUST5F
+  our_source: fred
+  our_value: 446.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Housing Starts Multi Family in the United States increased to 446 Thousand
+    units in March from 407 Thousand units in February of 2026. Housing Starts Multi
+    Family in the United States averaged 367.35 Thousand units from 1959 until 2026,
+    reaching an all time high of 1000.00 Thousand units in March of 1973 and a record
+    low of 53.00 Thousand units in October of 2009. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: March
+  te_unit: Thousand
+  te_url: https://www.census.gov/
+  te_value: 446.0
+  value_match: true
+  yoy_computed: null
+housing-starts-single-family:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: HOUST1F
+  our_source: fred
+  our_value: 1032.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Housing Starts Single Family in the United States increased to 1032 Thousand
+    units in March from 941 Thousand units in February of 2026. Housing Starts Single
+    Family in the United States averaged 1013.35 Thousand units from 1959 until 2026,
+    reaching an all time high of 1823.00 Thousand units in January of 2006 and a record
+    low of 353.00 Thousand units in March of 2009. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: March
+  te_unit: Thousand
+  te_url: https://www.census.gov/
+  te_value: 1032.0
+  value_match: true
+  yoy_computed: null
+import-prices:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: IR
+  our_source: fred
+  our_value: 147.6
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Import Prices in the United States increased to 147.60 points in April
+    from 144.80 points in March of 2026. Import Prices in the United States averaged
+    113.63 points from 1982 until 2026, reaching an all time high of 148.50 points
+    in June of 2022 and a record low of 75.00 points in March of 1986. source: U.S.
+    Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: https://www.bls.gov/
+  te_value: 147.6
+  value_match: true
+  yoy_computed: null
+imports:
+  fix_summary: Series BOPGIMP (goods only, $302.17B) -> BOPTIMP (Goods+Services BoP
+    basis, $381.2B) to match TE; converted to USD Billion
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-03-01'
+  our_series: BOPTIMP
+  our_source: fred
+  our_value: 381.165
+  source_match: true
+  suggested_source: fred
+  te_desc: US imports climbed by $8.7B to $381.2B in March 2026, the highest in one
+    year, driven largely by a surge in goods. Goods imports rose $10.6B to $302.2B,
+    with Census-based figures showing a $10.2B increase. Automotive vehicles, parts,
+    and engines led gains (+$3.6B), including a $2.8B jump in passenger cars. Consumer
+    goods (+$2.4B) and capital goods (+$2.1B) also contributed, with computer accessories
+    up $2.0B and industrial supplies and materials rising $2.1B, despite a $2.3B drop
+    in computers. Meanwhile, services imports fell $1.9B to $79.0B, reflecting declines
+    in intellectual property charge
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.census.gov
+  te_value: 381.2
+  value_match: true
+  yoy_computed: null
+industrial-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: INDPRO
+  our_source: fred
+  our_value: 102.5
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Industrial Production in the United States increased 1.4% year-on-year
+    in April 2026, following an upwardly revised 0.8% rise in March. Utilities jumped
+    2.7%, manufacturing rose 1.3% and mining edged up 0.2%. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: 2026-04
+  te_unit: null
+  te_url: http://www.federalreserve.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CPIAUCNS
+  our_source: fred
+  our_value: 332.41
+  source_match: true
+  suggested_source: fred
+  te_desc: The annual inflation rate in the US accelerated to 3.8% in April 2026,
+    the highest since May 2023, and compared to 3.3% in March. Figures came above
+    forecasts of 3.7% as the oil shock triggered by the war with Iran continues to
+    push prices higher. Energy costs jumped 17.9%, the steepest annual increase since
+    September 2022, compared to 12.5% in March, mostly due to gasoline (28.4% vs 18.9%)
+    and fuel oil (54.3%). Inflation also accelerated for shelter (3.3% vs 3%) and
+    food (2.3% vs 2.7%). Compared to the previous month, the CPI was up 0.6%, easing
+    from the 0.9% rise recorded in March, which was
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: http://www.bls.gov/
+  te_value: 3.8
+  value_match: true
+  yoy_computed: 3.946339785484225
+information-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USINFO
+  our_source: fred
+  our_value: 2773.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Information Payrolls in the United States decreased to -13 Thousand in
+    April from -6 Thousand in March of 2026. Information Payrolls in the United States
+    averaged 1.59 Thousand from 1939 until 2026, reaching an all time high of 606.00
+    Thousand in September of 1983 and a record low of -586.00 Thousand in August of
+    1983. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: -13.0
+  value_match: false
+  yoy_computed: -3.2111692844677138
+initial-jobless-claims:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-05-09'
+  our_series: ICSA
+  our_source: fred
+  our_value: 211.0
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: The number of people claiming unemployment benefits in the US rose by 12,000
+    from the previous week to 211,000 on the first week of May, above market expectations
+    of 205,000. Continuing jobless claims, which are a proxy for outstanding unemployment
+    in the US, rose by 24,000 to 1,782,000, slightly under the expectations of 1,790,000.
+    Despite the increases, the claim counts remained well under their respective averages
+    from the previous year, aligning with other data that reflect a robust labor market
+    and low levels of job cuts. Meanwhile, initial claims filed by federal employees,
+    which have be
+  te_label: U.S. Department of Labor
+  te_period: null
+  te_unit: null
+  te_url: https://www.dol.gov/
+  te_value: 211000.0
+  value_match: false
+  yoy_computed: 1.4423076923076923
+interest-rate:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-05-31'
+  our_series: DFEDTARU
+  our_source: fred
+  our_value: 3.75
+  source_match: true
+  suggested_source: fred
+  te_desc: The Fed kept the federal funds rate unchanged at the 3.5%–3.75% target
+    range for a third consecutive meeting in April 2026, in line with expectations.
+    The decision was not unanimous, with Governor Miran voting to lower interest rates
+    by 25bps and three other members objecting the language in the statement that
+    suggested the central bank would eventually resume cutting rates. The 8-4 vote
+    marked the first time since October 1992 that four officials dissented against
+    a FOMC decision. The central bank reiterated that it will carefully assess incoming
+    data, the evolving outlook, and the balance of
+  te_label: Federal Reserve
+  te_period: 2026-04
+  te_unit: null
+  te_url: http://www.federalreserve.gov/
+  te_value: null
+  value_match: null
+  yoy_computed: null
+job-layoffs-and-discharges:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: JTSLDL
+  our_source: fred
+  our_value: 1867.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Job Layoffs and Discharges in the United States increased to 1867 Thousand
+    in March from 1714 Thousand in February of 2026. Job Layoffs and Discharges in
+    the United States averaged 1907.31 Thousand from 2000 until 2026, reaching an
+    all time high of 13516.00 Thousand in March of 2020 and a record low of 1287.00
+    Thousand in June of 2021. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: March
+  te_unit: Thousand
+  te_url: http://www.bls.gov
+  te_value: 1867.0
+  value_match: true
+  yoy_computed: null
+job-quits:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: JTSQUL
+  our_source: fred
+  our_value: 3171.0
+  source_match: true
+  suggested_source: fred
+  te_desc: The number of job quits in the US rose to 3.171 million in March 2026 from
+    the upwardly revised 3.046 million in February but below 3.456 million a year
+    ago. The number of quits increased the most in healthcare and social assistance
+    (+37,000); accommodation and food services (+25,000) and real estate and rental
+    and leasing (+19,000), while declining in information (-10,000) and government
+    (-5,000). The quits rate, a metric that measures voluntary job leavers as a proportion
+    of total employment, rose to 2% from 1.9% previously. Regionally, all areas recorded
+    increases, led by the South (+82,000
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-03
+  te_unit: million
+  te_url: http://www.bls.gov
+  te_value: 3.171
+  value_match: false
+  yoy_computed: -8.246527777777777
+job-quits-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: JTSQUR
+  our_source: fred
+  our_value: 2.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Job Quits Rate in the United States increased to 2 percent in March from
+    1.90 percent in February of 2026. Job Quits Rate in the United States averaged
+    2.01 Percent from 2000 until 2026, reaching an all time high of 3.00 Percent in
+    November of 2021 and a record low of 1.20 Percent in August of 2009. source: U.S.
+    Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: March
+  te_unit: percent
+  te_url: http://www.bls.gov
+  te_value: 2.0
+  value_match: true
+  yoy_computed: null
+job-vacancies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: JTSJOL
+  our_source: fred
+  our_value: 6866.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Job Vacancies in the United States increased to 6685 Thousand in March
+    from 6679 Thousand in February of 2026. Job Vacancies in the United States averaged
+    5487.44 Thousand from 2000 until 2026, reaching an all time high of 12588.00 Thousand
+    in July of 2022 and a record low of 2157.00 Thousand in December of 2009. source:
+    U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: March
+  te_unit: Thousand
+  te_url: http://www.bls.gov
+  te_value: 6685.0
+  value_match: true
+  yoy_computed: null
+jobless-claims-4-week-average:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-09'
+  our_series: IC4WSA
+  our_source: fred
+  our_value: 203.75
+  source_match: true
+  suggested_source: curated/fred
+  te_desc: 'Jobless Claims 4-week Average in the United States increased to 203.75
+    Thousand in May 9 from 203 Thousand in the previous week. Jobless Claims 4-week
+    Average in the United States averaged 359.92 Thousand from 1967 until 2026, reaching
+    an all time high of 5288.25 Thousand in April of 2020 and a record low of 179.00
+    Thousand in May of 1969. source: U.S. Department of Labor'
+  te_label: U.S. Department of Labor
+  te_period: May
+  te_unit: Thousand
+  te_url: http://www.dol.gov
+  te_value: 203.75
+  value_match: true
+  yoy_computed: null
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CIVPART
+  our_source: fred
+  our_value: 61.8
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The labor force participation rate in the US fell to 61.8% in April 2026,
+    the lowest since 2021. Labor Force Participation Rate in the United States averaged
+    62.83 percent from 1948 until 2026, reaching an all time high of 67.30 percent
+    in January of 2000 and a record low of 58.10 percent in December of 1954. source:
+    U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: http://www.bls.gov/
+  te_value: 61.8
+  value_match: true
+  yoy_computed: null
+labour-costs:
+  fix_summary: Removed duplicate adjustment='SA' rows; kept adjustment='' (BLS ULCNFB
+    index)
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-03-31'
+  our_series: ULCNFB
+  our_source: fred
+  our_value: 124.67
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Labour Costs in the United States increased to 122.55 points in the fourth
+    quarter of 2025 from 121.72 points in the third quarter of 2025. Labour Costs
+    in the United States averaged 59.64 points from 1947 until 2025, reaching an all
+    time high of 123.17 points in the first quarter of 2025 and a record low of 14.98
+    points in the second quarter of 1947. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2025-Q4
+  te_unit: points
+  te_url: https://www.bls.gov/
+  te_value: 122.55
+  value_match: true
+  yoy_computed: null
+leisure-and-hospitality-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USLAH
+  our_source: fred
+  our_value: 16978.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Leisure and Hospitality Payrolls in the United States decreased to 14
+    Thousand in April from 29 Thousand in March of 2026. Leisure and Hospitality Payrolls
+    in the United States averaged 14.44 Thousand from 1939 until 2026, reaching an
+    all time high of 1830.00 Thousand in June of 2020 and a record low of -7439.00
+    Thousand in April of 2020. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 14.0
+  value_match: false
+  yoy_computed: 0.8434307436445712
+loans-to-private-sector:
+  fix_summary: Series TOTLL (all loans, $13.76T) -> BUSLOANS (C&I Loans, $2.82T) to
+    match TE 2827.90 USD Billion March
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-01'
+  our_series: BUSLOANS
+  our_source: fred
+  our_value: 2865.2666
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Loans to Private Sector in the United States increased to 2827.90 USD
+    Billion in March from 2788.60 USD Billion in February of 2026. Loans to Private
+    Sector in the United States averaged 758.09 USD Billion from 1947 until 2026,
+    reaching an all time high of 3035.80 USD Billion in May of 2020 and a record low
+    of 11.29 USD Billion in January of 1947. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: March
+  te_unit: USD
+  te_url: http://www.federalreserve.gov
+  te_value: 2827.9
+  value_match: true
+  yoy_computed: null
+long-term-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-01'
+  our_series: UEMP27OV_OVER_CLF16OV
+  our_source: fred
+  our_value: 1.078
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Long Term Unemployment Rate in the United States increased to 1.08 percent
+    in April from 1.07 percent in March of 2026. Long Term Unemployment Rate in the
+    United States averaged 1.00 percent from 1948 until 2026, reaching an all time
+    high of 4.40 percent in April of 2010 and a record low of 0.08 percent in May
+    of 1953. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: percent
+  te_url: https://www.bls.gov/
+  te_value: 1.08
+  value_match: true
+  yoy_computed: null
+manufacturing-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: MANEMP
+  our_source: fred
+  our_value: 12596.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Manufacturing Payrolls in the United States decreased by 2 thousand in
+    April of 2026, following a 15 thousand rise in March, compared to forecasts of
+    5 thousand. Manufacturing Payrolls in the United States averaged 3.36 Thousand
+    from 1939 until 2026, reaching an all time high of 655.00 Thousand in April of
+    1946 and a record low of -1715.00 Thousand in September of 1945. source: U.S.
+    Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: null
+  te_url: null
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: -0.5212446690886116
+manufacturing-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: IPMAN
+  our_source: fred
+  our_value: 98.67
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Manufacturing Production in the United States increased 1.3% year-on-year
+    in April 2026, following an upwardly revised 0.6% rise in March. Manufacturing
+    Production in the United States averaged 3.49 percent from 1920 until 2026, reaching
+    an all time high of 67.90 percent in July of 1933 and a record low of -39.40 percent
+    in February of 1946. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: 2026-04
+  te_unit: percent
+  te_url: http://www.federalreserve.gov
+  te_value: 67.9
+  value_match: false
+  yoy_computed: 1.3767594780643206
+medical-doctors:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2019-12-31'
+  our_series: US:medical-doctors
+  our_source: curated
+  our_value: 2.77
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Medical Doctors in the United States increased to 2.77 per 1000 people
+    in 2019 from 2.74 per 1000 people in 2018. Medical Doctors in the United States
+    averaged 2.55 per 1000 people from 1993 until 2019, reaching an all time high
+    of 2.77 per 1000 people in 2019 and a record low of 2.27 per 1000 people in 1993.
+    source: OECD'
+  te_label: OECD
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: 2.77
+  value_match: true
+  yoy_computed: null
+michigan-inflation-expectations:
+  fix_summary: null
+  fixed: false
+  flag: vintage-lag
+  our_period: '2026-03-31'
+  our_series: MICH
+  our_source: fred
+  our_value: 3.8
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The year-ahead inflation expectations in the United States, as compiled
+    by the survey of the University of Michigan, eased to 4.5% in May 2026 from a
+    seven-month high of 4.7% in April, preliminary estimates showed. At the same time,
+    the five-year inflation outlook edged down to 3.4% from a six-month high of 3.5%
+    in the month before. source: University of Michigan'
+  te_label: University of Michigan
+  te_period: 2026-05
+  te_unit: '%'
+  te_url: http://www.sca.isr.umich.edu/
+  te_value: 4.5
+  value_match: false
+  yoy_computed: -24.000000000000004
+military-expenditure:
+  fix_summary: null
+  fixed: false
+  flag: vintage-lag
+  our_period: '2024-12-31'
+  our_series: MS.MIL.XPND.CD
+  our_source: worldbank
+  our_value: 997309.0
+  source_match: false
+  suggested_source: curated
+  te_desc: 'Military Expenditure in the United States decreased to 954387 USD Million
+    in 2025 from 1004901 USD Million in 2024. Military Expenditure in the United States
+    averaged 321707.11 USD Million from 1949 until 2025, reaching an all time high
+    of 1004901.00 USD Million in 2024 and a record low of 14088.20 USD Million in
+    1949. source: SIPRI'
+  te_label: SIPRI
+  te_period: null
+  te_unit: USD
+  te_url: https://www.sipri.org
+  te_value: 954387.0
+  value_match: true
+  yoy_computed: null
+minimum-wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: US:minimum-wages
+  our_source: curated
+  our_value: 7.25
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Minimum Wages in the United States remained unchanged at 7.25 USD/Hour
+    in 2025 from 7.25 USD/Hour in 2024. Minimum Wages in the United States averaged
+    3.37 USD/Hour from 1938 until 2025, reaching an all time high of 7.25 USD/Hour
+    in 2009 and a record low of 0.25 USD/Hour in 1938. source: Department of Labor'
+  te_label: Department of Labor
+  te_period: null
+  te_unit: USD
+  te_url: http://www.dol.gov
+  te_value: 7.25
+  value_match: true
+  yoy_computed: null
+mining-and-energy-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USMINE
+  our_source: fred
+  our_value: 606.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Mining and Energy Payrolls in the United States increased to 2.50 Thousand
+    in April from 0.90 Thousand in March of 2026. Mining and Energy Payrolls in the
+    United States averaged -0.23 Thousand from 1958 until 2026, reaching an all time
+    high of 154.80 Thousand in April of 1978 and a record low of -140.60 Thousand
+    in December of 1977. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 2.5
+  value_match: false
+  yoy_computed: -2.572347266881029
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: IPMINE
+  our_source: fred
+  our_value: 120.28
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Mining production in the United States increased 0.20 percent in April
+    of 2026 over the same month in the previous year. Mining Production in the United
+    States averaged 2.11 percent from 1920 until 2026, reaching an all time high of
+    108.20 percent in April of 1923 and a record low of -28.80 percent in October
+    of 1949. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: 2026-04
+  te_unit: null
+  te_url: http://www.federalreserve.gov
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: 0.21663056157307545
+money-supply-m0:
+  fix_summary: Converted BOGMBASE from Billions (5458.6) to Millions (5,458,600) to
+    match TE display
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-03-01'
+  our_series: BOGMBASE
+  our_source: fred
+  our_value: 5458600.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Money Supply M0 in the United States increased to 5458600 USD Million
+    in March from 5388000 USD Million in February of 2026. Money Supply M0 in the
+    United States averaged 1247843.87 USD Million from 1959 until 2026, reaching an
+    all time high of 6413100.00 USD Million in December of 2021 and a record low of
+    48400.00 USD Million in February of 1961. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: March
+  te_unit: USD
+  te_url: https://www.federalreserve.gov/
+  te_value: 5458600.0
+  value_match: true
+  yoy_computed: null
+money-supply-m1:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: M1SL
+  our_source: fred
+  our_value: 19436.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Money Supply M1 in the United States increased to 19531.40 USD Billion
+    in March from 19396.90 USD Billion in February of 2026. Money Supply M1 in the
+    United States averaged 2615.75 USD Billion from 1959 until 2026, reaching an all
+    time high of 20749.80 USD Billion in March of 2022 and a record low of 138.90
+    USD Billion in January of 1959. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: March
+  te_unit: USD
+  te_url: https://www.federalreserve.gov/
+  te_value: 19531.4
+  value_match: true
+  yoy_computed: null
+money-supply-m2:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: M2SL
+  our_source: fred
+  our_value: 22686.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Money Supply M2 in the United States increased to 22442.10 USD Billion
+    in January from 22366.20 USD Billion in December of 2025. Money Supply M2 in the
+    United States averaged 5745.38 USD Billion from 1959 until 2026, reaching an all
+    time high of 22686.00 USD Billion in March of 2026 and a record low of 286.60
+    USD Billion in January of 1959. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: January
+  te_unit: USD
+  te_url: https://www.federalreserve.gov/
+  te_value: 22442.1
+  value_match: true
+  yoy_computed: null
+natural-gas-storage:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: NW2_EPG0_SWO_R48_BCF
+  our_source: eia
+  our_value: 2142.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'US energy firms injected a near-normal 85 billion cubic feet of natural
+    gas into storage in the week ended May 8, in line with expectations. This compares
+    with a 109 billion cubic foot build during the same week a year earlier and a
+    five-year average increase of 84 billion cubic feet for the period between 2021
+    and 2025. Following the latest increase, total stockpiles rose to 2.290 trillion
+    cubic feet, around 2.3% higher than the same week last year and 6.5% above the
+    five-year seasonal average. In the previous week ending May 1, inventories had
+    risen by 63 billion cubic feet. source: U.S. Ene'
+  te_label: U.S. Energy Information Administration
+  te_period: null
+  te_unit: billion
+  te_url: http://www.eia.gov/
+  te_value: 84.0
+  value_match: false
+  yoy_computed: -12.71393643031785
+new-home-sales:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: HSN1F
+  our_source: fred
+  our_value: 682.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Sales of new single-family homes in the US rose 7.4% month-over-month
+    to 682,000 in March 2026, exceeding expectations of 650,000 and up from 635,000
+    in February. Gains were led by the South (+11.1% to 441,000) and the Northeast
+    (+80.0% to 27,000), offsetting declines in the West (-3.5% to 138,000) and Midwest
+    (-5.0% to 76,000). Housing supply stood at 481,000 units, representing 8.5 months
+    at the current sales pace, while the median new home price fell 6.2% year-over-year
+    to $387,400. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.census.gov
+  te_value: 682000.0
+  value_match: false
+  yoy_computed: 3.3333333333333335
+new-orders:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: AMTMNO
+  our_source: fred
+  our_value: 630448.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'New Orders in the United States increased to 630448 USD Million in March
+    from 619304 USD Million in February of 2026. New Orders in the United States averaged
+    414497.66 USD Million from 1992 until 2026, reaching an all time high of 642533.00
+    USD Million in May of 2025 and a record low of 223500.00 USD Million in February
+    of 1992. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: March
+  te_unit: USD
+  te_url: https://www.census.gov
+  te_value: 630448.0
+  value_match: true
+  yoy_computed: null
+non-farm-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: PAYEMS
+  our_source: fred
+  our_value: 158736.0
+  source_match: true
+  suggested_source: fred
+  te_desc: The US economy added 115K jobs in April 2026, following an upwardly revised
+    185K increase in March, and way above market forecasts of 62K. Job gains occurred
+    in health care (37K), transportation and warehousing (30K), and retail trade (22K).
+    Federal government employment continued to decline (-9K) and decreases were also
+    seen for information (-13K) and manufacturing (-2K). While the figure points to
+    a moderation in hiring, it also marks the first back-to-back monthly increase
+    in employment in nearly a year, reinforcing signs that the US labor market is
+    gradually cooling while remaining broadly
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: null
+  te_url: http://www.bls.gov/
+  te_value: 62.0
+  value_match: false
+  yoy_computed: 0.15837460958450328
+nonfarm-payrolls-private:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USPRIV
+  our_source: fred
+  our_value: 135428.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Private payrolls in the US increased by 123K in April 2026, following
+    an upwardly revised 190K in March, and much higher than forecasts of 75K. Job
+    gains occurred in health care (37K), transportation and warehousing (30K), and
+    retail trade (22K). In contrast, employment declined in information (-13K) and
+    manufacturing (-2K). source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: null
+  te_url: https://www.bls.gov
+  te_value: 75.0
+  value_match: false
+  yoy_computed: 0.37875138047836815
+nonfarm-productivity-qoq:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: PRS85006092
+  our_source: fred
+  our_value: 0.8
+  source_match: true
+  suggested_source: fred
+  te_desc: US nonfarm business sector labor productivity rose by 0.8% in the first
+    quarter of 2026, a slowdown from the revised 1.6% increase in the previous quarter
+    and below market expectations of 1.4%, according to preliminary estimates. Output
+    grew by 1.5% (vs. 1.3% in Q4 2025), while hours worked increased by 0.7% after
+    a 0.2% decline. In the manufacturing sector, productivity surged by 3.6%, driven
+    by a 3.3% rise in output and a 0.4% reduction in hours worked. Durable manufacturing
+    saw a 5.3% productivity gain, with output up 5.4% and hours worked rising slightly
+    by 0.1%. Meanwhile, nondurable manu
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-Q1
+  te_unit: null
+  te_url: https://www.bls.gov
+  te_value: 2026.0
+  value_match: false
+  yoy_computed: -11.111111111111107
+nurses:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2024-12-31'
+  our_series: US:nurses
+  our_source: curated
+  our_value: 12.71
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Nurses in the United States increased to 12.71 per 1000 people in 2024
+    from 12.36 per 1000 people in 2023. Nurses in the United States averaged 11.13
+    per 1000 people from 1999 until 2024, reaching an all time high of 12.71 per 1000
+    people in 2024 and a record low of 10.10 per 1000 people in 2003. source: OECD'
+  te_label: OECD
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: 12.71
+  value_match: true
+  yoy_computed: null
+ny-empire-state-manufacturing-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-31'
+  our_series: GACDISA066MSFRBNY
+  our_source: fred
+  our_value: 19.6
+  source_match: true
+  suggested_source: fred
+  te_desc: The NY Empire State Manufacturing Index in the US unexpectedly increased
+    to 19.6 in May 2026 from 11 in April, above forecasts of 7.5. The reading showed
+    that New York State manufacturing activity grew at its fastest pace in over four
+    years. New orders (22.7 vs 19.3) and shipments (18.9 vs 20.2) increased considerably
+    for the second consecutive month and unfilled orders rose (4.9 vs 9.1). Also,
+    employment levels (8.3 vs 9.8) and the average workweek (11.5 vs 13.7) both continued
+    to increase. Meanwhile, delivery times lengthened substantially (20.4 vs 12.1),
+    and supply availability worsened som
+  te_label: Federal Reserve Bank of New York
+  te_period: 2026-05
+  te_unit: null
+  te_url: https://www.newyorkfed.org
+  te_value: 19.6
+  value_match: true
+  yoy_computed: null
+part-time-employment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: LNS12600000
+  our_source: fred
+  our_value: 28413.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Part Time Employment in the United States increased to 28413 Thousand
+    in April from 28290 Thousand in March of 2026. Part Time Employment in the United
+    States averaged 21589.08 Thousand from 1968 until 2026, reaching an all time high
+    of 29452.00 Thousand in November of 2025 and a record low of 10086.00 Thousand
+    in January of 1968. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov
+  te_value: 28413.0
+  value_match: true
+  yoy_computed: null
+pce-price-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: PCEPI
+  our_source: fred
+  our_value: 130.34
+  source_match: true
+  suggested_source: fred
+  te_desc: 'PCE Price Index in the United States increased to 130.34 points in March
+    from 129.45 points in February of 2026. PCE Price Index in the United States averaged
+    61.24 points from 1959 until 2026, reaching an all time high of 130.34 points
+    in March of 2026 and a record low of 15.16 points in January of 1959. source:
+    U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: March
+  te_unit: points
+  te_url: http://www.bea.gov/
+  te_value: 130.34
+  value_match: true
+  yoy_computed: null
+personal-income:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: PI
+  our_source: fred
+  our_value: 26844.5
+  source_match: true
+  suggested_source: fred
+  te_desc: US personal income rose by 0.6% month-over-month in March 2026, exceeding
+    market expectations of a 0.3% increase, after showing no growth in February. This
+    marked the biggest monthly gain since July 2025, driven primarily by a $64.3 billion
+    rise in compensation, including a $56.1 billion increase in wages and salaries.
+    Farm proprietors’ income also climbed by $60.2 billion. Income receipts on assets
+    rose by $17.4 billion, largely reflecting a $14.9 billion increase in personal
+    dividend income. Current transfer receipts grew by $7.5 billion, led by a $6.9
+    billion increase in government social b
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-03
+  te_unit: null
+  te_url: https://www.bea.gov
+  te_value: null
+  value_match: null
+  yoy_computed: null
+personal-income-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: US:personal-income-tax-rate
+  our_source: curated
+  our_value: 37.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Personal Income Tax Rate in the United States stands at 37 percent.
+    Personal Income Tax Rate in the United States averaged 36.78 percent from 2004
+    until 2026, reaching an all time high of 39.60 percent in 2013 and a record low
+    of 35.00 percent in 2005. source: Internal Revenue Service'
+  te_label: Internal Revenue Service
+  te_period: null
+  te_unit: percent
+  te_url: null
+  te_value: 37.0
+  value_match: true
+  yoy_computed: null
+personal-savings:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: PSAVERT
+  our_source: fred
+  our_value: 3.6
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Household Saving Rate in the United States decreased to 3.60 percent in
+    March from 3.90 percent in February of 2026. Personal Savings in the United States
+    averaged 8.38 percent from 1959 until 2026, reaching an all time high of 31.80
+    percent in April of 2020 and a record low of 1.40 percent in July of 2005. source:
+    U.S. Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: March
+  te_unit: percent
+  te_url: https://www.bea.gov
+  te_value: 3.6
+  value_match: true
+  yoy_computed: null
+personal-spending:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: PCE
+  our_source: fred
+  our_value: 21860.5
+  source_match: true
+  suggested_source: fred
+  te_desc: US personal spending rose by 0.9% month-on-month in March 2026, reaching
+    $195.4 billion, accelerating from an upwardly revised 0.6% increase in February
+    and matching market expectations. The increase was primarily driven by stronger
+    goods spending ($132.6 billion), particularly in gasoline and other energy goods
+    (+$81.3 billion), motor vehicles and parts (+$17.6 billion), other non-durable
+    goods (+$9.9 billion), food and beverages (+$6.9 billion), and recreational goods
+    and vehicles (+$6.3 billion). Spending on services also increased to $62.9 billion,
+    led by health care (+$21.3 billion), fina
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-03
+  te_unit: billion
+  te_url: https://www.bea.gov
+  te_value: 62.9
+  value_match: false
+  yoy_computed: 5.693081274476623
+philadelphia-fed-manufacturing-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: GACDFSA066MSFRBPHI
+  our_source: fred
+  our_value: 26.7
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The Philadelphia Fed Manufacturing Index climbed to 26.7 in April 2026
+    from 18.1 in the prior month, hitting its strongest level since January 2025.
+    The data surprised analysts on the upside, comfortably exceeding expectations
+    for a drop to 10. The current shipments index rose 12 points to 34.0, while the
+    index for current new orders jumped 24 points to 33.0. Meanwhile, the employment
+    index fell 6 points to -5.1 in April. Both price indexes increased for the second
+    month, continuing to run well above their long-term averages and marking their
+    highest levels since August. The prices paid index '
+  te_label: Federal Reserve Bank of Philadelphia
+  te_period: 2026-04
+  te_unit: null
+  te_url: https://www.philadelphiafed.org/
+  te_value: 26.7
+  value_match: true
+  yoy_computed: null
+population:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: POPTHM
+  our_source: fred
+  our_value: 342.63
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The total population in the United States was estimated at 342.3 million
+    people in 2025, according to the latest census figures and projections from Trading
+    Economics. Looking back, in the year of 1900, the United States had a population
+    of 76.1 million people. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: null
+  te_unit: million
+  te_url: https://www.census.gov
+  te_value: 342.3
+  value_match: true
+  yoy_computed: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: PPIFIS
+  our_source: fred
+  our_value: 156.5
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Producer Prices in the United States increased to 156.50 points in April
+    from 154.37 points in March of 2026. Producer Prices in the United States averaged
+    120.64 points from 2009 until 2026, reaching an all time high of 156.50 points
+    in April of 2026 and a record low of 100.20 points in November of 2009. source:
+    U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: points
+  te_url: https://www.bls.gov
+  te_value: 156.5
+  value_match: true
+  yoy_computed: null
+ppi-ex-food-energy-trade-svcs:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2026-04-30'
+  our_series: WPSFD49116
+  our_source: fred
+  our_value: 141.24
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+private-debt-to-gdp:
+  fix_summary: null
+  fixed: false
+  flag: vintage-lag
+  our_period: '2025-09-30'
+  our_series: QUSPAM770A
+  our_source: fred
+  our_value: 140.4
+  source_match: false
+  suggested_source: curated
+  te_desc: 'Private Debt to GDP in the United States decreased to 142 percent in 2024
+    from 147.50 percent in 2023. Private Debt to GDP in the United States averaged
+    131.72 percent from 1995 until 2024, reaching an all time high of 158.30 percent
+    in 2020 and a record low of 100.50 percent in 1997. source: OECD'
+  te_label: OECD
+  te_period: null
+  te_unit: percent
+  te_url: https://www.oecd.org/
+  te_value: 142.0
+  value_match: true
+  yoy_computed: null
+private-sector-credit:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-31'
+  our_series: TOTLL
+  our_source: fred
+  our_value: 13765.59
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Private Sector Credit in the United States increased to 13626.91 USD Billion
+    in March from 13531.33 USD Billion in February of 2026. Private Sector Credit
+    in the United States averaged 3119.36 USD Billion from 1947 until 2026, reaching
+    an all time high of 13626.91 USD Billion in March of 2026 and a record low of
+    26.74 USD Billion in January of 1947. source: Federal Reserve'
+  te_label: Federal Reserve
+  te_period: March
+  te_unit: USD
+  te_url: http://www.federalreserve.gov
+  te_value: 13626.91
+  value_match: true
+  yoy_computed: null
+productivity:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: OPHNFB
+  our_source: fred
+  our_value: 119.58
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Productivity in the United States increased to 119.58 points in the first
+    quarter of 2026 from 119.35 points in the fourth quarter of 2025. Productivity
+    in the United States averaged 61.27 points from 1947 until 2026, reaching an all
+    time high of 119.58 points in the first quarter of 2026 and a record low of 22.07
+    points in the third quarter of 1947. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-Q1
+  te_unit: points
+  te_url: https://www.bls.gov
+  te_value: 119.58
+  value_match: true
+  yoy_computed: null
+professional-and-business-services-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USPBS
+  our_source: fred
+  our_value: 22445.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Professional and Business Services Payrolls in the United States decreased
+    to 7 Thousand in April from 26 Thousand in March of 2026. Professional and Business
+    Services Payrolls in the United States averaged 19.58 Thousand from 1939 until
+    2026, reaching an all time high of 358.00 Thousand in June of 2020 and a record
+    low of -2165.00 Thousand in April of 2020. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 7.0
+  value_match: false
+  yoy_computed: -0.11125945705384957
+real-consumer-spending:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-01-31'
+  our_series: DPCERL1Q225SBEA
+  our_source: fred
+  our_value: 1.6
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Real Consumer Spending in the United States decreased to 1.60 percent
+    in the first quarter of 2026 from 1.90 percent in the fourth quarter of 2025.
+    Real Consumer Spending in the United States averaged 3.33 percent from 1947 until
+    2026, reaching an all time high of 40.60 percent in the third quarter of 2020
+    and a record low of -30.40 percent in the second quarter of 2020. source: U.S.
+    Bureau of Economic Analysis'
+  te_label: U.S. Bureau of Economic Analysis
+  te_period: 2026-Q1
+  te_unit: percent
+  te_url: http://www.bea.gov
+  te_value: 1.6
+  value_match: true
+  yoy_computed: null
+refinery-crude-runs:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-24'
+  our_series: WCRRIUS2
+  our_source: eia
+  our_value: 16071.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Refinery Crude Runs in the United States increased by 370 Thousand Barrels
+    in the week ended May 8th 2026, the most in over three months, following a 42
+    Thousand Barrels drop in the previous week. Refinery Crude Runs in the United
+    States averaged 2.06 Thousand Barrels from 1982 until 2026, reaching an all time
+    high of 2407.00 Thousand Barrels in March of 2021 and a record low of -3253.00
+    Thousand Barrels in September of 2017. source: U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: 2021-03
+  te_unit: Thousand
+  te_url: https://www.eia.gov
+  te_value: 2407.0
+  value_match: false
+  yoy_computed: 0.2620250795433277
+rent-inflation:
+  fix_summary: Refetched CUSR0000SAH1 (existing series CUSR0000SAH1; Oct 2025 still
+    gap in FRED itself)
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-01'
+  our_series: CUSR0000SAH1
+  our_source: fred
+  our_value: 426.642
+  source_match: true
+  suggested_source: fred
+  te_desc: 'US shelter prices rose by 3.3% year-over-year in April 2026, the most
+    since September last year, compared to 3% in each of the previous three months.
+    Rent Inflation in the United States averaged 4.21 percent from 1954 until 2026,
+    reaching an all time high of 20.85 percent in June of 1980 and a record low of
+    -0.73 percent in April of 2010. source: Bureau of Labor Statistics'
+  te_label: Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: https://www.bls.gov/home.htm
+  te_value: 3.0
+  value_match: false
+  yoy_computed: 3.644698388636642
+retail-sales-ex-autos:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: RSFSXMV
+  our_source: fred
+  our_value: 617856.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'US retail sales excluding autos rose by 0.7% month-over-month in April
+    2026, following a 1.9% increase in March and surpassing market expectations of
+    0.6%. Retail Sales Ex Autos in the United States averaged 0.39 percent from 1992
+    until 2026, reaching an all time high of 13.30 percent in May of 2020 and a record
+    low of -14.50 percent in April of 2020. source: U.S. Census Bureau'
+  te_label: U.S. Census Bureau
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: http://www.census.gov
+  te_value: 0.6
+  value_match: false
+  yoy_computed: 6.3362247005369685
+retail-trade-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USTRADE
+  our_source: fred
+  our_value: 15466.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Retail Trade Payrolls in the United States increased to 21.80 Thousand
+    in April from 18.60 Thousand in March of 2026. Retail Trade Payrolls in the United
+    States averaged 11.80 Thousand from 1939 until 2026, reaching an all time high
+    of 820.90 Thousand in June of 2020 and a record low of -2186.00 Thousand in April
+    of 2020. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 21.8
+  value_match: false
+  yoy_computed: 0.030397888963618957
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: US:retirement-age-men
+  our_source: curated
+  our_value: 67.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Retirement Age Men in the United States increased to 67 Years in 2026
+    from 66.83 Years in 2025. Retirement Age Men in the United States averaged 66.19
+    Years from 2009 until 2026, reaching an all time high of 67.00 Years in 2026 and
+    a record low of 66.00 Years in 2010. source: Social Security Administration'
+  te_label: Social Security Administration
+  te_period: null
+  te_unit: null
+  te_url: https://www.ssa.gov/
+  te_value: 67.0
+  value_match: true
+  yoy_computed: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: US:retirement-age-women
+  our_source: curated
+  our_value: 67.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Retirement Age Women in the United States increased to 67 Years in 2026
+    from 66.83 Years in 2025. Retirement Age Women in the United States averaged 66.19
+    Years from 2009 until 2026, reaching an all time high of 67.00 Years in 2026 and
+    a record low of 66.00 Years in 2010. source: Social Security Administration'
+  te_label: Social Security Administration
+  te_period: null
+  te_unit: null
+  te_url: https://www.ssa.gov/
+  te_value: 67.0
+  value_match: true
+  yoy_computed: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: US:sales-tax-rate
+  our_source: curated
+  our_value: 0.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Sales Tax Rate in the United States stands at 0 percent. Sales Tax
+    Rate in the United States averaged 0.00 percent from 2013 until 2026, reaching
+    an all time high of 0.00 percent in 2014 and a record low of 0.00 percent in 2014.
+    source: Internal Revenue Service'
+  te_label: Internal Revenue Service
+  te_period: null
+  te_unit: percent
+  te_url: null
+  te_value: 0.0
+  value_match: true
+  yoy_computed: null
+secured-overnight-financing-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-31'
+  our_series: SOFR
+  our_source: fred
+  our_value: 3.56
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Secured Overnight Financing Rate in the United States decreased to 3.56
+    percent on Thursday May 14 from 3.59 in the previous day. Secured Overnight Financing
+    Rate in the United States averaged 1.96 percent from 2014 until 2026, reaching
+    an all time high of 5.40 percent in December of 2023 and a record low of 0.00
+    percent in September of 2014. source: Federal Reserve Bank of New York'
+  te_label: Federal Reserve Bank of New York
+  te_period: 2023-12
+  te_unit: percent
+  te_url: https://www.newyorkfed.org
+  te_value: 3.56
+  value_match: true
+  yoy_computed: null
+services-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CUSR0000SAS
+  our_source: fred
+  our_value: 429.66
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Services inflation in the United States increased to 3.4% in April 2026,
+    the highest since September last year, compared to 2021-lows of 3.1% in March
+    and February. Services Inflation in the United States averaged 4.44 Percent from
+    1950 until 2026, reaching an all time high of 18.09 Percent in June of 1980 and
+    a record low of 0.57 Percent in February of 2010. source: Bureau of Labor Statistics'
+  te_label: Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: null
+  te_value: 3.4
+  value_match: true
+  yoy_computed: 3.7224797219003514
+social-security-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-12-31'
+  our_series: US:social-security-rate
+  our_source: curated
+  our_value: 15.3
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Social Security Rate in the United States stands at 15.30 percent.
+    Social Security Rate in the United States averaged 15.35 percent from 1981 until
+    2026, reaching an all time high of 16.75 percent in 1981 and a record low of 15.30
+    percent in 1990. source: Social Security Administration'
+  te_label: Social Security Administration
+  te_period: null
+  te_unit: percent
+  te_url: https://www.ssa.gov/
+  te_value: 15.3
+  value_match: true
+  yoy_computed: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2026-12-31'
+  our_series: US:social-security-rate-companies
+  our_source: curated
+  our_value: 7.65
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+social-security-rate-employees:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2026-12-31'
+  our_series: US:social-security-rate-employees
+  our_source: curated
+  our_value: 7.65
+  source_match: null
+  suggested_source: null
+  te_desc: 'TRADING ECONOMICS | 20 Million Indicators for 196 Countries (function
+    () { var p = new URLSearchParams(window.location.search); if (!p.has(''_auth''))
+    return; p.delete(''_auth''); var qs = p.toString(); history.replaceState({}, '''',
+    window.location.pathname + (qs ? ''?'' + qs : '''')); window.location.reload();
+    })(); (function () { function h(n) { return new RegExp(''(?:^|;\\s*)'' + n.replace(/\./g,
+    ''\\.'') + ''='').test(document.cookie); } if (h(''TEIsLoggedIn'') || !h(''.ASPXAUTH''))
+    return; var e = ''; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'', s = ['''',
+    ''; domain=tradingeconomics.com'', ''; domain=.trading'
+  te_label: null
+  te_period: null
+  te_unit: null
+  te_url: null
+  te_value: null
+  value_match: null
+  yoy_computed: null
+steel-production:
+  fix_summary: TE source 'World Steel Association' (7200kt March, level in Tonnes);
+    we use FRED IPG331S (Index 2017=100, 100.1). FRED has no Tonnes series.
+  fixed: false
+  flag: gap
+  our_period: '2026-04-30'
+  our_series: IPG331S
+  our_source: fred
+  our_value: 100.1
+  source_match: null
+  suggested_source: null
+  te_desc: 'Steel Production in the United States increased to 7200 Thousand Tonnes
+    in March from 6500 Thousand Tonnes in February of 2026. Steel Production in the
+    United States averaged 7766.31 Thousand Tonnes from 1969 until 2026, reaching
+    an all time high of 11951.00 Thousand Tonnes in May of 1973 and a record low of
+    3799.00 Thousand Tonnes in April of 2009. source: World Steel Association'
+  te_label: World Steel Association
+  te_period: March
+  te_unit: Thousand
+  te_url: https://www.worldsteel.org/
+  te_value: 7200.0
+  value_match: false
+  yoy_computed: 2.268083367388638
+strategic-petroleum-reserve:
+  fix_summary: null
+  fixed: false
+  flag: no-te-page
+  our_period: '2026-04-24'
+  our_series: WCSSTUS1
+  our_source: eia
+  our_value: 397924.0
+  source_match: true
+  suggested_source: eia
+  te_desc: US crude inventories fell by 4.306 million barrels to 452.9 million barrels
+    in the week ended May 8, compared with expectations for a 2.1 million barrel draw.
+    Stocks at the Cushing, Oklahoma hub decreased by 1.702 million barrels. Refinery
+    activity increased, with crude runs rising by 370,000 barrels per day and utilisation
+    rates up 0.5 percentage points. Gasoline inventories dropped by 4.084 million
+    barrels to 215.7 million, exceeding forecasts for a 2.85 million barrel decline.
+    Distillate stocks, including diesel and heating oil, rose by 0.190 million barrels
+    to 102.5 million, versus expecta
+  te_label: U.S. Energy Information Administration
+  te_period: null
+  te_unit: million
+  te_url: https://www.eia.gov
+  te_value: 452.9
+  value_match: false
+  yoy_computed: -4.163886968856948
+terrorism-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: US:terrorism-index
+  our_source: curated
+  our_value: 4.52
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Terrorism Index in the United States increased to 4.52 Points in 2025
+    from 3.52 Points in 2024. Terrorism Index in the United States averaged 5.11 Points
+    from 2002 until 2025, reaching an all time high of 7.39 Points in 2002 and a record
+    low of 3.52 Points in 2024. source: Institute for Economics and Peace'
+  te_label: Institute for Economics and Peace
+  te_period: null
+  te_unit: Points
+  te_url: null
+  te_value: 4.52
+  value_match: true
+  yoy_computed: null
+total-housing-inventory:
+  fix_summary: 'Scale fix: stored in thousands (1470) instead of units (1470000) to
+    match TE display'
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-01'
+  our_series: HOSINVUSM495N
+  our_source: fred
+  our_value: 1470.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Total Housing Inventory in the United States increased to 1470 Thousands
+    in April from 1390 Thousands in March of 2026. Total Housing Inventory in the
+    United States averaged 2218.49 Thousands from 1982 until 2026, reaching an all
+    time high of 4040.00 Thousands in July of 2007 and a record low of 860.00 Thousands
+    in January of 2022. source: National Association of Realtors'
+  te_label: National Association of Realtors
+  te_period: April
+  te_unit: Thousand
+  te_url: https://www.nar.realtor
+  te_value: 1470.0
+  value_match: true
+  yoy_computed: null
+total-vehicle-sales:
+  fix_summary: 'Refetched TOTALSA (data still vintage-lag: FRED has March, TE shows
+    April)'
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-03-01'
+  our_series: TOTALSA
+  our_source: fred
+  our_value: 16.696
+  source_match: null
+  suggested_source: null
+  te_desc: 'US light vehicle sales dropped to a seasonally adjusted annual rate of
+    15.9 million units in April 2026, down from 16.3 million in March and slightly
+    below market expectations of 16.0 million. Total Vehicle Sales in the United States
+    averaged 14.84 Million from 1976 until 2026, reaching an all time high of 21.71
+    Million in October of 2001 and a record low of 8.57 Million in April of 2020.
+    source: Wards Intelligence'
+  te_label: Wards Intelligence
+  te_period: 2026-04
+  te_unit: million
+  te_url: https://wardsintelligence.informa.com/
+  te_value: 15.9
+  value_match: false
+  yoy_computed: -9.013623978201633
+trade-balance:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-03-31'
+  our_series: BOPGSTB
+  our_source: fred
+  our_value: -60.31
+  source_match: true
+  suggested_source: fred
+  te_desc: The United States trade deficit widened to $60.3 billion in March of 2026
+    from the revised $57.8 billion gap in the previous month, loosely aligned with
+    market expectations of $60.9 billion to mark the widest deficit so far this year.
+    Imports rose by $8.7 billion, or 2.3% from the previous month to $381 billion
+    in the period. Foreign purchases were higher for autos and parts (+$3.6 billion),
+    consumer goods (+$2.4 billion), capital goods (+$2.1 billion), and industrial
+    supplies (+$2.1 billion). In the meantime, exports jumped by $6.2 billion, or
+    2.0%, to $320.9 billion, aided by the boost in tu
+  te_label: Bureau of Economic Analysis (BEA)
+  te_period: 2026-03
+  te_unit: billion
+  te_url: https://www.bea.gov
+  te_value: 60.3
+  value_match: true
+  yoy_computed: 55.60871485352569
+transportation-and-warehousing-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: CES4348400001
+  our_source: fred
+  our_value: 1469.6
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Transportation and Warehousing Payrolls in the United States increased
+    to 30.30 Thousand in April from 21.50 Thousand in March of 2026. Transportation
+    and Warehousing Payrolls in the United States averaged 6.10 Thousand from 1972
+    until 2026, reaching an all time high of 179.20 Thousand in September of 1997
+    and a record low of -513.90 Thousand in April of 2020. source: U.S. Bureau of
+    Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 30.3
+  value_match: false
+  yoy_computed: -1.4088286596001611
+u6-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: U6RATE
+  our_source: fred
+  our_value: 8.2
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The U-6 unemployment rate, which includes the unemployed, underemployed,
+    those marginally attached to the labor force, and discouraged workers, rose to
+    8.2% in April 2026 from 8.0% in March. Many economists consider the U-6 rate the
+    most comprehensive measure of the US employment situation. source: U.S. Bureau
+    of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: http://www.bls.gov/
+  te_value: 8.2
+  value_match: true
+  yoy_computed: null
+unemployed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: UNEMPLOY
+  our_source: fred
+  our_value: 7373.0
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The number of unemployed persons in The United States increased to 7373
+    Thousand in April of 2026 from 7239 Thousand in March of 2026. Unemployed Persons
+    in the United States averaged 6608.72 Thousand from 1948 until 2026, reaching
+    an all time high of 23084.00 Thousand in April of 2020 and a record low of 1596.00
+    Thousand in May of 1953. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: Thousand
+  te_url: https://www.bls.gov
+  te_value: 7373.0
+  value_match: true
+  yoy_computed: null
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: UNRATE
+  our_source: fred
+  our_value: 4.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'The US unemployment rate held at 4.3% in April 2026, in line with market
+    expectations. However, the number of unemployed rose by 134,000 to 7.37 million,
+    while total employment fell by 226,000 to 162.62 million. The labor force shrank
+    by 92,000 to 170.0 million, pushing the participation rate down 0.1 percentage
+    point to 61.8%, its lowest since October 2021. The employment rate also declined
+    to 59.1%, the lowest in over four years, from 59.2%. Meanwhile, the broader U-6
+    unemployment rate, which includes discouraged and underemployed workers, increased
+    to 8.2% from 8.0%. source: U.S. Bureau of '
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: 2026-04
+  te_unit: '%'
+  te_url: http://www.bls.gov/
+  te_value: 4.3
+  value_match: true
+  yoy_computed: null
+unit-labour-costs-qoq:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: PRS85006112
+  our_source: fred
+  our_value: 2.3
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Unit labor costs in the US nonfarm business sector increased by 2.3% in
+    Q1 2026, less than market expectations of 2.6% and after an upwardly revised 4.6%
+    rise in Q4, preliminary estimates showed. It reflects a 31% increase in hourly
+    compensation and a 0.8% increase in productivity. In the manufacturing sector,
+    unit labor costs rose 2.4%, reflecting a 6.1% increase in hourly compensation
+    and a 3.6% increase in productivity. On an annual basis, nonfarm unit labor costs
+    rose 1.2%, while manufacturing unit labor costs advanced 3.7%. source: U.S. Bureau
+    of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: in Q1 2026
+  te_unit: '%'
+  te_url: https://www.bls.gov/
+  te_value: 2.6
+  value_match: false
+  yoy_computed: 4.545454545454529
+wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: AHETPI
+  our_source: fred
+  our_value: 32.23
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Wages in the United States increased to 32.23 USD/Hour in April from 32.12
+    USD/Hour in March of 2026. Wages in the United States averaged 13.09 USD/Hour
+    from 1964 until 2026, reaching an all time high of 32.23 USD/Hour in April of
+    2026 and a record low of 2.50 USD/Hour in February of 1964. source: U.S. Bureau
+    of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: USD
+  te_url: https://www.bls.gov
+  te_value: 32.23
+  value_match: true
+  yoy_computed: null
+wages-in-manufacturing:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-30'
+  our_series: CES3000000008
+  our_source: fred
+  our_value: 30.1
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Wages in Manufacturing in the United States increased to 30.10 USD/Hour
+    in April from 29.97 USD/Hour in March of 2026. Wages in Manufacturing in the United
+    States averaged 9.61 USD/Hour from 1939 until 2026, reaching an all time high
+    of 30.10 USD/Hour in April of 2026 and a record low of 0.48 USD/Hour in July of
+    1939. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: USD
+  te_url: https://www.bls.gov
+  te_value: 30.1
+  value_match: true
+  yoy_computed: null
+weapons-sales:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2024-12-31'
+  our_series: US:weapons-sales
+  our_source: curated
+  our_value: 13512.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'Weapons Sales in the United States increased to 13512 SIPRI TIV Million
+    in 2024 from 11102 SIPRI TIV Million in 2023. Weapons Sales in the United States
+    averaged 10062.83 SIPRI TIV Million from 1950 until 2024, reaching an all time
+    high of 15883.00 SIPRI TIV Million in 1976 and a record low of 1388.00 SIPRI TIV
+    Million in 1950. source: SIPRI'
+  te_label: SIPRI
+  te_period: null
+  te_unit: null
+  te_url: https://www.sipri.org
+  te_value: 13512.0
+  value_match: true
+  yoy_computed: null
+weekly-crude-oil-production:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-04-24'
+  our_series: WCRFPUS2
+  our_source: eia
+  our_value: 13586.0
+  source_match: true
+  suggested_source: eia
+  te_desc: 'Weekly Crude Oil Production in the United States increased to 13710 Thousand
+    Barrels Per Day in May 8 from 13573 Thousand Barrels Per Day in the previous week.
+    Weekly Crude Oil Production in the United States averaged 7695.08 Thousand Barrels
+    Per Day from 1983 until 2026, reaching an all time high of 13862.00 Thousand Barrels
+    Per Day in November of 2025 and a record low of 3813.00 Thousand Barrels Per Day
+    in September of 2005. source: U.S. Energy Information Administration'
+  te_label: U.S. Energy Information Administration
+  te_period: May
+  te_unit: Thousand
+  te_url: https://www.eia.gov/
+  te_value: 13710.0
+  value_match: true
+  yoy_computed: null
+weekly-economic-index:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2026-05-09'
+  our_series: WEI
+  our_source: fred
+  our_value: 2.71
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Weekly Economic Index in the United States increased to 2.71 percent in
+    May 9 from 2.68 percent in the previous week. Weekly Economic Index in the United
+    States averaged 1.96 percent from 2008 until 2026, reaching an all time high of
+    10.56 percent in May of 2021 and a record low of -8.12 percent in May of 2020.
+    source: Federal Reserve Bank of Dallas'
+  te_label: Federal Reserve Bank of Dallas
+  te_period: May
+  te_unit: percent
+  te_url: https://www.dallasfed.org/
+  te_value: 2.71
+  value_match: true
+  yoy_computed: null
+wholesale-inventories:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-03-31'
+  our_series: WHLSLRIMSA
+  our_source: fred
+  our_value: 932843.0
+  source_match: true
+  suggested_source: fred
+  te_desc: US wholesale inventories advanced by 1.3% month-over-month to $906.371
+    billion in March 2026, following a 0.9% increase in February and compared with
+    a preliminary estimate of 1.4%. Still, this marked the second consecutive monthly
+    increase in wholesale inventories and the strongest since August 2022, prompted
+    by a surge in stocks of nondurable goods (3.2% vs 1.1% in February). Rises were
+    noted in drugs (0.2%), groceries (1%), farm products(2.4%), and petroleum (33.9%).
+    Meanwhile, durable goods inventory growth slowed to 0.2% from 0.9%, as a decline
+    in machinery (-0.2%) and automotive (-0.1) m
+  te_label: U.S. Census Bureau
+  te_period: 2026-03
+  te_unit: billion
+  te_url: https://www.census.gov/
+  te_value: 906.371
+  value_match: false
+  yoy_computed: 2.920658317620489
+wholesale-trade-payrolls:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  our_period: '2026-04-30'
+  our_series: USWTRADE
+  our_source: fred
+  our_value: 6065.5
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Wholesale Trade Payrolls in the United States decreased to 6 Thousand
+    in April from 6.50 Thousand in March of 2026. Wholesale Trade Payrolls in the
+    United States averaged 4.39 Thousand from 1939 until 2026, reaching an all time
+    high of 41.00 Thousand in June of 2020 and a record low of -390.50 Thousand in
+    April of 2020. source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: Thousand
+  te_url: http://www.bls.gov/
+  te_value: 6.0
+  value_match: false
+  yoy_computed: -0.023076035537088733
+withholding-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  our_period: '2025-12-31'
+  our_series: US:withholding-tax-rate
+  our_source: curated
+  our_value: 30.0
+  source_match: true
+  suggested_source: curated
+  te_desc: 'The Withholding Tax Rate in the United States stands at 30 percent. Withholding
+    Tax Rate in the United States averaged 30.00 percent from 2022 until 2025, reaching
+    an all time high of 30.00 percent in 2023 and a record low of 30.00 percent in
+    2023. source: Internal Revenue Service'
+  te_label: Internal Revenue Service
+  te_period: null
+  te_unit: percent
+  te_url: https://www.irs.gov/
+  te_value: 30.0
+  value_match: true
+  yoy_computed: null
+youth-unemployment-rate:
+  fix_summary: Series LNS14000012 (age 16-19, 14.4) -> LNS14024887 (age 16-24, 9.5)
+    to match TE
+  fixed: true
+  flag: ok-fixed
+  our_period: '2026-04-01'
+  our_series: LNS14024887
+  our_source: fred
+  our_value: 9.5
+  source_match: true
+  suggested_source: fred
+  te_desc: 'Youth Unemployment Rate in the United States increased to 9.50 percent
+    in April from 8.50 percent in March of 2026. Youth Unemployment Rate in the United
+    States averaged 11.57 percent from 1948 until 2026, reaching an all time high
+    of 27.50 percent in April of 2020 and a record low of 4.80 percent in May of 1951.
+    source: U.S. Bureau of Labor Statistics'
+  te_label: U.S. Bureau of Labor Statistics
+  te_period: April
+  te_unit: percent
+  te_url: https://www.bls.gov
+  te_value: 9.5
+  value_match: true
+  yoy_computed: null

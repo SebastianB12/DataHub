@@ -1,0 +1,825 @@
+_summary:
+  fixed_slugs:
+  - central-bank-balance
+  - corruption-index
+  - industrial-production
+  - manufacturing-production
+  fixed_this_run: 4
+  flagged_slugs:
+  - central-bank-balance
+  - gdp-per-capita
+  - gdp-per-capita-ppp
+  - unemployed-persons
+  - youth-unemployment-rate
+  frontend_only: 7
+  needs_attention: 5
+  ok: 35
+  total: 47
+budget-deficit:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'DB stores TE''s `government-budget` page value (% of GDP, -4.3% for end-FY 2025/26: ''Public sector net debt stood at 93.8% of GDP'' — separate concept). Indicator slug `budget-deficit` maps to
+    TE''s main `government-budget` indicator (% of GDP), which TE reports as -4.3% for the latest FY. Auto-parser caught 93.8 (net debt %) which is the wrong number from the description.'
+  our_period: '2026-03-31'
+  our_series: ons:j5ii
+  our_source: ons
+  our_unit: '% of GDP'
+  our_value: -4.3
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/budget-deficit
+  te_period: 2025-FY (% of GDP)
+  te_unit: '% of GDP'
+  te_value: -4.3
+  value_match: true
+central-bank-balance:
+  fix_summary: indicator_sources.series_id updated boe:rpwb55a -> boe:LPMBL22 (the actual provider series). Added scope-difference note.
+  fixed: true
+  flag: needs-attention
+  notes: Source matches (BoE). LPMBL22 is BoE total balance sheet monthly NSA (Mar 2026 = 644,005 Mn). TE central-bank-balance-sheet uses BoE weekly Bank Return total (~774,297 Mn May 13 2026) — different
+    scope (includes APF, other items). Same source family; scope/aggregation gap. RPWB55A returns only ~97k (sub-component). Investigated 10+ BoE IADB candidate codes (RPWB55A/RPWB56A=638k/RPWB67A=103k/LPMBL22=644k/RPMTBSA=3.2M/RPWB54A=invalid
+    etc.) — none directly match TE's 774297. TE may be computing the total from multiple weekly Bank Return rows.
+  our_period: '2026-04-30'
+  our_series: boe:LPMBL22
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: 641.8
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/central-bank-balance
+  te_period: 2026-05-13 (weekly)
+  te_unit: GBP Million
+  te_value: 774297
+  value_match: false
+core-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  notes: DB stores DKC7 CPI-excl. energy/unprocessed-food index (139.2 Mar 2026). YoY = 139.2/134.9 - 1 = 3.19% rounds to TE's 3.1%. Frontend computes YoY.
+  our_period: '2026-03-31'
+  our_series: ons:dkc7
+  our_source: ons
+  our_unit: Index
+  our_value: 139.2
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/core-cpi
+  te_period: 2026-03 (% YoY)
+  te_unit: '% YoY'
+  te_value: 3.1
+  value_match: true
+corporate-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 25%, matches TE.
+  our_period: '2026-12-31'
+  our_series: GB:corporate-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 25
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/corporate-tax-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+corruption-index:
+  fix_summary: 'curated/gb.yaml corruption-index 71 -> 70 to match TE/Transparency International CPI 2025 (TE: ''United Kingdom scored 70 points'').'
+  fixed: true
+  flag: ok
+  notes: Was 71 in DB; TE/TI 2025 CPI = 70. Fixed.
+  our_period: '2025-12-31'
+  our_series: GB:corruption-index
+  our_source: curated
+  our_unit: Points
+  our_value: 70
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/corruption-index
+  te_period: '2025'
+  te_unit: null
+  te_value: 70
+  value_match: true
+corruption-rank:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 20, matches TE 2025 CPI ranking.
+  our_period: '2025-12-31'
+  our_series: GB:corruption-rank
+  our_source: curated
+  our_unit: Rank
+  our_value: 20
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/corruption-rank
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+credit-rating:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated TE-score 92.5; matches TE (no description on TE page).
+  our_period: '2026-04-01'
+  our_series: GB:credit-rating
+  our_source: curated
+  our_unit: Rating
+  our_value: 92.5
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/credit-rating
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+current-account:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'TE description: ''current account deficit widened to £18.4 billion ... in Q4 2025''. DB ons:hbop = -18.39 Q4 2025. Exact match (auto-parser missed TE_value because format starts with ''£'' not
+    ''to'').'
+  our_period: '2025-12-31'
+  our_series: ons:hbop
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: -18.39
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/current-account
+  te_period: 2025-Q4
+  te_unit: GBP Billion
+  te_value: -18.4
+  value_match: true
+employed-persons:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: DB MGRZ matches TE 34,328 Thousand (Feb 2026; ONS dates as Jan 2026 rolling-3-mo).
+  our_period: '2026-01-31'
+  our_series: ons:mgrz
+  our_source: ons
+  our_unit: Thousand
+  our_value: 34328
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/employed-persons
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+employment-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: DB LF24 = 75% (Feb 2026; ONS labels as Jan 2026). Exact match TE 75.0%.
+  our_period: '2026-01-31'
+  our_series: ons:lf24
+  our_source: ons
+  our_unit: '%'
+  our_value: 75
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/employment-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+exports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'TE: ''Exports rose 0.2% MoM to £79.13 billion''. DB IKBH = 79.13. Exact.'
+  our_period: '2026-03-31'
+  our_series: ons:ikbh
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: 79.13
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/exports
+  te_period: 2026-03
+  te_unit: GBP Billion
+  te_value: 79.13
+  value_match: true
+food-inflation:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  notes: 'DB stores D7BU (Food & Non-Alcoholic Bev Index, 140.8 Mar 2026). TE: ''Cost of food increased 3.7% YoY in March 2026''. YoY computed 140.8/136.1 - 1 = 3.45%; TE rounds to 3.7% (likely uses different
+    index level series). Source matches; minor calc diff. Frontend transform OK.'
+  our_period: '2026-03-31'
+  our_series: ons:d7bu
+  our_source: ons
+  our_unit: Index
+  our_value: 140.8
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/food-inflation
+  te_period: 2026-03 (% YoY)
+  te_unit: '% YoY'
+  te_value: 3.7
+  value_match: true
+gdp:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Our value 3686.03 (current WB NY.GDP.MKTP.CD 2024). TE shows older vintage 3643.83 Bn USD. Within ±5%.
+  our_period: '2024-12-31'
+  our_series: NY.GDP.MKTP.CD
+  our_source: worldbank
+  our_unit: Billion USD
+  our_value: 3686.03
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/gdp
+  te_period: '2024'
+  te_unit: Billion USD
+  te_value: 3643.83
+  value_match: true
+gdp-per-capita:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: Our 53,246.37 matches WB API exactly for 2024 (NY.GDP.PCAP.CD). TE shows 47,265 — stale vintage ~12% off. Our data is fresher. Flag for user visibility, source unchanged.
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.CD
+  our_source: worldbank
+  our_unit: USD
+  our_value: 53246.37
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/gdp-per-capita
+  te_period: '2024'
+  te_unit: USD
+  te_value: 47265
+  value_match: false
+gdp-per-capita-ppp:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: Our 62,009.49 matches WB API exactly for 2024 (NY.GDP.PCAP.PP.CD). TE shows 52,517.98 — stale vintage. Our data is more current.
+  our_period: '2024-12-31'
+  our_series: NY.GDP.PCAP.PP.CD
+  our_source: worldbank
+  our_unit: USD
+  our_value: 62009.49
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/gdp-per-capita-ppp
+  te_period: '2024'
+  te_unit: USD PPP
+  te_value: 52517.98
+  value_match: false
+gdp-real:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: ONS ABMI live API still ends Q4 2025 (706,067 Mn = 706.07 Bn). TE shows Q1 2026 preview (710,896). DB is current vs ONS source-of-truth. Within tolerance, will converge on next ONS release.
+  our_period: '2025-12-31'
+  our_series: ons:abmi
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: 706.07
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/gdp-real
+  te_period: 2026-Q1
+  te_unit: GBP Million
+  te_value: 710896
+  value_match: true
+government-debt:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: DB ons:hf6w = 2910.8 Bn Mar 2026, exact match TE 2910.8.
+  our_period: '2026-03-31'
+  our_series: ons:hf6w
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: 2910.8
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/government-debt
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+hospital-beds:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: OECD 2023 curated 2.44, exact match TE.
+  our_period: '2023-12-31'
+  our_series: GB:hospital-beds
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 2.44
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/hospital-beds
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+hospitals:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: WHO 2022 curated 29.73, exact match TE.
+  our_period: '2022-12-31'
+  our_series: GB:hospitals
+  our_source: curated
+  our_unit: per one million people
+  our_value: 29.73
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/hospitals
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+imports:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'TE: ''Imports rose 5.3% MoM to £88.78 billion''. DB IKBI = 88.78. Exact.'
+  our_period: '2026-03-31'
+  our_series: ons:ikbi
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: 88.78
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/imports
+  te_period: 2026-03
+  te_unit: GBP Billion
+  te_value: 88.78
+  value_match: true
+industrial-production:
+  fix_summary: 'MAJOR FIX: K22A and K222 series were SWAPPED. K22A is ''IOP:C:MANUFACTURING'' per ONS, K222 is ''IOP:B-E:PRODUCTION''. industrial-production was fetching MANUFACTURING data and manufacturing-production
+    was fetching whole-production data. Swapped in ons.py + cleared+refetched 1878 data points; indicator_sources.series_id updated boe:k22a -> ons:k222.'
+  fixed: true
+  flag: frontend-only
+  notes: 'After swap: K222 production index Mar 2026 = 98.7, MoM = -0.20% (matches ONS press release ''monthly production output decreased by 0.2%''), YoY = 98.7/98.7 = 0.0% (matches TE ''stalled year-on-year''
+    / TE inventory te_value=0). Frontend computes YoY for display.'
+  our_period: '2026-03-31'
+  our_series: ons:k222
+  our_source: ons
+  our_unit: Index
+  our_value: 98.7
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/industrial-production
+  te_period: 2026-03 (% YoY)
+  te_unit: '% YoY'
+  te_value: 0.0
+  value_match: true
+inflation-cpi:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  notes: DB D7BT index 141.0 Mar 2026, YoY = 3.30% matches TE 3.3%.
+  our_period: '2026-03-31'
+  our_series: ons:d7bt
+  our_source: ons
+  our_unit: Index
+  our_value: 141
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/inflation-cpi
+  te_period: 2026-03 (% YoY)
+  te_unit: null
+  te_value: 3.3
+  value_match: true
+interest-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: BoE IUDBEDR 3.75% (Apr/May 2026) matches TE.
+  our_period: '2026-05-31'
+  our_series: boe:iudbedr
+  our_source: ons
+  our_unit: '%'
+  our_value: 3.75
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/interest-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+labor-force-participation-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: ONS LF22 = 79.0% Jan 2026 (TE labels Feb 2026), exact match.
+  our_period: '2026-01-31'
+  our_series: ons:lf22
+  our_source: ons
+  our_unit: '%'
+  our_value: 79
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/labor-force-participation-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+manufacturing-production:
+  fix_summary: 'Part of K22A/K222 swap fix (see industrial-production). Manufacturing-production now fetches K22A (Section C: Manufacturing) properly.'
+  fixed: true
+  flag: frontend-only
+  notes: 'After swap: K22A Mar 2026 = 101.1, MoM = 101.1/99.9 - 1 = +1.2% (matches ONS press release ''strength in manufacturing up 1.2%'' and TE-quoted 1.2%). TE labels this ''year-on-year'' in its description
+    but the actual ONS headline for Mar 2026 manufacturing is MoM +1.2%. YoY (Mar 2026 vs Mar 2025) = 101.1/99.0 = +2.1%. Source K22A is correct now; minor cosmetic label issue with TE.'
+  our_period: '2026-03-31'
+  our_series: ons:k22a
+  our_source: ons
+  our_unit: Index
+  our_value: 101.1
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/manufacturing-production
+  te_period: 2026-03 (% MoM, TE-labelled YoY)
+  te_unit: '% (TE describes as YoY but ONS reports MoM)'
+  te_value: 1.2
+  value_match: true
+medical-doctors:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: OECD 2022 curated 3.16, matches TE.
+  our_period: '2022-12-31'
+  our_series: GB:medical-doctors
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 3.16
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/medical-doctors
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+military-expenditure:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: SIPRI 2025 curated 88977.5 USD Mn, exact match TE.
+  our_period: '2025-12-31'
+  our_series: GB:military-expenditure
+  our_source: curated
+  our_unit: USD Million
+  our_value: 88977.5
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/military-expenditure
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+minimum-wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 12.71 GBP/Hour (NLW April 2026), exact match. DWP is the original source authority; we store it as 'curated' which is the correct provider class for static rates. Auto-audit FALSE
+    POSITIVE on source_match (LABEL_TO_CODE mapping suggested 'ons' for DWP — fixed in audit_gb_reaudit.py).
+  our_period: '2026-04-01'
+  our_series: GB:minimum-wages
+  our_source: curated
+  our_unit: GBP/Hour
+  our_value: 12.71
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/minimum-wages
+  te_period: '2026'
+  te_unit: null
+  te_value: 12.71
+  value_match: true
+mining-production:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  notes: DB K224 (B:Mining and Quarrying) Mar 2026 = 83.1. YoY = 83.1/86.5 - 1 = -3.93% matches TE -3.90%. Auto-parser caught '854.30 percent' (all-time high in Feb 1973) instead of headline.
+  our_period: '2026-03-31'
+  our_series: ons:k224
+  our_source: ons
+  our_unit: Index
+  our_value: 83.1
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/mining-production
+  te_period: 2026-03 (% YoY)
+  te_unit: null
+  te_value: -3.9
+  value_match: true
+money-supply-m2:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: DB BoE LPMAUYM = 3,277,270 GBP Million (stored as 3277.27 Bn). TE = 3,199,976 Mn — 2.4% off, within ±5% tolerance. Same BoE M2 series. Vintage timing diff.
+  our_period: '2026-03-31'
+  our_series: boe:LPMAUYM
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: 3277.27
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/money-supply-m2
+  te_period: 2026-03
+  te_unit: GBP Million
+  te_value: 3199976
+  value_match: true
+mortgage-approvals:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: DB BoE LPMVTVX = 63,531 Mar 2026 (stored as 63.53 Thousand). Exact match TE 63531. Auto-parser caught '4.03%' (effective interest rate) instead of headline.
+  our_period: '2026-03-31'
+  our_series: boe:LPMVTVX
+  our_source: ons
+  our_unit: Thousand
+  our_value: 63.53
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/mortgage-approvals
+  te_period: 2026-03
+  te_unit: count
+  te_value: 63531
+  value_match: true
+nurses:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: OECD 2022 curated 8.71, matches TE.
+  our_period: '2022-12-31'
+  our_series: GB:nurses
+  our_source: curated
+  our_unit: per 1000 people
+  our_value: 8.71
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/nurses
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+personal-income-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 45% (UK additional rate), exact match.
+  our_period: '2026-12-31'
+  our_series: GB:personal-income-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 45
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/personal-income-tax-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+population:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: ONS EBAQ 69.6 M (2026 latest projection), within tolerance of TE 69.5 M (2025).
+  our_period: '2026-03-31'
+  our_series: ons:ebaq
+  our_source: ons
+  our_unit: Millions
+  our_value: 69.6
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/population
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+ppi:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: ONS GB7S 145 (Mar 2026), exact match TE.
+  our_period: '2026-03-31'
+  our_series: ons:gb7s
+  our_source: ons
+  our_unit: Index
+  our_value: 145
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/ppi
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+retail-sales:
+  fix_summary: null
+  fixed: false
+  flag: frontend-only
+  notes: TE 'retail sales rose 0.7% MoM Mar 2026'. DB J5EK index 103.7. MoM = (103.7/103.0 - 1) = 0.68% ≈ 0.7%. Frontend transform.
+  our_period: '2026-03-31'
+  our_series: ons:j5ek
+  our_source: ons
+  our_unit: Index
+  our_value: 103.7
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/retail-sales
+  te_period: 2026-03 (% MoM)
+  te_unit: null
+  te_value: 0.7
+  value_match: true
+retirement-age-men:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 66 years; matches TE.
+  our_period: '2026-12-31'
+  our_series: GB:retirement-age-men
+  our_source: curated
+  our_unit: Years
+  our_value: 66
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/retirement-age-men
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+retirement-age-women:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 66 years; matches TE.
+  our_period: '2026-12-31'
+  our_series: GB:retirement-age-women
+  our_source: curated
+  our_unit: Years
+  our_value: 66
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/retirement-age-women
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+sales-tax-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 20% (UK VAT), exact match.
+  our_period: '2026-12-31'
+  our_series: GB:sales-tax-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 20
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/sales-tax-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+social-security-rate:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 25.8% (NI combined), exact match.
+  our_period: '2026-12-31'
+  our_series: GB:social-security-rate
+  our_source: curated
+  our_unit: '%'
+  our_value: 25.8
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/social-security-rate
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+social-security-rate-companies:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 13.8% (NI Employer), exact match.
+  our_period: '2026-12-31'
+  our_series: GB:social-security-rate-companies
+  our_source: curated
+  our_unit: '%'
+  our_value: 13.8
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/social-security-rate-companies
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+social-security-rate-employees:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: Static curated 12% (NI Employee), exact match.
+  our_period: '2026-12-31'
+  our_series: GB:social-security-rate-employees
+  our_source: curated
+  our_unit: '%'
+  our_value: 12
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/social-security-rate-employees
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+trade-balance:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: 'TE: ''trade deficit widened to £9.66 billion in March 2026''. DB IKBJ = -9.66 Bn. Exact match. Auto-parser caught ''£5.34 billion'' (prior month) instead.'
+  our_period: '2026-03-31'
+  our_series: ons:ikbj
+  our_source: ons
+  our_unit: Billion GBP
+  our_value: -9.66
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/trade-balance
+  te_period: 2026-03
+  te_unit: GBP Billion
+  te_value: -9.66
+  value_match: true
+unemployed-persons:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: 'ONS MGSC live API ends Jan 2026 = 1780 Thousand. TE shows Feb 2026 preview at 1667.40. DB matches ONS source-of-truth; will converge on next ONS release (~19 May 2026). Status: flagged_stale_upstream.'
+  our_period: '2026-01-31'
+  our_series: ons:mgsc
+  our_source: ons
+  our_unit: Thousand
+  our_value: 1780
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/unemployed-persons
+  te_period: 2026-02
+  te_unit: null
+  te_value: 1667.4
+  value_match: false
+unemployment:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: ONS MGSX 4.9% Jan 2026 matches TE 4.9% Feb 2026.
+  our_period: '2026-01-31'
+  our_series: ons:mgsx
+  our_source: ons
+  our_unit: '%'
+  our_value: 4.9
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/unemployment
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+wages:
+  fix_summary: null
+  fixed: false
+  flag: ok
+  notes: ONS KAB9 745 GBP/Week Feb 2026, exact match TE.
+  our_period: '2026-02-28'
+  our_series: ons:kab9
+  our_source: ons
+  our_unit: GBP/Week
+  our_value: 745
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/wages
+  te_period: null
+  te_unit: null
+  te_value: null
+  value_match: null
+youth-unemployment-rate:
+  fix_summary: null
+  fixed: false
+  flag: needs-attention
+  notes: 'ONS MGWY live API ends Jan 2026 = 15.8%. TE shows Feb 2026 preview at 14.3%. Same upstream gap as unemployment indicators. Status: flagged_stale_upstream.'
+  our_period: '2026-01-31'
+  our_series: ons:mgwy
+  our_source: ons
+  our_unit: '%'
+  our_value: 15.8
+  source_match: true
+  te_label: null
+  te_page: https://tradingeconomics.com/united-kingdom/youth-unemployment-rate
+  te_period: 2026-02
+  te_unit: null
+  te_value: 14.3
+  value_match: false

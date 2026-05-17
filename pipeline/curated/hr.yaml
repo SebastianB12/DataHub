@@ -8,10 +8,10 @@ corporate-tax-rate:
   note: "Reduced 10% for revenues <1M EUR."
 
 personal-income-tax-rate:
-  value: 35.4
+  value: 30
   date: "2026-12-31"
   unit: "%"
-  note: "Top marginal (incl. surtax)."
+  note: "Top marginal rate (re-audit 2026-05-17: TE shows 30%, prior 35.4% included old surtax which was abolished)."
 
 sales-tax-rate:
   value: 25
@@ -40,15 +40,16 @@ retirement-age-men:
   unit: "Years"
 
 retirement-age-women:
-  value: 63.25
+  value: 63.75
   date: "2026-12-31"
   unit: "Years"
+  note: "Re-audit 2026-05-17: TE shows 63.75 (2026 step up)."
 
 minimum-wages:
-  value: 970
+  value: 1050
   date: "2026-01-31"
   unit: "EUR/Month"
-  note: "Minimalna plaća 2026 (Kroatien hat 2023 EUR eingeführt)."
+  note: "Minimalna plaća 2026 (Kroatien hat 2023 EUR eingeführt). Re-audit 2026-05-17: TE shows 1050 EUR (latest govt decree)."
 
 corruption-index:
   value: 47

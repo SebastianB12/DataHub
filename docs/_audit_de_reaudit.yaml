@@ -1,0 +1,1231 @@
+bankruptcies:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 1919.0
+  te_unit: Companies
+  te_period: January
+  our_source: destatis
+  our_series: 52411-0011
+  our_value: 1919.0
+  our_period: '2026-01-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+banks-balance-sheet:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 11379.5
+  te_unit: EUR Billion
+  te_period: March
+  our_source: bundesbank
+  our_series: BBBK10.M.TXI355
+  our_value: 9979.82
+  our_period: '2026-02-28'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: ok
+  note: Same series, unit-scale difference (Million vs Billion EUR).
+budget-deficit:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2.7
+  te_unit: '%'
+  te_period: '2025'
+  our_source: destatis
+  our_series: 81000-0031
+  our_value: -119.15
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows % of GDP (-2.7%); DB stores Finanzierungssaldo level (-119.15 bn
+    EUR). Ratio -119.15/4410 GDP = -2.7%. Frontend computes the ratio.
+capacity-utilization:
+  te_label: European Commission
+  te_normalized_source: eurostat
+  te_value: 77.4
+  te_unit: percent
+  te_period: 2026-Q1
+  our_source: eurostat
+  our_series: ei_bsin_q_r2:BS-ICU-PC
+  our_value: 78.4
+  our_period: '2026-06-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+central-bank-balance:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 2345.18
+  te_unit: EUR Billion
+  te_period: May
+  our_source: bundesbank
+  our_series: BBBK11.D.TTA032
+  our_value: 2327.9
+  our_period: '2026-04-24'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+changes-in-inventories:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 21.01
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 81000-0020:VGR034
+  our_value: 21.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+consumer-spending:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 484.81
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 81000-0020
+  our_value: 484.81
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+core-cpi:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 120.6
+  te_unit: points
+  te_period: April
+  our_source: destatis
+  our_series: 61111-0006:CC13-63E
+  our_value: 120.6
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+corporate-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 30.0
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:corporate-tax-rate
+  our_value: 30.0
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+corruption-index:
+  te_label: Transparency International
+  te_normalized_source: curated
+  te_value: 77.0
+  te_unit: '2025'
+  te_period: null
+  our_source: curated
+  our_series: DE:corruption-index
+  our_value: 77.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+corruption-rank:
+  te_label: Transparency International
+  te_normalized_source: curated
+  te_value: 10.0
+  te_unit: null
+  te_period: null
+  our_source: curated
+  our_series: DE:corruption-rank
+  our_value: 10.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+cpi-clothing:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 112.7
+  te_unit: points
+  te_period: April
+  our_source: destatis
+  our_series: 61111-0004#CC13-03
+  our_value: 112.7
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+cpi-education:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 124.4
+  te_unit: points
+  te_period: April
+  our_source: destatis
+  our_series: 61111-0004#CC13-10
+  our_value: 124.4
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+cpi-food:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 138.6
+  te_unit: points
+  te_period: April
+  our_source: destatis
+  our_series: 61111-0004#CC13-01
+  our_value: 138.6
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+cpi-housing-utilities:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 119.1
+  te_unit: points
+  te_period: April
+  our_source: destatis
+  our_series: 61111-0004#CC13-04
+  our_value: 119.1
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+cpi-recreation-and-culture:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 117.9
+  te_unit: points
+  te_period: April
+  our_source: destatis
+  our_series: 61111-0004#CC13-09
+  our_value: 117.9
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+cpi-transportation:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 137.4
+  te_unit: points
+  te_period: 2026-04
+  our_source: destatis
+  our_series: 61111-0004#CC13-07
+  our_value: 137.4
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+credit-rating:
+  te_label: null
+  te_normalized_source: null
+  te_value: null
+  te_unit: null
+  te_period: null
+  our_source: curated
+  our_series: DE:credit-rating
+  our_value: 100.0
+  our_period: '2026-04-01'
+  source_match: null
+  value_match: null
+  fixed: false
+  fix_summary: null
+  flag: te-source-not-emitted
+  note: TE page does not emit a source-name tag; curated snapshot retained.
+current-account:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 23.6
+  te_unit: billion
+  te_period: 2026-03
+  our_source: bundesbank
+  our_series: BBFBOPV.M.N.DE.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL
+  our_value: 23635.26
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+current-account-to-gdp:
+  te_label: EUROSTAT
+  te_normalized_source: eurostat
+  te_value: 4.5
+  te_unit: '%'
+  te_period: '2025'
+  our_source: eurostat
+  our_series: tipsbp20
+  our_value: null
+  our_period: null
+  source_match: true
+  value_match: null
+  fixed: false
+  fix_summary: null
+  flag: ok
+disposable-personal-income:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 670.87
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 81000-0010
+  our_value: 670.87
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+employed-persons:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 45519.0
+  te_unit: Thousand
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 13321-0001
+  our_value: 45519.0
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+employment-rate:
+  te_label: EUROSTAT
+  te_normalized_source: eurostat
+  te_value: 77.7
+  te_unit: percent
+  te_period: 2025-Q4
+  our_source: eurostat
+  our_series: lfsa_ergan:Y15-64
+  our_value: 77.2
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+energy-inflation:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 10.1
+  te_unit: '%'
+  te_period: 2026-04
+  our_source: destatis
+  our_series: 61111-0006:CC13-65D
+  our_value: 157.4
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+export-prices:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 117.9
+  te_unit: points
+  te_period: March
+  our_source: destatis
+  our_series: 61421-0002
+  our_value: 117.9
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+exports:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 135.8
+  te_unit: billion
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 51000-0002
+  our_value: 150.27
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: true
+  fix_summary: 'Refreshed Destatis 51000-0002: now Mar 2026 (150.27 bn EUR NSA). TE
+    Mar 2026 SA = 135.8 — methodology drift only.'
+  flag: methodology-drift
+  note: TE shows calendar/seasonally-adjusted exports (~135.8 bn EUR); DB stores NSA
+    originals (150.27 bn EUR for March). Both from Destatis 51000-0002 — methodology
+    choice, not a TE-conformity violation.
+factory-orders:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 5.0
+  te_unit: '%'
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 42151-0001
+  our_value: 122.8
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+food-inflation:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 1.5
+  te_unit: percent
+  te_period: 2026-04
+  our_source: destatis
+  our_series: 61111-0004#CC13-01
+  our_value: 138.6
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+foreign-exchange-reserves:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 513150.0
+  te_unit: EUR Million
+  te_period: April
+  our_source: bundesbank
+  our_series: BBFI1.M.N.DE.W1.S121.S1.LE.A.FA.R.F._Z.X1._X.N
+  our_value: 518.69
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+gdp:
+  te_label: World Bank
+  te_normalized_source: worldbank
+  te_value: 4659.93
+  te_unit: billion
+  te_period: '2024'
+  our_source: worldbank
+  our_series: NY.GDP.MKTP.CD
+  our_value: 4685.59
+  our_period: '2024-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+gdp-per-capita:
+  te_label: World Bank
+  te_normalized_source: worldbank
+  te_value: 44108.7
+  te_unit: US dollars
+  te_period: '2024'
+  our_source: worldbank
+  our_series: NY.GDP.PCAP.CD
+  our_value: 56103.73
+  our_period: '2024-12-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: wb-vintage
+  note: Source = World Bank NY.GDP.PCAP.CD. DB has latest WB vintage (56103.73 USD
+    2024); TE shows older WB snapshot (44108.7). Source label OK.
+gdp-per-capita-ppp:
+  te_label: World Bank
+  te_normalized_source: worldbank
+  te_value: 62829.8
+  te_unit: US dollars
+  te_period: '2024'
+  our_source: worldbank
+  our_series: NY.GDP.PCAP.PP.CD
+  our_value: 73551.93
+  our_period: '2024-12-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: wb-vintage
+  note: Source = World Bank NY.GDP.PCAP.PP.CD. DB latest WB vintage (73551.93 USD);
+    TE shows older snapshot. Source label OK.
+gdp-real:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 0.3
+  te_unit: '%'
+  te_period: 2026-Q1
+  our_source: destatis
+  our_series: 81000-0020
+  our_value: 905.32
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+government-debt:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2661549.0
+  te_unit: EUR Million
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 71311-0001
+  our_value: 2661549.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+government-debt-total:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2661549.0
+  te_unit: EUR Million
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 71311-0001
+  our_value: 2661549.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+government-spending:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 209.33
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 81000-0020
+  our_value: 209.33
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+government-spending-eur:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 209.33
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: eurostat
+  our_series: namq_10_gdp:P3_S13
+  our_value: 258.25
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: alias-slug
+  note: TE has no separate 'EUR' slug — both 'government-spending' and 'government-spending-eur'
+    map to /germany/government-spending which shows real-volume 209.33 (matches our
+    Destatis 81000-0020 row for 'government-spending'). The 'eur' variant stores nominal
+    EUR (Eurostat namq_10_gdp P3_S13). Frontend-side semantic split.
+government-spending-to-gdp:
+  te_label: EUROSTAT
+  te_normalized_source: eurostat
+  te_value: 50.5
+  te_unit: percent of GDP
+  te_period: '2025'
+  our_source: eurostat
+  our_series: gov_10a_main:TE:PC_GDP:S13
+  our_value: 50.5
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+gross-fixed-capital-formation:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 177.05
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: destatis
+  our_series: 81000-0020
+  our_value: 177.05
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+hospital-beds:
+  te_label: null
+  te_normalized_source: null
+  te_value: null
+  te_unit: null
+  te_period: null
+  our_source: curated
+  our_series: DE:hospital-beds
+  our_value: 7.66
+  our_period: '2023-12-31'
+  source_match: null
+  value_match: null
+  fixed: false
+  fix_summary: null
+  flag: te-source-not-emitted
+  note: TE page does not emit a source-name tag; curated snapshot retained.
+hospitals:
+  te_label: null
+  te_normalized_source: null
+  te_value: null
+  te_unit: null
+  te_period: null
+  our_source: curated
+  our_series: DE:hospitals
+  our_value: 35.46
+  our_period: '2023-12-31'
+  source_match: null
+  value_match: null
+  fixed: false
+  fix_summary: null
+  flag: te-source-not-emitted
+  note: TE page does not emit a source-name tag; curated snapshot retained.
+house-price-index:
+  te_label: Europace AG, Germany
+  te_normalized_source: curated
+  te_value: 221.58
+  te_unit: points
+  te_period: April
+  our_source: eurostat
+  our_series: prc_hpi_q:INX
+  our_value: 153.7
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: documented-gap
+  note: TE uses Europace AG (private/licensed vendor data, 221.58 points April 2026).
+    EconPulse uses Eurostat prc_hpi_q as substitute. Cannot replicate without Europace
+    license.
+import-prices:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 116.9
+  te_unit: points
+  te_period: March
+  our_source: destatis
+  our_series: 61411-0002
+  our_value: 116.9
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+imports:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 121.5
+  te_unit: billion
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 51000-0002
+  our_value: 130.43
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: true
+  fix_summary: 'Refreshed Destatis 51000-0002: now Mar 2026 (130.43 bn EUR NSA).'
+  flag: methodology-drift
+  note: TE shows calendar-adjusted imports; DB stores NSA originals (130.4 vs TE 121.5).
+    Same Destatis 51000-0002.
+industrial-production:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2.8
+  te_unit: '%'
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 42153-0001
+  our_value: 100.7
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+inflation-cpi:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2.9
+  te_unit: '%'
+  te_period: 2026-04
+  our_source: destatis
+  our_series: 61111-0002
+  our_value: 125.2
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: false
+  fixed: true
+  fix_summary: 'Refreshed Destatis 61111-0002: now Apr 2026 = 125.2 (2020=100). YoY
+    April = +2.88%, matches TE 2.9%.'
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+job-vacancies:
+  te_label: Bundesagentur für Arbeit
+  te_normalized_source: curated
+  te_value: 641.21
+  te_unit: Thousand
+  te_period: April
+  our_source: eurostat
+  our_series: jvs_q_nace2:JVR
+  our_value: 2.6
+  our_period: '2025-12-31'
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: ba-integration-pending
+  note: TE shows Bundesagentur für Arbeit 'Stellenmeldungen' (641 Thousand). DB uses
+    Eurostat JVR (% rate). BA API integration not yet implemented.
+labor-force-participation-rate:
+  te_label: EUROSTAT
+  te_normalized_source: eurostat
+  te_value: 80.8
+  te_unit: percent
+  te_period: 2025-Q4
+  our_source: eurostat
+  our_series: lfsi_emp_q:ACT
+  our_value: 80.3
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+labour-costs:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 124.27
+  te_unit: points
+  te_period: 2025-Q4
+  our_source: bundesbank
+  our_series: BBDE1.Q.DE.Y.LCA1.A2N100000.A.L.I20.A
+  our_value: null
+  our_period: null
+  source_match: true
+  value_match: null
+  fixed: false
+  fix_summary: null
+  flag: ok
+loans-to-private-sector:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 1975.51
+  te_unit: EUR Billion
+  te_period: 2025-Q4
+  our_source: bundesbank
+  our_series: BBBK10.M.TXI358
+  our_value: 3901.36
+  our_period: '2026-02-28'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: ok
+  note: Same series, unit-scale difference (Million vs Billion EUR).
+long-term-unemployment-rate:
+  te_label: EUROSTAT
+  te_normalized_source: eurostat
+  te_value: 1.1
+  te_unit: percent
+  te_period: 2025-Q4
+  our_source: eurostat
+  our_series: une_ltu_q:LTU
+  our_value: 1.1
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+manufacturing-production:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 3.6
+  te_unit: percent
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 42153-0001
+  our_value: 101.8
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+medical-doctors:
+  te_label: OECD
+  te_normalized_source: curated
+  te_value: 4.98
+  te_unit: per 1000 people
+  te_period: '2021'
+  our_source: curated
+  our_series: DE:medical-doctors
+  our_value: 4.98
+  our_period: '2021-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+military-expenditure:
+  te_label: SIPRI
+  te_normalized_source: curated
+  te_value: 113585.9
+  te_unit: USD Million
+  te_period: '2025'
+  our_source: curated
+  our_series: DE:military-expenditure
+  our_value: 113586.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+minimum-wages:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 13.9
+  te_unit: EUR/Hour
+  te_period: '2026'
+  our_source: destatis
+  our_series: DE:minimum-wages
+  our_value: 13.9
+  our_period: '2026-01-01'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+mining-production:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 4.8
+  te_unit: percent
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 42153-0001
+  our_value: 89.9
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+money-supply-m1:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 2906.0
+  te_unit: EUR Billion
+  te_period: February
+  our_source: bundesbank
+  our_series: BBBK10.M.TXI301
+  our_value: 2912.3
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+money-supply-m3:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 4145.0
+  te_unit: EUR Billion
+  te_period: March
+  our_source: bundesbank
+  our_series: BBBS2.M.DB.Y.U.M30A.X.1.U2.2300.Z01.E
+  our_value: 4145.0
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+nurses:
+  te_label: OECD
+  te_normalized_source: curated
+  te_value: 14.41
+  te_unit: per 1000 people
+  te_period: '2023'
+  our_source: curated
+  our_series: DE:nurses
+  our_value: 14.41
+  our_period: '2023-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+personal-income-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 45.0
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:personal-income-tax-rate
+  our_value: 45.0
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+population:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 83.6
+  te_unit: million people
+  te_period: '2024'
+  our_source: destatis
+  our_series: 12411-0001
+  our_value: 83.58
+  our_period: '2024-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+ppi:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 126.9
+  te_unit: points
+  te_period: March
+  our_source: destatis
+  our_series: 61241-0002
+  our_value: 126.9
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+productivity:
+  te_label: Deutsche Bundesbank
+  te_normalized_source: bundesbank
+  te_value: 95.6
+  te_unit: points
+  te_period: February
+  our_source: bundesbank
+  our_series: BBDE1.M.DE.Y.BA10.A2P200000.F.C.I21.A
+  our_value: 94.9
+  our_period: '2026-03-01'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+retail-sales:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2.0
+  te_unit: '%'
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 45212-0005
+  our_value: 120.0
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+retirement-age-men:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 66.33
+  te_unit: Years
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:retirement-age-men
+  our_value: 66.33
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+retirement-age-women:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 66.33
+  te_unit: Years
+  te_period: '2026'
+  our_source: curated
+  our_series: DE:retirement-age-women
+  our_value: 66.33
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+sales-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 19.0
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:sales-tax-rate
+  our_value: 19.0
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+services-inflation:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 2.8
+  te_unit: '%'
+  te_period: 2026-04
+  our_source: destatis
+  our_series: 61111-0006
+  our_value: 120.7
+  our_period: '2026-04-30'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: frontend-only
+  note: TE shows %/YoY/MoM; DB stores level/index. Frontend computes ratio.
+social-security-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 38.74
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:social-security-rate
+  our_value: 38.74
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+social-security-rate-companies:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 19.42
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:social-security-rate-companies
+  our_value: 19.42
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+social-security-rate-employees:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 19.33
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:social-security-rate-employees
+  our_value: 19.33
+  our_period: '2026-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+terrorism-index:
+  te_label: Institute for Economics and Peace
+  te_normalized_source: curated
+  te_value: 4.45
+  te_unit: Points
+  te_period: '2025'
+  our_source: curated
+  our_series: DE:terrorism-index
+  our_value: 4.45
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+trade-balance:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 14.3
+  te_unit: billion
+  te_period: 2026-03
+  our_source: destatis
+  our_series: 51000-0002
+  our_value: 19.84
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: false
+  fixed: true
+  fix_summary: 'Refreshed: Mar 2026 = 19.84 bn EUR (NSA, computed exports-imports).'
+  flag: methodology-drift
+  note: TE shows SA Außenhandel-Saldo (14.3 bn); DB computes from NSA exports-imports
+    (19.84 bn). Source/series correct.
+unemployed-persons:
+  te_label: Bundesagentur für Arbeit
+  te_normalized_source: curated
+  te_value: 3.006
+  te_unit: million
+  te_period: 2026-04
+  our_source: eurostat
+  our_series: une_rt_m:TOTAL:THS_PER
+  our_value: 1760.0
+  our_period: '2026-03-31'
+  source_match: false
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: ba-integration-pending
+  note: TE shows BA registered unemployed (3.006 million); DB stores Eurostat ILO
+    concept (1.76 million). BA-API integration pending.
+unemployment:
+  te_label: Bundesagentur für Arbeit
+  te_normalized_source: curated
+  te_value: 6.4
+  te_unit: '%'
+  te_period: 2026-04
+  our_source: destatis
+  our_series: 13211-0002
+  our_value: 6.4
+  our_period: '2026-04-30'
+  source_match: false
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: source-label-drift
+  note: TE attributes to BA; DB uses Destatis 13211-0002 which publishes BA's identical
+    6.4% headline. Source-label drift only — value matches exactly.
+wages:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 4701.0
+  te_unit: EUR/Month
+  te_period: '2024'
+  our_source: destatis
+  our_series: 62361-0007
+  our_value: 100.4
+  our_period: '2026-02-28'
+  source_match: true
+  value_match: false
+  fixed: false
+  fix_summary: null
+  flag: wrong-series
+  note: DB uses Destatis 62361-0007 (Bruttoverdienste Index 2025=100); TE shows annual
+    gross monthly earnings EUR/Month (4701 EUR for 2024) from 62321-0001 Verdiensterhebung.
+    62321-0001 exceeds Destatis sync size cap; cannot fetch directly. Coverage gap.
+weapons-sales:
+  te_label: SIPRI
+  te_normalized_source: curated
+  te_value: 2049.0
+  te_unit: SIPRI TIV Million
+  te_period: '2024'
+  our_source: curated
+  our_series: DE:weapons-sales
+  our_value: 2049.0
+  our_period: '2024-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+withholding-tax-rate:
+  te_label: Bundeszentralamt für Steuern
+  te_normalized_source: curated
+  te_value: 0.0
+  te_unit: percent
+  te_period: null
+  our_source: curated
+  our_series: DE:withholding-tax-rate
+  our_value: 0.0
+  our_period: '2025-12-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok
+youth-unemployment-rate:
+  te_label: Federal Statistical Office
+  te_normalized_source: destatis
+  te_value: 7.5
+  te_unit: percent
+  te_period: March
+  our_source: destatis
+  our_series: 13231-0003
+  our_value: 7.5
+  our_period: '2026-03-31'
+  source_match: true
+  value_match: true
+  fixed: false
+  fix_summary: null
+  flag: ok

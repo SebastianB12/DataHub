@@ -170,6 +170,8 @@ hospitals:
   te_label: "World Health Organization"
   te_url: "https://www.who.int"
   te_page: "https://tradingeconomics.com/united-kingdom/hospital"
+  te_value: 29.73
+  te_period: "2022"
   suggested_source: "curated"
   current_source: "curated"
   conform: true

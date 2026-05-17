@@ -1,0 +1,763 @@
+country: LT
+audit_date: '2026-05-17'
+total_slugs: 66
+validator_status: GREEN — 2161 default rows TE-conform
+fixes_applied:
+- slug: inflation-cpi
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+  reason: TE source=Statistics Lithuania; provider has SVKI series; existing lsd_lt data in DB.
+- slug: cpi-food
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: cpi-clothing
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: cpi-housing-utilities
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: cpi-transportation
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: cpi-recreation-and-culture
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: cpi-education
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: ppi
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: retail-sales
+  change: 'indicator_sources.source: eurostat -> lsd_lt'
+- slug: manufacturing-production
+  change: 'indicator_sources.source: eurostat -> lsd_lt (SDMX-fetched)'
+- slug: government-debt
+  change: 'indicator_sources.source: eurostat -> lsd_lt; unit % of GDP -> Million EUR'
+- slug: current-account-to-gdp
+  change: 'Eurostat extra_params fixed: stk_flow=NET->BAL, s_adj=NSA; +155 data points fetched'
+- slug: disposable-personal-income
+  change: 'Eurostat extra_params fixed: sector=S14_S15->S1; +108 data points fetched'
+- slug: unemployment
+  change: 'indicator_sources.is_default toggled: lsd_lt(annual) -> eurostat(monthly LFS); truth.yaml note: no LDB provider'
+truth_yaml_updates:
+- 'LT.unemployment: source=eurostat with note ''TE attributes LDB but no provider; honest eurostat ei_lmhr_m fetched'''
+- 'LT.current-account: source=eurostat with note ''TE attributes BoL but no provider; honest eurostat bop_c6_q'''
+- 'LT.current-account-to-gdp: same; honest eurostat bop_gdp6_q'
+te_pages_no_data_in_te:
+- credit-rating
+- disposable-personal-income
+- energy-inflation
+- services-inflation
+- services-sentiment
+data_gov_lt_status: Currently 502 Bad Gateway for /datasets/gov/lsd/* — existing lsd_lt data in DB persists from recent runs and remains valid (some monthly slugs stale by 1-2 months until LSD bucket recovers).
+  SDMX endpoint (osp-rs.stat.gov.lt) works fine.
+findings:
+  budget-deficit:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/government-budget
+    te_status: alt
+    te_last_value_text: Lithuania recorded a Government Budget deficit equal to 1.80 percent of the country's Gross Domestic Product in 2025. Government Budget in Lithuania averaged -2.55 percent of GDP
+      from 1995 until 2025,
+    db_source: eurostat
+    db_series_id: gov_10dd_edpt1:B9
+    db_unit: '% of GDP'
+    db_latest_value: -1.8
+    db_latest_date: '2025-12-31'
+  business-confidence:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/business-confidence
+    te_status: real
+    te_last_value_text: Business Confidence in Lithuania decreased to -2 points in April from -1 points in March of 2026. Business Confidence in Lithuania averaged -6.75 points from 2003 until 2026, reaching
+      an all time high
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S8R394_M4020216/TOTAL
+    db_unit: Net balance, %
+    db_latest_value: -2
+    db_latest_date: '2026-04-30'
+  capacity-utilization:
+    te_source_name: European Commission
+    te_url_used: https://tradingeconomics.com/lithuania/capacity-utilization
+    te_status: real
+    te_last_value_text: Capacity Utilization in Lithuania decreased to 69.10 percent in the first quarter of 2026 from 71.20 percent in the fourth quarter of 2025. Capacity Utilization in Lithuania averaged
+      66.23 percent fro
+    db_source: eurostat
+    db_series_id: ei_bsin_q_r2:BS-ICU-PC
+    db_unit: '%'
+    db_latest_value: 71.5
+    db_latest_date: '2026-06-30'
+  changes-in-inventories:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/changes-in-inventories
+    te_status: real
+    te_last_value_text: The stocks of goods held by firms in Lithuania decreased by 829.50 EUR Million in the fourth quarter of 2025. Changes in Inventories in Lithuania averaged 26.12 EUR Million from
+      1995 until 2025, reach
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_islaidu_metodu/S7R192M21101071/p52
+    db_unit: Million EUR (current prices)
+    db_latest_value: -376.4
+    db_latest_date: '2025-12-31'
+  consumer-confidence:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/consumer-confidence
+    te_status: real
+    te_last_value_text: Consumer Confidence in Lithuania remained unchanged at -3 points in April. Consumer Confidence in Lithuania averaged -10.23 points from 2001 until 2026, reaching an all time high
+      of 9.00 points in Mar
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S3R0180_M3230101/Vietove=0
+    db_unit: Net balance, %
+    db_latest_value: -3
+    db_latest_date: '2026-04-30'
+  consumer-spending:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/consumer-spending
+    te_status: real
+    te_last_value_text: Consumer Spending in Lithuania increased to 8860 EUR Million in the fourth quarter of 2025 from 8843.10 EUR Million in the third quarter of 2025. Consumer Spending in Lithuania averaged
+      5853.41 EUR Mi
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_grandininiu_susiejimu/S7R208M21101072/p31_S14
+    db_unit: Million EUR (2020 chain-linked)
+    db_latest_value: 8564
+    db_latest_date: '2025-12-31'
+  core-cpi:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/core-consumer-prices
+    te_status: alt
+    te_last_value_text: Core Consumer Prices in Lithuania increased to 103.05 points in April from 101.87 points in March of 2026. Core Consumer Prices in Lithuania averaged 98.22 points from 1996 until
+      2026, reaching an all
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HI00XEF
+    db_unit: Index
+    db_latest_value: 103.05
+    db_latest_date: '2026-04-30'
+  corporate-tax-rate:
+    te_source_name: State Tax Inspectorate
+    te_url_used: https://tradingeconomics.com/lithuania/corporate-tax-rate
+    te_status: real
+    te_last_value_text: The Corporate Tax Rate in Lithuania stands at 17 percent. Corporate Tax Rate in Lithuania averaged 15.38 percent from 2006 until 2026, reaching an all time high of 20.00 percent
+      in 2009 and a record l
+    db_source: curated
+    db_series_id: LT:corporate-tax-rate
+    db_unit: '%'
+    db_latest_value: 16
+    db_latest_date: '2026-12-31'
+  corruption-index:
+    te_source_name: Transparency International
+    te_url_used: https://tradingeconomics.com/lithuania/corruption-index
+    te_status: real
+    te_last_value_text: Lithuania scored 65 points out of 100 on the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Index in Lithuania averaged 53.48 Points from 1999
+      until 2025, reachin
+    db_source: curated
+    db_series_id: LT:corruption-index
+    db_unit: Points
+    db_latest_value: 61
+    db_latest_date: '2025-12-31'
+  corruption-rank:
+    te_source_name: Transparency International
+    te_url_used: https://tradingeconomics.com/lithuania/corruption-rank
+    te_status: real
+    te_last_value_text: Lithuania is the 28 least corrupt nation out of 180 countries, according to the 2025 Corruption Perceptions Index reported by Transparency International. Corruption Rank in Lithuania
+      averaged 40.96 fr
+    db_source: curated
+    db_series_id: LT:corruption-rank
+    db_unit: Rank
+    db_latest_value: 32
+    db_latest_date: '2025-12-31'
+  cpi-clothing:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/cpi-clothing
+    te_status: real
+    te_last_value_text: CPI Clothing in Lithuania increased to 102.75 points in April from 99.81 points in March of 2026. CPI Clothing in Lithuania averaged 107.63 points from 1997 until 2026, reaching
+      an all time high of 13
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217/CP03
+    db_unit: Index (2015=100)
+    db_latest_value: 110.48
+    db_latest_date: '2025-12-31'
+  cpi-education:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/cpi-education
+    te_status: real
+    te_last_value_text: 'CPI Education in Lithuania increased to 102.82 points in April from 102.60 points in March of 2026. CPI Education in Lithuania averaged 57.24 points from 1997 until 2026, reaching
+      an all time high of '
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217/CP10
+    db_unit: Index (2015=100)
+    db_latest_value: 170.15
+    db_latest_date: '2025-12-31'
+  cpi-food:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/cpi-food
+    te_status: real
+    te_last_value_text: CPI Food in Lithuania decreased to 100.99 points in April from 101.80 points in March of 2026. CPI Food in Lithuania averaged 55.64 points from 1997 until 2026, reaching an all time
+      high of 102.58 poi
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217/CP01
+    db_unit: Index (2015=100)
+    db_latest_value: 174.21
+    db_latest_date: '2025-12-31'
+  cpi-housing-utilities:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/cpi-housing-utilities
+    te_status: real
+    te_last_value_text: CPI Housing Utilities in Lithuania decreased to 107.82 points in April from 110.36 points in March of 2026. CPI Housing Utilities in Lithuania averaged 56.15 points from 1997 until
+      2026, reaching an a
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217/CP04
+    db_unit: Index (2015=100)
+    db_latest_value: 164.4
+    db_latest_date: '2025-12-31'
+  cpi-recreation-and-culture:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/cpi-recreation-and-culture
+    te_status: real
+    te_last_value_text: CPI Recreation and Culture in Lithuania increased to 106.07 points in April from 104.18 points in March of 2026. CPI Recreation and Culture in Lithuania averaged 59.75 points from
+      1997 until 2026, rea
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217/CP09
+    db_unit: Index (2015=100)
+    db_latest_value: 142.99
+    db_latest_date: '2025-12-31'
+  cpi-transportation:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/cpi-transportation
+    te_status: real
+    te_last_value_text: 'The transportation sub-index of the CPI basket in Lithuania increased to 114.55 points in April of 2026 from 109.80 points in March of 2026. CPI Transportation in Lithuania averaged
+      67.10 points from '
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217/CP07
+    db_unit: Index (2015=100)
+    db_latest_value: 140.45
+    db_latest_date: '2025-12-31'
+  credit-rating:
+    te_source_name: null
+    te_url_used: https://tradingeconomics.com/lithuania/credit-rating
+    te_status: no_te_page
+    te_last_value_text: null
+    db_source: curated
+    db_series_id: LT:credit-rating
+    db_unit: Rating
+    db_latest_value: 75
+    db_latest_date: '2026-04-01'
+  current-account:
+    te_source_name: Bank of Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/current-account
+    te_status: real
+    te_last_value_text: null
+    db_source: eurostat
+    db_series_id: bop_c6_q:CA
+    db_unit: Billion EUR
+    db_latest_value: 0.59
+    db_latest_date: '2025-12-31'
+  current-account-to-gdp:
+    te_source_name: Bank of Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/current-account-to-gdp
+    te_status: real
+    te_last_value_text: Lithuania recorded a Current Account surplus of 0.90 percent of the country's Gross Domestic Product in 2025. Current Account to GDP in Lithuania averaged -3.74 percent of GDP from
+      1995 until 2025, re
+    db_source: eurostat
+    db_series_id: bop_gdp6_q:CA:BAL:PC_GDP:WRL_REST:NSA
+    db_unit: '% of GDP'
+    db_latest_value: 2.6
+    db_latest_date: '2025-12-31'
+  disposable-personal-income:
+    te_source_name: null
+    te_url_used: https://tradingeconomics.com/lithuania/disposable-personal-income
+    te_status: no_te_page
+    te_last_value_text: null
+    db_source: eurostat
+    db_series_id: nasq_10_nf_tr:B6G:S1:SCA:PAID
+    db_unit: Million EUR
+    db_latest_value: 20728
+    db_latest_date: '2025-12-31'
+  employed-persons:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/employed-persons
+    te_status: real
+    te_last_value_text: The number of employed persons in Lithuania increased to 1460.90 Thousand in the first quarter of 2026 from 1457.90 Thousand in the fourth quarter of 2025. Employed Persons in Lithuania
+      averaged 1380.
+    db_source: lsd_lt
+    db_series_id: LSD/uzimtumas_ess2010/S7R219M2110133/TOTAL
+    db_unit: Thousand persons
+    db_latest_value: 1464.5
+    db_latest_date: '2025-12-31'
+  employment-rate:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/employment-rate
+    te_status: real
+    te_last_value_text: Employment Rate in Lithuania decreased to 73.80 percent in the fourth quarter of 2025 from 75.10 percent in the third quarter of 2025. Employment Rate in Lithuania averaged 66.09
+      percent from 1998 unt
+    db_source: eurostat
+    db_series_id: lfsa_ergan:Y15-64
+    db_unit: '%'
+    db_latest_value: 74.1
+    db_latest_date: '2025-12-31'
+  energy-inflation:
+    te_source_name: null
+    te_url_used: https://tradingeconomics.com/lithuania/energy-inflation
+    te_status: no_te_page
+    te_last_value_text: null
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HIE:HICP2025
+    db_unit: Index
+    db_latest_value: 119.91
+    db_latest_date: '2026-04-30'
+  exports:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/exports
+    te_status: real
+    te_last_value_text: 'Exports from Lithuania increased by 2.7% year-on-year to EUR 3,352.5 million in March 2026, driven by higher sales of fertilizers (26.7%), optical, photographic, cinematographic,
+      measuring, checking, '
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_grandininiu_susiejimu/S7R208M21101072/p6
+    db_unit: Million EUR (2020 chain-linked)
+    db_latest_value: 13338.5
+    db_latest_date: '2025-12-31'
+  food-inflation:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/food-inflation
+    te_status: real
+    te_last_value_text: Cost of food in Lithuania increased 0.90 percent in April of 2026 over the same month in the previous year. Food Inflation in Lithuania averaged 17.26 percent from 1993 until 2026,
+      reaching an all tim
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S7R250_M2020120/maistasM2020120=01/LYGINIMAS=palyg_pm
+    db_unit: '%'
+    db_latest_value: 4.1
+    db_latest_date: '2025-12-31'
+  gdp:
+    te_source_name: World Bank
+    te_url_used: https://tradingeconomics.com/lithuania/gdp
+    te_status: real
+    te_last_value_text: The Gross Domestic Product (GDP) in Lithuania was worth 84.87 billion US dollars in 2024, according to official data from the World Bank. The GDP value of Lithuania represents 0.08
+      percent of the worl
+    db_source: worldbank
+    db_series_id: NY.GDP.MKTP.CD
+    db_unit: Billion USD
+    db_latest_value: 84.87
+    db_latest_date: '2024-12-31'
+  gdp-per-capita:
+    te_source_name: World Bank
+    te_url_used: https://tradingeconomics.com/lithuania/gdp-per-capita
+    te_status: real
+    te_last_value_text: The Gross Domestic Product per capita in Lithuania was last recorded at 19094.12 US dollars in 2024. The GDP per Capita in Lithuania is equivalent to 151 percent of the world's average.
+      GDP per Capita
+    db_source: worldbank
+    db_series_id: NY.GDP.PCAP.KD
+    db_unit: USD (constant 2015)
+    db_latest_value: 19092.65
+    db_latest_date: '2024-12-31'
+  gdp-per-capita-ppp:
+    te_source_name: World Bank
+    te_url_used: https://tradingeconomics.com/lithuania/gdp-per-capita-ppp
+    te_status: real
+    te_last_value_text: 'The Gross Domestic Product per capita in Lithuania was last recorded at 47169.01 US dollars in 2024, when adjusted by purchasing power parity (PPP). The GDP per Capita, in Lithuania,
+      when adjusted by '
+    db_source: worldbank
+    db_series_id: NY.GDP.PCAP.PP.KD
+    db_unit: Int. USD (PPP constant 2021)
+    db_latest_value: 47165.37
+    db_latest_date: '2024-12-31'
+  gdp-real:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/gdp-growth
+    te_status: alt
+    te_last_value_text: null
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_palyginamosiomis_kainomis/S7R203M21101011
+    db_unit: Million EUR (chain-linked)
+    db_latest_value: 14577.3
+    db_latest_date: '2026-03-31'
+  government-debt:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/government-debt
+    te_status: real
+    te_last_value_text: 'Government Debt in Lithuania increased to 36186.80 EUR Million in March from 35872.50 EUR Million in February of 2026. Government Debt in Lithuania averaged 14280.92 EUR Million
+      from 2003 until 2026, '
+    db_source: lsd_lt
+    db_series_id: LSD/valdzios_sektoriaus_mastrichto_skola/S7R267M2040215
+    db_unit: Million EUR
+    db_latest_value: 33634.8
+    db_latest_date: '2025-09-30'
+  government-debt-total:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/government-debt
+    te_status: alt
+    te_last_value_text: 'Government Debt in Lithuania increased to 36186.80 EUR Million in March from 35872.50 EUR Million in February of 2026. Government Debt in Lithuania averaged 14280.92 EUR Million
+      from 2003 until 2026, '
+    db_source: eurostat
+    db_series_id: gov_10dd_edpt1:GD:MIO_EUR
+    db_unit: Billion EUR
+    db_latest_value: 33.26
+    db_latest_date: '2025-12-31'
+  government-spending:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/government-spending
+    te_status: real
+    te_last_value_text: Government Spending in Lithuania increased to 2551.60 EUR Million in the fourth quarter of 2025 from 2431.60 EUR Million in the third quarter of 2025. Government Spending in Lithuania
+      averaged 2393.57
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_grandininiu_susiejimu/S7R208M21101072/p3_S13
+    db_unit: Million EUR (2020 chain-linked)
+    db_latest_value: 2598.8
+    db_latest_date: '2025-12-31'
+  government-spending-eur:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/government-spending
+    te_status: alt
+    te_last_value_text: Government Spending in Lithuania increased to 2551.60 EUR Million in the fourth quarter of 2025 from 2431.60 EUR Million in the third quarter of 2025. Government Spending in Lithuania
+      averaged 2393.57
+    db_source: eurostat
+    db_series_id: namq_10_gdp:P3_S13
+    db_unit: Billion EUR
+    db_latest_value: 4.16
+    db_latest_date: '2025-12-31'
+  gross-fixed-capital-formation:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/gross-fixed-capital-formation
+    te_status: real
+    te_last_value_text: null
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_grandininiu_susiejimu/S7R208M21101072/p51g
+    db_unit: Million EUR (2020 chain-linked)
+    db_latest_value: 4070.9
+    db_latest_date: '2025-12-31'
+  hospital-beds:
+    te_source_name: OECD
+    te_url_used: https://tradingeconomics.com/lithuania/hospital-beds
+    te_status: real
+    te_last_value_text: Hospital Beds in Lithuania decreased to 5.48 per 1000 people in 2023 from 5.68 per 1000 people in 2022. Hospital Beds in Lithuania averaged 9.42 per 1000 people from 1960 until 2023,
+      reaching an all t
+    db_source: curated
+    db_series_id: LT:hospital-beds
+    db_unit: per 1000 people
+    db_latest_value: 6.4
+    db_latest_date: '2022-12-31'
+  house-price-index:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/housing-index
+    te_status: alt
+    te_last_value_text: Housing Index in Lithuania increased to 268.22 points in the fourth quarter of 2025 from 262.01 points in the third quarter of 2025. Housing Index in Lithuania averaged 133.35 points
+      from 2006 until 2
+    db_source: eurostat
+    db_series_id: prc_hpi_q:INX
+    db_unit: Index
+    db_latest_value: 268.22
+    db_latest_date: '2025-12-31'
+  imports:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/imports
+    te_status: real
+    te_last_value_text: Imports to Lithuania fell by 2.5% year-on-year to EUR 3,900.8 million in March 2026, amid reduced purchases of mineral fuels, mineral oils and products of their distillation (-27%)
+      and articles of iro
+    db_source: lsd_lt
+    db_series_id: LSD/bvp_grandininiu_susiejimu/S7R208M21101072/p7
+    db_unit: Million EUR (2020 chain-linked)
+    db_latest_value: 12821
+    db_latest_date: '2025-12-31'
+  industrial-production:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/industrial-production
+    te_status: real
+    te_last_value_text: Industrial Production in Lithuania increased 4.80 percent in March of 2026 over the same month in the previous year. Industrial Production in Lithuania averaged 4.06 percent from
+      1999 until 2026, reac
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S8R918_M4050113_5/EVRKM4050107=B_TO_E_NOT_C19/LYGINIMAS=palyg_2021/Islyginimas_indeksai=sezon
+    db_unit: Index (2021=100)
+    db_latest_value: 116
+    db_latest_date: '2026-03-31'
+  inflation-cpi:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/inflation-cpi
+    te_status: real
+    te_last_value_text: null
+    db_source: lsd_lt
+    db_series_id: LSD/svki/S7R246M2020217
+    db_unit: Index (2015=100)
+    db_latest_value: 156.83
+    db_latest_date: '2025-12-31'
+  interest-rate:
+    te_source_name: Bank of Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/interest-rate
+    te_status: real
+    te_last_value_text: The benchmark interest rate in Lithuania is set by the European Central Bank. Interest Rate in Lithuania averaged 1.88 percent from 1998 until 2026, reaching an all time high of
+      4.75 percent in Octobe
+    db_source: ecb
+    db_series_id: D.U2.EUR.4F.KR.MRR_FR.LEV
+    db_unit: '%'
+    db_latest_value: 2.15
+    db_latest_date: '2025-06-11'
+  job-vacancies:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/job-vacancies
+    te_status: real
+    te_last_value_text: 'Job Vacancies in Lithuania decreased to 30528 in the fourth quarter of 2025 from 31965 in the third quarter of 2025. Job Vacancies in Lithuania averaged 17592.67 from 2008 until
+      2025, reaching an all '
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S3R275_M3040102_1/darbuotojuSKM2020201=total/EVRK2M3140605=TOTAL/Islyginimas_indeksai=bendras
+    db_unit: Number of vacancies
+    db_latest_value: 30528
+    db_latest_date: '2025-12-31'
+  labor-force-participation-rate:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/labor-force-participation-rate
+    te_status: real
+    te_last_value_text: Labor Force Participation Rate in Lithuania decreased to 62.60 percent in the fourth quarter of 2025 from 63.80 percent in the third quarter of 2025. Labor Force Participation Rate
+      in Lithuania averag
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S3R003_M3030101_1/AmziusM2111=0/Vietove=0/Lytis=0
+    db_unit: '%'
+    db_latest_value: 63.4
+    db_latest_date: '2026-03-31'
+  labour-costs:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/labour-costs
+    te_status: real
+    te_last_value_text: Labour Costs in Lithuania decreased to 170.40 points in the fourth quarter of 2025 from 171.30 points in the third quarter of 2025. Labour Costs in Lithuania averaged 72.57 points
+      from 2000 until 2025
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S3R0452_M3060508_1/IslyginimasM3060501=NSA/darboM2040601=TOT/EVRK2M3060503=B_TO_S
+    db_unit: Index (2020=100)
+    db_latest_value: 174.8
+    db_latest_date: '2025-12-31'
+  long-term-unemployment-rate:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/long-term-unemployment-rate
+    te_status: real
+    te_last_value_text: 'Long Term Unemployment Rate in Lithuania increased to 2.40 percent in the first quarter of 2026 from 2.10 percent in the fourth quarter of 2025. Long Term Unemployment Rate in Lithuania
+      averaged 4.15 '
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S3R196_M3030102/lytis=0/vietove=0
+    db_unit: '%'
+    db_latest_value: 2.4
+    db_latest_date: '2026-03-31'
+  manufacturing-production:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/manufacturing-production
+    te_status: real
+    te_last_value_text: Manufacturing Production in Lithuania increased 5.10 percent in March of 2026 over the same month in the previous year. Manufacturing Production in Lithuania averaged 4.77 percent
+      from 1999 until 2026
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S8R918_M4050113_5/EVRKM4050107=C/LYGINIMAS=palyg_2021/Islyginimas_indeksai=sezon
+    db_unit: Index (2021=100)
+    db_latest_value: 119.2
+    db_latest_date: '2026-03-31'
+  medical-doctors:
+    te_source_name: OECD
+    te_url_used: https://tradingeconomics.com/lithuania/medical-doctors
+    te_status: real
+    te_last_value_text: Medical Doctors in Lithuania decreased to 4.47 per 1000 people in 2021 from 4.48 per 1000 people in 2020. Medical Doctors in Lithuania averaged 3.82 per 1000 people from 1965 until
+      2021, reaching an a
+    db_source: curated
+    db_series_id: LT:medical-doctors
+    db_unit: per 1000 people
+    db_latest_value: 5.4
+    db_latest_date: '2021-12-31'
+  minimum-wages:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/minimum-wages
+    te_status: real
+    te_last_value_text: Minimum Wages in Lithuania increased to 1153 EUR/Month in the second quarter of 2026 from 1038 EUR/Month in the fourth quarter of 2025. Minimum Wages in Lithuania averaged 375.73
+      EUR/Month from 1999 u
+    db_source: curated
+    db_series_id: LT:minimum-wages
+    db_unit: EUR/Month
+    db_latest_value: 1038
+    db_latest_date: '2026-01-31'
+  mining-production:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/mining-production
+    te_status: real
+    te_last_value_text: 'Mining production in Lithuania decreased 4.40 percent in March of 2026 over the same month in the previous year. Mining Production in Lithuania averaged 1.79 percent from 1999 until
+      2026, reaching an '
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S8R918_M4050113_5/EVRKM4050107=B/LYGINIMAS=palyg_2021/Islyginimas_indeksai=sezon
+    db_unit: Index (2021=100)
+    db_latest_value: 90
+    db_latest_date: '2026-03-31'
+  nurses:
+    te_source_name: OECD
+    te_url_used: https://tradingeconomics.com/lithuania/nurses
+    te_status: real
+    te_last_value_text: Nurses in Lithuania decreased to 7.50 per 1000 people in 2023 from 7.53 per 1000 people in 2022. Nurses in Lithuania averaged 8.19 per 1000 people from 1981 until 2023, reaching
+      an all time high of 9.
+    db_source: curated
+    db_series_id: LT:nurses
+    db_unit: per 1000 people
+    db_latest_value: 7.7
+    db_latest_date: '2021-12-31'
+  personal-income-tax-rate:
+    te_source_name: State Tax Inspectorate
+    te_url_used: https://tradingeconomics.com/lithuania/personal-income-tax-rate
+    te_status: real
+    te_last_value_text: The Personal Income Tax Rate in Lithuania stands at 32 percent. Personal Income Tax Rate in Lithuania averaged 24.85 percent from 1994 until 2026, reaching an all time high of 33.00
+      percent in 1995 an
+    db_source: curated
+    db_series_id: LT:personal-income-tax-rate
+    db_unit: '%'
+    db_latest_value: 32
+    db_latest_date: '2026-12-31'
+  population:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/population
+    te_status: real
+    te_last_value_text: The total population in Lithuania was estimated at 2.9 million people in 2025, according to the latest census figures and projections from Trading Economics. Looking back, in the
+      year of 1960, Lithuan
+    db_source: lsd_lt
+    db_series_id: LSD/nuolatiniai_gyventojai/S3R167M3010202
+    db_unit: Million persons
+    db_latest_value: 2.8902
+    db_latest_date: '2025-12-31'
+  ppi:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/producer-prices-change
+    te_status: alt
+    te_last_value_text: null
+    db_source: lsd_lt
+    db_series_id: LSD/pramones_produk_kainu_indeksai/S7R259M2020327
+    db_unit: Index (2015=100)
+    db_latest_value: 116.1525
+    db_latest_date: '2026-01-31'
+  productivity:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/productivity
+    te_status: real
+    te_last_value_text: Productivity in Lithuania increased to 126.23 points in the fourth quarter of 2025 from 124.02 points in the third quarter of 2025. Productivity in Lithuania averaged 86.46 points
+      from 1995 until 2025
+    db_source: eurostat
+    db_series_id: namq_10_lp_ulc:RLPR_HW:I20
+    db_unit: Index
+    db_latest_value: 103.81
+    db_latest_date: '2025-12-31'
+  retail-sales:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/retail-sales
+    te_status: real
+    te_last_value_text: Retail activity in Lithuania rose 2.3% month-on-month in March 2026, rebounding from a revised 2% decline in February. Retail Sales MoM in Lithuania averaged 0.37 percent from 1998
+      until 2026, reachin
+    db_source: lsd_lt
+    db_series_id: LSD/mazmen_prekyb_imoniu_apyvartos_indeksai/S8R838M40701035
+    db_unit: Index (2021=100)
+    db_latest_value: 110.8
+    db_latest_date: '2025-12-31'
+  retirement-age-men:
+    te_source_name: State Social Insurance Fund Board
+    te_url_used: https://tradingeconomics.com/lithuania/retirement-age-men
+    te_status: real
+    te_last_value_text: Retirement Age Men in Lithuania remained unchanged at 64.83 Years in 2026 from 64.83 Years in 2025. Retirement Age Men in Lithuania averaged 63.36 Years from 2004 until 2026, reaching
+      an all time high
+    db_source: curated
+    db_series_id: LT:retirement-age-men
+    db_unit: Years
+    db_latest_value: 64.5
+    db_latest_date: '2026-12-31'
+  retirement-age-women:
+    te_source_name: State Social Insurance Fund Board
+    te_url_used: https://tradingeconomics.com/lithuania/retirement-age-women
+    te_status: real
+    te_last_value_text: 'Retirement Age Women in Lithuania remained unchanged at 64.67 Years in 2026 from 64.67 Years in 2025. Retirement Age Women in Lithuania averaged 61.64 Years from 2004 until 2026,
+      reaching an all time '
+    db_source: curated
+    db_series_id: LT:retirement-age-women
+    db_unit: Years
+    db_latest_value: 63.83
+    db_latest_date: '2026-12-31'
+  sales-tax-rate:
+    te_source_name: State Tax Inspectorate
+    te_url_used: https://tradingeconomics.com/lithuania/sales-tax-rate
+    te_status: real
+    te_last_value_text: The Sales Tax Rate in Lithuania stands at 21 percent. Sales Tax Rate in Lithuania averaged 19.93 percent from 2000 until 2026, reaching an all time high of 21.00 percent in 2010
+      and a record low of 18
+    db_source: curated
+    db_series_id: LT:sales-tax-rate
+    db_unit: '%'
+    db_latest_value: 21
+    db_latest_date: '2026-12-31'
+  services-inflation:
+    te_source_name: null
+    te_url_used: https://tradingeconomics.com/lithuania/services-inflation
+    te_status: no_te_page
+    te_last_value_text: null
+    db_source: eurostat
+    db_series_id: ei_cphi_m:CP-HIS:HICP2025
+    db_unit: Index
+    db_latest_value: 105.58
+    db_latest_date: '2026-04-30'
+  services-sentiment:
+    te_source_name: null
+    te_url_used: https://tradingeconomics.com/lithuania/services-sentiment
+    te_status: no_te_page
+    te_last_value_text: null
+    db_source: eurostat
+    db_series_id: ei_bsse_m_r2:SCI
+    db_unit: Points
+    db_latest_value: 4.8
+    db_latest_date: '2026-04-30'
+  social-security-rate:
+    te_source_name: State Tax Inspectorate (STI)
+    te_url_used: https://tradingeconomics.com/lithuania/social-security-rate
+    te_status: real
+    te_last_value_text: The Social Security Rate in Lithuania stands at 21.27 percent. Social Security Rate in Lithuania averaged 32.18 percent from 2004 until 2026, reaching an all time high of 41.98 percent
+      in 2016 and a r
+    db_source: curated
+    db_series_id: LT:social-security-rate
+    db_unit: '%'
+    db_latest_value: 21.27
+    db_latest_date: '2026-12-31'
+  social-security-rate-companies:
+    te_source_name: State Tax Inspectorate (STI)
+    te_url_used: https://tradingeconomics.com/lithuania/social-security-rate-for-companies
+    te_status: alt
+    te_last_value_text: The Social Security Rate For Companies in Lithuania stands at 1.77 percent. Social Security Rate For Companies in Lithuania averaged 20.83 percent from 2004 until 2026, reaching
+      an all time high of 31
+    db_source: curated
+    db_series_id: LT:social-security-rate-companies
+    db_unit: '%'
+    db_latest_value: 1.77
+    db_latest_date: '2026-12-31'
+  social-security-rate-employees:
+    te_source_name: State Tax Inspectorate (STI)
+    te_url_used: https://tradingeconomics.com/lithuania/social-security-rate-for-employees
+    te_status: alt
+    te_last_value_text: The Social Security Rate For Employees in Lithuania stands at 19.50 percent. Social Security Rate For Employees in Lithuania averaged 11.35 percent from 2004 until 2026, reaching
+      an all time high of 1
+    db_source: curated
+    db_series_id: LT:social-security-rate-employees
+    db_unit: '%'
+    db_latest_value: 19.5
+    db_latest_date: '2026-12-31'
+  terrorism-index:
+    te_source_name: Institute for Economics and Peace
+    te_url_used: https://tradingeconomics.com/lithuania/terrorism-index
+    te_status: real
+    te_last_value_text: Terrorism Index in Lithuania remained unchanged at 0.42 Points in 2025 from 0.42 Points in 2024. Terrorism Index in Lithuania averaged 0.22 Points from 2002 until 2025, reaching
+      an all time high of 1.
+    db_source: curated
+    db_series_id: LT:terrorism-index
+    db_unit: Points
+    db_latest_value: 0
+    db_latest_date: '2025-12-31'
+  unemployed-persons:
+    te_source_name: Statistics Lithuania
+    te_url_used: https://tradingeconomics.com/lithuania/unemployed-persons
+    te_status: real
+    te_last_value_text: The number of unemployed persons in Lithuania decreased to 146.87 Thousand in April of 2026 from 155.27 Thousand in March of 2026. Unemployed Persons in Lithuania averaged 159.76
+      Thousand from 1994 un
+    db_source: lsd_lt
+    db_series_id: LSD/SDMX/S3R050_M3030101_2/AmziusM2111=0/Vietove=0/Lytis=0
+    db_unit: Thousand persons
+    db_latest_value: 117.1
+    db_latest_date: '2026-03-31'
+  unemployment:
+    te_source_name: Lithuanian Labour Exchange
+    te_url_used: https://tradingeconomics.com/lithuania/unemployment-rate
+    te_status: alt
+    te_last_value_text: Unemployment Rate in Lithuania decreased to 8.50 percent in March from 9 percent in February of 2026. Unemployment Rate in Lithuania averaged 8.78 percent from 1995 until 2026, reaching
+      an all time hi
+    db_source: eurostat
+    db_series_id: ei_lmhr_m:LM-UN-T-TOT
+    db_unit: '%'
+    db_latest_value: 6.5
+    db_latest_date: '2026-03-31'
+  youth-unemployment-rate:
+    te_source_name: EUROSTAT
+    te_url_used: https://tradingeconomics.com/lithuania/youth-unemployment-rate
+    te_status: real
+    te_last_value_text: Youth Unemployment Rate in Lithuania increased to 16 percent in March from 15.80 percent in February of 2026. Youth Unemployment Rate in Lithuania averaged 19.63 percent from 1998
+      until 2026, reaching
+    db_source: eurostat
+    db_series_id: une_rt_m:Y_LT25
+    db_unit: '%'
+    db_latest_value: 16
+    db_latest_date: '2026-03-31'

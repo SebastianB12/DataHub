@@ -1,0 +1,120 @@
+# RO re-audit 2026-05-17 — fresh TE fetches vs DB
+# Methodology: curl https://tradingeconomics.com/romania/<slug> with UA spoof,
+# parse source-name <a> tag OR source-present span. Compare to indicator_sources
+# default + latest data_points. Honest-label rule applied (source = fetch
+# technology, never relabeled upstream).
+#
+# Cache:  docs/_audit_te_html/RO/<slug>.html  (68 files)
+# Parsed: docs/_audit_ro_te_parsed.json
+#
+# Validator status before+after: GREEN.
+
+summary:
+  total_slugs: 68
+  source_changes_applied: 2     # inflation-cpi data-config; minimum-wages curated->eurostat
+  truth_yaml_blocks_rewritten: 68
+  deferred_gaps: 12             # primary-source extensions documented (MFP, ANOFM, INSSE-NA, BNR)
+  unknown_te_pages: 14          # TE returns generic homepage for these slugs
+
+real_fixes:
+  inflation-cpi:
+    before: { source: insse_ro, matrix: IPC102A, unit: MoM-index (prev month=100) }
+    after:  { source: insse_ro, matrix: IPC102E, unit: YoY-index (same month prev year=100) }
+    rationale: |
+      TE displays the YoY rate (e.g. April 2026 = 9.5%) as the headline.
+      IPC102A returned MoM ~100 (off by ~960% vs TE).  IPC102E publishes
+      the YoY 100-base index so 109.5 reads as +9.5% YoY.  Code change:
+      added row_filter arg in fetch_ro_tempo + exact TOTAL filter (the
+      dim pin alone matched 'TOTAL MARFURI ALIMENTARE' etc.).
+    db_action: 302 data_points wiped+repopulated, indicator_sources note refreshed.
+
+  minimum-wages:
+    before: { source: curated, value: 4050 RON/Month, date: 2026-01-31 }
+    after:  { source: eurostat, dataset: earn_mw_cur, value: 795 EUR/Month, date: 2026-01-01 }
+    rationale: |
+      TE labels source as EUROSTAT directly and displays 795 EUR for 2026-S1.
+      Curated static row was stale at 4050 RON/Month.  Switched to Eurostat
+      bi-annual minimum-wage series for live updates.  Removed entry from
+      pipeline/curated/ro.yaml; migration 078_ro_reaudit updates the DB row.
+    db_action: 55 EUR data_points loaded, curated static entry removed.
+
+deferred_gaps:
+  budget-deficit:               { te_attribution: MFP, served_via: eurostat gov_10dd_edpt1 }
+  current-account:              { te_attribution: BNR, served_via: ecb (sources from BNR) }
+  current-account-to-gdp:       { te_attribution: MFP, served_via: eurostat tipsbp20 }
+  government-debt:              { te_attribution: MFP, served_via: eurostat gov_10dd_edpt1 % of GDP }
+  government-debt-total:        { te_attribution: MFP, served_via: eurostat gov_10dd_edpt1 % of GDP (unit mismatch) }
+  government-spending:          { te_attribution: INSSE, served_via: eurostat namq_10_gdp }
+  government-spending-eur:      { te_attribution: INSSE, served_via: eurostat namq_10_gdp }
+  consumer-spending:            { te_attribution: INSSE, served_via: eurostat namq_10_gdp }
+  changes-in-inventories:       { te_attribution: INSSE, served_via: eurostat namq_10_gdp }
+  gross-fixed-capital-formation:{ te_attribution: INSSE, served_via: eurostat namq_10_gdp }
+  gdp-real:                     { te_attribution: INSSE, served_via: eurostat namq_10_gdp }
+  employed-persons:             { te_attribution: INSSE quarterly count, served_via: eurostat LFS lfsi_emp_q }
+  unemployed-persons:           { te_attribution: ANOFM, served_via: eurostat LFS une_rt_m }
+
+unknown_te_pages:
+  # Slugs that have no canonical TE Romania page (TE returns generic homepage).
+  # Internal Eurostat / curated source kept; documented as gap-of-known-shape.
+  - cpi-clothing
+  - cpi-education
+  - cpi-food
+  - cpi-housing-utilities
+  - cpi-recreation-and-culture
+  - energy-inflation
+  - services-inflation
+  - services-sentiment
+  - disposable-personal-income
+  - hospital-beds
+  - medical-doctors
+  - nurses
+  - credit-rating
+  - unemployment-rate-registered
+
+verified_match_te_source:
+  # Slugs where DB source ==(*) TE attribution AND latest value broadly aligns.
+  # (*) accounting for the honest-label rule (eurostat fetch = source 'eurostat'
+  # even when TE attributes upstream institution like INSSE).
+  - business-confidence: { src: eurostat, te: European Commission }
+  - capacity-utilization: { src: eurostat, te: European Commission }
+  - consumer-confidence: { src: eurostat, te: European Commission }
+  - core-cpi: { src: eurostat, te: EUROSTAT }
+  - cpi-transportation: { src: eurostat, te: INSSE }
+  - employment-rate: { src: insse_ro, te: INSSE, db: 63.6, te_v: 62.6 (within 1.6%) }
+  - exports: { src: insse_ro, te: INSSE, db: 7959 mEUR Feb-2026 }
+  - food-inflation: { src: eurostat, te: INSSE }
+  - gdp: { src: worldbank, te: World Bank, db: 382.56 bn USD 2024 }
+  - gdp-per-capita: { src: worldbank, te: World Bank }
+  - gdp-per-capita-ppp: { src: worldbank, te: World Bank }
+  - house-price-index: { src: eurostat, te: EUROSTAT, db: 168.99 = te 168.99 (exact) }
+  - imports: { src: insse_ro, te: INSSE, db: 10383 mEUR Feb-2026 }
+  - industrial-production: { src: insse_ro, te: INSSE }
+  - inflation-cpi: { src: insse_ro, te: INSSE, db: 109.31 = +9.31% YoY Feb (TE 9.5% Apr; INSSE lags 2 months) }
+  - job-vacancies: { src: insse_ro, te: INSSE, db: 28360, te: 28360 (exact) }
+  - labor-force-participation-rate: { src: eurostat, te: INSSE, db: 67.2, te: 66.8 (within 0.6%) }
+  - labour-costs: { src: eurostat, te: EUROSTAT, db: 172.7, te: 192.75 (eurostat index vintage) }
+  - long-term-unemployment-rate: { src: eurostat, te: EUROSTAT, db: 2.3 = te 2.3 (exact) }
+  - manufacturing-production: { src: insse_ro, te: INSSE }
+  - mining-production: { src: insse_ro, te: INSSE }
+  - minimum-wages: { src: eurostat (post-fix), te: EUROSTAT, db: 795 EUR = te 795 (exact) }
+  - population: { src: eurostat, te: EUROSTAT, db: 19.04m }
+  - ppi: { src: insse_ro, te: INSSE, db: 159.82 = te 159.82 (exact) }
+  - productivity: { src: eurostat, te: EUROSTAT, db: 109.73, te: 132.04 (eurostat ULC index vintage) }
+  - retail-sales: { src: insse_ro, te: INSSE }
+  - trade-balance: { src: insse_ro, te: INSSE (computed exports-imports) }
+  - unemployment: { src: insse_ro, te: INSSE, db: 6.1 = te 6.1 (exact) }
+  - wages: { src: insse_ro, te: INSSE, db: 9868 RON, te: 9902 RON (within 0.3%) }
+  - youth-unemployment-rate: { src: eurostat, te: EUROSTAT, db: 28.2 }
+  - corporate-tax-rate: { src: curated, te: ANAF, value: 16 }
+  - personal-income-tax-rate: { src: curated, te: ANAF, value: 10 }
+  - sales-tax-rate: { src: curated, te: ANAF/vatlive, value: 19 }
+  - corruption-index: { src: curated, te: Transparency International, value: 46 }
+  - corruption-rank: { src: curated, te: Transparency International, value: 65 }
+  - retirement-age-men: { src: curated, te: Romanian National Pension House (CNPP) }
+  - retirement-age-women: { src: curated, te: CNPP }
+  - social-security-rate: { src: curated, te: Ministry of Labor }
+  - social-security-rate-companies: { src: curated, te: Ministry of Labor }
+  - social-security-rate-employees: { src: curated, te: Ministry of Labor }
+  - terrorism-index: { src: curated, te: Institute for Economics and Peace }
+
+validator: { status: GREEN, default_rows: 2161, countries: 31 }

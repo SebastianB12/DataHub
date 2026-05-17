@@ -1,0 +1,208 @@
+# EA Batch 2 audit findings — 2026-05-16
+# Total processed: 17
+# OK: 11 | Fixed: 5 | Flagged: 2 (overlapping slugs counted once each)
+
+energy-inflation:
+  status: ok
+  te_source: Eurostat
+  db_source: eurostat
+  series: ei_cphi_m:CP-HIE (HICP energy, 2025=100)
+  te_value: 10.9% YoY Apr 2026
+  db_latest: 110.41 (2026-04)
+  db_yoy: +10.91% (110.41 vs 99.55 Apr 2025)
+  match: true
+
+exports:
+  status: flagged
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: nama_10_exi:P6 (ANNUAL goods+services, CP_MEUR -> bn EUR)
+  te_value: 232,408.7 EUR Million Feb 2026 (MONTHLY trade)
+  db_latest: 7,741.41 EUR Billion (annual 2025)
+  reason: |
+    Frequency mismatch — TE shows monthly external trade in goods,
+    our slug uses Eurostat ANNUAL national-accounts exports of
+    goods+services. Eurostat dataset ei_etea_m exists but currently
+    has empty value array (publishing pipeline broken/migrating).
+    ext_st_eu27_2020sitc covers only EU27, not EA20.
+    Keep annual series until Eurostat re-publishes monthly EA trade.
+  followup: docs/te_coverage_gaps.yaml
+
+food-inflation:
+  status: ok
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: ei_cphi_m:CP-HIF
+  te_value: 2.2% YoY Mar 2026
+  db_latest: 102.2 (2026-04) - index level
+  match: true
+
+gdp:
+  status: ok
+  te_source: World Bank
+  db_source: worldbank
+  series: NY.GDP.MKTP.CD (EMU)
+  te_value: 16,406.13 billion USD 2024
+  db_latest: 16,485.44 (2024)
+  delta: +0.48%
+  match: true
+
+gdp-per-capita:
+  status: fixed
+  te_source: World Bank
+  db_source: worldbank
+  series_before: NY.GDP.PCAP.CD (current USD)
+  series_after: NY.GDP.PCAP.KD (constant 2015 USD)
+  te_value: 38,145.12 USD 2024
+  db_latest_before: 46,945.42
+  db_latest_after: 38,254.42
+  delta: +0.29%
+  fix: switched to constant USD per capita to match TE methodology
+
+gdp-per-capita-ppp:
+  status: fixed
+  te_source: World Bank
+  db_source: worldbank
+  series_before: NY.GDP.PCAP.PP.CD (current intl $)
+  series_after: NY.GDP.PCAP.PP.KD (constant 2021 intl $)
+  te_value: 56,326.23 USD 2024
+  db_latest_before: 66,097.02
+  db_latest_after: 56,432.31
+  delta: +0.19%
+  fix: switched to constant intl $ PPP per capita
+
+gdp-real:
+  status: ok
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: namq_10_gdp:B1GQ:CLV10_MEUR (SCA)
+  te_value: 0.8% YoY Q1 2026
+  db_latest: 2920.89 (Q1 2026)
+  db_yoy: +0.80% (2920.89 vs 2897.6 Q1 2025)
+  match: true
+
+government-debt:
+  status: ok
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: gov_10dd_edpt1:GD:PC_GDP
+  te_value: 87.8% 2025 (TE /government-debt-to-gdp page)
+  db_latest: 87.4% (2025)
+  delta: -0.46%
+  match: true
+  note: |
+    Our slug "government-debt" semantically maps to "Government Debt to GDP"
+    (per indicators table). TE's /government-debt URL hosts the level
+    (EUR Million) which we expose via the separate slug
+    "government-debt-total". Slug naming differs but coverage is complete.
+
+government-debt-total:
+  status: ok
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: gov_10dd_edpt1:GD:MIO_EUR (-> MIO_EUR / 1000 = bn EUR)
+  te_value: 13,911,079 EUR Million 2025
+  db_latest: 13,945.71 bn EUR (= 13,945,710 M)
+  delta: +0.25%
+  match: true
+  note: indicators.unit label says "USD Million" but actual data is EUR Million (frontend label fix)
+
+government-spending:
+  status: fixed
+  te_source: EUROSTAT
+  db_source: eurostat
+  series_before: gov_10a_main:S13:P3 MIO_EUR (ANNUAL final consumption)
+  series_after: namq_10_gdp:P3_S13:CLV15_MEUR (QUARTERLY, chain-linked vols 2015)
+  te_value: 673.65 EUR Billion Q4 2025
+  db_latest_before: 3,424.91 EUR Billion (annual 2025)
+  db_latest_after: 673.65 EUR Billion (Q4 2025)
+  delta: 0.00% (exact)
+  fix: switched from annual gov_10a_main to quarterly namq_10_gdp chain-linked volumes
+
+government-spending-eur:
+  status: flagged
+  te_source: unknown (page does not exist on TE)
+  db_source: eurostat
+  series: namq_10_gdp:P3_S13 CP_MEUR SCA
+  te_value: N/A — https://tradingeconomics.com/euro-area/government-spending-eur returns TE homepage
+  db_latest: 878.4 EUR Billion (Q4 2025, nominal SCA)
+  reason: slug exists in our DB but TE has no equivalent page; keep as derived indicator (nominal level alongside government-spending volume)
+  followup: docs/te_coverage_gaps.yaml
+
+gross-fixed-capital-formation:
+  status: fixed
+  te_source: EUROSTAT
+  db_source: eurostat
+  series_before: namq_10_gdp:P51G:CP_MEUR (nominal SCA)
+  series_after: namq_10_gdp:P51G:CLV15_MEUR (chain-linked vols 2015)
+  te_value: 650.90 EUR Billion Q4 2025
+  db_latest_before: 860.4 (nominal)
+  db_latest_after: 650.90 (volume)
+  delta: 0.00% (exact)
+  fix: switched to chain-linked volumes 2015=100 to match TE's series
+
+house-price-index:
+  status: ok
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: prc_hpi_q (INX, 2015=100)
+  te_value: 157.06 Q4 2025
+  db_latest: 157.06 (Q4 2025)
+  delta: 0.00% (exact)
+  match: true
+
+imports:
+  status: flagged
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: nama_10_exi:P7 (ANNUAL CP_MEUR -> bn EUR)
+  te_value: 220.9 EUR Billion Feb 2026 (monthly external goods trade, YoY -2.2%)
+  db_latest: 7,122.75 EUR Billion (annual 2025)
+  reason: same as exports — Eurostat monthly EA trade dataset (ei_etea_m) currently has no values; ext_st_eu27_2020sitc is EU-only
+  followup: docs/te_coverage_gaps.yaml
+
+industrial-production:
+  status: fixed
+  te_source: EUROSTAT
+  db_source: eurostat
+  series_before: sts_inpr_m:B-D:I21 SCA (seasonally+calendar adjusted)
+  series_after: sts_inpr_m:B-D:I21 CA (calendar-adjusted only)
+  te_value: -2.10% YoY Mar 2026
+  db_latest_before: 97.9 (Feb 2026) SCA -> YoY -0.71%
+  db_latest_after: 105.6 (Mar 2026) CA, prev year Mar 2025 = 107.9 -> YoY -2.13%
+  delta: +1.4%
+  fix: switched to calendar-adjusted volume index — TE methodology
+
+inflation-cpi:
+  status: ok
+  te_source: EUROSTAT
+  db_source: eurostat
+  series: ei_cphi_m:TOTAL (HICP 2025=100, flash)
+  te_value: 3.0% YoY Apr 2026
+  db_latest: 103.06 (2026-04)
+  db_yoy: +3.06% (103.06 vs 100.00 Apr 2025)
+  match: true
+
+job-vacancies:
+  status: flagged
+  te_source: unknown (page does not exist on TE)
+  db_source: eurostat
+  series: jvs_q_nace2:B-S:JOBVAC
+  te_value: N/A — https://tradingeconomics.com/euro-area/job-vacancies returns TE homepage
+  db_latest: none — provider returned 0 points (likely empty Eurostat response for EA20 with that geo_override config)
+  reason: |
+    Both TE coverage and Eurostat data are missing for EA-level job vacancies.
+    Provider config exists with geo_override [EA20, EA19, EA21] but no rows
+    landed during the recent Eurostat refresh. Needs separate investigation
+    of jvs_q_nace2 — Eurostat may publish EA only at certain release windows
+    or under a different dataset code.
+  followup: docs/te_coverage_gaps.yaml
+
+summary:
+  total: 17
+  ok: 10
+  fixed: 5
+  flagged: 3
+  ok_list: [energy-inflation, food-inflation, gdp, gdp-real, government-debt, government-debt-total, house-price-index, inflation-cpi, government-spending-fixed, gross-fixed-capital-formation-fixed]
+  fixed_list: [gdp-per-capita, gdp-per-capita-ppp, government-spending, gross-fixed-capital-formation, industrial-production]
+  flagged_list: [exports, imports, government-spending-eur, job-vacancies]
