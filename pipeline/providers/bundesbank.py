@@ -1,12 +1,22 @@
-"""
-BundesbankProvider — Deutsche Bundesbank SDMX API
-Fetches German national data from Bundesbank time series database.
-Primary source for: PPI (Erzeugerpreise)
-Planned: M2, Trade
+"""BundesbankProvider — Deutsche Bundesbank SDMX API (V2 stateless).
+
+Dispatcher ruft fetch_series(spec) pro data_series-Row.
 
 API: https://api.statistiken.bundesbank.de/rest/data/{flowRef}/{key}
-No API key required.
+Kein API-Key.
+
+SeriesSpec-Konventionen:
+  - spec.series_id: voller SDMX-Key inkl. Dataflow, z.B.
+      "BBBS2.M.DB.Y.U.M30A.X.1.U2.2300.Z01.E"
+      "BBDP1.M.DE.N.VPI.G.A._Z.I20.A"
+    Erstes Token (vor erstem '.') = flowRef; Rest = key.
+    Alternativ: explizit "FLOW/KEY" via Slash.
+    Zusaetzlich: spec.extra_params kann {'flow': ..., 'key': ...} ueberschreiben.
+  - spec.freq_hint: 'D'|'W'|'M'|'Q'|'A'|'S'. Wenn leer, abgeleitet aus erstem
+    Key-Token nach flow (M/Q/A/D/W/S).
+  - spec.conversion: Skalierungsfaktor (z.B. 1/1000 fuer Mio EUR -> Mrd EUR).
 """
+from __future__ import annotations
 
 import csv
 import io
@@ -14,226 +24,96 @@ from datetime import date
 
 import requests
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
+from pipeline.dispatcher import register_provider
 
 BASE_URL = "https://api.statistiken.bundesbank.de/rest/data"
 
-# Bundesbank SDMX series
-SERIES = [
-    {
-        "flow": "BBDP1",
-        "key": "M.DE.N.EPG.G.GP19SA000000.I21.A",
-        "indicator": "ppi",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Index",
-        "adjustment": "NSA",
-        "series_label": "Erzeugerpreise gewerblicher Produkte, Gesamtindex (2021=100)",
-    },
-    {
-        "flow": "BBBS2",
-        "key": "M.DB.Y.U.M20.X.1.U2.2300.Z01.E",  # DB = Deutscher Beitrag, M20 = M2, Bestand in EUR
-        "indicator": "money-supply-m2",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 1,  # Already in Billions (UNIT_MULT=9)
-        "adjustment": "SA",
-        "series_label": "Geldmenge M2, Deutscher Beitrag (saisonbereinigt)",
-    },
-    {
-        "flow": "BBBS2",
-        "key": "M.DB.Y.U.M30A.X.1.U2.2300.Z01.E",  # M30A = M3 corrected (Repos with CCP)
-        "indicator": "money-supply-m3",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 1,
-        "adjustment": "SA",
-        "series_label": "Geldmenge M3 (korr. Repos m. CCP), Deutscher Beitrag",
-    },
-    # ============== Konsolidierter Ausweis Eurosystems / Deutscher Beitrag (BBBK10) ==============
-    # Discovered via DBnomics 2026-05-01. Series in BBBK10 sind Mio EUR (UNIT_MULT=6) -> /1000 für Mrd.
-    {
-        "flow": "BBBK10",
-        "key": "M.TXI301",
-        "indicator": "money-supply-m1",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 0.001,  # Mio EUR -> Mrd EUR
-        "adjustment": "NSA",
-        "series_label": "Geldmenge M1 / Deutscher Beitrag",
-    },
-    {
-        "flow": "BBBK10",
-        "key": "M.TXI355",
-        "indicator": "banks-balance-sheet",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 0.001,
-        "adjustment": "NSA",
-        "series_label": "Aktiva/Passiva Insgesamt / Deutscher Beitrag (MFI Bilanzsumme)",
-    },
-    {
-        "flow": "BBBK10",
-        "key": "M.TXI358",
-        "indicator": "loans-to-private-sector",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 0.001,
-        "adjustment": "NSA",
-        "series_label": "Kredite an Unternehmen und Haushalte / Deutscher Beitrag",
-    },
-    # ============== Bundesbank-Wochenausweis (BBBK11) — Bilanzsumme der Bundesbank ==============
-    {
-        "flow": "BBBK11",
-        "key": "D.TTA032",
-        "indicator": "central-bank-balance",
-        "country": "DE",
-        "freq": "D",
-        "unit": "Billion EUR",
-        "conversion": 0.001,
-        "adjustment": "NSA",
-        "series_label": "Bilanzsumme Deutsche Bundesbank (täglich, unbewertet)",
-    },
-    # ============== Reserve Assets (BBFI1) ==============
-    {
-        "flow": "BBFI1",
-        "key": "M.N.DE.W1.S121.S1.LE.A.FA.R.F._Z.X1._X.N",
-        "indicator": "foreign-exchange-reserves",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 0.001,  # Mio EUR -> Mrd EUR
-        "adjustment": "NSA",
-        "series_label": "Reserve Assets Total / Bundesbank",
-    },
-    # DE Trade (Deutscher Außenhandel) — values in thousands EUR (UNIT_MULT=3)
-    {
-        "flow": "BBDA1",
-        "key": "M.DE.N.SD.S.A.W1.A.V.ABA.A",  # Saldo, alle Länder, in jeweiligen Preisen, Ursprungswerte
-        "indicator": "trade-balance",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 1 / 1_000_000,  # Thousands EUR -> Billions
-        "adjustment": "NSA",
-        "series_label": "Außenhandel Saldo, alle Länder",
-    },
-    {
-        "flow": "BBDA1",
-        "key": "M.DE.N.EX.S.A.W1.A.V.ABA.A",  # Exporte
-        "indicator": "exports",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 1 / 1_000_000,
-        "adjustment": "NSA",
-        "series_label": "Außenhandel Exporte, alle Länder",
-    },
-    {
-        "flow": "BBDA1",
-        "key": "M.DE.N.IM.S.A.W1.A.V.ABA.A",  # Importe
-        "indicator": "imports",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Billion EUR",
-        "conversion": 1 / 1_000_000,
-        "adjustment": "NSA",
-        "series_label": "Außenhandel Importe, alle Länder",
-    },
-    # ============== DE Stage-2 (TE-source-conformity) — 2026-05-14 ==============
-    # Current-account: Leistungsbilanz Saldo, monatlich, gegenüber Welt (W1), Originalwerte
-    # BBFBOPV: M.N.DE.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL — Mio EUR (UNIT_MULT=6)
-    # March 2026 = 23,635 Mio EUR (TE-conform)
-    {
-        "flow": "BBFBOPV",
-        "key": "M.N.DE.W1.S1.S1.T.B.CA._Z._Z._Z.EUR._T._X.N.ALL",
-        "indicator": "current-account",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Million EUR",
-        "conversion": 1,  # already in Mio EUR
-        "adjustment": "NSA",
-        "series_label": "Leistungsbilanzsaldo (BoP) gg. Welt, Bundesbank",
-    },
-    # Labour-costs: Arbeitskostenindex Gesamtwirtschaft (B-S), quarterly, calendar+seasonally adjusted, 2020=100
-    # BBDE1 key: Q.DE.Y.LCA1.A2N100000.A.L.I20.A — value 2025-Q2 = 121.5; TE 124.27 Q4 2025
-    {
-        "flow": "BBDE1",
-        "key": "Q.DE.Y.LCA1.A2N100000.A.L.I20.A",
-        "indicator": "labour-costs",
-        "country": "DE",
-        "freq": "Q",
-        "unit": "Index (2020=100)",
-        "conversion": 1,
-        "adjustment": "SA",
-        "series_label": "Index der Arbeitskosten / B-S Gesamtwirtschaft / kal.+saisonbereinigt",
-    },
-    # Productivity: Produktionsergebnis je Arbeitsstunde (B+C Bergbau + Verarbeitendes Gewerbe),
-    # monthly, calendar-adjusted, Index 2021=100. TE Feb 2026 = 95.60 ≈ ours 95.2.
-    # Verified 2026-05-16 by listing BBDE1 CL_BBK_DOES_CONCEPT — BA10 = "Output per man-hour worked".
-    {
-        "flow": "BBDE1",
-        "key": "M.DE.Y.BA10.A2P200000.F.C.I21.A",
-        "indicator": "productivity",
-        "country": "DE",
-        "freq": "M",
-        "unit": "Index (2021=100)",
-        "conversion": 1,
-        "adjustment": "CA",
-        "series_label": "Produktionsergebnis je Arbeitsstunde (Produktivität) / Bergbau + Verarbeitendes Gewerbe (B+C) / kalenderbereinigt",
-    },
-]
+# Erstes Key-Token nach flow -> Frequenz (Bundesbank-SDMX-Konvention)
+_FREQ_FROM_KEY = {"B": "D", "D": "D", "W": "W", "M": "M", "Q": "Q", "A": "A", "S": "S"}
+
+
+def _split_flow_key(series_id: str) -> tuple[str, str]:
+    """Split 'BBBS2.M.DB.Y...' or 'BBBS2/M.DB.Y...' into (flow, key)."""
+    sid = (series_id or "").strip()
+    if not sid:
+        raise ProviderError("bundesbank: empty series_id")
+    if "/" in sid:
+        flow, key = sid.split("/", 1)
+        return flow, key
+    if "." in sid:
+        flow, _, key = sid.partition(".")
+        return flow, key
+    raise ProviderError(
+        f"bundesbank: cannot parse series_id '{series_id}' (need FLOW.KEY or FLOW/KEY)"
+    )
 
 
 def _parse_period(period_str: str) -> date | None:
-    """Parse Bundesbank period string. Supports YYYY-MM, YYYY-Qn, YYYY, YYYY-MM-DD."""
+    """Parse Bundesbank period string. Supports YYYY-MM, YYYY-Qn, YYYY, YYYY-MM-DD, YYYY-Sn, YYYY-Wn."""
+    s = (period_str or "").strip()
+    if not s:
+        return None
     try:
-        if len(period_str) == 7 and "Q" in period_str:  # YYYY-Qn
-            year, q = period_str.split("-Q")
+        if "-Q" in s:
+            year, q = s.split("-Q")
             month = (int(q) - 1) * 3 + 1
             return date(int(year), month, 1)
-        if len(period_str) == 7:  # YYYY-MM
-            year, month = period_str.split("-")
+        if "-S" in s:
+            year, sem = s.split("-S")
+            month = {"1": 1, "2": 7}[sem]
+            return date(int(year), month, 1)
+        if "-W" in s:
+            from datetime import datetime
+            return datetime.strptime(s + "-5", "%G-W%V-%u").date()
+        if len(s) == 10:  # YYYY-MM-DD
+            return date.fromisoformat(s)
+        if len(s) == 7:   # YYYY-MM
+            year, month = s.split("-")
             return date(int(year), int(month), 1)
-        if len(period_str) == 4:  # YYYY
-            return date(int(period_str), 1, 1)
-        if len(period_str) == 10:  # YYYY-MM-DD
-            return date.fromisoformat(period_str)
-    except (ValueError, IndexError):
+        if len(s) == 4:   # YYYY
+            return date(int(s), 1, 1)
+    except (ValueError, KeyError, IndexError):
         pass
     return None
 
 
-def _fetch_series(flow: str, key: str) -> list[tuple[date, float]]:
-    """Fetch a Bundesbank SDMX series as CSV."""
+def _fetch_csv(flow: str, key: str) -> list[tuple[date, float]]:
+    """GET Bundesbank SDMX as CSV. Returns (date, value) pairs."""
     url = f"{BASE_URL}/{flow}/{key}"
-    resp = requests.get(url, headers={"Accept": "application/vnd.sdmx.data+csv"}, timeout=60)
-    resp.raise_for_status()
+    headers = {"Accept": "application/vnd.sdmx.data+csv"}
+    try:
+        resp = requests.get(url, headers=headers, timeout=60)
+    except (requests.ConnectionError, requests.Timeout) as e:
+        raise TransientProviderError(f"bundesbank network: {e}") from e
 
-    results: list[tuple[date, float]] = []
-    text = resp.text.replace("\ufeff", "")
+    if resp.status_code >= 500:
+        raise TransientProviderError(f"bundesbank HTTP {resp.status_code}")
+    if resp.status_code == 404:
+        raise ProviderError(f"bundesbank 404: {flow}/{key}")
+    if resp.status_code >= 400:
+        raise ProviderError(f"bundesbank HTTP {resp.status_code}: {resp.text[:200]}")
+
+    text = resp.text.replace("﻿", "")
     reader = csv.DictReader(io.StringIO(text), delimiter=";")
 
+    results: list[tuple[date, float]] = []
     for row in reader:
         period_str = row.get("TIME_PERIOD", "")
         value_str = row.get("OBS_VALUE", "")
-        if not period_str or not value_str:
+        if not period_str or value_str in ("", None):
             continue
         dt = _parse_period(period_str)
         if dt is None:
             continue
         try:
             results.append((dt, float(value_str)))
-        except ValueError:
+        except (ValueError, TypeError):
             continue
-
     return results
 
 
@@ -241,68 +121,34 @@ class BundesbankProvider(BaseProvider):
     name = "bundesbank"
     display_name = "Deutsche Bundesbank"
 
-    def fetch(self) -> list[DataPoint]:
-        all_points: list[DataPoint] = []
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        ep = spec.extra_params or {}
 
-        for series in SERIES:
+        # Flow + Key auflösen
+        flow = ep.get("flow") or ep.get("flowRef") or ep.get("dataflow")
+        key = ep.get("key")
+        if not (flow and key):
+            flow_parsed, key_parsed = _split_flow_key(spec.series_id)
+            flow = flow or flow_parsed
+            key = key or key_parsed
+
+        raw = _fetch_csv(flow, key)
+
+        # Frequenz: spec.freq_hint > erstes Key-Token
+        freq = spec.freq_hint or _FREQ_FROM_KEY.get(key[:1], "M")
+        conv = spec.conversion or 1.0
+
+        out: list[Observation] = []
+        for dt, value in raw:
             try:
-                raw = _fetch_series(series["flow"], series["key"])
-                freq = series.get("freq", "M")
-
-                conversion = series.get("conversion", 1)
-                points = [
-                    DataPoint(
-                        indicator=series["indicator"],
-                        country=series["country"],
-                        date=normalize_date(dt, freq),
-                        value=round(value * conversion, 2),
-                        source="bundesbank",
-                        unit=series.get("unit", ""),
-                        series_id=f'{series["flow"]}.{series["key"]}',
-                        adjustment=series.get("adjustment", ""),
-                    )
-                    for dt, value in raw
-                ]
-                all_points.extend(points)
-
-                dates = [p.date for p in points]
-                earliest = min(dates) if dates else "?"
-                latest = max(dates) if dates else "?"
-                print(f"  OK {series['indicator']} ({series['country']}): {len(points)} points ({earliest} - {latest})")
-
-            except Exception as e:
-                print(f"  FAIL {series['indicator']}: {e}")
-
-        return all_points
+                v = round(float(value) * conv, 6)
+            except (ValueError, TypeError):
+                continue
+            out.append(Observation(date=normalize_date(dt, freq), value=v))
+        return out
 
 
-def run():
-    """Run the Bundesbank provider and write to Supabase."""
-    provider = BundesbankProvider()
-    print(f"Fetching data from {provider.display_name}...")
-
-    try:
-        points = provider.fetch()
-        print(f"\nTotal: {len(points)} data points")
-
-        rows = datapoints_to_rows(points)
-
-        total_upserted = 0
-        batch_size = 500
-        for i in range(0, len(rows), batch_size):
-            batch = rows[i : i + batch_size]
-            count = upsert_data_points(batch)
-            total_upserted += count
-            print(f"  Upserted batch {i // batch_size + 1}: {count} rows")
-
-        log_pipeline_run("bundesbank", "success", total_upserted)
-        print(f"\nDone. {total_upserted} rows upserted to Supabase.")
-
-    except Exception as e:
-        log_pipeline_run("bundesbank", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    run()
+try:
+    register_provider(BundesbankProvider())
+except ProviderError as e:
+    print(f"[warn] BundesbankProvider not registered: {e}")
