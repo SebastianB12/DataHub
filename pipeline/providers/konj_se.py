@@ -1,120 +1,153 @@
-"""NIER / Konjunkturinstitutet — Swedish National Institute of Economic Research.
+"""KonjSeProvider — NIER / Konjunkturinstitutet (Sweden) V2 stateless.
 
-TE attributes both Sweden's consumer-confidence and business-confidence to
-NIER (https://www.konj.se/), not to Statistics Sweden (SCB). The Konjunktur-
-barometer surveys are NIER-owned; SCB doesn't republish them.
+API: PxWeb v1 unter https://statistik.konj.se/PxWeb/api/v1/en/KonjBar/{path}.
+POST mit JSON-Body (json-stat2 response).
 
-API: PxWeb v1 at https://statistik.konj.se/PxWeb/api/v1/en/KonjBar.
+SeriesSpec-Konventionen:
+  - spec.series_id: human-readable Label, z.B. "KONJ/indikatorer/Indikatorm/BTOT".
+    Wird vom Provider NUR fuer Logging genutzt. Routing-relevant ist extra_params.
+  - spec.extra_params:
+      {
+        "path": "indikatorer/Indikatorm.px",   # PxWeb-Pfad unter /KonjBar/, REQUIRED
+        "query": {                              # PxWeb-Dimensionen, mind. Indikator
+          "Indikator": "BTOT",
+          "Grupp": "100"                        # optional, je nach Tabelle
+        }
+      }
+  - spec.freq_hint: 'M' | 'Q' | 'A'. NIER liefert Periodencodes "2026M04",
+    "2025K3" oder "2024". Parser deckt alle drei ab.
+  - spec.conversion: Skalierungsfaktor.
 
-Series mapped:
-  business-confidence  ->  KonjBar/indikatorer/Indikatorm.px
-                            Indikator=BTOT (Business sector / Företagens
-                            konfidensindikator, the BCI composite).
-                            2026-04 = 103.3 (TE exact match for 2026-04).
-
-  consumer-confidence  ->  KonjBar/hushall/indikatorhus.px
-                            Indikator=bhuscon, Grupp=100 (All households).
-                            2026-04 = 91.5 (TE exact match for 2026-04).
-
-Both series are NIER "Indikator" levels with base 2000-2024 mean=100 (their
-post-2026 redesign). Monthly NSA (NIER doesn't publish a separate SA balance
-on the headline composite indicator).
-
-Verified 2026-05-14 vs https://tradingeconomics.com/sweden/{consumer,business}
--confidence: both exact match on 2026-04.
+Smoke (V1-Series):
+  business-confidence: path="indikatorer/Indikatorm.px",   query={Indikator: BTOT}
+  consumer-confidence: path="hushall/indikatorhus.px",      query={Indikator: bhuscon, Grupp: 100}
 """
-import os
+from __future__ import annotations
+
 from datetime import date
 
 import requests
-from dotenv import load_dotenv
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
+from pipeline.dispatcher import register_provider
 
-load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
 BASE = "https://statistik.konj.se/PxWeb/api/v1/en/KonjBar"
-
-SERIES = [
-    {
-        "slug": "business-confidence",
-        "path": "indikatorer/Indikatorm.px",
-        "query": {"Indikator": "BTOT"},
-        "series_id": "KONJ/indikatorer/Indikatorm/BTOT",
-        "freq": "M",
-        "unit": "Index (2000-2024=100)",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "NIER Konjunkturbarometer Business Sector composite (BTOT) — Företagens konfidensindikator",
-    },
-    {
-        "slug": "consumer-confidence",
-        "path": "hushall/indikatorhus.px",
-        # Grupp=100 = all households (the headline panel).
-        "query": {"Indikator": "bhuscon", "Grupp": "100"},
-        "series_id": "KONJ/hushall/indikatorhus/bhuscon",
-        "freq": "M",
-        "unit": "Index (2000-2024=100)",
-        "adjustment": "NSA",
-        "conversion": 1.0,
-        "note": "NIER Konjunkturbarometer Consumer Confidence Indicator (bhuscon, all households)",
-    },
-]
+HDR = {
+    "User-Agent": "EconPulse/1.0 (Sebastian/SVM-AG)",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
 
 
-def _parse_period(p: str) -> date | None:
-    # NIER uses YYYYMNN (e.g. "2026M04").
+def _parse_period(p: str, freq: str) -> date | None:
+    s = (p or "").strip()
+    if not s:
+        return None
     try:
-        if "M" in p:
-            yy, mm = p.split("M")
+        if freq == "M" and "M" in s:
+            yy, mm = s.split("M")
             return date(int(yy), int(mm), 1)
-    except Exception:
+        if freq == "Q":
+            for sep in ("K", "Q"):
+                if sep in s:
+                    yy, q = s.split(sep)
+                    return date(int(yy), {"1": 1, "2": 4, "3": 7, "4": 10}[q], 1)
+        if freq == "A" and len(s) == 4 and s.isdigit():
+            return date(int(s), 1, 1)
+        # generic fallbacks
+        if "M" in s:
+            yy, mm = s.split("M")
+            return date(int(yy), int(mm), 1)
+        if "K" in s:
+            yy, q = s.split("K")
+            return date(int(yy), {"1": 1, "2": 4, "3": 7, "4": 10}[q], 1)
+        if "Q" in s:
+            yy, q = s.split("Q")
+            return date(int(yy), {"1": 1, "2": 4, "3": 7, "4": 10}[q], 1)
+        if len(s) == 4 and s.isdigit():
+            return date(int(s), 1, 1)
+    except (ValueError, KeyError):
         return None
     return None
 
 
-def _fetch_series(cfg: dict) -> list[tuple[date, float]]:
-    url = f"{BASE}/{cfg['path']}"
+def _fetch_pxweb(path: str, query: dict) -> dict:
+    url = f"{BASE}/{path}"
     body = {
         "query": [
             {"code": k, "selection": {"filter": "item", "values": [v]}}
-            for k, v in cfg["query"].items()
+            for k, v in query.items()
         ],
         "response": {"format": "json-stat2"},
     }
-    r = requests.post(url, json=body, timeout=30)
-    r.raise_for_status()
-    js = r.json()
+    try:
+        resp = requests.post(url, headers=HDR, json=body, timeout=30)
+    except (requests.ConnectionError, requests.Timeout) as e:
+        raise TransientProviderError(f"konj_se network: {e}") from e
+    if resp.status_code >= 500:
+        raise TransientProviderError(f"konj_se HTTP {resp.status_code}")
+    if resp.status_code == 404:
+        raise ProviderError(f"konj_se 404: {path}")
+    if resp.status_code >= 400:
+        raise ProviderError(f"konj_se HTTP {resp.status_code}: {resp.text[:200]}")
+    try:
+        return resp.json()
+    except ValueError as e:
+        raise ProviderError(f"konj_se non-JSON: {e}") from e
+
+
+def _extract_observations(js: dict, freq: str, conv: float) -> list[Observation]:
     values = js.get("value", [])
     dim = js.get("dimension", {})
-    # NIER uses "Period" as the time dimension on Indikatorm; same on hushall.
+    if not values or not dim:
+        return []
+
+    # Identify the time dimension (NIER uses "Period" but be lenient on case).
     tid = None
     for k in js.get("id", []):
-        if k.lower() == "period":
+        if k.lower() == "period" or k.lower() == "tid":
             tid = k
             break
     if tid is None:
+        # Fall back: first dim whose category has multiple entries.
+        for k in js.get("id", []):
+            cat = dim.get(k, {}).get("category", {}).get("index")
+            if isinstance(cat, (dict, list)) and len(cat) > 1:
+                tid = k
+                break
+    if tid is None:
         return []
-    cat = dim[tid]["category"]["index"]
-    if isinstance(cat, dict):
-        pairs = sorted(cat.items(), key=lambda x: x[1])
-    else:  # list form
-        pairs = [(code, pos) for pos, code in enumerate(cat)]
-    out: list[tuple[date, float]] = []
+
+    cat_idx = dim[tid].get("category", {}).get("index")
+    if isinstance(cat_idx, dict):
+        pairs = sorted(cat_idx.items(), key=lambda x: x[1])
+    elif isinstance(cat_idx, list):
+        pairs = [(code, pos) for pos, code in enumerate(cat_idx)]
+    else:
+        return []
+
+    out: list[Observation] = []
     for code, pos in pairs:
-        v = values[pos] if isinstance(pos, int) and pos < len(values) else None
-        if v is None:
+        if not isinstance(pos, int) or pos >= len(values):
+            continue
+        raw = values[pos]
+        if raw is None:
             continue
         try:
-            fv = float(v)
+            v = float(raw)
         except (TypeError, ValueError):
             continue
-        dt = _parse_period(code)
-        if dt:
-            out.append((dt, fv))
-    out.sort()
+        dt = _parse_period(code, freq)
+        if not dt:
+            continue
+        out.append(Observation(date=normalize_date(dt, freq),
+                               value=round(v * conv, 6)))
+    out.sort(key=lambda o: o.date)
     return out
 
 
@@ -122,46 +155,26 @@ class KonjSeProvider(BaseProvider):
     name = "konj_se"
     display_name = "NIER / Konjunkturinstitutet"
 
-    def fetch(self) -> list[DataPoint]:
-        out: list[DataPoint] = []
-        for cfg in SERIES:
-            try:
-                pairs = _fetch_series(cfg)
-                for dt, v in pairs:
-                    out.append(DataPoint(
-                        indicator=cfg["slug"],
-                        country="SE",
-                        date=normalize_date(dt, cfg["freq"]),
-                        value=round(v * cfg["conversion"], 4),
-                        source="konj_se",
-                        unit=cfg["unit"],
-                        series_id=cfg["series_id"],
-                        adjustment=cfg["adjustment"],
-                    ))
-                print(f"  OK {cfg['slug']}/SE (NIER {cfg['path']}): {len(pairs)} pts")
-            except Exception as e:
-                print(f"  FAIL {cfg['slug']}/SE (NIER {cfg['path']}): {e}")
-        return out
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        ep = spec.extra_params or {}
+        path = ep.get("path")
+        query = ep.get("query") or {}
+        if not path:
+            raise ProviderError(
+                f"konj_se: extra_params.path required (series_id={spec.series_id!r})"
+            )
+        if not query:
+            raise ProviderError(
+                f"konj_se: extra_params.query required (series_id={spec.series_id!r})"
+            )
+
+        freq = (spec.freq_hint or "M").upper()
+        conv = spec.conversion or 1.0
+        js = _fetch_pxweb(path, query)
+        return _extract_observations(js, freq, conv)
 
 
-def run():
-    p = KonjSeProvider()
-    print(f"Fetching from {p.display_name} (statistik.konj.se)...")
-    try:
-        pts = p.fetch()
-        print(f"\nTotal: {len(pts)} data points")
-        rows = datapoints_to_rows(pts)
-        total = 0
-        for i in range(0, len(rows), 500):
-            count = upsert_data_points(rows[i:i + 500])
-            total += count
-        log_pipeline_run("konj_se", "success", total)
-        print(f"\nDone. {total} rows upserted.")
-    except Exception as e:
-        log_pipeline_run("konj_se", "failed", error_message=str(e))
-        print(f"\nFailed: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    run()
+try:
+    register_provider(KonjSeProvider())
+except ProviderError as e:
+    print(f"[warn] KonjSeProvider not registered: {e}")

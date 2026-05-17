@@ -1,54 +1,64 @@
-"""
-AkshareCnProvider — China macroeconomic data via akshare library.
+"""AkShareCnProvider — China macroeconomic data via akshare (V2 stateless).
 
-akshare wraps Eastmoney/Sina/Cnstock/Tushare endpoints which mirror NBS/PBoC/
+akshare wraps Eastmoney/Sina/Cnstock/Tushare endpoints that mirror NBS/PBoC/
 SAFE/GACC official releases. Bypasses GeoIP-blocking that prevents direct
-NBS API access from non-China IPs. Reverse-engineered but stable API.
+NBS API access from non-China IPs.
 
-Per-slug config maps our indicator slug to:
-- akshare function name (`ak.macro_china_*`)
-- column name(s) for value extraction
-- date column + parser
-- unit + conversion
+V2 stateless: provider.fetch_series(SeriesSpec) -> list[Observation].
+Keine indicator/country/source-Knowledge mehr. Wird vom Dispatcher pro
+data_series-Row gerufen.
 
-Adding a new CN slug = one entry in CN_SERIES + an indicator_sources row.
-No HTTP/HTML parsing of our own.
+SeriesSpec.series_id format:
+  - "akshare:<function>:<colspec>"   z.B. "akshare:macro_china_cpi:全国-当月"
+  - "akshare:<function>"              fuer Funktionen mit nur einer relevanten Spalte
+                                       (z.B. macro_china_urban_unemployment).
+
+<colspec> kann entweder:
+  - eine literale DataFrame-Spalten-Bezeichnung sein (z.B. "全国-同比增长"), ODER
+  - ein Alias (z.B. "M2", "M1", "exp-yoy"), der in COLUMN_ALIASES aufgeloest wird.
+
+FUNCTION_CONFIGS beschreibt pro akshare-Funktion:
+  date_col, date_parser, freq (default), default conversion, optionaler post-step
+  (z.B. "monthly_last" fuer tagliche Reihen), optionaler row-filter, und ggfs.
+  per-column overrides fuer conversion/freq.
 """
+from __future__ import annotations
 
 import re
 from datetime import date
 
 import pandas as pd
 
-from pipeline.base_provider import BaseProvider, DataPoint
+from pipeline.base_provider import (
+    BaseProvider, SeriesSpec, Observation,
+    ProviderError, TransientProviderError,
+)
 from pipeline.transforms import normalize_date
-from pipeline.db import upsert_data_points, log_pipeline_run, datapoints_to_rows
+from pipeline.dispatcher import register_provider
 
 
-def _parse_chinese_month(label: str) -> date | None:
-    """Parse '2026年03月份' or '2026年03月' to date(2026,3,1)."""
+# ---------------- Date parsers ----------------
+
+def _parse_chinese_month(label) -> date | None:
     m = re.match(r"(\d{4})年(\d{1,2})月", str(label))
     if not m:
         return None
     return date(int(m.group(1)), int(m.group(2)), 1)
 
 
-def _parse_chinese_quarter(label: str) -> date | None:
-    """Parse '2026年第1季度' to date(2026,1,1) (start of quarter)."""
+def _parse_chinese_quarter(label) -> date | None:
     m = re.match(r"(\d{4})年第([1-4])季度", str(label))
     if not m:
         return None
     return date(int(m.group(1)), {"1": 1, "2": 4, "3": 7, "4": 10}[m.group(2)], 1)
 
 
-def _parse_iso_date(s: str) -> date | None:
-    """Parse '2026-03-01' or '2026.3' or '2026年3月份' or 'YYYY/MM/DD'."""
-    if isinstance(s, (pd.Timestamp,)):
+def _parse_iso_date(s) -> date | None:
+    if isinstance(s, pd.Timestamp):
         return s.date()
     s = str(s).strip()
     if not s or s == "nan":
         return None
-    # try '2026.3' or '2026.03'
     m = re.match(r"^(\d{4})\.(\d{1,2})$", s)
     if m:
         return date(int(m.group(1)), int(m.group(2)), 1)
@@ -59,364 +69,172 @@ def _parse_iso_date(s: str) -> date | None:
 
 
 def _parse_yyyymm_compact(s) -> date | None:
-    """'202603' → date(2026, 3, 1)."""
-    s = str(s).strip()
-    m = re.match(r"^(\d{4})(\d{2})$", s)
+    m = re.match(r"^(\d{4})(\d{2})$", str(s).strip())
     if not m:
         return None
     return date(int(m.group(1)), int(m.group(2)), 1)
 
 
 def _parse_yyyy_m_dot(s) -> date | None:
-    """'2026.3' or '2026.03' → date(2026, 3, 1)."""
-    s = str(s).strip()
-    m = re.match(r"^(\d{4})\.(\d{1,2})$", s)
+    m = re.match(r"^(\d{4})\.(\d{1,2})$", str(s).strip())
     if not m:
         return None
     return date(int(m.group(1)), int(m.group(2)), 1)
 
 
 def _parse_cn_full_date(s) -> date | None:
-    """'2025年05月07日' → date(2025, 5, 7)."""
-    s = str(s).strip()
-    m = re.match(r"(\d{4})年(\d{1,2})月(\d{1,2})日", s)
+    m = re.match(r"(\d{4})年(\d{1,2})月(\d{1,2})日", str(s).strip())
     if not m:
         return None
     return date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
 
 
 def _parse_yyyy_dash_m(s) -> date | None:
-    """'2026-04' → date(2026, 4, 1)."""
-    s = str(s).strip()
-    m = re.match(r"^(\d{4})-(\d{1,2})$", s)
+    m = re.match(r"^(\d{4})-(\d{1,2})$", str(s).strip())
     if not m:
         return None
     return date(int(m.group(1)), int(m.group(2)), 1)
 
 
-# Per-slug config:
-# func          → akshare function name (string)
-# value_col     → column name with the published value
-# date_col      → column name with the period
-# date_parser   → callable label → date or 'cn_month' / 'cn_quarter' / 'iso'
-# freq          → 'M' / 'Q' / 'A' / 'D'
-# unit          → output unit string
-# conversion    → multiplier on raw value (default 1)
-# adjustment    → 'NSA' / 'SA' / ''
-# filter        → optional dict {col: value} to filter rows (e.g. macro_china_new_house_price has 城市 column)
-CN_SERIES: list[dict] = [
-    # Inflation — value 1.0% YoY March 2026 (verified vs TE)
-    {
-        "indicator": "inflation-cpi-yoy",  # NEW slug variant: published YoY %
-        "func": "macro_china_cpi",
-        "value_col": "全国-同比增长",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
-        "adjustment": "NSA",
+_PARSERS = {
+    "cn_month":        _parse_chinese_month,
+    "cn_quarter":      _parse_chinese_quarter,
+    "iso":             _parse_iso_date,
+    "yyyymm_compact":  _parse_yyyymm_compact,
+    "yyyy_m_dot":      _parse_yyyy_m_dot,
+    "cn_full_date":    _parse_cn_full_date,
+    "yyyy_dash_m":     _parse_yyyy_dash_m,
+}
+
+
+# ---------------- Column-Aliases (DB-series_id -> DataFrame-Spalte) ----------------
+#
+# Manche stored series_ids verwenden kurze, sprechende Aliases ("M2", "exp-yoy")
+# statt der rohen chinesischen DataFrame-Spaltennamen. Hier mappen wir diese auf.
+
+COLUMN_ALIASES: dict[tuple[str, str], str] = {
+    ("macro_china_money_supply", "M2"): "货币和准货币(M2)-数量(亿元)",
+    ("macro_china_money_supply", "M1"): "货币(M1)-数量(亿元)",
+    ("macro_china_money_supply", "M0"): "流通中的现金(M0)-数量(亿元)",
+    ("macro_china_hgjck", "exp-yoy"):   "当月出口额-同比增长",
+    ("macro_china_hgjck", "imp-yoy"):   "当月进口额-同比增长",
+}
+
+
+# ---------------- Function-Configs ----------------
+#
+# Pro akshare-Funktion: date_col / date_parser / freq / optionaler post-step /
+# optionaler row-filter (immer aktiv) / optionale per-column-overrides (conv).
+#
+# "default_col" wird verwendet wenn series_id KEINEN colspec hat
+# (z.B. "akshare:macro_china_urban_unemployment").
+
+FUNCTION_CONFIGS: dict[str, dict] = {
+    "macro_china_cpi": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
     },
-    # Inflation Rate headline (NBS CPI YoY % — what TE shows as 'China Inflation Rate')
-    {
-        "indicator": "inflation-cpi",
-        "func": "macro_china_cpi",
-        "value_col": "全国-同比增长",  # National YoY %
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
-        "adjustment": "NSA",
-        "note": "NBS National CPI YoY % — matches TE 'China Inflation Rate'.",
+    "macro_china_ppi": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
     },
-    # PPI YoY
-    {
-        "indicator": "ppi-yoy",
-        "func": "macro_china_ppi",
-        "value_col": "当月同比增长",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
-    },
-    # Interest Rate (LPR 1Y)
-    {
-        "indicator": "interest-rate",
-        "func": "macro_china_lpr",
-        "value_col": "LPR1Y",
-        "date_col": "TRADE_DATE",
-        "date_parser": "iso",
-        "freq": "M",  # daily fix → we'll keep latest per month at insert
-        "unit": "%",
-        "post": "monthly_last",  # collapse daily to month-end
-    },
-    # LPR 5Y
-    {
-        "indicator": "loan-prime-rate-5y",
-        "func": "macro_china_lpr",
-        "value_col": "LPR5Y",
-        "date_col": "TRADE_DATE",
-        "date_parser": "iso",
-        "freq": "M",
-        "unit": "%",
+    "macro_china_lpr": {
+        "date_col": "TRADE_DATE", "date_parser": "iso", "freq": "M",
         "post": "monthly_last",
     },
-    # Foreign Exchange Reserves (PBoC FX-only) - 100 million USD
-    {
-        "indicator": "foreign-exchange-reserves",
-        "func": "macro_china_foreign_exchange_gold",
-        "value_col": "国家外汇储备",
-        "date_col": "统计时间",
-        "date_parser": "iso",
-        "freq": "M",
-        "unit": "Billion USD",
-        "conversion": 0.1,
+    "macro_china_foreign_exchange_gold": {
+        "date_col": "统计时间", "date_parser": "iso", "freq": "M",
+        "column_overrides": {
+            # raw 国家外汇储备 ist in 亿美元 -> Billion USD: × 0.1
+            "国家外汇储备": {"conv": 0.1},
+            # raw 黄金储备 ist in 万盎司 -> Million Troy Ounces: × 0.01
+            "黄金储备":     {"conv": 0.01},
+        },
     },
-    # Gold Reserves — TE shows in Tonnes (WGC-labelled but PBoC data).
-    # akshare raw is 万盎司 (10,000 troy oz). 1 troy oz = 0.0311034768 kg = 3.11034768e-5 Tonnes.
-    # 万盎司 → Tonnes: × 10000 × 3.11034768e-5 = × 0.311034768
-    {
-        "indicator": "gold-reserves",
-        "func": "macro_china_foreign_exchange_gold",
-        "value_col": "黄金储备",
-        "date_col": "统计时间",
-        "date_parser": "iso",
-        "freq": "M",
-        "unit": "Tonnes",
-        "conversion": 0.311034768,
-        "note": "PBoC monthly gold reserves in Tonnes (TE labels WGC but underlying is PBoC).",
+    "macro_china_money_supply": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
+        # 亿元 -> Billion CNY: × 0.1
+        "conv": 0.1,
     },
-    # Money Supply M2 - 100 million yuan
-    {
-        "indicator": "money-supply-m2",
-        "func": "macro_china_money_supply",
-        "value_col": "货币和准货币(M2)-数量(亿元)",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Billion CNY",
-        "conversion": 0.1,  # 亿元 (100mln) → Billion: × 0.1
+    "macro_china_gyzjz": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
     },
-    {
-        "indicator": "money-supply-m1",
-        "func": "macro_china_money_supply",
-        "value_col": "货币(M1)-数量(亿元)",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Billion CNY",
-        "conversion": 0.1,
+    "macro_china_consumer_goods_retail": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
+        "conv": 0.1,
     },
-    {
-        "indicator": "money-supply-m0",
-        "func": "macro_china_money_supply",
-        "value_col": "流通中的现金(M0)-数量(亿元)",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Billion CNY",
-        "conversion": 0.1,
+    "macro_china_pmi": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
     },
-    # Industrial Production YoY (NBS) — gyzjz = "工业增加值" / industrial added value
-    # The macro_china_industrial_production_yoy fn (calendar feed) ends ~Aug 2025;
-    # gyzjz is the current NBS press-release table, fresh through latest month.
-    {
-        "indicator": "industrial-production-yoy",
-        "func": "macro_china_gyzjz",
-        "value_col": "同比增长",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
+    "macro_china_gdzctz": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
     },
-    # Retail Sales (Consumer Goods Retail) - 亿元 → Bil CNY
-    {
-        "indicator": "retail-sales",
-        "func": "macro_china_consumer_goods_retail",
-        "value_col": "当月",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Billion CNY",
-        "conversion": 0.1,
-    },
-    # NBS Manufacturing PMI
-    {
-        "indicator": "manufacturing-pmi",
-        "func": "macro_china_pmi",
-        "value_col": "制造业-指数",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Points",
-    },
-    # NBS Non-Manufacturing PMI (services + construction)
-    {
-        "indicator": "non-manufacturing-pmi",
-        "func": "macro_china_pmi",
-        "value_col": "非制造业-指数",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Points",
-    },
-    # Fixed Asset Investment (cumulative YTD growth)
-    {
-        "indicator": "fixed-asset-investment",
-        "func": "macro_china_gdzctz",
-        "value_col": "同比增长",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
-    },
-    # GDP quarterly (current price, 亿元)
-    {
-        "indicator": "gdp-real",
-        "func": "macro_china_gdp",
-        "value_col": "国内生产总值-绝对值",
-        "date_col": "季度",
-        "date_parser": "cn_quarter",
-        "freq": "Q",
-        "unit": "Billion CNY",
-        "conversion": 0.1,
-        "filter_quarter_only": True,  # skip half-year/full-year aggregate rows
-    },
-    # GDP YoY growth quarterly
-    {
-        "indicator": "gdp-growth-rate",
-        "func": "macro_china_gdp",
-        "value_col": "国内生产总值-同比增长",
-        "date_col": "季度",
-        "date_parser": "cn_quarter",
-        "freq": "Q",
-        "unit": "% YoY",
+    "macro_china_gdp": {
+        "date_col": "季度", "date_parser": "cn_quarter", "freq": "Q",
         "filter_quarter_only": True,
+        "column_overrides": {
+            "国内生产总值-绝对值": {"conv": 0.1},  # 亿元 -> Billion CNY
+        },
     },
-    # Surveyed Urban Unemployment Rate (NBS monthly)
-    {
-        "indicator": "unemployment",
-        "func": "macro_china_urban_unemployment",
-        "value_col": "value",
-        "date_col": "date",
-        "date_parser": "yyyymm_compact",
-        "freq": "M",
-        "unit": "%",
+    "macro_china_urban_unemployment": {
+        "date_col": "date", "date_parser": "yyyymm_compact", "freq": "M",
+        "default_col": "value",
         "filter": {"item": "全国城镇调查失业率"},
     },
-    # PBoC Total Assets / Central Bank Balance (亿元)
-    {
-        "indicator": "central-bank-balance",
-        "func": "macro_china_central_bank_balance",
-        "value_col": "总资产",
-        "date_col": "统计时间",
-        "date_parser": "yyyy_m_dot",
-        "freq": "M",
-        "unit": "Billion CNY",
-        "conversion": 0.1,
+    "macro_china_central_bank_balance": {
+        "date_col": "统计时间", "date_parser": "yyyy_m_dot", "freq": "M",
+        "conv": 0.1,
     },
-    # Exports YoY (Customs trade summary)
-    {
-        "indicator": "exports-yoy",
-        "func": "macro_china_hgjck",
-        "value_col": "当月出口额-同比增长",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
+    "macro_china_hgjck": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
     },
-    # Imports YoY
-    {
-        "indicator": "imports-yoy",
-        "func": "macro_china_hgjck",
-        "value_col": "当月进口额-同比增长",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "% YoY",
+    "macro_rmb_loan": {
+        "date_col": "月份", "date_parser": "yyyy_dash_m", "freq": "M",
+        "conv": 0.1,
     },
-    # New Bank Loans (PBoC, monthly new RMB loans 新增人民币贷款 in 亿元).
-    # Note: macro_china_new_financial_credit reports a different aggregate that does
-    # NOT match TE; macro_rmb_loan tracks the exact PBoC headline figure.
-    {
-        "indicator": "new-bank-loans",
-        "func": "macro_rmb_loan",
-        "value_col": "新增人民币贷款-总额",
-        "date_col": "月份",
-        "date_parser": "yyyy_dash_m",
-        "freq": "M",
-        "unit": "Billion CNY",
-        "conversion": 0.1,
-        "note": "PBoC monthly new RMB loans (matches TE 'China New Loans').",
+    "macro_china_new_financial_credit": {
+        "date_col": "月份", "date_parser": "cn_month", "freq": "M",
+        "default_col": "当月",
+        "conv": 0.1,  # 亿元 -> Billion CNY
     },
-    # Cash Reserve Ratio (RRR) — adjustment events; we take 大型金融机构-调整后
-    {
-        "indicator": "cash-reserve-ratio",
-        "func": "macro_china_reserve_requirement_ratio",
-        "value_col": "大型金融机构-调整后",
-        "date_col": "生效时间",
-        "date_parser": "cn_full_date",
-        "freq": "M",
-        "unit": "%",
+    "macro_china_reserve_requirement_ratio": {
+        "date_col": "生效时间", "date_parser": "cn_full_date", "freq": "M",
+        "default_col": "大型金融机构-调整后",
     },
-    # Interbank Rate — 3M SHIBOR daily fix (collapse to monthly last)
-    {
-        "indicator": "interbank-rate",
-        "func": "macro_china_shibor_all",
-        "value_col": "3M-定价",
-        "date_col": "日期",
-        "date_parser": "iso",
-        "freq": "M",
-        "unit": "%",
+    "macro_china_shibor_all": {
+        "date_col": "日期", "date_parser": "iso", "freq": "M",
         "post": "monthly_last",
     },
-    # Housing Index — NBS National Real Estate Climate Index (国房景气指数)
-    {
-        "indicator": "housing-index",
-        "func": "macro_china_real_estate",
-        "value_col": "最新值",
-        "date_col": "日期",
-        "date_parser": "iso",
-        "freq": "M",
-        "unit": "Index",
+    "macro_china_real_estate": {
+        "date_col": "日期", "date_parser": "iso", "freq": "M",
     },
-    # Business Confidence — TE reuses NBS Manufacturing PMI series here (e.g.,
-    # April 2026 = 50.30 matches NBS PMI exactly). Honor TE convention.
-    {
-        "indicator": "business-confidence",
-        "func": "macro_china_pmi",
-        "value_col": "制造业-指数",
-        "date_col": "月份",
-        "date_parser": "cn_month",
-        "freq": "M",
-        "unit": "Points",
-        "note": "Mirrors NBS Manufacturing PMI (TE convention for China Business Confidence).",
+    "macro_china_enterprise_boom_index": {
+        "date_col": "季度", "date_parser": "cn_quarter", "freq": "Q",
     },
-]
+}
 
 
-def _resolve_date(label, parser):
-    if callable(parser):
-        return parser(label)
-    if parser == "cn_month":
-        return _parse_chinese_month(label)
-    if parser == "cn_quarter":
-        return _parse_chinese_quarter(label)
-    if parser == "iso":
-        return _parse_iso_date(label)
-    if parser == "yyyymm_compact":
-        return _parse_yyyymm_compact(label)
-    if parser == "yyyy_m_dot":
-        return _parse_yyyy_m_dot(label)
-    if parser == "cn_full_date":
-        return _parse_cn_full_date(label)
-    if parser == "yyyy_dash_m":
-        return _parse_yyyy_dash_m(label)
-    return None
+# ---------------- Helpers ----------------
+
+_TRANSIENT_HINTS = (
+    "timeout", "timed out", "Connection",
+    "ConnectionError", "ProxyError", "RemoteDisconnected",
+    "Max retries exceeded", "Read timed out",
+    "HTTPSConnectionPool", "Temporary failure",
+)
 
 
-def _row_passes_filter(row, cfg):
+def _is_transient(exc: BaseException) -> bool:
+    msg = str(exc)
+    return any(s in msg for s in _TRANSIENT_HINTS)
+
+
+def _resolve_parser(name):
+    if callable(name):
+        return name
+    return _PARSERS.get(name)
+
+
+def _row_passes_filter(row, cfg) -> bool:
     if cfg.get("filter_quarter_only"):
-        # GDP table has rows like '2025年第1季度' (single Q) AND '2025年第1-4季度' (cumulative)
         if "-" in str(row.get(cfg["date_col"], "")):
             return False
     flt = cfg.get("filter") or {}
@@ -426,110 +244,143 @@ def _row_passes_filter(row, cfg):
     return True
 
 
-def _collapse_monthly_last(points: list[DataPoint]) -> list[DataPoint]:
-    """For daily series, keep only the latest observation per (year, month)."""
-    by_month: dict[tuple[int, int, str, str], DataPoint] = {}
-    for p in points:
-        key = (p.date.year, p.date.month, p.indicator, p.country)
-        existing = by_month.get(key)
-        if existing is None or p.date > existing.date:
-            by_month[key] = p
-    # Re-normalize date to month-end
-    out = []
-    for p in by_month.values():
-        out.append(DataPoint(
-            indicator=p.indicator, country=p.country,
-            date=normalize_date(p.date, "M"),
-            value=p.value, source=p.source, unit=p.unit,
-            series_id=p.series_id, adjustment=p.adjustment,
-        ))
-    return out
+def _collapse_monthly_last(obs: list[Observation]) -> list[Observation]:
+    """For daily-like series: keep latest observation per (year, month), normalized to M."""
+    by_month: dict[tuple[int, int], Observation] = {}
+    for o in obs:
+        key = (o.date.year, o.date.month)
+        if key not in by_month or o.date > by_month[key].date:
+            by_month[key] = o
+    return [
+        Observation(date=normalize_date(o.date, "M"), value=o.value)
+        for o in by_month.values()
+    ]
 
 
-class AkshareCnProvider(BaseProvider):
-    name = "akshare_cn"
+def _parse_series_id(series_id: str) -> tuple[str, str | None]:
+    """Split 'akshare:<func>[:<colspec>]' -> (func, colspec or None)."""
+    s = (series_id or "").strip()
+    if not s:
+        raise ProviderError("akshare: empty series_id")
+    parts = s.split(":", 2)
+    if len(parts) < 2 or parts[0] != "akshare":
+        raise ProviderError(
+            f"akshare: series_id {series_id!r} must start with 'akshare:<function>'"
+        )
+    func = parts[1].strip()
+    colspec = parts[2].strip() if len(parts) == 3 and parts[2].strip() else None
+    return func, colspec
+
+
+# ---------------- Provider ----------------
+
+class AkShareCnProvider(BaseProvider):
+    name = "akshare"
     display_name = "akshare (China NBS/PBoC/SAFE/GACC mirrors)"
 
-    def fetch(self) -> list[DataPoint]:
-        import akshare as ak
+    def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
+        func, colspec = _parse_series_id(spec.series_id)
 
-        all_points: list[DataPoint] = []
-        for cfg in CN_SERIES:
-            slug = cfg["indicator"]
-            fname = cfg["func"]
+        cfg = FUNCTION_CONFIGS.get(func)
+        if cfg is None:
+            raise ProviderError(f"akshare: unknown function {func!r}")
+
+        # Resolve column name
+        value_col: str
+        if colspec:
+            value_col = COLUMN_ALIASES.get((func, colspec), colspec)
+        else:
+            default_col = cfg.get("default_col")
+            if not default_col:
+                raise ProviderError(
+                    f"akshare: series_id {spec.series_id!r} has no colspec and "
+                    f"function {func} has no default_col"
+                )
+            value_col = default_col
+
+        # Call akshare
+        try:
+            import akshare as ak
+        except ImportError as e:
+            raise ProviderError(f"akshare not installed: {e}") from e
+
+        try:
+            fn = getattr(ak, func, None)
+            if fn is None:
+                raise ProviderError(f"akshare: function {func} not found in akshare module")
+            df = fn()
+        except ProviderError:
+            raise
+        except Exception as e:
+            if _is_transient(e):
+                raise TransientProviderError(f"akshare {func}: {e}") from e
+            raise ProviderError(f"akshare {func}: {e}") from e
+
+        if df is None or not hasattr(df, "columns") or len(df) == 0:
+            return []
+
+        date_col = cfg["date_col"]
+        if value_col not in df.columns or date_col not in df.columns:
+            raise ProviderError(
+                f"akshare {func}: missing column (value={value_col!r}, date={date_col!r}); "
+                f"cols={list(df.columns)}"
+            )
+
+        # Effective conversion: spec.conversion * column_override (if any) * function-level default (else 1)
+        col_overrides = (cfg.get("column_overrides") or {}).get(value_col) or {}
+        col_conv = col_overrides.get("conv", cfg.get("conv", 1.0))
+        spec_conv = spec.conversion if spec.conversion is not None else 1.0
+        conv = float(spec_conv) * float(col_conv)
+
+        # Effective frequency: spec.freq_hint overrides cfg
+        freq = spec.freq_hint or cfg.get("freq", "M")
+        # Normalize 'T' (INSEE trimestre) to 'Q' for safety
+        if freq == "T":
+            freq = "Q"
+
+        date_parser = _resolve_parser(cfg.get("date_parser", "iso"))
+        if date_parser is None:
+            raise ProviderError(f"akshare {func}: unknown date_parser {cfg.get('date_parser')!r}")
+
+        out: list[Observation] = []
+        for _, row in df.iterrows():
+            if not _row_passes_filter(row, cfg):
+                continue
+            raw_val = row[value_col]
+            if pd.isna(raw_val):
+                continue
             try:
-                df = getattr(ak, fname)()
-            except Exception as exc:
-                print(f"  FAIL {slug} ({fname}): {exc}")
+                value = float(raw_val) * conv
+            except (TypeError, ValueError):
                 continue
-
-            value_col = cfg["value_col"]
-            date_col = cfg["date_col"]
-            date_parser = cfg.get("date_parser", "iso")
-            unit = cfg.get("unit", "")
-            conversion = float(cfg.get("conversion") or 1)
-            adjustment = cfg.get("adjustment", "")
-            freq = cfg.get("freq", "M")
-
-            if value_col not in df.columns or date_col not in df.columns:
-                print(f"  FAIL {slug}: column missing (value={value_col}, date={date_col}); cols={list(df.columns)}")
+            dt = date_parser(row[date_col])
+            if dt is None:
                 continue
-
-            slug_pts: list[DataPoint] = []
-            for _, row in df.iterrows():
-                if not _row_passes_filter(row, cfg):
-                    continue
-                raw_val = row[value_col]
-                if pd.isna(raw_val):
-                    continue
-                try:
-                    value = float(raw_val) * conversion
-                except (ValueError, TypeError):
-                    continue
-                dt = _resolve_date(row[date_col], date_parser)
-                if not dt:
-                    continue
-                slug_pts.append(DataPoint(
-                    indicator=slug, country="CN",
+            # For daily series collapsed later, keep raw date for sorting
+            if cfg.get("post") == "monthly_last":
+                out.append(Observation(date=dt, value=round(value, 6)))
+            else:
+                out.append(Observation(
                     date=normalize_date(dt, freq),
-                    value=round(value, 2),
-                    source="akshare", unit=unit,
-                    series_id=f"akshare:{fname}:{value_col}",
-                    adjustment=adjustment,
+                    value=round(value, 6),
                 ))
 
-            if cfg.get("post") == "monthly_last":
-                slug_pts = _collapse_monthly_last(slug_pts)
+        if cfg.get("post") == "monthly_last":
+            out = _collapse_monthly_last(out)
 
-            all_points.extend(slug_pts)
-            latest = max(slug_pts, key=lambda p: p.date) if slug_pts else None
-            print(f"  OK {slug:30} ({fname:40}): {len(slug_pts):4} pts; "
-                  f"latest={latest.date if latest else 'none'} val={latest.value if latest else 'none'}")
-        return all_points
+        return out
 
 
-def run():
-    provider = AkshareCnProvider()
-    print(f"Fetching data from {provider.display_name}...")
-    try:
-        points = provider.fetch()
-        print(f"\nTotal: {len(points)} data points")
-        if not points:
-            log_pipeline_run("akshare_cn", "success", 0)
-            return
-        rows = datapoints_to_rows(points)
-        total = 0
-        for i in range(0, len(rows), 500):
-            count = upsert_data_points(rows[i:i + 500])
-            total += count
-            print(f"  Upserted batch {i // 500 + 1}: {count} rows")
-        log_pipeline_run("akshare_cn", "success", total)
-        print(f"Done. {total} rows upserted.")
-    except Exception as exc:
-        log_pipeline_run("akshare_cn", "failed", error_message=str(exc))
-        print(f"Failed: {exc}")
-        raise
+# ---------------- Registration ----------------
+# DB stores fetch_provider='akshare'. Register under 'akshare'; also expose
+# legacy alias 'akshare_cn' for any historical configs that still reference it.
 
-
-if __name__ == "__main__":
-    run()
+try:
+    _provider = AkShareCnProvider()
+    register_provider(_provider)
+    # Alias-Registration: same instance under second name.
+    class _AkShareCnAlias(AkShareCnProvider):
+        name = "akshare_cn"
+    register_provider(_AkShareCnAlias())
+except ProviderError as e:
+    print(f"[warn] AkShareCnProvider not registered: {e}")
