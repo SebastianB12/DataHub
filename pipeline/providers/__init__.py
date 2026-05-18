@@ -31,11 +31,11 @@ Migrations-Status (V2-stateless via fetch_series):
                       stat_at/statbel/cso_ie/stat_fi/susr_sk/surs_si/stat_ee/csp_lv/cystat_cy/nso_mt/
                       scb_se/dst/dzs_hr/ksh_hu/insse_ro/nbb/ine_pt)
   [x] riksbank       (SE policy rate — Riksbank SweaWS REST)
-  [x] nationalbanken (DK discount rate — Danmarks Nationalbank Statbank CSV)
+  [x] nationalbanken (DK discount rate — Danmarks Nationalbank Statbank CSV BULK)
   [x] mnb            (HU base rate — MNB alapkamat.xlsx)
   [x] cnb            (CZ 2W repo rate — CNB FAQ TXT)
-  [s] nbp            (PL — STUB; NBP page JS-rendered)
-  [s] bnr            (RO — STUB; BNR page JS-rendered)
+  [x] nbp            (PL reference rate — static.nbp.pl XML feeds)
+  [x] bnr            (RO monetary policy rate — bnr.ro/en/idbfiles CSV)
 """
 from pipeline.providers import fred         # noqa: F401
 from pipeline.providers import eurostat     # noqa: F401
@@ -66,5 +66,5 @@ from pipeline.providers import riksbank        # noqa: F401  (SE)
 from pipeline.providers import nationalbanken  # noqa: F401  (DK)
 from pipeline.providers import mnb             # noqa: F401  (HU)
 from pipeline.providers import cnb             # noqa: F401  (CZ)
-from pipeline.providers import nbp             # noqa: F401  (PL — STUB)
-from pipeline.providers import bnr             # noqa: F401  (RO — STUB)
+from pipeline.providers import nbp             # noqa: F401  (PL)
+from pipeline.providers import bnr             # noqa: F401  (RO)

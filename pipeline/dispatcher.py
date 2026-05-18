@@ -97,8 +97,8 @@ PROVIDER_RATE_LIMITS: dict[str, float] = {
     "nationalbanken":  0.5,
     "mnb":             0.5,
     "cnb":             0.5,
-    "nbp":             1.0,  # STUB raises immediately
-    "bnr":             1.0,  # STUB raises immediately
+    "nbp":             1.0,
+    "bnr":             1.0,
 }
 
 
