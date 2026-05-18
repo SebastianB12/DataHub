@@ -4,7 +4,20 @@ Kostenlose Alternative zu Trading Economics. MVP: Makroökonomische Indikatoren.
 
 ## TE-Source-Konformität (HART)
 
-`docs/te_sources_truth.yaml` ist die einzige Wahrheit für (country, slug) → source.
+**Primärquelle = die Quelle, die TE auf der jeweiligen Indikator-Seite attribuiert.**
+Sebastian-Direktive (Mai 2026): IMMER die Primärquelle nehmen, die TE nennt.
+Keine Aggregator-Shortcuts (kein DBnomics, kein OECD-Proxy, kein Eurostat-Fallback
+bei nationaler TE-Quelle). Sebastian hat `bdf.py` deshalb explizit von DBnomics
+auf direkte Webstat-SDMX umgebaut (Commit 998abbb) — das ist das Pattern.
+
+**TE-Page Live-Verification ist Pflicht:**
+- `docs/te_sources_truth.yaml` ist ein Snapshot der zuletzt verifizierten Werte
+  — aber NICHT die alleinige Wahrheit, alte Einträge können Fehler haben.
+- Bei Setup einer neuen Series ODER bei Verdacht auf Drift IMMER zuerst
+  `https://tradingeconomics.com/{country}/{slug}` per WebFetch konsultieren:
+  Source-Attribution + aktueller Wert + Indikator-Titel.
+- truth.yaml danach updaten, dann DB-Setup.
+
 `pipeline/.venv/Scripts/python -m pipeline.validate_te_conformity` MUSS grün sein vor
 jedem Commit und läuft automatisch als Pre-Flight in `pipeline.run_all`.
 
