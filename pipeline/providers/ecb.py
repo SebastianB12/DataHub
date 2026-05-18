@@ -119,9 +119,10 @@ class EcbProvider(BaseProvider):
     def fetch_series(self, spec: SeriesSpec) -> list[Observation]:
         ep = spec.extra_params or {}
 
-        # Dataflow + Key auflösen
-        dataflow = ep.get("dataflow")
-        key = ep.get("key")
+        # Dataflow + Key auflösen. Akzeptiere historische Aliases
+        # ('dataset' / 'series_key' aus älteren Migrations).
+        dataflow = ep.get("dataflow") or ep.get("dataset") or ep.get("flowRef") or ep.get("flow")
+        key      = ep.get("key")      or ep.get("series_key") or ep.get("series_code") or ep.get("series")
         if not (dataflow and key):
             if not spec.series_id:
                 raise ProviderError("ecb: series_id (DATAFLOW.KEY) required")
