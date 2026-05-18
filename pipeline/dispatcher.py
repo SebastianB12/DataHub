@@ -92,6 +92,13 @@ PROVIDER_RATE_LIMITS: dict[str, float] = {
     "cystat_cy": 1.0, "nso_mt": 1.0, "scb_se": 1.0, "dst": 1.0,
     "dzs_hr":   1.0, "ksh_hu": 1.0, "insse_ro": 1.0, "nbb": 1.0,
     "gus_pl":   1.0,
+    # Phase C: central-bank policy-rate providers
+    "riksbank":        0.5,
+    "nationalbanken":  0.5,
+    "mnb":             0.5,
+    "cnb":             0.5,
+    "nbp":             1.0,  # STUB raises immediately
+    "bnr":             1.0,  # STUB raises immediately
 }
 
 

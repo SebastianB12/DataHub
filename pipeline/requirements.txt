@@ -11,3 +11,4 @@ akshare>=1.18.0
 tempo-py
 cbsodata4
 cloudscraper>=1.2.71
+openpyxl>=3.1.0

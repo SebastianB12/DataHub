@@ -1164,6 +1164,14 @@ BG:
     te_page: https://tradingeconomics.com/bulgaria/industrial-production
     te_url: https://www.nsi.bg
     verified: true
+  interest-rate:
+    note: BG joined Euro Area 2026-01-01; BNB now publishes the ECB Main Refinancing Rate. TE attribution remains BNB but data flows through ECB SDW.
+    reaudited: '2026-05-18'
+    source: ecb
+    te_label: Bulgarian National Bank
+    te_page: https://tradingeconomics.com/bulgaria/interest-rate
+    te_url: http://www.bnb.bg
+    verified: true
   inflation-cpi:
     note: NSI BG PCPI_IX 2025=100. TE 7.1% YoY Apr 2026; DB 105.39 index level Apr.
     reaudited: '2026-05-17'
@@ -2406,6 +2414,13 @@ CZ:
     te_page: https://tradingeconomics.com/czech-republic/industrial-production
     te_url: https://www.czso.cz
     verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: cnb
+    te_label: Czech National Bank
+    te_page: https://tradingeconomics.com/czech-republic/interest-rate
+    te_url: http://www.cnb.cz
+    verified: true
   inflation-cpi:
     source: czso
     te_label: Czech Statistical Office
@@ -2823,6 +2838,13 @@ DE:
     te_label: Federal Statistical Office
     te_page: https://tradingeconomics.com/germany/industrial-production
     te_url: https://www.destatis.de
+    verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: ecb
+    te_label: European Central Bank
+    te_page: https://tradingeconomics.com/germany/interest-rate
+    te_url: https://www.ecb.europa.eu
     verified: true
   inflation-cpi:
     source: destatis
@@ -3260,6 +3282,13 @@ DK:
     te_page: https://tradingeconomics.com/denmark/industrial-production
     te_url: https://www.dst.dk/
     verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: nationalbanken
+    te_label: Danmarks Nationalbank
+    te_page: https://tradingeconomics.com/denmark/interest-rate
+    te_url: http://www.nationalbanken.dk
+    verified: true
   inflation-cpi:
     source: dst
     te_label: Statistics Denmark
@@ -3605,6 +3634,13 @@ EA:
     te_label: EUROSTAT
     te_page: https://tradingeconomics.com/euro-area/industrial-production
     te_url: https://ec.europa.eu/eurostat/
+    verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: ecb
+    te_label: European Central Bank
+    te_page: https://tradingeconomics.com/euro-area/interest-rate
+    te_url: https://www.ecb.europa.eu
     verified: true
   inflation-cpi:
     source: eurostat
@@ -6979,6 +7015,13 @@ HU:
     te_page: https://tradingeconomics.com/hungary/industrial-production
     te_url: http://www.ksh.hu/
     verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: mnb
+    te_label: National Bank of Hungary
+    te_page: https://tradingeconomics.com/hungary/interest-rate
+    te_url: https://www.mnb.hu
+    verified: true
   inflation-cpi:
     source: ksh_hu
     te_label: Hungarian Central Statistical Office
@@ -10194,6 +10237,13 @@ PL:
     te_page: https://tradingeconomics.com/poland/industrial-production
     te_url: https://stat.gov.pl/
     verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: nbp
+    te_label: National Bank of Poland
+    te_page: https://tradingeconomics.com/poland/interest-rate
+    te_url: https://www.nbp.pl/
+    verified: true
   inflation-cpi:
     source: gus_pl
     te_label: Central Statistical Office of Poland (GUS)
@@ -11012,6 +11062,13 @@ RO:
     te_label: Institutul National de Statistica
     te_page: https://tradingeconomics.com/romania/industrial-production
     verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: bnr
+    te_label: National Bank of Romania
+    te_page: https://tradingeconomics.com/romania/interest-rate
+    te_url: http://www.bnro.ro
+    verified: true
   inflation-cpi:
     note: INSSE Tempo IPC102E CPI YoY index (same month prev year = 100). Value 109.5
       reads as TE headline 9.5% YoY. Provider uses row_filter exact TOTAL.
@@ -11418,6 +11475,13 @@ SE:
     te_label: Statistics Sweden
     te_page: https://tradingeconomics.com/sweden/industrial-production
     te_url: https://www.scb.se/
+    verified: true
+  interest-rate:
+    reaudited: '2026-05-18'
+    source: riksbank
+    te_label: Sveriges Riksbank
+    te_page: https://tradingeconomics.com/sweden/interest-rate
+    te_url: https://www.riksbank.se/
     verified: true
   inflation-cpi:
     source: scb_se
