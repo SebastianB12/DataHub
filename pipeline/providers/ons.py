@@ -194,11 +194,12 @@ def _parse_boe_date(date_str: str) -> date | None:
 
 def _fetch_boe_csv(series_code: str) -> list[tuple[date, float]]:
     """Fetch a Bank of England IADB series as CSV."""
+    code = series_code.strip().upper()
     params = {
         "csv.x": "yes",
         "Datefrom": "01/Jan/1975",
         "Dateto": "now",
-        "SeriesCodes": series_code,
+        "SeriesCodes": code,
         "CSVF": "TN",
         "UsingCodes": "Y",
         "VPD": "Y",
@@ -209,7 +210,7 @@ def _fetch_boe_csv(series_code: str) -> list[tuple[date, float]]:
     reader = csv.DictReader(io.StringIO(resp.text))
     for row in reader:
         dt = _parse_boe_date(row.get("DATE", ""))
-        val_str = row.get(series_code, "")
+        val_str = row.get(code, "")
         if not dt or not val_str:
             continue
         try:
@@ -254,20 +255,31 @@ class OnsProvider(BaseProvider):
             raise ProviderError("ons: series_id missing")
 
         ep = spec.extra_params or {}
-        endpoint = (ep.get("endpoint") or "ons").lower()
+        endpoint = (ep.get("endpoint") or "").lower()
         conv = spec.conversion or 1.0
+
+        # Legacy series_id pattern: 'ons:abmi' or 'boe:iudbedr' (prefix-based routing).
+        # Strip prefix and infer endpoint if not given via extra_params.
+        sid = spec.series_id.strip()
+        if ":" in sid:
+            prefix, _, sid = sid.partition(":")
+            prefix = prefix.lower()
+            if prefix in ("ons", "boe") and not endpoint:
+                endpoint = prefix
+        if not endpoint:
+            endpoint = "ons"
 
         if endpoint == "boe":
             freq_token = (ep.get("freq") or "monthly").lower()
-            return _boe_observations(spec.series_id, freq_token, conv)
+            return _boe_observations(sid, freq_token, conv)
 
         # ONS time-series endpoint.
         uri = ep.get("uri")
         if not uri:
-            uri = _ons_lookup_uri(spec.series_id)
+            uri = _ons_lookup_uri(sid)
         if not uri:
             raise ProviderError(
-                f"ons: cannot resolve URI for CDID '{spec.series_id}' "
+                f"ons: cannot resolve URI for CDID '{sid}' "
                 f"(provide extra_params.uri)"
             )
 
